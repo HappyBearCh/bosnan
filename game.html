@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bosnan Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Background Logo -->
+<svg class="bg-logo" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="55" fill="black" stroke="red" stroke-width="5"/>
+  <text x="50%" y="55%" text-anchor="middle" fill="red" font-size="60" font-family="Arial" dy=".3em">B</text>
+</svg>
+
+<nav>
+    <img src="logo.svg" alt="Bosnan Logo">
+
+    <div class="menu-toggle" onclick="toggleMenu()" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="game.html">Game</a>
+        <a href="/games">Games</a>
+    </div>
+</nav>
+
+<section class="section">
+    <h2>Gameplay</h2>
+    <div class="gallery">
+        <img src="images/screenshot1.png">
+        <img src="images/screenshot2.png">
+        <img src="images/screenshot3.png">
+    </div>
+</section>
+
+<section class="section">
+    <h2>Launch Bosnan</h2>
+    <p>Download the <strong>JAR file</strong>, double-click it, and start playing!</p>
+    <p>The minimum Java version required is <strong>17</strong>.</p>
+    <p>If Java is not installed on your Windows system, you can download it <a href="https://api.adoptium.net/v3/binary/latest/21/ga/windows/x64/jre/hotspot/normal/eclipse" target="_blank" rel="noopener">here</a>.</p>
+
+    <div class="launcher">
+        <button class="btn" onclick="launch()">Launch Game</button>
+        <div class="progress">
+            <div class="bar" id="bar"></div>
+        </div>
+        <p id="status"></p>
+    </div>
+</section>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
+<script src="launcher.js"></script>
+</body>
+</html>

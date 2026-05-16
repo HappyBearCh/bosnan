@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:en.wikipedia.org)",
+      "Bash(npm install *)",
+      "Bash(Select-Object Name, Length)",
+      "Bash(node server.js)",
+      "Bash(Start-Sleep 2)",
+      "Bash(Invoke-WebRequest -Uri \"http://localhost:3000/api/games\" -UseBasicParsing)",
+      "Bash(Select-Object -ExpandProperty Content)",
+      "Bash(ConvertFrom-Json)",
+      "Bash(Select-Object id, title, year)",
+      "Bash(Format-Table)",
+      "PowerShell(node -e \"const fs=require\\('fs'\\);const raw=fs.readFileSync\\('C:/github/bosnan/data/games.json','utf8'\\).replace\\(/^﻿/,''\\);try{const d=JSON.parse\\(raw\\);console.log\\('OK:',d.length,'games'\\);fs.writeFileSync\\('C:/github/bosnan/data/games.json',JSON.stringify\\(d,null,2\\),'utf8'\\);console.log\\('Written clean.'\\);}catch\\(e\\){const p=parseInt\\(e.message.match\\(/position \\(\\\\d+\\)/\\)?.[1]||0\\);console.log\\('Error:',e.message\\);console.log\\('Context:',JSON.stringify\\(raw.slice\\(Math.max\\(0,p-80\\),p+80\\)\\)\\);}\")",
+      "PowerShell(Stop-Process *)",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:3000/games\" -UseBasicParsing; Write-Output \"Status: $\\($r.StatusCode\\)\"; Write-Output \"Content-Encoding: $\\($r.Headers['Content-Encoding']\\)\"; Write-Output \"Cache-Control: $\\($r.Headers['Cache-Control']\\)\"; Write-Output \"Body length: $\\($r.Content.Length\\) chars\"; $hasCards = $r.Content -match 'game-card'; Write-Output \"Has pre-rendered cards: $hasCards\")",
+      "PowerShell($headers = @{ 'Accept-Encoding' = 'gzip, deflate' }; $r = Invoke-WebRequest -Uri \"http://localhost:3000/api/games\" -Headers $headers -UseBasicParsing; Write-Output \"Status: $\\($r.StatusCode\\)\"; Write-Output \"Content-Encoding: $\\($r.Headers['Content-Encoding']\\)\"; Write-Output \"Cache-Control: $\\($r.Headers['Cache-Control']\\)\"; Write-Output \"Content-Length: $\\($r.Headers['Content-Length']\\)\"; Write-Output \"Body length: $\\($r.RawContentLength\\)\")",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:3000/api/games\" -UseBasicParsing; $data = $r.Content | ConvertFrom-Json; $first = $data[0]; Write-Output \"Fields: $\\($first.PSObject.Properties.Name -join ', '\\)\"; Write-Output \"Has description: $\\($first.PSObject.Properties['description'] -ne $null\\)\")",
+      "PowerShell(Start-Process -FilePath \"node\" -ArgumentList \"server.js\" -WorkingDirectory \"C:\\\\github\\\\bosnan\" -WindowStyle Hidden; Start-Sleep -Seconds 2; Write-Output \"Server started\")",
+      "PowerShell(Get-ChildItem \"C:\\\\github\\\\bosnan\\\\images\\\\\" -File | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB,1\\)}} | Format-Table -AutoSize)",
+      "PowerShell(Rename-Item *)"
+    ]
+  }
+}

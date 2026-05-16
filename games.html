@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retro Games Archive – Bosnan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="games.css">
+</head>
+<body>
+<svg class="bg-logo" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="55" fill="black" stroke="red" stroke-width="5"/>
+  <text x="50%" y="55%" text-anchor="middle" fill="red" font-size="60" font-family="Arial" dy=".3em">B</text>
+</svg>
+
+<nav>
+    <img src="logo.svg" alt="Bosnan Logo">
+    <div class="menu-toggle" onclick="toggleMenu()" id="menuToggle">
+        <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="game.html">Game</a>
+        <a href="/games" class="active">Games</a>
+    </div>
+</nav>
+
+<section class="games-hero">
+    <h1>Retro Games Archive</h1>
+    <p>A collection of legendary games from the 1960s, 1970s, and 1980s</p>
+</section>
+
+<div class="games-controls">
+    <div class="search-wrapper">
+        <input type="text" id="searchInput" placeholder="Search games, genres, platforms..." autocomplete="off">
+        <span class="search-icon">&#9906;</span>
+    </div>
+    <div class="filter-tabs">
+        <button class="filter-btn active" data-decade="all">All Eras</button>
+        <button class="filter-btn" data-decade="1960s">1960s</button>
+        <button class="filter-btn" data-decade="1970s">1970s</button>
+        <button class="filter-btn" data-decade="1980s">1980s</button>
+    </div>
+</div>
+
+<div class="games-count" id="gamesCount"></div>
+
+<div class="games-grid" id="gamesGrid">
+    <div class="loading-msg">Loading games...</div>
+</div>
+
+<div class="no-results" id="noResults" style="display:none">
+    <p>No games found matching your search.</p>
+    <button class="btn" onclick="clearSearch()">Clear Search</button>
+</div>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+
+let allGames = [];
+let currentDecade = 'all';
+let currentQuery = '';
+
+async function loadGames() {
+    const res = await fetch('/api/games');
+    allGames = await res.json();
+    renderGames();
+}
+
+function renderGames() {
+    const grid = document.getElementById('gamesGrid');
+    const noResults = document.getElementById('noResults');
+    const countEl = document.getElementById('gamesCount');
+
+    const q = currentQuery.toLowerCase();
+    const filtered = allGames.filter(g => {
+        const matchDecade = currentDecade === 'all' || g.decade === currentDecade;
+        const matchQuery = !q ||
+            g.title.toLowerCase().includes(q) ||
+            g.genre.toLowerCase().includes(q) ||
+            g.platform.toLowerCase().includes(q) ||
+            g.developer.toLowerCase().includes(q) ||
+            g.description.toLowerCase().includes(q) ||
+            String(g.year).includes(q);
+        return matchDecade && matchQuery;
+    });
+
+    countEl.textContent = filtered.length === allGames.length
+        ? `${allGames.length} games in archive`
+        : `${filtered.length} of ${allGames.length} games`;
+
+    if (filtered.length === 0) {
+        grid.innerHTML = '';
+        noResults.style.display = 'block';
+        return;
+    }
+
+    noResults.style.display = 'none';
+    grid.innerHTML = filtered.map(g => `
+        <a href="/games/${g.id}" class="game-card">
+            <div class="game-card-img-wrap">
+                <img src="/${g.image}" alt="${g.title}" loading="lazy"
+                     onerror="this.parentElement.innerHTML='<div class=\\'game-card-placeholder\\'>${escapeHtml(g.title[0])}</div>'">
+                <div class="game-card-decade">${g.decade}</div>
+            </div>
+            <div class="game-card-body">
+                <h3 class="game-card-title">${g.title}</h3>
+                <div class="game-card-meta">
+                    <span>${g.year}</span>
+                    <span class="dot">·</span>
+                    <span>${g.genre}</span>
+                </div>
+                <p class="game-card-platform">${g.platform}</p>
+                <p class="game-card-desc">${g.description.substring(0, 120)}...</p>
+            </div>
+        </a>
+    `).join('');
+}
+
+function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function clearSearch() {
+    document.getElementById('searchInput').value = '';
+    currentQuery = '';
+    renderGames();
+}
+
+document.getElementById('searchInput').addEventListener('input', e => {
+    currentQuery = e.target.value;
+    renderGames();
+});
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentDecade = btn.dataset.decade;
+        renderGames();
+    });
+});
+
+loadGames();
+</script>
+</body>
+</html>

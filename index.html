@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bosnan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Background Logo -->
+<svg class="bg-logo" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="55" fill="black" stroke="red" stroke-width="5"/>
+  <text x="50%" y="55%" text-anchor="middle" fill="red" font-size="60" font-family="Arial" dy=".3em">B</text>
+</svg>
+
+<nav>
+    <img src="logo.svg" alt="Bosnan Logo">
+
+    <div class="menu-toggle" onclick="toggleMenu()" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="game.html">Game</a>
+        <a href="/games">Games</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>BOSNAN</h1>
+    <p>The Eternal Dragon-Blooded Guardian</p>
+    <a href="game.html" class="btn">Enter Game</a>
+</section>
+
+<section class="section">
+    <h2>The Legend</h2>
+    <p>Before empires, before kings, before history itself - there was Bosnan.</p>
+    <p>Born of the ancient Dragon Zmaj and the mystical Fairy Vila Bosanska, Bosnan walks through time as an immortal guardian. His blood burns with fire, his spirit moves like the wind.</p>
+    <p>He fought Romans. He shattered invaders in the Middle Ages. He rose again against empires and darkness across centuries.</p>
+    <p>Now, a new evil walks the earth — degenerate human hunters who prey on the innocent. But they are no longer the hunters.</p>
+    <p style="color:red;">Bosnan has returned.</p>
+</section>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+</body>
+</html>

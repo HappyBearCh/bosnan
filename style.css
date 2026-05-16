@@ -1,0 +1,284 @@
+/* ================== RESET ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================== BODY ================== */
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at center, #0a0a0a 0%, #000000 100%);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* 🔥 BACKGROUND LOGO (STRONGER & CLEARER) */
+.bg-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    height: 90vw;
+
+    opacity: 0.25; /* 🔺 increased visibility */
+    z-index: 0;
+
+    animation: pulse 5s infinite;
+}
+
+/* 🔥 STRONG GLOW */
+.bg-logo text {
+    fill: #ff0000;
+    filter: 
+        drop-shadow(0 0 15px red)
+        drop-shadow(0 0 30px red)
+        drop-shadow(0 0 60px darkred);
+}
+
+
+
+
+/* 🔥 COIN BORDER GLOW */
+.bg-logo circle {
+    stroke: #ff0000;
+    filter: drop-shadow(0 0 20px red);
+}
+
+/* ================== NAVBAR ================== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 1001;
+}
+
+nav img {
+    width: 50px;
+}
+
+/* ================== NAV LINKS ================== */
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: red;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ================== HAMBURGER MENU ================== */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: red;
+    border-radius: 2px;
+}
+
+/* ================== HERO ================== */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+    font-size: 70px;
+    color: red;
+    text-shadow: 0 0 20px red;
+}
+
+.hero p {
+    font-size: 22px;
+    margin: 15px 0 25px;
+    opacity: 0.85;
+}
+
+/* ================== BUTTON ================== */
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(255,0,0,0.5);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255,0,0,0.9);
+}
+
+/* ================== SECTIONS ================== */
+.section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+    animation: fadeInUp 1s ease;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+
+/* ================== GALLERY ================== */
+.gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 30%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px red;
+}
+
+/* ================== LAUNCHER ================== */
+.launcher {
+    text-align: center;
+}
+
+.progress {
+    width: 100%;
+    background: #222;
+    height: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.bar {
+    width: 0%;
+    height: 100%;
+    background: red;
+    border-radius: 5px;
+}
+
+/* ================== ANIMATIONS ================== */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeInUp {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ================== MOBILE RESPONSIVE ================== */
+@media (max-width: 768px) {
+
+    .bg-logo {
+        width: 300px;
+        opacity: 0.03;
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    /* Show hamburger menu */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Mobile nav */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background: #000;
+        padding-top: 80px;
+        gap: 20px;
+        text-align: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+}
+
+/* ================== EXTRA SMALL DEVICES ================== */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    .hero p {
+        font-size: 14px;
+    }
+    nav img {
+        width: 40px;
+    }
+}
+
+
