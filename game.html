@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Bosnan Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="games.css">
 </head>
 <body>
-<!-- Background Logo -->
 <svg class="bg-logo" viewBox="0 0 120 120">
   <circle cx="60" cy="60" r="55" fill="black" stroke="red" stroke-width="5"/>
   <text x="50%" y="55%" text-anchor="middle" fill="red" font-size="60" font-family="Arial" dy=".3em">B</text>
@@ -14,17 +14,15 @@
 
 <nav>
     <img src="logo.svg" alt="Bosnan Logo">
-
     <div class="menu-toggle" onclick="toggleMenu()" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
     </div>
-
     <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
-        <a href="game.html">Game</a>
+        <a href="game.html" class="active">Game</a>
         <a href="/games">Games</a>
+        <a href="/platforms">Platforms</a>
+        <a href="/random" class="nav-random">&#127922; Random</a>
     </div>
 </nav>
 

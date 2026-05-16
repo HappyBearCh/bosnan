@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Bosnan</title>
+    <title>Bosnan – Retro Games Archive</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bosnan – explore legendary retro games from the 1960s, 1970s, and 1980s. Browse 187+ games across Arcade, NES, Atari, C64, and more.">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="games.css">
 </head>
 <body>
-<!-- Background Logo -->
 <svg class="bg-logo" viewBox="0 0 120 120">
   <circle cx="60" cy="60" r="55" fill="black" stroke="red" stroke-width="5"/>
   <text x="50%" y="55%" text-anchor="middle" fill="red" font-size="60" font-family="Arial" dy=".3em">B</text>
@@ -14,17 +15,15 @@
 
 <nav>
     <img src="logo.svg" alt="Bosnan Logo">
-
     <div class="menu-toggle" onclick="toggleMenu()" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
     </div>
-
     <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="game.html">Game</a>
         <a href="/games">Games</a>
+        <a href="/platforms">Platforms</a>
+        <a href="/random" class="nav-random">&#127922; Random</a>
     </div>
 </nav>
 
@@ -43,10 +42,42 @@
     <p style="color:red;">Bosnan has returned.</p>
 </section>
 
+<div class="gotd-section">
+    <h2>&#127942; Game of the Day</h2>
+    <div id="gotdContainer">
+        <a class="gotd-card" id="gotdCard" href="#" style="opacity:0;transition:opacity 0.4s">
+            <img class="gotd-img" id="gotdImg" src="" alt="">
+            <div class="gotd-body">
+                <div class="gotd-badge" id="gotdDecade"></div>
+                <h3 class="gotd-title" id="gotdTitle"></h3>
+                <div class="gotd-meta" id="gotdMeta"></div>
+                <p class="gotd-desc" id="gotdDesc"></p>
+            </div>
+        </a>
+    </div>
+</div>
+
 <script>
 function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("active");
 }
+
+fetch('/api/game-of-the-day')
+    .then(r => r.json())
+    .then(g => {
+        document.getElementById('gotdCard').href = '/games/' + g.id;
+        document.getElementById('gotdImg').src = '/' + g.image;
+        document.getElementById('gotdImg').alt = g.title;
+        document.getElementById('gotdImg').onerror = function(){ this.style.display='none'; };
+        document.getElementById('gotdDecade').textContent = g.decade;
+        document.getElementById('gotdTitle').textContent = g.title;
+        document.getElementById('gotdMeta').textContent = g.year + ' · ' + g.genre + ' · ' + g.platform;
+        document.getElementById('gotdDesc').textContent = g.description ? g.description.substring(0, 180) + '…' : '';
+        document.getElementById('gotdCard').style.opacity = '1';
+    })
+    .catch(() => {
+        document.getElementById('gotdContainer').style.display = 'none';
+    });
 </script>
 </body>
 </html>

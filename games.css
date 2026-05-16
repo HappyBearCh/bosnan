@@ -430,3 +430,244 @@
     .game-detail-image-col { flex-direction: column; }
     .game-detail-img { width: 100%; }
 }
+
+/* ================== NAV EXTRAS ================== */
+.nav-random {
+    color: #aaa;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+.nav-random:hover { color: red !important; }
+
+/* ================== SHARE BUTTON ================== */
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: transparent;
+    border: 1px solid #333;
+    color: #aaa;
+    padding: 9px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.2s;
+    margin-top: 16px;
+}
+.share-btn:hover {
+    border-color: red;
+    color: white;
+    box-shadow: 0 0 10px rgba(255,0,0,0.2);
+}
+
+/* ================== RELATED GAMES ================== */
+.related-section {
+    max-width: 1050px;
+    margin: 48px auto 80px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+.related-section h2 {
+    font-size: 22px;
+    color: red;
+    text-shadow: 0 0 8px rgba(255,0,0,0.4);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 10px;
+}
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 18px;
+}
+
+/* ================== GAME OF THE DAY (index.html) ================== */
+.gotd-section {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+.gotd-section h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555;
+    margin-bottom: 16px;
+}
+.gotd-card {
+    display: flex;
+    gap: 28px;
+    background: #0d0d0d;
+    border: 1px solid #cc0000;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 30px rgba(200,0,0,0.15);
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+.gotd-card:hover {
+    box-shadow: 0 0 40px rgba(255,0,0,0.3);
+    border-color: red;
+}
+.gotd-img {
+    width: 160px;
+    min-height: 160px;
+    object-fit: cover;
+    object-position: top;
+    flex-shrink: 0;
+}
+.gotd-body {
+    padding: 22px 22px 22px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+.gotd-badge {
+    display: inline-block;
+    background: red;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    width: fit-content;
+}
+.gotd-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 12px rgba(255,0,0,0.2);
+    line-height: 1.15;
+    margin: 0;
+}
+.gotd-meta {
+    font-size: 13px;
+    color: #cc0000;
+}
+.gotd-desc {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+@media (max-width: 600px) {
+    .gotd-card { flex-direction: column; }
+    .gotd-img { width: 100%; min-height: 140px; }
+    .gotd-body { padding: 16px; }
+}
+
+/* ================== PLATFORM LIST PAGE ================== */
+.platforms-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    position: relative;
+    z-index: 1;
+}
+.platforms-hero h1 {
+    font-size: 48px;
+    color: red;
+    text-shadow: 0 0 20px red;
+    margin-bottom: 12px;
+}
+.platforms-hero p { font-size: 17px; opacity: 0.7; }
+.platforms-grid {
+    max-width: 1050px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+}
+.platform-card {
+    background: #0d0d0d;
+    border: 1px solid #1a1a1a;
+    border-radius: 10px;
+    padding: 24px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.platform-card:hover {
+    border-color: red;
+    box-shadow: 0 0 20px rgba(255,0,0,0.2);
+    transform: translateY(-3px);
+}
+.platform-card-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.platform-card-era {
+    font-size: 12px;
+    color: red;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.platform-card-count {
+    font-size: 13px;
+    color: #555;
+}
+.platform-card-desc {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ================== PLATFORM DETAIL PAGE ================== */
+.platform-detail-wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 30px 20px 0;
+    position: relative;
+    z-index: 1;
+}
+.platform-detail-header {
+    margin-bottom: 40px;
+}
+.platform-detail-header h1 {
+    font-size: 42px;
+    color: white;
+    text-shadow: 0 0 20px rgba(255,0,0,0.3);
+    margin: 0 0 6px;
+}
+.platform-detail-era {
+    color: red;
+    font-size: 14px;
+    margin: 0 0 24px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.platform-detail-desc {
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.75;
+    margin-bottom: 16px;
+    max-width: 780px;
+}
+.platform-games-heading {
+    font-size: 22px;
+    color: red;
+    text-shadow: 0 0 8px rgba(255,0,0,0.4);
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 10px;
+}
