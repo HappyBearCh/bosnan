@@ -11,6 +11,12 @@ const gamesSlim = games.map(({ id, title, year, decade, genre, platform, develop
   ({ id, title, year, decade, genre, platform, developer, image })
 );
 
+// O(1) game lookup — replaces .find() on every request
+const gamesById = new Map(games.map(g => [g.id, g]));
+
+// Pre-computed platform→games (avoids O(n) filter on every platform page)
+const platformGamesIndex = new Map();
+
 const PLATFORMS = [
   {
     id: 'arcade', name: 'Arcade', era: '1971 – 1990s',
@@ -70,11 +76,31 @@ const PLATFORMS = [
   },
 ];
 
+// Pre-computed related games per game — avoids 3× O(n) filter on every game detail page
+const relatedGamesIndex = new Map();
+
+for (const platform of PLATFORMS) {
+  platformGamesIndex.set(platform.id, games.filter(g =>
+    g.platform.toLowerCase().includes(platform.keyword.toLowerCase())
+  ));
+}
+
+for (const game of games) {
+  const byDev = games.filter(g => g.id !== game.id &&
+    g.developer.toLowerCase() === game.developer.toLowerCase()).slice(0, 4);
+  const usedIds = new Set([game.id, ...byDev.map(g => g.id)]);
+  const byGenre = games.filter(g => !usedIds.has(g.id) &&
+    g.genre.toLowerCase() === game.genre.toLowerCase()).slice(0, 4);
+  relatedGamesIndex.set(game.id, [...byDev, ...byGenre].slice(0, 6));
+}
+
 const PAGE_SIZE = 32;
 
 let cachedGamesListHtml = null;
 let cachedPlatformsListHtml = null;
 const cachedPlatformPageHtml = {};
+const cachedGamePageHtml = new Map(); // key: `${host}/${gameId}`
+let cachedSitemap = null;
 
 app.use(compression());
 app.use(express.static(__dirname));
@@ -92,7 +118,7 @@ function gameOfDay() {
 }
 
 function gamesForPlatform(platform) {
-  return games.filter(g => g.platform.toLowerCase().includes(platform.keyword.toLowerCase()));
+  return platformGamesIndex.get(platform.id) || [];
 }
 
 function bgLogo() {
@@ -146,33 +172,41 @@ function buildCardHtml(list) {
 // ── Routes ─────────────────────────────────────────────────────────────────
 
 app.get('/sitemap.xml', (req, res) => {
-  const base = `${req.protocol}://${req.get('host')}`;
-  const today = new Date().toISOString().split('T')[0];
-  const staticUrls = ['', '/games', '/platforms'].map(p => `
+  const host = req.get('host');
+  if (!cachedSitemap || cachedSitemap.host !== host) {
+    const base = `${req.protocol}://${host}`;
+    const today = new Date().toISOString().split('T')[0];
+    const staticUrls = ['', '/games', '/platforms'].map(p => `
   <url>
     <loc>${base}${p}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>${p === '' ? '1.0' : '0.9'}</priority>
   </url>`).join('');
-  const gameUrls = games.map(g => `
+    const gameUrls = games.map(g => `
   <url>
     <loc>${base}/games/${g.id}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>`).join('');
-  const platformUrls = PLATFORMS.map(p => `
+    const platformUrls = PLATFORMS.map(p => `
   <url>
     <loc>${base}/platforms/${p.id}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`).join('');
-  res.header('Content-Type', 'application/xml');
-  res.send(`<?xml version="1.0" encoding="UTF-8"?>
+    cachedSitemap = {
+      host,
+      xml: `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${gameUrls}
-</urlset>`);
+</urlset>`,
+    };
+  }
+  res.header('Content-Type', 'application/xml');
+  res.set('Cache-Control', 'public, max-age=86400');
+  res.send(cachedSitemap.xml);
 });
 
 app.get('/robots.txt', (req, res) => {
@@ -192,7 +226,7 @@ app.get('/api/games', (req, res) => {
 });
 
 app.get('/api/games/:id', (req, res) => {
-  const game = games.find(g => g.id === req.params.id);
+  const game = gamesById.get(req.params.id);
   if (!game) return res.status(404).json({ error: 'Game not found' });
   res.set('Cache-Control', 'public, max-age=3600');
   res.json(game);
@@ -205,20 +239,26 @@ app.get('/api/game-of-the-day', (req, res) => {
 
 app.get('/games', (req, res) => {
   if (!cachedGamesListHtml) cachedGamesListHtml = gamesListPage();
-  res.set('Cache-Control', 'no-cache');
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
   res.send(cachedGamesListHtml);
 });
 
 app.get('/games/:id', (req, res) => {
-  const game = games.find(g => g.id === req.params.id);
+  const game = gamesById.get(req.params.id);
   if (!game) return res.status(404).send(notFoundPage());
-  const base = `${req.protocol}://${req.get('host')}`;
-  res.send(gameDetailPage(game, base));
+  const host = req.get('host');
+  const cacheKey = `${host}/${game.id}`;
+  if (!cachedGamePageHtml.has(cacheKey)) {
+    const base = `${req.protocol}://${host}`;
+    cachedGamePageHtml.set(cacheKey, gameDetailPage(game, base));
+  }
+  res.set('Cache-Control', 'public, max-age=86400, stale-while-revalidate=604800');
+  res.send(cachedGamePageHtml.get(cacheKey));
 });
 
 app.get('/platforms', (req, res) => {
   if (!cachedPlatformsListHtml) cachedPlatformsListHtml = platformsListPage();
-  res.set('Cache-Control', 'no-cache');
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
   res.send(cachedPlatformsListHtml);
 });
 
@@ -228,7 +268,7 @@ app.get('/platforms/:id', (req, res) => {
   if (!cachedPlatformPageHtml[platform.id]) {
     cachedPlatformPageHtml[platform.id] = platformDetailPage(platform);
   }
-  res.set('Cache-Control', 'no-cache');
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
   res.send(cachedPlatformPageHtml[platform.id]);
 });
 
@@ -357,13 +397,7 @@ function gameDetailPage(game, base) {
   const imgUrl = `${base}/${game.image}`;
   const desc = escapeHtml((game.description || '').substring(0, 160));
 
-  // Related: same developer first, then same genre, deduped, max 6
-  const relatedByDev = games.filter(g => g.id !== game.id &&
-    g.developer.toLowerCase() === game.developer.toLowerCase()).slice(0, 4);
-  const usedIds = new Set([game.id, ...relatedByDev.map(g => g.id)]);
-  const relatedByGenre = games.filter(g => !usedIds.has(g.id) &&
-    g.genre.toLowerCase() === game.genre.toLowerCase()).slice(0, 4);
-  const related = [...relatedByDev, ...relatedByGenre].slice(0, 6);
+  const related = relatedGamesIndex.get(game.id) || [];
 
   const relatedHtml = related.length === 0 ? '' : `
 <div class="related-section">
