@@ -36,7 +36,8 @@
     "platform": "DEC PDP-1",
     "image": "images/games/spacewar.jpg",
     "description": "Spacewar! is one of the most influential early computer games, developed in 1962 by students at MIT on a DEC PDP-1 mainframe. Two players pilot spaceships â€” the needle and the wedge â€” around a central star with realistic gravitational pull, firing torpedoes at each other. The game spread rapidly among research institutions and universities as PDP-1 computers were shared and the code freely copied. It is widely regarded as the first widely-played and widely-influential computer game, directly inspiring an entire generation of developers and game designers.",
-    "longDescription": "Spacewar! was created by Steve Russell and his colleagues at MIT's Tech Model Railroad Club. The game featured a realistic starfield background, gravity simulation from a central star that could slingshot ships if used cleverly, and the option to enter hyperspace â€” a risky random teleport used as a last resort. The MIT hackers kept adding features: Dan Edwards added the gravity star, and Peter Samson contributed an accurate star map of the night sky. By the mid-1960s, Spacewar! was installed on nearly every PDP-1 computer in the United States. In 1972, Nolan Bushnell directly credited it as inspiration for the first commercial arcade game, Computer Space. It is regularly cited as one of the ten most important computer programs ever written."
+    "longDescription": "Spacewar! was created by Steve Russell and his colleagues at MIT's Tech Model Railroad Club. The game featured a realistic starfield background, gravity simulation from a central star that could slingshot ships if used cleverly, and the option to enter hyperspace â€” a risky random teleport used as a last resort. The MIT hackers kept adding features: Dan Edwards added the gravity star, and Peter Samson contributed an accurate star map of the night sky. By the mid-1960s, Spacewar! was installed on nearly every PDP-1 computer in the United States. In 1972, Nolan Bushnell directly credited it as inspiration for the first commercial arcade game, Computer Space. It is regularly cited as one of the ten most important computer programs ever written.",
+    "playUrl": "https://archive.org/details/pdp1_spacewar"
   },
   {
     "id": "sumerian-game",
@@ -62,7 +63,8 @@
     "platform": "PDP-8 / BASIC",
     "image": "images/games/hamurabi.png",
     "description": "Hamurabi (also spelled Hammurabi) is one of the earliest strategy and resource management games, originally written in 1968 for the DEC PDP-8 minicomputer. Players take the role of the ancient Babylonian king Hammurabi, managing the city of Sumeria over ten years by deciding how much land to buy or sell, how much grain to feed the people, and how much to plant for the next harvest. Random events like rats, plague, and floods add unpredictability to the decisions. The game was widely distributed through the 1970s as a BASIC program and appeared in the landmark book 101 BASIC Computer Games, introducing strategy gaming to a generation of home computer users.",
-    "longDescription": "The original game was called 'The Sumerian Game' and was created in 1964 by Mabel Addis and William McKay for IBM. Doug Dyment rewrote and adapted it for the PDP-8 in 1968, and David Ahl later ported it to BASIC under the name Hamurabi. The game's mechanics were deceptively deep â€” players had to balance population growth, land prices, grain reserves, and planting decisions simultaneously, while accounting for random events. A ten-year run ended with a verdict comparing your rule to historical leaders: exceptional, mediocre, or tyrannical. Its inclusion in widely circulated BASIC game books made it one of the most-played computer programs of the early home computing era and a direct ancestor of the Civilization and SimCity franchises."
+    "longDescription": "The original game was called 'The Sumerian Game' and was created in 1964 by Mabel Addis and William McKay for IBM. Doug Dyment rewrote and adapted it for the PDP-8 in 1968, and David Ahl later ported it to BASIC under the name Hamurabi. The game's mechanics were deceptively deep â€” players had to balance population growth, land prices, grain reserves, and planting decisions simultaneously, while accounting for random events. A ten-year run ended with a verdict comparing your rule to historical leaders: exceptional, mediocre, or tyrannical. Its inclusion in widely circulated BASIC game books made it one of the most-played computer programs of the early home computing era and a direct ancestor of the Civilization and SimCity franchises.",
+    "playUrl": "https://archive.org/details/msdos_Hamurabi_1996"
   },
   {
     "id": "lunar-lander-1969",
@@ -88,7 +90,8 @@
     "platform": "BASIC / SDS Sigma 7",
     "image": "images/games/star-trek-basic.png",
     "description": "Star Trek is a text-based strategy video game based on the Star Trek television series (1966â€“69) and originally released in 1971.  In the game, the player commands the USS Enterprise on a mission to hunt down and destroy an invading fleet of Klingon warships.  The player travels through the 64 quadrants of the galaxy to attack enemy ships with phasers and photon torpedoes in turn-based battles and refuel at starbases.",
-    "longDescription": "Star Trek is a text-based strategy video game based on the Star Trek television series (1966â€“69) and originally released in 1971.  In the game, the player commands the USS Enterprise on a mission to hunt down and destroy an invading fleet of Klingon warships.  The player travels through the 64 quadrants of the galaxy to attack enemy ships with phasers and photon torpedoes in turn-based battles and refuel at starbases.  The goal is to eliminate all enemies within a random time limit."
+    "longDescription": "Star Trek is a text-based strategy video game based on the Star Trek television series (1966â€“69) and originally released in 1971.  In the game, the player commands the USS Enterprise on a mission to hunt down and destroy an invading fleet of Klingon warships.  The player travels through the 64 quadrants of the galaxy to attack enemy ships with phasers and photon torpedoes in turn-based battles and refuel at starbases.  The goal is to eliminate all enemies within a random time limit.",
+    "playUrl": "https://classicreload.com/super-star-trek.html"
   },
   {
     "id": "colossal-cave",
@@ -101,7 +104,8 @@
     "platform": "PDP-10",
     "image": "images/games/colossal-cave.png",
     "description": "Colossal Cave Adventure is a text-based adventure game, released in 1976 by developer Will Crowther for the PDP-10 mainframe computer.  It was expanded upon in 1977 by Don Woods.  In the game, the player explores a cave system rumored to be filled with treasure and gold.",
-    "longDescription": "Colossal Cave Adventure is a text-based adventure game, released in 1976 by developer Will Crowther for the PDP-10 mainframe computer.  It was expanded upon in 1977 by Don Woods.  In the game, the player explores a cave system rumored to be filled with treasure and gold.  The game is composed of dozens of locations, and the player moves between these locations and interacts with objects in them by typing one- or two-word commands which are interpreted by the game's natural language input system.  The program acts as a narrator, describing the player's location and the results of the player's attempted actions.  It is the first well-known example of interactive fiction, as well as the first well-known adventure game, for which it was also the namesake."
+    "longDescription": "Colossal Cave Adventure is a text-based adventure game, released in 1976 by developer Will Crowther for the PDP-10 mainframe computer.  It was expanded upon in 1977 by Don Woods.  In the game, the player explores a cave system rumored to be filled with treasure and gold.  The game is composed of dozens of locations, and the player moves between these locations and interacts with objects in them by typing one- or two-word commands which are interpreted by the game's natural language input system.  The program acts as a narrator, describing the player's location and the results of the player's attempted actions.  It is the first well-known example of interactive fiction, as well as the first well-known adventure game, for which it was also the namesake.",
+    "playUrl": "https://archive.org/details/msdos_Classic_Adventure_-_The_Original_Colossal_Cave_1996"
   },
   {
     "id": "computer-space",
@@ -140,7 +144,8 @@
     "platform": "Arcade",
     "image": "images/games/pong.jpg",
     "description": "Pong is the game that launched the commercial video game industry, released by Atari in 1972 as the first commercially successful arcade game. Designed by engineer Allan Alcorn as a training exercise, the game simulates a table tennis match with two paddle-controlled lines and a bouncing ball. Atari placed a prototype machine at Andy Capp's Tavern in Sunnyvale, California, and within weeks it had broken down from being played too much â€” jammed with quarters. Pong was eventually released as a home console version in 1975, bringing video games into living rooms for the first time at mass scale.",
-    "longDescription": "Atari founder Nolan Bushnell assigned Pong to new hire Allan Alcorn as a practice project inspired by the Magnavox Odyssey's table tennis game. Alcorn added realistic physics â€” making the ball angle change based on which part of the paddle it hit â€” that weren't in his specification. The original arcade cabinet used simple TTL logic chips rather than a programmable computer. After the Andy Capp's Tavern success, Bushnell mass-produced the cabinet and Atari grew from a two-person startup to a multi-million dollar company within a year. Dozens of clones appeared almost immediately, creating the first video game market. The home version sold 150,000 units in its first year through Sears and became the best-selling product in the Sears catalog for the 1975 holiday season."
+    "longDescription": "Atari founder Nolan Bushnell assigned Pong to new hire Allan Alcorn as a practice project inspired by the Magnavox Odyssey's table tennis game. Alcorn added realistic physics â€” making the ball angle change based on which part of the paddle it hit â€” that weren't in his specification. The original arcade cabinet used simple TTL logic chips rather than a programmable computer. After the Andy Capp's Tavern success, Bushnell mass-produced the cabinet and Atari grew from a two-person startup to a multi-million dollar company within a year. Dozens of clones appeared almost immediately, creating the first video game market. The home version sold 150,000 units in its first year through Sears and became the best-selling product in the Sears catalog for the 1975 holiday season.",
+    "playUrl": "https://archive.org/details/pong_mame"
   },
   {
     "id": "space-race",
@@ -270,7 +275,8 @@
     "platform": "Arcade",
     "image": "images/games/breakout.png",
     "description": "Breakout is a 1976 Atari arcade game in which a player uses a paddle to bounce a ball against a wall of bricks, trying to clear every brick without letting the ball fall off the bottom of the screen. It evolved from Pong's paddle mechanics into a single-player challenge with escalating difficulty, and was a massive commercial and cultural hit. The hardware design was famously completed by Steve Wozniak in four days on a challenge from Nolan Bushnell, using an unusually efficient circuit that industry engineers struggled to reverse-engineer. The concept inspired countless clones and remains one of the most imitated game mechanics ever created.",
-    "longDescription": "Breakout was conceived by Nolan Bushnell and Steve Bristow as a single-player variant of Pong. Atari hired Steve Wozniak â€” still years before co-founding Apple Computer â€” to design the hardware, and he famously completed the task in four days with only 44 chips, far fewer than the engineers had thought possible. The game featured eight rows of bricks in four colors with different point values. As the ball cleared the top rows and entered the space above, it bounced rapidly at increasing speed, making the endgame extremely challenging. The Atari 2600 home version in 1978 became one of the system's best-sellers and introduced the game to home audiences worldwide. The 1986 sequel Super Breakout added multiple balls and other innovations, and the franchise's influence is still felt in modern puzzle games."
+    "longDescription": "Breakout was conceived by Nolan Bushnell and Steve Bristow as a single-player variant of Pong. Atari hired Steve Wozniak â€” still years before co-founding Apple Computer â€” to design the hardware, and he famously completed the task in four days with only 44 chips, far fewer than the engineers had thought possible. The game featured eight rows of bricks in four colors with different point values. As the ball cleared the top rows and entered the space above, it bounced rapidly at increasing speed, making the endgame extremely challenging. The Atari 2600 home version in 1978 became one of the system's best-sellers and introduced the game to home audiences worldwide. The 1986 sequel Super Breakout added multiple balls and other innovations, and the franchise's influence is still felt in modern puzzle games.",
+    "playUrl": "https://archive.org/details/arcade_breakout"
   },
   {
     "id": "death-race",
@@ -335,7 +341,9 @@
     "platform": "PDP-10 / Multiple",
     "image": "images/games/zork.jpg",
     "description": "Zork is a text adventure game first released in 1977 by developers Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling for the PDP-10 mainframe computer.  The original developers and others, as the company Infocom, expanded and split the game into three titlesâ€”ZorkÂ I: The Great Underground Empire, ZorkÂ II: The Wizard of Frobozz, and ZorkÂ III: The Dungeon Masterâ€”which were released commercially for a range of personal computers beginning in 1980.  In Zork, the player explores the abandoned Great Underground Empire in search of treasure.",
-    "longDescription": "Zork is a text adventure game first released in 1977 by developers Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling for the PDP-10 mainframe computer.  The original developers and others, as the company Infocom, expanded and split the game into three titlesâ€”ZorkÂ I: The Great Underground Empire, ZorkÂ II: The Wizard of Frobozz, and ZorkÂ III: The Dungeon Masterâ€”which were released commercially for a range of personal computers beginning in 1980.  In Zork, the player explores the abandoned Great Underground Empire in search of treasure.  The player moves between the game's hundreds of locations and interacts with objects by typing commands in natural language that the game interprets.  The program acts as a narrator, describing the player's location and the results of the player's commands.  It has been described as the most famous piece of interactive fiction."
+    "longDescription": "Zork is a text adventure game first released in 1977 by developers Tim Anderson, Marc Blank, Bruce Daniels, and Dave Lebling for the PDP-10 mainframe computer.  The original developers and others, as the company Infocom, expanded and split the game into three titlesâ€”ZorkÂ I: The Great Underground Empire, ZorkÂ II: The Wizard of Frobozz, and ZorkÂ III: The Dungeon Masterâ€”which were released commercially for a range of personal computers beginning in 1980.  In Zork, the player explores the abandoned Great Underground Empire in search of treasure.  The player moves between the game's hundreds of locations and interacts with objects by typing commands in natural language that the game interprets.  The program acts as a narrator, describing the player's location and the results of the player's commands.  It has been described as the most famous piece of interactive fiction.",
+    "playUrl": "https://archive.org/details/msdos_Zork_I_-_The_Great_Underground_Empire_1980",
+    "downloadUrl": "https://www.myabandonware.com/game/zork-26j"
   },
   {
     "id": "fire-truck",
@@ -361,7 +369,8 @@
     "platform": "Arcade",
     "image": "images/games/space-invaders.jpg",
     "description": "Space Invaders is a 1978 Taito arcade game that single-handedly transformed the video game industry into a global phenomenon. Designed by Tomohiro Nishikado, the game has players move a laser cannon horizontally across the bottom of the screen, shooting waves of descending alien invaders before they reach the ground. It was so popular in Japan that it caused a national shortage of 100-yen coins and was credited with quadrupling the size of Japan's arcade industry. Space Invaders was the first game to introduce persistent high scores, inspire dedicated fan communities, and prove that video games could be a dominant entertainment medium.",
-    "longDescription": "Tomohiro Nishikado designed and programmed Space Invaders over one year, creating custom hardware because the available microprocessors couldn't handle the game's requirements. The aliens moved faster as fewer remained on screen â€” originally an unintentional side effect of the hardware processing fewer sprites, but Nishikado kept it as deliberate design when he saw how well it worked. The game introduced concepts like escalating difficulty, multiple lives, and the persistent high-score display. Atari paid $11 million for the home console rights, and the Atari 2600 version became the first killer app in console history, quadrupling the console's sales. By 1982 the game had grossed over two billion dollars, making it the highest-grossing entertainment property in history at that time."
+    "longDescription": "Tomohiro Nishikado designed and programmed Space Invaders over one year, creating custom hardware because the available microprocessors couldn't handle the game's requirements. The aliens moved faster as fewer remained on screen â€” originally an unintentional side effect of the hardware processing fewer sprites, but Nishikado kept it as deliberate design when he saw how well it worked. The game introduced concepts like escalating difficulty, multiple lives, and the persistent high-score display. Atari paid $11 million for the home console rights, and the Atari 2600 version became the first killer app in console history, quadrupling the console's sales. By 1982 the game had grossed over two billion dollars, making it the highest-grossing entertainment property in history at that time.",
+    "playUrl": "https://archive.org/details/arcade_invaders"
   },
   {
     "id": "asteroids",
@@ -374,7 +383,8 @@
     "platform": "Arcade",
     "image": "images/games/asteroids.jpg",
     "description": "Asteroids is a 1979 Atari arcade classic in which players pilot a triangular spaceship through a field of tumbling asteroids and flying saucers, shooting them to clear each wave. Large asteroids split into smaller ones when shot, creating increasing chaos before eventually being destroyed entirely. The game used vector graphics â€” bright, razor-sharp lines drawn on a special vector monitor â€” giving it a distinctive look far cleaner than raster displays of the era. Asteroids dethroned Space Invaders as the best-selling arcade game of its time and held the record for the highest-grossing arcade game in North America for two years.",
-    "longDescription": "Asteroids was designed by Lyle Rains and programmed by Ed Logg, inspired conceptually by Spacewar! and an earlier Atari prototype called Cosmos. The ship featured realistic Newtonian physics â€” thrust built up momentum that continued even after the engine was off, requiring players to think ahead. The game's wrap-around screen edges meant asteroids and ships could appear from any direction. A famous exploit allowed skilled players to camp in the upper corner and shoot flying saucers for points indefinitely without engaging asteroids â€” the 'lurk' strategy. The game's ROMs were so popular that operators complained about arcades being taken over by a single player for hours. The Atari 2600 port sold over three million copies, and Asteroids remains one of the most recognized arcade games in history."
+    "longDescription": "Asteroids was designed by Lyle Rains and programmed by Ed Logg, inspired conceptually by Spacewar! and an earlier Atari prototype called Cosmos. The ship featured realistic Newtonian physics â€” thrust built up momentum that continued even after the engine was off, requiring players to think ahead. The game's wrap-around screen edges meant asteroids and ships could appear from any direction. A famous exploit allowed skilled players to camp in the upper corner and shoot flying saucers for points indefinitely without engaging asteroids â€” the 'lurk' strategy. The game's ROMs were so popular that operators complained about arcades being taken over by a single player for hours. The Atari 2600 port sold over three million copies, and Asteroids remains one of the most recognized arcade games in history.",
+    "playUrl": "https://archive.org/details/atari_2600_asteroids"
   },
   {
     "id": "galaxian",
@@ -387,7 +397,8 @@
     "platform": "Arcade",
     "image": "images/games/galaxian.jpg",
     "description": "Galaxian is Namco's 1979 answer to Space Invaders, advancing the fixed-shooter genre with colorful RGB graphics, individually animated aliens, and diving attack formations that broke from the rigid marching rows of its predecessor. Instead of all aliens moving in lockstep, Galaxian's enemies peeled away from the main formation to swoop down at the player in kamikaze-style attacks, making each wave more dynamic and unpredictable. It was the first arcade game to use true RGB color sprites on a raster display, setting a new standard for arcade visuals. Galaxian was a major commercial success and directly led to its legendary sequel Galaga in 1981.",
-    "longDescription": "Galaxian was created by Namco's team under Kazunori Sawano as a deliberate evolution of Space Invaders. The game's technical innovation lay in its use of multiple hardware sprites with individual color palettes â€” a major feat for 1979. Each alien type had its own diving behavior: flagships flew predictable arcs, escorts broke away to support attack runs, and standard drones made straight kamikaze dives. The game's difficulty came from managing the threat of diving groups while maintaining fire on the main formation. Namco sold over 40,000 arcade units in North America alone. The follow-up Galaga in 1981 added even more sophisticated enemy behavior, a capture mechanic, and a dual-ship mode, becoming one of the best-selling arcade games of the early 1980s."
+    "longDescription": "Galaxian was created by Namco's team under Kazunori Sawano as a deliberate evolution of Space Invaders. The game's technical innovation lay in its use of multiple hardware sprites with individual color palettes â€” a major feat for 1979. Each alien type had its own diving behavior: flagships flew predictable arcs, escorts broke away to support attack runs, and standard drones made straight kamikaze dives. The game's difficulty came from managing the threat of diving groups while maintaining fire on the main formation. Namco sold over 40,000 arcade units in North America alone. The follow-up Galaga in 1981 added even more sophisticated enemy behavior, a capture mechanic, and a dual-ship mode, becoming one of the best-selling arcade games of the early 1980s.",
+    "playUrl": "https://archive.org/details/galaxian_mame"
   },
   {
     "id": "lunar-lander",
@@ -439,7 +450,8 @@
     "platform": "Atari 2600",
     "image": "images/games/adventure-2600.jpg",
     "description": "Adventure is a classic 1970s action-adventure game developed by Warren Robinett for Atari 2600.",
-    "longDescription": "Adventure is a classic 1970s action-adventure game developed by Warren Robinett for Atari 2600."
+    "longDescription": "Adventure is a classic 1970s action-adventure game developed by Warren Robinett for Atari 2600.",
+    "playUrl": "https://archive.org/details/atari_2600_adventure"
   },
   {
     "id": "temple-of-apshai",
@@ -452,7 +464,8 @@
     "platform": "TRS-80 / Apple II",
     "image": "images/games/temple-of-apshai.png",
     "description": "Temple of Apshai is a classic 1970s rpg game developed by Jon Freeman & Jeff Johnson for TRS-80 / Apple II.",
-    "longDescription": "Temple of Apshai is a classic 1970s rpg game developed by Jon Freeman & Jeff Johnson for TRS-80 / Apple II."
+    "longDescription": "Temple of Apshai is a classic 1970s rpg game developed by Jon Freeman & Jeff Johnson for TRS-80 / Apple II.",
+    "downloadUrl": "https://www.myabandonware.com/game/temple-of-apshai-29k"
   },
   {
     "id": "missile-command",
@@ -465,7 +478,8 @@
     "platform": "Arcade",
     "image": "images/games/missile-command.jpg",
     "description": "Missile Command is a classic 1980s fixed shooter game developed by Dave Theurer for Arcade.",
-    "longDescription": "Missile Command is a classic 1980s fixed shooter game developed by Dave Theurer for Arcade."
+    "longDescription": "Missile Command is a classic 1980s fixed shooter game developed by Dave Theurer for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_missile"
   },
   {
     "id": "battlezone",
@@ -478,7 +492,8 @@
     "platform": "Arcade",
     "image": "images/games/battlezone.jpg",
     "description": "Battlezone is a classic 1980s tank shooter game developed by Ed Rotberg for Arcade.",
-    "longDescription": "Battlezone is a classic 1980s tank shooter game developed by Ed Rotberg for Arcade."
+    "longDescription": "Battlezone is a classic 1980s tank shooter game developed by Ed Rotberg for Arcade.",
+    "playUrl": "https://archive.org/details/atari_2600_battlezone"
   },
   {
     "id": "rally-x",
@@ -491,7 +506,8 @@
     "platform": "Arcade",
     "image": "images/games/rally-x.jpg",
     "description": "Rally-X is a 1980 maze video game developed and published by Namco for arcades.  It was released on October 3, 1980 in Japan, by Midway Manufacturing in North America in February 1981 and by Karateco in Europe in 1981.  Players drive a blue Formula One race car through a multidirectional scrolling maze to collect yellow flags.",
-    "longDescription": "Rally-X is a 1980 maze video game developed and published by Namco for arcades.  It was released on October 3, 1980 in Japan, by Midway Manufacturing in North America in February 1981 and by Karateco in Europe in 1981.  Players drive a blue Formula One race car through a multidirectional scrolling maze to collect yellow flags.  Boulders block some paths and must be avoided.  Red enemy cars pursue the player in an attempt to collide with them.  Red cars can be temporarily stunned by laying down smoke screens at the cost of fuel."
+    "longDescription": "Rally-X is a 1980 maze video game developed and published by Namco for arcades.  It was released on October 3, 1980 in Japan, by Midway Manufacturing in North America in February 1981 and by Karateco in Europe in 1981.  Players drive a blue Formula One race car through a multidirectional scrolling maze to collect yellow flags.  Boulders block some paths and must be avoided.  Red enemy cars pursue the player in an attempt to collide with them.  Red cars can be temporarily stunned by laying down smoke screens at the cost of fuel.",
+    "playUrl": "https://archive.org/details/rallyx_mame"
   },
   {
     "id": "crazy-climber",
@@ -504,7 +520,8 @@
     "platform": "Arcade",
     "image": "images/games/crazy-climber.jpg",
     "description": "Crazy Climber is a classic 1980s action game developed by Nichibutsu for Arcade.",
-    "longDescription": "Crazy Climber is a classic 1980s action game developed by Nichibutsu for Arcade."
+    "longDescription": "Crazy Climber is a classic 1980s action game developed by Nichibutsu for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_cclimber"
   },
   {
     "id": "berzerk",
@@ -517,7 +534,8 @@
     "platform": "Arcade",
     "image": "images/games/berzerk.jpg",
     "description": "Berzerk is a classic 1980s shooter game developed by Alan McNeil for Arcade.",
-    "longDescription": "Berzerk is a classic 1980s shooter game developed by Alan McNeil for Arcade."
+    "longDescription": "Berzerk is a classic 1980s shooter game developed by Alan McNeil for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_berzerk"
   },
   {
     "id": "space-panic",
@@ -543,7 +561,8 @@
     "platform": "Arcade",
     "image": "images/games/pac-man.png",
     "description": "Pac-Man is the iconic 1980 arcade game by Namco in which a yellow disc-shaped character navigates a maze, eating dots while being chased by four differently-behaved ghosts: Blinky, Pinky, Inky, and Clyde. Power pellets temporarily reverse the roles, letting Pac-Man chase and eat the ghosts for bonus points. Designer Toru Iwatani created it specifically to appeal to women and couples who were absent from the then male-dominated arcades. Pac-Man became the best-selling arcade game in history and one of the most recognizable characters in popular culture, spawning a Saturday morning cartoon, a number-one pop hit, and over 100 licensed products.",
-    "longDescription": "Toru Iwatani drew inspiration for Pac-Man from the image of a pizza with one slice removed. He spent 17 months designing the game at Namco, carefully programming each ghost with a distinct personality and hunting algorithm. Blinky chases Pac-Man directly, Pinky targets four spaces ahead of him, Inky uses a complex formula involving both Pac-Man's and Blinky's positions, and Clyde alternates between chasing and retreating. These behaviors create emergent gameplay that skilled players can exploit through pattern memorization. The game grossed over a billion dollars in quarters in North America in its first year. It remains one of the highest-grossing and most-played entertainment products of all time, with the perfect arcade game lasting achieved by Billy Mitchell in 1999."
+    "longDescription": "Toru Iwatani drew inspiration for Pac-Man from the image of a pizza with one slice removed. He spent 17 months designing the game at Namco, carefully programming each ghost with a distinct personality and hunting algorithm. Blinky chases Pac-Man directly, Pinky targets four spaces ahead of him, Inky uses a complex formula involving both Pac-Man's and Blinky's positions, and Clyde alternates between chasing and retreating. These behaviors create emergent gameplay that skilled players can exploit through pattern memorization. The game grossed over a billion dollars in quarters in North America in its first year. It remains one of the highest-grossing and most-played entertainment products of all time, with the perfect arcade game lasting achieved by Billy Mitchell in 1999.",
+    "playUrl": "https://archive.org/details/pac-man-midway-arcade"
   },
   {
     "id": "centipede",
@@ -556,7 +575,8 @@
     "platform": "Arcade",
     "image": "images/games/centipede.jpg",
     "description": "Centipede is a 1980 Atari arcade shooter in which players move a shooter at the bottom of the screen to blast a multicolored centipede that winds down through a field of mushrooms toward the player. Each segment hit becomes an additional mushroom obstacle, gradually filling the playfield and making the centipede's descent more chaotic. The game was notable for being co-designed by Dona Bailey, one of the first women to design a major arcade game. Centipede was one of the most widely distributed arcade games in history and attracted an unusually large female player base, helping broaden the demographics of arcade gaming.",
-    "longDescription": "Centipede was designed by Ed Logg and Dona Bailey, who came to Atari from General Motors. The trackball controller used in the arcade cabinet gave the game a unique feel â€” the shooter moved fluidly rather than in discrete steps, allowing skilled players to dodge and aim with precision. The mushroom field created a persistent, evolving landscape where damage from missed shots accumulated across rounds. Enemies like the spider, flea, and scorpion added variety: the spider bounced unpredictably eating mushrooms, the flea dropped new mushrooms rapidly, and the scorpion poisoned mushrooms it crossed, sending the centipede on a straight-line charge when it touched one. Centipede sold over 55,000 arcade cabinets and became one of Atari's most successful games. The home Atari 2600 version was the best-selling third-party title for that system."
+    "longDescription": "Centipede was designed by Ed Logg and Dona Bailey, who came to Atari from General Motors. The trackball controller used in the arcade cabinet gave the game a unique feel â€” the shooter moved fluidly rather than in discrete steps, allowing skilled players to dodge and aim with precision. The mushroom field created a persistent, evolving landscape where damage from missed shots accumulated across rounds. Enemies like the spider, flea, and scorpion added variety: the spider bounced unpredictably eating mushrooms, the flea dropped new mushrooms rapidly, and the scorpion poisoned mushrooms it crossed, sending the centipede on a straight-line charge when it touched one. Centipede sold over 55,000 arcade cabinets and became one of Atari's most successful games. The home Atari 2600 version was the best-selling third-party title for that system.",
+    "playUrl": "https://archive.org/details/arcade_centiped"
   },
   {
     "id": "warlords",
@@ -569,7 +589,8 @@
     "platform": "Arcade",
     "image": "images/games/warlords.jpg",
     "description": "Warlords is a classic 1980s action game developed by Atari for Arcade.",
-    "longDescription": "Warlords is a classic 1980s action game developed by Atari for Arcade."
+    "longDescription": "Warlords is a classic 1980s action game developed by Atari for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_warlord"
   },
   {
     "id": "defender",
@@ -582,7 +603,8 @@
     "platform": "Arcade",
     "image": "images/games/defender.png",
     "description": "Defender is a classic 1980s shooter game developed by Eugene Jarvis & Larry DeMar for Arcade.",
-    "longDescription": "Defender is a classic 1980s shooter game developed by Eugene Jarvis & Larry DeMar for Arcade."
+    "longDescription": "Defender is a classic 1980s shooter game developed by Eugene Jarvis & Larry DeMar for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_defender"
   },
   {
     "id": "galaga",
@@ -595,7 +617,8 @@
     "platform": "Arcade",
     "image": "images/games/galaga.jpg",
     "description": "Galaga is a 1981 fixed shooter video game developed and published by Namco for arcades.  It was released by Midway Manufacturing in North America.  It is the sequel to 1979's Galaxian, and the second game in the Galaxian series.",
-    "longDescription": "Galaga is a 1981 fixed shooter video game developed and published by Namco for arcades.  It was released by Midway Manufacturing in North America.  It is the sequel to 1979's Galaxian, and the second game in the Galaxian series.  Controlling a starship, the player is tasked with destroying the Galaga forces in each stage while avoiding enemies and projectiles.  Some enemies can capture a player's ship via a tractor beam, which can be rescued by another ship to give the player a \"dual fighter\" with additional firepower."
+    "longDescription": "Galaga is a 1981 fixed shooter video game developed and published by Namco for arcades.  It was released by Midway Manufacturing in North America.  It is the sequel to 1979's Galaxian, and the second game in the Galaxian series.  Controlling a starship, the player is tasked with destroying the Galaga forces in each stage while avoiding enemies and projectiles.  Some enemies can capture a player's ship via a tractor beam, which can be rescued by another ship to give the player a \"dual fighter\" with additional firepower.",
+    "playUrl": "https://archive.org/details/arcade_galaga88"
   },
   {
     "id": "ms-pac-man",
@@ -608,7 +631,8 @@
     "platform": "Arcade",
     "image": "images/games/ms-pac-man.png",
     "description": "Ms. Pac-Man is a classic 1980s maze game developed by Midway / General Computer Corporation for Arcade.",
-    "longDescription": "Ms. Pac-Man is a classic 1980s maze game developed by Midway / General Computer Corporation for Arcade."
+    "longDescription": "Ms. Pac-Man is a classic 1980s maze game developed by Midway / General Computer Corporation for Arcade.",
+    "playUrl": "https://archive.org/details/mspacman_mame"
   },
   {
     "id": "scramble",
@@ -634,7 +658,8 @@
     "platform": "Arcade",
     "image": "images/games/tempest.png",
     "description": "Tempest is a classic 1980s shooter game developed by Dave Theurer for Arcade.",
-    "longDescription": "Tempest is a classic 1980s shooter game developed by Dave Theurer for Arcade."
+    "longDescription": "Tempest is a classic 1980s shooter game developed by Dave Theurer for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_tempest"
   },
   {
     "id": "gorf",
@@ -647,7 +672,8 @@
     "platform": "Arcade",
     "image": "images/games/gorf.png",
     "description": "Gorf is a 1981 fixed shooter video game developed by Dave Nutting Associates and published by Midway Manufacturing for arcades.  It features five distinct levels, the first of which is based on Space Invaders and another on Galaxian.  The game makes use of synthesized speech for the Gorfian robot which taunts the player, powered by a speech chip.",
-    "longDescription": "Gorf is a 1981 fixed shooter video game developed by Dave Nutting Associates and published by Midway Manufacturing for arcades.  It features five distinct levels, the first of which is based on Space Invaders and another on Galaxian.  The game makes use of synthesized speech for the Gorfian robot which taunts the player, powered by a speech chip.  Gorf allows the player to buy two additional lives per quarter before starting the game, for a maximum of seven lives."
+    "longDescription": "Gorf is a 1981 fixed shooter video game developed by Dave Nutting Associates and published by Midway Manufacturing for arcades.  It features five distinct levels, the first of which is based on Space Invaders and another on Galaxian.  The game makes use of synthesized speech for the Gorfian robot which taunts the player, powered by a speech chip.  Gorf allows the player to buy two additional lives per quarter before starting the game, for a maximum of seven lives.",
+    "playUrl": "https://archive.org/details/arcade_gorf"
   },
   {
     "id": "wizard-of-wor",
@@ -660,7 +686,8 @@
     "platform": "Arcade",
     "image": "images/games/wizard-of-wor.png",
     "description": "Wizard of Wor is a classic 1980s shooter game developed by Dave Nutting Associates for Arcade.",
-    "longDescription": "Wizard of Wor is a classic 1980s shooter game developed by Dave Nutting Associates for Arcade."
+    "longDescription": "Wizard of Wor is a classic 1980s shooter game developed by Dave Nutting Associates for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_wow"
   },
   {
     "id": "qix",
@@ -673,7 +700,8 @@
     "platform": "Arcade",
     "image": "images/games/qix.png",
     "description": "Qix is a classic 1980s puzzle game developed by Randy & Sandy Pfeiffer for Arcade.",
-    "longDescription": "Qix is a classic 1980s puzzle game developed by Randy & Sandy Pfeiffer for Arcade."
+    "longDescription": "Qix is a classic 1980s puzzle game developed by Randy & Sandy Pfeiffer for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_qix"
   },
   {
     "id": "donkey-kong",
@@ -686,7 +714,8 @@
     "platform": "Arcade",
     "image": "images/games/donkey-kong.jpg",
     "description": "Donkey Kong is the 1981 Nintendo arcade game that introduced the world to Mario and launched the platform game genre as we know it. Designed by Shigeru Miyamoto, the game tells the story of Jumpman (later Mario) climbing construction girders to rescue a woman named Pauline from a giant gorilla named Donkey Kong, who hurls barrels, fireballs, and other obstacles from above. It was Nintendo's breakthrough in the North American market, transforming the struggling playing card company into a video game powerhouse. Donkey Kong remains one of the best-selling arcade games of all time and gave birth to two of Nintendo's most enduring franchises.",
-    "longDescription": "Donkey Kong was Nintendo's third attempt at breaking into the North American arcade market, following the failures of Radar Scope. Shigeru Miyamoto, tasked with redesigning leftover Radar Scope hardware, created a narrative-driven game unlike anything that existed â€” with a villain who had personality, a hero with a human form, and a structure built around challenge and story. The game's four distinct screens â€” barrels, conveyor belts, elevators, and rivets â€” each demanded different strategies. It was the first game to feature multiple distinct stages and animated cutscenes between levels. The legal battle Nintendo won against Universal Studios over the Donkey Kong name solidified Nintendo's position in America. The 2007 documentary The King of Kong brought renewed attention to the competitive Donkey Kong scene and its legendary high-score rivalry."
+    "longDescription": "Donkey Kong was Nintendo's third attempt at breaking into the North American arcade market, following the failures of Radar Scope. Shigeru Miyamoto, tasked with redesigning leftover Radar Scope hardware, created a narrative-driven game unlike anything that existed â€” with a villain who had personality, a hero with a human form, and a structure built around challenge and story. The game's four distinct screens â€” barrels, conveyor belts, elevators, and rivets â€” each demanded different strategies. It was the first game to feature multiple distinct stages and animated cutscenes between levels. The legal battle Nintendo won against Universal Studios over the Donkey Kong name solidified Nintendo's position in America. The 2007 documentary The King of Kong brought renewed attention to the competitive Donkey Kong scene and its legendary high-score rivalry.",
+    "playUrl": "https://archive.org/details/msdos_Donkey_Kong_1983"
   },
   {
     "id": "frogger",
@@ -699,7 +728,8 @@
     "platform": "Arcade",
     "image": "images/games/frogger.jpg",
     "description": "Frogger is a 1981 arcade game by Konami that challenges players to safely guide a frog from the bottom of the screen to home bases at the top, navigating a busy road and a hazardous river along the way. Cars, trucks, and speeding vehicles threaten on the road section, while the river requires hopping across logs, turtles, and lily pads that move at different speeds â€” falling in means death. The game was one of the first to feature multiple hazard types that required different strategies for each. Frogger became a massive hit with over 135 million plays in its first year and remains one of the most ported games in history.",
-    "longDescription": "Frogger was designed by Konami and manufactured and distributed in North America by Sega and Gremlin. The game's split-challenge design â€” half traffic-dodging, half river-crossing â€” was revolutionary for its time, effectively combining two completely different game mechanics in one experience. Five home bases at the top of the screen had to be filled one by one, with a snake, crocodile mouths, and a pink frog to escort as additional complications in later levels. The game was ported to nearly every home computer and console of the era, selling over 20 million home versions across all platforms. It was featured in a famous Seinfeld episode in 1998, where George Costanza tries to transport an original Frogger arcade cabinet across a busy street, and remains one of the most culturally referenced games in history."
+    "longDescription": "Frogger was designed by Konami and manufactured and distributed in North America by Sega and Gremlin. The game's split-challenge design â€” half traffic-dodging, half river-crossing â€” was revolutionary for its time, effectively combining two completely different game mechanics in one experience. Five home bases at the top of the screen had to be filled one by one, with a snake, crocodile mouths, and a pink frog to escort as additional complications in later levels. The game was ported to nearly every home computer and console of the era, selling over 20 million home versions across all platforms. It was featured in a famous Seinfeld episode in 1998, where George Costanza tries to transport an original Frogger arcade cabinet across a busy street, and remains one of the most culturally referenced games in history.",
+    "playUrl": "https://archive.org/details/frogger_mame"
   },
   {
     "id": "ultima-i",
@@ -712,7 +742,8 @@
     "platform": "Apple II",
     "image": "images/games/ultima-i.jpg",
     "description": "Ultima I is a classic 1980s rpg game developed by Richard Garriott for Apple II.",
-    "longDescription": "Ultima I is a classic 1980s rpg game developed by Richard Garriott for Apple II."
+    "longDescription": "Ultima I is a classic 1980s rpg game developed by Richard Garriott for Apple II.",
+    "downloadUrl": "https://www.myabandonware.com/game/ultima-i-the-first-age-of-darkness-3hk"
   },
   {
     "id": "stargate",
@@ -725,7 +756,8 @@
     "platform": "Arcade",
     "image": "images/games/stargate.jpg",
     "description": "Stargate is a classic 1980s shooter game developed by Eugene Jarvis & Larry DeMar for Arcade.",
-    "longDescription": "Stargate is a classic 1980s shooter game developed by Eugene Jarvis & Larry DeMar for Arcade."
+    "longDescription": "Stargate is a classic 1980s shooter game developed by Eugene Jarvis & Larry DeMar for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_stargate"
   },
   {
     "id": "wizardry",
@@ -738,7 +770,9 @@
     "platform": "Apple II",
     "image": "images/games/wizardry.jpg",
     "description": "Wizardry is a classic 1980s rpg game developed by Andrew Greenberg & Robert Woodhead for Apple II.",
-    "longDescription": "Wizardry is a classic 1980s rpg game developed by Andrew Greenberg & Robert Woodhead for Apple II."
+    "longDescription": "Wizardry is a classic 1980s rpg game developed by Andrew Greenberg & Robert Woodhead for Apple II.",
+    "playUrl": "https://archive.org/details/msdos_Wizardry_I_-_Proving_Grounds_of_the_Mad_Overlord_1981",
+    "downloadUrl": "https://www.myabandonware.com/game/wizardry-proving-grounds-of-the-mad-overlord-a"
   },
   {
     "id": "tron",
@@ -751,7 +785,8 @@
     "platform": "Arcade",
     "image": "images/games/tron.png",
     "description": "Tron is a classic 1980s action game developed by Midway for Arcade.",
-    "longDescription": "Tron is a classic 1980s action game developed by Midway for Arcade."
+    "longDescription": "Tron is a classic 1980s action game developed by Midway for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_tron"
   },
   {
     "id": "robotron-2084",
@@ -764,7 +799,8 @@
     "platform": "Arcade",
     "image": "images/games/robotron-2084.png",
     "description": "Robotron: 2084 is a classic 1980s shooter game developed by Eugene Jarvis & Larry DeMar for Arcade.",
-    "longDescription": "Robotron: 2084 is a classic 1980s shooter game developed by Eugene Jarvis & Larry DeMar for Arcade."
+    "longDescription": "Robotron: 2084 is a classic 1980s shooter game developed by Eugene Jarvis & Larry DeMar for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_robotron"
   },
   {
     "id": "joust",
@@ -777,7 +813,8 @@
     "platform": "Arcade",
     "image": "images/games/joust.png",
     "description": "Joust is a 1982 action game developed and published by Williams Electronics for arcades.  Players assume the role of knights armed with lances and mounted on large birds.  They progress through levels, which consist of a single screen filled with floating platforms, by defeating enemy knights riding buzzards and other opponents.",
-    "longDescription": "Joust is a 1982 action game developed and published by Williams Electronics for arcades.  Players assume the role of knights armed with lances and mounted on large birds.  They progress through levels, which consist of a single screen filled with floating platforms, by defeating enemy knights riding buzzards and other opponents."
+    "longDescription": "Joust is a 1982 action game developed and published by Williams Electronics for arcades.  Players assume the role of knights armed with lances and mounted on large birds.  They progress through levels, which consist of a single screen filled with floating platforms, by defeating enemy knights riding buzzards and other opponents.",
+    "playUrl": "https://archive.org/details/arcade_joust"
   },
   {
     "id": "moon-patrol",
@@ -790,7 +827,8 @@
     "platform": "Arcade",
     "image": "images/games/moon-patrol.png",
     "description": "Moon Patrol is a classic 1980s shooter game developed by Irem for Arcade.",
-    "longDescription": "Moon Patrol is a classic 1980s shooter game developed by Irem for Arcade."
+    "longDescription": "Moon Patrol is a classic 1980s shooter game developed by Irem for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_mpatrol"
   },
   {
     "id": "pole-position",
@@ -803,7 +841,8 @@
     "platform": "Arcade",
     "image": "images/games/pole-position.jpg",
     "description": "Pole Position is a classic 1980s racing game developed by Namco for Arcade.",
-    "longDescription": "Pole Position is a classic 1980s racing game developed by Namco for Arcade."
+    "longDescription": "Pole Position is a classic 1980s racing game developed by Namco for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_polepos"
   },
   {
     "id": "time-pilot",
@@ -816,7 +855,8 @@
     "platform": "Arcade",
     "image": "images/games/time-pilot.png",
     "description": "Time Pilot is a 1982 multidirectional shooter video game developed and published by Konami for arcades.  It was distributed in the United States by Centuri and by Atari in PAL regions.  While engaging in aerial combat, the player-controlled jet flies across open airspace that scrolls indefinitely in all directions.",
-    "longDescription": "Time Pilot is a 1982 multidirectional shooter video game developed and published by Konami for arcades.  It was distributed in the United States by Centuri and by Atari in PAL regions.  While engaging in aerial combat, the player-controlled jet flies across open airspace that scrolls indefinitely in all directions.  Each level is themed to a different time period.  Home ports for the Atari 2600, MSX, and ColecoVision were released in 1983 respectively by Konami and Coleco."
+    "longDescription": "Time Pilot is a 1982 multidirectional shooter video game developed and published by Konami for arcades.  It was distributed in the United States by Centuri and by Atari in PAL regions.  While engaging in aerial combat, the player-controlled jet flies across open airspace that scrolls indefinitely in all directions.  Each level is themed to a different time period.  Home ports for the Atari 2600, MSX, and ColecoVision were released in 1983 respectively by Konami and Coleco.",
+    "playUrl": "https://archive.org/details/arcade_timeplt"
   },
   {
     "id": "dig-dug",
@@ -829,7 +869,8 @@
     "platform": "Arcade",
     "image": "images/games/dig-dug.png",
     "description": "Dig Dug is a classic 1980s action game developed by Namco for Arcade.",
-    "longDescription": "Dig Dug is a classic 1980s action game developed by Namco for Arcade."
+    "longDescription": "Dig Dug is a classic 1980s action game developed by Namco for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_digdug"
   },
   {
     "id": "donkey-kong-jr",
@@ -842,7 +883,8 @@
     "platform": "Arcade",
     "image": "images/games/donkey-kong-jr.jpg",
     "description": "Donkey Kong Jr. is a classic 1980s platform game developed by Nintendo for Arcade.",
-    "longDescription": "Donkey Kong Jr. is a classic 1980s platform game developed by Nintendo for Arcade."
+    "longDescription": "Donkey Kong Jr. is a classic 1980s platform game developed by Nintendo for Arcade.",
+    "playUrl": "https://archive.org/details/dkongjr_mame"
   },
   {
     "id": "pengo",
@@ -855,7 +897,8 @@
     "platform": "Arcade",
     "image": "images/games/pengo.jpg",
     "description": "Pengo is a classic 1980s puzzle / action game developed by Coreland / Sega for Arcade.",
-    "longDescription": "Pengo is a classic 1980s puzzle / action game developed by Coreland / Sega for Arcade."
+    "longDescription": "Pengo is a classic 1980s puzzle / action game developed by Coreland / Sega for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_pengo"
   },
   {
     "id": "burgertime",
@@ -868,7 +911,8 @@
     "platform": "Arcade",
     "image": "images/games/burgertime.png",
     "description": "BurgerTime is an arcade video game by Data East released in 1982.  According to a former Data East programmer, the game was designed in-house but the development itself was outsourced to another company.",
-    "longDescription": "BurgerTime is an arcade video game by Data East released in 1982.  According to a former Data East programmer, the game was designed in-house but the development itself was outsourced to another company."
+    "longDescription": "BurgerTime is an arcade video game by Data East released in 1982.  According to a former Data East programmer, the game was designed in-house but the development itself was outsourced to another company.",
+    "playUrl": "https://archive.org/details/arcade_btime"
   },
   {
     "id": "mr-do",
@@ -881,7 +925,8 @@
     "platform": "Arcade",
     "image": "images/games/mr-do.png",
     "description": "Mr.  Do!  is a 1982 maze video game developed and published by Universal Entertainment.",
-    "longDescription": "Mr.  Do!  is a 1982 maze video game developed and published by Universal Entertainment.  It is the first arcade video game to be released as a conversion kit for other cabinets; Taito published the conversion kit in Japan.  The game was inspired by Namco's Dig Dug, released earlier in 1982.  Mr."
+    "longDescription": "Mr.  Do!  is a 1982 maze video game developed and published by Universal Entertainment.  It is the first arcade video game to be released as a conversion kit for other cabinets; Taito published the conversion kit in Japan.  The game was inspired by Namco's Dig Dug, released earlier in 1982.  Mr.",
+    "playUrl": "https://archive.org/details/arcade_mrdo"
   },
   {
     "id": "popeye",
@@ -894,7 +939,8 @@
     "platform": "Arcade",
     "image": "images/games/popeye.png",
     "description": "Popeye is a 1982 platform game developed and published by Nintendo for arcades.  It is based on the comic strip of the same name created by E.  C.",
-    "longDescription": "Popeye is a 1982 platform game developed and published by Nintendo for arcades.  It is based on the comic strip of the same name created by E.  C.  Segar and licensed from King Features Syndicate.  Some sources claim that Ikegami Tsushinki did programming work on the game.  As Popeye, the player must collect objects thrown by Olive Oyl from the top of the screen while being chased by Brutus."
+    "longDescription": "Popeye is a 1982 platform game developed and published by Nintendo for arcades.  It is based on the comic strip of the same name created by E.  C.  Segar and licensed from King Features Syndicate.  Some sources claim that Ikegami Tsushinki did programming work on the game.  As Popeye, the player must collect objects thrown by Olive Oyl from the top of the screen while being chased by Brutus.",
+    "playUrl": "https://archive.org/details/arcade_popeye"
   },
   {
     "id": "millipede",
@@ -907,7 +953,8 @@
     "platform": "Arcade",
     "image": "images/games/millipede.png",
     "description": "Millipede is a 1982 fixed shooter video game developed and published by Atari, Inc.  for arcades.  It was released by Namco in Japan.",
-    "longDescription": "Millipede is a 1982 fixed shooter video game developed and published by Atari, Inc.  for arcades.  It was released by Namco in Japan.  It is the sequel to 1981's Centipede, with more gameplay variety and a wider array of insect enemies.  The objective is to score as many points as possible by destroying all segments of a millipede that moves toward the bottom of the screen, as well as eliminating or avoiding other enemies.  As with its predecessor, the game is played with a trackball and a single fire button which can be held down for rapid-fire."
+    "longDescription": "Millipede is a 1982 fixed shooter video game developed and published by Atari, Inc.  for arcades.  It was released by Namco in Japan.  It is the sequel to 1981's Centipede, with more gameplay variety and a wider array of insect enemies.  The objective is to score as many points as possible by destroying all segments of a millipede that moves toward the bottom of the screen, as well as eliminating or avoiding other enemies.  As with its predecessor, the game is played with a trackball and a single fire button which can be held down for rapid-fire.",
+    "playUrl": "https://archive.org/details/arcade_millipede"
   },
   {
     "id": "sinistar",
@@ -920,7 +967,8 @@
     "platform": "Arcade",
     "image": "images/games/sinistar.png",
     "description": "Sinistar is a 1983 multidirectional shooter arcade video game developed and manufactured by Williams Electronics.  It was created by Sam Dicker, Jack Haeger, Noah Falstein, RJ Mical, Python Anghelo, and Richard Witt.  Players control a space pilot who battles the eponymous Sinistar, a giant, anthropomorphic spacecraft.",
-    "longDescription": "Sinistar is a 1983 multidirectional shooter arcade video game developed and manufactured by Williams Electronics.  It was created by Sam Dicker, Jack Haeger, Noah Falstein, RJ Mical, Python Anghelo, and Richard Witt.  Players control a space pilot who battles the eponymous Sinistar, a giant, anthropomorphic spacecraft.  The game is known for its use of digitized speech and high difficulty level."
+    "longDescription": "Sinistar is a 1983 multidirectional shooter arcade video game developed and manufactured by Williams Electronics.  It was created by Sam Dicker, Jack Haeger, Noah Falstein, RJ Mical, Python Anghelo, and Richard Witt.  Players control a space pilot who battles the eponymous Sinistar, a giant, anthropomorphic spacecraft.  The game is known for its use of digitized speech and high difficulty level.",
+    "playUrl": "https://archive.org/details/arcade_sinistar"
   },
   {
     "id": "xevious",
@@ -933,7 +981,8 @@
     "platform": "Arcade",
     "image": "images/games/xevious.png",
     "description": "Xevious is a 1983 vertically scrolling shooter video game developed and published by Namco for arcades.  It was released in Japan and in North America by Atari, Inc.  in February 1983.",
-    "longDescription": "Xevious is a 1983 vertically scrolling shooter video game developed and published by Namco for arcades.  It was released in Japan and in North America by Atari, Inc.  in February 1983.  Controlling the Solvalou starship, the player attacks Xevious forces before they destroy all of mankind.  The Solvalou has two weapons at its disposal: a zapper to destroy flying craft, and a blaster to bomb ground installations and enemies.  It runs on the Namco Galaga arcade system."
+    "longDescription": "Xevious is a 1983 vertically scrolling shooter video game developed and published by Namco for arcades.  It was released in Japan and in North America by Atari, Inc.  in February 1983.  Controlling the Solvalou starship, the player attacks Xevious forces before they destroy all of mankind.  The Solvalou has two weapons at its disposal: a zapper to destroy flying craft, and a blaster to bomb ground installations and enemies.  It runs on the Namco Galaga arcade system.",
+    "playUrl": "https://archive.org/details/arcade_xevious"
   },
   {
     "id": "river-raid",
@@ -946,7 +995,8 @@
     "platform": "Atari 2600",
     "image": "images/games/river-raid.jpg",
     "description": "River Raid is a 1982 shoot 'em up video game developed and published by Activision for the Atari 2600, designed by Carol Shaw.  The player controls a fighter jet over the River of No Return in a raid behind enemy lines.  The goal is to navigate the flight by destroying enemy tankers, helicopters, fuel depots and bridges without running out of fuel or crashing.",
-    "longDescription": "River Raid is a 1982 shoot 'em up video game developed and published by Activision for the Atari 2600, designed by Carol Shaw.  The player controls a fighter jet over the River of No Return in a raid behind enemy lines.  The goal is to navigate the flight by destroying enemy tankers, helicopters, fuel depots and bridges without running out of fuel or crashing."
+    "longDescription": "River Raid is a 1982 shoot 'em up video game developed and published by Activision for the Atari 2600, designed by Carol Shaw.  The player controls a fighter jet over the River of No Return in a raid behind enemy lines.  The goal is to navigate the flight by destroying enemy tankers, helicopters, fuel depots and bridges without running out of fuel or crashing.",
+    "playUrl": "https://archive.org/details/atari_2600_river_raid"
   },
   {
     "id": "pitfall",
@@ -959,7 +1009,8 @@
     "platform": "Atari 2600",
     "image": "images/games/pitfall.jpg",
     "description": "Pitfall!  is a 1982 platform video game developed by David Crane and published by Activision for the Atari 2600.  The player controls Pitfall Harry, who has a time limit of 20 minutes to seek treasure in a jungle.",
-    "longDescription": "Pitfall!  is a 1982 platform video game developed by David Crane and published by Activision for the Atari 2600.  The player controls Pitfall Harry, who has a time limit of 20 minutes to seek treasure in a jungle.  The game world is populated by enemies and hazards that variously cause the player to lose lives or points.  Pitfall!  was ported to the Atari 5200, Atari 8-bit computers, ColecoVision, Commodore 64, and MSX."
+    "longDescription": "Pitfall!  is a 1982 platform video game developed by David Crane and published by Activision for the Atari 2600.  The player controls Pitfall Harry, who has a time limit of 20 minutes to seek treasure in a jungle.  The game world is populated by enemies and hazards that variously cause the player to lose lives or points.  Pitfall!  was ported to the Atari 5200, Atari 8-bit computers, ColecoVision, Commodore 64, and MSX.",
+    "playUrl": "https://archive.org/details/atari_2600_pitfall"
   },
   {
     "id": "gravitar",
@@ -972,7 +1023,8 @@
     "platform": "Arcade",
     "image": "images/games/gravitar.png",
     "description": "Gravitar is a 1982 multidirectional shooter video game developed and published by Atari, Inc.  for arcades.  Using the same \"rotate-and-thrust\" controls as Asteroids and Space Duel, the game was known for its high level of difficulty.",
-    "longDescription": "Gravitar is a 1982 multidirectional shooter video game developed and published by Atari, Inc.  for arcades.  Using the same \"rotate-and-thrust\" controls as Asteroids and Space Duel, the game was known for its high level of difficulty.  It was the first of more than twenty games that Mike Hally designed and produced for Atari.  The main programmer was Rich Adam, and the cabinet art was designed by Brad Chaboya.  An Atari 2600 version programmed by Dan Hitchens was released in 1983."
+    "longDescription": "Gravitar is a 1982 multidirectional shooter video game developed and published by Atari, Inc.  for arcades.  Using the same \"rotate-and-thrust\" controls as Asteroids and Space Duel, the game was known for its high level of difficulty.  It was the first of more than twenty games that Mike Hally designed and produced for Atari.  The main programmer was Rich Adam, and the cabinet art was designed by Brad Chaboya.  An Atari 2600 version programmed by Dan Hitchens was released in 1983.",
+    "playUrl": "https://archive.org/details/arcade_gravitar"
   },
   {
     "id": "zaxxon",
@@ -985,7 +1037,8 @@
     "platform": "Arcade",
     "image": "images/games/zaxxon.jpg",
     "description": "Zaxxon is a groundbreaking 1982 Sega arcade game that introduced the isometric perspective to arcade gaming, giving the shooter a three-dimensional feel years before 3D graphics became standard. Players pilot a spacecraft through a fortress filled with missiles, cannons, walls with altitude-gated gaps, and fighter planes, adjusting altitude with a shadow beneath the ship as the only depth reference. The game's isometric projection created a visual style unlike anything seen before in arcades, and its challenging altitude-based gameplay required a new kind of spatial thinking. Zaxxon was a major commercial success and its visual style influenced countless games that followed.",
-    "longDescription": "Zaxxon was designed by Sega and was one of the first arcade games to use an isometric axonometric view â€” a technique that creates the illusion of 3D by rotating the viewpoint 45 degrees. The name 'Zaxxon' derives from 'axonometric.' The ship's altitude was shown by a shadow on the ground, requiring players to judge depth to navigate through wall gaps at precise heights. Players had to manage fuel by shooting fuel tanks throughout levels. Enemy fighters attacked in 3D space, requiring players to match their altitude to hit them. Coleco's ColecoVision port was a major selling point for that console. The game's technical innovation and visual distinctiveness made it a landmark in the history of game graphics, directly influencing the isometric perspective games that flourished throughout the 1980s."
+    "longDescription": "Zaxxon was designed by Sega and was one of the first arcade games to use an isometric axonometric view â€” a technique that creates the illusion of 3D by rotating the viewpoint 45 degrees. The name 'Zaxxon' derives from 'axonometric.' The ship's altitude was shown by a shadow on the ground, requiring players to judge depth to navigate through wall gaps at precise heights. Players had to manage fuel by shooting fuel tanks throughout levels. Enemy fighters attacked in 3D space, requiring players to match their altitude to hit them. Coleco's ColecoVision port was a major selling point for that console. The game's technical innovation and visual distinctiveness made it a landmark in the history of game graphics, directly influencing the isometric perspective games that flourished throughout the 1980s.",
+    "playUrl": "https://archive.org/details/arcade_zaxxon"
   },
   {
     "id": "qbert",
@@ -998,7 +1051,8 @@
     "platform": "Arcade",
     "image": "images/games/qbert.jpg",
     "description": "Q*bert is a 1982 arcade game by Gottlieb in which a spherical, orange, long-nosed character hops around a pyramid of cubes from an isometric perspective, changing each cube's color by landing on it while being pursued by various enemies. Players must change every cube to the target color without being caught by Coily the snake, Slick and Sam who reverse color changes, and other hazards. Q*bert's distinctive character design, gibberish speech bubbles when he falls off the pyramid, and challenging puzzle mechanics made it one of the most beloved games of the golden age of arcade gaming. It sold over 25,000 cabinets and became one of Gottlieb's biggest hits.",
-    "longDescription": "Q*bert was designed by Warren Davis and Jeff Lee, who originally envisioned the character as '@!#?@!' (a placeholder name that became part of the game's identity). The pyramid of cubes created a three-dimensional puzzle challenge on a two-dimensional screen, with later levels requiring multiple hops on each cube to reach the target color and introducing enemies that revert cubes already changed. Q*bert could hop off the edge of the pyramid and catch floating discs that teleported him back to the top â€” a mechanic that added both escape routes and strategic traps when players lured Coily off the edge with them. The character appeared on TV shows, lunch boxes, and countless licensed products. Q*bert was later included in the 2015 film Pixels and remains one of the most recognizable characters of the arcade era."
+    "longDescription": "Q*bert was designed by Warren Davis and Jeff Lee, who originally envisioned the character as '@!#?@!' (a placeholder name that became part of the game's identity). The pyramid of cubes created a three-dimensional puzzle challenge on a two-dimensional screen, with later levels requiring multiple hops on each cube to reach the target color and introducing enemies that revert cubes already changed. Q*bert could hop off the edge of the pyramid and catch floating discs that teleported him back to the top â€” a mechanic that added both escape routes and strategic traps when players lured Coily off the edge with them. The character appeared on TV shows, lunch boxes, and countless licensed products. Q*bert was later included in the 2015 film Pixels and remains one of the most recognizable characters of the arcade era.",
+    "playUrl": "https://archive.org/details/arcade_qbert"
   },
   {
     "id": "mario-bros",
@@ -1037,7 +1091,8 @@
     "platform": "Arcade",
     "image": "images/games/spy-hunter.png",
     "description": "Spy Hunter is a 1983 vehicular combat video game developed and published by Bally Midway for arcades.  The game draws inspiration from the James Bond films and was originally supposed to carry the James Bond brand.  The object of the game is to drive down roads in the technologically advanced \"Interceptor\" car and destroy various enemy vehicles with a variety of onboard weapons.",
-    "longDescription": "Spy Hunter is a 1983 vehicular combat video game developed and published by Bally Midway for arcades.  The game draws inspiration from the James Bond films and was originally supposed to carry the James Bond brand.  The object of the game is to drive down roads in the technologically advanced \"Interceptor\" car and destroy various enemy vehicles with a variety of onboard weapons.  The game was produced in both sit-down and standard upright versions, with the latter being more common.  The controls consist of a steering wheel in the form of a futuristic aircraft-style yoke with several special-purpose buttons, a two-position stick shift, and a pedal used for acceleration."
+    "longDescription": "Spy Hunter is a 1983 vehicular combat video game developed and published by Bally Midway for arcades.  The game draws inspiration from the James Bond films and was originally supposed to carry the James Bond brand.  The object of the game is to drive down roads in the technologically advanced \"Interceptor\" car and destroy various enemy vehicles with a variety of onboard weapons.  The game was produced in both sit-down and standard upright versions, with the latter being more common.  The controls consist of a steering wheel in the form of a futuristic aircraft-style yoke with several special-purpose buttons, a two-position stick shift, and a pedal used for acceleration.",
+    "playUrl": "https://archive.org/details/arcade_spyhunt"
   },
   {
     "id": "crystal-castles",
@@ -1050,7 +1105,8 @@
     "platform": "Arcade",
     "image": "images/games/crystal-castles.png",
     "description": "Crystal Castles is a 1983 maze video game developed and published by Atari, Inc.  for arcades.  The player controls Bentley Bear, who must collect gems located throughout trimetric-projected rendered castles while avoiding enemies, some of whom are after the gems as well.",
-    "longDescription": "Crystal Castles is a 1983 maze video game developed and published by Atari, Inc.  for arcades.  The player controls Bentley Bear, who must collect gems located throughout trimetric-projected rendered castles while avoiding enemies, some of whom are after the gems as well."
+    "longDescription": "Crystal Castles is a 1983 maze video game developed and published by Atari, Inc.  for arcades.  The player controls Bentley Bear, who must collect gems located throughout trimetric-projected rendered castles while avoiding enemies, some of whom are after the gems as well.",
+    "playUrl": "https://archive.org/details/arcade_ccastle"
   },
   {
     "id": "lode-runner",
@@ -1063,7 +1119,8 @@
     "platform": "Apple II / Multiple",
     "image": "images/games/lode-runner.png",
     "description": "Lode Runner is a classic 1980s platform / puzzle game developed by Douglas E. Smith for Apple II / Multiple.",
-    "longDescription": "Lode Runner is a classic 1980s platform / puzzle game developed by Douglas E. Smith for Apple II / Multiple."
+    "longDescription": "Lode Runner is a classic 1980s platform / puzzle game developed by Douglas E. Smith for Apple II / Multiple.",
+    "playUrl": "https://archive.org/details/msdos_Lode_Runner_1983"
   },
   {
     "id": "mule",
@@ -1076,7 +1133,8 @@
     "platform": "Atari 8-bit / Multiple",
     "image": "images/games/mule.jpg",
     "description": "M. U. L.",
-    "longDescription": "M. U. L. E.  is a 1983 strategy video game written for Atari 8-bit computers by Ozark Softscape.  Designer Danielle Bunten Berry takes advantage of the four joystick ports of the Atari 400 and 800 to allow four-player simultaneous play."
+    "longDescription": "M. U. L. E.  is a 1983 strategy video game written for Atari 8-bit computers by Ozark Softscape.  Designer Danielle Bunten Berry takes advantage of the four joystick ports of the Atari 400 and 800 to allow four-player simultaneous play.",
+    "playUrl": "https://archive.org/details/msdos_MULE_1983"
   },
   {
     "id": "track-and-field",
@@ -1089,7 +1147,8 @@
     "platform": "Arcade",
     "image": "images/games/track-and-field.png",
     "description": "Track & Field is a classic 1980s sports game developed by Konami for Arcade.",
-    "longDescription": "Track & Field is a classic 1980s sports game developed by Konami for Arcade."
+    "longDescription": "Track & Field is a classic 1980s sports game developed by Konami for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_trackfld"
   },
   {
     "id": "tapper",
@@ -1102,7 +1161,8 @@
     "platform": "Arcade",
     "image": "images/games/tapper.jpg",
     "description": "Tapper is a classic 1980s action game developed by Marvin Glass and Associates for Arcade.",
-    "longDescription": "Tapper is a classic 1980s action game developed by Marvin Glass and Associates for Arcade."
+    "longDescription": "Tapper is a classic 1980s action game developed by Marvin Glass and Associates for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_tapper"
   },
   {
     "id": "gyruss",
@@ -1115,7 +1175,8 @@
     "platform": "Arcade",
     "image": "images/games/gyruss.png",
     "description": "Gyruss is a classic 1980s shooter game developed by Konami for Arcade.",
-    "longDescription": "Gyruss is a classic 1980s shooter game developed by Konami for Arcade."
+    "longDescription": "Gyruss is a classic 1980s shooter game developed by Konami for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_gyruss"
   },
   {
     "id": "manic-miner",
@@ -1128,7 +1189,8 @@
     "platform": "ZX Spectrum",
     "image": "images/games/manic-miner.jpg",
     "description": "Manic Miner is a classic 1980s platform game developed by Matthew Smith for ZX Spectrum.",
-    "longDescription": "Manic Miner is a classic 1980s platform game developed by Matthew Smith for ZX Spectrum."
+    "longDescription": "Manic Miner is a classic 1980s platform game developed by Matthew Smith for ZX Spectrum.",
+    "playUrl": "https://archive.org/details/zx_Manic_Miner_1983_Software_Projects"
   },
   {
     "id": "archon",
@@ -1141,7 +1203,8 @@
     "platform": "Atari 8-bit / Apple II",
     "image": "images/games/archon.png",
     "description": "Archon is a classic 1980s strategy game developed by Free Fall Associates for Atari 8-bit / Apple II.",
-    "longDescription": "Archon is a classic 1980s strategy game developed by Free Fall Associates for Atari 8-bit / Apple II."
+    "longDescription": "Archon is a classic 1980s strategy game developed by Free Fall Associates for Atari 8-bit / Apple II.",
+    "downloadUrl": "https://www.myabandonware.com/game/archon-the-light-and-the-dark-3hk"
   },
   {
     "id": "dragons-lair",
@@ -1167,7 +1230,8 @@
     "platform": "Arcade",
     "image": "images/games/1942.png",
     "description": "1942 is a 1984 vertically scrolling shooter video game developed and published by Capcom for arcades.  Designed by Yoshiki Okamoto, it was the first game in the 194X series, and was followed by 1943: The Battle of Midway.",
-    "longDescription": "1942 is a 1984 vertically scrolling shooter video game developed and published by Capcom for arcades.  Designed by Yoshiki Okamoto, it was the first game in the 194X series, and was followed by 1943: The Battle of Midway."
+    "longDescription": "1942 is a 1984 vertically scrolling shooter video game developed and published by Capcom for arcades.  Designed by Yoshiki Okamoto, it was the first game in the 194X series, and was followed by 1943: The Battle of Midway.",
+    "playUrl": "https://archive.org/details/arcade_1942"
   },
   {
     "id": "punch-out-arcade",
@@ -1180,7 +1244,8 @@
     "platform": "Arcade",
     "image": "images/games/punch-out-arcade.png",
     "description": "Punch-Out!! is a classic 1980s boxing game developed by Nintendo for Arcade.",
-    "longDescription": "Punch-Out!! is a classic 1980s boxing game developed by Nintendo for Arcade."
+    "longDescription": "Punch-Out!! is a classic 1980s boxing game developed by Nintendo for Arcade.",
+    "playUrl": "https://archive.org/details/punchout-1"
   },
   {
     "id": "ghosts-n-goblins",
@@ -1193,7 +1258,8 @@
     "platform": "Arcade",
     "image": "images/games/ghosts-n-goblins.png",
     "description": "Ghosts 'n Goblins is a classic 1980s platform / action game developed by Capcom for Arcade.",
-    "longDescription": "Ghosts 'n Goblins is a classic 1980s platform / action game developed by Capcom for Arcade."
+    "longDescription": "Ghosts 'n Goblins is a classic 1980s platform / action game developed by Capcom for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_gng"
   },
   {
     "id": "karate-champ",
@@ -1206,7 +1272,8 @@
     "platform": "Arcade",
     "image": "images/games/karate-champ.png",
     "description": "Karate Champ is a classic 1980s fighting game developed by Data East for Arcade.",
-    "longDescription": "Karate Champ is a classic 1980s fighting game developed by Data East for Arcade."
+    "longDescription": "Karate Champ is a classic 1980s fighting game developed by Data East for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_kchamp"
   },
   {
     "id": "paperboy",
@@ -1219,7 +1286,8 @@
     "platform": "Arcade",
     "image": "images/games/paperboy.png",
     "description": "Paperboy is a classic 1980s action game developed by John Salwitz et al. for Arcade.",
-    "longDescription": "Paperboy is a classic 1980s action game developed by John Salwitz et al. for Arcade."
+    "longDescription": "Paperboy is a classic 1980s action game developed by John Salwitz et al. for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_paperboy"
   },
   {
     "id": "kings-quest",
@@ -1232,7 +1300,8 @@
     "platform": "PC/DOS",
     "image": "images/games/kings-quest.png",
     "description": "King's Quest is a classic 1980s adventure game developed by Roberta Williams for PC/DOS.",
-    "longDescription": "King's Quest is a classic 1980s adventure game developed by Roberta Williams for PC/DOS."
+    "longDescription": "King's Quest is a classic 1980s adventure game developed by Roberta Williams for PC/DOS.",
+    "playUrl": "https://archive.org/details/msdos_Kings_Quest_I_-_Quest_for_the_Crown_1987"
   },
   {
     "id": "elite",
@@ -1245,7 +1314,9 @@
     "platform": "BBC Micro / Multiple",
     "image": "images/games/elite.jpg",
     "description": "Elite is a classic 1980s space trading / simulation game developed by David Braben & Ian Bell for BBC Micro / Multiple.",
-    "longDescription": "Elite is a classic 1980s space trading / simulation game developed by David Braben & Ian Bell for BBC Micro / Multiple."
+    "longDescription": "Elite is a classic 1980s space trading / simulation game developed by David Braben & Ian Bell for BBC Micro / Multiple.",
+    "playUrl": "https://www.myabandonware.com/game/elite-ao/play-ao",
+    "downloadUrl": "https://www.myabandonware.com/game/elite-ao"
   },
   {
     "id": "boulder-dash",
@@ -1258,7 +1329,9 @@
     "platform": "Atari 8-bit / Multiple",
     "image": "images/games/boulder-dash.png",
     "description": "Boulder Dash is a classic 1980s puzzle game developed by Peter Liepa & Chris Gray for Atari 8-bit / Multiple.",
-    "longDescription": "Boulder Dash is a classic 1980s puzzle game developed by Peter Liepa & Chris Gray for Atari 8-bit / Multiple."
+    "longDescription": "Boulder Dash is a classic 1980s puzzle game developed by Peter Liepa & Chris Gray for Atari 8-bit / Multiple.",
+    "playUrl": "https://archive.org/details/a8b_Boulder_Dash_1984_First_Star_Software_US_k_file",
+    "downloadUrl": "https://www.myabandonware.com/game/boulder-dash-3h"
   },
   {
     "id": "impossible-mission",
@@ -1271,7 +1344,8 @@
     "platform": "Commodore 64",
     "image": "images/games/impossible-mission.png",
     "description": "Impossible Mission is a classic 1980s action / platform game developed by Dennis Caswell for Commodore 64.",
-    "longDescription": "Impossible Mission is a classic 1980s action / platform game developed by Dennis Caswell for Commodore 64."
+    "longDescription": "Impossible Mission is a classic 1980s action / platform game developed by Dennis Caswell for Commodore 64.",
+    "playUrl": "https://archive.org/details/impossible_mission_202309"
   },
   {
     "id": "duck-hunt",
@@ -1284,7 +1358,8 @@
     "platform": "NES",
     "image": "images/games/duck-hunt.jpg",
     "description": "Duck Hunt is a classic 1980s light gun shooter game developed by Nintendo for NES.",
-    "longDescription": "Duck Hunt is a classic 1980s light gun shooter game developed by Nintendo for NES."
+    "longDescription": "Duck Hunt is a classic 1980s light gun shooter game developed by Nintendo for NES.",
+    "playUrl": "https://archive.org/details/1984_Duck_Hunt_Nintendo_Family_Computer_Nintendo_Entertainment_System"
   },
   {
     "id": "excitebike",
@@ -1297,7 +1372,8 @@
     "platform": "NES / Arcade",
     "image": "images/games/excitebike.jpg",
     "description": "Excitebike is a 1984 racing video game developed and published by Nintendo for the Nintendo Entertainment System.  It was ported to arcades for the Nintendo VS.  System later that year and Famicom Disk System in 1988.",
-    "longDescription": "Excitebike is a 1984 racing video game developed and published by Nintendo for the Nintendo Entertainment System.  It was ported to arcades for the Nintendo VS.  System later that year and Famicom Disk System in 1988.  In North America, it became one of the best-selling games on the console.  It was the first game in the Excite series."
+    "longDescription": "Excitebike is a 1984 racing video game developed and published by Nintendo for the Nintendo Entertainment System.  It was ported to arcades for the Nintendo VS.  System later that year and Famicom Disk System in 1988.  In North America, it became one of the best-selling games on the console.  It was the first game in the Excite series.",
+    "playUrl": "https://archive.org/details/excitebike_202504"
   },
   {
     "id": "jet-set-willy",
@@ -1310,7 +1386,8 @@
     "platform": "ZX Spectrum",
     "image": "images/games/jet-set-willy.jpg",
     "description": "Jet Set Willy is a classic 1980s platform game developed by Matthew Smith for ZX Spectrum.",
-    "longDescription": "Jet Set Willy is a classic 1980s platform game developed by Matthew Smith for ZX Spectrum."
+    "longDescription": "Jet Set Willy is a classic 1980s platform game developed by Matthew Smith for ZX Spectrum.",
+    "playUrl": "https://archive.org/details/zx_Jet_Set_Willy_1984_Software_Projects"
   },
   {
     "id": "kung-fu-master",
@@ -1336,7 +1413,8 @@
     "platform": "Arcade",
     "image": "images/games/pac-land.png",
     "description": "Pac-Land is a classic 1980s platform game developed by Namco for Arcade.",
-    "longDescription": "Pac-Land is a classic 1980s platform game developed by Namco for Arcade."
+    "longDescription": "Pac-Land is a classic 1980s platform game developed by Namco for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_pacland"
   },
   {
     "id": "bomb-jack",
@@ -1349,7 +1427,8 @@
     "platform": "Arcade",
     "image": "images/games/bomb-jack.png",
     "description": "Bomb Jack is a classic 1980s platform game developed by Tehkan for Arcade.",
-    "longDescription": "Bomb Jack is a classic 1980s platform game developed by Tehkan for Arcade."
+    "longDescription": "Bomb Jack is a classic 1980s platform game developed by Tehkan for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_bombjack"
   },
   {
     "id": "spy-vs-spy",
@@ -1362,7 +1441,8 @@
     "platform": "Commodore 64 / Multiple",
     "image": "images/games/spy-vs-spy.png",
     "description": "Spy vs. Spy is a classic 1980s action / strategy game developed by Mike Riedel for Commodore 64 / Multiple.",
-    "longDescription": "Spy vs. Spy is a classic 1980s action / strategy game developed by Mike Riedel for Commodore 64 / Multiple."
+    "longDescription": "Spy vs. Spy is a classic 1980s action / strategy game developed by Mike Riedel for Commodore 64 / Multiple.",
+    "downloadUrl": "https://www.myabandonware.com/game/spy-vs-spy-62"
   },
   {
     "id": "tetris",
@@ -1375,7 +1455,9 @@
     "platform": "Elektronika 60 / Multiple",
     "image": "images/games/tetris.png",
     "description": "Tetris is a 1984 puzzle game created by Soviet computer scientist Alexey Pajitnov at the Dorodnitsyn Computing Centre of the Soviet Academy of Sciences in Moscow. Players rotate and position falling geometric pieces called tetrominoes to form complete horizontal lines, which then disappear â€” incomplete lines accumulate until they fill the screen and end the game. The game's design is deceptively simple but endlessly captivating, embodying what Pajitnov called the human instinct to impose order on chaos. Tetris is the best-selling paid video game of all time with over 520 million copies sold, and its bundling with the Game Boy in 1989 established Nintendo's handheld dominance.",
-    "longDescription": "Pajitnov created Tetris in his spare time on a Soviet Elektronika 60 computer, drawing inspiration from the pentomino puzzle game Pentominoes. He shared it freely with colleagues, and it spread through Soviet research networks before being smuggled to the West. The rights became entangled in a complex international dispute involving British publisher Mirrorsoft, Nintendo, and the Soviet state agency ELORG. Robert Stein of Andromeda Software smuggled a copy to the West and the resulting legal battle â€” documented in the book The Tetris Effect â€” was one of the most complex in entertainment history. Nintendo secured handheld and console rights and bundled it with the Game Boy in 1989, a decision credited with making the Game Boy the dominant handheld. Research has shown Tetris is uniquely effective at preventing PTSD flashbacks by occupying the brain's visual processing centers."
+    "longDescription": "Pajitnov created Tetris in his spare time on a Soviet Elektronika 60 computer, drawing inspiration from the pentomino puzzle game Pentominoes. He shared it freely with colleagues, and it spread through Soviet research networks before being smuggled to the West. The rights became entangled in a complex international dispute involving British publisher Mirrorsoft, Nintendo, and the Soviet state agency ELORG. Robert Stein of Andromeda Software smuggled a copy to the West and the resulting legal battle â€” documented in the book The Tetris Effect â€” was one of the most complex in entertainment history. Nintendo secured handheld and console rights and bundled it with the Game Boy in 1989, a decision credited with making the Game Boy the dominant handheld. Research has shown Tetris is uniquely effective at preventing PTSD flashbacks by occupying the brain's visual processing centers.",
+    "playUrl": "https://archive.org/details/msdos_Tetris_1986",
+    "downloadUrl": "https://www.myabandonware.com/game/tetris-1sp"
   },
   {
     "id": "yie-ar-kung-fu",
@@ -1388,7 +1470,8 @@
     "platform": "Arcade",
     "image": "images/games/yie-ar-kung-fu.png",
     "description": "Yie Ar Kung-Fu is a classic 1980s fighting game developed by Konami for Arcade.",
-    "longDescription": "Yie Ar Kung-Fu is a classic 1980s fighting game developed by Konami for Arcade."
+    "longDescription": "Yie Ar Kung-Fu is a classic 1980s fighting game developed by Konami for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_yiear"
   },
   {
     "id": "space-harrier",
@@ -1401,7 +1484,8 @@
     "platform": "Arcade",
     "image": "images/games/space-harrier.png",
     "description": "Space Harrier is a classic 1980s rail shooter game developed by Yu Suzuki for Arcade.",
-    "longDescription": "Space Harrier is a classic 1980s rail shooter game developed by Yu Suzuki for Arcade."
+    "longDescription": "Space Harrier is a classic 1980s rail shooter game developed by Yu Suzuki for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_sharrier"
   },
   {
     "id": "commando",
@@ -1414,7 +1498,8 @@
     "platform": "Arcade",
     "image": "images/games/commando.png",
     "description": "Commando, released as SenjÅ no ÅŒkami in Japan, is a 1985 run and gun video game developed and published by Capcom for arcades.  The game was designed by Tokuro Fujiwara.  It was distributed in North America by Data East, and in Europe by several companies including Capcom, Deith Leisure and Sega, S.",
-    "longDescription": "Commando, released as SenjÅ no ÅŒkami in Japan, is a 1985 run and gun video game developed and published by Capcom for arcades.  The game was designed by Tokuro Fujiwara.  It was distributed in North America by Data East, and in Europe by several companies including Capcom, Deith Leisure and Sega, S. A.  SONIC.  Versions were released for various home computers and video game consoles."
+    "longDescription": "Commando, released as SenjÅ no ÅŒkami in Japan, is a 1985 run and gun video game developed and published by Capcom for arcades.  The game was designed by Tokuro Fujiwara.  It was distributed in North America by Data East, and in Europe by several companies including Capcom, Deith Leisure and Sega, S. A.  SONIC.  Versions were released for various home computers and video game consoles.",
+    "playUrl": "https://archive.org/details/arcade_commando"
   },
   {
     "id": "gradius",
@@ -1427,7 +1512,8 @@
     "platform": "Arcade",
     "image": "images/games/gradius.jpg",
     "description": "Gradius is a classic 1980s shooter game developed by Konami for Arcade.",
-    "longDescription": "Gradius is a classic 1980s shooter game developed by Konami for Arcade."
+    "longDescription": "Gradius is a classic 1980s shooter game developed by Konami for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_gradius"
   },
   {
     "id": "gauntlet",
@@ -1440,7 +1526,8 @@
     "platform": "Arcade",
     "image": "images/games/gauntlet.png",
     "description": "Gauntlet is a classic 1980s dungeon crawler game developed by Ed Logg for Arcade.",
-    "longDescription": "Gauntlet is a classic 1980s dungeon crawler game developed by Ed Logg for Arcade."
+    "longDescription": "Gauntlet is a classic 1980s dungeon crawler game developed by Ed Logg for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_gauntlet"
   },
   {
     "id": "carmen-sandiego",
@@ -1453,7 +1540,9 @@
     "platform": "Apple II / Multiple",
     "image": "images/games/carmen-sandiego.jpg",
     "description": "Where in the World Is Carmen Sandiego? is a classic 1980s educational game developed by Broderbund for Apple II / Multiple.",
-    "longDescription": "Where in the World Is Carmen Sandiego? is a classic 1980s educational game developed by Broderbund for Apple II / Multiple."
+    "longDescription": "Where in the World Is Carmen Sandiego? is a classic 1980s educational game developed by Broderbund for Apple II / Multiple.",
+    "playUrl": "https://archive.org/details/msdos_Where_in_the_World_is_Carmen_Sandiego_1985",
+    "downloadUrl": "https://www.myabandonware.com/game/where-in-the-world-is-carmen-sandiego-2lf"
   },
   {
     "id": "super-mario-bros",
@@ -1466,7 +1555,8 @@
     "platform": "NES",
     "image": "images/games/super-mario-bros.png",
     "description": "Super Mario Bros. is the 1985 NES platformer by Nintendo that single-handedly revitalized the North American video game industry after the crash of 1983. Designed by Shigeru Miyamoto and Takashi Tezuka, it follows Mario and Luigi as they traverse the Mushroom Kingdom to rescue Princess Toadstool from King Bowser. With 32 levels across 8 worlds, an iconic musical score, and hidden secrets and warp zones, the game set the standard for platform game design that endures to this day. Super Mario Bros. has sold over 40 million copies, making it one of the best-selling individual games ever produced.",
-    "longDescription": "Super Mario Bros. was designed to showcase the NES hardware and shipped as a bundle with the console, becoming the game that defined a generation. Miyamoto and Tezuka built the game around the principle of teaching through play â€” the first level, World 1-1, is a masterclass in game design that introduces every core mechanic through environmental cues without a single word of text. The underground pipe shortcuts, flagpole timing bonuses, mushrooms and fire flowers, and the final Bowser-bait switch are all constructed to reward exploration and skill. The game's music by Koji Kondo is among the most recognized musical works in history. Super Mario Bros. established a franchise that has sold over 800 million games total across all titles, making it the best-selling video game franchise of all time."
+    "longDescription": "Super Mario Bros. was designed to showcase the NES hardware and shipped as a bundle with the console, becoming the game that defined a generation. Miyamoto and Tezuka built the game around the principle of teaching through play â€” the first level, World 1-1, is a masterclass in game design that introduces every core mechanic through environmental cues without a single word of text. The underground pipe shortcuts, flagpole timing bonuses, mushrooms and fire flowers, and the final Bowser-bait switch are all constructed to reward exploration and skill. The game's music by Koji Kondo is among the most recognized musical works in history. Super Mario Bros. established a franchise that has sold over 800 million games total across all titles, making it the best-selling video game franchise of all time.",
+    "playUrl": "https://archive.org/details/super-mario-bros.-japan-usa_20240616"
   },
   {
     "id": "rushn-attack",
@@ -1479,7 +1569,8 @@
     "platform": "Arcade",
     "image": "images/games/rushn-attack.png",
     "description": "Rush'n Attack is a classic 1980s beat 'em up game developed by Konami for Arcade.",
-    "longDescription": "Rush'n Attack is a classic 1980s beat 'em up game developed by Konami for Arcade."
+    "longDescription": "Rush'n Attack is a classic 1980s beat 'em up game developed by Konami for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_rushnatk"
   },
   {
     "id": "oregon-trail",
@@ -1492,7 +1583,8 @@
     "platform": "Apple II / DOS",
     "image": "images/games/oregon-trail.jpg",
     "description": "The Oregon Trail is a classic 1980s educational / strategy game developed by MECC for Apple II / DOS.",
-    "longDescription": "The Oregon Trail is a classic 1980s educational / strategy game developed by MECC for Apple II / DOS."
+    "longDescription": "The Oregon Trail is a classic 1980s educational / strategy game developed by MECC for Apple II / DOS.",
+    "playUrl": "https://archive.org/details/msdos_Oregon_Trail_The_1990"
   },
   {
     "id": "arkanoid",
@@ -1505,7 +1597,8 @@
     "platform": "Arcade",
     "image": "images/games/arkanoid.png",
     "description": "Arkanoid is a 1986 block breaker video game developed and published by Taito for arcades.  It was released by Romstar in North America.  Controlling a paddle-like craft known as the Vaus, the player is tasked with clearing a formation of colorful blocks by deflecting a ball towards it without letting the ball leave the bottom edge of the playfield.",
-    "longDescription": "Arkanoid is a 1986 block breaker video game developed and published by Taito for arcades.  It was released by Romstar in North America.  Controlling a paddle-like craft known as the Vaus, the player is tasked with clearing a formation of colorful blocks by deflecting a ball towards it without letting the ball leave the bottom edge of the playfield.  Some blocks contain power-ups that have various effects, such as increasing the length of the Vaus, creating several additional balls, or equipping the Vaus with cannons.  Other blocks may be indestructible or require multiple hits to break."
+    "longDescription": "Arkanoid is a 1986 block breaker video game developed and published by Taito for arcades.  It was released by Romstar in North America.  Controlling a paddle-like craft known as the Vaus, the player is tasked with clearing a formation of colorful blocks by deflecting a ball towards it without letting the ball leave the bottom edge of the playfield.  Some blocks contain power-ups that have various effects, such as increasing the length of the Vaus, creating several additional balls, or equipping the Vaus with cannons.  Other blocks may be indestructible or require multiple hits to break.",
+    "playUrl": "https://archive.org/details/arcade_arkanoid"
   },
   {
     "id": "bubble-bobble",
@@ -1518,7 +1611,8 @@
     "platform": "Arcade",
     "image": "images/games/bubble-bobble.png",
     "description": "Bubble Bobble is a classic 1980s platform game developed by Fukio Mitsuji for Arcade.",
-    "longDescription": "Bubble Bobble is a classic 1980s platform game developed by Fukio Mitsuji for Arcade."
+    "longDescription": "Bubble Bobble is a classic 1980s platform game developed by Fukio Mitsuji for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_bublbobl"
   },
   {
     "id": "outrun",
@@ -1531,7 +1625,8 @@
     "platform": "Arcade",
     "image": "images/games/outrun.png",
     "description": "Out Run is a 1986 racing video game developed and published by Sega for arcades.  It is known for its pioneering hardware and graphics, nonlinear gameplay, a selectable soundtrack with music composed by Hiroshi Kawaguchi, and the hydraulic motion simulator deluxe arcade cabinet.  The goal is to avoid traffic and reach one of five destinations before time runs out.",
-    "longDescription": "Out Run is a 1986 racing video game developed and published by Sega for arcades.  It is known for its pioneering hardware and graphics, nonlinear gameplay, a selectable soundtrack with music composed by Hiroshi Kawaguchi, and the hydraulic motion simulator deluxe arcade cabinet.  The goal is to avoid traffic and reach one of five destinations before time runs out."
+    "longDescription": "Out Run is a 1986 racing video game developed and published by Sega for arcades.  It is known for its pioneering hardware and graphics, nonlinear gameplay, a selectable soundtrack with music composed by Hiroshi Kawaguchi, and the hydraulic motion simulator deluxe arcade cabinet.  The goal is to avoid traffic and reach one of five destinations before time runs out.",
+    "playUrl": "https://archive.org/details/arcade_outrun"
   },
   {
     "id": "rampage",
@@ -1544,7 +1639,8 @@
     "platform": "Arcade",
     "image": "images/games/rampage.png",
     "description": "Rampage is a classic 1980s action game developed by Brian Colin & Jeff Nauman for Arcade.",
-    "longDescription": "Rampage is a classic 1980s action game developed by Brian Colin & Jeff Nauman for Arcade."
+    "longDescription": "Rampage is a classic 1980s action game developed by Brian Colin & Jeff Nauman for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_rampage"
   },
   {
     "id": "castlevania",
@@ -1570,7 +1666,8 @@
     "platform": "NES / Famicom Disk System",
     "image": "images/games/metroid.jpg",
     "description": "Metroid is a classic 1980s action-adventure game developed by Nintendo R&D1 for NES / Famicom Disk System.",
-    "longDescription": "Metroid is a classic 1980s action-adventure game developed by Nintendo R&D1 for NES / Famicom Disk System."
+    "longDescription": "Metroid is a classic 1980s action-adventure game developed by Nintendo R&D1 for NES / Famicom Disk System.",
+    "playUrl": "https://archive.org/details/metroid_20240911_1811"
   },
   {
     "id": "kid-icarus",
@@ -1609,7 +1706,8 @@
     "platform": "Arcade",
     "image": "images/games/solomons-key.jpg",
     "description": "Solomon's Key is a classic 1980s puzzle / platform game developed by Tecmo for Arcade.",
-    "longDescription": "Solomon's Key is a classic 1980s puzzle / platform game developed by Tecmo for Arcade."
+    "longDescription": "Solomon's Key is a classic 1980s puzzle / platform game developed by Tecmo for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_solomon"
   },
   {
     "id": "rolling-thunder",
@@ -1622,7 +1720,8 @@
     "platform": "Arcade",
     "image": "images/games/rolling-thunder.png",
     "description": "Rolling Thunder is a classic 1980s action / platform game developed by Namco for Arcade.",
-    "longDescription": "Rolling Thunder is a classic 1980s action / platform game developed by Namco for Arcade."
+    "longDescription": "Rolling Thunder is a classic 1980s action / platform game developed by Namco for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_rthunder"
   },
   {
     "id": "life-force",
@@ -1635,7 +1734,8 @@
     "platform": "Arcade",
     "image": "images/games/life-force.png",
     "description": "Life Force is a classic 1980s shooter game developed by Konami for Arcade.",
-    "longDescription": "Life Force is a classic 1980s shooter game developed by Konami for Arcade."
+    "longDescription": "Life Force is a classic 1980s shooter game developed by Konami for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_lifefrce"
   },
   {
     "id": "ikari-warriors",
@@ -1648,7 +1748,8 @@
     "platform": "Arcade",
     "image": "images/games/ikari-warriors.png",
     "description": "Ikari Warriors is a classic 1980s run and gun game developed by SNK for Arcade.",
-    "longDescription": "Ikari Warriors is a classic 1980s run and gun game developed by SNK for Arcade."
+    "longDescription": "Ikari Warriors is a classic 1980s run and gun game developed by SNK for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_ikari"
   },
   {
     "id": "legend-of-zelda",
@@ -1661,7 +1762,8 @@
     "platform": "NES",
     "image": "images/games/legend-of-zelda.png",
     "description": "The Legend of Zelda is a 1986 Nintendo NES game that created the action-adventure genre, challenging players to explore an open world, find hidden items, and complete nine increasingly complex dungeons to rescue Princess Zelda from the villain Ganon. Unlike contemporary games, Zelda had no lives, a battery save system for recording progress â€” a first for home console games â€” and a non-linear structure that let players explore freely. Its enormous, secret-filled overworld rewarded curiosity and experimentation, establishing exploration and discovery as core pillars of game design. The franchise has since produced over 20 sequels and is one of the most critically acclaimed game series in history.",
-    "longDescription": "Miyamoto designed Zelda as a digital miniature garden â€” a world to explore and return to, inspired by his childhood adventures exploring caves and forests near Kyoto. The game's battery-backed save system (the first in a Nintendo cartridge) allowed for a long, complex adventure without starting over each session. Nine underground dungeons, each with a unique layout and boss, were distributed across the overworld map, requiring items from earlier dungeons to access later ones. The second quest â€” a remixed, harder version unlocked after completing the game â€” doubled the content. The gold cartridge distinguished it visually on store shelves. The franchise went on to produce landmark titles including A Link to the Past, Ocarina of Time (widely considered the greatest video game ever made), Breath of the Wild, and Tears of the Kingdom, each redefining what games could be."
+    "longDescription": "Miyamoto designed Zelda as a digital miniature garden â€” a world to explore and return to, inspired by his childhood adventures exploring caves and forests near Kyoto. The game's battery-backed save system (the first in a Nintendo cartridge) allowed for a long, complex adventure without starting over each session. Nine underground dungeons, each with a unique layout and boss, were distributed across the overworld map, requiring items from earlier dungeons to access later ones. The second quest â€” a remixed, harder version unlocked after completing the game â€” doubled the content. The gold cartridge distinguished it visually on store shelves. The franchise went on to produce landmark titles including A Link to the Past, Ocarina of Time (widely considered the greatest video game ever made), Breath of the Wild, and Tears of the Kingdom, each redefining what games could be.",
+    "playUrl": "https://archive.org/details/zelda_nes_2"
   },
   {
     "id": "double-dragon",
@@ -1674,7 +1776,8 @@
     "platform": "Arcade",
     "image": "images/games/double-dragon.png",
     "description": "Double Dragon is a classic 1980s beat 'em up game developed by Technos Japan for Arcade.",
-    "longDescription": "Double Dragon is a classic 1980s beat 'em up game developed by Technos Japan for Arcade."
+    "longDescription": "Double Dragon is a classic 1980s beat 'em up game developed by Technos Japan for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_ddragon"
   },
   {
     "id": "mega-man",
@@ -1687,7 +1790,8 @@
     "platform": "NES",
     "image": "images/games/mega-man.jpg",
     "description": "Mega Man is a classic 1980s platform / action game developed by Capcom for NES.",
-    "longDescription": "Mega Man is a classic 1980s platform / action game developed by Capcom for NES."
+    "longDescription": "Mega Man is a classic 1980s platform / action game developed by Capcom for NES.",
+    "playUrl": "https://archive.org/details/mega-man-u"
   },
   {
     "id": "r-type",
@@ -1700,7 +1804,8 @@
     "platform": "Arcade",
     "image": "images/games/r-type.jpg",
     "description": "R-Type is a 1987 horizontally scrolling shooter video game developed and published by Irem for arcades.  The player controls the R-9 \"Arrowhead\" starship in its efforts to destroy the Bydo, a powerful alien race bent on wiping out all of mankind.  The R-9 can acquire a glowing orb called a \"Force\", giving limited protection from enemy fire and providing additional firepower.",
-    "longDescription": "R-Type is a 1987 horizontally scrolling shooter video game developed and published by Irem for arcades.  The player controls the R-9 \"Arrowhead\" starship in its efforts to destroy the Bydo, a powerful alien race bent on wiping out all of mankind.  The R-9 can acquire a glowing orb called a \"Force\", giving limited protection from enemy fire and providing additional firepower."
+    "longDescription": "R-Type is a 1987 horizontally scrolling shooter video game developed and published by Irem for arcades.  The player controls the R-9 \"Arrowhead\" starship in its efforts to destroy the Bydo, a powerful alien race bent on wiping out all of mankind.  The R-9 can acquire a glowing orb called a \"Force\", giving limited protection from enemy fire and providing additional firepower.",
+    "playUrl": "https://archive.org/details/arcade_rtype"
   },
   {
     "id": "metal-gear",
@@ -1726,7 +1831,8 @@
     "platform": "Arcade",
     "image": "images/games/shinobi.png",
     "description": "Shinobi (å¿) is a 1987 hack and slash video game developed and published by Sega for arcades on the Sega System 16 board.  The player controls ninja Joe Musashi, who must stop the Zeed terrorist organization from kidnapping students of his clan.",
-    "longDescription": "Shinobi (å¿) is a 1987 hack and slash video game developed and published by Sega for arcades on the Sega System 16 board.  The player controls ninja Joe Musashi, who must stop the Zeed terrorist organization from kidnapping students of his clan."
+    "longDescription": "Shinobi (å¿) is a 1987 hack and slash video game developed and published by Sega for arcades on the Sega System 16 board.  The player controls ninja Joe Musashi, who must stop the Zeed terrorist organization from kidnapping students of his clan.",
+    "playUrl": "https://archive.org/details/arcade_shinobi"
   },
   {
     "id": "after-burner",
@@ -1739,7 +1845,8 @@
     "platform": "Arcade",
     "image": "images/games/after-burner.png",
     "description": "After Burner is a 1987 rail shooter video game developed by Studio 128 and published by Sega for arcades.  The player controls an American F-14 Tomcat fighter jet and must clear each of the game's 18 stages by destroying enemies.  The plane is equipped with a machine gun and a limited supply of heat-seeking missiles.",
-    "longDescription": "After Burner is a 1987 rail shooter video game developed by Studio 128 and published by Sega for arcades.  The player controls an American F-14 Tomcat fighter jet and must clear each of the game's 18 stages by destroying enemies.  The plane is equipped with a machine gun and a limited supply of heat-seeking missiles.  The game uses a third-person perspective, as in Sega's earlier Space Harrier (1985) and Out Run (1986).  It runs on the Sega X Board arcade system which is capable of surface and sprite rotation.  It is the fourth Sega game to use a hydraulic \"taikan\" motion simulator arcade cabinet, one that is more elaborate than their earlier \"taikan\" simulator games."
+    "longDescription": "After Burner is a 1987 rail shooter video game developed by Studio 128 and published by Sega for arcades.  The player controls an American F-14 Tomcat fighter jet and must clear each of the game's 18 stages by destroying enemies.  The plane is equipped with a machine gun and a limited supply of heat-seeking missiles.  The game uses a third-person perspective, as in Sega's earlier Space Harrier (1985) and Out Run (1986).  It runs on the Sega X Board arcade system which is capable of surface and sprite rotation.  It is the fourth Sega game to use a hydraulic \"taikan\" motion simulator arcade cabinet, one that is more elaborate than their earlier \"taikan\" simulator games.",
+    "playUrl": "https://archive.org/details/arcade_aburner2"
   },
   {
     "id": "operation-wolf",
@@ -1752,7 +1859,8 @@
     "platform": "Arcade",
     "image": "images/games/operation-wolf.png",
     "description": "Operation Wolf is a classic 1980s light gun shooter game developed by Taito for Arcade.",
-    "longDescription": "Operation Wolf is a classic 1980s light gun shooter game developed by Taito for Arcade."
+    "longDescription": "Operation Wolf is a classic 1980s light gun shooter game developed by Taito for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_opwolf"
   },
   {
     "id": "contra",
@@ -1765,7 +1873,8 @@
     "platform": "Arcade / NES",
     "image": "images/games/contra.jpg",
     "description": "Contra is a 1987 Konami arcade and NES run-and-gun game that became one of the defining multiplayer action games of the 8-bit era. Players control commandos Bill and Lance as they battle through jungles, fortresses, and alien bases to stop an extraterrestrial invasion, firing constantly and jumping with split-second precision. The NES version introduced the famous Konami Code â€” Up Up Down Down Left Right Left Right B A â€” which granted 30 extra lives and became the most famous cheat code in gaming history. Contra's cooperative two-player mode, relentless pace, and demanding difficulty made it a beloved classic that still defines the genre.",
-    "longDescription": "Contra was heavily inspired by the 1980s action film aesthetic â€” specifically Predator, Aliens, and The Terminator â€” with its two muscular commandos, dense jungle settings, and alien antagonists. The arcade version featured a mix of side-scrolling and behind-the-back third-person shooting stages, while the NES port streamlined the experience into pure side-scrolling with superior level design. Weapon pickups â€” spread guns, rapid fire, lasers, and flamethrowers â€” changed gameplay dramatically and were hotly contested in co-op play. The game's difficulty was brutal by design, but the Konami Code made it accessible to casual players while retaining challenge for purists. The franchise spawned over a dozen sequels and the term 'Contra-style' became shorthand for a specific type of demanding but satisfying run-and-gun action."
+    "longDescription": "Contra was heavily inspired by the 1980s action film aesthetic â€” specifically Predator, Aliens, and The Terminator â€” with its two muscular commandos, dense jungle settings, and alien antagonists. The arcade version featured a mix of side-scrolling and behind-the-back third-person shooting stages, while the NES port streamlined the experience into pure side-scrolling with superior level design. Weapon pickups â€” spread guns, rapid fire, lasers, and flamethrowers â€” changed gameplay dramatically and were hotly contested in co-op play. The game's difficulty was brutal by design, but the Konami Code made it accessible to casual players while retaining challenge for purists. The franchise spawned over a dozen sequels and the term 'Contra-style' became shorthand for a specific type of demanding but satisfying run-and-gun action.",
+    "playUrl": "https://archive.org/details/contra-japan-pl-voxar"
   },
   {
     "id": "street-fighter",
@@ -1791,7 +1900,8 @@
     "platform": "Commodore 64 / Multiple",
     "image": "images/games/pirates.jpg",
     "description": "Pirates! is a classic 1980s strategy / action game developed by Sid Meier for Commodore 64 / Multiple.",
-    "longDescription": "Pirates! is a classic 1980s strategy / action game developed by Sid Meier for Commodore 64 / Multiple."
+    "longDescription": "Pirates! is a classic 1980s strategy / action game developed by Sid Meier for Commodore 64 / Multiple.",
+    "playUrl": "https://archive.org/details/msdos_Sid_Meiers_Pirates_1987"
   },
   {
     "id": "maniac-mansion",
@@ -1804,7 +1914,8 @@
     "platform": "Commodore 64 / Multiple",
     "image": "images/games/maniac-mansion.jpg",
     "description": "Maniac Mansion is a classic 1980s point-and-click adventure game developed by Ron Gilbert & Gary Winnick for Commodore 64 / Multiple.",
-    "longDescription": "Maniac Mansion is a classic 1980s point-and-click adventure game developed by Ron Gilbert & Gary Winnick for Commodore 64 / Multiple."
+    "longDescription": "Maniac Mansion is a classic 1980s point-and-click adventure game developed by Ron Gilbert & Gary Winnick for Commodore 64 / Multiple.",
+    "playUrl": "https://archive.org/details/msdos_Maniac_Mansion_1987"
   },
   {
     "id": "road-blasters",
@@ -1817,7 +1928,8 @@
     "platform": "Arcade",
     "image": "images/games/road-blasters.jpg",
     "description": "Road Blasters is a classic 1980s racing / shooter game developed by Atari for Arcade.",
-    "longDescription": "Road Blasters is a classic 1980s racing / shooter game developed by Atari for Arcade."
+    "longDescription": "Road Blasters is a classic 1980s racing / shooter game developed by Atari for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_roadblst"
   },
   {
     "id": "rastan",
@@ -1830,7 +1942,8 @@
     "platform": "Arcade",
     "image": "images/games/rastan.jpg",
     "description": "Rastan is a classic 1980s beat 'em up game developed by Taito for Arcade.",
-    "longDescription": "Rastan is a classic 1980s beat 'em up game developed by Taito for Arcade."
+    "longDescription": "Rastan is a classic 1980s beat 'em up game developed by Taito for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_rastan"
   },
   {
     "id": "punch-out-nes",
@@ -1843,7 +1956,8 @@
     "platform": "NES",
     "image": "images/games/punch-out-nes.jpg",
     "description": "Mike Tyson's Punch-Out!! is a classic 1980s boxing game developed by Nintendo for NES.",
-    "longDescription": "Mike Tyson's Punch-Out!! is a classic 1980s boxing game developed by Nintendo for NES."
+    "longDescription": "Mike Tyson's Punch-Out!! is a classic 1980s boxing game developed by Nintendo for NES.",
+    "playUrl": "https://archive.org/details/mike-tysons-punch-out-japan-usa"
   },
   {
     "id": "bionic-commando",
@@ -1869,7 +1983,8 @@
     "platform": "Arcade",
     "image": "images/games/dragon-spirit.png",
     "description": "Dragon Spirit is a classic 1980s shooter game developed by Namco for Arcade.",
-    "longDescription": "Dragon Spirit is a classic 1980s shooter game developed by Namco for Arcade."
+    "longDescription": "Dragon Spirit is a classic 1980s shooter game developed by Namco for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_dspirit"
   },
   {
     "id": "altered-beast",
@@ -1882,7 +1997,8 @@
     "platform": "Arcade",
     "image": "images/games/altered-beast.png",
     "description": "Altered Beast is a classic 1980s beat 'em up game developed by Sega for Arcade.",
-    "longDescription": "Altered Beast is a classic 1980s beat 'em up game developed by Sega for Arcade."
+    "longDescription": "Altered Beast is a classic 1980s beat 'em up game developed by Sega for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_altbeastj"
   },
   {
     "id": "mega-man-2",
@@ -1908,7 +2024,8 @@
     "platform": "Arcade",
     "image": "images/games/ghouls-n-ghosts.png",
     "description": "Ghouls 'n Ghosts is a classic 1980s platform / action game developed by Capcom for Arcade.",
-    "longDescription": "Ghouls 'n Ghosts is a classic 1980s platform / action game developed by Capcom for Arcade."
+    "longDescription": "Ghouls 'n Ghosts is a classic 1980s platform / action game developed by Capcom for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_ghouls"
   },
   {
     "id": "super-mario-bros-3",
@@ -1921,7 +2038,8 @@
     "platform": "NES / Famicom",
     "image": "images/games/super-mario-bros-3.png",
     "description": "Super Mario Bros. 3 is a classic 1980s platform game developed by Shigeru Miyamoto for NES / Famicom.",
-    "longDescription": "Super Mario Bros. 3 is a classic 1980s platform game developed by Shigeru Miyamoto for NES / Famicom."
+    "longDescription": "Super Mario Bros. 3 is a classic 1980s platform game developed by Shigeru Miyamoto for NES / Famicom.",
+    "playUrl": "https://archive.org/details/super-mario-bros.-3-usa_202401"
   },
   {
     "id": "ninja-gaiden",
@@ -1934,7 +2052,8 @@
     "platform": "Arcade / NES",
     "image": "images/games/ninja-gaiden.jpg",
     "description": "Ninja Gaiden is a classic 1980s action / platform game developed by Tecmo for Arcade / NES.",
-    "longDescription": "Ninja Gaiden is a classic 1980s action / platform game developed by Tecmo for Arcade / NES."
+    "longDescription": "Ninja Gaiden is a classic 1980s action / platform game developed by Tecmo for Arcade / NES.",
+    "playUrl": "https://archive.org/details/gaiden_nes_2"
   },
   {
     "id": "blaster-master",
@@ -1960,7 +2079,8 @@
     "platform": "Arcade",
     "image": "images/games/bad-dudes.png",
     "description": "Bad Dudes Vs.  DragonNinja, also known simply as either Bad Dudes or DragonNinja, is a side-scrolling cooperative beat 'em up developed and released by Data East as an arcade video game in 1988.  It was ported to computer and game console home systems.",
-    "longDescription": "Bad Dudes Vs.  DragonNinja, also known simply as either Bad Dudes or DragonNinja, is a side-scrolling cooperative beat 'em up developed and released by Data East as an arcade video game in 1988.  It was ported to computer and game console home systems."
+    "longDescription": "Bad Dudes Vs.  DragonNinja, also known simply as either Bad Dudes or DragonNinja, is a side-scrolling cooperative beat 'em up developed and released by Data East as an arcade video game in 1988.  It was ported to computer and game console home systems.",
+    "playUrl": "https://archive.org/details/arcade_baddudes"
   },
   {
     "id": "toobin",
@@ -1973,7 +2093,8 @@
     "platform": "Arcade",
     "image": "images/games/toobin.png",
     "description": "Toobin' is a 1988 action game developed and published by Tengen for Atari Games and arcades.  Based on the recreational activity of tubing, it sees players traveling down Colorado, Nile, Styx, Canals of Mars and Jurassic, steering around obstacles and throwing cans at such enemies as alligators, hunters, and cavemen.",
-    "longDescription": "Toobin' is a 1988 action game developed and published by Tengen for Atari Games and arcades.  Based on the recreational activity of tubing, it sees players traveling down Colorado, Nile, Styx, Canals of Mars and Jurassic, steering around obstacles and throwing cans at such enemies as alligators, hunters, and cavemen."
+    "longDescription": "Toobin' is a 1988 action game developed and published by Tengen for Atari Games and arcades.  Based on the recreational activity of tubing, it sees players traveling down Colorado, Nile, Styx, Canals of Mars and Jurassic, steering around obstacles and throwing cans at such enemies as alligators, hunters, and cavemen.",
+    "playUrl": "https://archive.org/details/arcade_toobin"
   },
   {
     "id": "strider",
@@ -1986,7 +2107,8 @@
     "platform": "Arcade",
     "image": "images/games/strider.png",
     "description": "Strider is a classic 1980s action / platform game developed by Capcom for Arcade.",
-    "longDescription": "Strider is a classic 1980s action / platform game developed by Capcom for Arcade."
+    "longDescription": "Strider is a classic 1980s action / platform game developed by Capcom for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_strider"
   },
   {
     "id": "golden-axe",
@@ -1999,7 +2121,8 @@
     "platform": "Arcade",
     "image": "images/games/golden-axe.jpeg",
     "description": "Golden Axe is a 1989 beat 'em up video game developed and published by Sega for arcades on the Sega System 16B hardware.  Players control one of three warriors who must free the fantasy land of Yuria from the tyrannical rule of Death Adder, who wields the titular Golden Axe.  The lead designer was Makoto Uchida, who was also responsible for the creation of Sega's earlier Altered Beast (1988).",
-    "longDescription": "Golden Axe is a 1989 beat 'em up video game developed and published by Sega for arcades on the Sega System 16B hardware.  Players control one of three warriors who must free the fantasy land of Yuria from the tyrannical rule of Death Adder, who wields the titular Golden Axe.  The lead designer was Makoto Uchida, who was also responsible for the creation of Sega's earlier Altered Beast (1988)."
+    "longDescription": "Golden Axe is a 1989 beat 'em up video game developed and published by Sega for arcades on the Sega System 16B hardware.  Players control one of three warriors who must free the fantasy land of Yuria from the tyrannical rule of Death Adder, who wields the titular Golden Axe.  The lead designer was Makoto Uchida, who was also responsible for the creation of Sega's earlier Altered Beast (1988).",
+    "playUrl": "https://archive.org/details/arcade_goldenaxe"
   },
   {
     "id": "final-fight",
@@ -2012,7 +2135,8 @@
     "platform": "Arcade",
     "image": "images/games/final-fight.png",
     "description": "Final Fight is a series of beat 'em up video games by Japanese publisher Capcom, which began with the arcade release of Final Fight in 1989.  Set in the fictional Metro City, within the Street Fighter universe, the games focus on a group of heroic vigilantes who fight against the control and various threats of criminal gangs, primarily the Mad Gear Gang.  The series has sold 3.",
-    "longDescription": "Final Fight is a series of beat 'em up video games by Japanese publisher Capcom, which began with the arcade release of Final Fight in 1989.  Set in the fictional Metro City, within the Street Fighter universe, the games focus on a group of heroic vigilantes who fight against the control and various threats of criminal gangs, primarily the Mad Gear Gang.  The series has sold 3. 2 million units worldwide as of June 30, 2023."
+    "longDescription": "Final Fight is a series of beat 'em up video games by Japanese publisher Capcom, which began with the arcade release of Final Fight in 1989.  Set in the fictional Metro City, within the Street Fighter universe, the games focus on a group of heroic vigilantes who fight against the control and various threats of criminal gangs, primarily the Mad Gear Gang.  The series has sold 3. 2 million units worldwide as of June 30, 2023.",
+    "playUrl": "https://archive.org/details/arcade_ffight"
   },
   {
     "id": "tmnt-arcade",
@@ -2025,7 +2149,8 @@
     "platform": "Arcade",
     "image": "images/games/tmnt-arcade.jpg",
     "description": "Teenage Mutant Ninja Turtles, released in Japan as Teenage Mutant Ninja Turtles: Super Kame Ninja and in Europe as Teenage Mutant Hero Turtles, is a 1989 beat 'em up video game developed and published by Konami for arcades.  It is based on the Teenage Mutant Ninja Turtles franchise, including the first animated series that began airing two years earlier.  In the game, up to four players control the titular Ninja Turtles, fighting through various levels to defeat the turtles' enemies, including the Shredder, Krang and the Foot Clan.",
-    "longDescription": "Teenage Mutant Ninja Turtles, released in Japan as Teenage Mutant Ninja Turtles: Super Kame Ninja and in Europe as Teenage Mutant Hero Turtles, is a 1989 beat 'em up video game developed and published by Konami for arcades.  It is based on the Teenage Mutant Ninja Turtles franchise, including the first animated series that began airing two years earlier.  In the game, up to four players control the titular Ninja Turtles, fighting through various levels to defeat the turtles' enemies, including the Shredder, Krang and the Foot Clan.  Released during a high point in popularity for the Teenage Mutant Ninja Turtles franchise, the arcade game was a worldwide hit, becoming the highest-grossing dedicated arcade game of 1990 in the United States and Konami's highest-grossing arcade game.  Versions for various home systems soon followed, including the Nintendo Entertainment System.  A sequel, Teenage Mutant Ninja Turtles: Turtles in Time, was released in 1991."
+    "longDescription": "Teenage Mutant Ninja Turtles, released in Japan as Teenage Mutant Ninja Turtles: Super Kame Ninja and in Europe as Teenage Mutant Hero Turtles, is a 1989 beat 'em up video game developed and published by Konami for arcades.  It is based on the Teenage Mutant Ninja Turtles franchise, including the first animated series that began airing two years earlier.  In the game, up to four players control the titular Ninja Turtles, fighting through various levels to defeat the turtles' enemies, including the Shredder, Krang and the Foot Clan.  Released during a high point in popularity for the Teenage Mutant Ninja Turtles franchise, the arcade game was a worldwide hit, becoming the highest-grossing dedicated arcade game of 1990 in the United States and Konami's highest-grossing arcade game.  Versions for various home systems soon followed, including the Nintendo Entertainment System.  A sequel, Teenage Mutant Ninja Turtles: Turtles in Time, was released in 1991.",
+    "playUrl": "https://archive.org/details/arcade_tmnt"
   },
   {
     "id": "simcity",
@@ -2038,7 +2163,8 @@
     "platform": "Macintosh / PC",
     "image": "images/games/simcity.jpg",
     "description": "SimCity is a city-building simulation video game developed by Will Wright, and released for several platforms from 1989 to 1991.  SimCity features two-dimensional graphics and an overhead perspective.  The game's objective is to create a city, develop residential and industrial areas, build infrastructure, and collect taxes for further city development.",
-    "longDescription": "SimCity is a city-building simulation video game developed by Will Wright, and released for several platforms from 1989 to 1991.  SimCity features two-dimensional graphics and an overhead perspective.  The game's objective is to create a city, develop residential and industrial areas, build infrastructure, and collect taxes for further city development.  Importance is placed on increasing the population's standard of living, maintaining a balance between the different sectors, and monitoring the region's environmental situations to prevent the settlement from declining and going bankrupt."
+    "longDescription": "SimCity is a city-building simulation video game developed by Will Wright, and released for several platforms from 1989 to 1991.  SimCity features two-dimensional graphics and an overhead perspective.  The game's objective is to create a city, develop residential and industrial areas, build infrastructure, and collect taxes for further city development.  Importance is placed on increasing the population's standard of living, maintaining a balance between the different sectors, and monitoring the region's environmental situations to prevent the settlement from declining and going bankrupt.",
+    "playUrl": "https://archive.org/details/msdos_SimCity_1989"
   },
   {
     "id": "batman-1989",
@@ -2077,7 +2203,8 @@
     "platform": "Arcade",
     "image": "images/games/klax.jpg",
     "description": "Klax is a 1990 puzzle video game developed and published by Atari Games for arcades; in Japan, it was distributed by Namco.  The game was designed and animated by Mark Stephen Pierce, with software engineering by Dave Akers.  The object of the game is to catch colored tiles moving down a conveyor belt, and arrange them in matching rows and patterns to make them disappear.",
-    "longDescription": "Klax is a 1990 puzzle video game developed and published by Atari Games for arcades; in Japan, it was distributed by Namco.  The game was designed and animated by Mark Stephen Pierce, with software engineering by Dave Akers.  The object of the game is to catch colored tiles moving down a conveyor belt, and arrange them in matching rows and patterns to make them disappear."
+    "longDescription": "Klax is a 1990 puzzle video game developed and published by Atari Games for arcades; in Japan, it was distributed by Namco.  The game was designed and animated by Mark Stephen Pierce, with software engineering by Dave Akers.  The object of the game is to catch colored tiles moving down a conveyor belt, and arrange them in matching rows and patterns to make them disappear.",
+    "playUrl": "https://archive.org/details/arcade_klax"
   },
   {
     "id": "prince-of-persia",
@@ -2090,7 +2217,8 @@
     "platform": "Apple II / DOS",
     "image": "images/games/prince-of-persia.jpg",
     "description": "Prince of Persia is a classic 1980s platform / action game developed by Jordan Mechner for Apple II / DOS.",
-    "longDescription": "Prince of Persia is a classic 1980s platform / action game developed by Jordan Mechner for Apple II / DOS."
+    "longDescription": "Prince of Persia is a classic 1980s platform / action game developed by Jordan Mechner for Apple II / DOS.",
+    "playUrl": "https://archive.org/details/msdos_Prince_of_Persia_1990"
   },
   {
     "id": "space-quest",
@@ -2103,7 +2231,8 @@
     "platform": "PC/DOS",
     "image": "images/games/space-quest.gif",
     "description": "Space Quest is a classic 1980s adventure game developed by Mark Crowe & Scott Murphy for PC/DOS.",
-    "longDescription": "Space Quest is a classic 1980s adventure game developed by Mark Crowe & Scott Murphy for PC/DOS."
+    "longDescription": "Space Quest is a classic 1980s adventure game developed by Mark Crowe & Scott Murphy for PC/DOS.",
+    "playUrl": "https://archive.org/details/msdos_Space_Quest_I_-_The_Sarien_Encounter_VGA_1991"
   },
   {
     "id": "ultima-iv",
@@ -2116,7 +2245,8 @@
     "platform": "Apple II / Multiple",
     "image": "images/games/ultima-iv.jpg",
     "description": "Ultima IV is a classic 1980s rpg game developed by Richard Garriott for Apple II / Multiple.",
-    "longDescription": "Ultima IV is a classic 1980s rpg game developed by Richard Garriott for Apple II / Multiple."
+    "longDescription": "Ultima IV is a classic 1980s rpg game developed by Richard Garriott for Apple II / Multiple.",
+    "playUrl": "https://archive.org/details/msdos_Ultima_IV_-_Quest_of_the_Avatar_1985"
   },
   {
     "id": "flight-simulator",
@@ -2129,7 +2259,8 @@
     "platform": "PC/DOS",
     "image": "images/games/flight-simulator.jpg",
     "description": "Microsoft Flight Simulator is a classic 1980s simulation game developed by Bruce Artwick / subLOGIC for PC/DOS.",
-    "longDescription": "Microsoft Flight Simulator is a classic 1980s simulation game developed by Bruce Artwick / subLOGIC for PC/DOS."
+    "longDescription": "Microsoft Flight Simulator is a classic 1980s simulation game developed by Bruce Artwick / subLOGIC for PC/DOS.",
+    "downloadUrl": "https://www.myabandonware.com/game/microsoft-flight-simulator-1-0-1w2"
   },
   {
     "id": "police-quest",
@@ -2142,7 +2273,9 @@
     "platform": "PC/DOS",
     "image": "images/games/police-quest.jpg",
     "description": "Police Quest is a classic 1980s adventure game developed by Jim Walls for PC/DOS.",
-    "longDescription": "Police Quest is a classic 1980s adventure game developed by Jim Walls for PC/DOS."
+    "longDescription": "Police Quest is a classic 1980s adventure game developed by Jim Walls for PC/DOS.",
+    "playUrl": "https://archive.org/details/msdos_Police_Quest_-_In_Pursuit_of_the_Death_Angel_1987",
+    "downloadUrl": "https://www.myabandonware.com/game/police-quest-in-pursuit-of-the-death-angel-2e2"
   },
   {
     "id": "leisure-suit-larry",
@@ -2155,7 +2288,9 @@
     "platform": "PC/DOS",
     "image": "images/games/leisure-suit-larry.jpg",
     "description": "Leisure Suit Larry is a classic 1980s adventure game developed by Al Lowe for PC/DOS.",
-    "longDescription": "Leisure Suit Larry is a classic 1980s adventure game developed by Al Lowe for PC/DOS."
+    "longDescription": "Leisure Suit Larry is a classic 1980s adventure game developed by Al Lowe for PC/DOS.",
+    "playUrl": "https://archive.org/details/msdos_Leisure_Suit_Larry_in_the_Land_of_the_Lounge_Lizards_1987",
+    "downloadUrl": "https://www.myabandonware.com/game/leisure-suit-larry-in-the-land-of-the-lounge-lizards-5e"
   },
   {
     "id": "head-over-heels",
@@ -2168,7 +2303,8 @@
     "platform": "ZX Spectrum / Multiple",
     "image": "images/games/head-over-heels.jpg",
     "description": "Head Over Heels is a classic 1980s isometric action game developed by Jon Ritman & Bernie Drummond for ZX Spectrum / Multiple.",
-    "longDescription": "Head Over Heels is a classic 1980s isometric action game developed by Jon Ritman & Bernie Drummond for ZX Spectrum / Multiple."
+    "longDescription": "Head Over Heels is a classic 1980s isometric action game developed by Jon Ritman & Bernie Drummond for ZX Spectrum / Multiple.",
+    "playUrl": "https://archive.org/details/zx_Head_Over_Heels_1987_Ocean_Software"
   },
   {
     "id": "jackal",
@@ -2181,7 +2317,8 @@
     "platform": "Arcade",
     "image": "images/games/jackal.png",
     "description": "Jackal is a classic 1980s run and gun game developed by Konami for Arcade.",
-    "longDescription": "Jackal is a classic 1980s run and gun game developed by Konami for Arcade."
+    "longDescription": "Jackal is a classic 1980s run and gun game developed by Konami for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_jackal"
   },
   {
     "id": "castlevania-ii",
@@ -2207,7 +2344,8 @@
     "platform": "NES",
     "image": "images/games/mega-man-3.jpg",
     "description": "Mega Man 3 is a classic 1980s platform / action game developed by Capcom for NES.",
-    "longDescription": "Mega Man 3 is a classic 1980s platform / action game developed by Capcom for NES."
+    "longDescription": "Mega Man 3 is a classic 1980s platform / action game developed by Capcom for NES.",
+    "playUrl": "https://archive.org/details/mega-man-3-u"
   },
   {
     "id": "chip-n-dale",
@@ -2246,7 +2384,8 @@
     "platform": "Amiga / Atari ST",
     "image": "images/games/q10-tankbuster.jpg",
     "description": "Xenon is a classic 1980s shooter game developed by Bitmap Brothers for Amiga / Atari ST.",
-    "longDescription": "Xenon is a classic 1980s shooter game developed by Bitmap Brothers for Amiga / Atari ST."
+    "longDescription": "Xenon is a classic 1980s shooter game developed by Bitmap Brothers for Amiga / Atari ST.",
+    "downloadUrl": "https://www.myabandonware.com/game/xenon-1mq"
   },
   {
     "id": "speedball",
@@ -2259,7 +2398,8 @@
     "platform": "Amiga / Atari ST",
     "image": "images/games/speedball.jpg",
     "description": "Speedball is a classic 1980s sports game developed by Bitmap Brothers for Amiga / Atari ST.",
-    "longDescription": "Speedball is a classic 1980s sports game developed by Bitmap Brothers for Amiga / Atari ST."
+    "longDescription": "Speedball is a classic 1980s sports game developed by Bitmap Brothers for Amiga / Atari ST.",
+    "downloadUrl": "https://www.myabandonware.com/game/speedball-1yw"
   },
   {
     "id": "turrican",
@@ -2272,7 +2412,8 @@
     "platform": "Commodore 64 / Amiga",
     "image": "images/games/turrican.jpg",
     "description": "Turrican is a 1990 run and gun video game developed by Factor 5 and published by Rainbow Arts.  Designed by Manfred Trenz, it was released for the Commodore 64, and was ported to other systems later.  In addition to concept design and character creation, Trenz programmed Turrican on the Commodore 64.",
-    "longDescription": "Turrican is a 1990 run and gun video game developed by Factor 5 and published by Rainbow Arts.  Designed by Manfred Trenz, it was released for the Commodore 64, and was ported to other systems later.  In addition to concept design and character creation, Trenz programmed Turrican on the Commodore 64.  A sequel, Turrican II: The Final Fight, followed in 1991 for the Commodore 64 and other platforms."
+    "longDescription": "Turrican is a 1990 run and gun video game developed by Factor 5 and published by Rainbow Arts.  Designed by Manfred Trenz, it was released for the Commodore 64, and was ported to other systems later.  In addition to concept design and character creation, Trenz programmed Turrican on the Commodore 64.  A sequel, Turrican II: The Final Fight, followed in 1991 for the Commodore 64 and other platforms.",
+    "downloadUrl": "https://www.myabandonware.com/game/turrican-1ns"
   },
   {
     "id": "lemmings-early",
@@ -2285,7 +2426,8 @@
     "platform": "Amiga / Atari ST",
     "image": "images/games/lemmings-early.jpg",
     "description": "Rick Dangerous is a classic 1980s platform game developed by Core Design for Amiga / Atari ST.",
-    "longDescription": "Rick Dangerous is a classic 1980s platform game developed by Core Design for Amiga / Atari ST."
+    "longDescription": "Rick Dangerous is a classic 1980s platform game developed by Core Design for Amiga / Atari ST.",
+    "downloadUrl": "https://www.myabandonware.com/game/rick-dangerous-2ek"
   },
   {
     "id": "another-world",
@@ -2298,7 +2440,8 @@
     "platform": "Amiga / DOS",
     "image": "images/games/another-world.png",
     "description": "Out of This World is a classic 1980s action / adventure game developed by Ã‰ric Chahi for Amiga / DOS.",
-    "longDescription": "Out of This World is a classic 1980s action / adventure game developed by Ã‰ric Chahi for Amiga / DOS."
+    "longDescription": "Out of This World is a classic 1980s action / adventure game developed by Ã‰ric Chahi for Amiga / DOS.",
+    "downloadUrl": "https://www.myabandonware.com/game/another-world-3h4"
   },
   {
     "id": "gauntlet-ii",
@@ -2311,7 +2454,8 @@
     "platform": "Arcade",
     "image": "images/games/gauntlet-ii.png",
     "description": "Gauntlet II is a classic 1980s dungeon crawler game developed by Ed Logg for Arcade.",
-    "longDescription": "Gauntlet II is a classic 1980s dungeon crawler game developed by Ed Logg for Arcade."
+    "longDescription": "Gauntlet II is a classic 1980s dungeon crawler game developed by Ed Logg for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_gaunt2"
   },
   {
     "id": "rygar",
@@ -2324,7 +2468,8 @@
     "platform": "Arcade",
     "image": "images/games/rygar.png",
     "description": "Rygar is a classic 1980s action / platform game developed by Tecmo for Arcade.",
-    "longDescription": "Rygar is a classic 1980s action / platform game developed by Tecmo for Arcade."
+    "longDescription": "Rygar is a classic 1980s action / platform game developed by Tecmo for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_rygar"
   },
   {
     "id": "ghosts-n-goblins-nes",
@@ -2389,7 +2534,8 @@
     "platform": "Arcade",
     "image": "images/games/mercs.jpg",
     "description": "Mercs is a classic 1980s run and gun game developed by Capcom for Arcade.",
-    "longDescription": "Mercs is a classic 1980s run and gun game developed by Capcom for Arcade."
+    "longDescription": "Mercs is a classic 1980s run and gun game developed by Capcom for Arcade.",
+    "playUrl": "https://archive.org/details/arcade_mercs"
   },
   {
     "id": "wrestlefest",
@@ -2467,7 +2613,8 @@
     "publisher": "Nintendo",
     "image": "images/games/kirby-s-adventure.png",
     "description": "Kirby's Adventure is a 1993 platform game developed by HAL Laboratory and published by Nintendo for the Nintendo Entertainment System (NES).  It is the second game in the Kirby series after Kirby's Dream Land (1992) on the Game Boy and the first to include the Copy Ability, which allows the main character Kirby to gain new powers by eating certain enemies.  The game centers around Kirby traveling across Dream Land to repair the Star Rod after King Dedede breaks it apart and gives the pieces to his minions.",
-    "longDescription": "Kirby's Adventure is a 1993 platform game developed by HAL Laboratory and published by Nintendo for the Nintendo Entertainment System (NES).  It is the second game in the Kirby series after Kirby's Dream Land (1992) on the Game Boy and the first to include the Copy Ability, which allows the main character Kirby to gain new powers by eating certain enemies.  The game centers around Kirby traveling across Dream Land to repair the Star Rod after King Dedede breaks it apart and gives the pieces to his minions."
+    "longDescription": "Kirby's Adventure is a 1993 platform game developed by HAL Laboratory and published by Nintendo for the Nintendo Entertainment System (NES).  It is the second game in the Kirby series after Kirby's Dream Land (1992) on the Game Boy and the first to include the Copy Ability, which allows the main character Kirby to gain new powers by eating certain enemies.  The game centers around Kirby traveling across Dream Land to repair the Star Rod after King Dedede breaks it apart and gives the pieces to his minions.",
+    "playUrl": "https://archive.org/details/kirbys-adventure-usa_202504"
   },
   {
     "id": "final-fantasy",
@@ -2493,7 +2640,8 @@
     "publisher": "Unknown",
     "image": "images/games/missile-command-atari.jpg",
     "description": "Missile Command is a 1980 shoot 'em up video game developed and published by Atari, Inc.  for arcades.  It was released by Taito and Sega in Japan.",
-    "longDescription": "Missile Command is a 1980 shoot 'em up video game developed and published by Atari, Inc.  for arcades.  It was released by Taito and Sega in Japan.  The game was designed by Dave Theurer, who would also design Tempest for Atari the following year.  The player uses a trackball to defend six cities from intercontinental ballistic missiles by launching anti-ballistic missiles from three bases."
+    "longDescription": "Missile Command is a 1980 shoot 'em up video game developed and published by Atari, Inc.  for arcades.  It was released by Taito and Sega in Japan.  The game was designed by Dave Theurer, who would also design Tempest for Atari the following year.  The player uses a trackball to defend six cities from intercontinental ballistic missiles by launching anti-ballistic missiles from three bases.",
+    "playUrl": "https://archive.org/details/atari_2600_missile_command"
   },
   {
     "id": "pitfall-ii",
@@ -2506,7 +2654,8 @@
     "publisher": "Unknown",
     "image": "images/games/pitfall-ii.png",
     "description": "Pitfall II: Lost Caverns is a 1984 platform video game developed by David Crane and published by Activision for the Atari 2600.  The player controls Pitfall Harry, who must explore the wilds of Peru to find the Raj diamond and rescue his niece Rhonda and their animal friend Quickclaw.  The game world is populated by various enemies and hazards that variously cause the player to lose points and return to a checkpoint.",
-    "longDescription": "Pitfall II: Lost Caverns is a 1984 platform video game developed by David Crane and published by Activision for the Atari 2600.  The player controls Pitfall Harry, who must explore the wilds of Peru to find the Raj diamond and rescue his niece Rhonda and their animal friend Quickclaw.  The game world is populated by various enemies and hazards that variously cause the player to lose points and return to a checkpoint."
+    "longDescription": "Pitfall II: Lost Caverns is a 1984 platform video game developed by David Crane and published by Activision for the Atari 2600.  The player controls Pitfall Harry, who must explore the wilds of Peru to find the Raj diamond and rescue his niece Rhonda and their animal friend Quickclaw.  The game world is populated by various enemies and hazards that variously cause the player to lose points and return to a checkpoint.",
+    "playUrl": "https://archive.org/details/atari_2600_pitfall_ii"
   },
   {
     "id": "knight-lore",
@@ -2519,7 +2668,8 @@
     "publisher": "Unknown",
     "image": "images/games/knight-lore.jpg",
     "description": "Knight Lore is a 1984 action-adventure game developed and published by Ultimate Play the Game, and written by company founders Chris and Tim Stamper.  The game is known for its use of isometric graphics, which it further popularized in video games.  In Knight Lore, the player character Sabreman has forty days to collect objects throughout a castle and brew a cure to his werewolf curse.",
-    "longDescription": "Knight Lore is a 1984 action-adventure game developed and published by Ultimate Play the Game, and written by company founders Chris and Tim Stamper.  The game is known for its use of isometric graphics, which it further popularized in video games.  In Knight Lore, the player character Sabreman has forty days to collect objects throughout a castle and brew a cure to his werewolf curse.  Each castle room is depicted in monochrome on its own screen and consists of blocks to climb, obstacles to avoid, and puzzles to solve."
+    "longDescription": "Knight Lore is a 1984 action-adventure game developed and published by Ultimate Play the Game, and written by company founders Chris and Tim Stamper.  The game is known for its use of isometric graphics, which it further popularized in video games.  In Knight Lore, the player character Sabreman has forty days to collect objects throughout a castle and brew a cure to his werewolf curse.  Each castle room is depicted in monochrome on its own screen and consists of blocks to climb, obstacles to avoid, and puzzles to solve.",
+    "playUrl": "https://archive.org/details/zx_Knight_Lore_1984_Ultimate_Play_The_Game"
   },
   {
     "id": "sabre-wulf",
@@ -2532,7 +2682,8 @@
     "publisher": "Unknown",
     "image": "images/games/placeholder.svg",
     "description": "Sabre Wulf is an action-adventure game released by British video game developer Ultimate Play the Game for the ZX Spectrum home computer in 1984.  The player navigates the pith-helmeted Sabreman through a 2D jungle maze while collecting amulet pieces to bypass the guardian at its exit.  The player does not receive explicit guidance on how to play and is left to decipher the game's objectives through trial and error.",
-    "longDescription": "Sabre Wulf is an action-adventure game released by British video game developer Ultimate Play the Game for the ZX Spectrum home computer in 1984.  The player navigates the pith-helmeted Sabreman through a 2D jungle maze while collecting amulet pieces to bypass the guardian at its exit.  The player does not receive explicit guidance on how to play and is left to decipher the game's objectives through trial and error.  Sabreman moves between the maze's 256 connected screens by touching the border where one screen ends and another begins.  Each screen is filled with colourful flora, enemies that spawn at random, and occasional collectibles."
+    "longDescription": "Sabre Wulf is an action-adventure game released by British video game developer Ultimate Play the Game for the ZX Spectrum home computer in 1984.  The player navigates the pith-helmeted Sabreman through a 2D jungle maze while collecting amulet pieces to bypass the guardian at its exit.  The player does not receive explicit guidance on how to play and is left to decipher the game's objectives through trial and error.  Sabreman moves between the maze's 256 connected screens by touching the border where one screen ends and another begins.  Each screen is filled with colourful flora, enemies that spawn at random, and occasional collectibles.",
+    "playUrl": "https://archive.org/details/zx_Sabre_Wulf_1984_Ultimate_Play_The_Game"
   },
   {
     "id": "phantasy-star",
@@ -2558,7 +2709,8 @@
     "publisher": "Unknown",
     "image": "images/games/placeholder.svg",
     "description": "Hang-On is a 1985 racing video game developed and published by Sega for arcades.  In the game, the player controls a motorcycle against time and other computer-controlled bikes.  It was one of the first arcade games to use 16-bit graphics and uses the Super Scaler arcade system board, created with design input from Yu Suzuki, as technology to simulate 3D effects.",
-    "longDescription": "Hang-On is a 1985 racing video game developed and published by Sega for arcades.  In the game, the player controls a motorcycle against time and other computer-controlled bikes.  It was one of the first arcade games to use 16-bit graphics and uses the Super Scaler arcade system board, created with design input from Yu Suzuki, as technology to simulate 3D effects.  The deluxe cabinet version also introduced a motion-controlled arcade cabinet, where the player's body movement on a large motorbike-shaped cabinet corresponds with the player character's movements on screen."
+    "longDescription": "Hang-On is a 1985 racing video game developed and published by Sega for arcades.  In the game, the player controls a motorcycle against time and other computer-controlled bikes.  It was one of the first arcade games to use 16-bit graphics and uses the Super Scaler arcade system board, created with design input from Yu Suzuki, as technology to simulate 3D effects.  The deluxe cabinet version also introduced a motion-controlled arcade cabinet, where the player's body movement on a large motorbike-shaped cabinet corresponds with the player character's movements on screen.",
+    "playUrl": "https://archive.org/details/arcade_hangon"
   },
   {
     "id": "star-wars-arcade",
@@ -2584,7 +2736,8 @@
     "publisher": "Unknown",
     "image": "images/games/city-connection.png",
     "description": "City Connection is a 1985 platform video game developed and published by Jaleco for arcades.  It was released in North America by Kitkorp as Cruisin'.  The player controls Clarice in her Honda City hatchback and must drive over elevated roads to paint them.",
-    "longDescription": "City Connection is a 1985 platform video game developed and published by Jaleco for arcades.  It was released in North America by Kitkorp as Cruisin'.  The player controls Clarice in her Honda City hatchback and must drive over elevated roads to paint them.  Clarice is pursued by police cars, which she can stun by hitting them with oil cans.  The design was inspired by maze chase games like Pac-Man (1980) and Make Trax (1981)."
+    "longDescription": "City Connection is a 1985 platform video game developed and published by Jaleco for arcades.  It was released in North America by Kitkorp as Cruisin'.  The player controls Clarice in her Honda City hatchback and must drive over elevated roads to paint them.  Clarice is pursued by police cars, which she can stun by hitting them with oil cans.  The design was inspired by maze chase games like Pac-Man (1980) and Make Trax (1981).",
+    "playUrl": "https://archive.org/details/arcade_citycon"
   },
   {
     "id": "terra-cresta",
@@ -2636,6 +2789,7 @@
     "publisher": "Konami",
     "image": "images/games/placeholder.svg",
     "description": "Contra is a 1987 run and gun game developed and published by Konami for arcades.  A home version was released for the Nintendo Entertainment System in 1988, along with ports for various home computer formats, including the MSX2.  The arcade and computer versions were localized as Gryzor in Europe, and the NES version as Probotector in the PAL region.",
-    "longDescription": "Contra is a 1987 run and gun game developed and published by Konami for arcades.  A home version was released for the Nintendo Entertainment System in 1988, along with ports for various home computer formats, including the MSX2.  The arcade and computer versions were localized as Gryzor in Europe, and the NES version as Probotector in the PAL region."
+    "longDescription": "Contra is a 1987 run and gun game developed and published by Konami for arcades.  A home version was released for the Nintendo Entertainment System in 1988, along with ports for various home computer formats, including the MSX2.  The arcade and computer versions were localized as Gryzor in Europe, and the NES version as Probotector in the PAL region.",
+    "playUrl": "https://archive.org/details/arcade_contra"
   }
 ]

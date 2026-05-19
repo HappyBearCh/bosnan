@@ -7,8 +7,8 @@ const app = express();
 const PORT = 3000;
 
 const games = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'games.json'), 'utf8'));
-const gamesSlim = games.map(({ id, title, year, decade, genre, platform, developer, image }) =>
-  ({ id, title, year, decade, genre, platform, developer, image })
+const gamesSlim = games.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
+  ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
 );
 
 // O(1) game lookup — replaces .find() on every request
@@ -156,6 +156,7 @@ function buildCardHtml(list) {
         <img src="/${escapeHtml(g.image)}" alt="${escapeHtml(g.title)}" loading="lazy"
              onerror="this.parentElement.innerHTML='<div class=\\'game-card-placeholder\\'>${escapeHtml(g.title[0])}</div>'">
         <div class="game-card-decade">${escapeHtml(g.decade)}</div>
+        ${g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : ''}
       </div>
       <div class="game-card-body">
         <h3 class="game-card-title">${escapeHtml(g.title)}</h3>
@@ -343,8 +344,10 @@ function cardHtml(g) {
     return '<a href="/games/'+g.id+'" class="game-card">'+
         '<div class="game-card-img-wrap">'+
         '<img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy"'+
-        ' onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'">' +
-        '<div class="game-card-decade">'+esc(g.decade)+'</div></div>'+
+        ' onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'">'+
+        '<div class="game-card-decade">'+esc(g.decade)+'</div>'+
+        (g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : '')+
+        '</div>'+
         '<div class="game-card-body">'+
         '<h3 class="game-card-title">'+esc(g.title)+'</h3>'+
         '<div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div>'+
@@ -471,6 +474,10 @@ ${nav('games')}
         <h2>Deep Dive</h2>
         <p>${escapeHtml(game.longDescription)}</p>
       </div>
+      <div class="game-play-actions">
+        ${game.playUrl ? `<a href="${escapeHtml(game.playUrl)}" target="_blank" rel="noopener" class="btn btn-play">&#9654; Play Online</a>` : ''}
+        ${game.downloadUrl ? `<a href="${escapeHtml(game.downloadUrl)}" target="_blank" rel="noopener" class="btn btn-download">&#11015; Download</a>` : ''}
+      </div>
       <button class="share-btn" id="shareBtn" onclick="shareGame()">&#128279; Share this game</button>
     </div>
   </div>
@@ -539,8 +546,8 @@ ${toggleScript()}
 function platformDetailPage(platform) {
   const platformGames = gamesForPlatform(platform);
   const cardHtml = buildCardHtml(platformGames.slice(0, PAGE_SIZE));
-  const inlineData = JSON.stringify(platformGames.map(({ id, title, year, decade, genre, platform: pl, developer, image }) =>
-    ({ id, title, year, decade, genre, platform: pl, developer, image })
+  const inlineData = JSON.stringify(platformGames.map(({ id, title, year, decade, genre, platform: pl, developer, image, playUrl }) =>
+    ({ id, title, year, decade, genre, platform: pl, developer, image, playUrl: playUrl || null })
   ));
 
   return `<!DOCTYPE html>
@@ -583,7 +590,9 @@ function cardHtml(g){
         '<div class="game-card-img-wrap">'+
         '<img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy"'+
         ' onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'">'+
-        '<div class="game-card-decade">'+esc(g.decade)+'</div></div>'+
+        '<div class="game-card-decade">'+esc(g.decade)+'</div>'+
+        (g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : '')+
+        '</div>'+
         '<div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3>'+
         '<div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div>'+
         '<p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';

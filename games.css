@@ -198,6 +198,20 @@
     letter-spacing: 0.5px;
 }
 
+.game-card-playable {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.75);
+    color: #ff4444;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255,68,68,0.4);
+}
+
 .game-card-body {
     padding: 14px 16px 18px;
     flex: 1;
@@ -438,6 +452,46 @@
     letter-spacing: 0.3px;
 }
 .nav-random:hover { color: red !important; }
+
+/* ================== PLAY / DOWNLOAD ACTIONS ================== */
+.game-play-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    margin-bottom: 4px;
+}
+.btn-play, .btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 22px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.btn-play {
+    background: red;
+    color: white;
+    border: 1px solid red;
+}
+.btn-play:hover {
+    background: #cc0000;
+    box-shadow: 0 0 16px rgba(255,0,0,0.5);
+}
+.btn-download {
+    background: transparent;
+    color: #ccc;
+    border: 1px solid #444;
+}
+.btn-download:hover {
+    border-color: red;
+    color: white;
+    box-shadow: 0 0 10px rgba(255,0,0,0.2);
+}
 
 /* ================== SHARE BUTTON ================== */
 .share-btn {
