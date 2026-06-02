@@ -268,6 +268,84 @@ nav img {
     }
 }
 
+/* ================== ENCYCLOPEDIA SECTION (index.html) ================== */
+.enc-section {
+    max-width: 1000px;
+    margin: 0 auto 70px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+.enc-header {
+    margin-bottom: 28px;
+}
+.enc-header h2 {
+    font-size: 22px;
+    color: #ccc;
+    font-weight: bold;
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+}
+.enc-header p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+.enc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.enc-card {
+    background: #0d0d0d;
+    border: 1px solid #1a1a1a;
+    border-radius: 8px;
+    padding: 18px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.enc-card:hover {
+    border-color: red;
+    transform: translateY(-3px);
+    box-shadow: 0 0 16px rgba(255,0,0,0.2);
+}
+.enc-card-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 4px;
+}
+.enc-card-era {
+    font-size: 11px;
+    color: red;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    margin-bottom: 10px;
+}
+.enc-card-desc {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.5;
+    margin: 0;
+}
+.enc-browse-btn {
+    display: inline-block;
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #2a2a2a;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: border-color 0.2s, color 0.2s;
+}
+.enc-browse-btn:hover {
+    border-color: red;
+    color: white;
+}
+
 /* ================== EXTRA SMALL DEVICES ================== */
 @media (max-width: 480px) {
     .hero h1 {
