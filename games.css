@@ -717,6 +717,244 @@
     margin-bottom: 16px;
     max-width: 780px;
 }
+/* ================== GENRE ENCYCLOPEDIA — LIST PAGE ================== */
+.genres-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    position: relative;
+    z-index: 1;
+}
+.genres-hero h1 {
+    font-size: 48px;
+    color: red;
+    text-shadow: 0 0 20px red;
+    margin-bottom: 12px;
+}
+.genres-hero p { font-size: 17px; opacity: 0.7; max-width: 600px; margin: 0 auto; }
+
+.genres-grid {
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.genre-card {
+    background: #0d0d0d;
+    border: 1px solid #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.genre-card:hover {
+    transform: translateY(-4px);
+    border-color: red;
+    box-shadow: 0 0 20px rgba(255,0,0,0.25);
+}
+.genre-card-img-wrap {
+    width: 100%;
+    height: 160px;
+    background: #111;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.genre-card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s;
+    filter: grayscale(20%);
+}
+.genre-card:hover .genre-card-img-wrap img { transform: scale(1.06); filter: grayscale(0%); }
+.genre-card-body { padding: 18px 20px 22px; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.genre-card-era { font-size: 11px; color: red; font-weight: bold; letter-spacing: 0.5px; text-transform: uppercase; }
+.genre-card-name { font-size: 20px; font-weight: bold; color: white; line-height: 1.2; }
+.genre-card-count { font-size: 12px; color: #555; }
+.genre-card-desc { font-size: 13px; color: #888; line-height: 1.55; margin-top: 4px;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* ================== GENRE ENCYCLOPEDIA — DETAIL (WIKI) PAGE ================== */
+.genre-wiki-wrapper {
+    max-width: 1000px;
+    margin: 0 auto 80px;
+    padding: 30px 20px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.genre-article { position: relative; }
+
+.genre-article-title {
+    font-size: 42px;
+    color: white;
+    text-shadow: 0 0 20px rgba(255,0,0,0.3);
+    margin: 0 0 6px;
+    line-height: 1.1;
+}
+.genre-article-subtitle {
+    font-size: 16px;
+    color: #888;
+    font-style: italic;
+    margin: 0 0 24px;
+    line-height: 1.5;
+}
+
+/* Infobox — floats right like Wikipedia */
+.genre-infobox {
+    float: right;
+    margin: 0 0 24px 32px;
+    width: 260px;
+    background: #0d0d0d;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+.genre-infobox-title {
+    background: #cc0000;
+    color: white;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.genre-infobox-image img {
+    width: 100%;
+    display: block;
+    max-height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 1px solid #222;
+}
+.genre-infobox-caption {
+    font-size: 11px;
+    color: #888;
+    padding: 8px 10px;
+    line-height: 1.45;
+    border-bottom: 1px solid #222;
+    text-align: center;
+}
+.genre-infobox-license { font-size: 10px; color: #555; display: block; margin-top: 3px; }
+.genre-infobox-table { width: 100%; border-collapse: collapse; }
+.genre-infobox-table tr { border-top: 1px solid #1a1a1a; }
+.genre-infobox-table tr:first-child { border-top: none; }
+.gi-label {
+    color: #666;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 7px 10px;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 40%;
+}
+.gi-value {
+    color: #ccc;
+    font-size: 12px;
+    padding: 7px 10px;
+    vertical-align: top;
+}
+
+/* Table of contents */
+.genre-toc {
+    display: inline-block;
+    background: #0d0d0d;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    padding: 14px 20px 14px 16px;
+    margin-bottom: 28px;
+    min-width: 210px;
+    max-width: 320px;
+    clear: left;
+}
+.genre-toc-title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #ccc;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.genre-toc ol {
+    margin: 0;
+    padding-left: 18px;
+    list-style: decimal;
+}
+.genre-toc li { font-size: 13px; line-height: 1.9; color: #888; }
+.genre-toc a { color: #aaa; text-decoration: none; transition: color 0.15s; }
+.genre-toc a:hover { color: red; }
+
+/* Intro paragraph */
+.genre-article-intro {
+    margin-bottom: 32px;
+}
+.genre-article-intro p {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 1.75;
+    border-left: 3px solid #cc0000;
+    padding-left: 16px;
+}
+
+/* Article sections */
+.genre-section { margin-bottom: 36px; }
+.genre-section h2 {
+    font-size: 22px;
+    color: white;
+    text-shadow: 0 0 8px rgba(255,0,0,0.2);
+    border-bottom: 1px solid #222;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+.genre-section p {
+    font-size: 15px;
+    color: #bbb;
+    line-height: 1.8;
+    margin: 0 0 14px;
+}
+.genre-section p:last-child { margin-bottom: 0; }
+.genre-section strong { color: #fff; }
+.genre-section em { color: #ddd; font-style: italic; }
+
+/* Games section */
+.genre-games-section { clear: both; margin-top: 48px; }
+.genre-games-heading {
+    font-size: 24px;
+    color: red;
+    text-shadow: 0 0 8px rgba(255,0,0,0.4);
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 10px;
+    margin-bottom: 24px;
+}
+.genre-games-section .games-grid { max-width: 100%; margin-bottom: 0; padding: 0; }
+
+/* Responsive: collapse infobox on mobile */
+@media (max-width: 700px) {
+    .genre-infobox {
+        float: none;
+        width: 100%;
+        margin: 0 0 24px 0;
+    }
+    .genre-article-title { font-size: 28px; }
+    .genres-hero h1 { font-size: 32px; }
+    .genres-grid { grid-template-columns: 1fr; }
+}
+
+/* ================== PLATFORM GAMES HEADING ================== */
 .platform-games-heading {
     font-size: 22px;
     color: red;

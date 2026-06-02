@@ -7,6 +7,7 @@ const app = express();
 const PORT = 3000;
 
 const games = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'games.json'), 'utf8'));
+const GENRES = require('./data/genres');
 const gamesSlim = games.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
   ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
 );
@@ -85,6 +86,13 @@ for (const platform of PLATFORMS) {
   ));
 }
 
+// Pre-computed genre→games index for genre encyclopedia pages
+const genreGamesIndex = new Map();
+for (const genre of GENRES) {
+  const genreSet = new Set(genre.genres);
+  genreGamesIndex.set(genre.id, games.filter(g => genreSet.has(g.genre)));
+}
+
 for (const game of games) {
   const byDev = games.filter(g => g.id !== game.id &&
     g.developer.toLowerCase() === game.developer.toLowerCase()).slice(0, 4);
@@ -98,7 +106,9 @@ const PAGE_SIZE = 32;
 
 let cachedGamesListHtml = null;
 let cachedPlatformsListHtml = null;
+let cachedGenresListHtml = null;
 const cachedPlatformPageHtml = {};
+const cachedGenrePageHtml = {};
 const cachedGamePageHtml = new Map(); // key: `${host}/${gameId}`
 let cachedSitemap = null;
 
@@ -141,6 +151,7 @@ function nav(active) {
         ${link('/game.html', 'Game', 'game')}
         ${link('/games', 'Games', 'games')}
         ${link('/platforms', 'Platforms', 'platforms')}
+        ${link('/genres', 'Encyclopedia', 'genres')}
         <a href="/random" class="nav-random">&#127922; Random</a>
     </div>
 </nav>`;
@@ -177,7 +188,7 @@ app.get('/sitemap.xml', (req, res) => {
   if (!cachedSitemap || cachedSitemap.host !== host) {
     const base = `${req.protocol}://${host}`;
     const today = new Date().toISOString().split('T')[0];
-    const staticUrls = ['', '/games', '/platforms'].map(p => `
+    const staticUrls = ['', '/games', '/platforms', '/genres'].map(p => `
   <url>
     <loc>${base}${p}</loc>
     <lastmod>${today}</lastmod>
@@ -198,10 +209,17 @@ app.get('/sitemap.xml', (req, res) => {
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`).join('');
+    const genreUrls = GENRES.map(g => `
+  <url>
+    <loc>${base}/genres/${g.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('');
     cachedSitemap = {
       host,
       xml: `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${gameUrls}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${genreUrls}${gameUrls}
 </urlset>`,
     };
   }
@@ -271,6 +289,22 @@ app.get('/platforms/:id', (req, res) => {
   }
   res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
   res.send(cachedPlatformPageHtml[platform.id]);
+});
+
+app.get('/genres', (req, res) => {
+  if (!cachedGenresListHtml) cachedGenresListHtml = genresListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.send(cachedGenresListHtml);
+});
+
+app.get('/genres/:id', (req, res) => {
+  const genre = GENRES.find(g => g.id === req.params.id);
+  if (!genre) return res.status(404).send(notFoundPage());
+  if (!cachedGenrePageHtml[genre.id]) {
+    cachedGenrePageHtml[genre.id] = genreDetailPage(genre);
+  }
+  res.set('Cache-Control', 'public, max-age=86400, stale-while-revalidate=604800');
+  res.send(cachedGenrePageHtml[genre.id]);
 });
 
 // ── Page generators ────────────────────────────────────────────────────────
@@ -575,6 +609,165 @@ ${nav('platforms')}
   <h2 class="platform-games-heading">${platformGames.length} Games in Archive</h2>
   <div class="games-grid" id="gamesGrid">${cardHtml}</div>
   <div id="loadMoreSentinel" style="height:1px"></div>
+</div>
+
+${toggleScript()}
+<script>
+const allGames = ${inlineData};
+const PAGE = ${PAGE_SIZE};
+let rendered = Math.min(PAGE, allGames.length);
+const grid = document.getElementById('gamesGrid');
+const sentinel = document.getElementById('loadMoreSentinel');
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function cardHtml(g){
+    return '<a href="/games/'+g.id+'" class="game-card">'+
+        '<div class="game-card-img-wrap">'+
+        '<img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy"'+
+        ' onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'">'+
+        '<div class="game-card-decade">'+esc(g.decade)+'</div>'+
+        (g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : '')+
+        '</div>'+
+        '<div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3>'+
+        '<div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div>'+
+        '<p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';
+}
+function loadMore(){
+    if(rendered>=allGames.length)return;
+    const next=allGames.slice(rendered,rendered+PAGE);
+    grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));
+    rendered+=next.length;
+}
+new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
+</script>
+</body>
+</html>`;
+}
+
+function genresListPage() {
+  const cards = GENRES.map(g => {
+    const count = (genreGamesIndex.get(g.id) || []).length;
+    return `<a href="/genres/${g.id}" class="genre-card">
+      <div class="genre-card-img-wrap">
+        <img src="${g.image}" alt="${escapeHtml(g.imageAlt)}" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div class="genre-card-body">
+        <div class="genre-card-era">${escapeHtml(g.era)}</div>
+        <div class="genre-card-name">${escapeHtml(g.name)}</div>
+        <div class="genre-card-count">${count} game${count !== 1 ? 's' : ''} in archive</div>
+        <p class="genre-card-desc">${escapeHtml(g.description)}</p>
+      </div>
+    </a>`;
+  }).join('');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Game Encyclopedia – Bosnan Retro Archive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the history of video game genres — shoot 'em ups, platformers, RPGs, adventure games, fighting games and more. A wiki-style encyclopedia of gaming history.">
+    <meta property="og:title" content="Game Encyclopedia – Bosnan Retro Archive">
+    <meta property="og:description" content="A wiki-style encyclopedia of video game genre history, from shoot 'em ups to RPGs.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/games.css">
+</head>
+<body>
+${bgLogo()}
+${nav('genres')}
+
+<section class="genres-hero">
+    <h1>Game Encyclopedia</h1>
+    <p>The history of every major video game genre — from the first arcade machines to the golden age of home computing</p>
+</section>
+
+<div class="genres-grid">
+    ${cards}
+</div>
+
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function genreDetailPage(genre) {
+  const genreGames = genreGamesIndex.get(genre.id) || [];
+  const count = genreGames.length;
+  const cardHtml = buildCardHtml(genreGames.slice(0, PAGE_SIZE));
+  const inlineData = JSON.stringify(genreGames.map(({ id, title, year, decade, genre: pl, platform, developer, image, playUrl }) =>
+    ({ id, title, year, decade, genre: pl, platform, developer, image, playUrl: playUrl || null })
+  ));
+
+  const statsRows = genre.stats.map(s =>
+    `<tr><td class="gi-label">${escapeHtml(s.label)}</td><td class="gi-value">${escapeHtml(s.value)}</td></tr>`
+  ).join('');
+
+  const tocItems = genre.sections.map((s, i) =>
+    `<li><a href="#section-${i}">${escapeHtml(s.title)}</a></li>`
+  ).join('');
+
+  const articleSections = genre.sections.map((s, i) => `
+<div class="genre-section" id="section-${i}">
+  <h2>${escapeHtml(s.title)}</h2>
+  ${s.html}
+</div>`).join('');
+
+  const desc = escapeHtml(genre.description.substring(0, 160));
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>${escapeHtml(genre.name)} – Game Encyclopedia – Bosnan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="${desc}">
+    <meta property="og:title" content="${escapeHtml(genre.name)} – Game Encyclopedia – Bosnan">
+    <meta property="og:description" content="${desc}">
+    <meta property="og:image" content="${genre.image}">
+    <meta property="og:type" content="article">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/games.css">
+</head>
+<body>
+${bgLogo()}
+${nav('genres')}
+
+<div class="genre-wiki-wrapper">
+  <a href="/genres" class="back-link">&#8592; Game Encyclopedia</a>
+
+  <div class="genre-article">
+    <h1 class="genre-article-title">${escapeHtml(genre.name)}</h1>
+    <p class="genre-article-subtitle">${escapeHtml(genre.subtitle)}</p>
+
+    <div class="genre-infobox">
+      <div class="genre-infobox-title">${escapeHtml(genre.shortName || genre.name)}</div>
+      <div class="genre-infobox-image">
+        <img src="${genre.image}" alt="${escapeHtml(genre.imageAlt)}" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div class="genre-infobox-caption">${escapeHtml(genre.imageCaption)}<br><span class="genre-infobox-license">License: ${escapeHtml(genre.imageLicense)}</span></div>
+      <table class="genre-infobox-table">
+        ${statsRows}
+      </table>
+    </div>
+
+    <div class="genre-toc">
+      <div class="genre-toc-title">Contents</div>
+      <ol>
+        ${tocItems}
+        <li><a href="#games-section">${count} Games in Archive</a></li>
+      </ol>
+    </div>
+
+    <div class="genre-article-intro">
+      <p>${escapeHtml(genre.description)}</p>
+    </div>
+
+    ${articleSections}
+
+    <div class="genre-games-section" id="games-section">
+      <h2 class="genre-games-heading">${count} Game${count !== 1 ? 's' : ''} in Archive</h2>
+      <div class="games-grid" id="gamesGrid">${cardHtml}</div>
+      <div id="loadMoreSentinel" style="height:1px"></div>
+    </div>
+  </div>
 </div>
 
 ${toggleScript()}
