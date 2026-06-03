@@ -1,5 +1,6 @@
 const express = require('express');
 const compression = require('compression');
+const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 
@@ -12,11 +13,7 @@ const gamesSlim = games.map(({ id, title, year, decade, genre, platform, develop
   ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
 );
 
-// O(1) game lookup — replaces .find() on every request
 const gamesById = new Map(games.map(g => [g.id, g]));
-
-// Pre-computed platform→games (avoids O(n) filter on every platform page)
-const platformGamesIndex = new Map();
 
 const PLATFORMS = [
   {
@@ -77,22 +74,22 @@ const PLATFORMS = [
   },
 ];
 
-// Pre-computed related games per game — avoids 3× O(n) filter on every game detail page
-const relatedGamesIndex = new Map();
+// ── Pre-computed indices ────────────────────────────────────────────────────
 
+const platformGamesIndex = new Map();
 for (const platform of PLATFORMS) {
   platformGamesIndex.set(platform.id, games.filter(g =>
     g.platform.toLowerCase().includes(platform.keyword.toLowerCase())
   ));
 }
 
-// Pre-computed genre→games index for genre encyclopedia pages
 const genreGamesIndex = new Map();
 for (const genre of GENRES) {
   const genreSet = new Set(genre.genres);
   genreGamesIndex.set(genre.id, games.filter(g => genreSet.has(g.genre)));
 }
 
+const relatedGamesIndex = new Map();
 for (const game of games) {
   const byDev = games.filter(g => g.id !== game.id &&
     g.developer.toLowerCase() === game.developer.toLowerCase()).slice(0, 4);
@@ -102,29 +99,88 @@ for (const game of games) {
   relatedGamesIndex.set(game.id, [...byDev, ...byGenre].slice(0, 6));
 }
 
+// ── CSS merge: one HTTP request instead of two ──────────────────────────────
+
+const rawCss = [
+  fs.readFileSync(path.join(__dirname, 'style.css'), 'utf8'),
+  fs.readFileSync(path.join(__dirname, 'games.css'), 'utf8'),
+].join('\n');
+const cssHash = crypto.createHash('md5').update(rawCss).digest('hex').slice(0, 8);
+const CSS_PATH = `/app.${cssHash}.css`;
+
+function cssHead() {
+  return `<link rel="preload" href="${CSS_PATH}" as="style"><link rel="stylesheet" href="${CSS_PATH}">`;
+}
+
+// ── Page caches ─────────────────────────────────────────────────────────────
+
 const PAGE_SIZE = 32;
+const EAGER_IMAGES = 8;
 
 let cachedGamesListHtml = null;
 let cachedPlatformsListHtml = null;
 let cachedGenresListHtml = null;
+let cachedGameLauncherHtml = null;
 const cachedPlatformPageHtml = {};
 const cachedGenrePageHtml = {};
-const cachedGamePageHtml = new Map(); // key: `${host}/${gameId}`
+const cachedGamePageHtml = new Map();
 let cachedSitemap = null;
+let cachedHomepage = { html: null, day: -1 };
+
+// ── Middleware ───────────────────────────────────────────────────────────────
 
 app.use(compression());
-app.use(express.static(__dirname));
 
-// ── Helpers ────────────────────────────────────────────────────────────────
+// Serve merged CSS with immutable 1-year cache (content-addressed by hash)
+app.get(/^\/app\.[a-f0-9]+\.css$/, (req, res) => {
+  res.setHeader('Content-Type', 'text/css; charset=utf-8');
+  res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  res.send(rawCss);
+});
+
+// Server-render the homepage with GOTD baked in — must be before express.static
+// so it intercepts / and /index.html before the static file is served.
+app.get(['/', '/index.html'], (req, res) => {
+  const day = dayOfYear();
+  if (!cachedHomepage.html || cachedHomepage.day !== day) {
+    cachedHomepage = { html: homepagePage(gameOfDay()), day };
+  }
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedHomepage.html);
+});
+
+app.get('/game.html', (req, res) => {
+  if (!cachedGameLauncherHtml) cachedGameLauncherHtml = gameLauncherPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.send(cachedGameLauncherHtml);
+});
+
+app.use(express.static(__dirname, {
+  setHeaders(res, filePath) {
+    if (/\.(png|jpe?g|gif|svg|ico|webp|woff2?|jar)$/i.test(filePath)) {
+      res.setHeader('Cache-Control', 'public, max-age=2592000, stale-while-revalidate=86400');
+    } else if (/\.js$/i.test(filePath)) {
+      res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+    } else if (/\.html?$/i.test(filePath)) {
+      res.setHeader('Cache-Control', 'public, max-age=300, stale-while-revalidate=3600');
+    }
+  },
+}));
+
+// ── Helpers ─────────────────────────────────────────────────────────────────
 
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
-function gameOfDay() {
+function dayOfYear() {
   const now = new Date();
-  const day = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 86400000);
-  return games[day % games.length];
+  return Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 86400000);
+}
+
+function gameOfDay() {
+  return games[dayOfYear() % games.length];
 }
 
 function gamesForPlatform(platform) {
@@ -132,7 +188,7 @@ function gamesForPlatform(platform) {
 }
 
 function bgLogo() {
-  return `<svg class="bg-logo" viewBox="0 0 120 120">
+  return `<svg class="bg-logo" viewBox="0 0 120 120" aria-hidden="true">
   <circle cx="60" cy="60" r="55" fill="black" stroke="red" stroke-width="5"/>
   <text x="50%" y="55%" text-anchor="middle" fill="red" font-size="60" font-family="Arial" dy=".3em">B</text>
 </svg>`;
@@ -142,8 +198,8 @@ function nav(active) {
   const link = (href, label, id) =>
     `<a href="${href}"${active === id ? ' class="active"' : ''}>${label}</a>`;
   return `<nav>
-    <img src="/logo.svg" alt="Bosnan Logo">
-    <div class="menu-toggle" onclick="toggleMenu()" id="menuToggle">
+    <img src="/logo.svg" alt="Bosnan Logo" width="50" height="50">
+    <div class="menu-toggle" onclick="toggleMenu()" id="menuToggle" aria-label="Open menu" role="button">
         <span></span><span></span><span></span>
     </div>
     <div class="nav-links" id="navLinks">
@@ -161,10 +217,15 @@ function toggleScript() {
   return `<script>function toggleMenu(){document.getElementById("navLinks").classList.toggle("active")}</script>`;
 }
 
-function buildCardHtml(list) {
-  return list.map(g => `<a href="/games/${g.id}" class="game-card">
+// eagerCount: first N images get fetchpriority=high (no lazy), rest get loading=lazy
+function buildCardHtml(list, eagerCount = 0) {
+  return list.map((g, i) => {
+    const imgAttrs = i < eagerCount
+      ? `fetchpriority="high"`
+      : `loading="lazy"`;
+    return `<a href="/games/${g.id}" class="game-card">
       <div class="game-card-img-wrap">
-        <img src="/${escapeHtml(g.image)}" alt="${escapeHtml(g.title)}" loading="lazy"
+        <img src="/${escapeHtml(g.image)}" alt="${escapeHtml(g.title)}" ${imgAttrs}
              onerror="this.parentElement.innerHTML='<div class=\\'game-card-placeholder\\'>${escapeHtml(g.title[0])}</div>'">
         <div class="game-card-decade">${escapeHtml(g.decade)}</div>
         ${g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : ''}
@@ -178,10 +239,11 @@ function buildCardHtml(list) {
         </div>
         <p class="game-card-platform">${escapeHtml(g.platform)}</p>
       </div>
-    </a>`).join('');
+    </a>`;
+  }).join('');
 }
 
-// ── Routes ─────────────────────────────────────────────────────────────────
+// ── Routes ──────────────────────────────────────────────────────────────────
 
 app.get('/sitemap.xml', (req, res) => {
   const host = req.get('host');
@@ -259,6 +321,7 @@ app.get('/api/game-of-the-day', (req, res) => {
 app.get('/games', (req, res) => {
   if (!cachedGamesListHtml) cachedGamesListHtml = gamesListPage();
   res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
   res.send(cachedGamesListHtml);
 });
 
@@ -272,12 +335,14 @@ app.get('/games/:id', (req, res) => {
     cachedGamePageHtml.set(cacheKey, gameDetailPage(game, base));
   }
   res.set('Cache-Control', 'public, max-age=86400, stale-while-revalidate=604800');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
   res.send(cachedGamePageHtml.get(cacheKey));
 });
 
 app.get('/platforms', (req, res) => {
   if (!cachedPlatformsListHtml) cachedPlatformsListHtml = platformsListPage();
   res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
   res.send(cachedPlatformsListHtml);
 });
 
@@ -288,12 +353,14 @@ app.get('/platforms/:id', (req, res) => {
     cachedPlatformPageHtml[platform.id] = platformDetailPage(platform);
   }
   res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
   res.send(cachedPlatformPageHtml[platform.id]);
 });
 
 app.get('/genres', (req, res) => {
   if (!cachedGenresListHtml) cachedGenresListHtml = genresListPage();
   res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
   res.send(cachedGenresListHtml);
 });
 
@@ -304,27 +371,179 @@ app.get('/genres/:id', (req, res) => {
     cachedGenrePageHtml[genre.id] = genreDetailPage(genre);
   }
   res.set('Cache-Control', 'public, max-age=86400, stale-while-revalidate=604800');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
   res.send(cachedGenrePageHtml[genre.id]);
 });
 
-// ── Page generators ────────────────────────────────────────────────────────
+// ── Page generators ──────────────────────────────────────────────────────────
+
+function homepagePage(gotd) {
+  const gotdHref = `/games/${gotd.id}`;
+  const gotdImgSrc = `/${escapeHtml(gotd.image)}`;
+  const gotdDesc = gotd.description ? gotd.description.substring(0, 180) + '…' : '';
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosnan – Retro Games Archive</title>
+    <meta name="description" content="Bosnan – explore legendary retro games from the 1960s, 1970s, and 1980s. Browse ${games.length}+ games across Arcade, NES, Atari, C64, and more.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+
+<nav>
+    <img src="/logo.svg" alt="Bosnan Logo" width="50" height="50">
+    <div class="menu-toggle" onclick="toggleMenu()" id="menuToggle" aria-label="Open menu" role="button">
+        <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links" id="navLinks">
+        <a href="/index.html" class="active">Home</a>
+        <a href="/game.html">Game</a>
+        <a href="/games">Games</a>
+        <a href="/platforms">Platforms</a>
+        <a href="/genres">Encyclopedia</a>
+        <a href="/random" class="nav-random">&#127922; Random</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>BOSNAN</h1>
+    <p>The Eternal Dragon-Blooded Guardian</p>
+    <a href="game.html" class="btn">Enter Game</a>
+</section>
+
+<section class="section">
+    <h2>The Legend</h2>
+    <p>Before empires, before kings, before history itself - there was Bosnan.</p>
+    <p>Born of the ancient Dragon Zmaj and the mystical Fairy Vila Bosanska, Bosnan walks through time as an immortal guardian. His blood burns with fire, his spirit moves like the wind.</p>
+    <p>He fought Romans. He shattered invaders in the Middle Ages. He rose again against empires and darkness across centuries.</p>
+    <p>Now, a new evil walks the earth — degenerate human hunters who prey on the innocent. But they are no longer the hunters.</p>
+    <p style="color:red;">Bosnan has returned.</p>
+</section>
+
+<div class="gotd-section">
+    <h2>&#127942; Game of the Day</h2>
+    <a class="gotd-card" href="${escapeHtml(gotdHref)}">
+        <img class="gotd-img" src="${gotdImgSrc}" alt="${escapeHtml(gotd.title)}" fetchpriority="high" onerror="this.style.display='none'">
+        <div class="gotd-body">
+            <div class="gotd-badge">${escapeHtml(gotd.decade)}</div>
+            <h3 class="gotd-title">${escapeHtml(gotd.title)}</h3>
+            <div class="gotd-meta">${escapeHtml(String(gotd.year))} · ${escapeHtml(gotd.genre)} · ${escapeHtml(gotd.platform)}</div>
+            <p class="gotd-desc">${escapeHtml(gotdDesc)}</p>
+        </div>
+    </a>
+</div>
+
+<div class="enc-section">
+    <div class="enc-header">
+        <h2>&#128218; Game Encyclopedia</h2>
+        <p>Explore the history of every major video game genre — from the first arcade machines to the golden age of home computing</p>
+    </div>
+    <div class="enc-grid">
+        <a href="/genres/shoot-em-up" class="enc-card">
+            <div class="enc-card-name">Shoot 'em Ups</div>
+            <div class="enc-card-era">1962 – present</div>
+            <p class="enc-card-desc">From Spacewar! to Space Invaders — the genre that launched a billion-dollar industry</p>
+        </a>
+        <a href="/genres/platformer" class="enc-card">
+            <div class="enc-card-name">Platform Games</div>
+            <div class="enc-card-era">1981 – present</div>
+            <p class="enc-card-desc">Donkey Kong, Pitfall!, Super Mario Bros. — the jump that changed everything</p>
+        </a>
+        <a href="/genres/rpg" class="enc-card">
+            <div class="enc-card-name">Role-Playing Games</div>
+            <div class="enc-card-era">1974 – present</div>
+            <p class="enc-card-desc">Ultima, Wizardry, Rogue — character, growth, and the dungeon below</p>
+        </a>
+        <a href="/genres/adventure" class="enc-card">
+            <div class="enc-card-name">Adventure Games</div>
+            <div class="enc-card-era">1976 – present</div>
+            <p class="enc-card-desc">Colossal Cave, Zork, Monkey Island — the birth of interactive storytelling</p>
+        </a>
+    </div>
+    <a href="/genres" class="enc-browse-btn">Browse all 10 genres &#8594;</a>
+</div>
+
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function gameLauncherPage() {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosnan Game</title>
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+
+<nav>
+    <img src="/logo.svg" alt="Bosnan Logo" width="50" height="50">
+    <div class="menu-toggle" onclick="toggleMenu()" id="menuToggle" aria-label="Open menu" role="button">
+        <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links" id="navLinks">
+        <a href="/index.html">Home</a>
+        <a href="/game.html" class="active">Game</a>
+        <a href="/games">Games</a>
+        <a href="/platforms">Platforms</a>
+        <a href="/genres">Encyclopedia</a>
+        <a href="/random" class="nav-random">&#127922; Random</a>
+    </div>
+</nav>
+
+<section class="section">
+    <h2>Gameplay</h2>
+    <div class="gallery">
+        <img src="/images/screenshot1.png" loading="lazy">
+        <img src="/images/screenshot2.png" loading="lazy">
+        <img src="/images/screenshot3.png" loading="lazy">
+    </div>
+</section>
+
+<section class="section">
+    <h2>Launch Bosnan</h2>
+    <p>Download the <strong>JAR file</strong>, double-click it, and start playing!</p>
+    <p>The minimum Java version required is <strong>17</strong>.</p>
+    <p>If Java is not installed on your Windows system, you can download it <a href="https://api.adoptium.net/v3/binary/latest/21/ga/windows/x64/jre/hotspot/normal/eclipse" target="_blank" rel="noopener">here</a>.</p>
+    <div class="launcher">
+        <button class="btn" onclick="launch()">Launch Game</button>
+        <div class="progress">
+            <div class="bar" id="bar"></div>
+        </div>
+        <p id="status"></p>
+    </div>
+</section>
+
+${toggleScript()}
+<script src="/launcher.js" defer></script>
+</body>
+</html>`;
+}
 
 function gamesListPage() {
   const firstPage = gamesSlim.slice(0, PAGE_SIZE);
-  const cardHtml = buildCardHtml(firstPage);
+  const cardHtml = buildCardHtml(firstPage, EAGER_IMAGES);
   const inlineData = JSON.stringify(gamesSlim);
 
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Retro Games Archive – Bosnan</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Games Archive – Bosnan</title>
     <meta name="description" content="Browse ${games.length} legendary retro games from the 1960s, 1970s, and 1980s. Search by title, genre, platform, or decade.">
     <meta property="og:title" content="Retro Games Archive – Bosnan">
     <meta property="og:description" content="Browse ${games.length} legendary retro games from the 1960s, 1970s, and 1980s.">
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/games.css">
+    ${cssHead()}
 </head>
 <body>
 ${bgLogo()}
@@ -440,7 +659,7 @@ function gameDetailPage(game, base) {
 <div class="related-section">
   <h2>More like this</h2>
   <div class="related-grid">
-    ${buildCardHtml(related)}
+    ${buildCardHtml(related, 0)}
   </div>
 </div>`;
 
@@ -461,8 +680,9 @@ function gameDetailPage(game, base) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>${escapeHtml(game.title)} – Bosnan Retro Archive</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(game.title)} – Bosnan Retro Archive</title>
     <meta name="description" content="${desc}">
     <meta property="og:title" content="${escapeHtml(game.title)} – Bosnan Retro Archive">
     <meta property="og:description" content="${desc}">
@@ -473,9 +693,9 @@ function gameDetailPage(game, base) {
     <meta name="twitter:title" content="${escapeHtml(game.title)} – Bosnan Retro Archive">
     <meta name="twitter:description" content="${desc}">
     <meta name="twitter:image" content="${imgUrl}">
+    <link rel="canonical" href="${url}">
     <script type="application/ld+json">${schemaJson}</script>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/games.css">
+    ${cssHead()}
 </head>
 <body>
 ${bgLogo()}
@@ -486,7 +706,8 @@ ${nav('games')}
 
   <div class="game-detail-card">
     <div class="game-detail-image-col">
-      <img src="/${escapeHtml(game.image)}" alt="${escapeHtml(game.title)}" class="game-detail-img" onerror="this.src='/images/games/placeholder.svg'">
+      <img src="/${escapeHtml(game.image)}" alt="${escapeHtml(game.title)}" class="game-detail-img"
+           fetchpriority="high" onerror="this.src='/images/games/placeholder.svg'">
       <div class="game-meta">
         <div class="meta-item"><span class="meta-label">Year</span><span class="meta-value">${escapeHtml(String(game.year))}</span></div>
         <div class="meta-item"><span class="meta-label">Decade</span><span class="meta-value">${escapeHtml(game.decade)}</span></div>
@@ -553,11 +774,11 @@ function platformsListPage() {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Retro Gaming Platforms – Bosnan</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Gaming Platforms – Bosnan</title>
     <meta name="description" content="Explore retro gaming platforms from the 1970s and 1980s: Arcade, NES, Atari 2600, Commodore 64, ZX Spectrum, and more.">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/games.css">
+    ${cssHead()}
 </head>
 <body>
 ${bgLogo()}
@@ -579,7 +800,7 @@ ${toggleScript()}
 
 function platformDetailPage(platform) {
   const platformGames = gamesForPlatform(platform);
-  const cardHtml = buildCardHtml(platformGames.slice(0, PAGE_SIZE));
+  const cardHtml = buildCardHtml(platformGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
   const inlineData = JSON.stringify(platformGames.map(({ id, title, year, decade, genre, platform: pl, developer, image, playUrl }) =>
     ({ id, title, year, decade, genre, platform: pl, developer, image, playUrl: playUrl || null })
   ));
@@ -587,11 +808,11 @@ function platformDetailPage(platform) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>${escapeHtml(platform.name)} Games – Bosnan Retro Archive</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(platform.name)} Games – Bosnan Retro Archive</title>
     <meta name="description" content="${escapeHtml(platform.description.substring(0, 160))}">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/games.css">
+    ${cssHead()}
 </head>
 <body>
 ${bgLogo()}
@@ -662,14 +883,14 @@ function genresListPage() {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Game Encyclopedia – Bosnan Retro Archive</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Encyclopedia – Bosnan Retro Archive</title>
     <meta name="description" content="Explore the history of video game genres — shoot 'em ups, platformers, RPGs, adventure games, fighting games and more. A wiki-style encyclopedia of gaming history.">
     <meta property="og:title" content="Game Encyclopedia – Bosnan Retro Archive">
     <meta property="og:description" content="A wiki-style encyclopedia of video game genre history, from shoot 'em ups to RPGs.">
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/games.css">
+    ${cssHead()}
 </head>
 <body>
 ${bgLogo()}
@@ -692,7 +913,7 @@ ${toggleScript()}
 function genreDetailPage(genre) {
   const genreGames = genreGamesIndex.get(genre.id) || [];
   const count = genreGames.length;
-  const cardHtml = buildCardHtml(genreGames.slice(0, PAGE_SIZE));
+  const cardHtml = buildCardHtml(genreGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
   const inlineData = JSON.stringify(genreGames.map(({ id, title, year, decade, genre: pl, platform, developer, image, playUrl }) =>
     ({ id, title, year, decade, genre: pl, platform, developer, image, playUrl: playUrl || null })
   ));
@@ -716,15 +937,15 @@ function genreDetailPage(genre) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>${escapeHtml(genre.name)} – Game Encyclopedia – Bosnan</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(genre.name)} – Game Encyclopedia – Bosnan</title>
     <meta name="description" content="${desc}">
     <meta property="og:title" content="${escapeHtml(genre.name)} – Game Encyclopedia – Bosnan">
     <meta property="og:description" content="${desc}">
     <meta property="og:image" content="${genre.image}">
     <meta property="og:type" content="article">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/games.css">
+    ${cssHead()}
 </head>
 <body>
 ${bgLogo()}
@@ -740,7 +961,7 @@ ${nav('genres')}
     <div class="genre-infobox">
       <div class="genre-infobox-title">${escapeHtml(genre.shortName || genre.name)}</div>
       <div class="genre-infobox-image">
-        <img src="${genre.image}" alt="${escapeHtml(genre.imageAlt)}" onerror="this.parentElement.style.display='none'">
+        <img src="${genre.image}" alt="${escapeHtml(genre.imageAlt)}" loading="lazy" onerror="this.parentElement.style.display='none'">
       </div>
       <div class="genre-infobox-caption">${escapeHtml(genre.imageCaption)}<br><span class="genre-infobox-license">License: ${escapeHtml(genre.imageLicense)}</span></div>
       <table class="genre-infobox-table">
@@ -804,20 +1025,26 @@ new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'20
 
 function notFoundPage() {
   return `<!DOCTYPE html>
-<html>
-<head><title>Not Found – Bosnan</title><link rel="stylesheet" href="/style.css"></head>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Not Found – Bosnan</title>
+    ${cssHead()}
+</head>
 <body>
 ${bgLogo()}
-<nav><img src="/logo.svg" alt="Bosnan Logo">
+<nav><img src="/logo.svg" alt="Bosnan Logo" width="50" height="50">
   <div class="nav-links">
-    <a href="/">Home</a><a href="/game.html">Game</a><a href="/games">Games</a><a href="/platforms">Platforms</a>
+    <a href="/index.html">Home</a><a href="/game.html">Game</a><a href="/games">Games</a><a href="/platforms">Platforms</a>
   </div>
 </nav>
 <section class="hero"><h1 style="font-size:40px">Not Found</h1><p>That page doesn't exist.</p>
 <a href="/games" class="btn" style="margin-top:20px">Browse Games</a></section>
-</body></html>`;
+</body>
+</html>`;
 }
 
 app.listen(PORT, () => {
   console.log(`Bosnan server running at http://localhost:${PORT}`);
+  console.log(`CSS bundle: ${CSS_PATH} (${rawCss.length} bytes raw)`);
 });

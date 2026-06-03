@@ -13,7 +13,6 @@ body {
     overflow-x: hidden;
 }
 
-/* 🔥 BACKGROUND LOGO (STRONGER & CLEARER) */
 .bg-logo {
     position: fixed;
     top: 50%;
@@ -21,29 +20,18 @@ body {
     transform: translate(-50%, -50%);
     width: 90vw;
     height: 90vw;
-
-    opacity: 0.25; /* 🔺 increased visibility */
+    opacity: 0.18;
     z-index: 0;
-
-    animation: pulse 5s infinite;
+    pointer-events: none;
 }
 
-/* 🔥 STRONG GLOW */
 .bg-logo text {
     fill: #ff0000;
-    filter: 
-        drop-shadow(0 0 15px red)
-        drop-shadow(0 0 30px red)
-        drop-shadow(0 0 60px darkred);
+    filter: drop-shadow(0 0 12px red);
 }
 
-
-
-
-/* 🔥 COIN BORDER GLOW */
 .bg-logo circle {
     stroke: #ff0000;
-    filter: drop-shadow(0 0 20px red);
 }
 
 /* ================== NAVBAR ================== */
