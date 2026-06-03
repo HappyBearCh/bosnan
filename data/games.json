@@ -275,8 +275,7 @@
     "platform": "Arcade",
     "image": "images/games/breakout.png",
     "description": "Breakout is a 1976 Atari arcade game in which a player uses a paddle to bounce a ball against a wall of bricks, trying to clear every brick without letting the ball fall off the bottom of the screen. It evolved from Pong's paddle mechanics into a single-player challenge with escalating difficulty, and was a massive commercial and cultural hit. The hardware design was famously completed by Steve Wozniak in four days on a challenge from Nolan Bushnell, using an unusually efficient circuit that industry engineers struggled to reverse-engineer. The concept inspired countless clones and remains one of the most imitated game mechanics ever created.",
-    "longDescription": "Breakout was conceived by Nolan Bushnell and Steve Bristow as a single-player variant of Pong. Atari hired Steve Wozniak â€” still years before co-founding Apple Computer â€” to design the hardware, and he famously completed the task in four days with only 44 chips, far fewer than the engineers had thought possible. The game featured eight rows of bricks in four colors with different point values. As the ball cleared the top rows and entered the space above, it bounced rapidly at increasing speed, making the endgame extremely challenging. The Atari 2600 home version in 1978 became one of the system's best-sellers and introduced the game to home audiences worldwide. The 1986 sequel Super Breakout added multiple balls and other innovations, and the franchise's influence is still felt in modern puzzle games.",
-    "playUrl": "https://archive.org/details/arcade_breakout"
+    "longDescription": "Breakout was conceived by Nolan Bushnell and Steve Bristow as a single-player variant of Pong. Atari hired Steve Wozniak â€” still years before co-founding Apple Computer â€” to design the hardware, and he famously completed the task in four days with only 44 chips, far fewer than the engineers had thought possible. The game featured eight rows of bricks in four colors with different point values. As the ball cleared the top rows and entered the space above, it bounced rapidly at increasing speed, making the endgame extremely challenging. The Atari 2600 home version in 1978 became one of the system's best-sellers and introduced the game to home audiences worldwide. The 1986 sequel Super Breakout added multiple balls and other innovations, and the franchise's influence is still felt in modern puzzle games."
   },
   {
     "id": "death-race",
@@ -520,8 +519,7 @@
     "platform": "Arcade",
     "image": "images/games/crazy-climber.jpg",
     "description": "Crazy Climber is a classic 1980s action game developed by Nichibutsu for Arcade.",
-    "longDescription": "Crazy Climber is a classic 1980s action game developed by Nichibutsu for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_cclimber"
+    "longDescription": "Crazy Climber is a classic 1980s action game developed by Nichibutsu for Arcade."
   },
   {
     "id": "berzerk",
@@ -589,8 +587,7 @@
     "platform": "Arcade",
     "image": "images/games/warlords.jpg",
     "description": "Warlords is a classic 1980s action game developed by Atari for Arcade.",
-    "longDescription": "Warlords is a classic 1980s action game developed by Atari for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_warlord"
+    "longDescription": "Warlords is a classic 1980s action game developed by Atari for Arcade."
   },
   {
     "id": "defender",
@@ -855,8 +852,7 @@
     "platform": "Arcade",
     "image": "images/games/time-pilot.png",
     "description": "Time Pilot is a 1982 multidirectional shooter video game developed and published by Konami for arcades.  It was distributed in the United States by Centuri and by Atari in PAL regions.  While engaging in aerial combat, the player-controlled jet flies across open airspace that scrolls indefinitely in all directions.",
-    "longDescription": "Time Pilot is a 1982 multidirectional shooter video game developed and published by Konami for arcades.  It was distributed in the United States by Centuri and by Atari in PAL regions.  While engaging in aerial combat, the player-controlled jet flies across open airspace that scrolls indefinitely in all directions.  Each level is themed to a different time period.  Home ports for the Atari 2600, MSX, and ColecoVision were released in 1983 respectively by Konami and Coleco.",
-    "playUrl": "https://archive.org/details/arcade_timeplt"
+    "longDescription": "Time Pilot is a 1982 multidirectional shooter video game developed and published by Konami for arcades.  It was distributed in the United States by Centuri and by Atari in PAL regions.  While engaging in aerial combat, the player-controlled jet flies across open airspace that scrolls indefinitely in all directions.  Each level is themed to a different time period.  Home ports for the Atari 2600, MSX, and ColecoVision were released in 1983 respectively by Konami and Coleco."
   },
   {
     "id": "dig-dug",
@@ -911,8 +907,7 @@
     "platform": "Arcade",
     "image": "images/games/burgertime.png",
     "description": "BurgerTime is an arcade video game by Data East released in 1982.  According to a former Data East programmer, the game was designed in-house but the development itself was outsourced to another company.",
-    "longDescription": "BurgerTime is an arcade video game by Data East released in 1982.  According to a former Data East programmer, the game was designed in-house but the development itself was outsourced to another company.",
-    "playUrl": "https://archive.org/details/arcade_btime"
+    "longDescription": "BurgerTime is an arcade video game by Data East released in 1982.  According to a former Data East programmer, the game was designed in-house but the development itself was outsourced to another company."
   },
   {
     "id": "mr-do",
@@ -939,8 +934,7 @@
     "platform": "Arcade",
     "image": "images/games/popeye.png",
     "description": "Popeye is a 1982 platform game developed and published by Nintendo for arcades.  It is based on the comic strip of the same name created by E.  C.",
-    "longDescription": "Popeye is a 1982 platform game developed and published by Nintendo for arcades.  It is based on the comic strip of the same name created by E.  C.  Segar and licensed from King Features Syndicate.  Some sources claim that Ikegami Tsushinki did programming work on the game.  As Popeye, the player must collect objects thrown by Olive Oyl from the top of the screen while being chased by Brutus.",
-    "playUrl": "https://archive.org/details/arcade_popeye"
+    "longDescription": "Popeye is a 1982 platform game developed and published by Nintendo for arcades.  It is based on the comic strip of the same name created by E.  C.  Segar and licensed from King Features Syndicate.  Some sources claim that Ikegami Tsushinki did programming work on the game.  As Popeye, the player must collect objects thrown by Olive Oyl from the top of the screen while being chased by Brutus."
   },
   {
     "id": "millipede",
@@ -953,8 +947,7 @@
     "platform": "Arcade",
     "image": "images/games/millipede.png",
     "description": "Millipede is a 1982 fixed shooter video game developed and published by Atari, Inc.  for arcades.  It was released by Namco in Japan.",
-    "longDescription": "Millipede is a 1982 fixed shooter video game developed and published by Atari, Inc.  for arcades.  It was released by Namco in Japan.  It is the sequel to 1981's Centipede, with more gameplay variety and a wider array of insect enemies.  The objective is to score as many points as possible by destroying all segments of a millipede that moves toward the bottom of the screen, as well as eliminating or avoiding other enemies.  As with its predecessor, the game is played with a trackball and a single fire button which can be held down for rapid-fire.",
-    "playUrl": "https://archive.org/details/arcade_millipede"
+    "longDescription": "Millipede is a 1982 fixed shooter video game developed and published by Atari, Inc.  for arcades.  It was released by Namco in Japan.  It is the sequel to 1981's Centipede, with more gameplay variety and a wider array of insect enemies.  The objective is to score as many points as possible by destroying all segments of a millipede that moves toward the bottom of the screen, as well as eliminating or avoiding other enemies.  As with its predecessor, the game is played with a trackball and a single fire button which can be held down for rapid-fire."
   },
   {
     "id": "sinistar",
@@ -995,8 +988,7 @@
     "platform": "Atari 2600",
     "image": "images/games/river-raid.jpg",
     "description": "River Raid is a 1982 shoot 'em up video game developed and published by Activision for the Atari 2600, designed by Carol Shaw.  The player controls a fighter jet over the River of No Return in a raid behind enemy lines.  The goal is to navigate the flight by destroying enemy tankers, helicopters, fuel depots and bridges without running out of fuel or crashing.",
-    "longDescription": "River Raid is a 1982 shoot 'em up video game developed and published by Activision for the Atari 2600, designed by Carol Shaw.  The player controls a fighter jet over the River of No Return in a raid behind enemy lines.  The goal is to navigate the flight by destroying enemy tankers, helicopters, fuel depots and bridges without running out of fuel or crashing.",
-    "playUrl": "https://archive.org/details/atari_2600_river_raid"
+    "longDescription": "River Raid is a 1982 shoot 'em up video game developed and published by Activision for the Atari 2600, designed by Carol Shaw.  The player controls a fighter jet over the River of No Return in a raid behind enemy lines.  The goal is to navigate the flight by destroying enemy tankers, helicopters, fuel depots and bridges without running out of fuel or crashing."
   },
   {
     "id": "pitfall",
@@ -1009,8 +1001,7 @@
     "platform": "Atari 2600",
     "image": "images/games/pitfall.jpg",
     "description": "Pitfall!  is a 1982 platform video game developed by David Crane and published by Activision for the Atari 2600.  The player controls Pitfall Harry, who has a time limit of 20 minutes to seek treasure in a jungle.",
-    "longDescription": "Pitfall!  is a 1982 platform video game developed by David Crane and published by Activision for the Atari 2600.  The player controls Pitfall Harry, who has a time limit of 20 minutes to seek treasure in a jungle.  The game world is populated by enemies and hazards that variously cause the player to lose lives or points.  Pitfall!  was ported to the Atari 5200, Atari 8-bit computers, ColecoVision, Commodore 64, and MSX.",
-    "playUrl": "https://archive.org/details/atari_2600_pitfall"
+    "longDescription": "Pitfall!  is a 1982 platform video game developed by David Crane and published by Activision for the Atari 2600.  The player controls Pitfall Harry, who has a time limit of 20 minutes to seek treasure in a jungle.  The game world is populated by enemies and hazards that variously cause the player to lose lives or points.  Pitfall!  was ported to the Atari 5200, Atari 8-bit computers, ColecoVision, Commodore 64, and MSX."
   },
   {
     "id": "gravitar",
@@ -1105,8 +1096,7 @@
     "platform": "Arcade",
     "image": "images/games/crystal-castles.png",
     "description": "Crystal Castles is a 1983 maze video game developed and published by Atari, Inc.  for arcades.  The player controls Bentley Bear, who must collect gems located throughout trimetric-projected rendered castles while avoiding enemies, some of whom are after the gems as well.",
-    "longDescription": "Crystal Castles is a 1983 maze video game developed and published by Atari, Inc.  for arcades.  The player controls Bentley Bear, who must collect gems located throughout trimetric-projected rendered castles while avoiding enemies, some of whom are after the gems as well.",
-    "playUrl": "https://archive.org/details/arcade_ccastle"
+    "longDescription": "Crystal Castles is a 1983 maze video game developed and published by Atari, Inc.  for arcades.  The player controls Bentley Bear, who must collect gems located throughout trimetric-projected rendered castles while avoiding enemies, some of whom are after the gems as well."
   },
   {
     "id": "lode-runner",
@@ -1147,8 +1137,7 @@
     "platform": "Arcade",
     "image": "images/games/track-and-field.png",
     "description": "Track & Field is a classic 1980s sports game developed by Konami for Arcade.",
-    "longDescription": "Track & Field is a classic 1980s sports game developed by Konami for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_trackfld"
+    "longDescription": "Track & Field is a classic 1980s sports game developed by Konami for Arcade."
   },
   {
     "id": "tapper",
@@ -1175,8 +1164,7 @@
     "platform": "Arcade",
     "image": "images/games/gyruss.png",
     "description": "Gyruss is a classic 1980s shooter game developed by Konami for Arcade.",
-    "longDescription": "Gyruss is a classic 1980s shooter game developed by Konami for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_gyruss"
+    "longDescription": "Gyruss is a classic 1980s shooter game developed by Konami for Arcade."
   },
   {
     "id": "manic-miner",
@@ -1258,8 +1246,7 @@
     "platform": "Arcade",
     "image": "images/games/ghosts-n-goblins.png",
     "description": "Ghosts 'n Goblins is a classic 1980s platform / action game developed by Capcom for Arcade.",
-    "longDescription": "Ghosts 'n Goblins is a classic 1980s platform / action game developed by Capcom for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_gng"
+    "longDescription": "Ghosts 'n Goblins is a classic 1980s platform / action game developed by Capcom for Arcade."
   },
   {
     "id": "karate-champ",
@@ -1272,8 +1259,7 @@
     "platform": "Arcade",
     "image": "images/games/karate-champ.png",
     "description": "Karate Champ is a classic 1980s fighting game developed by Data East for Arcade.",
-    "longDescription": "Karate Champ is a classic 1980s fighting game developed by Data East for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_kchamp"
+    "longDescription": "Karate Champ is a classic 1980s fighting game developed by Data East for Arcade."
   },
   {
     "id": "paperboy",
@@ -1427,8 +1413,7 @@
     "platform": "Arcade",
     "image": "images/games/bomb-jack.png",
     "description": "Bomb Jack is a classic 1980s platform game developed by Tehkan for Arcade.",
-    "longDescription": "Bomb Jack is a classic 1980s platform game developed by Tehkan for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_bombjack"
+    "longDescription": "Bomb Jack is a classic 1980s platform game developed by Tehkan for Arcade."
   },
   {
     "id": "spy-vs-spy",
@@ -1470,8 +1455,7 @@
     "platform": "Arcade",
     "image": "images/games/yie-ar-kung-fu.png",
     "description": "Yie Ar Kung-Fu is a classic 1980s fighting game developed by Konami for Arcade.",
-    "longDescription": "Yie Ar Kung-Fu is a classic 1980s fighting game developed by Konami for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_yiear"
+    "longDescription": "Yie Ar Kung-Fu is a classic 1980s fighting game developed by Konami for Arcade."
   },
   {
     "id": "space-harrier",
@@ -1498,8 +1482,7 @@
     "platform": "Arcade",
     "image": "images/games/commando.png",
     "description": "Commando, released as SenjÅ no ÅŒkami in Japan, is a 1985 run and gun video game developed and published by Capcom for arcades.  The game was designed by Tokuro Fujiwara.  It was distributed in North America by Data East, and in Europe by several companies including Capcom, Deith Leisure and Sega, S.",
-    "longDescription": "Commando, released as SenjÅ no ÅŒkami in Japan, is a 1985 run and gun video game developed and published by Capcom for arcades.  The game was designed by Tokuro Fujiwara.  It was distributed in North America by Data East, and in Europe by several companies including Capcom, Deith Leisure and Sega, S. A.  SONIC.  Versions were released for various home computers and video game consoles.",
-    "playUrl": "https://archive.org/details/arcade_commando"
+    "longDescription": "Commando, released as SenjÅ no ÅŒkami in Japan, is a 1985 run and gun video game developed and published by Capcom for arcades.  The game was designed by Tokuro Fujiwara.  It was distributed in North America by Data East, and in Europe by several companies including Capcom, Deith Leisure and Sega, S. A.  SONIC.  Versions were released for various home computers and video game consoles."
   },
   {
     "id": "gradius",
@@ -1512,8 +1495,7 @@
     "platform": "Arcade",
     "image": "images/games/gradius.jpg",
     "description": "Gradius is a classic 1980s shooter game developed by Konami for Arcade.",
-    "longDescription": "Gradius is a classic 1980s shooter game developed by Konami for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_gradius"
+    "longDescription": "Gradius is a classic 1980s shooter game developed by Konami for Arcade."
   },
   {
     "id": "gauntlet",
@@ -1569,8 +1551,7 @@
     "platform": "Arcade",
     "image": "images/games/rushn-attack.png",
     "description": "Rush'n Attack is a classic 1980s beat 'em up game developed by Konami for Arcade.",
-    "longDescription": "Rush'n Attack is a classic 1980s beat 'em up game developed by Konami for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_rushnatk"
+    "longDescription": "Rush'n Attack is a classic 1980s beat 'em up game developed by Konami for Arcade."
   },
   {
     "id": "oregon-trail",
@@ -1597,8 +1578,7 @@
     "platform": "Arcade",
     "image": "images/games/arkanoid.png",
     "description": "Arkanoid is a 1986 block breaker video game developed and published by Taito for arcades.  It was released by Romstar in North America.  Controlling a paddle-like craft known as the Vaus, the player is tasked with clearing a formation of colorful blocks by deflecting a ball towards it without letting the ball leave the bottom edge of the playfield.",
-    "longDescription": "Arkanoid is a 1986 block breaker video game developed and published by Taito for arcades.  It was released by Romstar in North America.  Controlling a paddle-like craft known as the Vaus, the player is tasked with clearing a formation of colorful blocks by deflecting a ball towards it without letting the ball leave the bottom edge of the playfield.  Some blocks contain power-ups that have various effects, such as increasing the length of the Vaus, creating several additional balls, or equipping the Vaus with cannons.  Other blocks may be indestructible or require multiple hits to break.",
-    "playUrl": "https://archive.org/details/arcade_arkanoid"
+    "longDescription": "Arkanoid is a 1986 block breaker video game developed and published by Taito for arcades.  It was released by Romstar in North America.  Controlling a paddle-like craft known as the Vaus, the player is tasked with clearing a formation of colorful blocks by deflecting a ball towards it without letting the ball leave the bottom edge of the playfield.  Some blocks contain power-ups that have various effects, such as increasing the length of the Vaus, creating several additional balls, or equipping the Vaus with cannons.  Other blocks may be indestructible or require multiple hits to break."
   },
   {
     "id": "bubble-bobble",
@@ -1611,8 +1591,7 @@
     "platform": "Arcade",
     "image": "images/games/bubble-bobble.png",
     "description": "Bubble Bobble is a classic 1980s platform game developed by Fukio Mitsuji for Arcade.",
-    "longDescription": "Bubble Bobble is a classic 1980s platform game developed by Fukio Mitsuji for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_bublbobl"
+    "longDescription": "Bubble Bobble is a classic 1980s platform game developed by Fukio Mitsuji for Arcade."
   },
   {
     "id": "outrun",
@@ -1706,8 +1685,7 @@
     "platform": "Arcade",
     "image": "images/games/solomons-key.jpg",
     "description": "Solomon's Key is a classic 1980s puzzle / platform game developed by Tecmo for Arcade.",
-    "longDescription": "Solomon's Key is a classic 1980s puzzle / platform game developed by Tecmo for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_solomon"
+    "longDescription": "Solomon's Key is a classic 1980s puzzle / platform game developed by Tecmo for Arcade."
   },
   {
     "id": "rolling-thunder",
@@ -1734,8 +1712,7 @@
     "platform": "Arcade",
     "image": "images/games/life-force.png",
     "description": "Life Force is a classic 1980s shooter game developed by Konami for Arcade.",
-    "longDescription": "Life Force is a classic 1980s shooter game developed by Konami for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_lifefrce"
+    "longDescription": "Life Force is a classic 1980s shooter game developed by Konami for Arcade."
   },
   {
     "id": "ikari-warriors",
@@ -1748,8 +1725,7 @@
     "platform": "Arcade",
     "image": "images/games/ikari-warriors.png",
     "description": "Ikari Warriors is a classic 1980s run and gun game developed by SNK for Arcade.",
-    "longDescription": "Ikari Warriors is a classic 1980s run and gun game developed by SNK for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_ikari"
+    "longDescription": "Ikari Warriors is a classic 1980s run and gun game developed by SNK for Arcade."
   },
   {
     "id": "legend-of-zelda",
@@ -1776,8 +1752,7 @@
     "platform": "Arcade",
     "image": "images/games/double-dragon.png",
     "description": "Double Dragon is a classic 1980s beat 'em up game developed by Technos Japan for Arcade.",
-    "longDescription": "Double Dragon is a classic 1980s beat 'em up game developed by Technos Japan for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_ddragon"
+    "longDescription": "Double Dragon is a classic 1980s beat 'em up game developed by Technos Japan for Arcade."
   },
   {
     "id": "mega-man",
@@ -1859,8 +1834,7 @@
     "platform": "Arcade",
     "image": "images/games/operation-wolf.png",
     "description": "Operation Wolf is a classic 1980s light gun shooter game developed by Taito for Arcade.",
-    "longDescription": "Operation Wolf is a classic 1980s light gun shooter game developed by Taito for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_opwolf"
+    "longDescription": "Operation Wolf is a classic 1980s light gun shooter game developed by Taito for Arcade."
   },
   {
     "id": "contra",
@@ -1942,8 +1916,7 @@
     "platform": "Arcade",
     "image": "images/games/rastan.jpg",
     "description": "Rastan is a classic 1980s beat 'em up game developed by Taito for Arcade.",
-    "longDescription": "Rastan is a classic 1980s beat 'em up game developed by Taito for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_rastan"
+    "longDescription": "Rastan is a classic 1980s beat 'em up game developed by Taito for Arcade."
   },
   {
     "id": "punch-out-nes",
@@ -1997,8 +1970,7 @@
     "platform": "Arcade",
     "image": "images/games/altered-beast.png",
     "description": "Altered Beast is a classic 1980s beat 'em up game developed by Sega for Arcade.",
-    "longDescription": "Altered Beast is a classic 1980s beat 'em up game developed by Sega for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_altbeastj"
+    "longDescription": "Altered Beast is a classic 1980s beat 'em up game developed by Sega for Arcade."
   },
   {
     "id": "mega-man-2",
@@ -2024,8 +1996,7 @@
     "platform": "Arcade",
     "image": "images/games/ghouls-n-ghosts.png",
     "description": "Ghouls 'n Ghosts is a classic 1980s platform / action game developed by Capcom for Arcade.",
-    "longDescription": "Ghouls 'n Ghosts is a classic 1980s platform / action game developed by Capcom for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_ghouls"
+    "longDescription": "Ghouls 'n Ghosts is a classic 1980s platform / action game developed by Capcom for Arcade."
   },
   {
     "id": "super-mario-bros-3",
@@ -2079,8 +2050,7 @@
     "platform": "Arcade",
     "image": "images/games/bad-dudes.png",
     "description": "Bad Dudes Vs.  DragonNinja, also known simply as either Bad Dudes or DragonNinja, is a side-scrolling cooperative beat 'em up developed and released by Data East as an arcade video game in 1988.  It was ported to computer and game console home systems.",
-    "longDescription": "Bad Dudes Vs.  DragonNinja, also known simply as either Bad Dudes or DragonNinja, is a side-scrolling cooperative beat 'em up developed and released by Data East as an arcade video game in 1988.  It was ported to computer and game console home systems.",
-    "playUrl": "https://archive.org/details/arcade_baddudes"
+    "longDescription": "Bad Dudes Vs.  DragonNinja, also known simply as either Bad Dudes or DragonNinja, is a side-scrolling cooperative beat 'em up developed and released by Data East as an arcade video game in 1988.  It was ported to computer and game console home systems."
   },
   {
     "id": "toobin",
@@ -2107,8 +2077,7 @@
     "platform": "Arcade",
     "image": "images/games/strider.png",
     "description": "Strider is a classic 1980s action / platform game developed by Capcom for Arcade.",
-    "longDescription": "Strider is a classic 1980s action / platform game developed by Capcom for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_strider"
+    "longDescription": "Strider is a classic 1980s action / platform game developed by Capcom for Arcade."
   },
   {
     "id": "golden-axe",
@@ -2121,8 +2090,7 @@
     "platform": "Arcade",
     "image": "images/games/golden-axe.jpeg",
     "description": "Golden Axe is a 1989 beat 'em up video game developed and published by Sega for arcades on the Sega System 16B hardware.  Players control one of three warriors who must free the fantasy land of Yuria from the tyrannical rule of Death Adder, who wields the titular Golden Axe.  The lead designer was Makoto Uchida, who was also responsible for the creation of Sega's earlier Altered Beast (1988).",
-    "longDescription": "Golden Axe is a 1989 beat 'em up video game developed and published by Sega for arcades on the Sega System 16B hardware.  Players control one of three warriors who must free the fantasy land of Yuria from the tyrannical rule of Death Adder, who wields the titular Golden Axe.  The lead designer was Makoto Uchida, who was also responsible for the creation of Sega's earlier Altered Beast (1988).",
-    "playUrl": "https://archive.org/details/arcade_goldenaxe"
+    "longDescription": "Golden Axe is a 1989 beat 'em up video game developed and published by Sega for arcades on the Sega System 16B hardware.  Players control one of three warriors who must free the fantasy land of Yuria from the tyrannical rule of Death Adder, who wields the titular Golden Axe.  The lead designer was Makoto Uchida, who was also responsible for the creation of Sega's earlier Altered Beast (1988)."
   },
   {
     "id": "final-fight",
@@ -2135,8 +2103,7 @@
     "platform": "Arcade",
     "image": "images/games/final-fight.png",
     "description": "Final Fight is a series of beat 'em up video games by Japanese publisher Capcom, which began with the arcade release of Final Fight in 1989.  Set in the fictional Metro City, within the Street Fighter universe, the games focus on a group of heroic vigilantes who fight against the control and various threats of criminal gangs, primarily the Mad Gear Gang.  The series has sold 3.",
-    "longDescription": "Final Fight is a series of beat 'em up video games by Japanese publisher Capcom, which began with the arcade release of Final Fight in 1989.  Set in the fictional Metro City, within the Street Fighter universe, the games focus on a group of heroic vigilantes who fight against the control and various threats of criminal gangs, primarily the Mad Gear Gang.  The series has sold 3. 2 million units worldwide as of June 30, 2023.",
-    "playUrl": "https://archive.org/details/arcade_ffight"
+    "longDescription": "Final Fight is a series of beat 'em up video games by Japanese publisher Capcom, which began with the arcade release of Final Fight in 1989.  Set in the fictional Metro City, within the Street Fighter universe, the games focus on a group of heroic vigilantes who fight against the control and various threats of criminal gangs, primarily the Mad Gear Gang.  The series has sold 3. 2 million units worldwide as of June 30, 2023."
   },
   {
     "id": "tmnt-arcade",
@@ -2149,8 +2116,7 @@
     "platform": "Arcade",
     "image": "images/games/tmnt-arcade.jpg",
     "description": "Teenage Mutant Ninja Turtles, released in Japan as Teenage Mutant Ninja Turtles: Super Kame Ninja and in Europe as Teenage Mutant Hero Turtles, is a 1989 beat 'em up video game developed and published by Konami for arcades.  It is based on the Teenage Mutant Ninja Turtles franchise, including the first animated series that began airing two years earlier.  In the game, up to four players control the titular Ninja Turtles, fighting through various levels to defeat the turtles' enemies, including the Shredder, Krang and the Foot Clan.",
-    "longDescription": "Teenage Mutant Ninja Turtles, released in Japan as Teenage Mutant Ninja Turtles: Super Kame Ninja and in Europe as Teenage Mutant Hero Turtles, is a 1989 beat 'em up video game developed and published by Konami for arcades.  It is based on the Teenage Mutant Ninja Turtles franchise, including the first animated series that began airing two years earlier.  In the game, up to four players control the titular Ninja Turtles, fighting through various levels to defeat the turtles' enemies, including the Shredder, Krang and the Foot Clan.  Released during a high point in popularity for the Teenage Mutant Ninja Turtles franchise, the arcade game was a worldwide hit, becoming the highest-grossing dedicated arcade game of 1990 in the United States and Konami's highest-grossing arcade game.  Versions for various home systems soon followed, including the Nintendo Entertainment System.  A sequel, Teenage Mutant Ninja Turtles: Turtles in Time, was released in 1991.",
-    "playUrl": "https://archive.org/details/arcade_tmnt"
+    "longDescription": "Teenage Mutant Ninja Turtles, released in Japan as Teenage Mutant Ninja Turtles: Super Kame Ninja and in Europe as Teenage Mutant Hero Turtles, is a 1989 beat 'em up video game developed and published by Konami for arcades.  It is based on the Teenage Mutant Ninja Turtles franchise, including the first animated series that began airing two years earlier.  In the game, up to four players control the titular Ninja Turtles, fighting through various levels to defeat the turtles' enemies, including the Shredder, Krang and the Foot Clan.  Released during a high point in popularity for the Teenage Mutant Ninja Turtles franchise, the arcade game was a worldwide hit, becoming the highest-grossing dedicated arcade game of 1990 in the United States and Konami's highest-grossing arcade game.  Versions for various home systems soon followed, including the Nintendo Entertainment System.  A sequel, Teenage Mutant Ninja Turtles: Turtles in Time, was released in 1991."
   },
   {
     "id": "simcity",
@@ -2274,7 +2240,6 @@
     "image": "images/games/police-quest.jpg",
     "description": "Police Quest is a classic 1980s adventure game developed by Jim Walls for PC/DOS.",
     "longDescription": "Police Quest is a classic 1980s adventure game developed by Jim Walls for PC/DOS.",
-    "playUrl": "https://archive.org/details/msdos_Police_Quest_-_In_Pursuit_of_the_Death_Angel_1987",
     "downloadUrl": "https://www.myabandonware.com/game/police-quest-in-pursuit-of-the-death-angel-2e2"
   },
   {
@@ -2289,7 +2254,6 @@
     "image": "images/games/leisure-suit-larry.jpg",
     "description": "Leisure Suit Larry is a classic 1980s adventure game developed by Al Lowe for PC/DOS.",
     "longDescription": "Leisure Suit Larry is a classic 1980s adventure game developed by Al Lowe for PC/DOS.",
-    "playUrl": "https://archive.org/details/msdos_Leisure_Suit_Larry_in_the_Land_of_the_Lounge_Lizards_1987",
     "downloadUrl": "https://www.myabandonware.com/game/leisure-suit-larry-in-the-land-of-the-lounge-lizards-5e"
   },
   {
@@ -2303,8 +2267,7 @@
     "platform": "ZX Spectrum / Multiple",
     "image": "images/games/head-over-heels.jpg",
     "description": "Head Over Heels is a classic 1980s isometric action game developed by Jon Ritman & Bernie Drummond for ZX Spectrum / Multiple.",
-    "longDescription": "Head Over Heels is a classic 1980s isometric action game developed by Jon Ritman & Bernie Drummond for ZX Spectrum / Multiple.",
-    "playUrl": "https://archive.org/details/zx_Head_Over_Heels_1987_Ocean_Software"
+    "longDescription": "Head Over Heels is a classic 1980s isometric action game developed by Jon Ritman & Bernie Drummond for ZX Spectrum / Multiple."
   },
   {
     "id": "jackal",
@@ -2317,8 +2280,7 @@
     "platform": "Arcade",
     "image": "images/games/jackal.png",
     "description": "Jackal is a classic 1980s run and gun game developed by Konami for Arcade.",
-    "longDescription": "Jackal is a classic 1980s run and gun game developed by Konami for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_jackal"
+    "longDescription": "Jackal is a classic 1980s run and gun game developed by Konami for Arcade."
   },
   {
     "id": "castlevania-ii",
@@ -2468,8 +2430,7 @@
     "platform": "Arcade",
     "image": "images/games/rygar.png",
     "description": "Rygar is a classic 1980s action / platform game developed by Tecmo for Arcade.",
-    "longDescription": "Rygar is a classic 1980s action / platform game developed by Tecmo for Arcade.",
-    "playUrl": "https://archive.org/details/arcade_rygar"
+    "longDescription": "Rygar is a classic 1980s action / platform game developed by Tecmo for Arcade."
   },
   {
     "id": "ghosts-n-goblins-nes",
@@ -2640,8 +2601,7 @@
     "publisher": "Unknown",
     "image": "images/games/missile-command-atari.jpg",
     "description": "Missile Command is a 1980 shoot 'em up video game developed and published by Atari, Inc.  for arcades.  It was released by Taito and Sega in Japan.",
-    "longDescription": "Missile Command is a 1980 shoot 'em up video game developed and published by Atari, Inc.  for arcades.  It was released by Taito and Sega in Japan.  The game was designed by Dave Theurer, who would also design Tempest for Atari the following year.  The player uses a trackball to defend six cities from intercontinental ballistic missiles by launching anti-ballistic missiles from three bases.",
-    "playUrl": "https://archive.org/details/atari_2600_missile_command"
+    "longDescription": "Missile Command is a 1980 shoot 'em up video game developed and published by Atari, Inc.  for arcades.  It was released by Taito and Sega in Japan.  The game was designed by Dave Theurer, who would also design Tempest for Atari the following year.  The player uses a trackball to defend six cities from intercontinental ballistic missiles by launching anti-ballistic missiles from three bases."
   },
   {
     "id": "pitfall-ii",
@@ -2654,8 +2614,7 @@
     "publisher": "Unknown",
     "image": "images/games/pitfall-ii.png",
     "description": "Pitfall II: Lost Caverns is a 1984 platform video game developed by David Crane and published by Activision for the Atari 2600.  The player controls Pitfall Harry, who must explore the wilds of Peru to find the Raj diamond and rescue his niece Rhonda and their animal friend Quickclaw.  The game world is populated by various enemies and hazards that variously cause the player to lose points and return to a checkpoint.",
-    "longDescription": "Pitfall II: Lost Caverns is a 1984 platform video game developed by David Crane and published by Activision for the Atari 2600.  The player controls Pitfall Harry, who must explore the wilds of Peru to find the Raj diamond and rescue his niece Rhonda and their animal friend Quickclaw.  The game world is populated by various enemies and hazards that variously cause the player to lose points and return to a checkpoint.",
-    "playUrl": "https://archive.org/details/atari_2600_pitfall_ii"
+    "longDescription": "Pitfall II: Lost Caverns is a 1984 platform video game developed by David Crane and published by Activision for the Atari 2600.  The player controls Pitfall Harry, who must explore the wilds of Peru to find the Raj diamond and rescue his niece Rhonda and their animal friend Quickclaw.  The game world is populated by various enemies and hazards that variously cause the player to lose points and return to a checkpoint."
   },
   {
     "id": "knight-lore",
@@ -2736,8 +2695,7 @@
     "publisher": "Unknown",
     "image": "images/games/city-connection.png",
     "description": "City Connection is a 1985 platform video game developed and published by Jaleco for arcades.  It was released in North America by Kitkorp as Cruisin'.  The player controls Clarice in her Honda City hatchback and must drive over elevated roads to paint them.",
-    "longDescription": "City Connection is a 1985 platform video game developed and published by Jaleco for arcades.  It was released in North America by Kitkorp as Cruisin'.  The player controls Clarice in her Honda City hatchback and must drive over elevated roads to paint them.  Clarice is pursued by police cars, which she can stun by hitting them with oil cans.  The design was inspired by maze chase games like Pac-Man (1980) and Make Trax (1981).",
-    "playUrl": "https://archive.org/details/arcade_citycon"
+    "longDescription": "City Connection is a 1985 platform video game developed and published by Jaleco for arcades.  It was released in North America by Kitkorp as Cruisin'.  The player controls Clarice in her Honda City hatchback and must drive over elevated roads to paint them.  Clarice is pursued by police cars, which she can stun by hitting them with oil cans.  The design was inspired by maze chase games like Pac-Man (1980) and Make Trax (1981)."
   },
   {
     "id": "terra-cresta",
@@ -2789,7 +2747,6 @@
     "publisher": "Konami",
     "image": "images/games/placeholder.svg",
     "description": "Contra is a 1987 run and gun game developed and published by Konami for arcades.  A home version was released for the Nintendo Entertainment System in 1988, along with ports for various home computer formats, including the MSX2.  The arcade and computer versions were localized as Gryzor in Europe, and the NES version as Probotector in the PAL region.",
-    "longDescription": "Contra is a 1987 run and gun game developed and published by Konami for arcades.  A home version was released for the Nintendo Entertainment System in 1988, along with ports for various home computer formats, including the MSX2.  The arcade and computer versions were localized as Gryzor in Europe, and the NES version as Probotector in the PAL region.",
-    "playUrl": "https://archive.org/details/arcade_contra"
+    "longDescription": "Contra is a 1987 run and gun game developed and published by Konami for arcades.  A home version was released for the Nintendo Entertainment System in 1988, along with ports for various home computer formats, including the MSX2.  The arcade and computer versions were localized as Gryzor in Europe, and the NES version as Probotector in the PAL region."
   }
 ]
