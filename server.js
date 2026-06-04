@@ -9,6 +9,7 @@ const PORT = 3000;
 
 const games = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'games.json'), 'utf8'));
 const GENRES = require('./data/genres');
+const ESSAYS = require('./data/essays');
 const gamesSlim = games.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
   ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
 );
@@ -120,6 +121,8 @@ const EAGER_IMAGES = 8;
 let cachedGamesListHtml = null;
 let cachedPlatformsListHtml = null;
 let cachedGenresListHtml = null;
+let cachedEssaysListHtml = null;
+const cachedEssayPageHtml = {};
 let cachedGameLauncherHtml = null;
 const cachedPlatformPageHtml = {};
 const cachedGenrePageHtml = {};
@@ -208,6 +211,7 @@ function nav(active) {
         ${link('/games', 'Games', 'games')}
         ${link('/platforms', 'Platforms', 'platforms')}
         ${link('/genres', 'Encyclopedia', 'genres')}
+        ${link('/essays', 'Essays', 'essays')}
         <a href="/random" class="nav-random">&#127922; Random</a>
     </div>
 </nav>`;
@@ -375,6 +379,24 @@ app.get('/genres/:id', (req, res) => {
   res.send(cachedGenrePageHtml[genre.id]);
 });
 
+app.get('/essays', (req, res) => {
+  if (!cachedEssaysListHtml) cachedEssaysListHtml = essaysListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedEssaysListHtml);
+});
+
+app.get('/essays/:id', (req, res) => {
+  const essay = ESSAYS.find(e => e.id === req.params.id);
+  if (!essay) return res.status(404).send(notFoundPage());
+  if (!cachedEssayPageHtml[essay.id]) {
+    cachedEssayPageHtml[essay.id] = essayDetailPage(essay);
+  }
+  res.set('Cache-Control', 'public, max-age=86400, stale-while-revalidate=604800');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedEssayPageHtml[essay.id]);
+});
+
 // ── Page generators ──────────────────────────────────────────────────────────
 
 function homepagePage(gotd) {
@@ -405,6 +427,7 @@ ${bgLogo()}
         <a href="/games">Games</a>
         <a href="/platforms">Platforms</a>
         <a href="/genres">Encyclopedia</a>
+        <a href="/essays">Essays</a>
         <a href="/random" class="nav-random">&#127922; Random</a>
     </div>
 </nav>
@@ -495,6 +518,7 @@ ${bgLogo()}
         <a href="/games">Games</a>
         <a href="/platforms">Platforms</a>
         <a href="/genres">Encyclopedia</a>
+        <a href="/essays">Essays</a>
         <a href="/random" class="nav-random">&#127922; Random</a>
     </div>
 </nav>
@@ -1029,6 +1053,128 @@ function loadMore(){
 }
 new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
 </script>
+</body>
+</html>`;
+}
+
+const CATEGORY_LABELS = {
+  history: 'History',
+  profile: 'Profile',
+  technology: 'Technology',
+  culture: 'Culture',
+  design: 'Design',
+};
+
+function essaysListPage() {
+  const byCategory = {};
+  for (const e of ESSAYS) {
+    if (!byCategory[e.category]) byCategory[e.category] = [];
+    byCategory[e.category].push(e);
+  }
+
+  const categoryOrder = ['history', 'profile', 'technology', 'culture', 'design'];
+  const sections = categoryOrder.filter(c => byCategory[c]).map(cat => {
+    const label = CATEGORY_LABELS[cat] || cat;
+    const cards = byCategory[cat].map(e => `
+    <a href="/essays/${e.id}" class="essay-card">
+      <div class="essay-card-category">${escapeHtml(label)}</div>
+      <h2 class="essay-card-title">${escapeHtml(e.title)}</h2>
+      <p class="essay-card-subtitle">${escapeHtml(e.subtitle)}</p>
+      <div class="essay-card-meta">
+        <span class="essay-card-read">${escapeHtml(e.readTime)}</span>
+      </div>
+    </a>`).join('');
+    return `<div class="essays-category-section">
+  <h3 class="essays-category-heading">${escapeHtml(label)}</h3>
+  <div class="essays-grid">${cards}
+  </div>
+</div>`;
+  }).join('');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essays – Bosnan Retro Archive</title>
+    <meta name="description" content="Long-form essays on the history, technology, and culture of retro gaming — the golden age of arcades, the designers who shaped the medium, and the worlds they built.">
+    <meta property="og:title" content="Essays – Bosnan Retro Archive">
+    <meta property="og:type" content="website">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('essays')}
+
+<section class="essays-hero">
+    <h1>Essays</h1>
+    <p>Long-form writing on the history, technology, and culture of the golden age of gaming</p>
+</section>
+
+<div class="essays-wrapper">
+${sections}
+</div>
+
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function essayDetailPage(essay) {
+  const categoryLabel = CATEGORY_LABELS[essay.category] || essay.category;
+  const articleSections = essay.sections.map((s, i) => `
+<div class="essay-section" id="section-${i}">
+  <h2>${escapeHtml(s.title)}</h2>
+  ${s.html}
+</div>`).join('');
+
+  const tocItems = essay.sections.map((s, i) =>
+    `<li><a href="#section-${i}">${escapeHtml(s.title)}</a></li>`
+  ).join('');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(essay.title)} – Essays – Bosnan</title>
+    <meta name="description" content="${escapeHtml(essay.summary)}">
+    <meta property="og:title" content="${escapeHtml(essay.title)} – Bosnan">
+    <meta property="og:description" content="${escapeHtml(essay.summary)}">
+    <meta property="og:type" content="article">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('essays')}
+
+<div class="essay-wrapper">
+  <a href="/essays" class="back-link">&#8592; All Essays</a>
+
+  <div class="essay-header">
+    <div class="essay-header-meta">
+      <span class="essay-header-category">${escapeHtml(categoryLabel)}</span>
+      <span class="essay-header-read">${escapeHtml(essay.readTime)}</span>
+    </div>
+    <h1 class="essay-title">${escapeHtml(essay.title)}</h1>
+    <p class="essay-subtitle">${escapeHtml(essay.subtitle)}</p>
+  </div>
+
+  <div class="essay-layout">
+    <aside class="essay-toc">
+      <div class="essay-toc-label">Contents</div>
+      <ol>
+        ${tocItems}
+      </ol>
+    </aside>
+
+    <article class="essay-body">
+      ${articleSections}
+    </article>
+  </div>
+</div>
+
+${toggleScript()}
 </body>
 </html>`;
 }
