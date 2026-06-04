@@ -254,7 +254,7 @@ app.get('/sitemap.xml', (req, res) => {
   if (!cachedSitemap || cachedSitemap.host !== host) {
     const base = `${req.protocol}://${host}`;
     const today = new Date().toISOString().split('T')[0];
-    const staticUrls = ['', '/games', '/platforms', '/genres'].map(p => `
+    const staticUrls = ['', '/games', '/platforms', '/genres', '/essays'].map(p => `
   <url>
     <loc>${base}${p}</loc>
     <lastmod>${today}</lastmod>
@@ -282,10 +282,17 @@ app.get('/sitemap.xml', (req, res) => {
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`).join('');
+    const essayUrls = ESSAYS.map(e => `
+  <url>
+    <loc>${base}/essays/${e.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('');
     cachedSitemap = {
       host,
       xml: `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${genreUrls}${gameUrls}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${genreUrls}${essayUrls}${gameUrls}
 </urlset>`,
     };
   }
