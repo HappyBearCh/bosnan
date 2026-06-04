@@ -408,6 +408,25 @@
     line-height: 1.75;
 }
 
+.trivia-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trivia-list li {
+    font-size: 14px;
+    color: #bbb;
+    line-height: 1.65;
+    padding: 10px 14px;
+    background: #0d0d0d;
+    border-left: 3px solid #cc0000;
+    border-radius: 0 4px 4px 0;
+}
+
 /* ================== MOBILE ================== */
 @media (max-width: 768px) {
     .games-hero h1 { font-size: 32px; }

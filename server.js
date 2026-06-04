@@ -729,6 +729,16 @@ ${nav('games')}
         <h2>Deep Dive</h2>
         <p>${escapeHtml(game.longDescription)}</p>
       </div>
+      ${game.devStory ? `<div class="game-detail-desc">
+        <h2>Developer Story</h2>
+        <p>${escapeHtml(game.devStory)}</p>
+      </div>` : ''}
+      ${game.trivia && game.trivia.length ? `<div class="game-detail-desc game-trivia">
+        <h2>Did You Know?</h2>
+        <ul class="trivia-list">
+          ${game.trivia.map(t => `<li>${escapeHtml(t)}</li>`).join('\n          ')}
+        </ul>
+      </div>` : ''}
       <div class="game-play-actions">
         ${game.playUrl ? `<a href="${escapeHtml(game.playUrl)}" target="_blank" rel="noopener" class="btn btn-play">&#9654; Play Online</a>` : ''}
         ${game.downloadUrl ? `<a href="${escapeHtml(game.downloadUrl)}" target="_blank" rel="noopener" class="btn btn-download">&#11015; Download</a>` : ''}
