@@ -9,7 +9,7 @@ const PORT = 3000;
 
 const games = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'games.json'), 'utf8'));
 const GENRES = require('./data/genres');
-const ESSAYS = [...require('./data/essays'), ...require('./data/essays2')];
+const ESSAYS = [...require('./data/essays'), ...require('./data/essays2'), ...require('./data/essays3'), ...require('./data/essays4')];
 const gamesSlim = games.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
   ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
 );
