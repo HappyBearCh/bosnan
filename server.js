@@ -9,7 +9,8 @@ const PORT = 3000;
 
 const games = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'games.json'), 'utf8'));
 const GENRES = require('./data/genres');
-const ESSAYS = [...require('./data/essays'), ...require('./data/essays2'), ...require('./data/essays3'), ...require('./data/essays4'), ...require('./data/essays5'), ...require('./data/essays6'), ...require('./data/essays7')];
+const ESSAYS = [...require('./data/essays'), ...require('./data/essays2'), ...require('./data/essays3'), ...require('./data/essays4'), ...require('./data/essays5'), ...require('./data/essays6'), ...require('./data/essays7'), ...require('./data/essays8')];
+const DEVELOPERS = require('./data/developers');
 const gamesSlim = games.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
   ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
 );
@@ -73,6 +74,76 @@ const PLATFORMS = [
     description: 'The IBM PC and its DOS-based clones became the world\'s dominant computing platform through the 1980s. Despite lacking dedicated game hardware, clever developers used the PC speaker, CGA/EGA graphics, and eventually Sound Blaster audio to produce defining games. Text adventures, early RPGs, flight simulators, and strategy games flourished on DOS.',
     longDescription: 'The PC\'s open architecture — any manufacturer could clone it — created rapid commoditisation and broad adoption. Games like King\'s Quest proved graphical adventure games could work on home computers; Ultima and Wizardry established the CRPG genre. The introduction of VGA graphics in 1987 and Sound Blaster audio in 1989 transformed the PC into a serious gaming platform that would eventually eclipse dedicated consoles.',
   },
+  {
+    id: 'snes', name: 'Super Nintendo Entertainment System', shortName: 'SNES', era: '1990 – 1998',
+    manufacturer: 'Nintendo',
+    keyword: 'SNES',
+    description: 'The SNES delivered a 16-bit leap over its predecessor, producing some of the most celebrated games ever made. Its Mode 7 graphics, stereo sound chip, and deep library of RPGs, platformers, and action games made the early 1990s a golden era for Nintendo. Over 49 million units were sold worldwide.',
+    longDescription: 'Released in Japan as the Super Famicom in 1990 and in North America in 1991, the SNES launched directly into the Sega Genesis\'s territory and quickly established superiority with superior colour output, built-in stereo sound, and a deeper software catalogue. The SNES\'s custom chips — the SPC700 sound processor and the Super FX chip used in Star Fox — enabled capabilities the competition couldn\'t match. Nintendo\'s partnership with second-party developers like HAL Laboratory, Rare, and Argonaut produced genre-defining titles year after year. The SNES library remains the most critically praised in console history, with multiple entries in any list of all-time greatest games.',
+  },
+  {
+    id: 'genesis', name: 'Sega Genesis', shortName: 'Genesis', era: '1988 – 1997',
+    manufacturer: 'Sega',
+    keyword: 'Genesis',
+    description: 'The Sega Genesis (Mega Drive outside North America) was the first 16-bit console to reach Western markets, giving Sega a two-year head start over the SNES. Its blast-processing marketing, edgier game library, and Sonic the Hedgehog mascot made the Genesis the rebellious alternative to Nintendo\'s family-friendly brand.',
+    longDescription: 'Launched in Japan in 1988 and North America in 1989, the Genesis used a Motorola 68000 CPU — the same chip that powered the Amiga and Atari ST — paired with a Yamaha FM sound chip that gave its audio a distinctive, punchy character. Sega\'s aggressive marketing under Tom Kalinske positioned the Genesis as the cool alternative to the NES, with the famous "Genesis does what Nintendon\'t" campaign. The console sold over 30 million units globally and hosted landmark titles from Sega\'s internal studios — Sonic Team, AM2, and the Treasure-adjacent Gunstar Heroes developers — plus key third-party titles. The Genesis era was Sega at its commercial and creative peak.',
+  },
+  {
+    id: 'game-boy', name: 'Game Boy', era: '1989 – 2003',
+    manufacturer: 'Nintendo',
+    keyword: 'Game Boy',
+    description: 'Gunpei Yokoi\'s masterpiece of "lateral thinking with withered technology" sold over 118 million units across its original and Color versions. Despite technically inferior hardware to competitors, the Game Boy\'s battery life, durability, and Tetris bundle made it the dominant portable gaming platform for over a decade.',
+    longDescription: 'The Game Boy launched in 1989 with a dot-matrix LCD screen, four AA batteries for 15 hours of play, and Tetris bundled in the box. Despite the Sega Game Gear\'s backlit colour screen and the Atari Lynx\'s superior hardware, the Game Boy outlasted all competitors because Yokoi prioritised playability over spectacle. Nintendo\'s grip on the handheld market through its first-party exclusives — Pokémon, Zelda, Mario, Metroid — made the platform a self-reinforcing ecosystem. The Game Boy Color (1998) and Game Boy Advance (2001) extended the lineage, with the combined family selling more than any single home console of its era.',
+  },
+  {
+    id: 'nintendo-64', name: 'Nintendo 64', shortName: 'N64', era: '1996 – 2002',
+    manufacturer: 'Nintendo',
+    keyword: 'Nintendo 64',
+    description: 'The Nintendo 64 delivered hardware capable of true 3D gaming and produced some of the most influential titles ever made — Super Mario 64, The Legend of Zelda: Ocarina of Time, GoldenEye 007. Its decision to stay with cartridges while Sony used CD-ROM cost it the majority of third-party support.',
+    longDescription: 'Released in Japan in 1996 and globally that year, the N64 used a MIPS R4300i CPU at 93.75 MHz and the custom Reality Coprocessor GPU, delivering 3D performance that impressed at launch. The console sold 33 million units — a respectable number, but far behind the PlayStation\'s 102 million — largely because Nintendo\'s cartridge format was more expensive to manufacture and hold less data than CD-ROM, driving Square, Namco, and many others to develop exclusively for Sony. What the N64 lost in third-party breadth it made up in first-party quality: Super Mario 64, Zelda: Ocarina of Time, and GoldenEye 007 remain among the most critically acclaimed games ever made, and their influence on 3D game design is still felt today.',
+  },
+  {
+    id: 'playstation', name: 'PlayStation', shortName: 'PS1', era: '1994 – 2006',
+    manufacturer: 'Sony',
+    keyword: 'PlayStation',
+    description: 'Sony\'s PlayStation reshaped the games industry with its CD-ROM format, $299 launch price, and aggressive third-party licensing strategy. Selling 102 million units, the PlayStation ended Sega\'s competition, weakened Nintendo\'s market position, and established Sony as the dominant console manufacturer of the late 1990s.',
+    longDescription: 'The PlayStation originated as a CD-ROM add-on for the Super Nintendo before a falling-out between Sony and Nintendo sent Sony to develop a standalone console. Ken Kutaragi\'s team built a machine centred on the R3000A CPU and a custom GPU capable of fast 3D polygon rendering. Sony\'s approach to third-party licensing was the opposite of Nintendo\'s restrictive model: developers paid lower royalties, had access to the hardware specifications, and were not required to source manufacturing through Nintendo. The result was an unprecedented flood of third-party support. Squaresoft\'s Final Fantasy VII (1997) defined the PlayStation era culturally, demonstrating that games could be cinematic experiences with mass-market appeal. Tekken, Crash Bandicoot, Resident Evil, and Gran Turismo each defined genres on the platform.',
+  },
+  {
+    id: 'sega-saturn', name: 'Sega Saturn', shortName: 'Saturn', era: '1994 – 1998',
+    manufacturer: 'Sega',
+    keyword: 'Sega Saturn',
+    description: 'The Sega Saturn\'s surprise early launch at $399 and complex dual-CPU architecture hampered its Western performance, but it produced brilliant 2D games and a devoted Japanese fanbase. Home to Panzer Dragoon Saga, Guardian Heroes, and NiGHTS into Dreams, the Saturn\'s cult status has only grown with time.',
+    longDescription: 'Designed primarily as a 2D powerhouse to compete with Neo Geo-quality arcade conversions, the Saturn\'s architecture — dual Hitachi SH-2 CPUs and multiple graphics processors — proved difficult to program for 3D games when the PlayStation demonstrated superior polygon performance. Sega\'s decision to launch the Saturn at $399, four months earlier than announced and without warning retailers or third parties, generated immediate ill-will and gave Sony\'s $299 PlayStation an advantage it never relinquished. In Japan, however, the Saturn maintained a strong position through 1997 on the back of arcade ports — Virtua Fighter 2, Daytona USA — and RPGs. The Saturn\'s 2D capabilities were genuinely superior to the PlayStation for sprite-based games, and titles like Guardian Heroes, Radiant Silvergun, and Panzer Dragoon Saga are among the most acclaimed games of the decade.',
+  },
+  {
+    id: 'dreamcast', name: 'Sega Dreamcast', shortName: 'Dreamcast', era: '1998 – 2001',
+    manufacturer: 'Sega',
+    keyword: 'Dreamcast',
+    description: 'The Dreamcast was Sega\'s final and most innovative console: the first to include a built-in modem, online gaming, and a VMU memory card with its own screen. Launched in 1998, it was discontinued in 2001 after Sony\'s PlayStation 2 announcement undermined consumer confidence. It remains one of gaming\'s most beloved machines.',
+    longDescription: 'The Dreamcast used a Hitachi SH-4 CPU at 200 MHz and a PowerVR2 GPU delivering 3D performance competitive with early PlayStation 2 titles. Its built-in 33.6K modem — upgraded to 56K in later versions — enabled online gaming for Phantasy Star Online and NFL 2K1, making the Dreamcast the first console to make online play accessible to mainstream consumers. The VMU (Visual Memory Unit) memory card had its own screen and buttons, enabling secondary gameplay displays and mini-games. Despite critical acclaim for its library — Shenmue, Jet Set Radio, Soul Calibur, Crazy Taxi, Skies of Arcadia — Sega\'s history of hardware failures and Sony\'s announcement that the PlayStation 2 would deliver DVD playback and DVD-quality graphics eroded consumer confidence. Sega discontinued the Dreamcast in March 2001, exiting the hardware business entirely.',
+  },
+  {
+    id: 'turbografx-16', name: 'TurboGrafx-16', shortName: 'TG-16', era: '1987 – 1994',
+    manufacturer: 'NEC / Hudson Soft',
+    keyword: 'TurboGrafx-16',
+    description: 'The TurboGrafx-16 (PC Engine in Japan) was the first console to challenge the NES in Japan, where it briefly outsold the Famicom. Its HuCard format, CD-ROM add-on, and arcade-perfect ports gave it a technically impressive library, though it failed to gain meaningful traction in North America.',
+    longDescription: 'Developed jointly by NEC and Hudson Soft, the PC Engine launched in Japan in 1987 and became a genuine competitive threat to Nintendo\'s Famicom, offering superior 2D sprite capability and clean arcade translations of popular games. Its HuCard format — credit card-sized ROM cards — was smaller than cartridges, and the CD-ROM² add-on (1988) made it the first console to use compact disc media, allowing for redbook audio and dramatically expanded storage. In North America, rebranded as the TurboGrafx-16 and launched in 1989, the console struggled against established NES loyalty and a confusing product line. The platform\'s library includes some of the finest shooters and action games of the 8-bit era — Blazing Lazers, Gate of Thunder, Y\'s Book I & II — and demonstrated what was possible with dedicated hardware design.',
+  },
+  {
+    id: 'neo-geo', name: 'Neo Geo AES', shortName: 'Neo Geo', era: '1990 – 2004',
+    manufacturer: 'SNK',
+    keyword: 'Neo Geo',
+    description: 'The Neo Geo AES was the most powerful home console of its era, offering true arcade-identical hardware at home. Priced at $649 at launch with games costing $200 each, it was a luxury product for the most dedicated fans — and it delivered exceptional fighting games, shooters, and action titles unmatched until the PlayStation era.',
+    longDescription: 'SNK designed the Neo Geo as a home version of its MVS arcade system, meaning the same ROM chips ran in both the cabinet and the home console. The Motorola 68000 CPU and Zilog Z80 combination, backed by 64KB of work RAM and dedicated sprite hardware capable of displaying hundreds of large sprites simultaneously, made the Neo Geo the reference standard for 2D game quality throughout the early and mid-1990s. Street-level arcades ran MVS hardware while enthusiasts paid premium prices for identical experiences at home. The platform\'s catalogue — built almost entirely by SNK and a few close partners — concentrated on fighting games: Fatal Fury, Samurai Shodown, The King of Fighters, Art of Fighting. Metal Slug (1996) expanded the genre repertoire into run-and-gun with extraordinary hand-drawn animation. The Neo Geo outlasted all of its contemporaries, with new commercial releases through the early 2000s.',
+  },
+  {
+    id: 'game-gear', name: 'Sega Game Gear', shortName: 'Game Gear', era: '1990 – 1997',
+    manufacturer: 'Sega',
+    keyword: 'Game Gear',
+    description: 'The Game Gear was Sega\'s answer to the Game Boy: a backlit colour portable with hardware based on the Master System. Technically superior to Nintendo\'s handheld, it was undermined by poor battery life (six AA batteries for four hours) and a software library that lacked the Game Boy\'s depth of exclusives.',
+    longDescription: 'Launched in Japan in 1990 and globally in 1991, the Game Gear used essentially the same hardware as the Sega Master System — an 8-bit Z80 CPU and a colour display capable of showing 32 colours simultaneously from a palette of 4,096. Its backlit screen was a genuine advantage over the Game Boy\'s passive LCD, making it far easier to play in low-light conditions, and an optional TV tuner add-on allowed it to receive television signals. The Game Gear sold approximately 10-11 million units — a respectable figure, but one that pales against the Game Boy\'s 118 million. The battery problem was genuine: where the Game Boy ran for 15 hours on four AA batteries, the Game Gear\'s colour backlit display drained six batteries in four hours. Its library, strong in ports of arcade and Master System titles, lacked the Game Boy-exclusive franchises — Pokémon, Mario Land, Zelda — that drove hardware sales.',
+  },
 ];
 
 // ── Pre-computed indices ────────────────────────────────────────────────────
@@ -88,6 +159,14 @@ const genreGamesIndex = new Map();
 for (const genre of GENRES) {
   const genreSet = new Set(genre.genres);
   genreGamesIndex.set(genre.id, games.filter(g => genreSet.has(g.genre)));
+}
+
+const developerGamesIndex = new Map();
+for (const dev of DEVELOPERS) {
+  developerGamesIndex.set(dev.id, games.filter(g =>
+    g.developer.toLowerCase().includes(dev.keyword.toLowerCase()) ||
+    g.publisher.toLowerCase().includes(dev.keyword.toLowerCase())
+  ));
 }
 
 const relatedGamesIndex = new Map();
@@ -122,10 +201,12 @@ let cachedGamesListHtml = null;
 let cachedPlatformsListHtml = null;
 let cachedGenresListHtml = null;
 let cachedEssaysListHtml = null;
+let cachedDevelopersListHtml = null;
 const cachedEssayPageHtml = {};
 let cachedGameLauncherHtml = null;
 const cachedPlatformPageHtml = {};
 const cachedGenrePageHtml = {};
+const cachedDeveloperPageHtml = {};
 const cachedGamePageHtml = new Map();
 let cachedSitemap = null;
 let cachedHomepage = { html: null, day: -1 };
@@ -210,6 +291,7 @@ function nav(active) {
         ${link('/game.html', 'Game', 'game')}
         ${link('/games', 'Games', 'games')}
         ${link('/platforms', 'Platforms', 'platforms')}
+        ${link('/developers', 'Developers', 'developers')}
         ${link('/genres', 'Encyclopedia', 'genres')}
         ${link('/essays', 'Essays', 'essays')}
         <a href="/random" class="nav-random">&#127922; Random</a>
@@ -254,7 +336,7 @@ app.get('/sitemap.xml', (req, res) => {
   if (!cachedSitemap || cachedSitemap.host !== host) {
     const base = `${req.protocol}://${host}`;
     const today = new Date().toISOString().split('T')[0];
-    const staticUrls = ['', '/games', '/platforms', '/genres', '/essays'].map(p => `
+    const staticUrls = ['', '/games', '/platforms', '/developers', '/genres', '/essays'].map(p => `
   <url>
     <loc>${base}${p}</loc>
     <lastmod>${today}</lastmod>
@@ -289,10 +371,17 @@ app.get('/sitemap.xml', (req, res) => {
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`).join('');
+    const developerUrls = DEVELOPERS.map(d => `
+  <url>
+    <loc>${base}/developers/${d.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('');
     cachedSitemap = {
       host,
       xml: `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${genreUrls}${essayUrls}${gameUrls}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${genreUrls}${essayUrls}${gameUrls}
 </urlset>`,
     };
   }
@@ -402,6 +491,24 @@ app.get('/essays/:id', (req, res) => {
   res.set('Cache-Control', 'public, max-age=86400, stale-while-revalidate=604800');
   res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
   res.send(cachedEssayPageHtml[essay.id]);
+});
+
+app.get('/developers', (req, res) => {
+  if (!cachedDevelopersListHtml) cachedDevelopersListHtml = developersListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedDevelopersListHtml);
+});
+
+app.get('/developers/:id', (req, res) => {
+  const dev = DEVELOPERS.find(d => d.id === req.params.id);
+  if (!dev) return res.status(404).send(notFoundPage());
+  if (!cachedDeveloperPageHtml[dev.id]) {
+    cachedDeveloperPageHtml[dev.id] = developerDetailPage(dev);
+  }
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedDeveloperPageHtml[dev.id]);
 });
 
 // ── Page generators ──────────────────────────────────────────────────────────
@@ -1182,6 +1289,115 @@ ${nav('essays')}
 </div>
 
 ${toggleScript()}
+</body>
+</html>`;
+}
+
+function developersListPage() {
+  const cards = DEVELOPERS.map(d => {
+    const count = (developerGamesIndex.get(d.id) || []).length;
+    return `<a href="/developers/${d.id}" class="platform-card">
+      <div class="platform-card-name">${escapeHtml(d.name)}</div>
+      <div class="platform-card-era">${escapeHtml(d.country)} &middot; Est. ${escapeHtml(String(d.founded))}</div>
+      <div class="platform-card-count">${count} game${count !== 1 ? 's' : ''} in archive</div>
+      <p class="platform-card-desc">${escapeHtml(d.description)}</p>
+    </a>`;
+  }).join('');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Developers &amp; Studios – Bosnan</title>
+    <meta name="description" content="Profiles of the studios and developers who shaped retro gaming: Nintendo, Sega, Capcom, Konami, id Software, and more.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('developers')}
+
+<section class="platforms-hero">
+    <h1>Developers</h1>
+    <p>The studios and visionaries who built the golden age of gaming</p>
+</section>
+
+<div class="platforms-grid">
+    ${cards}
+</div>
+
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function developerDetailPage(dev) {
+  const devGames = developerGamesIndex.get(dev.id) || [];
+  const cardHtml = buildCardHtml(devGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
+  const inlineData = JSON.stringify(devGames.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
+    ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
+  ));
+
+  const notableList = (dev.notableGames || []).map(g => `<li>${escapeHtml(g)}</li>`).join('');
+  const figureList = (dev.keyFigures || []).map(f => `<span class="dev-figure">${escapeHtml(f)}</span>`).join('');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(dev.name)} – Developers – Bosnan</title>
+    <meta name="description" content="${escapeHtml(dev.description.substring(0, 160))}">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('developers')}
+
+<div class="platform-detail-wrapper">
+  <a href="/developers" class="back-link">&#8592; All Developers</a>
+  <div class="platform-detail-header">
+    <h1>${escapeHtml(dev.name)}</h1>
+    <p class="platform-detail-era">${escapeHtml(dev.country)} &middot; Founded ${escapeHtml(String(dev.founded))} &middot; ${escapeHtml(dev.role)}</p>
+    <p class="platform-detail-desc">${escapeHtml(dev.description)}</p>
+    <p class="platform-detail-desc">${escapeHtml(dev.longDescription)}</p>
+    ${figureList ? `<div class="dev-figures-row"><strong>Key Figures:</strong> ${figureList}</div>` : ''}
+    ${notableList ? `<div class="dev-notable"><strong>Notable Games:</strong><ul class="trivia-list">${notableList}</ul></div>` : ''}
+  </div>
+
+  <h2 class="platform-games-heading">${devGames.length} Game${devGames.length !== 1 ? 's' : ''} in Archive</h2>
+  <div class="games-grid" id="gamesGrid">${cardHtml}</div>
+  <div id="loadMoreSentinel" style="height:1px"></div>
+</div>
+
+${toggleScript()}
+<script>
+const allGames = ${inlineData};
+const PAGE = ${PAGE_SIZE};
+let rendered = Math.min(PAGE, allGames.length);
+const grid = document.getElementById('gamesGrid');
+const sentinel = document.getElementById('loadMoreSentinel');
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function cardHtml(g){
+    return '<a href="/games/'+g.id+'" class="game-card">'+
+        '<div class="game-card-img-wrap">'+
+        '<img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy"'+
+        ' onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'">'+
+        '<div class="game-card-decade">'+esc(g.decade)+'</div>'+
+        (g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : '')+
+        '</div>'+
+        '<div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3>'+
+        '<div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div>'+
+        '<p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';
+}
+function loadMore(){
+    if(rendered>=allGames.length)return;
+    const next=allGames.slice(rendered,rendered+PAGE);
+    grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));
+    rendered+=next.length;
+}
+new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
+</script>
 </body>
 </html>`;
 }

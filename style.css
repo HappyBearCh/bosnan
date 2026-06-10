@@ -347,4 +347,29 @@ nav img {
     }
 }
 
+/* ================== DEVELOPER PAGES ================== */
+.dev-figures-row {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #ccc;
+}
+.dev-figure {
+    display: inline-block;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 3px 10px;
+    margin: 4px 4px 0 0;
+    font-size: 13px;
+    color: #e0e0e0;
+}
+.dev-notable {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #ccc;
+}
+.dev-notable ul {
+    margin-top: 8px;
+}
+
 
