@@ -9,8 +9,11 @@ const PORT = 3000;
 
 const games = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'games.json'), 'utf8'));
 const GENRES = require('./data/genres');
-const ESSAYS = [...require('./data/essays'), ...require('./data/essays2'), ...require('./data/essays3'), ...require('./data/essays4'), ...require('./data/essays5'), ...require('./data/essays6'), ...require('./data/essays7'), ...require('./data/essays8')];
+const ESSAYS = [...require('./data/essays'), ...require('./data/essays2'), ...require('./data/essays3'), ...require('./data/essays4'), ...require('./data/essays5'), ...require('./data/essays6'), ...require('./data/essays7'), ...require('./data/essays8'), ...require('./data/essays9')];
 const DEVELOPERS = require('./data/developers');
+const COMPOSERS = require('./data/composers');
+const FRANCHISES = require('./data/franchises');
+const HARDWARE = require('./data/hardware');
 const gamesSlim = games.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
   ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
 );
@@ -138,6 +141,62 @@ const PLATFORMS = [
     longDescription: 'SNK designed the Neo Geo as a home version of its MVS arcade system, meaning the same ROM chips ran in both the cabinet and the home console. The Motorola 68000 CPU and Zilog Z80 combination, backed by 64KB of work RAM and dedicated sprite hardware capable of displaying hundreds of large sprites simultaneously, made the Neo Geo the reference standard for 2D game quality throughout the early and mid-1990s. Street-level arcades ran MVS hardware while enthusiasts paid premium prices for identical experiences at home. The platform\'s catalogue — built almost entirely by SNK and a few close partners — concentrated on fighting games: Fatal Fury, Samurai Shodown, The King of Fighters, Art of Fighting. Metal Slug (1996) expanded the genre repertoire into run-and-gun with extraordinary hand-drawn animation. The Neo Geo outlasted all of its contemporaries, with new commercial releases through the early 2000s.',
   },
   {
+    id: 'amiga', name: 'Commodore Amiga', shortName: 'Amiga', era: '1985 – 1996',
+    manufacturer: 'Commodore International',
+    keyword: 'Amiga',
+    description: 'The Amiga was the most capable home computer of its era — its custom chips (Agnus, Denise, Paula) enabled multitasking, 4096-colour graphics, and eight-voice stereo audio that no competitor could match until the mid-1990s. It became the platform of choice for game developers, video producers, and musicians alike.',
+    longDescription: 'Launched in 1985, the Amiga 1000 used three custom chips designed by Jay Miner — the same engineer who had designed the Atari 2600\'s TIA chip — to deliver multimedia capabilities that the IBM PC and Apple Macintosh could not approach. Agnus handled DMA and graphics, Denise managed display generation with up to 4,096 simultaneous colours (HAM mode), and Paula processed audio with four 8-bit PCM channels and handled floppy disk I/O. The system\'s AmigaOS was genuinely multitasking at a time when DOS was entirely single-tasking. Games on the Amiga routinely exceeded what console developers achieved on dedicated gaming hardware; titles like Shadow of the Beast pushed colour and animation quality to levels the NES and Master System could not approach. The Amiga\'s decline after Commodore\'s 1994 bankruptcy left a devoted user community that maintained hardware and software support well into the 2000s.',
+  },
+  {
+    id: 'atari-st', name: 'Atari ST', era: '1985 – 1993',
+    manufacturer: 'Atari Corporation',
+    keyword: 'Atari ST',
+    description: 'The Atari ST used the Motorola 68000 processor and launched one year before the Amiga at a lower price, dominating the European market for music production thanks to built-in MIDI ports. In Germany and France especially, it was the primary home computer through the late 1980s.',
+    longDescription: 'Jack Tramiel\'s Atari Corporation developed the ST rapidly after his departure from Commodore, releasing it in 1985 at a significantly lower price than the Amiga. The ST used the same Motorola 68000 CPU but with a simpler custom chip set (Shifter for graphics, GLUE for logic, ACIA for serial I/O). Where the Amiga\'s custom chips were purpose-designed for multimedia output, the ST\'s architecture was more conventional, with GEM — a licensed graphical user interface — providing the windowed environment. The ST\'s killer feature was its built-in MIDI in/out/thru ports, making it the music production computer of choice for professional musicians through the late 1980s. In recording studios, the Atari ST was ubiquitous as a MIDI sequencer host long after computers with superior general capabilities were available. Its game library, while extensive, was generally considered inferior to the Amiga\'s, though several titles — notably MIDI Maze, one of the first networked multiplayer games — used the ST\'s specific capabilities in ways the Amiga could not replicate.',
+  },
+  {
+    id: 'atari-8bit', name: 'Atari 8-bit', shortName: 'Atari 8-bit', era: '1979 – 1992',
+    manufacturer: 'Atari, Inc.',
+    keyword: 'Atari 8-bit',
+    description: 'Atari\'s home computer line — the 400, 800, XL, and XE series — used CTIA/GTIA and POKEY custom chips to deliver graphics and audio that exceeded the Apple II and outpaced most competitors. Many influential games and the first computer RPGs appeared on Atari 8-bit hardware.',
+    longDescription: 'The Atari 400 and 800 launched in 1979 with hardware designed by Jay Miner (before his Amiga work) using three custom chips: CTIA/GTIA for graphics, POKEY for audio and keyboard input, and PIA for I/O. The GTIA chip\'s sprite handling and colour capabilities exceeded the Apple II significantly, making the Atari 8-bit line the premium home computer gaming platform of its era. The POKEY chip provided four audio channels with distortion control that produced more complex sounds than the beepers of competing computers. Games like Rescue on Fractalus, Ballblazer, and The Seven Cities of Gold from Lucasfilm Games (later LucasArts) debuted on Atari 8-bit hardware. Richard Garriott\'s early Ultima games originated here. The platform remained commercially viable through the XL series (1983) and XE series (1985) before DOS-based PCs made it obsolete in the late 1980s.',
+  },
+  {
+    id: 'atari-lynx', name: 'Atari Lynx', shortName: 'Lynx', era: '1989 – 1995',
+    manufacturer: 'Atari Corporation',
+    keyword: 'Atari Lynx',
+    description: 'The Lynx was the first handheld with a colour backlit screen, designed by Epyx before being acquired and marketed by Atari. Superior hardware to the Game Boy — faster processor, more colours, hardware sprite scaling — couldn\'t overcome the Game Boy\'s battery life, software library, and price advantage.',
+    longDescription: 'The Lynx originated as the "Handy" at Epyx, a game publisher that had designed the hardware before running out of funding and selling the project to Atari. The hardware was genuinely impressive: a 16-bit 65C02 processor, a dedicated blitter chip with hardware sprite scaling and distortion, a backlit colour LCD displaying 4,096 colours, and a built-in ComLynx port for multiplayer linking up to eight units. Atari launched it at $179.95 in 1989, compared to the Game Boy\'s $89.95, and the price differential immediately limited its market penetration. The battery problem was severe: the colour backlit display consumed six AA batteries in approximately four hours, compared to the Game Boy\'s fifteen hours on four batteries. Despite a library of technically impressive games — California Games demonstrated hardware sprite scaling no other handheld could match — the Lynx sold approximately three million units against the Game Boy\'s eventual 118 million.',
+  },
+  {
+    id: '3do', name: '3DO Interactive Multiplayer', shortName: '3DO', era: '1993 – 1996',
+    manufacturer: 'Various (Panasonic, Goldstar, Sanyo)',
+    keyword: '3DO',
+    description: 'Trip Hawkins\'s ambitious open-standard console launched at $699 in 1993, making it the most expensive home console ever released. Despite impressive hardware and a triple-speed CD-ROM drive, its price and the imminent PlayStation announcement ended its commercial viability within two years.',
+    longDescription: 'The 3DO Company did not manufacture hardware — it licensed the 3DO specification to consumer electronics companies (Panasonic, Goldstar, Sanyo) who built compatible machines. This open-platform approach was intended to create competition that would drive prices down; instead, it complicated the consumer message and divided game development resources. The hardware specification was advanced for 1993: a 32-bit ARM60 CPU at 12.5 MHz, dedicated graphics processor with texture mapping, a triple-speed CD-ROM drive, and 2MB of DRAM. The $699 launch price was set by manufacturing costs that the open-hardware model had not reduced as anticipated. Trip Hawkins had founded Electronic Arts and genuinely believed the 3DO would become the dominant gaming platform; the PlayStation\'s 1994 announcement at $299 — with equivalent or superior hardware — made the 3DO\'s business case untenable within months of its launch.',
+  },
+  {
+    id: 'atari-jaguar', name: 'Atari Jaguar', shortName: 'Jaguar', era: '1993 – 1996',
+    manufacturer: 'Atari Corporation',
+    keyword: 'Atari Jaguar',
+    description: 'Marketed as "the only 64-bit game system" — a claim of disputed technical accuracy — the Jaguar was Atari\'s last hardware attempt. Its complex architecture frustrated developers and its software library remained thin despite some technically impressive titles like Tempest 2000.',
+    longDescription: 'Atari marketed the Jaguar aggressively on its 64-bit specification — two 32-bit custom chips (Tom and Jerry) plus an additional Motorola 68000 for compatibility, which Atari combined to claim 64-bit processing. The marketing was technically misleading; the processor doing most of the work was either the 32-bit Tom or the 32-bit Jerry, not a unified 64-bit architecture. The Jaguar launched at $249.99 in November 1993, priced competitively with the 3DO, but its custom architecture proved difficult to program. Most games were developed primarily for the 68000 CPU — the chip developers knew — rather than exploiting Tom and Jerry\'s parallel processing capabilities. The result was a platform whose library underrepresented its hardware potential, with exceptions: Tempest 2000 (1994), Jeff Minter\'s psychedelic update of the Atari arcade classic, was universally acclaimed and demonstrated what the hardware could do when properly used. The Jaguar sold approximately 250,000 units before Atari Corporation merged with JTS in 1996, ending Atari\'s hardware business.',
+  },
+  {
+    id: 'virtual-boy', name: 'Nintendo Virtual Boy', shortName: 'Virtual Boy', era: '1995 – 1996',
+    manufacturer: 'Nintendo',
+    keyword: 'Virtual Boy',
+    description: 'Gunpei Yokoi\'s final major hardware project used oscillating mirrors and red LED arrays to create a stereoscopic 3D effect. Despite impressive depth illusion, the monochrome red display, health warning advisories, and tabletop form factor combined to produce Nintendo\'s first significant hardware failure.',
+    longDescription: 'The Virtual Boy used a display technology Gunpei Yokoi called "Reflection Technology" — oscillating mirrors that reflected rapidly modulated LED arrays to create the impression of depth. The system was not worn on the head like VR headsets; it sat on a tabletop and the player leaned forward to look into an eyepiece. The monochrome red display — chosen because red LEDs were cheapest and smallest — produced high contrast images but no colour information, limiting game aesthetics severely. Nintendo included health warnings advising players to take breaks every fifteen minutes due to concerns about eyestrain and potential developmental effects in young children. The system launched in Japan in July 1995 and North America in August 1995; Nintendo discontinued it in December 1995 in Japan and discontinued North American sales and development support in early 1996. Only 22 games were released commercially. The failure contributed to Yokoi\'s resignation from Nintendo in 1996; he died in a road accident in 1997.',
+  },
+  {
+    id: 'msx', name: 'MSX', era: '1983 – 1995',
+    manufacturer: 'Various (Sony, Panasonic, Toshiba, Philips, etc.)',
+    keyword: 'MSX',
+    description: 'Microsoft and ASCII\'s open home computer standard created a unified software platform across multiple hardware manufacturers. Dominant in Japan, the Netherlands, and Brazil, MSX was the platform where Hideo Kojima created the original Metal Gear and where Konami produced early versions of Gradius and Castlevania.',
+    longDescription: 'MSX was an open hardware and software standard proposed by Microsoft Japan and ASCII Corporation in 1983, intended to create a common platform across competing home computer manufacturers. The specification required a Zilog Z80 CPU, Texas Instruments TMS9918 (or compatible) graphics chip, Microsoft BASIC in ROM, and specific memory mapping — meaning any software meeting the standard would run on any MSX computer. Sony, Panasonic, Toshiba, Philips, Sanyo, and dozens of other manufacturers produced MSX machines, creating a diverse hardware ecosystem around a consistent software base. The platform was most successful in Japan, the Netherlands, and Brazil, where it achieved the kind of market penetration that no single manufacturer\'s computer could have achieved alone.\n\nKonami\'s MSX software division was among the platform\'s most prolific and important: Metal Gear (1987), Vampire Killer (1986 — the MSX version of Castlevania), and Gradius were all MSX productions of genuine quality. The MSX2 standard (1985) upgraded graphics to the Yamaha V9938, enabling 512-colour displays. MSX2+ (1988) and MSX Turbo R (1990) extended the standard further, but the platform\'s relevance waned as the PC-9801 and then DOS/V IBM-compatible computers dominated the Japanese market in the early 1990s.',
+  },
+  {
     id: 'game-gear', name: 'Sega Game Gear', shortName: 'Game Gear', era: '1990 – 1997',
     manufacturer: 'Sega',
     keyword: 'Game Gear',
@@ -167,6 +226,24 @@ for (const dev of DEVELOPERS) {
     g.developer.toLowerCase().includes(dev.keyword.toLowerCase()) ||
     g.publisher.toLowerCase().includes(dev.keyword.toLowerCase())
   ));
+}
+
+const composerGamesIndex = new Map();
+for (const c of COMPOSERS) {
+  const ids = new Set(c.notableGameIds || []);
+  composerGamesIndex.set(c.id, games.filter(g => ids.has(g.id)));
+}
+
+const franchiseGamesIndex = new Map();
+for (const f of FRANCHISES) {
+  const tk = f.titleKeyword.toLowerCase();
+  const dk = (f.developerKeyword || '').toLowerCase();
+  const matched = games.filter(g => {
+    const titleMatch = g.title.toLowerCase().includes(tk);
+    const devMatch = !dk || g.developer.toLowerCase().includes(dk) || g.publisher.toLowerCase().includes(dk);
+    return titleMatch && devMatch;
+  }).sort((a, b) => a.year - b.year);
+  franchiseGamesIndex.set(f.id, matched);
 }
 
 const relatedGamesIndex = new Map();
@@ -202,11 +279,17 @@ let cachedPlatformsListHtml = null;
 let cachedGenresListHtml = null;
 let cachedEssaysListHtml = null;
 let cachedDevelopersListHtml = null;
+let cachedComposersListHtml = null;
+let cachedFranchisesListHtml = null;
+let cachedHardwareListHtml = null;
 const cachedEssayPageHtml = {};
 let cachedGameLauncherHtml = null;
 const cachedPlatformPageHtml = {};
 const cachedGenrePageHtml = {};
 const cachedDeveloperPageHtml = {};
+const cachedComposerPageHtml = {};
+const cachedFranchisePageHtml = {};
+const cachedHardwarePageHtml = {};
 const cachedGamePageHtml = new Map();
 let cachedSitemap = null;
 let cachedHomepage = { html: null, day: -1 };
@@ -292,6 +375,9 @@ function nav(active) {
         ${link('/games', 'Games', 'games')}
         ${link('/platforms', 'Platforms', 'platforms')}
         ${link('/developers', 'Developers', 'developers')}
+        ${link('/composers', 'Composers', 'composers')}
+        ${link('/franchises', 'Franchises', 'franchises')}
+        ${link('/hardware', 'Hardware', 'hardware')}
         ${link('/genres', 'Encyclopedia', 'genres')}
         ${link('/essays', 'Essays', 'essays')}
         <a href="/random" class="nav-random">&#127922; Random</a>
@@ -336,7 +422,7 @@ app.get('/sitemap.xml', (req, res) => {
   if (!cachedSitemap || cachedSitemap.host !== host) {
     const base = `${req.protocol}://${host}`;
     const today = new Date().toISOString().split('T')[0];
-    const staticUrls = ['', '/games', '/platforms', '/developers', '/genres', '/essays'].map(p => `
+    const staticUrls = ['', '/games', '/platforms', '/developers', '/composers', '/franchises', '/hardware', '/genres', '/essays'].map(p => `
   <url>
     <loc>${base}${p}</loc>
     <lastmod>${today}</lastmod>
@@ -378,10 +464,31 @@ app.get('/sitemap.xml', (req, res) => {
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`).join('');
+    const composerUrls = COMPOSERS.map(c => `
+  <url>
+    <loc>${base}/composers/${c.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('');
+    const franchiseUrls = FRANCHISES.map(f => `
+  <url>
+    <loc>${base}/franchises/${f.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('');
+    const hardwareUrls = HARDWARE.map(hw => `
+  <url>
+    <loc>${base}/hardware/${hw.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('');
     cachedSitemap = {
       host,
       xml: `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${genreUrls}${essayUrls}${gameUrls}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${genreUrls}${essayUrls}${gameUrls}
 </urlset>`,
     };
   }
@@ -509,6 +616,54 @@ app.get('/developers/:id', (req, res) => {
   res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
   res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
   res.send(cachedDeveloperPageHtml[dev.id]);
+});
+
+app.get('/composers', (req, res) => {
+  if (!cachedComposersListHtml) cachedComposersListHtml = composersListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedComposersListHtml);
+});
+
+app.get('/composers/:id', (req, res) => {
+  const c = COMPOSERS.find(x => x.id === req.params.id);
+  if (!c) return res.status(404).send(notFoundPage());
+  if (!cachedComposerPageHtml[c.id]) cachedComposerPageHtml[c.id] = composerDetailPage(c);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedComposerPageHtml[c.id]);
+});
+
+app.get('/franchises', (req, res) => {
+  if (!cachedFranchisesListHtml) cachedFranchisesListHtml = franchisesListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedFranchisesListHtml);
+});
+
+app.get('/franchises/:id', (req, res) => {
+  const f = FRANCHISES.find(x => x.id === req.params.id);
+  if (!f) return res.status(404).send(notFoundPage());
+  if (!cachedFranchisePageHtml[f.id]) cachedFranchisePageHtml[f.id] = franchiseDetailPage(f);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedFranchisePageHtml[f.id]);
+});
+
+app.get('/hardware', (req, res) => {
+  if (!cachedHardwareListHtml) cachedHardwareListHtml = hardwareListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedHardwareListHtml);
+});
+
+app.get('/hardware/:id', (req, res) => {
+  const hw = HARDWARE.find(x => x.id === req.params.id);
+  if (!hw) return res.status(404).send(notFoundPage());
+  if (!cachedHardwarePageHtml[hw.id]) cachedHardwarePageHtml[hw.id] = hardwareDetailPage(hw);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedHardwarePageHtml[hw.id]);
 });
 
 // ── Page generators ──────────────────────────────────────────────────────────
@@ -1398,6 +1553,275 @@ function loadMore(){
 }
 new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
 </script>
+</body>
+</html>`;
+}
+
+function composersListPage() {
+  const cards = COMPOSERS.map(c => {
+    const count = (composerGamesIndex.get(c.id) || []).length;
+    return `<a href="/composers/${c.id}" class="platform-card">
+      <div class="platform-card-name">${escapeHtml(c.name)}</div>
+      <div class="platform-card-era">${escapeHtml(c.country)} &middot; ${escapeHtml(c.era)}</div>
+      <div class="platform-card-count">${count} game${count !== 1 ? 's' : ''} in archive</div>
+      <p class="platform-card-desc">${escapeHtml(c.description)}</p>
+    </a>`;
+  }).join('');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Composers – Bosnan</title>
+    <meta name="description" content="Profiles of the composers who scored retro gaming's greatest soundtracks: Nobuo Uematsu, Yuzo Koshiro, Koji Kondo, and more.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('composers')}
+<section class="platforms-hero">
+    <h1>Composers</h1>
+    <p>The musicians who defined the sound of retro gaming</p>
+</section>
+<div class="platforms-grid">
+    ${cards}
+</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function composerDetailPage(c) {
+  const cGames = composerGamesIndex.get(c.id) || [];
+  const cardHtml = buildCardHtml(cGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
+  const inlineData = JSON.stringify(cGames.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
+    ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
+  ));
+  const factList = (c.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const trackList = (c.notableSoundtracks || []).map(t => `<li>${escapeHtml(t)}</li>`).join('');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(c.name)} – Composers – Bosnan</title>
+    <meta name="description" content="${escapeHtml(c.description.substring(0, 160))}">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('composers')}
+<div class="platform-detail-wrapper">
+  <a href="/composers" class="back-link">&#8592; All Composers</a>
+  <div class="platform-detail-header">
+    <h1>${escapeHtml(c.name)}</h1>
+    <p class="platform-detail-era">${escapeHtml(c.country)} &middot; Born ${escapeHtml(String(c.born))} &middot; ${escapeHtml(c.role)}</p>
+    <p class="platform-detail-desc">${escapeHtml(c.description)}</p>
+    <p class="platform-detail-desc">${escapeHtml(c.longDescription)}</p>
+    ${trackList ? `<div class="dev-notable"><strong>Notable Soundtracks:</strong><ul class="trivia-list">${trackList}</ul></div>` : ''}
+    ${factList ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${factList}</ul></div>` : ''}
+  </div>
+  ${cGames.length > 0 ? `<h2 class="platform-games-heading">${cGames.length} Game${cGames.length !== 1 ? 's' : ''} in Archive</h2>
+  <div class="games-grid" id="gamesGrid">${cardHtml}</div>
+  <div id="loadMoreSentinel" style="height:1px"></div>` : ''}
+</div>
+${toggleScript()}
+${cGames.length > 0 ? `<script>
+const allGames = ${inlineData};
+const PAGE = ${PAGE_SIZE};
+let rendered = Math.min(PAGE, allGames.length);
+const grid = document.getElementById('gamesGrid');
+const sentinel = document.getElementById('loadMoreSentinel');
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function cardHtml(g){
+    return '<a href="/games/'+g.id+'" class="game-card">'+
+        '<div class="game-card-img-wrap">'+
+        '<img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy"'+
+        ' onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'">'+
+        '<div class="game-card-decade">'+esc(g.decade)+'</div>'+
+        (g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : '')+
+        '</div>'+
+        '<div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3>'+
+        '<div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div>'+
+        '<p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';
+}
+function loadMore(){
+    if(rendered>=allGames.length)return;
+    const next=allGames.slice(rendered,rendered+PAGE);
+    grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));
+    rendered+=next.length;
+}
+new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
+</script>` : ''}
+</body>
+</html>`;
+}
+
+function franchisesListPage() {
+  const cards = FRANCHISES.map(f => {
+    const count = (franchiseGamesIndex.get(f.id) || []).length;
+    return `<a href="/franchises/${f.id}" class="platform-card">
+      <div class="platform-card-name">${escapeHtml(f.name)}</div>
+      <div class="platform-card-era">${escapeHtml(f.developer)} &middot; Since ${escapeHtml(String(f.since))}</div>
+      <div class="platform-card-count">${count} game${count !== 1 ? 's' : ''} in archive</div>
+      <p class="platform-card-desc">${escapeHtml(f.description)}</p>
+    </a>`;
+  }).join('');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Franchises – Bosnan</title>
+    <meta name="description" content="Explore gaming's greatest franchise histories: Mario, Zelda, Final Fantasy, Sonic, Mega Man, and more.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('franchises')}
+<section class="platforms-hero">
+    <h1>Franchises</h1>
+    <p>Gaming's greatest series — from a single coin-op to generational legacies</p>
+</section>
+<div class="platforms-grid">
+    ${cards}
+</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function franchiseDetailPage(f) {
+  const fGames = franchiseGamesIndex.get(f.id) || [];
+  const cardHtml = buildCardHtml(fGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
+  const inlineData = JSON.stringify(fGames.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
+    ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
+  ));
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(f.name)} – Franchises – Bosnan</title>
+    <meta name="description" content="${escapeHtml(f.description.substring(0, 160))}">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('franchises')}
+<div class="platform-detail-wrapper">
+  <a href="/franchises" class="back-link">&#8592; All Franchises</a>
+  <div class="platform-detail-header">
+    <h1>${escapeHtml(f.name)}</h1>
+    <p class="platform-detail-era">${escapeHtml(f.developer)} &middot; Since ${escapeHtml(String(f.since))}</p>
+    <p class="platform-detail-desc">${escapeHtml(f.description)}</p>
+    <p class="platform-detail-desc">${escapeHtml(f.longDescription)}</p>
+  </div>
+  <h2 class="platform-games-heading">${fGames.length} Game${fGames.length !== 1 ? 's' : ''} in Archive</h2>
+  <div class="games-grid" id="gamesGrid">${cardHtml}</div>
+  <div id="loadMoreSentinel" style="height:1px"></div>
+</div>
+${toggleScript()}
+<script>
+const allGames = ${inlineData};
+const PAGE = ${PAGE_SIZE};
+let rendered = Math.min(PAGE, allGames.length);
+const grid = document.getElementById('gamesGrid');
+const sentinel = document.getElementById('loadMoreSentinel');
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function cardHtml(g){
+    return '<a href="/games/'+g.id+'" class="game-card">'+
+        '<div class="game-card-img-wrap">'+
+        '<img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy"'+
+        ' onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'">'+
+        '<div class="game-card-decade">'+esc(g.decade)+'</div>'+
+        (g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : '')+
+        '</div>'+
+        '<div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3>'+
+        '<div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div>'+
+        '<p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';
+}
+function loadMore(){
+    if(rendered>=allGames.length)return;
+    const next=allGames.slice(rendered,rendered+PAGE);
+    grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));
+    rendered+=next.length;
+}
+new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
+</script>
+</body>
+</html>`;
+}
+
+function hardwareListPage() {
+  const cards = HARDWARE.map(hw => {
+    return `<a href="/hardware/${hw.id}" class="platform-card">
+      <div class="platform-card-name">${escapeHtml(hw.name)}</div>
+      <div class="platform-card-era">${escapeHtml(hw.manufacturer)} &middot; ${escapeHtml(String(hw.year))}</div>
+      <div class="platform-card-count">Used in: ${escapeHtml(hw.usedIn)}</div>
+      <p class="platform-card-desc">${escapeHtml(hw.description)}</p>
+    </a>`;
+  }).join('');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware &amp; Chips – Bosnan</title>
+    <meta name="description" content="The processors and sound chips that powered retro gaming: MOS 6502, Z80, YM2612, SID chip, Super FX, and more.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('hardware')}
+<section class="platforms-hero">
+    <h1>Hardware &amp; Chips</h1>
+    <p>The silicon that made it all possible</p>
+</section>
+<div class="platforms-grid">
+    ${cards}
+</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function hardwareDetailPage(hw) {
+  const specRows = (hw.specs || []).map(s =>
+    `<tr><th>${escapeHtml(s.label)}</th><td>${escapeHtml(s.value)}</td></tr>`
+  ).join('');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(hw.name)} – Hardware – Bosnan</title>
+    <meta name="description" content="${escapeHtml(hw.description.substring(0, 160))}">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('hardware')}
+<div class="platform-detail-wrapper">
+  <a href="/hardware" class="back-link">&#8592; All Hardware</a>
+  <div class="platform-detail-header">
+    <h1>${escapeHtml(hw.name)}</h1>
+    <p class="platform-detail-era">${escapeHtml(hw.manufacturer)} &middot; ${escapeHtml(String(hw.year))} &middot; ${escapeHtml(hw.fullName)}</p>
+    <p class="platform-detail-desc">${escapeHtml(hw.description)}</p>
+    <p class="platform-detail-desc">${escapeHtml(hw.longDescription)}</p>
+    <div class="dev-notable"><strong>Used In:</strong> ${escapeHtml(hw.usedIn)}</div>
+    ${specRows ? `<table class="trivia-table" style="margin-top:16px;width:100%;max-width:480px;border-collapse:collapse">
+      <tbody>${specRows}</tbody>
+    </table>` : ''}
+  </div>
+</div>
+${toggleScript()}
 </body>
 </html>`;
 }

@@ -372,4 +372,27 @@ nav img {
     margin-top: 8px;
 }
 
+.trivia-table {
+    margin-top: 16px;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 480px;
+    font-size: 14px;
+}
+.trivia-table th,
+.trivia-table td {
+    padding: 7px 12px;
+    border: 1px solid #333;
+    text-align: left;
+    color: #e0e0e0;
+}
+.trivia-table th {
+    background: #1a1a1a;
+    color: #aaa;
+    font-weight: 600;
+    width: 40%;
+}
+.trivia-table td {
+    background: #111;
+}
 
