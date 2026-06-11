@@ -9,13 +9,17 @@ const PORT = 3000;
 
 const games = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'games.json'), 'utf8'));
 const GENRES = require('./data/genres');
-const ESSAYS = [...require('./data/essays'), ...require('./data/essays2'), ...require('./data/essays3'), ...require('./data/essays4'), ...require('./data/essays5'), ...require('./data/essays6'), ...require('./data/essays7'), ...require('./data/essays8'), ...require('./data/essays9'), ...require('./data/essays10')];
+const ESSAYS = [...require('./data/essays'), ...require('./data/essays2'), ...require('./data/essays3'), ...require('./data/essays4'), ...require('./data/essays5'), ...require('./data/essays6'), ...require('./data/essays7'), ...require('./data/essays8'), ...require('./data/essays9'), ...require('./data/essays10'), ...require('./data/essays11')];
 const DEVELOPERS = require('./data/developers');
 const COMPOSERS = require('./data/composers');
 const FRANCHISES = require('./data/franchises');
 const HARDWARE = require('./data/hardware');
 const DESIGNERS = require('./data/designers');
 const REGIONAL = require('./data/regional');
+const PUBLISHERS = require('./data/publishers');
+const ARCADE_BOARDS = require('./data/arcade-boards');
+const PERIPHERALS = require('./data/peripherals');
+const LOST_GAMES = require('./data/lost-games');
 const gamesSlim = games.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
   ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
 );
@@ -298,6 +302,29 @@ for (const f of FRANCHISES) {
   franchiseGamesIndex.set(f.id, matched);
 }
 
+const publisherGamesIndex = new Map();
+for (const p of PUBLISHERS) {
+  publisherGamesIndex.set(p.id, games.filter(g =>
+    (g.publisher || '').toLowerCase().includes(p.keyword.toLowerCase()) ||
+    g.developer.toLowerCase().includes(p.keyword.toLowerCase())
+  ));
+}
+
+const arcadeBoardGamesIndex = new Map();
+for (const b of ARCADE_BOARDS) {
+  arcadeBoardGamesIndex.set(b.id, games.filter(g =>
+    g.platform.toLowerCase().includes('arcade') &&
+    (b.notableGames || []).some(ng => g.title.toLowerCase().includes(ng.toLowerCase().split(' (')[0]))
+  ));
+}
+
+const decadesIndex = new Map();
+for (const g of games) {
+  if (!decadesIndex.has(g.decade)) decadesIndex.set(g.decade, []);
+  decadesIndex.get(g.decade).push(g);
+}
+const DECADES = [...decadesIndex.keys()].sort();
+
 const relatedGamesIndex = new Map();
 for (const game of games) {
   const byDev = games.filter(g => g.id !== game.id &&
@@ -337,9 +364,21 @@ let cachedHardwareListHtml = null;
 let cachedDesignersListHtml = null;
 let cachedYearsListHtml = null;
 let cachedRegionalListHtml = null;
+let cachedPublishersListHtml = null;
+let cachedArcadeBoardsListHtml = null;
+let cachedPeripheralsListHtml = null;
+let cachedLostGamesListHtml = null;
+let cachedDecadesListHtml = null;
+let cachedFamilyTreeHtml = null;
+let cachedCompareHtml = null;
 const cachedDesignerPageHtml = {};
 const cachedYearPageHtml = {};
 const cachedRegionalPageHtml = {};
+const cachedPublisherPageHtml = {};
+const cachedArcadeBoardPageHtml = {};
+const cachedPeripheralPageHtml = {};
+const cachedLostGamePageHtml = {};
+const cachedDecadePageHtml = {};
 const cachedEssayPageHtml = {};
 let cachedGameLauncherHtml = null;
 const cachedPlatformPageHtml = {};
@@ -437,8 +476,16 @@ function nav(active) {
         ${link('/franchises', 'Franchises', 'franchises')}
         ${link('/hardware', 'Hardware', 'hardware')}
         ${link('/designers', 'Designers', 'designers')}
+        ${link('/publishers', 'Publishers', 'publishers')}
+        ${link('/arcade-boards', 'Arcade', 'arcade-boards')}
+        ${link('/peripherals', 'Peripherals', 'peripherals')}
+        ${link('/lost-games', 'Lost Games', 'lost-games')}
         ${link('/years', 'By Year', 'years')}
+        ${link('/decades', 'Decades', 'decades')}
         ${link('/regional', 'Regional', 'regional')}
+        ${link('/family-tree', 'Family Tree', 'family-tree')}
+        ${link('/compare', 'Compare', 'compare')}
+        ${link('/search', 'Search', 'search')}
         ${link('/genres', 'Encyclopedia', 'genres')}
         ${link('/essays', 'Essays', 'essays')}
         <a href="/random" class="nav-random">&#127922; Random</a>
@@ -483,7 +530,7 @@ app.get('/sitemap.xml', (req, res) => {
   if (!cachedSitemap || cachedSitemap.host !== host) {
     const base = `${req.protocol}://${host}`;
     const today = new Date().toISOString().split('T')[0];
-    const staticUrls = ['', '/games', '/platforms', '/developers', '/composers', '/franchises', '/hardware', '/designers', '/years', '/regional', '/genres', '/essays'].map(p => `
+    const staticUrls = ['', '/games', '/platforms', '/developers', '/composers', '/franchises', '/hardware', '/designers', '/publishers', '/arcade-boards', '/peripherals', '/lost-games', '/years', '/decades', '/regional', '/family-tree', '/compare', '/search', '/genres', '/essays'].map(p => `
   <url>
     <loc>${base}${p}</loc>
     <lastmod>${today}</lastmod>
@@ -567,10 +614,45 @@ app.get('/sitemap.xml', (req, res) => {
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`).join('');
+    const publisherUrls = PUBLISHERS.map(p => `
+  <url>
+    <loc>${base}/publishers/${p.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('');
+    const arcadeBoardUrls = ARCADE_BOARDS.map(b => `
+  <url>
+    <loc>${base}/arcade-boards/${b.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('');
+    const peripheralUrls = PERIPHERALS.map(p => `
+  <url>
+    <loc>${base}/peripherals/${p.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('');
+    const lostGameUrls = LOST_GAMES.map(g => `
+  <url>
+    <loc>${base}/lost-games/${g.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('');
+    const decadeUrls = DECADES.map(d => `
+  <url>
+    <loc>${base}/decades/${encodeURIComponent(d)}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
     cachedSitemap = {
       host,
       xml: `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${designerUrls}${regionalUrls}${genreUrls}${essayUrls}${yearUrls}${gameUrls}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${designerUrls}${publisherUrls}${arcadeBoardUrls}${peripheralUrls}${lostGameUrls}${regionalUrls}${genreUrls}${essayUrls}${yearUrls}${decadeUrls}${gameUrls}
 </urlset>`,
     };
   }
@@ -794,6 +876,108 @@ app.get('/regional/:id', (req, res) => {
   res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
   res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
   res.send(cachedRegionalPageHtml[article.id]);
+});
+
+app.get('/publishers', (req, res) => {
+  if (!cachedPublishersListHtml) cachedPublishersListHtml = publishersListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedPublishersListHtml);
+});
+
+app.get('/publishers/:id', (req, res) => {
+  const pub = PUBLISHERS.find(x => x.id === req.params.id);
+  if (!pub) return res.status(404).send(notFoundPage());
+  if (!cachedPublisherPageHtml[pub.id]) cachedPublisherPageHtml[pub.id] = publisherDetailPage(pub);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedPublisherPageHtml[pub.id]);
+});
+
+app.get('/arcade-boards', (req, res) => {
+  if (!cachedArcadeBoardsListHtml) cachedArcadeBoardsListHtml = arcadeBoardsListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedArcadeBoardsListHtml);
+});
+
+app.get('/arcade-boards/:id', (req, res) => {
+  const board = ARCADE_BOARDS.find(x => x.id === req.params.id);
+  if (!board) return res.status(404).send(notFoundPage());
+  if (!cachedArcadeBoardPageHtml[board.id]) cachedArcadeBoardPageHtml[board.id] = arcadeBoardDetailPage(board);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedArcadeBoardPageHtml[board.id]);
+});
+
+app.get('/peripherals', (req, res) => {
+  if (!cachedPeripheralsListHtml) cachedPeripheralsListHtml = peripheralsListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedPeripheralsListHtml);
+});
+
+app.get('/peripherals/:id', (req, res) => {
+  const periph = PERIPHERALS.find(x => x.id === req.params.id);
+  if (!periph) return res.status(404).send(notFoundPage());
+  if (!cachedPeripheralPageHtml[periph.id]) cachedPeripheralPageHtml[periph.id] = peripheralDetailPage(periph);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedPeripheralPageHtml[periph.id]);
+});
+
+app.get('/lost-games', (req, res) => {
+  if (!cachedLostGamesListHtml) cachedLostGamesListHtml = lostGamesListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedLostGamesListHtml);
+});
+
+app.get('/lost-games/:id', (req, res) => {
+  const lg = LOST_GAMES.find(x => x.id === req.params.id);
+  if (!lg) return res.status(404).send(notFoundPage());
+  if (!cachedLostGamePageHtml[lg.id]) cachedLostGamePageHtml[lg.id] = lostGameDetailPage(lg);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedLostGamePageHtml[lg.id]);
+});
+
+app.get('/decades', (req, res) => {
+  if (!cachedDecadesListHtml) cachedDecadesListHtml = decadesListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedDecadesListHtml);
+});
+
+app.get('/decades/:decade', (req, res) => {
+  const decade = req.params.decade;
+  if (!decadesIndex.has(decade)) return res.status(404).send(notFoundPage());
+  if (!cachedDecadePageHtml[decade]) cachedDecadePageHtml[decade] = decadeDetailPage(decade);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedDecadePageHtml[decade]);
+});
+
+app.get('/family-tree', (req, res) => {
+  if (!cachedFamilyTreeHtml) cachedFamilyTreeHtml = familyTreePage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedFamilyTreeHtml);
+});
+
+app.get('/compare', (req, res) => {
+  const a = req.query.a ? PLATFORMS.find(p => p.id === req.query.a) : null;
+  const b = req.query.b ? PLATFORMS.find(p => p.id === req.query.b) : null;
+  res.set('Cache-Control', 'no-store');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(comparePage(a, b));
+});
+
+app.get('/search', (req, res) => {
+  const q = (req.query.q || '').trim();
+  res.set('Cache-Control', 'no-store');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(searchPage(q));
 });
 
 // ── Page generators ──────────────────────────────────────────────────────────
@@ -2160,6 +2344,606 @@ ${nav('regional')}
     <p class="essay-subtitle">${escapeHtml(r.subtitle)}</p>
   </div>
   ${sectionsHtml}
+</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function publishersListPage() {
+  const cards = PUBLISHERS.map(p => {
+    const count = (publisherGamesIndex.get(p.id) || []).length;
+    return `<a href="/publishers/${p.id}" class="platform-card">
+      <div class="platform-card-name">${escapeHtml(p.name)}</div>
+      <div class="platform-card-era">${escapeHtml(p.country)} &middot; ${escapeHtml(p.era)}</div>
+      <div class="platform-card-count">${count} game${count !== 1 ? 's' : ''} in archive</div>
+      <p class="platform-card-desc">${escapeHtml(p.description)}</p>
+    </a>`;
+  }).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publishers – Bosnan</title>
+    <meta name="description" content="Profiles of the publishers who shaped retro gaming: Atari, EA, Activision, Taito, Hudson, Psygnosis and more.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('publishers')}
+<section class="platforms-hero">
+    <h1>Publishers</h1>
+    <p>The companies that brought retro games to players</p>
+</section>
+<div class="platforms-grid">${cards}</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function publisherDetailPage(pub) {
+  const pGames = publisherGamesIndex.get(pub.id) || [];
+  const cardHtml = buildCardHtml(pGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
+  const inlineData = JSON.stringify(pGames.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
+    ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
+  ));
+  const titleList = (pub.notableTitles || []).map(t => `<li>${escapeHtml(t)}</li>`).join('');
+  const factList = (pub.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(pub.name)} – Publishers – Bosnan</title>
+    <meta name="description" content="${escapeHtml(pub.description.substring(0, 160))}">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('publishers')}
+<div class="platform-detail-wrapper">
+  <a href="/publishers" class="back-link">&#8592; All Publishers</a>
+  <div class="platform-detail-header">
+    <h1>${escapeHtml(pub.name)}</h1>
+    <p class="platform-detail-era">${escapeHtml(pub.country)} &middot; Founded ${pub.founded}${pub.dissolved ? ' &middot; Closed ' + pub.dissolved : ''} &middot; ${escapeHtml(pub.era)}</p>
+    <p class="platform-detail-desc">${escapeHtml(pub.description)}</p>
+    <p class="platform-detail-desc">${escapeHtml(pub.longDescription)}</p>
+    ${titleList ? `<div class="dev-notable"><strong>Notable Titles:</strong><ul class="trivia-list">${titleList}</ul></div>` : ''}
+    ${factList ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${factList}</ul></div>` : ''}
+  </div>
+  ${pGames.length > 0 ? `<h2 class="platform-games-heading">${pGames.length} Game${pGames.length !== 1 ? 's' : ''} in Archive</h2>
+  <div class="games-grid" id="gamesGrid">${cardHtml}</div>
+  <div id="loadMoreSentinel" style="height:1px"></div>` : ''}
+</div>
+${toggleScript()}
+${pGames.length > 0 ? `<script>
+const allGames=${inlineData};const PAGE=${PAGE_SIZE};let rendered=Math.min(PAGE,allGames.length);
+const grid=document.getElementById('gamesGrid');const sentinel=document.getElementById('loadMoreSentinel');
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function cardHtml(g){return'<a href="/games/'+g.id+'" class="game-card"><div class="game-card-img-wrap"><img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'"><div class="game-card-decade">'+esc(g.decade)+'</div>'+(g.playUrl?'<div class="game-card-playable">&#9654; Play</div>':'')+'</div><div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3><div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div><p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';}
+function loadMore(){if(rendered>=allGames.length)return;const next=allGames.slice(rendered,rendered+PAGE);grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));rendered+=next.length;}
+new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
+</script>` : ''}
+</body>
+</html>`;
+}
+
+function arcadeBoardsListPage() {
+  const cards = ARCADE_BOARDS.map(b => `<a href="/arcade-boards/${b.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(b.name)}</div>
+    <div class="platform-card-era">${escapeHtml(b.manufacturer)} &middot; ${b.year}</div>
+    <div class="platform-card-count">${escapeHtml(b.cpu || '')}</div>
+    <p class="platform-card-desc">${escapeHtml(b.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Boards – Bosnan</title>
+    <meta name="description" content="The hardware boards that powered arcade gaming's golden age: CPS-1, CPS-2, System 16, Neo Geo MVS, and more.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('arcade-boards')}
+<section class="platforms-hero">
+    <h1>Arcade Boards</h1>
+    <p>The silicon behind the golden age of coin-operated gaming</p>
+</section>
+<div class="platforms-grid">${cards}</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function arcadeBoardDetailPage(board) {
+  const gamesList = (board.notableGames || []).map(g => `<li>${escapeHtml(g)}</li>`).join('');
+  const factList = (board.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(board.name)} – Arcade Boards – Bosnan</title>
+    <meta name="description" content="${escapeHtml(board.description.substring(0, 160))}">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('arcade-boards')}
+<div class="platform-detail-wrapper">
+  <a href="/arcade-boards" class="back-link">&#8592; All Arcade Boards</a>
+  <div class="platform-detail-header">
+    <h1>${escapeHtml(board.name)}</h1>
+    <p class="platform-detail-era">${escapeHtml(board.manufacturer)} &middot; ${board.year} &middot; ${escapeHtml(board.era || '')}</p>
+    ${board.cpu ? `<p class="platform-detail-era" style="font-size:0.9em;opacity:0.8">CPU: ${escapeHtml(board.cpu)}</p>` : ''}
+    <p class="platform-detail-desc">${escapeHtml(board.description)}</p>
+    <p class="platform-detail-desc">${escapeHtml(board.longDescription)}</p>
+    ${gamesList ? `<div class="dev-notable"><strong>Notable Games:</strong><ul class="trivia-list">${gamesList}</ul></div>` : ''}
+    ${factList ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${factList}</ul></div>` : ''}
+  </div>
+</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function peripheralsListPage() {
+  const cards = PERIPHERALS.map(p => `<a href="/peripherals/${p.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(p.name)}</div>
+    <div class="platform-card-era">${escapeHtml(p.manufacturer)} &middot; ${p.year} &middot; ${escapeHtml(p.platform)}</div>
+    <div class="platform-card-count">${escapeHtml(p.verdict || '')}</div>
+    <p class="platform-card-desc">${escapeHtml(p.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peripherals – Bosnan</title>
+    <meta name="description" content="The accessories that shaped retro gaming: Power Glove, R.O.B., Game Genie, Sega 32X, and the gadgets that succeeded or spectacularly failed.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('peripherals')}
+<section class="platforms-hero">
+    <h1>Peripherals</h1>
+    <p>The accessories, add-ons, and gadgets of the retro era</p>
+</section>
+<div class="platforms-grid">${cards}</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function peripheralDetailPage(periph) {
+  const factList = (periph.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(periph.name)} – Peripherals – Bosnan</title>
+    <meta name="description" content="${escapeHtml(periph.description.substring(0, 160))}">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('peripherals')}
+<div class="platform-detail-wrapper">
+  <a href="/peripherals" class="back-link">&#8592; All Peripherals</a>
+  <div class="platform-detail-header">
+    <h1>${escapeHtml(periph.name)}</h1>
+    <p class="platform-detail-era">${escapeHtml(periph.manufacturer)} &middot; ${periph.year} &middot; ${escapeHtml(periph.platform)}</p>
+    <p class="platform-detail-desc">${escapeHtml(periph.description)}</p>
+    <p class="platform-detail-desc">${escapeHtml(periph.longDescription)}</p>
+    ${factList ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${factList}</ul></div>` : ''}
+    ${periph.verdict ? `<div class="dev-notable" style="margin-top:1rem"><strong>Verdict:</strong> ${escapeHtml(periph.verdict)}</div>` : ''}
+  </div>
+</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function lostGamesListPage() {
+  const cards = LOST_GAMES.map(g => `<a href="/lost-games/${g.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(g.title)}</div>
+    <div class="platform-card-era">${escapeHtml(g.developer)} &middot; ${escapeHtml(g.platform)} &middot; ${g.year}</div>
+    <div class="platform-card-count">${escapeHtml(g.status)}</div>
+    <p class="platform-card-desc">${escapeHtml(g.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost &amp; Cancelled Games – Bosnan</title>
+    <meta name="description" content="Games that never shipped: StarFox 2, Thrill Kill, Sonic X-treme, EarthBound 64, and the cancelled classics of retro gaming.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('lost-games')}
+<section class="platforms-hero">
+    <h1>Lost &amp; Cancelled Games</h1>
+    <p>Finished, shelved, and never released — the games that almost were</p>
+</section>
+<div class="platforms-grid">${cards}</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function lostGameDetailPage(g) {
+  const factList = (g.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(g.title)} – Lost Games – Bosnan</title>
+    <meta name="description" content="${escapeHtml(g.description.substring(0, 160))}">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('lost-games')}
+<div class="platform-detail-wrapper">
+  <a href="/lost-games" class="back-link">&#8592; All Lost Games</a>
+  <div class="platform-detail-header">
+    <h1>${escapeHtml(g.title)}</h1>
+    <p class="platform-detail-era">${escapeHtml(g.developer)} &middot; ${escapeHtml(g.platform)} &middot; ${g.year} &middot; <em>${escapeHtml(g.status)}</em></p>
+    <p class="platform-detail-desc">${escapeHtml(g.description)}</p>
+    <p class="platform-detail-desc">${escapeHtml(g.longDescription)}</p>
+    ${g.discoveredBy ? `<div class="dev-notable"><strong>Prototype discovered by:</strong> ${escapeHtml(g.discoveredBy)}</div>` : ''}
+    ${factList ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${factList}</ul></div>` : ''}
+  </div>
+</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function decadesListPage() {
+  const cards = DECADES.map(d => {
+    const count = (decadesIndex.get(d) || []).length;
+    return `<a href="/decades/${encodeURIComponent(d)}" class="platform-card">
+      <div class="platform-card-name">${escapeHtml(d)}</div>
+      <div class="platform-card-count">${count} game${count !== 1 ? 's' : ''}</div>
+    </a>`;
+  }).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse by Decade – Bosnan</title>
+    <meta name="description" content="Browse the Bosnan game archive by decade — from the 1960s golden age to the 1990s 3D revolution.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('decades')}
+<section class="platforms-hero">
+    <h1>Browse by Decade</h1>
+    <p>The arc of gaming history, decade by decade</p>
+</section>
+<div class="platforms-grid">${cards}</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function decadeDetailPage(decade) {
+  const dGames = (decadesIndex.get(decade) || []).sort((a, b) => a.year - b.year);
+  const cardHtml = buildCardHtml(dGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
+  const inlineData = JSON.stringify(dGames.map(({ id, title, year, decade: dec, genre, platform, developer, image, playUrl }) =>
+    ({ id, title, year, decade: dec, genre, platform, developer, image, playUrl: playUrl || null })
+  ));
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(decade)} Games – Bosnan</title>
+    <meta name="description" content="${dGames.length} games from the ${escapeHtml(decade)} in the Bosnan archive.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('decades')}
+<section class="platforms-hero">
+    <h1>${escapeHtml(decade)}</h1>
+    <p>${dGames.length} game${dGames.length !== 1 ? 's' : ''} in the archive from this decade</p>
+</section>
+<div class="games-grid" id="gamesGrid">${cardHtml}</div>
+<div id="loadMoreSentinel" style="height:1px"></div>
+${toggleScript()}
+<script>
+const allGames=${inlineData};const PAGE=${PAGE_SIZE};let rendered=Math.min(PAGE,allGames.length);
+const grid=document.getElementById('gamesGrid');const sentinel=document.getElementById('loadMoreSentinel');
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function cardHtml(g){return'<a href="/games/'+g.id+'" class="game-card"><div class="game-card-img-wrap"><img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'"><div class="game-card-decade">'+esc(g.decade)+'</div>'+(g.playUrl?'<div class="game-card-playable">&#9654; Play</div>':'')+'</div><div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3><div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div><p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';}
+function loadMore(){if(rendered>=allGames.length)return;const next=allGames.slice(rendered,rendered+PAGE);grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));rendered+=next.length;}
+new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
+</script>
+</body>
+</html>`;
+}
+
+function familyTreePage() {
+  const lineages = [
+    {
+      name: 'The Atari Diaspora',
+      desc: 'When Atari\'s original programming team left to found Activision in 1979, they set a precedent: game developers could leave publishers and found their own studios. The studios that grew from Atari\'s talent — and from Activision\'s subsequent departures — seeded much of the American game industry.',
+      entries: [
+        { from: 'Atari (1972)', arrow: '→', to: 'Activision (1979)', note: 'David Crane, Larry Kaplan, Alan Miller, Bob Whitehead departed to found the first third-party publisher' },
+        { from: 'Atari', arrow: '→', to: 'Avalon Hill / SSI', note: 'Several Atari wargame designers moved to dedicated wargame publishers' },
+        { from: 'Activision', arrow: '→', to: 'Accolade (1984)', note: 'Bob Whitehead and Alan Miller left Activision to found Accolade' },
+        { from: 'Activision', arrow: '→', to: 'Insomniac Games lineage', note: 'Multiple Activision alumni founded studios during the PS1 era' },
+      ],
+    },
+    {
+      name: 'Origin Systems → Looking Glass → Ion Storm',
+      desc: 'Richard Garriott\'s Origin Systems produced Ultima and Wing Commander. After EA\'s 1992 acquisition, key developers departed to found studios that defined the immersive sim genre.',
+      entries: [
+        { from: 'Origin Systems (1983)', arrow: '→', to: 'EA acquisition (1992)', note: 'Richard Garriott\'s studio, home of Ultima and Wing Commander' },
+        { from: 'Origin / Blue Sky Prods.', arrow: '→', to: 'Looking Glass Studios (1992)', note: 'Paul Neurath\'s team built Ultima Underworld, then System Shock and Thief' },
+        { from: 'Origin / Looking Glass alumni', arrow: '→', to: 'Ion Storm Austin (1997)', note: 'Warren Spector\'s team built Deus Ex here after the Looking Glass closure' },
+        { from: 'Looking Glass Studios', arrow: '→', to: 'Irrational Games (1997)', note: 'Ken Levine\'s team departed to build System Shock 2 and BioShock' },
+      ],
+    },
+    {
+      name: 'id Software and the First-Person Shooter Tree',
+      desc: 'John Carmack and John Romero\'s id Software created Wolfenstein 3D, Doom, and Quake. The studio\'s alumni and the technology it licenced seeded an entire generation of action studios.',
+      entries: [
+        { from: 'Softdisk (1990)', arrow: '→', to: 'id Software (1991)', note: 'Carmack, Romero, Adrian Carmack, Tom Hall departed Softdisk to found id' },
+        { from: 'id Software', arrow: '→', to: 'Raven Software', note: 'Built Heretic and Hexen using id engine licences; eventually acquired by Activision' },
+        { from: 'id Software (Romero)', arrow: '→', to: 'Ion Storm Dallas (1996)', note: 'John Romero\'s notorious venture; produced Daikatana (2000)' },
+        { from: 'id engine licences', arrow: '→', to: 'Valve (1996)', note: 'Half-Life built on Quake engine; Valve became the dominant PC gaming platform' },
+        { from: 'id Software', arrow: '→', to: 'ZeniMax / Bethesda (2009)', note: 'id acquired by ZeniMax; Doom (2016) reboot produced under new ownership' },
+      ],
+    },
+    {
+      name: 'Ultimate Play the Game → Rare',
+      desc: 'Chris and Tim Stamper founded Ultimate Play the Game in 1982, producing landmark ZX Spectrum games. They rebranded as Rare in 1985 and built a 25-year relationship with Nintendo that produced Donkey Kong Country and GoldenEye 007.',
+      entries: [
+        { from: 'Ultimate Play the Game (1982)', arrow: '→', to: 'Rare Ltd. (1985)', note: 'Stamper brothers renamed and repositioned the company for NES development' },
+        { from: 'Rare / Nintendo partnership', arrow: '→', to: 'Donkey Kong Country era (1994)', note: 'Silicon Graphics workstations and pre-rendered sprites redefined 16-bit visuals' },
+        { from: 'Rare', arrow: '→', to: 'Microsoft acquisition (2002)', note: '$375 million acquisition ended the Nintendo relationship; Banjo-Kazooie moved to Xbox' },
+      ],
+    },
+    {
+      name: 'DMA Design → Rockstar',
+      desc: 'David Jones\'s DMA Design in Dundee produced Lemmings and the first Grand Theft Auto before being acquired and rebranded as Rockstar North — the studio that made GTA III and the open-world game formula dominant.',
+      entries: [
+        { from: 'DMA Design (1987, Dundee)', arrow: '→', to: 'Body Harvest / GTA (1997)', note: 'David Jones\'s studio produced Lemmings (1991) before pivoting to open-world crime games' },
+        { from: 'DMA Design', arrow: '→', to: 'Rockstar North (1999)', note: 'BMG Interactive then Take-Two acquired DMA; rebranded after GTA (1997)\'s success' },
+        { from: 'Rockstar North', arrow: '→', to: 'GTA III (2001)', note: 'The 3D open-world formula that defined a decade of action game design' },
+      ],
+    },
+    {
+      name: 'Bullfrog Productions → Mucky Foot / Lionhead',
+      desc: 'Peter Molyneux\'s Bullfrog invented the god game with Populous (1989). After EA\'s 1995 acquisition, Bullfrog\'s alumni founded several influential British studios.',
+      entries: [
+        { from: 'Bullfrog Productions (1987)', arrow: '→', to: 'EA acquisition (1995)', note: 'Peter Molyneux\'s studio; Populous, Theme Park, Dungeon Keeper, Magic Carpet' },
+        { from: 'Bullfrog alumni', arrow: '→', to: 'Lionhead Studios (1997)', note: 'Peter Molyneux founded Lionhead; produced Black & White and Fable' },
+        { from: 'Bullfrog alumni', arrow: '→', to: 'Mucky Foot Productions (1997)', note: 'Theme Hospital team founded Mucky Foot; produced Urban Chaos' },
+        { from: 'Lionhead', arrow: '→', to: 'Microsoft acquisition (2006)', note: 'Fable series moved to Xbox; Lionhead closed by Microsoft in 2016' },
+      ],
+    },
+    {
+      name: 'Apogee Software → 3D Realms → Remedy / Frozenbyte',
+      desc: 'Scott Miller\'s Apogee Software pioneered the shareware model for PC gaming. The developers who passed through Apogee and its successor 3D Realms founded studios across the world.',
+      entries: [
+        { from: 'Apogee Software (1987)', arrow: '→', to: '3D Realms (1994)', note: 'Renamed as the company moved from shareware to retail; produced Duke Nukem 3D' },
+        { from: '3D Realms (Remedy team)', arrow: '→', to: 'Remedy Entertainment (1995, Finland)', note: 'Finnish team that built Death Rally and Max Payne; still independent' },
+        { from: '3D Realms / Terminal Reality', arrow: '→', to: 'Various FPS studios', note: 'Developers who learned on Build Engine and Quake-era tech founded multiple studios' },
+      ],
+    },
+  ];
+
+  const sectionsHtml = lineages.map(l => `
+    <div class="essay-section">
+      <h2>${escapeHtml(l.name)}</h2>
+      <p style="color:var(--text-muted,#aaa);margin-bottom:1.2rem">${escapeHtml(l.desc)}</p>
+      <div style="display:flex;flex-direction:column;gap:0.6rem">
+        ${l.entries.map(e => `
+        <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:0.8rem;align-items:center;background:rgba(255,255,255,0.04);border-radius:6px;padding:0.8rem 1rem">
+          <div style="font-weight:600;color:var(--accent,#c8a44a)">${escapeHtml(e.from)}</div>
+          <div style="font-size:1.4em;color:var(--text-muted,#888)">${escapeHtml(e.arrow)}</div>
+          <div style="font-weight:600">${escapeHtml(e.to)}</div>
+          ${e.note ? `<div style="grid-column:1/-1;font-size:0.85em;color:var(--text-muted,#999);padding-top:0.3rem">${escapeHtml(e.note)}</div>` : ''}
+        </div>`).join('')}
+      </div>
+    </div>`).join('');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Family Tree – Bosnan</title>
+    <meta name="description" content="The studio lineages of retro gaming: from Atari to Activision, Origin to Looking Glass, id to Valve, Bullfrog to Lionhead.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('family-tree')}
+<div class="essay-wrapper">
+  <div class="essay-header">
+    <div class="essay-meta">Reference</div>
+    <h1 class="essay-title">Developer Family Tree</h1>
+    <p class="essay-subtitle">The studio lineages and alumni networks that shaped retro and modern gaming</p>
+  </div>
+  ${sectionsHtml}
+</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function comparePage(a, b) {
+  const opts = PLATFORMS.map(p => `<option value="${escapeHtml(p.id)}"${a && a.id === p.id ? ' selected' : ''}>${escapeHtml(p.name)}</option>`).join('');
+  const opts2 = PLATFORMS.map(p => `<option value="${escapeHtml(p.id)}"${b && b.id === p.id ? ' selected' : ''}>${escapeHtml(p.name)}</option>`).join('');
+  const formHtml = `<div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:2rem">
+    <form method="GET" action="/compare" style="display:flex;gap:0.8rem;align-items:center;flex-wrap:wrap">
+      <select name="a" style="background:#1a1a1a;color:#fff;border:1px solid #444;padding:0.5rem 0.8rem;border-radius:4px;font-size:1rem">
+        <option value="">Select platform A…</option>${opts}
+      </select>
+      <span style="color:#888;font-size:1.2em">vs</span>
+      <select name="b" style="background:#1a1a1a;color:#fff;border:1px solid #444;padding:0.5rem 0.8rem;border-radius:4px;font-size:1rem">
+        <option value="">Select platform B…</option>${opts2}
+      </select>
+      <button type="submit" style="background:var(--accent,#c8a44a);color:#000;border:none;padding:0.5rem 1.2rem;border-radius:4px;font-size:1rem;cursor:pointer;font-weight:700">Compare</button>
+    </form>
+  </div>`;
+
+  let tableHtml = '';
+  if (a && b) {
+    const fields = [
+      ['Era', 'era'],
+      ['Manufacturer', 'manufacturer'],
+      ['Description', 'description'],
+    ];
+    const aCount = games.filter(g => g.platform.toLowerCase().includes((a.keyword || a.name).toLowerCase())).length;
+    const bCount = games.filter(g => g.platform.toLowerCase().includes((b.keyword || b.name).toLowerCase())).length;
+    tableHtml = `<div style="display:grid;grid-template-columns:200px 1fr 1fr;gap:0;border:1px solid #333;border-radius:8px;overflow:hidden">
+      <div style="background:#111;padding:0.8rem 1rem;font-weight:700;border-bottom:1px solid #333"></div>
+      <div style="background:#111;padding:0.8rem 1rem;font-weight:700;color:var(--accent,#c8a44a);border-bottom:1px solid #333;border-left:1px solid #333">${escapeHtml(a.name)}</div>
+      <div style="background:#111;padding:0.8rem 1rem;font-weight:700;color:var(--accent,#c8a44a);border-bottom:1px solid #333;border-left:1px solid #333">${escapeHtml(b.name)}</div>
+      ${fields.map(([label, key]) => `
+      <div style="padding:0.8rem 1rem;border-bottom:1px solid #222;font-weight:600;font-size:0.9em;color:#999">${escapeHtml(label)}</div>
+      <div style="padding:0.8rem 1rem;border-bottom:1px solid #222;border-left:1px solid #222;font-size:0.9em">${escapeHtml((a[key] || '').substring(0, 200))}</div>
+      <div style="padding:0.8rem 1rem;border-bottom:1px solid #222;border-left:1px solid #222;font-size:0.9em">${escapeHtml((b[key] || '').substring(0, 200))}</div>`).join('')}
+      <div style="padding:0.8rem 1rem;font-weight:600;font-size:0.9em;color:#999">Games in Archive</div>
+      <div style="padding:0.8rem 1rem;border-left:1px solid #222;font-size:0.9em;font-weight:700">${aCount}</div>
+      <div style="padding:0.8rem 1rem;border-left:1px solid #222;font-size:0.9em;font-weight:700">${bCount}</div>
+    </div>
+    ${a.longDescription ? `<div style="margin-top:2rem"><h3 style="margin-bottom:0.5rem">${escapeHtml(a.name)}</h3><p style="color:#bbb;line-height:1.7">${escapeHtml(a.longDescription.substring(0, 600))}…</p></div>` : ''}
+    ${b.longDescription ? `<div style="margin-top:1.5rem"><h3 style="margin-bottom:0.5rem">${escapeHtml(b.name)}</h3><p style="color:#bbb;line-height:1.7">${escapeHtml(b.longDescription.substring(0, 600))}…</p></div>` : ''}`;
+  }
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Platforms – Bosnan</title>
+    <meta name="description" content="Compare any two retro gaming platforms side by side — specs, era, and games in the archive.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('compare')}
+<div class="essay-wrapper">
+  <div class="essay-header">
+    <h1 class="essay-title">Compare Platforms</h1>
+    <p class="essay-subtitle">Select any two platforms to see them side by side</p>
+  </div>
+  ${formHtml}
+  ${tableHtml}
+</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function searchPage(q) {
+  const ql = q.toLowerCase();
+  let resultsHtml = '';
+
+  if (q.length >= 2) {
+    const matchedGames = games.filter(g =>
+      g.title.toLowerCase().includes(ql) ||
+      g.developer.toLowerCase().includes(ql) ||
+      (g.description || '').toLowerCase().includes(ql)
+    ).slice(0, 24);
+
+    const matchedEssays = ESSAYS.filter(e =>
+      e.title.toLowerCase().includes(ql) ||
+      (e.summary || '').toLowerCase().includes(ql)
+    ).slice(0, 6);
+
+    const matchedPlatforms = PLATFORMS.filter(p =>
+      p.name.toLowerCase().includes(ql) ||
+      (p.description || '').toLowerCase().includes(ql)
+    ).slice(0, 4);
+
+    const matchedDevs = DEVELOPERS.filter(d =>
+      d.name.toLowerCase().includes(ql) ||
+      (d.description || '').toLowerCase().includes(ql)
+    ).slice(0, 4);
+
+    const matchedDesigners = DESIGNERS.filter(d =>
+      d.name.toLowerCase().includes(ql) ||
+      (d.description || '').toLowerCase().includes(ql)
+    ).slice(0, 4);
+
+    const matchedComposers = COMPOSERS.filter(c =>
+      c.name.toLowerCase().includes(ql) ||
+      (c.description || '').toLowerCase().includes(ql)
+    ).slice(0, 4);
+
+    const matchedPublishers = PUBLISHERS.filter(p =>
+      p.name.toLowerCase().includes(ql) ||
+      (p.description || '').toLowerCase().includes(ql)
+    ).slice(0, 4);
+
+    const total = matchedGames.length + matchedEssays.length + matchedPlatforms.length +
+      matchedDevs.length + matchedDesigners.length + matchedComposers.length + matchedPublishers.length;
+
+    if (total === 0) {
+      resultsHtml = `<p style="color:#888;margin-top:2rem">No results found for "<strong>${escapeHtml(q)}</strong>".</p>`;
+    } else {
+      resultsHtml = `<p style="color:#888;margin-bottom:1.5rem">${total} result${total !== 1 ? 's' : ''} for "<strong>${escapeHtml(q)}</strong>"</p>`;
+
+      if (matchedGames.length) {
+        resultsHtml += `<h2 style="margin-bottom:1rem">Games (${matchedGames.length})</h2>
+        <div class="games-grid">${buildCardHtml(matchedGames, 4)}</div>`;
+      }
+
+      const mkLinks = (items, href, label) => items.length ? `<h2 style="margin-top:2rem;margin-bottom:0.8rem">${label} (${items.length})</h2>
+        <div class="platforms-grid">${items.map(x => `<a href="${href(x)}" class="platform-card">
+          <div class="platform-card-name">${escapeHtml(x.name || x.title)}</div>
+          <p class="platform-card-desc">${escapeHtml((x.description || x.summary || '').substring(0, 120))}</p>
+        </a>`).join('')}</div>` : '';
+
+      resultsHtml += mkLinks(matchedPlatforms, p => `/platforms/${p.id}`, 'Platforms');
+      resultsHtml += mkLinks(matchedDevs, d => `/developers/${d.id}`, 'Developers');
+      resultsHtml += mkLinks(matchedDesigners, d => `/designers/${d.id}`, 'Designers');
+      resultsHtml += mkLinks(matchedComposers, c => `/composers/${c.id}`, 'Composers');
+      resultsHtml += mkLinks(matchedPublishers, p => `/publishers/${p.id}`, 'Publishers');
+      resultsHtml += mkLinks(matchedEssays, e => `/essays/${e.id}`, 'Essays');
+    }
+  }
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${q ? escapeHtml(q) + ' – ' : ''}Search – Bosnan</title>
+    <meta name="description" content="Search the Bosnan retro games archive.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('search')}
+<div class="essay-wrapper">
+  <div class="essay-header">
+    <h1 class="essay-title">Search</h1>
+  </div>
+  <form method="GET" action="/search" style="display:flex;gap:0.8rem;margin-bottom:2rem;max-width:600px">
+    <input type="text" name="q" value="${escapeHtml(q)}" placeholder="Search games, essays, people, platforms…"
+      autofocus style="flex:1;background:#1a1a1a;color:#fff;border:1px solid #444;padding:0.6rem 1rem;border-radius:4px;font-size:1rem">
+    <button type="submit" style="background:var(--accent,#c8a44a);color:#000;border:none;padding:0.6rem 1.2rem;border-radius:4px;font-size:1rem;cursor:pointer;font-weight:700">Search</button>
+  </form>
+  ${resultsHtml}
 </div>
 ${toggleScript()}
 </body>
