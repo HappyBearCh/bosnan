@@ -34,6 +34,14 @@ const VOICE_ACTORS = require('./data/voice-actors');
 const PIXEL_ARTISTS = require('./data/pixel-artists');
 const PRODUCERS = require('./data/producers');
 const COLLECTIONS = require('./data/collections');
+const SEQUELS = require('./data/sequels');
+const ROM_HACKS = require('./data/rom-hacks');
+const AD_CAMPAIGNS = require('./data/ad-campaigns');
+const SALES_FIGURES = require('./data/sales-figures');
+const SPEEDRUNS = require('./data/speedruns');
+const CRITICS = require('./data/critics');
+const YEAR_REVIEWS = require('./data/year-reviews');
+const YEAR_REVIEWS_MAP = new Map(YEAR_REVIEWS.map(y => [String(y.year), y]));
 const gamesSlim = games.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
   ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
 );
@@ -402,6 +410,20 @@ const cachedComposerPageHtml = {};
 const cachedFranchisePageHtml = {};
 const cachedHardwarePageHtml = {};
 const cachedGamePageHtml = new Map();
+let cachedSequelsListHtml = null;
+let cachedRomHacksListHtml = null;
+let cachedAdCampaignsListHtml = null;
+let cachedSalesFiguresHtml = null;
+let cachedSpeedrunsListHtml = null;
+let cachedCriticsListHtml = null;
+let cachedWordSearchHtml = null;
+let cachedBookmarksHtml = null;
+const cachedSequelPageHtml = {};
+const cachedRomHackPageHtml = {};
+const cachedAdCampaignPageHtml = {};
+const cachedSalesFigurePageHtml = {};
+const cachedSpeedrunPageHtml = {};
+const cachedCriticPageHtml = {};
 let cachedControversiesListHtml = null;
 let cachedFailedConsolesListHtml = null;
 let cachedGameEnginesListHtml = null;
@@ -535,6 +557,14 @@ function nav(active) {
         ${link('/search', 'Search', 'search')}
         ${link('/genres', 'Encyclopedia', 'genres')}
         ${link('/essays', 'Essays', 'essays')}
+        ${link('/sequels', 'Sequels', 'sequels')}
+        ${link('/rom-hacks', 'ROM Hacks', 'rom-hacks')}
+        ${link('/ad-campaigns', 'Ads', 'ad-campaigns')}
+        ${link('/sales-figures', 'Sales', 'sales-figures')}
+        ${link('/speedruns', 'Speedruns', 'speedruns')}
+        ${link('/critics', 'Critics', 'critics')}
+        ${link('/wordsearch', 'Word Search', 'wordsearch')}
+        ${link('/bookmarks', 'Bookmarks', 'bookmarks')}
         ${link('/controversies', 'Controversies', 'controversies')}
         ${link('/failed-consoles', 'Failed Consoles', 'failed-consoles')}
         ${link('/game-engines', 'Engines', 'game-engines')}
@@ -597,7 +627,7 @@ app.get('/sitemap.xml', (req, res) => {
   if (!cachedSitemap || cachedSitemap.host !== host) {
     const base = `${req.protocol}://${host}`;
     const today = new Date().toISOString().split('T')[0];
-    const staticUrls = ['', '/games', '/platforms', '/developers', '/composers', '/franchises', '/hardware', '/designers', '/publishers', '/arcade-boards', '/peripherals', '/lost-games', '/years', '/decades', '/regional', '/family-tree', '/compare', '/search', '/genres', '/essays', '/magazines', '/box-art', '/ports', '/voice-actors', '/pixel-artists', '/producers', '/collections', '/timeline', '/stats', '/recent', '/controversies', '/failed-consoles', '/game-engines', '/sound-chips', '/easter-eggs', '/cheat-codes', '/glossary', '/quiz', '/on-this-day', '/map'].map(p => `
+    const staticUrls = ['', '/games', '/platforms', '/developers', '/composers', '/franchises', '/hardware', '/designers', '/publishers', '/arcade-boards', '/peripherals', '/lost-games', '/years', '/decades', '/regional', '/family-tree', '/compare', '/search', '/genres', '/essays', '/magazines', '/box-art', '/ports', '/voice-actors', '/pixel-artists', '/producers', '/collections', '/timeline', '/stats', '/recent', '/controversies', '/failed-consoles', '/game-engines', '/sound-chips', '/easter-eggs', '/cheat-codes', '/glossary', '/quiz', '/on-this-day', '/map', '/sequels', '/rom-hacks', '/ad-campaigns', '/sales-figures', '/speedruns', '/critics', '/wordsearch', '/bookmarks'].map(p => `
   <url>
     <loc>${base}${p}</loc>
     <lastmod>${today}</lastmod>
@@ -807,10 +837,45 @@ app.get('/sitemap.xml', (req, res) => {
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>`).join('');
+    const sequelUrls = SEQUELS.map(s => `
+  <url>
+    <loc>${base}/sequels/${s.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const romHackUrls = ROM_HACKS.map(r => `
+  <url>
+    <loc>${base}/rom-hacks/${r.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const adCampaignUrls = AD_CAMPAIGNS.map(a => `
+  <url>
+    <loc>${base}/ad-campaigns/${a.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const speedrunUrls = SPEEDRUNS.map(s => `
+  <url>
+    <loc>${base}/speedruns/${s.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const criticUrls = CRITICS.map(c => `
+  <url>
+    <loc>${base}/critics/${c.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
     cachedSitemap = {
       host,
       xml: `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${designerUrls}${publisherUrls}${arcadeBoardUrls}${peripheralUrls}${lostGameUrls}${regionalUrls}${genreUrls}${essayUrls}${yearUrls}${decadeUrls}${magazineUrls}${boxArtUrls}${portUrls}${voiceActorUrls}${pixelArtistUrls}${producerUrls}${collectionUrls}${controversyUrls}${failedConsoleUrls}${gameEngineUrls}${soundChipUrls}${easterEggUrls}${cheatCodeUrls}${gameUrls}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${designerUrls}${publisherUrls}${arcadeBoardUrls}${peripheralUrls}${lostGameUrls}${regionalUrls}${genreUrls}${essayUrls}${yearUrls}${decadeUrls}${magazineUrls}${boxArtUrls}${portUrls}${voiceActorUrls}${pixelArtistUrls}${producerUrls}${collectionUrls}${controversyUrls}${failedConsoleUrls}${gameEngineUrls}${soundChipUrls}${easterEggUrls}${cheatCodeUrls}${sequelUrls}${romHackUrls}${adCampaignUrls}${speedrunUrls}${criticUrls}${gameUrls}
 </urlset>`,
     };
   }
@@ -1014,7 +1079,7 @@ app.get('/years', (req, res) => {
 app.get('/years/:year', (req, res) => {
   const year = parseInt(req.params.year, 10);
   if (!yearsIndex.has(year)) return res.status(404).send(notFoundPage());
-  if (!cachedYearPageHtml[year]) cachedYearPageHtml[year] = yearDetailPage(year);
+  if (!cachedYearPageHtml[year]) cachedYearPageHtml[year] = yearDetailPage(year, YEAR_REVIEWS_MAP.get(String(year)));
   res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
   res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
   res.send(cachedYearPageHtml[year]);
@@ -1255,6 +1320,104 @@ app.get('/timeline', (req, res) => {
   res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
   res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
   res.send(cachedTimelineHtml);
+});
+
+app.get('/sequels', (req, res) => {
+  if (!cachedSequelsListHtml) cachedSequelsListHtml = sequelsListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedSequelsListHtml);
+});
+app.get('/sequels/:id', (req, res) => {
+  const item = SEQUELS.find(s => s.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedSequelPageHtml[item.id]) cachedSequelPageHtml[item.id] = sequelDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.send(cachedSequelPageHtml[item.id]);
+});
+
+app.get('/rom-hacks', (req, res) => {
+  if (!cachedRomHacksListHtml) cachedRomHacksListHtml = romHacksListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedRomHacksListHtml);
+});
+app.get('/rom-hacks/:id', (req, res) => {
+  const item = ROM_HACKS.find(r => r.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedRomHackPageHtml[item.id]) cachedRomHackPageHtml[item.id] = romHackDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.send(cachedRomHackPageHtml[item.id]);
+});
+
+app.get('/ad-campaigns', (req, res) => {
+  if (!cachedAdCampaignsListHtml) cachedAdCampaignsListHtml = adCampaignsListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedAdCampaignsListHtml);
+});
+app.get('/ad-campaigns/:id', (req, res) => {
+  const item = AD_CAMPAIGNS.find(a => a.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedAdCampaignPageHtml[item.id]) cachedAdCampaignPageHtml[item.id] = adCampaignDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.send(cachedAdCampaignPageHtml[item.id]);
+});
+
+app.get('/sales-figures', (req, res) => {
+  if (!cachedSalesFiguresHtml) cachedSalesFiguresHtml = salesFiguresPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedSalesFiguresHtml);
+});
+app.get('/sales-figures/:id', (req, res) => {
+  const item = SALES_FIGURES.find(s => s.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedSalesFigurePageHtml[item.id]) cachedSalesFigurePageHtml[item.id] = salesFigureDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.send(cachedSalesFigurePageHtml[item.id]);
+});
+
+app.get('/speedruns', (req, res) => {
+  if (!cachedSpeedrunsListHtml) cachedSpeedrunsListHtml = speedrunsListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedSpeedrunsListHtml);
+});
+app.get('/speedruns/:id', (req, res) => {
+  const item = SPEEDRUNS.find(s => s.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedSpeedrunPageHtml[item.id]) cachedSpeedrunPageHtml[item.id] = speedrunDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.send(cachedSpeedrunPageHtml[item.id]);
+});
+
+app.get('/critics', (req, res) => {
+  if (!cachedCriticsListHtml) cachedCriticsListHtml = criticsListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedCriticsListHtml);
+});
+app.get('/critics/:id', (req, res) => {
+  const item = CRITICS.find(c => c.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedCriticPageHtml[item.id]) cachedCriticPageHtml[item.id] = criticDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.send(cachedCriticPageHtml[item.id]);
+});
+
+app.get('/wordsearch', (req, res) => {
+  if (!cachedWordSearchHtml) cachedWordSearchHtml = wordSearchPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedWordSearchHtml);
+});
+
+app.get('/bookmarks', (req, res) => {
+  if (!cachedBookmarksHtml) cachedBookmarksHtml = bookmarksPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedBookmarksHtml);
 });
 
 app.get('/controversies', (req, res) => {
@@ -1739,6 +1902,7 @@ ${nav('games')}
       <div class="game-decade-badge">${escapeHtml(game.decade)}</div>
       <h1 class="game-detail-title">${escapeHtml(game.title)}</h1>
       <p class="game-detail-year">${escapeHtml(String(game.year))} &middot; ${escapeHtml(game.genre)} &middot; ${escapeHtml(game.platform)}</p>
+      ${bookmarkBtn(game.id, game.title, 'game')}
       <div class="game-detail-desc">
         <h2>Overview</h2>
         <p>${escapeHtml(game.description)}</p>
@@ -2152,6 +2316,7 @@ ${nav('essays')}
     </div>
     <h1 class="essay-title">${escapeHtml(essay.title)}</h1>
     <p class="essay-subtitle">${escapeHtml(essay.subtitle)}</p>
+    ${bookmarkBtn(essay.id, essay.title, 'essay')}
   </div>
 
   <div class="essay-layout">
@@ -2662,19 +2827,28 @@ ${toggleScript()}
 </html>`;
 }
 
-function yearDetailPage(year) {
+function yearDetailPage(year, review) {
   const yGames = (yearsIndex.get(year) || []).slice().sort((a, b) => a.title.localeCompare(b.title));
   const cardHtml = buildCardHtml(yGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
   const inlineData = JSON.stringify(yGames.map(({ id, title, year: y, decade, genre, platform, developer, image, playUrl }) =>
     ({ id, title, year: y, decade, genre, platform, developer, image, playUrl: playUrl || null })
   ));
+  const reviewHtml = review ? `
+  <div style="border-bottom:1px solid #333;padding-bottom:2rem;margin-bottom:2rem">
+    <h2 style="color:var(--accent,#c8a44a);font-size:1.4em;margin-bottom:0.5rem">${escapeHtml(review.headline)}</h2>
+    <p style="color:#ccc;line-height:1.7;margin-bottom:1.2rem">${escapeHtml(review.summary)}</p>
+    ${(review.topEvents || []).length ? `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0.8rem;margin-bottom:1.5rem">${review.topEvents.map(e => `<div style="background:rgba(255,255,255,0.04);border-radius:6px;padding:0.8rem 1rem"><div style="font-weight:700;margin-bottom:0.3rem;font-size:0.9em">${escapeHtml(e.title)}</div><div style="color:#bbb;font-size:0.85em;line-height:1.5">${escapeHtml(e.desc)}</div></div>`).join('')}</div>` : ''}
+    ${(review.sections || []).map(s => `<div style="margin-bottom:1.5rem"><h3 style="margin-bottom:0.6rem">${escapeHtml(s.title)}</h3><div style="color:#ccc;line-height:1.7">${s.html}</div></div>`).join('')}
+    ${review.quote ? `<blockquote style="border-left:3px solid var(--accent,#c8a44a);padding-left:1rem;margin:1rem 0;color:#aaa;font-style:italic">${escapeHtml(review.quote)}</blockquote>` : ''}
+  </div>` : '';
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${year} Games – Bosnan</title>
-    <meta name="description" content="${yGames.length} games from ${year} in the Bosnan retro archive.">
+    <title>${year} in Gaming – Bosnan</title>
+    <meta name="description" content="${review ? escapeHtml(review.summary.substring(0, 160)) : `${yGames.length} games from ${year} in the Bosnan retro archive.`}">
+    <style>h1,h2,h3{font-family:inherit}</style>
     ${cssHead()}
 </head>
 <body>
@@ -2686,6 +2860,8 @@ ${nav('years')}
     <h1>${year}</h1>
     <p class="platform-detail-era">${yGames.length} game${yGames.length !== 1 ? 's' : ''} in archive from ${year}</p>
   </div>
+  ${reviewHtml}
+  <h2 style="margin-bottom:1rem">Games from ${year}</h2>
   <div class="games-grid" id="gamesGrid">${cardHtml}</div>
   <div id="loadMoreSentinel" style="height:1px"></div>
 </div>
@@ -3359,6 +3535,189 @@ ${nav('search')}
 ${toggleScript()}
 </body>
 </html>`;
+}
+
+function bookmarkBtn(id, title, type) {
+  return `<button id="bm-${escapeHtml(id)}" onclick="toggleBM('${escapeHtml(id)}','${escapeHtml(title.replace(/'/g,"\\\'"))}','${escapeHtml(type)}')" style="background:rgba(255,255,255,0.06);border:1px solid #444;color:#fff;padding:0.4rem 0.9rem;border-radius:5px;cursor:pointer;font-size:0.85em;margin-top:0.8rem">&#9734; Save</button>
+<script>
+(function(){
+  const k='bosnan_bm';
+  function bms(){try{return JSON.parse(localStorage.getItem(k)||'[]');}catch(e){return[];}}
+  const id='${escapeHtml(id)}';
+  const btn=document.getElementById('bm-'+id);
+  function upd(){const has=bms().some(b=>b.id===id);btn.innerHTML=has?'&#9733; Saved':'&#9734; Save';btn.style.color=has?'var(--accent,#c8a44a)':'#fff';}
+  upd();
+  window.toggleBM=function(id,title,type){const list=bms();const i=list.findIndex(b=>b.id===id);if(i>=0)list.splice(i,1);else list.push({id,title,type});localStorage.setItem(k,JSON.stringify(list));upd();};
+})();
+</script>`;
+}
+
+function sequelsListPage() {
+  const cards = SEQUELS.map(s => `<a href="/sequels/${s.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(s.title)}</div>
+    <div class="platform-card-era">${escapeHtml(s.series)} &middot; ${escapeHtml(s.platform)} &middot; ${s.year}</div>
+    <p class="platform-card-desc">${escapeHtml(s.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sequels That Changed Everything – Bosnan</title><meta name="description" content="How sequels reinvented their franchises: Mario 3, A Link to the Past, Symphony of the Night, Super Metroid and more."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('sequels')}<section class="platforms-hero"><h1>Sequels That Changed Everything</h1><p>Not just more — fundamentally different</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function sequelDetailPage(item) {
+  const changed = (item.changedWhat || []).map(c => `<li>${escapeHtml(c)}</li>`).join('');
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<div class="essay-section"><h2>${escapeHtml(s.title)}</h2>${s.html}</div>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Sequels – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('sequels')}<div class="essay-wrapper"><a href="/sequels" class="back-link">&#8592; All Sequels</a><div class="essay-header"><div class="essay-meta">${escapeHtml(item.series)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year}</div><h1 class="essay-title">${escapeHtml(item.title)}</h1><p class="essay-subtitle">${escapeHtml(item.description)}</p>${item.original ? `<p style="color:#888;font-size:0.9em">Follows: <em>${escapeHtml(item.original)}</em></p>` : ''}</div>${changed ? `<div class="essay-section"><h2>What Changed</h2><ul class="trivia-list">${changed}</ul></div>` : ''}${sections}${facts ? `<div class="essay-section"><h2>Key Facts</h2><ul class="trivia-list">${facts}</ul></div>` : ''}</div>${toggleScript()}</body></html>`;
+}
+
+function romHacksListPage() {
+  const typeColors = { 'Difficulty Hack': '#f44336', 'Translation': '#2196f3', 'Total Conversion': '#9c27b0', 'Restoration': '#4caf50', 'Randomiser': '#ff9800', 'Bug Fix': '#607d8b' };
+  const cards = ROM_HACKS.map(r => `<a href="/rom-hacks/${r.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(r.title)}</div>
+    <div class="platform-card-era">${escapeHtml(r.baseGame)} &middot; ${r.year}</div>
+    <div class="platform-card-count" style="color:${typeColors[r.type]||'#888'}">${escapeHtml(r.type)}</div>
+    <p class="platform-card-desc">${escapeHtml(r.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ROM Hacks &amp; Mods – Bosnan</title><meta name="description" content="Famous ROM hacks and fan modifications: Kaizo Mario, Doom WADs, Zelda randomiser, Mother fan translation and more."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('rom-hacks')}<section class="platforms-hero"><h1>ROM Hacks &amp; Mods</h1><p>Fan modifications, translations, and total conversions</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function romHackDetailPage(item) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – ROM Hacks – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('rom-hacks')}<div class="platform-detail-wrapper"><a href="/rom-hacks" class="back-link">&#8592; All ROM Hacks</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">Base: ${escapeHtml(item.baseGame)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.type)}</p>${item.creator ? `<p class="platform-detail-era" style="font-size:0.9em;opacity:0.7">Creator: ${escapeHtml(item.creator)}</p>` : ''}<p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${item.notableFor ? `<div class="dev-notable"><strong>Legacy:</strong> ${escapeHtml(item.notableFor)}</div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
+}
+
+function adCampaignsListPage() {
+  const cards = AD_CAMPAIGNS.map(a => `<a href="/ad-campaigns/${a.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(a.title)}</div>
+    <div class="platform-card-era">${escapeHtml(a.company)} &middot; ${a.year}</div>
+    <div class="platform-card-count" style="font-style:italic;color:var(--accent,#c8a44a)">${escapeHtml(a.tagline || '')}</div>
+    <p class="platform-card-desc">${escapeHtml(a.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Advertising Campaigns – Bosnan</title><meta name="description" content="Iconic game advertising: Genesis Does What Nintendon't, PlayStation Double Life, Now You're Playing With Power and more."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('ad-campaigns')}<section class="platforms-hero"><h1>Advertising Campaigns</h1><p>The marketing that shaped the console wars</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function adCampaignDetailPage(item) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Ad Campaigns – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('ad-campaigns')}<div class="platform-detail-wrapper"><a href="/ad-campaigns" class="back-link">&#8592; All Campaigns</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.company)} &middot; ${item.year} &middot; ${escapeHtml(item.product || '')}</p>${item.tagline ? `<blockquote style="border-left:3px solid var(--accent,#c8a44a);padding-left:1rem;margin:1rem 0;font-style:italic;font-size:1.2em;color:var(--accent,#c8a44a)">"${escapeHtml(item.tagline)}"</blockquote>` : ''}<p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${item.impact ? `<div class="dev-notable"><strong>Impact:</strong> ${escapeHtml(item.impact)}</div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
+}
+
+function salesFiguresPage() {
+  const cards = SALES_FIGURES.map(s => `<a href="/sales-figures/${s.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(s.title)}</div>
+    <div class="platform-card-era">${escapeHtml(s.type)} &middot; ${escapeHtml(s.period)}</div>
+    <div class="platform-card-count" style="font-size:1.2em;font-weight:900;color:var(--accent,#c8a44a)">${escapeHtml(s.units)}</div>
+    <p class="platform-card-desc">${escapeHtml(s.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sales Figures – Bosnan</title><meta name="description" content="Retro gaming by the numbers: NES, Game Boy, PlayStation, Tetris, Super Mario Bros. and the sales that defined the industry."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('sales-figures')}<section class="platforms-hero"><h1>Sales Figures</h1><p>Gaming history measured in units and dollars</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function salesFigureDetailPage(item) {
+  const context = (item.context || []).map(c => `<li>${escapeHtml(c)}</li>`).join('');
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Sales Figures – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('sales-figures')}<div class="platform-detail-wrapper"><a href="/sales-figures" class="back-link">&#8592; All Sales Figures</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.type)} &middot; ${escapeHtml(item.period)}</p><div style="font-size:3em;font-weight:900;color:var(--accent,#c8a44a);margin:0.5rem 0">${escapeHtml(item.units)}</div><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${context ? `<div class="dev-notable"><strong>In Context:</strong><ul class="trivia-list">${context}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
+}
+
+function speedrunsListPage() {
+  const cards = SPEEDRUNS.map(s => `<a href="/speedruns/${s.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(s.game)}</div>
+    <div class="platform-card-era">${escapeHtml(s.platform)} &middot; ${escapeHtml(s.category)}</div>
+    <div class="platform-card-count" style="font-family:monospace;color:var(--accent,#c8a44a)">${escapeHtml(s.currentWR)}</div>
+    <p class="platform-card-desc">${escapeHtml(s.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Speedruns – Bosnan</title><meta name="description" content="Iconic speedrun histories: Super Mario Bros. sub-5, Ocarina of Time wrong warp, GoldenEye bond tricks and more."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('speedruns')}<section class="platforms-hero"><h1>Speedruns</h1><p>The races to the bottom of the clock</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function speedrunDetailPage(item) {
+  const techniques = (item.famousTechniques || []).map(t => `<li>${escapeHtml(t)}</li>`).join('');
+  const runners = (item.notableRunners || []).map(r => `<li>${escapeHtml(r)}</li>`).join('');
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.game)} Speedrun – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('speedruns')}<div class="platform-detail-wrapper"><a href="/speedruns" class="back-link">&#8592; All Speedruns</a><div class="platform-detail-header"><h1>${escapeHtml(item.game)}</h1><p class="platform-detail-era">${escapeHtml(item.platform)} &middot; ${escapeHtml(item.category)} &middot; ${item.year}</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0">${item.currentWR ? `<div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:0.8em;color:#888;margin-bottom:0.3rem">Current WR</div><div style="font-size:1.6em;font-weight:900;font-family:monospace;color:var(--accent,#c8a44a)">${escapeHtml(item.currentWR)}</div></div>` : ''}${item.firstKnownRun ? `<div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:0.8em;color:#888;margin-bottom:0.3rem">First Known Run</div><div style="font-size:1.6em;font-weight:900;font-family:monospace;color:#888">${escapeHtml(item.firstKnownRun)}</div></div>` : ''}</div><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${techniques ? `<div class="dev-notable"><strong>Famous Techniques:</strong><ul class="trivia-list">${techniques}</ul></div>` : ''}${runners ? `<div class="dev-notable"><strong>Notable Runners:</strong><ul class="trivia-list">${runners}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
+}
+
+function criticsListPage() {
+  const cards = CRITICS.map(c => `<a href="/critics/${c.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(c.name)}</div>
+    <div class="platform-card-era">${escapeHtml(c.role)} &middot; ${escapeHtml(c.outlet)} &middot; ${escapeHtml(c.era)}</div>
+    <p class="platform-card-desc">${escapeHtml(c.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Critics &amp; Journalists – Bosnan</title><meta name="description" content="The writers who shaped games coverage: Bill Kunkel, Dave Halverson, Jeff Gerstmann, Kieron Gillen and more."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('critics')}<section class="platforms-hero"><h1>Critics &amp; Journalists</h1><p>The writers who shaped how we talk about games</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function criticDetailPage(item) {
+  const work = (item.notableWork || []).map(w => `<li>${escapeHtml(w)}</li>`).join('');
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.name)} – Critics – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('critics')}<div class="platform-detail-wrapper"><a href="/critics" class="back-link">&#8592; All Critics</a><div class="platform-detail-header"><h1>${escapeHtml(item.name)}</h1><p class="platform-detail-era">${escapeHtml(item.role)} &middot; ${escapeHtml(item.outlet)} &middot; ${escapeHtml(item.era)}${item.nationality ? ' &middot; ' + escapeHtml(item.nationality) : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${work ? `<div class="dev-notable"><strong>Notable Work:</strong><ul class="trivia-list">${work}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
+}
+
+function wordSearchPage() {
+  const wordList = games.map(g => g.title.replace(/[^A-Z]/gi, '').toUpperCase()).filter(w => w.length >= 4 && w.length <= 12).filter((v, i, a) => a.indexOf(v) === i).sort(() => Math.random() - 0.5).slice(0, 15);
+  const SIZE = 15;
+  const grid = Array.from({ length: SIZE }, () => Array(SIZE).fill(''));
+  const placed = [];
+  const dirs = [[0,1],[1,0],[0,-1],[-1,0],[1,1],[1,-1],[-1,1],[-1,-1]];
+  for (const word of wordList) {
+    let tries = 0, ok = false;
+    while (tries++ < 100 && !ok) {
+      const [dr, dc] = dirs[Math.floor(Math.random() * dirs.length)];
+      const r = Math.floor(Math.random() * SIZE);
+      const c = Math.floor(Math.random() * SIZE);
+      let fits = true;
+      for (let i = 0; i < word.length; i++) {
+        const nr = r + dr * i, nc = c + dc * i;
+        if (nr < 0 || nr >= SIZE || nc < 0 || nc >= SIZE) { fits = false; break; }
+        if (grid[nr][nc] !== '' && grid[nr][nc] !== word[i]) { fits = false; break; }
+      }
+      if (fits) {
+        for (let i = 0; i < word.length; i++) grid[r + dr * i][c + dc * i] = word[i];
+        placed.push(word);
+        ok = true;
+      }
+    }
+  }
+  const alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  for (let r = 0; r < SIZE; r++) for (let c = 0; c < SIZE; c++) if (!grid[r][c]) grid[r][c] = alpha[Math.floor(Math.random() * 26)];
+  const cells = grid.map((row, r) => row.map((ch, c) => `<td id="c${r}_${c}" onclick="sel(${r},${c})" style="width:2rem;height:2rem;text-align:center;cursor:pointer;user-select:none;border:1px solid #333;font-family:monospace;font-size:1em">${ch}</td>`).join('')).map(row => `<tr>${row}</tr>`).join('');
+  const wordItems = placed.map(w => `<li id="w-${w}" style="font-family:monospace;padding:0.3rem 0">${w}</li>`).join('');
+  const gridData = JSON.stringify(grid);
+  const wordsData = JSON.stringify(placed);
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Word Search – Bosnan</title><meta name="description" content="Find retro game titles hidden in this word search puzzle."><style>h1,h2{font-family:inherit}td.found{background:rgba(200,164,74,0.3);color:var(--accent,#c8a44a)}td.sel{background:rgba(200,164,74,0.15)}</style>${cssHead()}</head><body>${bgLogo()}${nav('wordsearch')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Word Search</h1><p class="essay-subtitle">Find ${placed.length} retro game titles — refreshes with new words each server restart</p></div><div style="display:grid;grid-template-columns:auto 200px;gap:2rem;align-items:start;flex-wrap:wrap"><div style="overflow-x:auto"><table style="border-collapse:collapse">${cells}</table></div><div><h3 style="margin-bottom:0.8rem">Find these words:</h3><ul style="list-style:none;padding:0;margin:0">${wordItems}</ul><p id="winMsg" style="display:none;color:var(--accent,#c8a44a);font-weight:700;margin-top:1rem">You found them all!</p></div></div></div>
+<script>
+const GRID=${gridData},WORDS=${wordsData};
+const SIZE=${SIZE};let sel1=null,found=new Set(),foundCells=new Set();
+function cel(r,c){return document.getElementById('c'+r+'_'+c);}
+function sel(r,c){
+  if(!sel1){sel1=[r,c];cel(r,c).classList.add('sel');return;}
+  const[r1,c1]=sel1;cel(r1,c1).classList.remove('sel');sel1=null;
+  const dr=Math.sign(r-r1),dc=Math.sign(c-c1);
+  const len=Math.max(Math.abs(r-r1),Math.abs(c-c1))+1;
+  let word='';const cells=[];
+  for(let i=0;i<len;i++){const nr=r1+dr*i,nc=c1+dc*i;word+=GRID[nr][nc];cells.push([nr,nc]);}
+  const rev=word.split('').reverse().join('');
+  const match=WORDS.find(w=>w===word||w===rev);
+  if(match&&!found.has(match)){
+    found.add(match);
+    cells.forEach(([nr,nc])=>{cel(nr,nc).classList.add('found');foundCells.add(nr+'_'+nc);});
+    const li=document.getElementById('w-'+match);
+    if(li)li.style.textDecoration='line-through';
+    if(found.size===WORDS.length)document.getElementById('winMsg').style.display='block';
+  }
+}
+</script>
+${toggleScript()}</body></html>`;
+}
+
+function bookmarksPage() {
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Bookmarks – Bosnan</title><meta name="description" content="Your saved games, essays, and articles."><style>h1,h2{font-family:inherit}.bm-card{display:block;background:rgba(255,255,255,0.04);border-radius:8px;padding:1rem 1.2rem;margin-bottom:0.8rem;text-decoration:none;color:inherit;border:1px solid #333}.bm-card:hover{border-color:var(--accent,#c8a44a)}.bm-type{font-size:0.75em;color:#888;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.3rem}.bm-title{font-weight:700}.bm-remove{float:right;background:none;border:none;color:#666;cursor:pointer;font-size:1.2em;padding:0}</style>${cssHead()}</head><body>${bgLogo()}${nav('bookmarks')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Bookmarks</h1><p class="essay-subtitle">Your saved items</p></div><div id="bmList"><p style="color:#888">No bookmarks yet — click the Save button on any game or article page.</p></div></div>
+<script>
+const k='bosnan_bm';
+function bms(){try{return JSON.parse(localStorage.getItem(k)||'[]');}catch(e){return[];}}
+function remove(id){const list=bms().filter(b=>b.id!==id);localStorage.setItem(k,JSON.stringify(list));render();}
+function render(){
+  const list=bms();const el=document.getElementById('bmList');
+  if(!list.length){el.innerHTML='<p style="color:#888">No bookmarks yet — click the Save button on any game or article page.</p>';return;}
+  el.innerHTML=list.map(b=>'<div class="bm-card"><div style="display:flex;justify-content:space-between;align-items:start"><div><div class="bm-type">'+b.type+'</div><a href="/'+b.type.toLowerCase().replace(/ /g,'-')+'s/'+b.id+'" class="bm-title">'+b.title+'</a></div><button class="bm-remove" onclick="remove(\''+b.id+'\')">&#10005;</button></div></div>').join('');
+}
+render();
+</script>
+${toggleScript()}</body></html>`;
 }
 
 function controversiesListPage() {
