@@ -9,11 +9,13 @@ const PORT = 3000;
 
 const games = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'games.json'), 'utf8'));
 const GENRES = require('./data/genres');
-const ESSAYS = [...require('./data/essays'), ...require('./data/essays2'), ...require('./data/essays3'), ...require('./data/essays4'), ...require('./data/essays5'), ...require('./data/essays6'), ...require('./data/essays7'), ...require('./data/essays8'), ...require('./data/essays9')];
+const ESSAYS = [...require('./data/essays'), ...require('./data/essays2'), ...require('./data/essays3'), ...require('./data/essays4'), ...require('./data/essays5'), ...require('./data/essays6'), ...require('./data/essays7'), ...require('./data/essays8'), ...require('./data/essays9'), ...require('./data/essays10')];
 const DEVELOPERS = require('./data/developers');
 const COMPOSERS = require('./data/composers');
 const FRANCHISES = require('./data/franchises');
 const HARDWARE = require('./data/hardware');
+const DESIGNERS = require('./data/designers');
+const REGIONAL = require('./data/regional');
 const gamesSlim = games.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
   ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
 );
@@ -203,6 +205,41 @@ const PLATFORMS = [
     description: 'The Game Gear was Sega\'s answer to the Game Boy: a backlit colour portable with hardware based on the Master System. Technically superior to Nintendo\'s handheld, it was undermined by poor battery life (six AA batteries for four hours) and a software library that lacked the Game Boy\'s depth of exclusives.',
     longDescription: 'Launched in Japan in 1990 and globally in 1991, the Game Gear used essentially the same hardware as the Sega Master System — an 8-bit Z80 CPU and a colour display capable of showing 32 colours simultaneously from a palette of 4,096. Its backlit screen was a genuine advantage over the Game Boy\'s passive LCD, making it far easier to play in low-light conditions, and an optional TV tuner add-on allowed it to receive television signals. The Game Gear sold approximately 10-11 million units — a respectable figure, but one that pales against the Game Boy\'s 118 million. The battery problem was genuine: where the Game Boy ran for 15 hours on four AA batteries, the Game Gear\'s colour backlit display drained six batteries in four hours. Its library, strong in ports of arcade and Master System titles, lacked the Game Boy-exclusive franchises — Pokémon, Mario Land, Zelda — that drove hardware sales.',
   },
+  {
+    id: 'sega-master-system', name: 'Sega Master System', shortName: 'Master System', era: '1985 – 1992',
+    manufacturer: 'Sega',
+    keyword: 'Sega Master System',
+    description: 'The Master System was Sega\'s 8-bit console competitor to the NES — technically superior, with better graphics and sound, but commercially dominated in North America by Nintendo\'s licensing practices and in Japan by the Famicom\'s installed base. It found its strongest market in Europe and Brazil.',
+    longDescription: 'The Sega Master System (known as the Mark III in Japan) launched in 1985 with a Z80 CPU, TMS9918A-derived VDP displaying up to 64 colours simultaneously, and a Yamaha SN76489 sound generator. The hardware exceeded the NES in raw specifications: more colours on screen, smoother scrolling, and a wider colour palette. Despite these advantages, the NES held over 90% of the North American market — a consequence of Nintendo\'s exclusive licensing agreements with third-party publishers that prevented them from releasing games on competing platforms.\n\nEurope and Brazil told a different story. In the UK, France, Germany, and Brazil, the Master System competed effectively with the NES and often outsold it. Sega\'s European distribution infrastructure and the absence of Nintendo\'s restrictive licensing practices in European markets gave third-party developers freedom to release on both platforms, creating a more competitive environment. In Brazil specifically, the Master System\'s popularity persisted into the mid-1990s — local manufacturer TecToy produced the console and new games years after Sega had discontinued it globally.\n\nThe Master System\'s game library included genuine exclusives: Wonder Boy III: The Dragon\'s Trap (1989) was a sophisticated action RPG unavailable on NES; Phantasy Star (1987) was among the finest 8-bit RPGs on any platform; Alex Kidd in Miracle World (1986) was a polished platformer built into the console\'s BIOS as a default cartridge in later hardware revisions. These titles demonstrated Sega\'s capacity for quality first-party development that the system\'s commercial position in North America obscured.',
+  },
+  {
+    id: 'zx-spectrum', name: 'ZX Spectrum', era: '1982 – 1992',
+    manufacturer: 'Sinclair Research',
+    keyword: 'ZX Spectrum',
+    description: 'Clive Sinclair\'s rubber-keyed home computer was the dominant gaming platform in the United Kingdom through the 1980s, producing a generation of British programmers and a software industry that competed globally. Its 48KB of RAM and single-channel beeper defined the aesthetic of British bedroom coding.',
+    longDescription: 'The ZX Spectrum launched in 1982 at £125 for the 16KB model and £175 for the 48KB model — significantly cheaper than any competitor. Clive Sinclair\'s cost-optimisation was aggressive: the rubber keyboard was cheap to manufacture; the single-channel beeper was the minimum audio hardware; the composite video output produced colour with a distinctive attribute-clash artefact where each 8×8 pixel cell could contain only two colours. These constraints were not considered limitations by the British developers who built on them — they were the material of the platform.\n\nThe ZX Spectrum\'s cultural importance in British computing cannot be overstated. A generation of UK programmers learned to code on the platform using Sinclair BASIC before progressing to machine code Z80 programming. Companies that began as bedroom coding operations — Ultimate Play the Game (which became Rare), Psygnosis, Ocean Software, Codemasters — developed their first titles for the Spectrum before expanding to other platforms. The British games industry\'s subsequent international success in the 1990s and 2000s was directly traceable to the development talent that had been trained on Spectrum hardware.\n\nThe Spectrum\'s game library was vast but uneven: alongside genuine classics like Manic Miner, Knight Lore, and Elite, thousands of quickly-produced titles took advantage of the platform\'s low barriers to entry. The attribute-clash artefact — where moving sprites produced colour collisions with the background — was so pervasive that it became part of the platform\'s visual identity. The rubber-keyed original and the later Spectrum+ with conventional keys both sold millions of units across the UK and Europe.',
+  },
+  {
+    id: 'famicom-disk-system', name: 'Famicom Disk System', shortName: 'Famicom Disk System', era: '1986 – 1990',
+    manufacturer: 'Nintendo',
+    keyword: 'Famicom Disk System',
+    description: 'Nintendo\'s floppy disk add-on for the Famicom enabled rewritable game distribution, cheaper storage than cartridges, and additional audio channels via a custom sound chip — making it the platform of origin for Metroid, Zelda II, Kid Icarus, and Doki Doki Panic (the game that became Super Mario Bros. 2).',
+    longDescription: 'The Famicom Disk System used proprietary 71mm "Quick Disk" floppy disks with 112KB of storage per side — more than contemporary Famicom cartridges at a significantly lower manufacturing cost. Nintendo established disk-writing kiosks in Japanese toy stores where players could have disks rewritten with new games for 500 yen, creating a distribution model without parallel in console gaming. The FDS added an extra sound channel — a wavetable synthesis unit producing a distinctive warbling tone — that Famicom games otherwise lacked, and several games used this channel for music that Famicom cartridge versions could not reproduce.\n\nThe FDS was Japan-exclusive; Nintendo shipped NES cartridge versions of FDS games internationally. This created significant differences between Japanese and Western versions: the Japanese Metroid (1986) had a save system enabled by the disk\'s rewritable storage, while the NES version required a password system. Zelda II (1987) was originally a disk game; Kid Icarus debuted on disk; the original Super Mario Bros. 2 — released as "The Lost Levels" internationally — was a FDS game considered too difficult for Western markets, leading Nintendo to ship Doki Doki Panic (another FDS game) as a reskinned substitute.\n\nThe FDS was discontinued in 1990 as cartridge capacity increased and costs decreased, eliminating its primary advantages. The save-function battery that FDS-era cartridges used as an alternative — required for later NES games that needed to save data — was less reliable but more universally compatible with the global Famicom/NES infrastructure.',
+  },
+  {
+    id: 'colecovision', name: 'ColecoVision', era: '1982 – 1985',
+    manufacturer: 'Coleco',
+    keyword: 'ColecoVision',
+    description: 'Coleco\'s 1982 console briefly held the most impressive home versions of arcade games, with Donkey Kong as a launch title that exceeded the Atari 2600 version so dramatically that Coleco used the comparison as a marketing cornerstone. The 1983 crash ended its commercial run.',
+    longDescription: 'The ColecoVision launched in August 1982 with a Donkey Kong port that retained all four stages of the arcade original — the Atari 2600 version had included only two. This difference, immediately apparent to players who had played the arcade game, gave Coleco a compelling marketing position: the console with arcade-quality games. The hardware supported it: the Z80 CPU at 3.58 MHz, TMS9918A video processor displaying 256×192 at 16 colours, and SN76489 sound generator produced specifications that exceeded the Atari 2600 significantly and competed with the Intellivision on favourable terms.\n\nThe ColecoVision sold 6 million units in its commercial window — strong performance for 1982-1983. The 1983 video game crash, triggered by the Atari 2600 market collapse and a flood of poor-quality software, affected all console manufacturers; Coleco discontinued the ColecoVision in 1985. The Expansion Module #1 allowed ColecoVision owners to play Atari 2600 cartridges, providing access to a much larger software library — Atari sued unsuccessfully to prevent this. The ColecoVision\'s legacy is primarily as the first console to demonstrate convincingly that the arcade experience could be approximated at home.',
+  },
+  {
+    id: 'pc-9801', name: 'NEC PC-9801', shortName: 'PC-9801', era: '1982 – 2000',
+    manufacturer: 'NEC',
+    keyword: 'PC-9801',
+    description: 'The NEC PC-9801 was Japan\'s dominant personal computer platform for nearly two decades, running a proprietary DOS-compatible operating system. It was the development platform and primary market for classic Japanese games including the original Ys, Dragon Slayer, and early Touhou Project titles.',
+    longDescription: 'NEC introduced the PC-9801 in 1982 as a business computer running a modified MS-DOS (called PC-DOS) on an Intel 8086 processor. The hardware became Japan\'s dominant personal computer architecture, maintaining over 50% market share through the late 1980s and early 1990s against IBM PC-compatible competition. The platform\'s dominance was sustained by Japanese-language software support and the ecosystem of software, including games, that had been developed specifically for its architecture.\n\nThe PC-9801\'s graphics capabilities — initially 640×400 at 8 colours, later expanded with 16-colour and eventually 256-colour modes — were superior to contemporary IBM PC CGA but required software written specifically for the platform\'s hardware rather than IBM PC standards. This created a parallel game development ecosystem entirely distinct from Western PC gaming: Nihon Falcom\'s Dragon Slayer series and Ys games, Hideo Kojima\'s Snatcher and Policenauts, and the earliest Touhou Project entries were all PC-9801 exclusives before being ported to other platforms or remaining Japan-only.\n\nThe FM sound capabilities of later PC-9801 hardware — typically through optional FM sound boards using Yamaha OPL or OPN chips — enabled game music of quality comparable to dedicated game hardware. Yuzo Koshiro\'s Ys soundtracks, composed for PC-88 and PC-98 FM hardware before being adapted for consoles, represented the peak of Japanese home computer game music. The PC-9801\'s architecture was replaced by IBM PC-compatible hardware in Japan during the mid-1990s as PC/AT-compatible machines achieved sufficient Japanese-language software support to displace the proprietary platform.',
+  },
 ];
 
 // ── Pre-computed indices ────────────────────────────────────────────────────
@@ -225,6 +262,21 @@ for (const dev of DEVELOPERS) {
   developerGamesIndex.set(dev.id, games.filter(g =>
     g.developer.toLowerCase().includes(dev.keyword.toLowerCase()) ||
     g.publisher.toLowerCase().includes(dev.keyword.toLowerCase())
+  ));
+}
+
+const yearsIndex = new Map();
+for (const g of games) {
+  if (!yearsIndex.has(g.year)) yearsIndex.set(g.year, []);
+  yearsIndex.get(g.year).push(g);
+}
+const YEARS = [...yearsIndex.keys()].sort((a, b) => a - b);
+
+const designerGamesIndex = new Map();
+for (const d of DESIGNERS) {
+  designerGamesIndex.set(d.id, games.filter(g =>
+    g.developer.toLowerCase().includes(d.keyword.toLowerCase()) ||
+    g.publisher.toLowerCase().includes(d.keyword.toLowerCase())
   ));
 }
 
@@ -282,6 +334,12 @@ let cachedDevelopersListHtml = null;
 let cachedComposersListHtml = null;
 let cachedFranchisesListHtml = null;
 let cachedHardwareListHtml = null;
+let cachedDesignersListHtml = null;
+let cachedYearsListHtml = null;
+let cachedRegionalListHtml = null;
+const cachedDesignerPageHtml = {};
+const cachedYearPageHtml = {};
+const cachedRegionalPageHtml = {};
 const cachedEssayPageHtml = {};
 let cachedGameLauncherHtml = null;
 const cachedPlatformPageHtml = {};
@@ -378,6 +436,9 @@ function nav(active) {
         ${link('/composers', 'Composers', 'composers')}
         ${link('/franchises', 'Franchises', 'franchises')}
         ${link('/hardware', 'Hardware', 'hardware')}
+        ${link('/designers', 'Designers', 'designers')}
+        ${link('/years', 'By Year', 'years')}
+        ${link('/regional', 'Regional', 'regional')}
         ${link('/genres', 'Encyclopedia', 'genres')}
         ${link('/essays', 'Essays', 'essays')}
         <a href="/random" class="nav-random">&#127922; Random</a>
@@ -422,7 +483,7 @@ app.get('/sitemap.xml', (req, res) => {
   if (!cachedSitemap || cachedSitemap.host !== host) {
     const base = `${req.protocol}://${host}`;
     const today = new Date().toISOString().split('T')[0];
-    const staticUrls = ['', '/games', '/platforms', '/developers', '/composers', '/franchises', '/hardware', '/genres', '/essays'].map(p => `
+    const staticUrls = ['', '/games', '/platforms', '/developers', '/composers', '/franchises', '/hardware', '/designers', '/years', '/regional', '/genres', '/essays'].map(p => `
   <url>
     <loc>${base}${p}</loc>
     <lastmod>${today}</lastmod>
@@ -485,10 +546,31 @@ app.get('/sitemap.xml', (req, res) => {
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`).join('');
+    const designerUrls = DESIGNERS.map(d => `
+  <url>
+    <loc>${base}/designers/${d.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('');
+    const yearUrls = YEARS.map(y => `
+  <url>
+    <loc>${base}/years/${y}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const regionalUrls = REGIONAL.map(r => `
+  <url>
+    <loc>${base}/regional/${r.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('');
     cachedSitemap = {
       host,
       xml: `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${genreUrls}${essayUrls}${gameUrls}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${designerUrls}${regionalUrls}${genreUrls}${essayUrls}${yearUrls}${gameUrls}
 </urlset>`,
     };
   }
@@ -664,6 +746,54 @@ app.get('/hardware/:id', (req, res) => {
   res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
   res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
   res.send(cachedHardwarePageHtml[hw.id]);
+});
+
+app.get('/designers', (req, res) => {
+  if (!cachedDesignersListHtml) cachedDesignersListHtml = designersListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedDesignersListHtml);
+});
+
+app.get('/designers/:id', (req, res) => {
+  const d = DESIGNERS.find(x => x.id === req.params.id);
+  if (!d) return res.status(404).send(notFoundPage());
+  if (!cachedDesignerPageHtml[d.id]) cachedDesignerPageHtml[d.id] = designerDetailPage(d);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedDesignerPageHtml[d.id]);
+});
+
+app.get('/years', (req, res) => {
+  if (!cachedYearsListHtml) cachedYearsListHtml = yearsListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedYearsListHtml);
+});
+
+app.get('/years/:year', (req, res) => {
+  const year = parseInt(req.params.year, 10);
+  if (!yearsIndex.has(year)) return res.status(404).send(notFoundPage());
+  if (!cachedYearPageHtml[year]) cachedYearPageHtml[year] = yearDetailPage(year);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedYearPageHtml[year]);
+});
+
+app.get('/regional', (req, res) => {
+  if (!cachedRegionalListHtml) cachedRegionalListHtml = regionalListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedRegionalListHtml);
+});
+
+app.get('/regional/:id', (req, res) => {
+  const article = REGIONAL.find(x => x.id === req.params.id);
+  if (!article) return res.status(404).send(notFoundPage());
+  if (!cachedRegionalPageHtml[article.id]) cachedRegionalPageHtml[article.id] = regionalDetailPage(article);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedRegionalPageHtml[article.id]);
 });
 
 // ── Page generators ──────────────────────────────────────────────────────────
@@ -1820,6 +1950,216 @@ ${nav('hardware')}
       <tbody>${specRows}</tbody>
     </table>` : ''}
   </div>
+</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function designersListPage() {
+  const cards = DESIGNERS.map(d => {
+    const count = (designerGamesIndex.get(d.id) || []).length;
+    return `<a href="/designers/${d.id}" class="platform-card">
+      <div class="platform-card-name">${escapeHtml(d.name)}</div>
+      <div class="platform-card-era">${escapeHtml(d.country)} &middot; ${escapeHtml(d.role)}</div>
+      <div class="platform-card-count">${count} game${count !== 1 ? 's' : ''} in archive</div>
+      <p class="platform-card-desc">${escapeHtml(d.description)}</p>
+    </a>`;
+  }).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Designers – Bosnan</title>
+    <meta name="description" content="Profiles of the individuals who shaped retro gaming: Miyamoto, Yokoi, Yu Suzuki, Carmack, Molyneux, Tajiri and more.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('designers')}
+<section class="platforms-hero">
+    <h1>Designers</h1>
+    <p>The individuals whose decisions shaped the golden age of gaming</p>
+</section>
+<div class="platforms-grid">${cards}</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function designerDetailPage(d) {
+  const dGames = designerGamesIndex.get(d.id) || [];
+  const cardHtml = buildCardHtml(dGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
+  const inlineData = JSON.stringify(dGames.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
+    ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
+  ));
+  const gamesList = (d.notableGames || []).map(g => `<li>${escapeHtml(g)}</li>`).join('');
+  const factList = (d.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(d.name)} – Designers – Bosnan</title>
+    <meta name="description" content="${escapeHtml(d.description.substring(0, 160))}">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('designers')}
+<div class="platform-detail-wrapper">
+  <a href="/designers" class="back-link">&#8592; All Designers</a>
+  <div class="platform-detail-header">
+    <h1>${escapeHtml(d.name)}</h1>
+    <p class="platform-detail-era">${escapeHtml(d.country)} &middot; Born ${escapeHtml(String(d.born))} &middot; ${escapeHtml(d.employer)} &middot; ${escapeHtml(d.role)}</p>
+    <p class="platform-detail-desc">${escapeHtml(d.description)}</p>
+    <p class="platform-detail-desc">${escapeHtml(d.longDescription)}</p>
+    ${gamesList ? `<div class="dev-notable"><strong>Notable Games:</strong><ul class="trivia-list">${gamesList}</ul></div>` : ''}
+    ${factList ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${factList}</ul></div>` : ''}
+  </div>
+  ${dGames.length > 0 ? `<h2 class="platform-games-heading">${dGames.length} Game${dGames.length !== 1 ? 's' : ''} in Archive</h2>
+  <div class="games-grid" id="gamesGrid">${cardHtml}</div>
+  <div id="loadMoreSentinel" style="height:1px"></div>` : ''}
+</div>
+${toggleScript()}
+${dGames.length > 0 ? `<script>
+const allGames=${inlineData};const PAGE=${PAGE_SIZE};let rendered=Math.min(PAGE,allGames.length);
+const grid=document.getElementById('gamesGrid');const sentinel=document.getElementById('loadMoreSentinel');
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function cardHtml(g){return'<a href="/games/'+g.id+'" class="game-card"><div class="game-card-img-wrap"><img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'"><div class="game-card-decade">'+esc(g.decade)+'</div>'+(g.playUrl?'<div class="game-card-playable">&#9654; Play</div>':'')+'</div><div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3><div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div><p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';}
+function loadMore(){if(rendered>=allGames.length)return;const next=allGames.slice(rendered,rendered+PAGE);grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));rendered+=next.length;}
+new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
+</script>` : ''}
+</body>
+</html>`;
+}
+
+function yearsListPage() {
+  const cards = YEARS.map(y => {
+    const count = (yearsIndex.get(y) || []).length;
+    const dec = y < 1970 ? '1960s' : y < 1980 ? '1970s' : y < 1990 ? '1980s' : '1990s';
+    return `<a href="/years/${y}" class="platform-card">
+      <div class="platform-card-name">${y}</div>
+      <div class="platform-card-era">${escapeHtml(dec)}</div>
+      <div class="platform-card-count">${count} game${count !== 1 ? 's' : ''}</div>
+    </a>`;
+  }).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse by Year – Bosnan</title>
+    <meta name="description" content="Browse ${games.length}+ retro games by release year, from the 1960s through the 1990s.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('years')}
+<section class="platforms-hero">
+    <h1>By Year</h1>
+    <p>Browse the archive by release year</p>
+</section>
+<div class="platforms-grid">${cards}</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function yearDetailPage(year) {
+  const yGames = (yearsIndex.get(year) || []).slice().sort((a, b) => a.title.localeCompare(b.title));
+  const cardHtml = buildCardHtml(yGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
+  const inlineData = JSON.stringify(yGames.map(({ id, title, year: y, decade, genre, platform, developer, image, playUrl }) =>
+    ({ id, title, year: y, decade, genre, platform, developer, image, playUrl: playUrl || null })
+  ));
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${year} Games – Bosnan</title>
+    <meta name="description" content="${yGames.length} games from ${year} in the Bosnan retro archive.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('years')}
+<div class="platform-detail-wrapper">
+  <a href="/years" class="back-link">&#8592; All Years</a>
+  <div class="platform-detail-header">
+    <h1>${year}</h1>
+    <p class="platform-detail-era">${yGames.length} game${yGames.length !== 1 ? 's' : ''} in archive from ${year}</p>
+  </div>
+  <div class="games-grid" id="gamesGrid">${cardHtml}</div>
+  <div id="loadMoreSentinel" style="height:1px"></div>
+</div>
+${toggleScript()}
+<script>
+const allGames=${inlineData};const PAGE=${PAGE_SIZE};let rendered=Math.min(PAGE,allGames.length);
+const grid=document.getElementById('gamesGrid');const sentinel=document.getElementById('loadMoreSentinel');
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function cardHtml(g){return'<a href="/games/'+g.id+'" class="game-card"><div class="game-card-img-wrap"><img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'"><div class="game-card-decade">'+esc(g.decade)+'</div>'+(g.playUrl?'<div class="game-card-playable">&#9654; Play</div>':'')+'</div><div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3><div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div><p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';}
+function loadMore(){if(rendered>=allGames.length)return;const next=allGames.slice(rendered,rendered+PAGE);grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));rendered+=next.length;}
+new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
+</script>
+</body>
+</html>`;
+}
+
+function regionalListPage() {
+  const cards = REGIONAL.map(r => `<a href="/regional/${r.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(r.game)}</div>
+    <div class="platform-card-era">${escapeHtml(r.region1)} vs ${escapeHtml(r.region2)}</div>
+    <div class="platform-card-count">${escapeHtml(r.readTime)}</div>
+    <p class="platform-card-desc">${escapeHtml(r.summary)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regional Differences – Bosnan</title>
+    <meta name="description" content="How retro games changed between regions: censorship, renamed characters, replaced soundtracks, and different versions of classic games.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('regional')}
+<section class="platforms-hero">
+    <h1>Regional Differences</h1>
+    <p>How the same game became different games across countries</p>
+</section>
+<div class="platforms-grid">${cards}</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
+function regionalDetailPage(r) {
+  const sectionsHtml = (r.sections || []).map(s =>
+    `<div class="essay-section"><h2>${escapeHtml(s.title)}</h2><div class="essay-body">${s.html}</div></div>`
+  ).join('');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(r.title)} – Regional Differences – Bosnan</title>
+    <meta name="description" content="${escapeHtml(r.summary)}">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('regional')}
+<div class="essay-wrapper">
+  <a href="/regional" class="back-link">&#8592; All Regional Differences</a>
+  <div class="essay-header">
+    <div class="essay-meta">${escapeHtml(r.region1)} vs ${escapeHtml(r.region2)} &middot; ${escapeHtml(r.game)} &middot; ${escapeHtml(r.readTime)}</div>
+    <h1 class="essay-title">${escapeHtml(r.title)}</h1>
+    <p class="essay-subtitle">${escapeHtml(r.subtitle)}</p>
+  </div>
+  ${sectionsHtml}
 </div>
 ${toggleScript()}
 </body>
