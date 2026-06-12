@@ -42,6 +42,15 @@ const SPEEDRUNS = require('./data/speedruns');
 const CRITICS = require('./data/critics');
 const YEAR_REVIEWS = require('./data/year-reviews');
 const YEAR_REVIEWS_MAP = new Map(YEAR_REVIEWS.map(y => [String(y.year), y]));
+const CANCELLED = require('./data/cancelled');
+const LOCALIZATION = require('./data/localization');
+const PROTOTYPES = require('./data/prototypes');
+const STRATEGY_GUIDES = require('./data/strategy-guides');
+const CABINET_ART = require('./data/cabinet-art');
+const MERCHANDISE = require('./data/merchandise');
+const BOOTLEGS = require('./data/bootlegs');
+const COMPETITIVE = require('./data/competitive');
+const ENDINGS = require('./data/endings');
 const gamesSlim = games.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
   ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
 );
@@ -424,6 +433,24 @@ const cachedAdCampaignPageHtml = {};
 const cachedSalesFigurePageHtml = {};
 const cachedSpeedrunPageHtml = {};
 const cachedCriticPageHtml = {};
+let cachedCancelledListHtml = null;
+let cachedLocalizationListHtml = null;
+let cachedPrototypesListHtml = null;
+let cachedStrategyGuidesListHtml = null;
+let cachedCabinetArtListHtml = null;
+let cachedMerchandiseListHtml = null;
+let cachedBootlegsListHtml = null;
+let cachedCompetitiveListHtml = null;
+let cachedEndingsListHtml = null;
+const cachedCancelledPageHtml = {};
+const cachedLocalizationPageHtml = {};
+const cachedPrototypesPageHtml = {};
+const cachedStrategyGuidePageHtml = {};
+const cachedCabinetArtPageHtml = {};
+const cachedMerchandisePageHtml = {};
+const cachedBootlegPageHtml = {};
+const cachedCompetitivePageHtml = {};
+const cachedEndingPageHtml = {};
 let cachedControversiesListHtml = null;
 let cachedFailedConsolesListHtml = null;
 let cachedGameEnginesListHtml = null;
@@ -565,6 +592,15 @@ function nav(active) {
         ${link('/critics', 'Critics', 'critics')}
         ${link('/wordsearch', 'Word Search', 'wordsearch')}
         ${link('/bookmarks', 'Bookmarks', 'bookmarks')}
+        ${link('/cancelled', 'Cancelled', 'cancelled')}
+        ${link('/localization', 'Localization', 'localization')}
+        ${link('/prototypes', 'Prototypes', 'prototypes')}
+        ${link('/strategy-guides', 'Strategy Guides', 'strategy-guides')}
+        ${link('/cabinet-art', 'Cabinet Art', 'cabinet-art')}
+        ${link('/merchandise', 'Merchandise', 'merchandise')}
+        ${link('/bootlegs', 'Bootlegs', 'bootlegs')}
+        ${link('/competitive', 'Competitive', 'competitive')}
+        ${link('/endings', 'Endings', 'endings')}
         ${link('/controversies', 'Controversies', 'controversies')}
         ${link('/failed-consoles', 'Failed Consoles', 'failed-consoles')}
         ${link('/game-engines', 'Engines', 'game-engines')}
@@ -872,10 +908,73 @@ app.get('/sitemap.xml', (req, res) => {
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>`).join('');
+    const cancelledUrls = CANCELLED.map(c => `
+  <url>
+    <loc>${base}/cancelled/${c.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const localizationUrls = LOCALIZATION.map(l => `
+  <url>
+    <loc>${base}/localization/${l.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const prototypeUrls = PROTOTYPES.map(p => `
+  <url>
+    <loc>${base}/prototypes/${p.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const strategyGuideUrls = STRATEGY_GUIDES.map(g => `
+  <url>
+    <loc>${base}/strategy-guides/${g.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const cabinetArtUrls = CABINET_ART.map(c => `
+  <url>
+    <loc>${base}/cabinet-art/${c.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const merchandiseUrls = MERCHANDISE.map(m => `
+  <url>
+    <loc>${base}/merchandise/${m.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const bootlegUrls = BOOTLEGS.map(b => `
+  <url>
+    <loc>${base}/bootlegs/${b.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const competitiveUrls = COMPETITIVE.map(c => `
+  <url>
+    <loc>${base}/competitive/${c.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const endingUrls = ENDINGS.map(e => `
+  <url>
+    <loc>${base}/endings/${e.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
     cachedSitemap = {
       host,
       xml: `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${designerUrls}${publisherUrls}${arcadeBoardUrls}${peripheralUrls}${lostGameUrls}${regionalUrls}${genreUrls}${essayUrls}${yearUrls}${decadeUrls}${magazineUrls}${boxArtUrls}${portUrls}${voiceActorUrls}${pixelArtistUrls}${producerUrls}${collectionUrls}${controversyUrls}${failedConsoleUrls}${gameEngineUrls}${soundChipUrls}${easterEggUrls}${cheatCodeUrls}${sequelUrls}${romHackUrls}${adCampaignUrls}${speedrunUrls}${criticUrls}${gameUrls}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${designerUrls}${publisherUrls}${arcadeBoardUrls}${peripheralUrls}${lostGameUrls}${regionalUrls}${genreUrls}${essayUrls}${yearUrls}${decadeUrls}${magazineUrls}${boxArtUrls}${portUrls}${voiceActorUrls}${pixelArtistUrls}${producerUrls}${collectionUrls}${controversyUrls}${failedConsoleUrls}${gameEngineUrls}${soundChipUrls}${easterEggUrls}${cheatCodeUrls}${sequelUrls}${romHackUrls}${adCampaignUrls}${speedrunUrls}${criticUrls}${cancelledUrls}${localizationUrls}${prototypeUrls}${strategyGuideUrls}${cabinetArtUrls}${merchandiseUrls}${bootlegUrls}${competitiveUrls}${endingUrls}${gameUrls}
 </urlset>`,
     };
   }
@@ -1418,6 +1517,141 @@ app.get('/bookmarks', (req, res) => {
   res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
   res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
   res.send(cachedBookmarksHtml);
+});
+
+app.get('/cancelled', (req, res) => {
+  if (!cachedCancelledListHtml) cachedCancelledListHtml = cancelledListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedCancelledListHtml);
+});
+app.get('/cancelled/:id', (req, res) => {
+  const item = CANCELLED.find(c => c.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedCancelledPageHtml[item.id]) cachedCancelledPageHtml[item.id] = cancelledDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedCancelledPageHtml[item.id]);
+});
+
+app.get('/localization', (req, res) => {
+  if (!cachedLocalizationListHtml) cachedLocalizationListHtml = localizationListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedLocalizationListHtml);
+});
+app.get('/localization/:id', (req, res) => {
+  const item = LOCALIZATION.find(l => l.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedLocalizationPageHtml[item.id]) cachedLocalizationPageHtml[item.id] = localizationDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedLocalizationPageHtml[item.id]);
+});
+
+app.get('/prototypes', (req, res) => {
+  if (!cachedPrototypesListHtml) cachedPrototypesListHtml = prototypesListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedPrototypesListHtml);
+});
+app.get('/prototypes/:id', (req, res) => {
+  const item = PROTOTYPES.find(p => p.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedPrototypesPageHtml[item.id]) cachedPrototypesPageHtml[item.id] = prototypeDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedPrototypesPageHtml[item.id]);
+});
+
+app.get('/strategy-guides', (req, res) => {
+  if (!cachedStrategyGuidesListHtml) cachedStrategyGuidesListHtml = strategyGuidesListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedStrategyGuidesListHtml);
+});
+app.get('/strategy-guides/:id', (req, res) => {
+  const item = STRATEGY_GUIDES.find(g => g.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedStrategyGuidePageHtml[item.id]) cachedStrategyGuidePageHtml[item.id] = strategyGuideDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedStrategyGuidePageHtml[item.id]);
+});
+
+app.get('/cabinet-art', (req, res) => {
+  if (!cachedCabinetArtListHtml) cachedCabinetArtListHtml = cabinetArtListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedCabinetArtListHtml);
+});
+app.get('/cabinet-art/:id', (req, res) => {
+  const item = CABINET_ART.find(c => c.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedCabinetArtPageHtml[item.id]) cachedCabinetArtPageHtml[item.id] = cabinetArtDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedCabinetArtPageHtml[item.id]);
+});
+
+app.get('/merchandise', (req, res) => {
+  if (!cachedMerchandiseListHtml) cachedMerchandiseListHtml = merchandiseListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedMerchandiseListHtml);
+});
+app.get('/merchandise/:id', (req, res) => {
+  const item = MERCHANDISE.find(m => m.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedMerchandisePageHtml[item.id]) cachedMerchandisePageHtml[item.id] = merchandiseDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedMerchandisePageHtml[item.id]);
+});
+
+app.get('/bootlegs', (req, res) => {
+  if (!cachedBootlegsListHtml) cachedBootlegsListHtml = bootlegsListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedBootlegsListHtml);
+});
+app.get('/bootlegs/:id', (req, res) => {
+  const item = BOOTLEGS.find(b => b.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedBootlegPageHtml[item.id]) cachedBootlegPageHtml[item.id] = bootlegDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedBootlegPageHtml[item.id]);
+});
+
+app.get('/competitive', (req, res) => {
+  if (!cachedCompetitiveListHtml) cachedCompetitiveListHtml = competitiveListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedCompetitiveListHtml);
+});
+app.get('/competitive/:id', (req, res) => {
+  const item = COMPETITIVE.find(c => c.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedCompetitivePageHtml[item.id]) cachedCompetitivePageHtml[item.id] = competitiveDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedCompetitivePageHtml[item.id]);
+});
+
+app.get('/endings', (req, res) => {
+  if (!cachedEndingsListHtml) cachedEndingsListHtml = endingsListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedEndingsListHtml);
+});
+app.get('/endings/:id', (req, res) => {
+  const item = ENDINGS.find(e => e.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedEndingPageHtml[item.id]) cachedEndingPageHtml[item.id] = endingDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedEndingPageHtml[item.id]);
 });
 
 app.get('/controversies', (req, res) => {
@@ -4103,6 +4337,143 @@ function timelinePage() {
   const eventsHtml = events.map((e, i) => `<div style="display:grid;grid-template-columns:5rem 1px 1fr;gap:0 1.5rem;align-items:start;padding-bottom:1.5rem"><div style="text-align:right;font-size:1.1em;font-weight:900;color:var(--accent,#c8a44a);padding-top:0.15rem">${e.year}</div><div style="background:${i % 2 === 0 ? 'var(--accent,#c8a44a)' : '#444'};width:1px;min-height:100%;margin:0 auto"></div><div style="padding-bottom:0.5rem"><div style="font-weight:700;margin-bottom:0.3rem">${escapeHtml(e.title)}</div><div style="color:#bbb;font-size:0.9em;line-height:1.6">${escapeHtml(e.desc)}</div></div></div>`).join('');
 
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Timeline – Bosnan</title><meta name="description" content="A chronological timeline of retro gaming history from 1958 to 2001."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('timeline')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Timeline</h1><p class="essay-subtitle">Gaming history from Spacewar! to the PS2 era — a chronological view</p></div><div style="margin-top:2rem">${eventsHtml}</div></div>${toggleScript()}</body></html>`;
+}
+
+function cancelledListPage() {
+  const cards = CANCELLED.map(c => `<a href="/cancelled/${c.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(c.title)}</div>
+    <div class="platform-card-era">${escapeHtml(c.platform)} &middot; ${c.year} &middot; <em>${escapeHtml(c.status)}</em></div>
+    <p class="platform-card-desc">${escapeHtml(c.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Cancelled Games – Bosnan</title><meta name="description" content="Games that were announced but never released — from StarFox 2 to Sonic X-treme."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('cancelled')}<section class="platforms-hero"><h1>Cancelled Games</h1><p>Announced, developed, and then shelved — the games that never made it</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function cancelledDetailPage(item) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Cancelled – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('cancelled')}<div class="platform-detail-wrapper"><a href="/cancelled" class="back-link">&#8592; All Cancelled Games</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.developer)}${item.publisher && item.publisher !== 'Unknown' ? ' &middot; ' + escapeHtml(item.publisher) : ''} &middot; <strong>${escapeHtml(item.status)}</strong></p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function localizationListPage() {
+  const cards = LOCALIZATION.map(l => `<a href="/localization/${l.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(l.title)}</div>
+    <div class="platform-card-era">${escapeHtml(l.game)} &middot; ${escapeHtml(l.platform)} &middot; ${escapeHtml(l.originalRegion)} &#8594; ${escapeHtml(l.localizedRegion)}</div>
+    <p class="platform-card-desc">${escapeHtml(l.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Localization Differences – Bosnan</title><meta name="description" content="How games changed between regional releases — censorship, renamed characters, altered content."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('localization')}<section class="platforms-hero"><h1>Localization Differences</h1><p>How games changed crossing borders — censored blood, renamed heroes, and rewritten stories</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function localizationDetailPage(item) {
+  const changes = (item.changes || []).map(c => `<li>${escapeHtml(c)}</li>`).join('');
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Localization – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('localization')}<div class="platform-detail-wrapper"><a href="/localization" class="back-link">&#8592; All Localization Differences</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.originalRegion)} &#8594; ${escapeHtml(item.localizedRegion)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${changes ? `<div class="dev-notable"><strong>Changes Made:</strong><ul class="trivia-list">${changes}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function prototypesListPage() {
+  const cards = PROTOTYPES.map(p => `<a href="/prototypes/${p.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(p.title)}</div>
+    <div class="platform-card-era">${escapeHtml(p.game)} &middot; ${escapeHtml(p.platform)} &middot; ${escapeHtml(p.buildDate)}</div>
+    <p class="platform-card-desc">${escapeHtml(p.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Prototype &amp; Beta Versions – Bosnan</title><meta name="description" content="Pre-release builds that reveal how games evolved — from early Sonic designs to Ocarina of Time's 1996 demo."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('prototypes')}<section class="platforms-hero"><h1>Prototypes &amp; Beta Versions</h1><p>Pre-release builds that show how games were made — and unmade</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function prototypeDetailPage(item) {
+  const diffs = (item.differences || []).map(d => `<li>${escapeHtml(d)}</li>`).join('');
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Prototypes – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('prototypes')}<div class="platform-detail-wrapper"><a href="/prototypes" class="back-link">&#8592; All Prototypes</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; Build: ${escapeHtml(item.buildDate)} &middot; Discovered: ${item.discoveredYear} &middot; ${escapeHtml(item.source)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${diffs ? `<div class="dev-notable"><strong>Differences from Final:</strong><ul class="trivia-list">${diffs}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function strategyGuidesListPage() {
+  const cards = STRATEGY_GUIDES.map(g => `<a href="/strategy-guides/${g.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(g.title)}</div>
+    <div class="platform-card-era">${escapeHtml(g.game)} &middot; ${escapeHtml(g.publisher)} &middot; ${g.year}</div>
+    <p class="platform-card-desc">${escapeHtml(g.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Strategy Guides – Bosnan</title><meta name="description" content="The iconic strategy guides that defined retro gaming — Nintendo Power, Prima, Brady Games, and more."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('strategy-guides')}<section class="platforms-hero"><h1>Strategy Guides</h1><p>The books that taught us how to play — Nintendo Power, Prima, Brady, and beyond</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function strategyGuideDetailPage(item) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Strategy Guides – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('strategy-guides')}<div class="platform-detail-wrapper"><a href="/strategy-guides" class="back-link">&#8592; All Strategy Guides</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.publisher)} &middot; ${item.year}${item.author && item.author !== 'Staff' ? ' &middot; ' + escapeHtml(item.author) : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function cabinetArtListPage() {
+  const cards = CABINET_ART.map(c => `<a href="/cabinet-art/${c.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(c.title)}</div>
+    <div class="platform-card-era">${escapeHtml(c.game)} &middot; ${escapeHtml(c.manufacturer)} &middot; ${c.year}</div>
+    <p class="platform-card-desc">${escapeHtml(c.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Arcade Cabinet Art – Bosnan</title><meta name="description" content="The marquee art, side panels, and illustrated cabinet artwork that defined the arcade era."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('cabinet-art')}<section class="platforms-hero"><h1>Arcade Cabinet Art</h1><p>The marquees, panels, and artwork that defined arcade culture</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function cabinetArtDetailPage(item) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Cabinet Art – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('cabinet-art')}<div class="platform-detail-wrapper"><a href="/cabinet-art" class="back-link">&#8592; All Cabinet Art</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.manufacturer)} &middot; ${item.year}${item.artist && item.artist !== 'Unknown' ? ' &middot; ' + escapeHtml(item.artist) : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function merchandiseListPage() {
+  const cards = MERCHANDISE.map(m => `<a href="/merchandise/${m.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(m.title)}</div>
+    <div class="platform-card-era">${escapeHtml(m.franchise)} &middot; ${escapeHtml(m.type)} &middot; ${m.year}</div>
+    <p class="platform-card-desc">${escapeHtml(m.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Merchandise &amp; Tie-ins – Bosnan</title><meta name="description" content="Cartoons, toys, cereals, films, and merchandise from the golden age of gaming tie-ins."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('merchandise')}<section class="platforms-hero"><h1>Merchandise &amp; Tie-ins</h1><p>When games went beyond the screen — cartoons, toys, cereals, and Hollywood</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function merchandiseDetailPage(item) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Merchandise – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('merchandise')}<div class="platform-detail-wrapper"><a href="/merchandise" class="back-link">&#8592; All Merchandise</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.franchise)} &middot; ${escapeHtml(item.type)} &middot; ${item.year} &middot; ${escapeHtml(item.manufacturer)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function bootlegsListPage() {
+  const cards = BOOTLEGS.map(b => `<a href="/bootlegs/${b.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(b.title)}</div>
+    <div class="platform-card-era">${escapeHtml(b.platform)} &middot; ${b.year} &middot; ${escapeHtml(b.type)}</div>
+    <p class="platform-card-desc">${escapeHtml(b.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Bootlegs &amp; Clones – Bosnan</title><meta name="description" content="Unlicensed ports, pirate compilations, Famiclones, and the grey market that defined gaming outside the West."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('bootlegs')}<section class="platforms-hero"><h1>Bootlegs &amp; Clones</h1><p>Unlicensed games, pirate carts, Famiclones, and the grey market</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function bootlegDetailPage(item) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Bootlegs – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('bootlegs')}<div class="platform-detail-wrapper"><a href="/bootlegs" class="back-link">&#8592; All Bootlegs</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.region)} &middot; ${escapeHtml(item.type)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function competitiveListPage() {
+  const cards = COMPETITIVE.map(c => `<a href="/competitive/${c.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(c.title)}</div>
+    <div class="platform-card-era">${c.year} &middot; ${escapeHtml(c.game)} &middot; ${escapeHtml(c.location)}</div>
+    <p class="platform-card-desc">${escapeHtml(c.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Competitive Gaming History – Bosnan</title><meta name="description" content="Early esports, high-score competitions, and the tournaments that shaped competitive gaming."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('competitive')}<section class="platforms-hero"><h1>Competitive Gaming History</h1><p>High-score records, championships, and the birth of esports</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function competitiveDetailPage(item) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Competitive – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('competitive')}<div class="platform-detail-wrapper"><a href="/competitive" class="back-link">&#8592; All Competitive Events</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${item.year} &middot; ${escapeHtml(item.game)} &middot; ${escapeHtml(item.organizer)} &middot; ${escapeHtml(item.location)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${item.winner ? `<p class="platform-detail-desc"><strong>Winner:</strong> ${escapeHtml(item.winner)}</p>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function endingsListPage() {
+  const cards = ENDINGS.map(e => `<a href="/endings/${e.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(e.title)}</div>
+    <div class="platform-card-era">${escapeHtml(e.game)} &middot; ${escapeHtml(e.platform)} &middot; ${e.year} &middot; ${escapeHtml(e.type)}</div>
+    <p class="platform-card-desc">${escapeHtml(e.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Endings Gallery – Bosnan</title><meta name="description" content="Famous, surprising, and emotionally devastating game endings from the retro era."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('endings')}<section class="platforms-hero"><h1>Endings Gallery</h1><p>The moments that closed out the greatest retro games — and never left us</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function endingDetailPage(item) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Endings – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('endings')}<div class="platform-detail-wrapper"><a href="/endings" class="back-link">&#8592; All Endings</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.type)}${item.spoilerWarning ? ' &middot; <em>Spoilers</em>' : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
 }
 
 function notFoundPage() {
