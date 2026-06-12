@@ -51,6 +51,16 @@ const MERCHANDISE = require('./data/merchandise');
 const BOOTLEGS = require('./data/bootlegs');
 const COMPETITIVE = require('./data/competitive');
 const ENDINGS = require('./data/endings');
+const BOSSFIGHTS = require('./data/bossfights');
+const SOUNDTRACKS = require('./data/soundtracks');
+const MANUALS = require('./data/manuals');
+const DIFFICULTY = require('./data/difficulty');
+const CHARACTERS = require('./data/characters');
+const COVER_STORIES = require('./data/cover-stories');
+const CONTROLLERS = require('./data/controllers');
+const DISAPPOINTMENTS = require('./data/disappointments');
+const LEVELS = require('./data/levels');
+const URBAN_LEGENDS = require('./data/urban-legends');
 const gamesSlim = games.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
   ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
 );
@@ -451,6 +461,26 @@ const cachedMerchandisePageHtml = {};
 const cachedBootlegPageHtml = {};
 const cachedCompetitivePageHtml = {};
 const cachedEndingPageHtml = {};
+let cachedBossfightsListHtml = null;
+let cachedSoundtracksListHtml = null;
+let cachedManualsListHtml = null;
+let cachedDifficultyListHtml = null;
+let cachedCharactersListHtml = null;
+let cachedCoverStoriesListHtml = null;
+let cachedControllersListHtml = null;
+let cachedDisappointmentsListHtml = null;
+let cachedLevelsListHtml = null;
+let cachedUrbanLegendsListHtml = null;
+const cachedBossfightPageHtml = {};
+const cachedSoundtrackPageHtml = {};
+const cachedManualPageHtml = {};
+const cachedDifficultyPageHtml = {};
+const cachedCharacterPageHtml = {};
+const cachedCoverStoryPageHtml = {};
+const cachedControllerPageHtml = {};
+const cachedDisappointmentPageHtml = {};
+const cachedLevelPageHtml = {};
+const cachedUrbanLegendPageHtml = {};
 let cachedControversiesListHtml = null;
 let cachedFailedConsolesListHtml = null;
 let cachedGameEnginesListHtml = null;
@@ -601,6 +631,16 @@ function nav(active) {
         ${link('/bootlegs', 'Bootlegs', 'bootlegs')}
         ${link('/competitive', 'Competitive', 'competitive')}
         ${link('/endings', 'Endings', 'endings')}
+        ${link('/bossfights', 'Boss Fights', 'bossfights')}
+        ${link('/soundtracks', 'Soundtracks', 'soundtracks')}
+        ${link('/manuals', 'Manuals', 'manuals')}
+        ${link('/difficulty', 'Difficulty', 'difficulty')}
+        ${link('/characters', 'Characters', 'characters')}
+        ${link('/cover-stories', 'Cover Stories', 'cover-stories')}
+        ${link('/controllers', 'Controllers', 'controllers')}
+        ${link('/disappointments', 'Disappointments', 'disappointments')}
+        ${link('/levels', 'Levels', 'levels')}
+        ${link('/urban-legends', 'Urban Legends', 'urban-legends')}
         ${link('/controversies', 'Controversies', 'controversies')}
         ${link('/failed-consoles', 'Failed Consoles', 'failed-consoles')}
         ${link('/game-engines', 'Engines', 'game-engines')}
@@ -971,10 +1011,80 @@ app.get('/sitemap.xml', (req, res) => {
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>`).join('');
+    const bossfightUrls = BOSSFIGHTS.map(b => `
+  <url>
+    <loc>${base}/bossfights/${b.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const soundtrackUrls = SOUNDTRACKS.map(s => `
+  <url>
+    <loc>${base}/soundtracks/${s.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const manualUrls = MANUALS.map(m => `
+  <url>
+    <loc>${base}/manuals/${m.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const difficultyUrls = DIFFICULTY.map(d => `
+  <url>
+    <loc>${base}/difficulty/${d.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const characterUrls = CHARACTERS.map(c => `
+  <url>
+    <loc>${base}/characters/${c.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const coverStoryUrls = COVER_STORIES.map(c => `
+  <url>
+    <loc>${base}/cover-stories/${c.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const controllerUrls = CONTROLLERS.map(c => `
+  <url>
+    <loc>${base}/controllers/${c.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const disappointmentUrls = DISAPPOINTMENTS.map(d => `
+  <url>
+    <loc>${base}/disappointments/${d.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const levelUrls = LEVELS.map(l => `
+  <url>
+    <loc>${base}/levels/${l.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
+    const urbanLegendUrls = URBAN_LEGENDS.map(u => `
+  <url>
+    <loc>${base}/urban-legends/${u.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
     cachedSitemap = {
       host,
       xml: `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${designerUrls}${publisherUrls}${arcadeBoardUrls}${peripheralUrls}${lostGameUrls}${regionalUrls}${genreUrls}${essayUrls}${yearUrls}${decadeUrls}${magazineUrls}${boxArtUrls}${portUrls}${voiceActorUrls}${pixelArtistUrls}${producerUrls}${collectionUrls}${controversyUrls}${failedConsoleUrls}${gameEngineUrls}${soundChipUrls}${easterEggUrls}${cheatCodeUrls}${sequelUrls}${romHackUrls}${adCampaignUrls}${speedrunUrls}${criticUrls}${cancelledUrls}${localizationUrls}${prototypeUrls}${strategyGuideUrls}${cabinetArtUrls}${merchandiseUrls}${bootlegUrls}${competitiveUrls}${endingUrls}${gameUrls}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${designerUrls}${publisherUrls}${arcadeBoardUrls}${peripheralUrls}${lostGameUrls}${regionalUrls}${genreUrls}${essayUrls}${yearUrls}${decadeUrls}${magazineUrls}${boxArtUrls}${portUrls}${voiceActorUrls}${pixelArtistUrls}${producerUrls}${collectionUrls}${controversyUrls}${failedConsoleUrls}${gameEngineUrls}${soundChipUrls}${easterEggUrls}${cheatCodeUrls}${sequelUrls}${romHackUrls}${adCampaignUrls}${speedrunUrls}${criticUrls}${cancelledUrls}${localizationUrls}${prototypeUrls}${strategyGuideUrls}${cabinetArtUrls}${merchandiseUrls}${bootlegUrls}${competitiveUrls}${endingUrls}${bossfightUrls}${soundtrackUrls}${manualUrls}${difficultyUrls}${characterUrls}${coverStoryUrls}${controllerUrls}${disappointmentUrls}${levelUrls}${urbanLegendUrls}${gameUrls}
 </urlset>`,
     };
   }
@@ -1652,6 +1762,156 @@ app.get('/endings/:id', (req, res) => {
   res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
   res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
   res.send(cachedEndingPageHtml[item.id]);
+});
+
+app.get('/bossfights', (req, res) => {
+  if (!cachedBossfightsListHtml) cachedBossfightsListHtml = bossfightsListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedBossfightsListHtml);
+});
+app.get('/bossfights/:id', (req, res) => {
+  const item = BOSSFIGHTS.find(b => b.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedBossfightPageHtml[item.id]) cachedBossfightPageHtml[item.id] = bossfightDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedBossfightPageHtml[item.id]);
+});
+
+app.get('/soundtracks', (req, res) => {
+  if (!cachedSoundtracksListHtml) cachedSoundtracksListHtml = soundtracksListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedSoundtracksListHtml);
+});
+app.get('/soundtracks/:id', (req, res) => {
+  const item = SOUNDTRACKS.find(s => s.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedSoundtrackPageHtml[item.id]) cachedSoundtrackPageHtml[item.id] = soundtrackDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedSoundtrackPageHtml[item.id]);
+});
+
+app.get('/manuals', (req, res) => {
+  if (!cachedManualsListHtml) cachedManualsListHtml = manualsListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedManualsListHtml);
+});
+app.get('/manuals/:id', (req, res) => {
+  const item = MANUALS.find(m => m.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedManualPageHtml[item.id]) cachedManualPageHtml[item.id] = manualDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedManualPageHtml[item.id]);
+});
+
+app.get('/difficulty', (req, res) => {
+  if (!cachedDifficultyListHtml) cachedDifficultyListHtml = difficultyListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedDifficultyListHtml);
+});
+app.get('/difficulty/:id', (req, res) => {
+  const item = DIFFICULTY.find(d => d.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedDifficultyPageHtml[item.id]) cachedDifficultyPageHtml[item.id] = difficultyDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedDifficultyPageHtml[item.id]);
+});
+
+app.get('/characters', (req, res) => {
+  if (!cachedCharactersListHtml) cachedCharactersListHtml = charactersListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedCharactersListHtml);
+});
+app.get('/characters/:id', (req, res) => {
+  const item = CHARACTERS.find(c => c.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedCharacterPageHtml[item.id]) cachedCharacterPageHtml[item.id] = characterDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedCharacterPageHtml[item.id]);
+});
+
+app.get('/cover-stories', (req, res) => {
+  if (!cachedCoverStoriesListHtml) cachedCoverStoriesListHtml = coverStoriesListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedCoverStoriesListHtml);
+});
+app.get('/cover-stories/:id', (req, res) => {
+  const item = COVER_STORIES.find(c => c.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedCoverStoryPageHtml[item.id]) cachedCoverStoryPageHtml[item.id] = coverStoryDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedCoverStoryPageHtml[item.id]);
+});
+
+app.get('/controllers', (req, res) => {
+  if (!cachedControllersListHtml) cachedControllersListHtml = controllersListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedControllersListHtml);
+});
+app.get('/controllers/:id', (req, res) => {
+  const item = CONTROLLERS.find(c => c.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedControllerPageHtml[item.id]) cachedControllerPageHtml[item.id] = controllerDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedControllerPageHtml[item.id]);
+});
+
+app.get('/disappointments', (req, res) => {
+  if (!cachedDisappointmentsListHtml) cachedDisappointmentsListHtml = disappointmentsListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedDisappointmentsListHtml);
+});
+app.get('/disappointments/:id', (req, res) => {
+  const item = DISAPPOINTMENTS.find(d => d.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedDisappointmentPageHtml[item.id]) cachedDisappointmentPageHtml[item.id] = disappointmentDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedDisappointmentPageHtml[item.id]);
+});
+
+app.get('/levels', (req, res) => {
+  if (!cachedLevelsListHtml) cachedLevelsListHtml = levelsListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedLevelsListHtml);
+});
+app.get('/levels/:id', (req, res) => {
+  const item = LEVELS.find(l => l.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedLevelPageHtml[item.id]) cachedLevelPageHtml[item.id] = levelDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedLevelPageHtml[item.id]);
+});
+
+app.get('/urban-legends', (req, res) => {
+  if (!cachedUrbanLegendsListHtml) cachedUrbanLegendsListHtml = urbanLegendsListPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedUrbanLegendsListHtml);
+});
+app.get('/urban-legends/:id', (req, res) => {
+  const item = URBAN_LEGENDS.find(u => u.id === req.params.id);
+  if (!item) return res.status(404).send(notFoundPage());
+  if (!cachedUrbanLegendPageHtml[item.id]) cachedUrbanLegendPageHtml[item.id] = urbanLegendDetailPage(item);
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+  res.send(cachedUrbanLegendPageHtml[item.id]);
 });
 
 app.get('/controversies', (req, res) => {
@@ -4337,6 +4597,161 @@ function timelinePage() {
   const eventsHtml = events.map((e, i) => `<div style="display:grid;grid-template-columns:5rem 1px 1fr;gap:0 1.5rem;align-items:start;padding-bottom:1.5rem"><div style="text-align:right;font-size:1.1em;font-weight:900;color:var(--accent,#c8a44a);padding-top:0.15rem">${e.year}</div><div style="background:${i % 2 === 0 ? 'var(--accent,#c8a44a)' : '#444'};width:1px;min-height:100%;margin:0 auto"></div><div style="padding-bottom:0.5rem"><div style="font-weight:700;margin-bottom:0.3rem">${escapeHtml(e.title)}</div><div style="color:#bbb;font-size:0.9em;line-height:1.6">${escapeHtml(e.desc)}</div></div></div>`).join('');
 
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Timeline – Bosnan</title><meta name="description" content="A chronological timeline of retro gaming history from 1958 to 2001."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('timeline')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Timeline</h1><p class="essay-subtitle">Gaming history from Spacewar! to the PS2 era — a chronological view</p></div><div style="margin-top:2rem">${eventsHtml}</div></div>${toggleScript()}</body></html>`;
+}
+
+function bossfightsListPage() {
+  const cards = BOSSFIGHTS.map(b => `<a href="/bossfights/${b.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(b.title)}</div>
+    <div class="platform-card-era">${escapeHtml(b.bossName)} &middot; ${escapeHtml(b.game)} &middot; ${b.year} &middot; ${escapeHtml(b.type)}</div>
+    <p class="platform-card-desc">${escapeHtml(b.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Iconic Boss Fights – Bosnan</title><meta name="description" content="The most memorable boss encounters in retro gaming — Mike Tyson, Mother Brain, Psycho Mantis, and more."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('bossfights')}<section class="platforms-hero"><h1>Iconic Boss Fights</h1><p>The encounters that defined retro gaming — designed to challenge, surprise, and be remembered</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function bossfightDetailPage(item) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Boss Fights – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('bossfights')}<div class="platform-detail-wrapper"><a href="/bossfights" class="back-link">&#8592; All Boss Fights</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.bossName)} &middot; ${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.type)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function soundtracksListPage() {
+  const cards = SOUNDTRACKS.map(s => `<a href="/soundtracks/${s.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(s.title)}</div>
+    <div class="platform-card-era">${escapeHtml(s.composer)} &middot; ${escapeHtml(s.platform)} &middot; ${s.year}</div>
+    <p class="platform-card-desc">${escapeHtml(s.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Game Soundtracks – Bosnan</title><meta name="description" content="Deep dives into the landmark game soundtracks — Nobuo Uematsu, Koji Kondo, David Wise, and more."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('soundtracks')}<section class="platforms-hero"><h1>Game Soundtracks</h1><p>The music that made retro games unforgettable</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function soundtrackDetailPage(item) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Soundtracks – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('soundtracks')}<div class="platform-detail-wrapper"><a href="/soundtracks" class="back-link">&#8592; All Soundtracks</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.composer)} &middot; ${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year}${item.trackCount ? ' &middot; ' + item.trackCount + ' tracks' : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function manualsListPage() {
+  const cards = MANUALS.map(m => `<a href="/manuals/${m.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(m.title)}</div>
+    <div class="platform-card-era">${escapeHtml(m.game)} &middot; ${escapeHtml(m.platform)} &middot; ${m.year}${m.pageCount ? ' &middot; ' + m.pageCount + ' pages' : ''}</div>
+    <p class="platform-card-desc">${escapeHtml(m.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Instruction Manuals – Bosnan</title><meta name="description" content="The golden age of game manuals — booklets that built worlds before the game even loaded."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('manuals')}<section class="platforms-hero"><h1>Instruction Manuals</h1><p>The booklets that built worlds before you pressed Start</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function manualDetailPage(item) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Manuals – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('manuals')}<div class="platform-detail-wrapper"><a href="/manuals" class="back-link">&#8592; All Manuals</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${escapeHtml(item.publisher)} &middot; ${item.year}${item.pageCount ? ' &middot; ' + item.pageCount + ' pages' : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function difficultyListPage() {
+  const cards = DIFFICULTY.map(d => `<a href="/difficulty/${d.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(d.title)}</div>
+    <div class="platform-card-era">${escapeHtml(d.game)} &middot; ${escapeHtml(d.platform)} &middot; ${d.year} &middot; ${escapeHtml(d.difficultyType)}</div>
+    <p class="platform-card-desc">${escapeHtml(d.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Difficulty &amp; Hard Modes – Bosnan</title><meta name="description" content="The games that broke controllers and tested patience — Battletoads, Ghosts 'n Goblins, Ninja Gaiden, and more."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('difficulty')}<section class="platforms-hero"><h1>Difficulty &amp; Hard Modes</h1><p>The games that demanded everything — and gave no quarter</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function difficultyDetailPage(item) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Difficulty – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('difficulty')}<div class="platform-detail-wrapper"><a href="/difficulty" class="back-link">&#8592; All Difficulty Entries</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.difficultyType)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function charactersListPage() {
+  const cards = CHARACTERS.map(c => `<a href="/characters/${c.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(c.name)}</div>
+    <div class="platform-card-era">${escapeHtml(c.franchise)} &middot; ${escapeHtml(c.role)} &middot; ${c.debutYear}</div>
+    <p class="platform-card-desc">${escapeHtml(c.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Fictional Characters – Bosnan</title><meta name="description" content="Lore profiles for gaming's most iconic characters — Mario, Link, Samus, Sonic, Cloud, and more."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('characters')}<section class="platforms-hero"><h1>Fictional Characters</h1><p>The heroes, villains, and icons who defined retro gaming culture</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function characterDetailPage(item) {
+  const abilities = (item.abilities || []).map(a => `<li>${escapeHtml(a)}</li>`).join('');
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.name)} – Characters – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('characters')}<div class="platform-detail-wrapper"><a href="/characters" class="back-link">&#8592; All Characters</a><div class="platform-detail-header"><h1>${escapeHtml(item.name)}</h1><p class="platform-detail-era">${escapeHtml(item.franchise)} &middot; ${escapeHtml(item.role)} &middot; Debut: ${item.debutYear} &middot; ${escapeHtml(item.platform)} &middot; Created by ${escapeHtml(item.creator)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${abilities ? `<div class="dev-notable"><strong>Abilities &amp; Traits:</strong><ul class="trivia-list">${abilities}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function coverStoriesListPage() {
+  const cards = COVER_STORIES.map(c => `<a href="/cover-stories/${c.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(c.title)}</div>
+    <div class="platform-card-era">${escapeHtml(c.magazine)} &middot; ${escapeHtml(c.issue)}</div>
+    <p class="platform-card-desc">${escapeHtml(c.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Cover Stories – Bosnan</title><meta name="description" content="Landmark gaming magazine covers and the moments that defined games journalism."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('cover-stories')}<section class="platforms-hero"><h1>Cover Stories</h1><p>The magazine covers and issues that captured gaming history as it happened</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function coverStoryDetailPage(item) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Cover Stories – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('cover-stories')}<div class="platform-detail-wrapper"><a href="/cover-stories" class="back-link">&#8592; All Cover Stories</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.magazine)} &middot; ${escapeHtml(item.issue)} &middot; ${escapeHtml(item.game)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function controllersListPage() {
+  const cards = CONTROLLERS.map(c => `<a href="/controllers/${c.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(c.title)}</div>
+    <div class="platform-card-era">${escapeHtml(c.manufacturer)} &middot; ${escapeHtml(c.platform)} &middot; ${c.year}</div>
+    <p class="platform-card-desc">${escapeHtml(c.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Controllers &amp; Input Devices – Bosnan</title><meta name="description" content="The controllers that shaped how we play — D-pad, analog stick, light gun, and beyond."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('controllers')}<section class="platforms-hero"><h1>Controllers &amp; Input Devices</h1><p>The hardware that sits between player and game — designed to disappear</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function controllerDetailPage(item) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Controllers – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('controllers')}<div class="platform-detail-wrapper"><a href="/controllers" class="back-link">&#8592; All Controllers</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.manufacturer)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function disappointmentsListPage() {
+  const cards = DISAPPOINTMENTS.map(d => `<a href="/disappointments/${d.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(d.title)}</div>
+    <div class="platform-card-era">${escapeHtml(d.series)} &middot; ${escapeHtml(d.platform)} &middot; ${d.year}</div>
+    <p class="platform-card-desc">${escapeHtml(d.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sequel Disappointments – Bosnan</title><meta name="description" content="Highly anticipated follow-ups that fell short — analysed fairly and in context."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('disappointments')}<section class="platforms-hero"><h1>Sequel Disappointments</h1><p>Anticipated follow-ups that didn't deliver — examined in context, without cruelty</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function disappointmentDetailPage(item) {
+  const failedAt = (item.failedAt || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Disappointments – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('disappointments')}<div class="platform-detail-wrapper"><a href="/disappointments" class="back-link">&#8592; All Disappointments</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.series)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; Preceded by: ${escapeHtml(item.predecessor)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${failedAt ? `<div class="dev-notable"><strong>Where It Fell Short:</strong><ul class="trivia-list">${failedAt}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function levelsListPage() {
+  const cards = LEVELS.map(l => `<a href="/levels/${l.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(l.title)}</div>
+    <div class="platform-card-era">${escapeHtml(l.levelName)} &middot; ${escapeHtml(l.game)} &middot; ${l.year}</div>
+    <p class="platform-card-desc">${escapeHtml(l.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Level Design Hall of Fame – Bosnan</title><meta name="description" content="Iconic individual levels analysed as design works — World 1-1, Chemical Plant, E1M1, and more."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('levels')}<section class="platforms-hero"><h1>Level Design Hall of Fame</h1><p>Individual levels that demonstrate what great game design looks like</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function levelDetailPage(item) {
+  const principles = (item.designPrinciples || []).map(p => `<li>${escapeHtml(p)}</li>`).join('');
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Levels – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('levels')}<div class="platform-detail-wrapper"><a href="/levels" class="back-link">&#8592; All Levels</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.levelName)} &middot; ${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${principles ? `<div class="dev-notable"><strong>Design Principles:</strong><ul class="trivia-list">${principles}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
+}
+
+function urbanLegendsListPage() {
+  const verdictColor = v => v === 'Confirmed True' ? '#4a9' : v === 'Confirmed False' ? '#c66' : v === 'Partially True' ? '#c8a44a' : '#888';
+  const cards = URBAN_LEGENDS.map(u => `<a href="/urban-legends/${u.id}" class="platform-card">
+    <div class="platform-card-name">${escapeHtml(u.title)}</div>
+    <div class="platform-card-era" style="color:${verdictColor(u.verdict)}">${escapeHtml(u.verdict)} &middot; ${escapeHtml(u.era)}</div>
+    <p class="platform-card-desc">${escapeHtml(u.description)}</p>
+  </a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Gaming Urban Legends – Bosnan</title><meta name="description" content="Polybius, Lavender Town Syndrome, the buried E.T. cartridges — gaming's myths investigated."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('urban-legends')}<section class="platforms-hero"><h1>Gaming Urban Legends</h1><p>The myths, rumours, and folklore that grew up around retro games — investigated</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
+}
+
+function urbanLegendDetailPage(item) {
+  const verdictColor = v => v === 'Confirmed True' ? '#4a9' : v === 'Confirmed False' ? '#c66' : v === 'Partially True' ? '#c8a44a' : '#888';
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Urban Legends – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('urban-legends')}<div class="platform-detail-wrapper"><a href="/urban-legends" class="back-link">&#8592; All Urban Legends</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">Verdict: <strong style="color:${verdictColor(item.verdict)}">${escapeHtml(item.verdict)}</strong> &middot; ${escapeHtml(item.era)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div></div>${toggleScript()}</body></html>`;
 }
 
 function cancelledListPage() {
