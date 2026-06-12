@@ -1,0 +1,328 @@
+'use strict';
+
+module.exports = [
+  {
+    id: 'cave-story',
+    title: 'Cave Story',
+    platform: 'PC (Windows)',
+    year: 2004,
+    developer: 'Daisuke Amaya (Studio Pixel)',
+    inspiredBy: 'Metroid, Castlevania II, Mega Man',
+    era: '2000s',
+    description: 'Cave Story was created entirely by one person over five years — code, art, music, and design — and became the defining proof that a single developer working in a retro idiom could produce a game of commercial and critical quality equal to the classics it channelled.',
+    longDescription: 'Daisuke Amaya, working under the alias Studio Pixel, spent five years between 1999 and 2004 building Cave Story in his spare time. Every element of the game — the engine, the pixel art sprites and backgrounds, the chiptune music, the level layouts, the Japanese script — was his sole creation. The result was a Metroidvania structured around interconnected underground environments, an amnesiac robot protagonist, and a escalating story about a race of rabbit-like beings called Mimigas threatened by a mad doctor. Amaya released the game as a free download in December 2004, and it spread rapidly through early gaming communities and blogs.\n\nAmaya was transparent about his influences: the non-linear exploration of Metroid, the branching paths of Castlevania II, the weapon upgrade loops of Mega Man. What distinguished Cave Story was not concealment of those debts but the synthesis he achieved from them. The weapon system, in which every gun gained and lost experience points based on damage dealt and taken, created a risk-reward dynamic no direct precedent had explored. The game\'s willingness to offer multiple endings — including a brutal true ending accessible only through precise choices — gave it replayability that its inspirations often lacked.\n\nCave Story\'s release established a template for the indie retro revival: a single auteur making a game that competed aesthetically and mechanically with 16-bit commercial productions. Nicalis ported the game to WiiWare in 2010 and published Cave Story+ with updated graphics and new modes in 2011, bringing Amaya\'s creation to a much wider audience. It remains one of the most studied examples of solo game development in the medium\'s history.',
+    keyFacts: [
+      'Entirely developed by one person — code, graphics, music, and design — over five years of spare-time work',
+      'Released for free in December 2004; commercially remastered as Cave Story+ in 2011 by Nicalis',
+      'Features three different endings depending on player choices, with the hardest route requiring specific actions rarely found on a first playthrough',
+      'Weapon experience system — guns level up on kills and level down when hit — was an original mechanic not found in its NES-era inspirations',
+    ],
+    sections: [
+      {
+        title: 'One Person, One Vision',
+        html: '<p>Almost every major commercial game of the 2000s was made by teams of dozens or hundreds. Cave Story\'s existence as a single-person project was not merely a novelty — it was an argument. Amaya demonstrated that a developer who fully controlled every element of a game could achieve a coherence of tone, pacing, and aesthetic that committee-driven production often struggled to match. The pixel art style, the weapon designs, the music, and the level environments feel unified because they share a single imagination.</p><p>The game\'s melancholic, understated story — in which the protagonist slowly recovers memories of past actions he may have reason to regret — is exactly the kind of narrative that benefits from authorial control. No producer asked Amaya to lighten the ending, add a multiplayer mode, or make the difficulty curve flatter. The game reflects what one person believed a game should be, and that belief is palpable in every screen.</p>',
+      },
+      {
+        title: 'The Template for Indie Revival',
+        html: '<p>Cave Story appeared just as blogs and early gaming forums were developing the infrastructure to spread word of independent work. Its free release meant anyone who heard about it could play it immediately, and the game was extraordinary enough that people wanted to tell others. The pattern — talented individual, retro aesthetic, genuine mechanical depth, free or cheap distribution — would be replicated by dozens of games over the following decade.</p><p>Amaya\'s success also established that retro aesthetics were not a constraint but a choice. By 2004 pixel art was technically unnecessary; Amaya could have attempted 3D rendering or higher-resolution graphics. He chose NES-era visual conventions because they were the right tool for the game he wanted to make, and the result looked intentional rather than limited. Every subsequent indie developer who made that same choice was building on a foundation Cave Story had laid.</p>',
+      },
+    ],
+  },
+  {
+    id: 'shovel-knight',
+    title: 'Shovel Knight',
+    platform: 'PC, Nintendo 3DS, Wii U',
+    year: 2014,
+    developer: 'Yacht Club Games',
+    inspiredBy: 'Mega Man, DuckTales, Castlevania III, Super Mario Bros. 3',
+    era: '2010s',
+    description: 'Shovel Knight was designed with an explicit manifesto of NES-precise constraints — limited colour palettes, defined tile sizes, artificial audio restrictions — and became one of the best-reviewed games of 2014 by treating its retro fidelity not as nostalgia but as a coherent design philosophy.',
+    longDescription: 'Yacht Club Games was founded by veterans of WayForward Technologies, and their first project was a statement of principle as much as a game. They published a detailed design document explaining the self-imposed constraints they were working within: a maximum of four colours per sprite panel mirroring NES hardware, tile-based level construction, audio composed to fit within the NES APU\'s channel limits, and a camera system that scrolled in tile-aligned steps. These were not technical requirements in 2014 — they were aesthetic choices made consciously to produce a game that felt as though it had been made on hardware that no longer constrained them.\n\nThe result was a platformer featuring a knight whose shovel served as both sword and pogo stick, exploring a kingdom of rival knights across non-linear stages. Each boss knight had a distinct visual theme, mechanical challenge, and relationship to the game\'s central story about loyalty and loss. The level design synthesised the obstacle-based challenge of Mega Man with the exploratory structure of Castlevania III and the power-up economy of DuckTales. Yacht Club identified the specific mechanics that made each of those games memorable and recombined them under a unified aesthetic language.\n\nThe game shipped after a successful Kickstarter campaign that raised over $300,000 against a $75,000 goal — early evidence that retro-styled games commanded genuine commercial enthusiasm. Four additional campaigns expanding the game with new playable knights followed, collectively known as the Shovel Knight: Treasure Trove compilation. The game has sold over 3.5 million copies and is frequently cited as the model of how a retro revival should be executed.',
+    keyFacts: [
+      'Yacht Club published a design document detailing their NES-constraint philosophy before release, including colour limits and tile sizes',
+      'Kickstarter campaign raised over $300,000 against a $75,000 goal in 2013, demonstrating commercial appetite for NES-faithful design',
+      'Four additional campaigns added playable characters Plague Knight, Specter Knight, King Knight, and Shovel Knight in co-op',
+      'The game\'s save system uses checkpoints that can be deliberately destroyed for bonus gold — a risk-reward mechanic inspired by DuckTales',
+    ],
+    sections: [
+      {
+        title: 'The Constraint Manifesto',
+        html: '<p>Most retro-styled games in 2014 used pixel art as visual shorthand — a signal of indie authenticity — without rigorously applying the underlying rules of the hardware being evoked. Shovel Knight was different. Yacht Club\'s design document specified exactly which NES rules they were following and why. The colour restriction was not about making the game look old; it was about forcing visual clarity. The tile-based camera was not about mimicking NES scrolling; it was about creating predictable, readable environments. Each constraint had a design rationale rooted in why the original hardware rules produced games that played well.</p><p>This approach transformed the game from a tribute into an argument. Shovel Knight was not saying "NES games were great." It was saying "the constraints that produced NES games generated specific design virtues, and those virtues are still worth pursuing." The distinction matters because it meant Yacht Club could discard rules that produced bad design while keeping rules that produced good design — which is what they did.</p>',
+      },
+      {
+        title: 'The Kickstarter Proof of Concept',
+        html: '<p>Shovel Knight\'s Kickstarter campaign in 2013 was an early data point in what became a pattern: players who had grown up with NES games in the 1980s and early 1990s were now adults with disposable income, and they would pay for games that recalled what those experiences had felt like. The campaign\'s success funded a game that had not yet been made, based almost entirely on a design document and aesthetic screenshots, because the audience understood precisely what kind of game was being proposed.</p><p>The model that followed — Kickstarter funding, transparent development, expansive post-launch content — became a template for dozens of subsequent indie studios. Yacht Club\'s subsequent campaigns for the Shovel Knight expansions collectively raised over a million dollars and demonstrated that a single IP could sustain a studio through Kickstarter alone. The business model was as influential as the design philosophy.</p>',
+      },
+    ],
+  },
+  {
+    id: 'mega-man-9',
+    title: 'Mega Man 9',
+    platform: 'WiiWare, PlayStation Network, Xbox Live Arcade',
+    year: 2008,
+    developer: 'Capcom / Inti Creates',
+    inspiredBy: 'Mega Man 2, Mega Man 3 (NES originals)',
+    era: '2000s',
+    description: 'Mega Man 9 was a deliberate act of regression: Capcom made a new mainline Mega Man game in 2008 using NES-era graphics and sound not as emulation but as genuine design methodology, abandoning the series\' drift toward complex narrative and updated visuals to return to the mechanics that made Mega Man 2 a classic.',
+    longDescription: 'By 2008 the Mega Man series had drifted far from its NES roots. The X series, the Zero series, the ZX series, and various spin-offs had collectively developed elaborate lore, advanced visual styles, and design conventions that little resembled the original six NES entries. Mega Man 9 was Capcom\'s decision — led by producer Hironobu Takeshita and director Makoto Tomozawa — to ignore twenty years of accumulated franchise drift and make a game that played, looked, and sounded exactly like Mega Man 2 (1988).\n\nThe game used pixel art rendered to NES resolution standards, a chiptune soundtrack composed under NES APU channel limits, no save feature by default (using the password system from the original games), and a difficulty curve calibrated against the hardest entries in the NES library. Capcom removed the slide and charged shot mechanics that had been standard since Mega Man 3, returning the character to his most limited loadout. Eight robot masters — Galaxy Man, Jewel Man, Concrete Man, and five others — each controlled a stage designed around a single environmental gimmick and a boss weapon weakness.\n\nThe game released on WiiWare for 1,000 points (approximately $10) and sold extraordinarily well for a digital downloadable title in 2008, demonstrating that a major publisher could ship a deliberately retro product through digital storefronts at a price point that made commercial sense. Mega Man 10 followed in 2010 using the same approach. Mega Man 9 proved that retro aesthetics were not solely the province of independent developers — an established franchise could deliberately return to its own past as an artistic and commercial strategy.',
+    keyFacts: [
+      'Deliberately removed the slide and charged shot moves added in Mega Man 3, returning to the series\' most basic loadout',
+      'Uses NES-accurate pixel art and chiptune audio despite being a 2008 digital release — no attempt at graphical updating',
+      'Released on WiiWare for 1,000 points ($10), demonstrating the viability of digital retro releases for major publishers',
+      'Directed by Makoto Tomozawa with producer Hironobu Takeshita; composer Ippo Yamada wrote the soundtrack under NES APU constraints',
+    ],
+    sections: [
+      {
+        title: 'Regression as Design Philosophy',
+        html: '<p>Game sequels are almost universally expected to improve on their predecessors — more features, better graphics, greater complexity. Mega Man 9\'s explicit design brief was to remove features that had been added over the previous twenty years. The slide, introduced in Mega Man 3, was gone. The charge shot, which had become a series staple, was gone. The visual aesthetic was pulled back from the SNES and PlayStation eras to the NES original. This was regression executed deliberately, with full awareness of what was being removed and why.</p><p>The reasoning was that the NES entries in the series — particularly Mega Man 2 — had achieved a purity of design that subsequent iterations had diluted rather than improved. The slide and charge shot changed the game\'s pacing and attack rhythm in ways that the original\'s designers had not intended. Removing them was not nostalgia; it was an argument about which version of Mega Man was mechanically optimal.</p>',
+      },
+      {
+        title: 'Proving the Commercial Model',
+        html: '<p>Mega Man 9\'s sales performance on WiiWare was significant beyond the game itself. It demonstrated to the games industry that a major franchise could release a deliberately retro product at a budget price point through a digital storefront and generate substantial revenue. This was not obvious in 2008. Digital distribution on consoles was new, budget pricing for first-party and major third-party games was uncommon, and the assumption was that premium games required premium presentation.</p><p>Capcom\'s willingness to sell a new Mega Man game at $10 rather than the standard $50 boxed retail price, and to do so through WiiWare, preceded the indie digital market explosion by several years. The sales data from Mega Man 9 became a reference point cited by publishers evaluating digital-first retro revival strategies throughout the following decade.</p>',
+      },
+    ],
+  },
+  {
+    id: 'la-mulana',
+    title: 'La-Mulana',
+    platform: 'PC (Windows)',
+    year: 2005,
+    developer: 'GR3 Project (NIGORO)',
+    inspiredBy: 'MSX game library, Maze of Galious, Knightmare II',
+    era: '2000s',
+    description: 'La-Mulana was designed to look and sound exactly like an MSX computer game from 1986, mimicking a hardware platform that was popular in Japan but largely unknown in the West, and built one of the most demanding puzzle-platformer structures in the indie revival era around that aesthetic.',
+    longDescription: 'La-Mulana was created by GR3 Project, which later became NIGORO, as a tribute to the MSX home computer — a 1980s Japanese standard that produced a distinct body of game software largely disconnected from the NES ecosystem that Western players knew. The MSX library included the original Metal Gear and Castlevania: Vampire Killer among its highlights, and the platform had a specific aesthetic: relatively low resolution, a particular sprite style, and a sound profile defined by the Yamaha PSG chips used in most MSX hardware. NIGORO reproduced this aesthetic precisely, using their own MSX-accurate graphics and chiptune music to create a game that, visually and aurally, was indistinguishable from a 1986 MSX release.\n\nThe game itself was structured as a massive archaeological puzzle platform: players explored the ruins of La-Mulana, a civilisation older than recorded history, collecting ancient texts and artefacts while gradually decoding what the ruins\' glyphs meant. Puzzles required combining items found in different areas, reading and remembering cryptic texts, and drawing logical connections across enormous distances within the game world. The difficulty was extreme and intentional: NIGORO wanted to recreate the experience of a game with no internet walkthrough, where the player\'s own notes, memory, and deduction were the only tools.\n\nA WiiWare remake with updated graphics was developed but cancelled after certification difficulties; an enhanced version was published by Nicalis on PC and various consoles in 2012. The remake reached a far wider audience than the original freeware release, and La-Mulana 2, a full sequel, released in 2018 after a successful Kickstarter campaign.',
+    keyFacts: [
+      'Specifically mimics the MSX home computer aesthetic — a Japanese platform largely unknown to Western players — rather than NES or Arcade standards',
+      'Original 2005 version was released as freeware; the NIGORO remake with updated graphics reached consoles and a global audience in 2012',
+      'Puzzle design intentionally assumes players are taking notes and will fail repeatedly — there is no in-game hint system',
+      'Features ten distinct ruins areas, each requiring different items and logical solutions to progress, with no linear progression between them',
+    ],
+    sections: [
+      {
+        title: 'The MSX as Reference Point',
+        html: '<p>Most retro revival games in the 2000s referenced the NES, the Atari 2600, or the Commodore 64 — platforms with Western cultural visibility. La-Mulana drew from the MSX, a platform that produced landmark games in Japan but was largely invisible to European and American players. NIGORO\'s choice was not accidental: the MSX library had a specific design language — denser, more cryptic, less hand-holding than contemporaneous NES titles — that aligned with the punishing puzzle design they wanted to build.</p><p>The visual fidelity to MSX standards was so precise that players unfamiliar with the platform could be genuinely uncertain whether La-Mulana was a new game or a forgotten MSX release. This ambiguity was part of the point. NIGORO was arguing that the MSX library deserved recovery and recognition, and that the design values embedded in its best games — dense world-building, respect for player intelligence, minimal guidance — remained worth pursuing.</p>',
+      },
+      {
+        title: 'Notes, Memory, and Earned Discovery',
+        html: '<p>La-Mulana\'s puzzle design is premised on an assumption that had become rare by 2005: that players will take notes on paper. Clues found in one area of the ruins solve puzzles in areas the player may not reach for hours. Texts must be translated, cross-referenced, and remembered. There is no quest journal, no waypoint marker, and no suggestion that the game will remind you of anything. The player is expected to function as their own record-keeper.</p><p>This design philosophy explicitly referenced the experience of playing MSX and early PC games before the internet provided universal walkthrough access. NIGORO wanted players to experience the specific satisfaction of solving a puzzle through their own accumulation of knowledge — the moment when a cryptic glyph encountered three hours earlier suddenly makes a current obstacle navigable. That experience is architecturally incompatible with the hint-system design conventions that had become standard by 2005, and La-Mulana refused to compromise on it.</p>',
+      },
+    ],
+  },
+  {
+    id: 'spelunky',
+    title: 'Spelunky',
+    platform: 'PC (Windows)',
+    year: 2008,
+    developer: 'Derek Yu',
+    inspiredBy: 'Spelunker (NES/MSX), classic roguelikes, Indiana Jones',
+    era: '2000s',
+    description: 'Spelunky fused the procedural generation of classic roguelikes with the kinetic action of NES platformers, creating a game where every run was genuinely different and mastery came from learning systems rather than memorising layouts — a hybrid that launched the roguelite genre as the dominant indie format of the following decade.',
+    longDescription: 'Derek Yu released the original Spelunky as a free Game Maker title in 2008, describing it as an attempt to combine the exploratory depth of roguelikes with the accessible moment-to-moment play of action platformers. The game generated new cave systems on each run using hand-designed room templates assembled in random configurations, populated with consistent but variably placed enemies, traps, and items. A whip-armed archaeologist descended through mines, jungles, ice caves, and a temple toward the bottom of the world, acquiring gold and rescuing maidens, dying constantly in creative ways, and starting again.\n\nYu was explicit about his retro references: Spelunker (1983/1985) on the MSX and NES gave him the core concept of a fragile cave explorer in a dangerous underground world. Classic Rogue-style games provided the procedural generation philosophy and the permadeath structure. The NES action game aesthetic — tight controls, punishing-but-fair physics, immediate feedback — provided the feel he was targeting. What he added was the combination: a game where the roguelike\' random world could be played with the immediate responsiveness of an action platformer.\n\nMicrosoft co-published a heavily expanded XBLA version in 2012, adding four-player local co-op, new areas, new enemies, and visual overhaul while preserving the original\'s design philosophy. Spelunky 2 followed in 2020 with Yu as sole developer again, adding significant systemic complexity. The original freeware version and its commercial remake collectively launched the roguelite genre as understood today — Rogue Legacy, Dead Cells, Hades, and dozens of others follow directly from the hybrid design Yu demonstrated.',
+    keyFacts: [
+      'Released as a free Game Maker title in 2008; Microsoft co-published a commercial XBLA remake in 2012 with co-op and expanded content',
+      'Procedural generation uses hand-designed room templates assembled randomly, ensuring each run is different without sacrificing design quality',
+      'Every system interacts with every other system — enemies react to terrain, items, and each other — creating emergent situations no designer planned',
+      'Derek Yu explicitly cited Spelunker (NES/MSX, 1985) as the direct inspiration for the concept of a fragile underground explorer',
+    ],
+    sections: [
+      {
+        title: 'The Roguelite Invention',
+        html: '<p>Before Spelunky, roguelikes and action platformers were separate genres with different audiences. Roguelikes — Rogue, NetHack, Angband — were turn-based, ASCII-rendered, and demanded enormous time investment before players understood their systems. Action platformers were immediate, visually readable, and reflexes-driven. The two genres\' player bases barely overlapped.</p><p>Spelunky\'s synthesis was simple in concept and revolutionary in practice. Take the roguelike\'s procedural generation and permadeath. Remove the turn-based structure. Add platformer physics and real-time combat. The result was a game where knowledge accumulated across failed runs without any single run requiring repetition. A player who died to a snake on run one knew about snakes on run two. A player who died to a shopkeeper learned not to rob shops. The learning curve was steep but every lesson was earned through genuine play rather than memorisation of a fixed level layout.</p>',
+      },
+      {
+        title: 'Mastery Without Memorisation',
+        html: '<p>The key distinction Spelunky introduced was mastery of systems rather than mastery of content. In a fixed-layout game, a player who has memorised every enemy position and obstacle placement gains an advantage unavailable to a newcomer. In Spelunky, memorisation was useless because the layout changed every run. What mattered was understanding the rules: how rope physics worked, which enemies were lured by sound, how the ghost\'s timer could be manipulated, which items combined to create unexpected advantages.</p><p>This design meant that skilled Spelunky players and beginners were playing fundamentally different games. A beginner encountered random death and arbitrary-seeming difficulty. An expert saw the same procedural world as a legible system full of predictable interactions, and could make consistent runs to the endgame through applied knowledge rather than memorised paths. The game rewarded a different kind of intelligence than the retro games it was evoking, even while deliberately channelling their aesthetic.</p>',
+      },
+    ],
+  },
+  {
+    id: 'super-meat-boy',
+    title: 'Super Meat Boy',
+    platform: 'PC, Xbox 360',
+    year: 2010,
+    developer: 'Team Meat (Edmund McMillen & Tommy Refenes)',
+    inspiredBy: 'Super Mario Bros., Syobon Action, classic NES precision platformers',
+    era: '2010s',
+    description: 'Super Meat Boy was a precision platformer that treated NES-era difficulty as a feature rather than a flaw, building 300 levels of increasingly brutal obstacle courses around a character who respawned instantly — converting failure from frustration into a rapid feedback loop that made completion feel genuinely earned.',
+    longDescription: 'Edmund McMillen and Tommy Refenes, working as Team Meat, spent two years building Super Meat Boy as an expansion of McMillen\'s earlier Flash game Meat Boy. The design premise was explicit: they wanted to make the hardest platformer they could while remaining fair. Every death was the player\'s fault. Every obstacle was readable before the fatal attempt. Every mechanic was introduced clearly before being combined into more complex configurations. The difficulty was not arbitrary punishment but a precise calibration that demanded execution of skills the game had already taught.\n\nThe character controlled with the momentum-based physics of the best NES platformers — no swimming through air, immediate directional response, wall-jumping that required precise timing. Levels were designed to exploit these physics mercilessly, filling corridors with saw blades, salt, and projectiles that killed instantly and required millimetre routing. The key design decision was instant respawn: dying returned the player to the level start in under a second, with no loading screen, no death animation pause, no punishment beyond the time lost. This eliminated the frustration cycle of traditional difficult platformers, where the wait between attempts extended the pain.\n\nThe game shipped on XBLA in October 2010 to extraordinary critical reception and sold over 2 million copies within two years. Its PC release on Steam followed shortly after. Team Meat\'s transparency about the development process — including a documentary, Indie Game: The Movie, which captured the final months of production — made Super Meat Boy a cultural touchstone for the indie gaming movement alongside Minecraft and Fez.',
+    keyFacts: [
+      'Instant respawn — under one second from death to retry — was the central design decision that converted brutal difficulty into acceptable repetition',
+      'Over 300 main-game levels across seven chapters, each introducing a new environmental hazard, plus parallel dark-world versions of every level',
+      'Edmund McMillen and Tommy Refenes worked as a two-person team; McMillen designed and built levels while Refenes programmed the engine',
+      'The warp zones — secret areas accessible from levels — tribute specific NES games including Mega Man, Castlevania, and Ghosts \'N Goblins in their visual style',
+    ],
+    sections: [
+      {
+        title: 'Instant Respawn and the Failure Loop',
+        html: '<p>The most important design decision in Super Meat Boy is invisible to players who have only experienced it. Instant respawn — returning to the level start in the time it takes to release and press a button — eliminates the most significant psychological cost of failure in difficult games: the wait. Traditional difficult platformers made players watch death animations, load screens, and cutscenes before allowing them to try again. That wait amplified frustration by giving the player time to process failure rather than immediately respond to it.</p><p>Super Meat Boy collapses the gap between death and retry to near zero, turning the failure loop into something closer to a rhythm than a punishment. Skilled players enter a near-meditative state during difficult levels, dying and retrying in rapid succession until muscle memory and route knowledge produce a successful run. The game at the end of each level shows a ghost replay of every attempt simultaneously — a moment of spectacle that reframes repeated failure as accumulated progress toward a visible result.</p>',
+      },
+      {
+        title: 'NES Difficulty as Respect',
+        html: '<p>Super Meat Boy made an implicit argument that ran counter to mainstream game design philosophy in 2010: that difficulty was a form of respect for the player. The games industry had spent the 2000s expanding accessibility through adjustable difficulty settings, hints, tutorials, and reduced punishment for failure. These were often framed as democratising moves, making games available to people who had been excluded by harsh difficulty. Team Meat disagreed, at least for their game.</p><p>The NES games they were drawing from — Super Mario Bros., Ghosts \'N Goblins, Contra — expected players to fail repeatedly and did not apologise for it. The difficulty was the content: overcoming it was the point, and the satisfaction of completion was proportional to how many times you had been beaten. Super Meat Boy applied this philosophy to a modern context with a design rigour that prevented the difficulty from feeling arbitrary. Every death taught something. Every lesson was applicable. The game was hard, and it intended to be, because it trusted the player to want to get better.</p>',
+      },
+    ],
+  },
+  {
+    id: 'vvvvvv',
+    title: 'VVVVVV',
+    platform: 'PC (Windows, Mac)',
+    year: 2010,
+    developer: 'Terry Cavanagh',
+    inspiredBy: 'Commodore 64 games, early 8-bit platformers',
+    era: '2010s',
+    description: 'VVVVVV stripped the platformer to its barest mechanic — no jumping, only gravity flipping — and wrapped it in a Commodore 64 aesthetic authored by a single developer, producing a game of remarkable minimalist clarity whose chip-tune soundtrack by Magnus Pålsson became one of the most celebrated scores of the indie revival.',
+    longDescription: 'Terry Cavanagh designed VVVVVV\'s core mechanic first and built everything else around it. The game\'s protagonist cannot jump; instead, the player toggles gravity between ceiling-up and floor-up, causing the character to flip and fall in the new direction. This single mechanic — implemented in approximately one button press — generated every movement challenge in the game: corridors of spikes requiring precise gravity switches, rooms demanding that the player traverse the ceiling while enemies moved beneath, and sections where continuous gravity flipping created a rhythm closer to music than traditional platformer movement.\n\nCavanagh built the game over a month in Flash and released it commercially in January 2010. The visual aesthetic was drawn from Commodore 64 conventions: limited colour palettes, blocky character designs, text-heavy presentation, and an interface that recalled the home computer games of 1985. The aesthetic was not accidental imitation but a deliberate choice to communicate the kind of experience the game offered — simple in presentation, demanding in execution, immediate in feedback.\n\nMagnus Pålsson\'s chiptune soundtrack, composed specifically for the game under the alias SoulEye, became independently celebrated: tracks like "Positive Force" and "Predestination" were praised as among the finest chip music produced outside the demoscene. The soundtrack was released separately and remains in wide circulation. Cavanagh himself has cited the Commodore 64\'s audio capabilities as a direct influence on the musical brief he gave Pålsson.',
+    keyFacts: [
+      'The entire game is built on one mechanic: flipping gravity direction replaces jumping entirely',
+      'Developed in approximately one month by Terry Cavanagh alone, using the Flash authoring tool',
+      'Composer Magnus Pålsson (SoulEye) wrote the soundtrack under a Commodore 64 aesthetic brief; it received independent critical attention',
+      'The game features a checkpoint system that the player places manually — a deliberate design choice that makes difficulty management the player\'s responsibility',
+    ],
+    sections: [
+      {
+        title: 'Minimalism as Argument',
+        html: '<p>VVVVVV is a game about what happens when you remove everything inessential. No attack. No health bar. No collectibles beyond optional trinkets. No jump. One mechanic — gravity flip — and its implications explored across a two-to-four hour runtime. This minimalism was not a limitation imposed by the development context; Cavanagh was capable of more complex games and chose not to make one here. The game is minimalist because it is an argument that minimalism produces a purity of experience that complexity dilutes.</p><p>Every room in the game is a single focused problem. The gravity flip mechanic interacts with each room\'s specific configuration of platforms and hazards to create a challenge that exists nowhere else in the game. There is no room that is simply a harder version of a previous room; each environment extracts a different implication of the core mechanic. This density of design — maximal variety from minimal systems — is the game\'s primary intellectual achievement.</p>',
+      },
+      {
+        title: 'The C64 Aesthetic and Its Meaning',
+        html: '<p>By 2010, the Commodore 64 aesthetic was genuinely obscure. NES-styled games had a mainstream reference point; C64 visual style was recognisable primarily to players who had grown up with the platform or had studied its history. Cavanagh\'s choice to work within C64 visual conventions was therefore a statement directed at a specific audience: people who understood what the aesthetics signified, what values the platform\'s best games embodied, and why those values were worth preserving.</p><p>The C64 library at its best was characterised by technical ingenuity within extreme constraints, musical sophistication through the SID chip, and game design that derived entertainment from systems rather than spectacle. VVVVVV inherited all three. The technical constraint of one mechanic is a C64-designer\'s approach. The musical sophistication of SoulEye\'s soundtrack is C64-composer mentality applied to modern composition tools. The systemic gameplay depth derived from gravity flipping is exactly the kind of design that C64 developers were producing in 1985 — and which Cavanagh was arguing remained worth making in 2010.</p>',
+      },
+    ],
+  },
+  {
+    id: 'undertale',
+    title: 'Undertale',
+    platform: 'PC (Windows, Mac)',
+    year: 2015,
+    developer: 'Toby Fox',
+    inspiredBy: 'EarthBound, Touhou Project, classic JRPGs',
+    era: '2010s',
+    description: 'Undertale was built by one person in Game Maker and used the visual language of SNES JRPGs to deliver a game that systematically interrogated the assumptions underlying every retro RPG the player might have loved — particularly the convention that combat was the primary means of progress.',
+    longDescription: 'Toby Fox had no professional game development background when he created Undertale; he was primarily known as a musician who had contributed fan arrangements to the Homestuck webcomic. He taught himself Game Maker and built Undertale over two and a half years, following a successful Kickstarter that raised $51,124 against a $5,000 goal. The game\'s visual aesthetic — character portraits, overworld sprites, battle UI — was modelled directly on SNES-era JRPGs, particularly EarthBound and the Mother series, which Fox cited as his primary influence.\n\nThe game\'s central innovation was a combat system that offered genuine pacifist alternatives to every encounter. Players could spare, comfort, flirt with, or flee from every enemy in the game without fighting. The bullet-hell combat sequences — in which the player\'s heart-shaped token dodged enemy attacks in the battle screen — existed to create tension during non-violent resolution attempts as well as during actual fights. A pacifist run was mechanically more demanding than a violent one: players had to learn each enemy\'s specific non-combat trigger, which required genuine engagement with the game\'s world rather than bypassing it.\n\nThis design deconstructed the RPG genre\'s fundamental assumption — that killing enemies was the appropriate and expected means of progress — by making the alternative both possible and rewarding. Players who completed pacifist runs received a different ending and a deeper story than those who fought through the game, inverting the standard relationship between combat efficiency and narrative reward. The game sold over 3.5 million copies and was named by numerous publications as a candidate for the best game of 2015.',
+    keyFacts: [
+      'Created entirely by Toby Fox — game design, art, and the entire soundtrack — with guest art from Temmie Chang',
+      'Kickstarter raised $51,124 against a $5,000 goal in 2013; sold over 3.5 million copies by 2019',
+      'A true pacifist run unlocks different endings than a violent playthrough; the game tracks all choices and comments on them',
+      'The soundtrack, written entirely by Fox, received wide independent attention; "Megalovania" entered mainstream culture through Super Smash Bros. Ultimate (2018)',
+    ],
+    sections: [
+      {
+        title: 'Deconstructing the JRPG',
+        html: '<p>Undertale is in constant dialogue with the games that inspired it. Its battle system is a JRPG battle system. Its overworld structure is an EarthBound overworld. Its enemy designs reference the strange, anthropomorphic monsters of classic JRPGs. And then it asks: why do you kill all of these? The game is not hostile to its genre predecessors; it loves them, demonstrably and specifically. What it interrogates is their unexamined conventions — particularly the convention that progress is measured in defeated enemies.</p><p>By making pacifism mechanically possible and narratively superior, Undertale forced players to notice something they had never thought about: that JRPGs taught players to reflexively kill everything they encountered without considering alternatives. The game does not condemn this — the genocide route, in which players kill every enemy in the game, is one of three main routes and provides its own complete narrative — but it makes the choice visible in a way that changes what every prior JRPG meant retrospectively.</p>',
+      },
+      {
+        title: 'One Person, Complete Vision',
+        html: '<p>Undertale is the most successful single-author game in the indie revival, and its success is directly related to its authorial coherence. Fox\'s writing, soundtrack, and game design are inseparable: the game\'s emotional impact depends on music arriving at precise moments, on characters whose dialogue matches their mechanical behaviour, on a story whose tone shifts are supported by aesthetic changes that a single author can coordinate in ways a team cannot. The soundtrack in particular — which shifts from lighthearted chiptune to orchestral grandeur to silence at exactly the right moments — is integrated into the experience in a way that separately contracted music rarely achieves.</p><p>The EarthBound influence extends beyond visual style. Mother/EarthBound was itself the work of a primary creator, Shigesato Itoi, who wrote the entire script and controlled the game\'s tone with an unusually singular voice. Fox absorbed this not just as an aesthetic reference but as a model of how a game could feel authored rather than assembled. Undertale\'s most powerful sequences depend on this authorial control — a moment of comedy followed immediately by genuine melancholy works only because the person writing both understood how they related to each other.</p>',
+      },
+    ],
+  },
+  {
+    id: 'ftl-faster-than-light',
+    title: 'FTL: Faster Than Light',
+    platform: 'PC (Windows, Mac, Linux)',
+    year: 2012,
+    developer: 'Subset Games (Justin Ma & Matthew Davis)',
+    inspiredBy: 'Classic computer strategy games, Star Control II, MUDs',
+    era: '2010s',
+    description: 'FTL applied the roguelike philosophy of permadeath and procedural generation to a spaceship management game, channelling the feel of classic 1980s computer strategy — limited information, consequential decisions, and systems that interacted in ways no designer had explicitly planned — in a clean modern interface.',
+    longDescription: 'Justin Ma and Matthew Davis developed FTL over two years after meeting while working in the game industry in China. The game\'s concept was a real-time strategy of managing a single spaceship — assigning crew to ship systems, directing power between shields, engines, weapons, and life support, and surviving encounters with pirates, rebels, and alien vessels across a procedurally generated galaxy. Each run generated a new sector map with new events, new enemy configurations, and new item rewards, and ended permanently on the death of the last crew member.\n\nThe design explicitly referenced the strategy games of the 1980s and early 1990s — games with limited information, meaningful resource scarcity, and the sense that player decisions mattered because bad decisions produced permanent consequences. FTL\'s difficulty was calibrated to produce the same tension those games had generated: encounters were genuinely dangerous, resources were genuinely limited, and the game did not rescue players from the consequences of poor decisions. The interface was clean and modern — no pixel art, no deliberately retro graphics — but the underlying design philosophy was entirely rooted in the pre-handholding era of computer gaming.\n\nA Kickstarter campaign raised $200,000 against a $10,000 goal, and the game sold over 2 million copies within two years of its release on Steam. The Advanced Edition DLC, added in 2014, introduced new ship systems and events while preserving the base game\'s design philosophy. FTL remains the canonical example of a game that channelled retro design values without retro aesthetics.',
+    keyFacts: [
+      'Kickstarter raised $200,000 against a $10,000 goal, one of the most dramatically overfunded campaigns of 2012',
+      'Permadeath applies to individual crew members as well as the ship — named crew who die in combat are gone permanently',
+      'The Advanced Edition DLC (2014) added new content without raising the price; existing owners received it free',
+      'Ships and starting loadouts differ significantly; a full unlock of all ships requires completing specific achievements on multiple runs',
+    ],
+    sections: [
+      {
+        title: 'Strategy Without Safety Net',
+        html: '<p>FTL operates without the undo buttons, quicksaves, and recovery mechanics that became standard in strategy games during the 2000s and 2010s. Crew members who die to fire, vacuum, or enemy boarding parties are dead. Ships that take critical hull damage and cannot be repaired continue limping toward the next beacon in that condition. Poor choices in the first sector propagate as cumulative disadvantage through the following seven sectors, and the game does not intervene to correct structural mismanagement.</p><p>This design was a deliberate callback to the era of computer strategy before autosave normalised perpetual recovery. Games like the original X-COM, MicroProse\'s space simulations, and the early Civilization entries created tension precisely because they would not rescue players from mistakes. FTL argued that this tension — the genuine stakes of a decision that cannot be unmade — was worth preserving, and that modern players would engage with it rather than bounce off it. The sales data proved the argument correct.</p>',
+      },
+      {
+        title: 'Retro Philosophy, Modern Interface',
+        html: '<p>FTL is one of very few retro revival games that made no attempt at retro aesthetics. There are no pixels, no chiptunes, no deliberately limited colour palettes. Ben Prunty\'s ambient electronic soundtrack would not sound out of place in a contemporary film score. The interface is clean, scalable, and modern. What FTL borrowed from the 1980s was invisible to the eye: the design philosophy of limited information, meaningful resource scarcity, and permanent consequences.</p><p>This separation of retro aesthetics from retro design philosophy was significant. It demonstrated that what players nostalgic for older games were often seeking was not the look of those games but the feel — the tension, the stakes, the respect for player agency over player comfort. FTL could deliver that feel in a modern package, and the enthusiastic response it received suggested that the aesthetics many retro revival games treated as essential were actually optional. The philosophy was the thing worth preserving.</p>',
+      },
+    ],
+  },
+  {
+    id: 'axiom-verge',
+    title: 'Axiom Verge',
+    platform: 'PC, PlayStation 4, PlayStation Vita',
+    year: 2015,
+    developer: 'Tom Happ',
+    inspiredBy: 'Super Metroid, Blaster Master, Contra',
+    era: '2010s',
+    description: 'Axiom Verge was built entirely by one developer over seven years alongside a full-time job, producing a Metroidvania that engaged so deeply with Super Metroid\'s design language that experienced players reported moments of genuine uncertainty about which game they were playing — high praise offered and received as intended.',
+    longDescription: 'Tom Happ began building Axiom Verge in 2009 while employed as a game developer at Petroglyph Games. He worked on the project in evenings and weekends for six years before transitioning to full-time development in the final year before release. Every aspect of the game — code, art, music, design — was his work alone. The game\'s story involved a scientist who dies in a laboratory accident and awakens in an alien world, gradually acquiring weapons and abilities that allow access to previously closed areas in the Metroidvania structure made canonical by Super Metroid.\n\nHapp\'s engagement with Super Metroid was analytical as well as appreciative. He studied how Nintendo R&D1\'s 1994 game used environmental colour to communicate mood and progression, how it introduced abilities in an order that always gave players a visible objective before the means to reach it, and how its navigation was designed so that a player who understood the world map could always identify where to go next. Axiom Verge implemented these design principles faithfully while adding mechanics unavailable in 1994: a glitch gun that corrupted enemy behaviour into unpredictable but potentially useful states, an address disruptor that altered environmental geometry, and a drone that allowed indirect exploration.\n\nThe game shipped on PlayStation 4 in March 2015 and on PC in May 2015, receiving critical praise for its faithfulness to the Metroidvania template and the quality of its world design. Axiom Verge 2 followed in 2021 with a significantly different design philosophy, but the original remains the definitive example of a single developer engaging seriously with Super Metroid as a formal object rather than a childhood memory.',
+    keyFacts: [
+      'Developed entirely by one person over approximately seven years alongside a full-time game industry job',
+      'The glitch gun corrupts enemy AI into randomised behaviour — sometimes beneficial, sometimes harmful — a mechanic with no direct precedent in the games it emulates',
+      'Happ has stated he studied Super Metroid\'s design systematically, identifying which specific techniques produced which specific player experiences',
+      'The game\'s environmental storytelling — alien texts that can be decoded over multiple playthroughs — mirrors the archaeological quality of Metroid\'s worldbuilding',
+    ],
+    sections: [
+      {
+        title: 'Studying a Classic',
+        html: '<p>There are many games that describe themselves as Metroid-inspired. Axiom Verge is unusual in the depth of its engagement. Happ did not produce a game that felt like Super Metroid from the outside; he produced a game that operated like Super Metroid from the inside. The ability progression, the environmental colour coding, the navigation design, the atmospheric audio — each was examined in the original, its function understood, and then replicated with deliberate intention rather than intuitive approximation.</p><p>This analytical approach shows in the moments where Axiom Verge diverges from its model. The glitch mechanics — corrupting enemies, distorting terrain — are additions that Happ could make precisely because he understood what the base game was doing and what adjacent design space existed. He was not copying Super Metroid; he was extending it from a position of full comprehension of what it was.</p>',
+      },
+      {
+        title: 'The Seven-Year Project',
+        html: '<p>Six years of evening and weekend work is a different kind of game development than either commercial production or the shorter indie sprints that became standard after Cave Story normalised solo development. Axiom Verge accumulated over that period rather than being designed entirely upfront. Happ has described areas of the game being redesigned multiple times as his understanding of the project evolved. The world map is the product of iteration across years rather than planning across months.</p><p>This extended development produced a game that feels thoroughly inhabited — every area has been lived in by its designer for long enough that no room feels like a placeholder. The alien architecture of the game\'s underground world is geometrically consistent in a way that suggests someone spent years thinking about what the civilisation that built it might have valued. That quality of sustained attention is difficult to fake and difficult to produce under commercial time pressure. The seven-year development timeline was not a failure of efficiency but a prerequisite for the result.</p>',
+      },
+    ],
+  },
+  {
+    id: 'stardew-valley',
+    title: 'Stardew Valley',
+    platform: 'PC (Windows, Mac, Linux)',
+    year: 2016,
+    developer: 'ConcernedApe (Eric Barone)',
+    inspiredBy: 'Harvest Moon, Story of Seasons, Secret of Mana, SNES RPG aesthetics',
+    era: '2010s',
+    description: 'Stardew Valley was built by one developer over four years as a deliberate reconstruction of what the Harvest Moon games had been before the series lost its way, and became one of the best-selling independent games ever made by demonstrating that the SNES farming RPG aesthetic — charming, patient, systems-rich — had an enormous untapped audience.',
+    longDescription: 'Eric Barone began developing Stardew Valley in 2012 under the alias ConcernedApe, explicitly motivated by dissatisfaction with the direction the Harvest Moon series had taken in its later entries. The Harvest Moon games of the SNES era — Harvest Moon and Harvest Moon 64 — had combined farming simulation, social simulation, and light RPG progression in a package that felt warm and inhabited. Later entries in the series had, in Barone\'s view, added features while losing the quality that made the originals appealing.\n\nBarone rebuilt the formula from scratch: seasonal farming cycles, livestock management, crop selection, foraging, fishing, mining, and a village full of characters with daily schedules, relationship tracks, and personal storylines. The visual aesthetic was SNES RPG pixel art — the resolution, colour palette, and animation style of games like Secret of Mana and early Harvest Moon. Barone composed the entire soundtrack himself, aiming for the warm, melodic style of SNES RPG scoring. He also coded the entire game engine, designed every character, and wrote all the dialogue.\n\nStardew Valley shipped in February 2016 and sold 1 million copies in its first month, ultimately surpassing 30 million copies sold by 2024. The game\'s commercial success demonstrated not only the commercial viability of retro aesthetics but the existence of a large market for patient, unhurried games that asked nothing of the player in a hurry. Barone self-published the game, negotiating with no publisher, retaining full creative control and the full revenue from its extraordinary performance.',
+    keyFacts: [
+      'Developed entirely by Eric Barone alone over approximately four years; every asset — code, art, music, design — is his work',
+      'Sold 1 million copies in its first month; surpassed 30 million copies sold by 2024, making it one of the best-selling indie games ever made',
+      'Barone self-published, retaining full creative control and revenue — a commercial structure that became aspirational for indie developers',
+      'Multiplayer co-op was added post-launch in 2018 after more than two years of additional development by Barone alone',
+    ],
+    sections: [
+      {
+        title: 'Reconstructing Harvest Moon',
+        html: '<p>Stardew Valley\'s origin is a critique. Barone has been specific about what he felt the Harvest Moon series had lost: the warmth, the systemic depth, the sense of a world running on its own schedule that the early SNES and N64 entries had achieved. The game is not simply a Harvest Moon clone; it is an argument about what Harvest Moon should have continued to be, built by someone who cared enough to make the alternative himself.</p><p>This critical engagement with an existing genre is different from simple homage. Barone identified specific design decisions in the Harvest Moon series that had degraded the experience — UI choices, pacing choices, content choices — and made different decisions. Stardew Valley is not a museum piece presenting what SNES farming RPGs looked like; it is a working hypothesis about what they were trying to achieve and how to achieve it better.</p>',
+      },
+      {
+        title: 'Patience as Design',
+        html: '<p>The games industry in 2016 had optimised heavily for engagement — for mechanics that created urgency, scarcity, and continuous feedback loops that drove players to return daily. Stardew Valley operated on almost exactly opposite principles. A day in the game passed at a fixed pace whether or not the player was achieving anything. Seasons changed on a schedule. Crops died if not harvested but were never otherwise time-pressured. The game waited for the player rather than demanding the player keep pace with it.</p><p>This patience was the SNES RPG aesthetic operating at a design level rather than a visual one. The SNES games Barone was drawing from — particularly the early Harvest Moon titles — had been made before the attention-economy thinking that shaped later game design. They were not competing for the player\'s time against other applications; they simply existed and invited engagement at whatever pace the player found natural. Stardew Valley restored this quality and discovered that the audience for patient, unhurried games was far larger than the industry had assumed.</p>',
+      },
+    ],
+  },
+  {
+    id: 'hotline-miami',
+    title: 'Hotline Miami',
+    platform: 'PC (Windows)',
+    year: 2012,
+    developer: 'Dennaton Games (Jonatan Söderström & Dennis Wedin)',
+    inspiredBy: 'GTA 1 & 2 (top-down), Amiga action games, 1980s Miami aesthetic',
+    era: '2010s',
+    description: 'Hotline Miami fused the top-down perspective and brutal one-hit-kill mechanics of late-1990s GTA with a neon-soaked 1989 Miami aesthetic and an electronic soundtrack, creating a game where the violence was immediate, abstract, and accompanied by music that made it feel like the most intensely pleasurable thing in the world — then asked whether that feeling should be examined.',
+    longDescription: 'Jonatan Söderström and Dennis Wedin developed Hotline Miami over approximately two years, releasing it on Steam in October 2012. The game\'s mechanical foundation was the top-down perspective and one-hit-kill lethality of the original Grand Theft Auto (1997) and its sequel — games designed for the PlayStation era that used a severely limited camera to enforce a specific kind of strategic spatial awareness. In Hotline Miami, both the player character and all enemies died in a single hit, making every room a puzzle to be solved before entering it: who to hit first, which weapon to collect, which angle of approach minimised exposure.\n\nThe 1989 Miami setting — neon lights, pastel colours, cocaine-era design aesthetics, animal masks worn by the protagonist — was layered over this mechanical foundation along with an electronic soundtrack combining tracks by Perturbator, Jasper Byrne, El Huervo, and others that became one of the most widely discussed game soundtracks of 2012. The music was designed to make the violence feel euphoric, rhythmic, and beautiful. The game periodically interrupted this euphoria with moments of narrative strangeness — scenes that suggested the player character might not fully understand what he was doing or why — that worked against the pleasurable feedback loop the rest of the game had constructed.\n\nHotline Miami sold over 3 million copies and received a sequel, Hotline Miami 2: Wrong Number, in 2015. Its influence on subsequent indie games — particularly in its use of extreme violence in a deliberately distancing aesthetic context — is visible across dozens of subsequent titles.',
+    keyFacts: [
+      'The one-hit-kill system applies symmetrically to enemies and player, making each room a planning problem before becoming an execution problem',
+      'The soundtrack — electronic music by multiple artists including Perturbator, Jasper Byrne, and El Huervo — was released separately and has over 100 million streams across platforms',
+      'Player character wears animal masks that modify gameplay behaviour — the rooster allows killing with doors, the owl allows quick turns — adding systematic variety to the mechanic',
+      'Sold over 3 million copies; follow-up Hotline Miami 2: Wrong Number (2015) expanded the story while preserving the mechanical foundation',
+    ],
+    sections: [
+      {
+        title: 'Violence as Aesthetic',
+        html: '<p>Hotline Miami is explicit about what it is doing with violence in a way that most action games are not. The blood is bright and graphic. The death animations are immediate and specific. The music is engineered to make killing feel good. None of this is accidental: Söderström and Wedin were making a game about the pleasures of virtual violence in order to have something to say about them. The narrative intrusions — the surreal sequences, the question "Do you like hurting people?" — are not tone-deaf breaks from the action but the point toward which the action has been building.</p><p>The GTA 1 and 2 reference is significant here. Those games had used top-down violence at a distance that made individual deaths abstract. Hotline Miami closed that distance: you see each enemy\'s face, each death is specific, and the camera does not look away. The retro perspective was employed to intensify the experience rather than to soften it.</p>',
+      },
+      {
+        title: 'Room as Puzzle',
+        html: '<p>Hotline Miami\'s level design is misunderstood if it is experienced as a reflex game. The correct comparison is to a puzzle game where the puzzle is spatial and the pieces are enemy positions, weapons, and geometry. A player who charges into a room will die almost instantly. A player who observes through the limited sightlines available — doors can be opened slightly, corners peered around — can plan a sequence of actions before committing. Execution skill matters, but planning matters more.</p><p>This structure descends directly from the original GTA\'s mission design, where the top-down camera created a naturally tactical view of approaching objectives. Hotline Miami accelerated the pace until the tactical view and the execution blurred together, and added music calibrated to produce a flow state in which planning and execution felt like a single continuous action. The retro perspective, far from being a nostalgic aesthetic choice, was the correct tool for the design problem the game was solving.</p>',
+      },
+    ],
+  },
+];

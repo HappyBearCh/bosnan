@@ -1,0 +1,328 @@
+'use strict';
+
+module.exports = [
+  {
+    id: 'id-software',
+    name: 'id Software',
+    foundedYear: 1991,
+    founders: ['John Carmack', 'John Romero', 'Tom Hall', 'Adrian Carmack'],
+    location: 'Shreveport, Louisiana, USA',
+    firstGame: 'Commander Keen (1990, as Softdisk employees)',
+    era: '1991 – present',
+    description: 'id Software was born from a mutiny at Shreveport disk-magazine publisher Softdisk, where four employees secretly built a game on company time and equipment, then fled together to found their own studio.',
+    longDescription: 'In late 1990, John Carmack, John Romero, Tom Hall, and Adrian Carmack were all employed at Softdisk, a Louisiana software company that published monthly game disks for Apple II and PC. Working nights and weekends — and using Softdisk\'s equipment without authorisation — the four built a faithful clone of Super Mario Bros. 3 for PC in a single weekend to demonstrate Carmack\'s breakthrough smooth side-scrolling technique. Nintendo declined to license the technology, but the demo caught the attention of Apogee Software\'s Scott Miller, who commissioned an original game. The four delivered Commander Keen in three months while still on Softdisk\'s payroll. When their employer discovered the arrangement, they negotiated a part-time contract to continue producing Softdisk games — then departed to found id Software in February 1991, initially operating out of a rented house in Mesquite, Texas. Doom (1993) would go on to define the first-person shooter genre and become one of the most influential software products in PC history.',
+    keyFacts: [
+      'Founded after secretly building a Super Mario Bros. 3 PC clone on Softdisk\'s equipment',
+      'Commander Keen (1990) was completed in three months and published by Apogee before id formally existed',
+      'Doom (1993) is estimated to have been installed on more PCs than Microsoft Windows at the time',
+      'John Carmack\'s engine technology — Wolfenstein 3D, Doom, Quake — underpinned dozens of licensed games',
+    ],
+    sections: [
+      {
+        title: 'The Softdisk Rebellion',
+        html: '<p>The four future founders of id Software were not seeking to start a company — they were seeking a way out of a job they had outgrown. Softdisk published monthly subscription disks of games and utilities for Apple II and PC; the work was competent and steady but offered none of the creative ambition that John Carmack, in particular, had begun to pursue in his own time. His technique for smooth side-scrolling on PC hardware — previously thought impossible without dedicated graphics hardware — was the catalyst. When Scott Miller of Apogee offered to pay for a game built around it, the group had a financial path out before they had a company.</p><p>The Softdisk confrontation, when it came, was managed rather than catastrophic. The founders agreed to continue producing games for their former employer\'s Gamer\'s Edge disk on a contract basis — an obligation they met through the early id years with games they produced quickly and with diminishing enthusiasm. The real work was Wolfenstein 3D (1992) and then Doom, both built in Texas and then Wisconsin, moving to where the money and talent clustered. The garage-startup mythology that accrued to id Software after Doom\'s success obscured the more specific story: this was a group of talented people who saw a technical advantage, found a publisher willing to pay for it, and arranged their exit accordingly.</p>',
+      },
+      {
+        title: 'The Engine as Product',
+        html: '<p>What distinguished id Software from nearly every other game developer of the early 1990s was Carmack\'s decision to treat the engine — the underlying rendering and game-loop software — as a licensable product in its own right. Doom\'s engine was licensed to Raven Software, Lobotomy Software, and eventually dozens of other developers, generating revenue that funded id\'s own productions and spreading the technological standard Carmack had established across the entire PC game industry. This model, in which a studio\'s technical innovation became a platform others built upon, was nearly without precedent in 1993 and became the template for middleware businesses that shaped the industry for decades.</p><p>The id Tech lineage — Wolfenstein 3D engine, Doom engine, Quake engine, and their descendants — constitutes one of the most consequential bodies of software engineering in gaming history. Games as structurally different as Half-Life (1998) and Heretic (1994) were built on id engines. Carmack\'s eventual decision to release the source code of earlier engines under open licences created a generation of modders and indie developers who learned game programming by reading his code. The studio\'s founding story — the midnight rebellion at Softdisk — is inseparable from the technological ambition that made the rebellion worth having.</p>',
+      },
+    ],
+  },
+  {
+    id: 'rare',
+    name: 'Rare',
+    foundedYear: 1985,
+    founders: ['Tim Stamper', 'Chris Stamper'],
+    location: 'Twycross, Leicestershire, England',
+    firstGame: 'Jetpac (1983, as Ultimate Play the Game)',
+    era: '1985 – present',
+    description: 'Rare was founded by brothers Tim and Chris Stamper, who taught themselves machine-code programming in a farmhouse in rural Leicestershire and built a game empire from scratch before Nintendo came to them.',
+    longDescription: 'Tim and Chris Stamper grew up in the English Midlands and taught themselves assembly language programming on early home computers in the early 1980s. In 1982, operating as Ultimate Play the Game from their family home, they produced Jetpac for the ZX Spectrum — a game of such technical polish that it sold over 300,000 copies and established Ultimate as the most respected British software house of the 8-bit era. Games like Sabre Wulf, Atic Atac, and Knight Lore (which pioneered isometric 3D graphics in 1984) followed in rapid succession. The brothers renamed their company Rare Ltd in 1985 when they pivoted toward Nintendo hardware, reportedly having reverse-engineered the NES at a time when Nintendo was not licensing to British developers. Nintendo was so impressed by the demonstration of technical competence that they granted Rare one of only a handful of "second-party" development licences, allowing the company to produce ten NES game releases per year — a quota exceeded by no other non-Japanese developer. The farmhouse studio that produced Donkey Kong Country (1994) and GoldenEye 007 (1997) never lost the ethos of two brothers working obsessively alone.',
+    keyFacts: [
+      'Operated from a Leicestershire farmhouse — literally a rural barn-conversion studio through the 1990s',
+      'Reverse-engineered NES hardware to gain Nintendo\'s attention before official licences were available',
+      'Held a rare "second-party" Nintendo licence allowing ten game releases per year — unique among non-Japanese developers',
+      'Purchased by Microsoft in 2002 for $375 million — Nintendo\'s largest licensing partnership sold to a competitor',
+    ],
+    sections: [
+      {
+        title: 'Ultimate Play the Game',
+        html: '<p>Before Rare existed there was Ultimate Play the Game, and before Ultimate there were just two brothers in a house in Leicestershire with a ZX Spectrum and an obsessive commitment to technical excellence. Tim and Chris Stamper were not hobbyists who stumbled into commercial success — they were methodical engineers who identified what current Spectrum games lacked and systematically provided it. Jetpac (1983) moved at a speed and smoothness that no other Spectrum game had achieved; Sabre Wulf (1984) created a scrolling jungle world with more enemies on screen simultaneously than players believed the hardware could handle. The brothers wrote their own assemblers, their own level editors, their own compression routines. They shared no code, accepted no publishing deals from others, and released no information about how any of it worked.</p><p>Knight Lore (1984) was the demonstration that the Stampers were operating at a different level from any British software house of the era. An isometric 3D game on 8-bit hardware — with a day-night cycle, object puzzles, and a cauldron mechanic — Knight Lore predated nearly every other isometric game by years. Ultimate held it back for months after completion, reportedly to avoid cannibalising sales of their existing catalogue. When it launched it was so far ahead of anything else on the platform that competitors spent years attempting to match it. The reputation built by Ultimate gave the Stampers the credibility to approach Nintendo directly.</p>',
+      },
+      {
+        title: 'The Nintendo Partnership',
+        html: '<p>The Stampers\' approach to Nintendo was characteristic of their method: rather than apply through formal channels, they reverse-engineered the Famicom hardware and produced demonstration software that proved they understood the machine at a lower level than most licensed Japanese developers. Nintendo, which had maintained extremely tight control over Western licensing, was sufficiently impressed to grant Rare a development relationship that gave them unmatched creative and commercial flexibility. The resulting NES output — RC Pro-Am, Battletoads, Rare\'s versions of several Acclaim sports titles — was technically superior to most NES software and confirmed the studio\'s standing.</p><p>The SNES era brought Rare\'s most celebrated work: Donkey Kong Country (1994) used Silicon Graphics workstations to pre-render 3D character models as SNES sprites, producing visuals that seemed impossible on the hardware and shifted the entire industry\'s aesthetic expectations for 16-bit console games. GoldenEye 007 (1997) redefined what a first-person shooter could be on a console. Banjo-Kazooie (1998) and Perfect Dark (2000) followed. Through all of it, the studio remained in the same Leicestershire location — a converted farmhouse in a village of a few hundred people — an incongruity that visitors invariably remarked upon. Microsoft\'s £375 million acquisition in 2002 ended the Nintendo partnership but not the studio, which continues to operate from the same address.</p>',
+      },
+    ],
+  },
+  {
+    id: 'blizzard',
+    name: 'Blizzard Entertainment',
+    foundedYear: 1991,
+    founders: ['Mike Morhaime', 'Frank Pearce', 'Allen Adham'],
+    location: 'Los Angeles, California, USA',
+    firstGame: 'RPM Racing (1991)',
+    era: '1991 – present',
+    description: 'Blizzard began as Silicon and Synapse, a UCLA-connected startup funded by a $15,000 personal loan, producing game ports for hire before the runaway success of Warcraft allowed them to chart their own course.',
+    longDescription: 'Allen Adham, Mike Morhaime, and Frank Pearce met while studying at the University of California, Los Angeles, and incorporated Silicon and Synapse in February 1991. The company\'s initial model was contract development: porting existing games from one platform to another for publishers who lacked the technical expertise or time. Adham secured a $15,000 personal loan to fund the studio\'s first months of operation; the three founders initially drew no salary, working from a rented office space and living on the contract income. Early ports for Interplay, publisher of the company\'s first games, established a reputation for clean, technically proficient work. The studio was renamed Chaos Studios briefly before settling on Blizzard Entertainment in 1994 — the same year that Warcraft: Orcs and Humans demonstrated that the team could produce original IP of genuine commercial weight. Warcraft II (1995), Diablo (1996), and StarCraft (1998) each defined or redefined a genre of PC gaming, making Blizzard one of the most consistently successful game developers in the medium\'s history.',
+    keyFacts: [
+      'Incorporated as Silicon and Synapse in 1991 with a $15,000 personal loan as the founding capital',
+      'The first three years were spent porting other companies\' games — not building original titles',
+      'Renamed Blizzard Entertainment in 1994, the same year Warcraft launched',
+      'Warcraft II, Diablo, and StarCraft were each released within three years of the name change',
+    ],
+    sections: [
+      {
+        title: 'Silicon and Synapse',
+        html: '<p>The name Silicon and Synapse was chosen to signal technical ambition — silicon for hardware, synapse for the human element of game design — and the early work backed up the branding. Ports of titles including The Lost Vikings and Rock n\' Roll Racing for Interplay were produced quickly and to a higher standard than the originals in some respects, earning the studio a reputation as a reliable contract developer. The three founders were not yet in a position to pursue original projects; they needed the contract revenue to keep the lights on. Allen Adham, as the company\'s president and lead designer, balanced the business reality of porting work against the creative goal of building something their own.</p><p>The transition from contract work to original development was gradual rather than sudden. The Lost Vikings and Rock n\' Roll Racing — technically ports in origin — were sufficiently developed under Blizzard\'s stewardship to feel like original productions, and they sold well enough to give Adham leverage to propose original games to publishers. Warcraft: Orcs and Humans (1994) was the result: a real-time strategy game in an era when the genre was still establishing its conventions, with production values and interface design that clearly reflected a team that had spent three years developing technical discipline on other people\'s code.</p>',
+      },
+      {
+        title: 'The Blizzard Method',
+        html: '<p>What emerged from the Warcraft success as a recognisable "Blizzard method" was already present in the Silicon and Synapse days: an insistence on polish that bordered on the pathological, and a willingness to delay release until a product met internal standards regardless of external pressure. The phrase "when it\'s done," used by Blizzard publicly to deflect questions about release dates, was not a marketing posture — it was a literal description of how the studio operated, sometimes to the frustration of publishers and investors. Diablo (1996) was rebuilt partway through development after the team decided the turn-based combat they had designed was less satisfying than a real-time system; StarCraft (1998) was reworked so extensively after a mediocre showing at E3 1996 that the version that shipped bore little resemblance to the initial demonstration.</p><p>The $15,000 founding loan was repaid many times over before the decade ended. Activision acquired Blizzard\'s parent company CUC International in a series of transactions that eventually made Blizzard a division of Activision Blizzard — but the Irvine, California studio retained unusual operational independence, continuing to operate under its own brand and release schedule. World of Warcraft (2004) became the most successful subscription MMO ever produced, with peak subscriber numbers above twelve million. The studio that Allen Adham started on a personal loan became one of the most valuable entertainment brands in the world.</p>',
+      },
+    ],
+  },
+  {
+    id: 'bungie',
+    name: 'Bungie',
+    foundedYear: 1991,
+    founders: ['Alex Seropian', 'Jason Jones'],
+    location: 'Chicago, Illinois, USA',
+    firstGame: 'Minotaur: The Labyrinths of Crete (1992)',
+    era: '1991 – present',
+    description: 'Bungie was founded in a Chicago apartment by University of Chicago student Alex Seropian, who self-published his first game from his dorm room and recruited programmer Jason Jones to build the company that would create Marathon and Halo.',
+    longDescription: 'Alex Seropian was a University of Chicago student in 1991 when he self-financed and self-published a game called Operation Desert Storm, selling copies out of his apartment for $25 each. The experience convinced him that commercial game development was viable as a business; he incorporated Bungie Software and recruited Jason Jones, a programmer whose Macintosh game Minotaur: The Labyrinths of Crete became Bungie\'s first retail product in 1992. The two operated from a Chicago apartment on minimal capital, selling directly to Macintosh users through mail-order and early online bulletin board systems. Marathon (1994) changed everything: a first-person shooter for Macintosh with a narrative complexity — delivered through in-game terminals, absent an on-screen protagonist, unreliable — that had no equivalent in PC gaming of the era. Myth: The Fallen Lords (1997) and Halo: Combat Evolved (2001) followed from a studio that had by then relocated to Chicago\'s north side and then to Redmond, Washington after Microsoft acquired the company in 2000, acquiring with it the game that would launch the Xbox.',
+    keyFacts: [
+      'Alex Seropian self-published his first game from his University of Chicago apartment in 1991',
+      'Marathon (1994) predated the modern FPS narrative template and ran exclusively on Macintosh',
+      'Microsoft acquired Bungie in 2000 specifically to secure Halo as an Xbox launch title',
+      'Bungie repurchased its independence from Microsoft in 2007; Activision published Destiny (2014)',
+    ],
+    sections: [
+      {
+        title: 'The Chicago Apartment Years',
+        html: '<p>Bungie\'s founding story is unusually literal about the apartment: Seropian\'s University of Chicago accommodation was simultaneously his home, his office, and his distribution centre. Operation Desert Storm (1991) was a simplistic tank game with almost no commercial ambition behind it, but it taught Seropian the economics of self-publishing — the margins available when a developer bypassed a publisher entirely and dealt directly with customers. The Macintosh community of the early 1990s was small and technically sophisticated, with active online communities on platforms like America Online and eWorld that allowed a small developer in Chicago to reach buyers across the country without a retail presence.</p><p>Jason Jones\'s arrival changed the technical ceiling of what Bungie could produce. Jones had already written Minotaur: The Labyrinths of Crete — a networked dungeon crawler with genuine multiplayer ambition — on his own; joining Seropian gave him resources and a business partner, while Seropian gained a programmer of unusual ability. Pathways into Darkness (1993), their first collaboration, demonstrated a command of atmospheric first-person game design on the Macintosh that exceeded what most PC developers were achieving on more powerful hardware. It was a proof of concept for what Marathon would refine the following year.</p>',
+      },
+      {
+        title: 'Marathon and the Narrative FPS',
+        html: '<p>Marathon (1994) arrived eighteen months after Doom and was compared to it constantly by reviewers who missed how different the two games were in intent. Where Doom presented action in a readable, kinetic visual language with minimal story, Marathon embedded its narrative in computer terminals scattered through its levels — long text entries from an unreliable artificial intelligence called Durandal, whose motives were ambiguous and whose relationship to the player character was complex in ways that no other FPS of the era had attempted. Players who skipped the terminals received a functional shooter; players who read them received a science fiction story of genuine sophistication. Marathon\'s fans documented and analysed the narrative for years after release, anticipating the community interpretive practices that later gathered around games like Halo and Destiny.</p><p>The move to Microsoft and then to Halo was not a creative retreat — Halo: Combat Evolved (2001) carried forward the Marathon legacy of science fiction world-building and AI characterisation, most explicitly in the character of Cortana, whose instability and wit drew directly on Durandal. But the Xbox launch context transformed Bungie from a Macintosh cult developer into a mainstream studio. The Chicago apartment years receded into corporate mythology, preserved in fan histories and occasional developer interviews. Bungie\'s eventual repurchase of its own independence in 2007, and the subsequent decade-long development of Destiny, represented a return to the self-determining posture that Seropian had established in his university accommodation in 1991.</p>',
+      },
+    ],
+  },
+  {
+    id: 'bioware',
+    name: 'BioWare',
+    foundedYear: 1995,
+    founders: ['Ray Muzyka', 'Greg Zeschuk', 'Augustine Yip'],
+    location: 'Edmonton, Alberta, Canada',
+    firstGame: 'Shattered Steel (1996)',
+    era: '1995 – present',
+    description: 'BioWare was founded by three medical doctors in Edmonton, Alberta, who quit medicine to make RPGs and became the most celebrated studio in the Western role-playing game tradition.',
+    longDescription: 'Ray Muzyka, Greg Zeschuk, and Augustine Yip were all practising physicians in Edmonton, Alberta when they incorporated BioWare in 1995. The three had been making games as a hobby for years; the decision to found a studio was a deliberate career change from medicine, not a fallback from a failed tech career. Yip departed early in the company\'s history; Muzyka and Zeschuk built the studio on contract work before Baldur\'s Gate (1998), developed using the Advanced Dungeons and Dragons licence, established BioWare as the leading Western RPG developer. The game sold over two million copies, launched the Infinity Engine as the definitive platform for story-driven RPGs of the late 1990s, and established the studio\'s reputation for dense, character-driven writing. Neverwinter Nights (2002), Knights of the Old Republic (2003), and Mass Effect (2007) extended that reputation across multiple platforms and settings, making BioWare one of the most respected studios in narrative game design. Muzyka and Zeschuk both held medical degrees throughout their tenure; they left the company together in 2012.',
+    keyFacts: [
+      'All three founders held medical degrees and were practising physicians when BioWare was incorporated',
+      'Baldur\'s Gate (1998) sold over two million copies and launched the Infinity Engine RPG platform',
+      'Knights of the Old Republic (2003) won more than 40 game-of-the-year awards',
+      'Ray Muzyka and Greg Zeschuk both left gaming entirely in 2012, citing burnout',
+    ],
+    sections: [
+      {
+        title: 'Doctors Who Made Games',
+        html: '<p>The doctor-founders narrative is sometimes treated as a curious biographical footnote to BioWare\'s RPG legacy, but it shaped the studio\'s culture in substantive ways. Medicine is a field that trains practitioners in systematic problem-solving, long-form commitment to outcomes, and working within rigid structures while exercising significant individual judgment — disciplines that mapped onto game development more directly than they might appear to. Muzyka and Zeschuk ran BioWare with an unusual degree of internal process discipline and a long-term orientation unusual in a commercial game studio. The decision to pursue the Dungeons and Dragons licence for Baldur\'s Gate was a calculated bet on a known property with an established fanbase, not an improvised creative choice.</p><p>The Edmonton location — a city not previously associated with game development — shaped the studio\'s hiring and culture. Without access to the established game-industry labour pools of Los Angeles, Seattle, or Austin, BioWare recruited heavily from the University of Alberta and trained staff internally. Writers, designers, and programmers who might have been filtered out by studios in more competitive markets built careers at BioWare that they held for a decade or more. The stability of the founding team and the consistency of the studio\'s output through the 1990s and 2000s reflected an institution that thought in decades rather than product cycles.</p>',
+      },
+      {
+        title: 'The Infinity Engine and Its Legacy',
+        html: '<p>Baldur\'s Gate used a game engine developed by Bioware and licensed to Black Isle Studios, Obsidian Entertainment, and several other developers — the Infinity Engine — that became the platform on which the late-1990s Western RPG renaissance was built. Planescape: Torment (1999), Icewind Dale (2000), and Baldur\'s Gate II (2000) all ran on variants of the same engine, creating a visual and mechanical language that defined what a literate PC RPG looked and felt like for an entire generation of players. BioWare\'s decision to share the technology, rather than hold it as a competitive advantage, accelerated the genre\'s development and produced some of the most acclaimed games in RPG history from studios that were not BioWare.</p><p>The studio\'s transition to 3D engines and console platforms in the 2000s — with Knights of the Old Republic and then the Aurora Engine\'s Neverwinter Nights — maintained the writing quality and character-driven design that the Infinity Engine games had established while expanding the audience to console players who had not played Baldur\'s Gate. Mass Effect (2007) fused BioWare\'s RPG dialogue and relationship systems with third-person action gameplay in a science fiction setting of its own invention — a creative risk that became the studio\'s most commercially successful franchise. The three doctors from Edmonton had built the most sustained tradition of narrative RPG design in Western game development.</p>',
+      },
+    ],
+  },
+  {
+    id: 'naughty-dog',
+    name: 'Naughty Dog',
+    foundedYear: 1984,
+    founders: ['Andy Gavin', 'Jason Rubin'],
+    location: 'Los Angeles, California, USA',
+    firstGame: 'Ski Crazed (1987)',
+    era: '1984 – present',
+    description: 'Naughty Dog was founded by two childhood friends in high school — Andy Gavin and Jason Rubin — who began selling games from their homes as teenagers and sustained the studio through a decade of difficulty before Crash Bandicoot made them PlayStation\'s mascot.',
+    longDescription: 'Andy Gavin and Jason Rubin met in middle school in the Boston area and began making games together while still in high school, incorporating as JAM Software and then renaming to Naughty Dog in 1989. Their early games — produced on Apple II and Atari ST hardware while the two were in secondary school and then college at MIT and Haverford respectively — sold modestly through mail order and a distribution deal with Baudville. The studio survived through the late 1980s and early 1990s on a combination of contract work and original titles of limited commercial success, with Gavin and Rubin frequently working across coasts as they completed their educations. A fortuitous meeting with Universal Interactive Studios in 1994 led to a deal with Sony to produce an exclusive PlayStation game; Crash Bandicoot (1996), built on a custom 3D game engine that Gavin and Rubin wrote themselves, became one of the PlayStation\'s defining titles and transformed Naughty Dog from a struggling independent into one of Sony\'s most important first-party studios.',
+    keyFacts: [
+      'Gavin and Rubin incorporated their first game company as JAM Software while still in middle school',
+      'The studio was named Naughty Dog in 1989 — chosen because no one would sue a company with that name',
+      'Crash Bandicoot (1996) ran on a custom engine Gavin wrote from scratch for the PlayStation hardware',
+      'Sony acquired Naughty Dog outright in 2001; Rubin and Gavin both departed by 2004',
+    ],
+    sections: [
+      {
+        title: 'Two Kids in Boston',
+        html: '<p>The Naughty Dog origin story is one of the most protracted in game development: Gavin and Rubin began making games together in 1984, and did not reach mainstream commercial success until 1996 — twelve years of persistence across hardware generations, educational detours, and commercial disappointments. Their early work on Apple II was technically impressive for teenagers and caught enough attention from small publishers to generate modest revenue, but nothing that approached sustainability. The decision to rename the company Naughty Dog in 1989 was deliberate commercial strategy: Rubin reasoned that a company with a silly name was unlikely to be pursued by lawyers for any of the rough edges inevitable in scrappy small-studio development.</p><p>The years between the Apple II titles and Crash Bandicoot involved platform changes, distribution deals that did not deliver, and a sustained commitment from two people who were simultaneously completing university degrees. Gavin studied computer science at MIT while still involved in studio operations; Rubin at Haverford. Games like Rings of Power (1991) for Sega Genesis showed genuine ambition — an open-world action RPG with a large explorable map — without generating the sales that would have made the studio financially stable. The Universal Interactive deal in 1994 was the break that the studio had been working toward for a decade.</p>',
+      },
+      {
+        title: 'The Crash Bandicoot Engine',
+        html: '<p>Andy Gavin\'s decision to write a fully custom 3D engine for the PlayStation — rather than license available technology — was the technically audacious choice that made Crash Bandicoot possible as a visual product. The PlayStation\'s 3D hardware was capable but idiosyncratic; most developers worked with Sony\'s provided libraries and produced results that were technically correct but aesthetically muddy. Gavin\'s engine, developed over eighteen months, exploited the console\'s texture mapping and geometry pipeline in ways that Sony\'s own developers had not attempted, producing character animation and environmental detail that were visibly superior to most PlayStation games of 1996.</p><p>The game design was equally deliberate in its contrarianism. Where most 3D platformers of the era — Super Mario 64, Tomb Raider — used an over-the-shoulder or free-camera perspective to navigate open spaces, Gavin and Rubin designed Crash as a corridor game with the camera behind the character, reducing the 3D navigation problem to a nearly 2D one. The decision was partly pragmatic — it reduced the processing overhead of rendering a full 3D world in real time — but it produced a game that controlled with a precision that open-world 3D games of the era struggled to match. Crash Bandicoot sold over 6.8 million copies and became the game Sony used to compete directly with Nintendo\'s Mario 64 marketing.</p>',
+      },
+    ],
+  },
+  {
+    id: 'valve',
+    name: 'Valve',
+    foundedYear: 1996,
+    founders: ['Gabe Newell', 'Mike Harrington'],
+    location: 'Kirkland, Washington, USA',
+    firstGame: 'Half-Life (1998)',
+    era: '1996 – present',
+    description: 'Valve was founded by two former Microsoft employees who collectively invested over $1 million of their own savings to build a game development studio that would redefine the first-person shooter and then the entire PC games distribution industry.',
+    longDescription: 'Gabe Newell spent thirteen years at Microsoft, reaching the level of executive producer and accumulating sufficient stock options to retire comfortably. Mike Harrington was similarly positioned. In 1996 both resigned to found Valve, operating initially from Newell\'s house in Kirkland, Washington. The founding investment — reported variously as $1 million to $4 million from the founders\' personal Microsoft-era savings — funded four years of development before Half-Life shipped in November 1998. The game sold over nine million copies by 2008 and won over fifty game-of-the-year awards; it demonstrated that a first-person shooter could deliver sustained narrative through environmental storytelling and continuous action without cutscenes. Half-Life 2 (2004) launched alongside Steam — Valve\'s digital distribution platform — which would grow to become the dominant PC game marketplace, changing how games were sold, distributed, and priced more fundamentally than any single game Valve has produced.',
+    keyFacts: [
+      'Newell and Harrington both left Microsoft with enough personal savings to self-fund four years of development',
+      'Half-Life (1998) was rejected twice by publisher Sierra before shipping to universal critical acclaim',
+      'Steam launched simultaneously with Half-Life 2 in 2004 and became the dominant PC games storefront',
+      'Valve operates with no traditional management hierarchy — a flat organisation described in its public employee handbook',
+    ],
+    sections: [
+      {
+        title: 'Microsoft Money and the Kirkland House',
+        html: '<p>The Valve founding story is unusual among game studio origin narratives in that resource scarcity was not the constraint. Newell and Harrington had money — serious money, accumulated over a decade at one of the most valuable companies in the technology industry — and could fund extended development without external investment or publisher advances. This freedom shaped Half-Life\'s production profoundly: the game was scrapped and restarted fourteen months before its eventual release because the team concluded that what they had built was not good enough. No publisher-funded studio in 1997 had the financial cushion to make that decision. Valve did.</p><p>The team initially assembled in Newell\'s house before moving to a conventional office space in Kirkland. Many of the founding employees were recruited from the game-development community rather than from Microsoft; the studio did not leverage the Microsoft network for talent so much as Newell\'s and Harrington\'s personal judgement about who was making interesting work in game development in the mid-1990s. Ken Birdwell, the engineer who managed Half-Life\'s production restart, and Ted Backman, who contributed to the design language, both came from game-development backgrounds rather than the technology industry that funded the studio.</p>',
+      },
+      {
+        title: 'Steam and the Platform Pivot',
+        html: '<p>Half-Life 2\'s development coincided with Valve\'s recognition that PC game distribution was a problem they were positioned to solve. Physical retail for PC games in 2003 involved long supply chains, physical media, and retail margins that reduced developer revenue substantially; digital distribution was nascent and fragmented. Steam launched in September 2003 as a system for automatically updating Valve\'s own games; by the time Half-Life 2 shipped in November 2004, it had expanded to include third-party games and anti-piracy authentication. The requirement that Half-Life 2 purchasers activate through Steam — controversial at launch, when internet connectivity was far from universal — established the platform\'s user base at scale on the day of release.</p><p>The subsequent growth of Steam transformed Valve\'s business model more fundamentally than any game the studio could have produced. By 2012 Steam held an estimated 70 percent of the PC digital distribution market; by 2019 it was processing approximately $4.3 billion in annual sales, of which Valve retained a 30 percent commission. The two former Microsoft employees who invested their savings in a game studio in Kirkland had, by the second decade of the 2000s, built a platform business that generated more revenue than most publishers. Half-Life remains the founding myth; Steam is the actual commercial legacy.</p>',
+      },
+    ],
+  },
+  {
+    id: 'looking-glass',
+    name: 'Looking Glass Studios',
+    foundedYear: 1992,
+    founders: ['Paul Neurath', 'Ned Lerner'],
+    location: 'Cambridge, Massachusetts, USA',
+    firstGame: 'Ultima Underworld: The Stygian Abyss (1992)',
+    era: '1992 – 2000',
+    description: 'Looking Glass Studios grew out of the Blue Sky Productions team at Origin Systems, where a group of developers had built a fully immersive 3D dungeon game that Origin published but did not fully understand.',
+    longDescription: 'Paul Neurath founded Blue Sky Productions in Cambridge, Massachusetts in 1990, originally intending to build simulation software. The team pivoted to game development and produced Ultima Underworld: The Stygian Abyss — a fully first-person 3D dungeon with texture-mapped walls, physics, and genuine simulated systems — in close collaboration with Origin Systems, which published it in 1992. The game was technically years ahead of Doom and presented an immersive world simulation that would not be equalled in commercial game development until the late 1990s. Blue Sky renamed itself Looking Glass Technologies and then Looking Glass Studios as the team grew; alumni of the studio went on to found or lead Ion Storm, Irrational Games, Arkane Studios, and Harmonix, making Looking Glass\'s Cambridge office one of the most generative studios in game development history despite its modest commercial output and 2000 closure.',
+    keyFacts: [
+      'Ultima Underworld (1992) featured a fully texture-mapped 3D world two years before Doom',
+      'John Romero visited and credited Ultima Underworld as an influence on Doom\'s development',
+      'Looking Glass alumni founded Irrational Games (Ken Levine), Arkane Studios, and Harmonix',
+      'The studio closed in 2000 despite critical acclaim; System Shock 2 (1999) was its final major release',
+    ],
+    sections: [
+      {
+        title: 'Before Doom, There Was Underworld',
+        html: '<p>The timeline of 3D game development is frequently told as a story in which id Software\'s Wolfenstein 3D (1992) and Doom (1993) invented immersive first-person games. Looking Glass Studios\' history is a corrective to that narrative. Ultima Underworld: The Stygian Abyss shipped in March 1992, eight months before Wolfenstein 3D, and presented a game world that was more technically sophisticated in almost every respect: true vertical look (you could look up and down), texture mapping on both floors and ceilings as well as walls, physics that let objects slide on inclined surfaces, and a simulated world where enemies had their own territories and behaviours. John Romero has stated directly that Ultima Underworld influenced Doom\'s development; Carmack\'s initial engine design for Doom drew on techniques he studied in Neurath\'s game.</p><p>Origin Systems published Ultima Underworld but was not entirely equipped to market it. The Ultima brand carried associations with overhead-perspective RPGs; a first-person 3D dungeon was outside Origin\'s existing customer expectations. The game found its audience anyway — it sold well enough to warrant a sequel — but the commercial relationship between Blue Sky\'s technical ambitions and Origin\'s publishing infrastructure was always uneasy. The studio\'s independence, formalised when it became Looking Glass Studios, was the logical consequence of a team whose work consistently exceeded what its publishing partners could adequately represent to the market.</p>',
+      },
+      {
+        title: 'The Studio That Trained Everyone Else',
+        html: '<p>Looking Glass Studios produced a relatively small catalogue across its eight-year existence — Ultima Underworld I and II, System Shock, Thief: The Dark Project, Thief II: The Metal Age, System Shock 2 — but the studio\'s impact on game design is disproportionate to its output because of where its alumni went. Ken Levine left Looking Glass to found Irrational Games, where he directed System Shock 2 with Looking Glass and then BioShock (2007) — a direct spiritual successor to the immersive simulation games he had learned at Looking Glass. Harvey Smith, Doug Church, and Warren Spector each brought Looking Glass\'s design philosophy of systemic, player-driven problem-solving to projects at Ion Storm, Arkane, and Junction Point.</p><p>Arkane Studios — founded by Raphael Colantonio, who was profoundly influenced by Looking Glass\'s output — produced Dishonored (2012) and Prey (2017) as explicit extensions of the immersive sim tradition Looking Glass had established. The studio never cited Looking Glass as a direct parent company, but the design lineage is continuous and acknowledged. Looking Glass closed in May 2000, citing the poor commercial performance of Thief II despite its critical standing; the timing, two months after the game\'s release, suggested the studio had run out of the runway it needed to survive to the next project. Its games remain in print, its influence on game design remains active, and its alumni continue to produce work that demonstrates what the studio had taught them.</p>',
+      },
+    ],
+  },
+  {
+    id: 'black-isle',
+    name: 'Black Isle Studios',
+    foundedYear: 1996,
+    founders: ['Feargus Urquhart'],
+    location: 'Irvine, California, USA',
+    firstGame: 'Fallout (1997)',
+    era: '1996 – 2003',
+    description: 'Black Isle Studios was Interplay\'s internal RPG division, carved out as a semi-autonomous label under Feargus Urquhart, which produced Fallout, Planescape: Torment, and the Baldur\'s Gate series in a creative explosion that lasted less than a decade.',
+    longDescription: 'Black Isle was not an independent studio but an internal division of Interplay Productions, formalised in 1996 under producer Feargus Urquhart to focus Interplay\'s RPG development efforts. Urquhart had been at Interplay since 1994 and convinced the company\'s leadership that a dedicated RPG team with its own brand identity would be more commercially effective than distributing RPG projects across the studio. The arrangement was unusual: Black Isle had significant creative autonomy, a distinct name used in game marketing, and a culture separate from Interplay\'s other divisions. The division\'s output between 1997 and 2002 — Fallout, Fallout 2, Baldur\'s Gate I and II (developed by BioWare and produced by Black Isle), Icewind Dale, and Planescape: Torment — constitutes the most concentrated body of acclaimed Western RPG work in the medium\'s history. Interplay\'s financial deterioration closed Black Isle in December 2003; Urquhart and most of the senior team immediately founded Obsidian Entertainment.',
+    keyFacts: [
+      'Formally a division of Interplay, not an independent studio — Black Isle had no separate legal existence',
+      'Fallout (1997) was inherited from a cancelled GURPS licence project and redesigned by Urquhart\'s team',
+      'Planescape: Torment (1999) has more written words than most novels and is frequently cited as the best-written RPG ever made',
+      'The entire senior team regrouped as Obsidian Entertainment within months of Black Isle\'s closure in 2003',
+    ],
+    sections: [
+      {
+        title: 'The Interplay RPG Division',
+        html: '<p>Black Isle\'s semi-autonomous structure within Interplay gave it a creative latitude that fully independent studios of the late 1990s — dependent on publisher advances and approval — often lacked. Interplay\'s founder Brian Fargo had built the company on RPGs, and his confidence in Urquhart\'s team meant that projects like Planescape: Torment — which took as its central mechanic the repeated death and resurrection of the player character, and which prioritised written dialogue over combat — were approved and completed despite their obvious commercial risk. No external publisher would have funded Torment\'s three-year development on the terms that Interplay provided internally.</p><p>The division\'s name and branding were Urquhart\'s deliberate choice. "Black Isle" signalled a separate identity — a place apart, with its own character — rather than a product line. Games shipped as "Black Isle Studios presents" on their title screens, and the marketing treated the label as a brand that players should seek out rather than a division of a larger company. This was prescient: when Interplay\'s financial situation deteriorated in 2002 and 2003, the Black Isle brand had enough independent recognition that Urquhart\'s team could recruit under it and transition to a new entity with a pre-existing audience.</p>',
+      },
+      {
+        title: 'Fallout and the Obsidian Continuity',
+        html: '<p>Fallout began not at Black Isle but in a different form entirely: Interplay had licensed the GURPS tabletop role-playing system from Steve Jackson Games to build a post-apocalyptic RPG, and development proceeded under that licence until creative differences ended the arrangement. The project became Fallout with its own internal attribute system — SPECIAL — and a tonal shift toward dark comedy and 1950s retrofuturism that was not in the original design documents. Urquhart\'s team inherited a partial product and shaped it into a game with a distinctive voice and structural design — a large open world with multiple solutions to most problems and a defined time pressure that could be ignored — that was unlike anything in the RPG landscape of 1997.</p><p>Fallout 2 (1998), Baldur\'s Gate II (2000), and Icewind Dale (2000) followed in rapid succession, each demonstrating the division\'s consistency of craft across different settings and tones. The closure of Black Isle in December 2003 — announced abruptly, with employees learning about it through news articles rather than internal communication — ended the division\'s output but not its lineage. Obsidian Entertainment, incorporated within weeks, included Urquhart, Chris Avellone (the primary writer of Planescape: Torment), and most of the Black Isle senior design staff. Obsidian\'s subsequent output — Fallout: New Vegas (2010), Pillars of Eternity (2015) — continues the design tradition that Urquhart\'s division established in Irvine between 1997 and 2003.</p>',
+      },
+    ],
+  },
+  {
+    id: 'bullfrog',
+    name: 'Bullfrog Productions',
+    foundedYear: 1987,
+    founders: ['Peter Molyneux', 'Les Edgar'],
+    location: 'Guildford, Surrey, England',
+    firstGame: 'Druid II: Enlightenment (1987)',
+    era: '1987 – 2001',
+    description: 'Bullfrog Productions was founded in a garage in Guildford by Peter Molyneux and his business partner Les Edgar, growing from a database software company into the creator of Populous, Theme Park, and Dungeon Keeper.',
+    longDescription: 'Peter Molyneux and Les Edgar founded Bullfrog Productions in 1987, initially intending to sell database software for small businesses. The company was operating from a garage in Guildford, Surrey — a location that became part of the founding myth — and generating so little revenue that Molyneux has described the early years as genuinely desperate. A chance contact with Commodore led to a deal to bundle a game with Commodore hardware; Molyneux, who had no game development experience, produced a game called Populous by working eighteen-hour days for six months. Populous (1989) invented the god game genre, sold four million copies, and transformed Bullfrog from a failing database company into one of the most creative studios in British game development. Theme Park (1994) and Dungeon Keeper (1997) followed, each pioneering a genre that no one else had attempted, before Electronic Arts\' acquisition of the studio and Molyneux\'s departure to found Lionhead in 1997 closed the most inventive chapter of Bullfrog\'s history.',
+    keyFacts: [
+      'Bullfrog\'s founding business was database software — game development began as an accident of necessity',
+      'Populous (1989) invented the god game genre and sold four million copies from a Guildford garage origin',
+      'Electronic Arts acquired Bullfrog in 1995; Molyneux left in 1997 to found Lionhead Studios',
+      'Dungeon Keeper (1997) was the last major Bullfrog game before EA absorbed the studio entirely',
+    ],
+    sections: [
+      {
+        title: 'The Garage That Invented God Games',
+        html: '<p>Peter Molyneux tells the story of Populous\'s development with consistent self-deprecation: he did not know how to make a game, had never shipped a game, and produced Populous in a state of continuous improvisation while the deadline approached. The core mechanic — players alter terrain to guide followers who build and reproduce autonomously — emerged from experimentation rather than design intention. Molyneux has said that the moment he realised he had a game rather than a technology demonstration was when he found himself playing it instead of developing it: the emergent behaviour of the followers, the satisfaction of raising land and watching a settlement grow, produced a feedback loop he had not planned and could not stop experiencing.</p><p>Commodore\'s distribution arrangement gave Populous an audience that a Guildford garage startup could not otherwise have reached. Electronic Arts picked up worldwide publishing rights after seeing the game at a trade show, and the resulting sales — four million copies by 1990, unprecedented for a European-developed title — made Bullfrog instantly solvent and expanded the team from a handful of people to a proper studio. Molyneux\'s reputation as a designer who invented genres rather than refined them was established with Populous and sustained through Theme Park, Theme Hospital, and Dungeon Keeper, each of which created a commercial category where none had existed.</p>',
+      },
+      {
+        title: 'The EA Acquisition and Molyneux\'s Exit',
+        html: '<p>Electronic Arts\' acquisition of Bullfrog in 1995 was part of the company\'s strategy of purchasing European studios with established brands — it also acquired Origin Systems and Maxis in the same period. The terms gave EA ownership of the studio while allowing Molyneux and the existing team creative autonomy, at least initially. Dungeon Keeper (1997) — a game in which players built dungeons, hired monsters, and defended against heroic invaders — was produced under EA ownership and represented Bullfrog\'s most mechanically sophisticated work. It also represented the end of the studio\'s founding creative direction: Molyneux left for Lionhead immediately after Dungeon Keeper\'s completion, taking much of the senior design team with him.</p><p>The Bullfrog that continued after Molyneux\'s departure produced Theme Park World (1999) and several sequels before Electronic Arts wound down the label in 2001, absorbing its remaining staff into EA UK. The garage-to-acquisition arc — from database software company to genre pioneer to EA property in fourteen years — is a template for how British game studios of the era were absorbed into the American publishing system that consolidated the industry in the late 1990s. Molyneux\'s Lionhead, which produced Black and White (2001) and Fable (2004), extended the god game tradition he had begun in Guildford into the following decade.</p>',
+      },
+    ],
+  },
+  {
+    id: 'westwood',
+    name: 'Westwood Studios',
+    foundedYear: 1985,
+    founders: ['Brett Sperry', 'Louis Castle'],
+    location: 'Las Vegas, Nevada, USA',
+    firstGame: 'Battletech: The Crescent Hawks\' Inception (1988)',
+    era: '1985 – 2003',
+    description: 'Westwood Studios was founded by two Las Vegas teenagers who began making games in a spare bedroom and grew into the studio that invented the real-time strategy genre with Dune II and built the Command and Conquer franchise.',
+    longDescription: 'Brett Sperry and Louis Castle were both teenagers in Las Vegas, Nevada when they began collaborating on game development in the mid-1980s. Castle was still in high school when Westwood Associates — the studio\'s original name — began producing games commercially. The initial years involved contract development for other publishers, including Virgin Games and Electronic Arts, which allowed the studio to develop technical competence while generating revenue. The company\'s 1985 founding date predates Castle\'s graduation from high school; the studio operated from Sperry\'s home before moving to a proper office. Dune II: The Building of a Dynasty (1992), developed for Virgin Interactive, defined the conventions of the real-time strategy genre — resource collection, base building, unit production, map control — that Command and Conquer (1995) and Warcraft II (1995) subsequently popularised. Electronic Arts acquired Westwood in 1998; the studio was closed in 2003 after the disappointing performance of Command and Conquer: Renegade.',
+    keyFacts: [
+      'Louis Castle was still in high school when Westwood Associates began commercial game production',
+      'Dune II (1992) established the real-time strategy genre\'s fundamental conventions that Warcraft and StarCraft inherited',
+      'Command and Conquer (1995) sold three million copies and defined the genre for a generation of PC players',
+      'EA acquired Westwood in 1998 and closed it in 2003 — fifteen years after its first published game',
+    ],
+    sections: [
+      {
+        title: 'Las Vegas Teenagers',
+        html: '<p>Las Vegas was not, in the 1980s, a city associated with game development — it was associated with hospitality, gambling, and entertainment of a very different kind. The Westwood origin story\'s Las Vegas setting is incidental to the founding narrative but revealing about the period: game development in the mid-1980s had no geographic centre of gravity in the United States in the way that Silicon Valley was developing one for the hardware and software industries more broadly. A teenager in Las Vegas with a computer and a phone line had roughly the same access to the tools of game development as a teenager in Los Angeles or Boston. Sperry and Castle used that access with unusual tenacity.</p><p>The early contract work — developing games for other publishers, porting titles, doing the less glamorous technical labour that studios with proprietary IP hired out — built the programming and design skills that Dune II would require. Virgin Interactive\'s commission of a Dune game gave Westwood the license and the budget to produce something more ambitious than its contract output; Sperry and Castle\'s decision to make a strategy game rather than an adventure game based on the Dune property was a creative choice that the license terms permitted but did not dictate. The resulting design — which Castle and Sperry have described as emerging from frustration with the state of strategy games in 1991 — established conventions that the entire subsequent RTS genre built upon.</p>',
+      },
+      {
+        title: 'Dune II and the RTS Template',
+        html: '<p>Dune II: The Building of a Dynasty (1992) is credited as the first real-time strategy game not because it was the first game with real-time elements and strategic content — Stonkers (1983) and Herzog Zwei (1989) both predate it — but because it assembled the specific combination of mechanics that all subsequent RTS games would treat as foundational. Harvestable resources that funded unit production; a base construction system with building prerequisites; multiple distinct factions with different unit rosters; territory control through map revealed by line-of-sight and obscured by fog of war — each of these elements existed in incomplete form in earlier games, but Dune II combined all of them in a design that was both coherent and immediately legible to new players.</p><p>The game was a modest commercial success but an enormous design influence: Blizzard\'s Warcraft: Orcs and Humans (1994) was explicitly developed as "Dune II in a fantasy setting," and Westwood\'s own Command and Conquer (1995) refined the template to produce the best-selling RTS of the 1990s. C&C\'s live-action full-motion video cutscenes, its two-sided campaign structure (GDI vs. Brotherhood of Nod), and its Frank Klepacki soundtrack gave the RTS genre a cinematic quality that Dune II had not attempted and that competitors struggled to match. Electronic Arts\' acquisition of the studio that had invented the genre, and subsequent closure of it five years later, is one of the recurring patterns in game industry history: the purchase and dissolution of the creative entity that had generated the value being acquired.</p>',
+      },
+    ],
+  },
+  {
+    id: 'double-fine',
+    name: 'Double Fine Productions',
+    foundedYear: 2000,
+    founders: ['Tim Schafer'],
+    location: 'San Francisco, California, USA',
+    firstGame: 'Psychonauts (2005)',
+    era: '2000 – present',
+    description: 'Double Fine was founded by Tim Schafer after he left LucasArts, where he had spent eleven years writing and directing Maniac Mansion 2, Monkey Island 2, Day of the Tentacle, Full Throttle, and Grim Fandango.',
+    longDescription: 'Tim Schafer joined LucasArts in 1989 as a programmer and tester, working his way to lead designer and then project lead on a series of acclaimed point-and-click adventure games that established his reputation as the most distinctive voice in the genre. Grim Fandango (1998), his final LucasArts project, was critically celebrated but commercially disappointing in a market that had largely moved on from adventure games; the experience of spending four years on a project that the publisher could not adequately market or distribute contributed to Schafer\'s departure in 2000. He founded Double Fine Productions with a small team of former LucasArts colleagues in San Francisco, securing a publishing deal with Microsoft for Psychonauts (2005) — a 3D platformer set inside characters\' psyches, with writing so characteristically inventive that it attracted a devoted following despite modest initial sales. Double Fine pioneered the game development Kickstarter model in 2012, raising $3.3 million for Broken Age (2014) and demonstrating that an audience for adventure games existed independently of publisher interest in funding them.',
+    keyFacts: [
+      'Schafer joined LucasArts in 1989 as a tester, worked up to lead designer over eleven years',
+      'Grim Fandango (1998) won numerous awards but sold poorly — a commercial disappointment that prompted Schafer\'s departure',
+      'Psychonauts (2005) sold only 400,000 copies initially but built a cult following that sustained a sequel fifteen years later',
+      'Double Fine\'s 2012 Kickstarter raised $3.3 million in 24 hours — the first major game crowdfunding success',
+    ],
+    sections: [
+      {
+        title: 'Eleven Years at LucasArts',
+        html: '<p>Tim Schafer\'s career at LucasArts from 1989 to 2000 is the most productive run of adventure game writing in the medium\'s history. Beginning as a programmer and tester on Maniac Mansion, he quickly moved into writing roles, co-writing Monkey Island 2: LeChuck\'s Revenge (1991) with Ron Gilbert and Dave Grossman. Day of the Tentacle (1993), which he co-directed with Grossman, is routinely cited as the funniest and most perfectly structured adventure game ever made. Full Throttle (1995) demonstrated that his humour could coexist with genuine menace and a rougher, more cinematic aesthetic than the Monkey Island games. Each project showed a writer who was developing his craft rather than repeating his successes.</p><p>Grim Fandango (1998) was Schafer\'s attempt to make a game that deserved comparison with the literary and film traditions it referenced — film noir, Mexican Day of the Dead iconography, Raymond Chandler dialogue. The game achieved that comparison on its own terms: its writing, characterisation, and visual design are genuinely distinctive in a way that few games of any era have matched. But LucasArts\' shift away from adventure games toward Star Wars properties, and the commercial performance that made that shift seem prudent, left Schafer without the institutional support for the kind of project he wanted to make next. His departure in 2000 was a resignation rather than a dismissal, but it amounted to the same outcome for LucasArts\' adventure game output: it ended.</p>',
+      },
+      {
+        title: 'Psychonauts and the Kickstarter Decade',
+        html: '<p>Double Fine\'s founding in a San Francisco office was funded by the Microsoft publishing deal for Psychonauts, which gave Schafer the budget and the time — three years — to build a 3D platformer on his own terms. Psychonauts was, like Grim Fandango before it, a critical success and a commercial underperformer: it sold around 400,000 copies across all platforms, not enough for Microsoft to consider the relationship worth continuing but enough to establish a devoted audience that kept the game in active discussion for years. The cult status that accrued to Psychonauts between 2005 and 2012 — driven by digital distribution making it accessible to players who had missed the initial release — eventually justified a sequel: Psychonauts 2 (2021), funded by a Fig campaign and Microsoft\'s acquisition of Double Fine in 2019.</p><p>The 2012 Kickstarter for Broken Age was the moment that changed Double Fine\'s public identity from a beloved mid-size studio into a model for an alternative game funding structure. The campaign\'s first day — $1 million in eight hours, $3.3 million total against a $400,000 goal — demonstrated to the entire industry that audiences would fund games directly, without a publisher\'s intermediation, if the creator had sufficient trust and the pitch was compelling. Double Fine produced Broken Age (2014) in two parts with the campaign funding; the game was received warmly without replicating the commercial scale of the Kickstarter campaign itself. But the model Schafer\'s studio demonstrated in 2012 enabled dozens of subsequent campaigns — Torment: Tides of Numenera, Bloodstained, Yooka-Laylee — that would not have been funded under the traditional publishing system.</p>',
+      },
+    ],
+  },
+];
