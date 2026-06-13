@@ -3,6 +3,8 @@ const compression = require('compression');
 const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
+const http = require('http');
 
 const app = express();
 const PORT = 3000;
@@ -14,6 +16,113 @@ const SITE_NAME = 'Bosnan Retro Games Archive';
 // Bump when content meaningfully changes; a per-request "today" lastmod
 // teaches crawlers to ignore the field entirely.
 const SITE_LASTMOD = '2026-06-13';
+
+// ── Retro news RSS fetcher ───────────────────────────────────────────────────
+
+const NEWS_FEEDS = [
+  { url: 'https://www.timeextension.com/feeds/articles.rss',   source: 'Time Extension' },
+  { url: 'https://www.retrogamer.net/feed/',                    source: 'Retro Gamer' },
+  { url: 'https://www.nintendolife.com/feeds/news.rss',         source: 'Nintendo Life' },
+];
+const NEWS_TTL = 6 * 60 * 60 * 1000; // refresh every 6 hours
+
+let newsCache = { articles: [], fetchedAt: 0, error: null };
+
+function httpGet(rawUrl, redirects = 4) {
+  return new Promise((resolve, reject) => {
+    if (redirects < 0) return reject(new Error('Too many redirects'));
+    const mod = rawUrl.startsWith('https') ? https : http;
+    const req = mod.get(rawUrl, {
+      headers: { 'User-Agent': 'Bosnan/1.0 (+https://bosnan.vercel.app/)', Accept: 'application/rss+xml,application/xml,*/*' },
+      timeout: 8000,
+    }, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        res.resume();
+        return resolve(httpGet(res.headers.location, redirects - 1));
+      }
+      let body = '';
+      res.setEncoding('utf8');
+      res.on('data', c => { body += c; });
+      res.on('end', () => resolve(body));
+    });
+    req.on('error', reject);
+    req.on('timeout', () => { req.destroy(); reject(new Error('timeout')); });
+  });
+}
+
+function decodeHtmlEntities(s) {
+  return s
+    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, ' ')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)));
+}
+
+function stripTags(s) { return s.replace(/<[^>]+>/g, ' ').replace(/\s{2,}/g, ' ').trim(); }
+
+function grabTag(block, tag) {
+  // Match both plain text and CDATA content inside an XML tag.
+  // Uses indexOf so we avoid RegExp string-escaping pitfalls with \s\S.
+  const open = `<${tag}`;
+  const close = `</${tag}>`;
+  const si = block.toLowerCase().indexOf(open.toLowerCase());
+  if (si === -1) return '';
+  const gt = block.indexOf('>', si);
+  if (gt === -1) return '';
+  const ei = block.toLowerCase().indexOf(close.toLowerCase(), gt);
+  if (ei === -1) return '';
+  let content = block.slice(gt + 1, ei).trim();
+  // Unwrap CDATA
+  if (content.startsWith('<![CDATA[')) content = content.slice(9);
+  if (content.endsWith(']]>')) content = content.slice(0, -3);
+  return content.trim();
+}
+
+function parseRss(xml, source) {
+  const items = [];
+  const re = /<item[^>]*>([\s\S]*?)<\/item>/g;
+  let m;
+  while ((m = re.exec(xml)) !== null) {
+    const b = m[1];
+    const title = decodeHtmlEntities(grabTag(b, 'title'));
+    // <link> in RSS is awkwardly positioned; try text node then atom:link href
+    let link = grabTag(b, 'link') || (b.match(/atom:link[^>]+href="([^"]+)"/) || [])[1] || '';
+    link = link.replace(/^\s*<!\[CDATA\[/, '').replace(/\]\]>\s*$/, '').trim();
+    const desc = decodeHtmlEntities(stripTags(grabTag(b, 'description'))).substring(0, 220);
+    const raw = grabTag(b, 'pubDate') || grabTag(b, 'dc:date') || grabTag(b, 'published');
+    const pubDate = raw ? new Date(raw) : new Date(0);
+    if (title && link && link.startsWith('http')) {
+      items.push({ title, link, description: desc, pubDate, source });
+    }
+  }
+  return items;
+}
+
+async function refreshNews() {
+  const now = Date.now();
+  if (now - newsCache.fetchedAt < NEWS_TTL && newsCache.articles.length > 0) return;
+
+  const all = [];
+  for (const feed of NEWS_FEEDS) {
+    try {
+      const xml = await httpGet(feed.url);
+      all.push(...parseRss(xml, feed.source));
+    } catch (e) {
+      console.error(`[news] ${feed.source}: ${e.message}`);
+    }
+  }
+
+  if (all.length > 0) {
+    all.sort((a, b) => b.pubDate - a.pubDate);
+    newsCache = { articles: all.slice(0, 3), fetchedAt: now, error: null };
+    console.log(`[news] refreshed: ${all.length} items fetched, showing ${newsCache.articles.length}`);
+  } else {
+    newsCache = { ...newsCache, fetchedAt: now, error: 'No articles fetched' };
+    console.error('[news] All feeds failed');
+  }
+}
+
+// Pre-warm on startup, then silently refresh in background on each request
+refreshNews().catch(() => {});
 
 const games = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'games.json'), 'utf8'));
 const GENRES = require('./data/genres');
@@ -1366,6 +1475,19 @@ app.get('/api/game-of-the-day', (req, res) => {
   res.json(gameOfDay());
 });
 
+app.get('/api/retro-news', async (req, res) => {
+  refreshNews().catch(() => {});
+  const articles = newsCache.articles.map(a => ({
+    title: a.title,
+    link: a.link,
+    description: a.description,
+    source: a.source,
+    pubDate: a.pubDate,
+  }));
+  res.set('Cache-Control', 'public, max-age=1800, stale-while-revalidate=21600');
+  res.json(articles);
+});
+
 app.get('/games', (req, res) => {
   if (!cachedGamesListHtml) cachedGamesListHtml = gamesListPage();
   res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
@@ -2545,6 +2667,16 @@ ${nav('home')}
     </a>
 </div>
 
+<div class="news-section" id="newsSection">
+    <div class="news-header">
+        <h2>&#128240; Retro Gaming News</h2>
+        <p>Latest from around the web, updated daily</p>
+    </div>
+    <div class="news-grid" id="newsGrid">
+        <div class="news-loading">Loading news&#8230;</div>
+    </div>
+</div>
+
 <div class="enc-section">
     <div class="enc-header">
         <h2>&#128218; Game Encyclopedia</h2>
@@ -2581,6 +2713,41 @@ ${nav('home')}
     <p>Play the original Bosnan game — free, for Windows (Java 17+).</p>
     <a href="/game.html" class="btn">Enter the Game</a>
 </div>
+
+<script>
+(function() {
+  function timeAgo(iso) {
+    const s = Math.floor((Date.now() - new Date(iso)) / 1000);
+    if (s < 3600)  return Math.floor(s / 60) + 'm ago';
+    if (s < 86400) return Math.floor(s / 3600) + 'h ago';
+    return Math.floor(s / 86400) + 'd ago';
+  }
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});
+  }
+  fetch('/api/retro-news')
+    .then(function(r){ return r.json(); })
+    .then(function(articles) {
+      var grid = document.getElementById('newsGrid');
+      if (!grid) return;
+      if (!articles || articles.length === 0) {
+        grid.innerHTML = '<p class="news-empty">No news available right now.</p>';
+        return;
+      }
+      grid.innerHTML = articles.map(function(a) {
+        return '<a href="' + esc(a.link) + '" class="news-card" target="_blank" rel="noopener noreferrer">' +
+          '<div class="news-card-source">' + esc(a.source) + ' &middot; ' + timeAgo(a.pubDate) + '</div>' +
+          '<h3 class="news-card-title">' + esc(a.title) + '</h3>' +
+          (a.description ? '<p class="news-card-desc">' + esc(a.description) + '&hellip;</p>' : '') +
+          '</a>';
+      }).join('');
+    })
+    .catch(function() {
+      var s = document.getElementById('newsSection');
+      if (s) s.style.display = 'none';
+    });
+})();
+</script>
 
 ${toggleScript()}
 </body>

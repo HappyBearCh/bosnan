@@ -1526,3 +1526,77 @@ button.menu-toggle {
     border-bottom: 1px dotted #555;
 }
 .meta-link:hover { color: white; border-bottom-color: red; }
+
+/* ================== RETRO NEWS SECTION ================== */
+.news-section {
+    max-width: 1000px;
+    margin: 0 auto 70px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+.news-header {
+    margin-bottom: 24px;
+}
+.news-header h2 {
+    font-size: 22px;
+    color: #ccc;
+    font-weight: bold;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+}
+.news-header p {
+    font-size: 13px;
+    color: #555;
+}
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+.news-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #0a0a0a;
+    border: 1px solid #1c1c1c;
+    border-radius: 8px;
+    padding: 18px 20px;
+    text-decoration: none;
+    color: white;
+    transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.news-card:hover {
+    border-color: red;
+    transform: translateY(-2px);
+    box-shadow: 0 0 14px rgba(255,0,0,0.15);
+}
+.news-card-source {
+    font-size: 11px;
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.news-card-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #eee;
+    line-height: 1.4;
+    margin: 0;
+}
+.news-card-desc {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
+}
+.news-loading, .news-empty {
+    color: #444;
+    font-size: 14px;
+    grid-column: 1 / -1;
+}
+@media (max-width: 768px) {
+    .news-grid { grid-template-columns: 1fr; }
+}
