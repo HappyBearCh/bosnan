@@ -7,6 +7,14 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
+// Canonical origin for SEO tags (sitemap, canonical, og:url). Override with
+// SITE_URL when serving from a custom domain.
+const SITE_URL = (process.env.SITE_URL || 'https://bosnan.vercel.app').replace(/\/+$/, '');
+const SITE_NAME = 'Bosnan Retro Games Archive';
+// Bump when content meaningfully changes; a per-request "today" lastmod
+// teaches crawlers to ignore the field entirely.
+const SITE_LASTMOD = '2026-06-13';
+
 const games = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'games.json'), 'utf8'));
 const GENRES = require('./data/genres');
 const ESSAYS = [...require('./data/essays'), ...require('./data/essays2'), ...require('./data/essays3'), ...require('./data/essays4'), ...require('./data/essays5'), ...require('./data/essays6'), ...require('./data/essays7'), ...require('./data/essays8'), ...require('./data/essays9'), ...require('./data/essays10'), ...require('./data/essays11')];
@@ -396,7 +404,9 @@ const cssHash = crypto.createHash('md5').update(rawCss).digest('hex').slice(0, 8
 const CSS_PATH = `/app.${cssHash}.css`;
 
 function cssHead() {
-  return `<link rel="preload" href="${CSS_PATH}" as="style"><link rel="stylesheet" href="${CSS_PATH}">`;
+  return `<link rel="preload" href="${CSS_PATH}" as="style"><link rel="stylesheet" href="${CSS_PATH}">
+    <link rel="icon" href="/logo.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#0a0a0a">`;
 }
 
 // ── Page caches ─────────────────────────────────────────────────────────────
@@ -551,6 +561,41 @@ let cachedHomepage = { html: null, day: -1 };
 
 app.use(compression());
 
+// SEO/footer post-processing: every server-rendered HTML page gets a canonical
+// URL, Open Graph / Twitter fallbacks derived from its <title> and meta
+// description, and the shared site footer — without each of the ~80 page
+// templates having to repeat the boilerplate. Pages that define their own
+// tags (e.g. game detail pages) are left untouched.
+const DEFAULT_OG_IMAGE = `${SITE_URL}/images/screenshot1.png`;
+app.use((req, res, next) => {
+  const origSend = res.send.bind(res);
+  res.send = (body) => {
+    if (typeof body === 'string' && body.startsWith('<!DOCTYPE html') && body.includes('</head>')) {
+      const cleanPath = req.path === '/index.html' ? '/' : req.path.replace(/\/+$/, '') || '/';
+      const canonical = SITE_URL + cleanPath;
+      let extra = '';
+      if (!body.includes('rel="canonical"')) extra += `\n    <link rel="canonical" href="${canonical}">`;
+      if (!body.includes('property="og:title"')) {
+        const t = body.match(/<title>([^<]*)<\/title>/);
+        if (t) extra += `\n    <meta property="og:title" content="${t[1]}">`;
+      }
+      if (!body.includes('property="og:description"')) {
+        const d = body.match(/<meta name="description" content="([^"]*)"/);
+        if (d) extra += `\n    <meta property="og:description" content="${d[1]}">`;
+      }
+      if (!body.includes('property="og:url"')) extra += `\n    <meta property="og:url" content="${canonical}">`;
+      if (!body.includes('property="og:type"')) extra += `\n    <meta property="og:type" content="website">`;
+      if (!body.includes('property="og:image"')) extra += `\n    <meta property="og:image" content="${DEFAULT_OG_IMAGE}">`;
+      if (!body.includes('property="og:site_name"')) extra += `\n    <meta property="og:site_name" content="${SITE_NAME}">`;
+      if (!body.includes('name="twitter:card"')) extra += `\n    <meta name="twitter:card" content="summary">`;
+      if (extra) body = body.replace('</head>', `${extra}\n</head>`);
+      if (!body.includes('class="site-footer"')) body = body.replace('</body>', `${footerHtml()}\n</body>`);
+    }
+    return origSend(body);
+  };
+  next();
+});
+
 // Serve merged CSS with immutable 1-year cache (content-addressed by hash)
 app.get(/^\/app\.[a-f0-9]+\.css$/, (req, res) => {
   res.setHeader('Content-Type', 'text/css; charset=utf-8');
@@ -560,7 +605,9 @@ app.get(/^\/app\.[a-f0-9]+\.css$/, (req, res) => {
 
 // Server-render the homepage with GOTD baked in — must be before express.static
 // so it intercepts / and /index.html before the static file is served.
-app.get(['/', '/index.html'], (req, res) => {
+app.get('/index.html', (req, res) => res.redirect(301, '/'));
+
+app.get('/', (req, res) => {
   const day = dayOfYear();
   if (!cachedHomepage.html || cachedHomepage.day !== day) {
     cachedHomepage = { html: homepagePage(gameOfDay()), day };
@@ -576,17 +623,22 @@ app.get('/game.html', (req, res) => {
   res.send(cachedGameLauncherHtml);
 });
 
-app.use(express.static(__dirname, {
-  setHeaders(res, filePath) {
-    if (/\.(png|jpe?g|gif|svg|ico|webp|woff2?|jar)$/i.test(filePath)) {
-      res.setHeader('Cache-Control', 'public, max-age=2592000, stale-while-revalidate=86400');
-    } else if (/\.js$/i.test(filePath)) {
-      res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-    } else if (/\.html?$/i.test(filePath)) {
-      res.setHeader('Cache-Control', 'public, max-age=300, stale-while-revalidate=3600');
-    }
+// Legacy static URLs → canonical routes (avoid duplicate content)
+app.get('/games.html', (req, res) => res.redirect(301, '/games'));
+
+// Only the assets the site actually uses are exposed. Serving __dirname
+// wholesale also exposed server.js, data/, scripts/, and node_modules.
+app.use('/images', express.static(path.join(__dirname, 'images'), {
+  setHeaders(res) {
+    res.setHeader('Cache-Control', 'public, max-age=2592000, stale-while-revalidate=86400');
   },
 }));
+
+app.get(['/logo.svg', '/launcher.js', '/BosnanGame.jar'], (req, res) => {
+  const maxAge = req.path === '/launcher.js' ? 3600 : 2592000;
+  res.set('Cache-Control', `public, max-age=${maxAge}, stale-while-revalidate=86400`);
+  res.sendFile(path.join(__dirname, req.path.slice(1)));
+});
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -607,6 +659,28 @@ function gamesForPlatform(platform) {
   return platformGamesIndex.get(platform.id) || [];
 }
 
+// Hub-page lookups for cross-linking game metadata (UX + internal linking)
+function platformHub(game) {
+  const p = PLATFORMS.find(p => game.platform.toLowerCase().includes((p.keyword || p.name).toLowerCase()));
+  return p ? `/platforms/${p.id}` : null;
+}
+function genreHub(game) {
+  const g = GENRES.find(G => (G.genres || []).includes(game.genre));
+  return g ? `/genres/${g.id}` : null;
+}
+function developerHub(game) {
+  const d = DEVELOPERS.find(d => game.developer.toLowerCase().includes(d.keyword.toLowerCase()));
+  return d ? `/developers/${d.id}` : null;
+}
+function publisherHub(game) {
+  const p = PUBLISHERS.find(p => (game.publisher || '').toLowerCase().includes(p.keyword.toLowerCase()));
+  return p ? `/publishers/${p.id}` : null;
+}
+function metaValue(text, href) {
+  const safe = escapeHtml(text);
+  return href ? `<a href="${href}" class="meta-link">${safe}</a>` : safe;
+}
+
 function bgLogo() {
   return `<svg class="bg-logo" viewBox="0 0 120 120" aria-hidden="true">
   <circle cx="60" cy="60" r="55" fill="black" stroke="red" stroke-width="5"/>
@@ -614,108 +688,164 @@ function bgLogo() {
 </svg>`;
 }
 
+// Single registry of every section: drives the nav mega-menu, the footer,
+// the /browse index page, and the sitemap. Add new sections here only.
+const NAV_GROUPS = [
+  { name: 'Games & Library', items: [
+    ['games', '/games', 'All Games'],
+    ['collections', '/collections', 'Curated Lists'],
+    ['franchises', '/franchises', 'Franchises'],
+    ['sequels', '/sequels', 'Sequels'],
+    ['ports', '/ports', 'Ports'],
+    ['imports', '/imports', 'Imports'],
+    ['regional', '/regional', 'Regional Scenes'],
+    ['rom-hacks', '/rom-hacks', 'ROM Hacks'],
+    ['bootlegs', '/bootlegs', 'Bootlegs'],
+    ['cancelled', '/cancelled', 'Cancelled Games'],
+    ['prototypes', '/prototypes', 'Prototypes'],
+    ['lost-games', '/lost-games', 'Lost Games'],
+    ['disappointments', '/disappointments', 'Disappointments'],
+    ['retro-revival', '/retro-revival', 'Retro Revival'],
+  ] },
+  { name: 'Hardware & Tech', items: [
+    ['platforms', '/platforms', 'Platforms'],
+    ['hardware', '/hardware', 'Hardware'],
+    ['failed-consoles', '/failed-consoles', 'Failed Consoles'],
+    ['arcade-boards', '/arcade-boards', 'Arcade Boards'],
+    ['controllers', '/controllers', 'Controllers'],
+    ['peripherals', '/peripherals', 'Peripherals'],
+    ['sound-chips', '/sound-chips', 'Sound Chips'],
+    ['game-engines', '/game-engines', 'Game Engines'],
+    ['compare', '/compare', 'Compare Platforms'],
+  ] },
+  { name: 'People & Studios', items: [
+    ['developers', '/developers', 'Developers'],
+    ['studios', '/studios', 'Studio Origins'],
+    ['publishers', '/publishers', 'Publishers'],
+    ['designers', '/designers', 'Designers'],
+    ['producers', '/producers', 'Producers'],
+    ['composers', '/composers', 'Composers'],
+    ['pixel-artists', '/pixel-artists', 'Pixel Artists'],
+    ['voice-actors', '/voice-actors', 'Voice Actors'],
+    ['family-tree', '/family-tree', 'Family Tree'],
+    ['map', '/map', 'Studio Map'],
+  ] },
+  { name: 'Design & Play', items: [
+    ['genres', '/genres', 'Genre Encyclopedia'],
+    ['characters', '/characters', 'Characters'],
+    ['levels', '/levels', 'Iconic Levels'],
+    ['bossfights', '/bossfights', 'Boss Fights'],
+    ['endings', '/endings', 'Endings'],
+    ['difficulty', '/difficulty', 'Difficulty'],
+    ['multiplayer', '/multiplayer', 'Multiplayer'],
+    ['competitive', '/competitive', 'Competitive Gaming'],
+    ['speedruns', '/speedruns', 'Speedruns'],
+    ['speedrun-techniques', '/speedrun-techniques', 'Speedrun Techniques'],
+    ['easter-eggs', '/easter-eggs', 'Easter Eggs'],
+    ['cheat-codes', '/cheat-codes', 'Cheat Codes'],
+    ['glitches', '/glitches', 'Glitches'],
+    ['famous-bugs', '/famous-bugs', 'Famous Bugs'],
+  ] },
+  { name: 'Culture & Media', items: [
+    ['essays', '/essays', 'Essays'],
+    ['magazines', '/magazines', 'Magazines'],
+    ['cover-stories', '/cover-stories', 'Cover Stories'],
+    ['ad-campaigns', '/ad-campaigns', 'Ad Campaigns'],
+    ['box-art', '/box-art', 'Box Art'],
+    ['cabinet-art', '/cabinet-art', 'Cabinet Art'],
+    ['packaging', '/packaging', 'Packaging'],
+    ['manuals', '/manuals', 'Manuals'],
+    ['strategy-guides', '/strategy-guides', 'Strategy Guides'],
+    ['merchandise', '/merchandise', 'Merchandise'],
+    ['comics', '/comics', 'Comics'],
+    ['soundtracks', '/soundtracks', 'Soundtracks'],
+    ['sound-effects', '/sound-effects', 'Sound Effects'],
+    ['localization', '/localization', 'Localization'],
+    ['controversies', '/controversies', 'Controversies'],
+    ['urban-legends', '/urban-legends', 'Urban Legends'],
+    ['critics', '/critics', 'Critics'],
+    ['sales-figures', '/sales-figures', 'Sales Figures'],
+  ] },
+  { name: 'Explore & Fun', items: [
+    ['years', '/years', 'By Year'],
+    ['decades', '/decades', 'By Decade'],
+    ['timeline', '/timeline', 'Timeline'],
+    ['on-this-day', '/on-this-day', 'On This Day'],
+    ['recent', '/recent', 'Recently Added'],
+    ['stats', '/stats', 'Stats'],
+    ['glossary', '/glossary', 'Glossary'],
+    ['quiz', '/quiz', 'Quiz'],
+    ['wordsearch', '/wordsearch', 'Word Search'],
+    ['search', '/search', 'Search'],
+    ['bookmarks', '/bookmarks', 'My Bookmarks'],
+  ] },
+];
+
 function nav(active) {
   const link = (href, label, id) =>
     `<a href="${href}"${active === id ? ' class="active"' : ''}>${label}</a>`;
+  const groupsHtml = NAV_GROUPS.map(group => `<div class="nav-mega-group">
+            <div class="nav-mega-title">${group.name}</div>
+            ${group.items.map(([id, href, label]) => link(href, label, id)).join('\n            ')}
+          </div>`).join('\n          ');
+  const inGroup = NAV_GROUPS.some(g => g.items.some(([id]) => id === active));
   return `<nav>
-    <img src="/logo.svg" alt="Bosnan Logo" width="50" height="50">
-    <div class="menu-toggle" onclick="toggleMenu()" id="menuToggle" aria-label="Open menu" role="button">
+    <a href="/" class="nav-logo" aria-label="Bosnan home"><img src="/logo.svg" alt="Bosnan logo" width="50" height="50"></a>
+    <button class="menu-toggle" onclick="toggleMenu()" id="menuToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
         <span></span><span></span><span></span>
-    </div>
+    </button>
     <div class="nav-links" id="navLinks">
-        ${link('/index.html', 'Home', 'home')}
-        ${link('/game.html', 'Game', 'game')}
+        ${link('/', 'Home', 'home')}
         ${link('/games', 'Games', 'games')}
         ${link('/platforms', 'Platforms', 'platforms')}
-        ${link('/developers', 'Developers', 'developers')}
-        ${link('/composers', 'Composers', 'composers')}
-        ${link('/franchises', 'Franchises', 'franchises')}
-        ${link('/hardware', 'Hardware', 'hardware')}
-        ${link('/designers', 'Designers', 'designers')}
-        ${link('/publishers', 'Publishers', 'publishers')}
-        ${link('/arcade-boards', 'Arcade', 'arcade-boards')}
-        ${link('/peripherals', 'Peripherals', 'peripherals')}
-        ${link('/lost-games', 'Lost Games', 'lost-games')}
-        ${link('/years', 'By Year', 'years')}
-        ${link('/decades', 'Decades', 'decades')}
-        ${link('/regional', 'Regional', 'regional')}
-        ${link('/family-tree', 'Family Tree', 'family-tree')}
-        ${link('/compare', 'Compare', 'compare')}
-        ${link('/search', 'Search', 'search')}
         ${link('/genres', 'Encyclopedia', 'genres')}
         ${link('/essays', 'Essays', 'essays')}
-        ${link('/sequels', 'Sequels', 'sequels')}
-        ${link('/rom-hacks', 'ROM Hacks', 'rom-hacks')}
-        ${link('/ad-campaigns', 'Ads', 'ad-campaigns')}
-        ${link('/sales-figures', 'Sales', 'sales-figures')}
-        ${link('/speedruns', 'Speedruns', 'speedruns')}
-        ${link('/critics', 'Critics', 'critics')}
-        ${link('/wordsearch', 'Word Search', 'wordsearch')}
-        ${link('/bookmarks', 'Bookmarks', 'bookmarks')}
-        ${link('/cancelled', 'Cancelled', 'cancelled')}
-        ${link('/localization', 'Localization', 'localization')}
-        ${link('/prototypes', 'Prototypes', 'prototypes')}
-        ${link('/strategy-guides', 'Strategy Guides', 'strategy-guides')}
-        ${link('/cabinet-art', 'Cabinet Art', 'cabinet-art')}
-        ${link('/merchandise', 'Merchandise', 'merchandise')}
-        ${link('/bootlegs', 'Bootlegs', 'bootlegs')}
-        ${link('/competitive', 'Competitive', 'competitive')}
-        ${link('/endings', 'Endings', 'endings')}
-        ${link('/bossfights', 'Boss Fights', 'bossfights')}
-        ${link('/soundtracks', 'Soundtracks', 'soundtracks')}
-        ${link('/manuals', 'Manuals', 'manuals')}
-        ${link('/difficulty', 'Difficulty', 'difficulty')}
-        ${link('/characters', 'Characters', 'characters')}
-        ${link('/cover-stories', 'Cover Stories', 'cover-stories')}
-        ${link('/controllers', 'Controllers', 'controllers')}
-        ${link('/disappointments', 'Disappointments', 'disappointments')}
-        ${link('/levels', 'Levels', 'levels')}
-        ${link('/urban-legends', 'Urban Legends', 'urban-legends')}
-        ${link('/glitches', 'Glitches', 'glitches')}
-        ${link('/packaging', 'Packaging', 'packaging')}
-        ${link('/multiplayer', 'Multiplayer', 'multiplayer')}
-        ${link('/comics', 'Comics', 'comics')}
-        ${link('/studios', 'Studio Origins', 'studios')}
-        ${link('/imports', 'Imports', 'imports')}
-        ${link('/speedrun-techniques', 'SR Techniques', 'speedrun-techniques')}
-        ${link('/famous-bugs', 'Famous Bugs', 'famous-bugs')}
-        ${link('/retro-revival', 'Retro Revival', 'retro-revival')}
-        ${link('/sound-effects', 'Sound Effects', 'sound-effects')}
-        ${link('/controversies', 'Controversies', 'controversies')}
-        ${link('/failed-consoles', 'Failed Consoles', 'failed-consoles')}
-        ${link('/game-engines', 'Engines', 'game-engines')}
-        ${link('/sound-chips', 'Sound Chips', 'sound-chips')}
-        ${link('/easter-eggs', 'Easter Eggs', 'easter-eggs')}
-        ${link('/cheat-codes', 'Cheat Codes', 'cheat-codes')}
-        ${link('/glossary', 'Glossary', 'glossary')}
-        ${link('/quiz', 'Quiz', 'quiz')}
-        ${link('/on-this-day', 'On This Day', 'on-this-day')}
-        ${link('/map', 'Studio Map', 'map')}
-        ${link('/magazines', 'Magazines', 'magazines')}
-        ${link('/collections', 'Lists', 'collections')}
-        ${link('/ports', 'Ports', 'ports')}
-        ${link('/box-art', 'Box Art', 'box-art')}
-        ${link('/voice-actors', 'Voice Actors', 'voice-actors')}
-        ${link('/pixel-artists', 'Pixel Artists', 'pixel-artists')}
-        ${link('/producers', 'Producers', 'producers')}
-        ${link('/timeline', 'Timeline', 'timeline')}
-        ${link('/stats', 'Stats', 'stats')}
-        ${link('/recent', 'Recent', 'recent')}
+        <details class="nav-drop">
+          <summary${inGroup ? ' class="active"' : ''}>Browse &#9662;</summary>
+          <div class="nav-mega">
+          ${groupsHtml}
+            <a href="/browse" class="nav-mega-all">All sections A&ndash;Z &#8594;</a>
+          </div>
+        </details>
+        ${link('/game.html', 'The Game', 'game')}
         <a href="/random" class="nav-random">&#127922; Random</a>
+        <form class="nav-search" action="/search" method="GET" role="search">
+            <input type="search" name="q" placeholder="Search&#8230;" aria-label="Search the archive">
+        </form>
     </div>
 </nav>`;
 }
 
+let cachedFooterHtml = null;
+function footerHtml() {
+  if (!cachedFooterHtml) {
+    const cols = NAV_GROUPS.map(g => `<div class="footer-col">
+      <div class="footer-col-title">${g.name}</div>
+      ${g.items.map(([, href, label]) => `<a href="${href}">${label}</a>`).join('\n      ')}
+    </div>`).join('\n    ');
+    cachedFooterHtml = `<footer class="site-footer">
+  <div class="footer-grid">
+    ${cols}
+  </div>
+  <div class="footer-bottom">
+    <a href="/">${SITE_NAME}</a> &middot; <a href="/browse">All sections</a> &middot; <a href="/game.html">The Bosnan Game</a> &middot; <a href="/sitemap.xml">Sitemap</a>
+  </div>
+</footer>`;
+  }
+  return cachedFooterHtml;
+}
+
 function toggleScript() {
-  return `<script>function toggleMenu(){document.getElementById("navLinks").classList.toggle("active")}</script>`;
+  return `<script>function toggleMenu(){var n=document.getElementById("navLinks"),t=document.getElementById("menuToggle"),o=n.classList.toggle("active");if(t)t.setAttribute("aria-expanded",o?"true":"false")}
+document.addEventListener("click",function(e){document.querySelectorAll("details.nav-drop[open]").forEach(function(d){if(!d.contains(e.target))d.removeAttribute("open")})});</script>`;
 }
 
 // eagerCount: first N images get fetchpriority=high (no lazy), rest get loading=lazy
 function buildCardHtml(list, eagerCount = 0) {
   return list.map((g, i) => {
     const imgAttrs = i < eagerCount
-      ? `fetchpriority="high"`
-      : `loading="lazy"`;
+      ? `fetchpriority="high" decoding="async"`
+      : `loading="lazy" decoding="async"`;
     return `<a href="/games/${g.id}" class="game-card">
       <div class="game-card-img-wrap">
         <img src="/${escapeHtml(g.image)}" alt="${escapeHtml(g.title)}" ${imgAttrs}
@@ -739,11 +869,11 @@ function buildCardHtml(list, eagerCount = 0) {
 // ── Routes ──────────────────────────────────────────────────────────────────
 
 app.get('/sitemap.xml', (req, res) => {
-  const host = req.get('host');
-  if (!cachedSitemap || cachedSitemap.host !== host) {
-    const base = `${req.protocol}://${host}`;
-    const today = new Date().toISOString().split('T')[0];
-    const staticUrls = ['', '/games', '/platforms', '/developers', '/composers', '/franchises', '/hardware', '/designers', '/publishers', '/arcade-boards', '/peripherals', '/lost-games', '/years', '/decades', '/regional', '/family-tree', '/compare', '/search', '/genres', '/essays', '/magazines', '/box-art', '/ports', '/voice-actors', '/pixel-artists', '/producers', '/collections', '/timeline', '/stats', '/recent', '/controversies', '/failed-consoles', '/game-engines', '/sound-chips', '/easter-eggs', '/cheat-codes', '/glossary', '/quiz', '/on-this-day', '/map', '/sequels', '/rom-hacks', '/ad-campaigns', '/sales-figures', '/speedruns', '/critics', '/wordsearch', '/bookmarks'].map(p => `
+  if (!cachedSitemap) {
+    const base = SITE_URL;
+    const today = SITE_LASTMOD;
+    // Every section hub from the shared registry, so new sections can't be forgotten
+    const staticUrls = ['', '/browse', '/game.html', ...NAV_GROUPS.flatMap(g => g.items.map(([, p]) => p))].map(p => `
   <url>
     <loc>${base}${p}</loc>
     <lastmod>${today}</lastmod>
@@ -1192,7 +1322,6 @@ app.get('/sitemap.xml', (req, res) => {
     <priority>0.7</priority>
   </url>`).join('');
     cachedSitemap = {
-      host,
       xml: `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${designerUrls}${publisherUrls}${arcadeBoardUrls}${peripheralUrls}${lostGameUrls}${regionalUrls}${genreUrls}${essayUrls}${yearUrls}${decadeUrls}${magazineUrls}${boxArtUrls}${portUrls}${voiceActorUrls}${pixelArtistUrls}${producerUrls}${collectionUrls}${controversyUrls}${failedConsoleUrls}${gameEngineUrls}${soundChipUrls}${easterEggUrls}${cheatCodeUrls}${sequelUrls}${romHackUrls}${adCampaignUrls}${speedrunUrls}${criticUrls}${cancelledUrls}${localizationUrls}${prototypeUrls}${strategyGuideUrls}${cabinetArtUrls}${merchandiseUrls}${bootlegUrls}${competitiveUrls}${endingUrls}${bossfightUrls}${soundtrackUrls}${manualUrls}${difficultyUrls}${characterUrls}${coverStoryUrls}${controllerUrls}${disappointmentUrls}${levelUrls}${urbanLegendUrls}${glitchUrls}${packagingUrls}${multiplayerUrls}${comicUrls}${studioUrls}${importUrls}${speedrunTechUrls}${famousBugUrls}${retroRevivalUrls}${soundEffectUrls}${gameUrls}
 </urlset>`,
@@ -1204,14 +1333,20 @@ app.get('/sitemap.xml', (req, res) => {
 });
 
 app.get('/robots.txt', (req, res) => {
-  const base = `${req.protocol}://${req.get('host')}`;
   res.type('text/plain');
-  res.send(`User-agent: *\nAllow: /\nSitemap: ${base}/sitemap.xml\n`);
+  res.send(`User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 });
 
 app.get('/random', (req, res) => {
   const game = games[Math.floor(Math.random() * games.length)];
   res.redirect(302, `/games/${game.id}`);
+});
+
+let cachedBrowseHtml = null;
+app.get('/browse', (req, res) => {
+  if (!cachedBrowseHtml) cachedBrowseHtml = browsePage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.send(cachedBrowseHtml);
 });
 
 app.get('/api/games', (req, res) => {
@@ -1241,15 +1376,12 @@ app.get('/games', (req, res) => {
 app.get('/games/:id', (req, res) => {
   const game = gamesById.get(req.params.id);
   if (!game) return res.status(404).send(notFoundPage());
-  const host = req.get('host');
-  const cacheKey = `${host}/${game.id}`;
-  if (!cachedGamePageHtml.has(cacheKey)) {
-    const base = `${req.protocol}://${host}`;
-    cachedGamePageHtml.set(cacheKey, gameDetailPage(game, base));
+  if (!cachedGamePageHtml.has(game.id)) {
+    cachedGamePageHtml.set(game.id, gameDetailPage(game, SITE_URL));
   }
   res.set('Cache-Control', 'public, max-age=86400, stale-while-revalidate=604800');
   res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedGamePageHtml.get(cacheKey));
+  res.send(cachedGamePageHtml.get(game.id));
 });
 
 app.get('/platforms', (req, res) => {
@@ -2285,7 +2417,7 @@ app.get('/map', (req, res) => {
 });
 
 app.get('/feed.xml', (req, res) => {
-  const base = `${req.protocol}://${req.get('host')}`;
+  const base = SITE_URL;
   const recent = ESSAYS.slice(-20).reverse();
   const items = recent.map(e => `
     <item>
@@ -2310,52 +2442,94 @@ app.get('/feed.xml', (req, res) => {
 
 // ── Page generators ──────────────────────────────────────────────────────────
 
+function browsePage() {
+  const total = NAV_GROUPS.reduce((n, g) => n + g.items.length, 0);
+  const groupsHtml = NAV_GROUPS.map(g => `<div class="browse-group">
+    <h2>${g.name}</h2>
+    <div class="browse-links">
+      ${g.items.map(([, href, label]) => `<a href="${href}">${label}</a>`).join('\n      ')}
+    </div>
+  </div>`).join('\n  ');
+  const az = NAV_GROUPS.flatMap(g => g.items)
+    .slice()
+    .sort((a, b) => a[2].localeCompare(b[2]))
+    .map(([, href, label]) => `<a href="${href}">${label}</a>`)
+    .join('\n      ');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse All ${total} Sections – ${SITE_NAME}</title>
+    <meta name="description" content="Every section of the Bosnan retro gaming archive in one place: games, platforms, developers, soundtracks, magazines, speedruns, and ${total - 6}+ more.">
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('browse')}
+<section class="platforms-hero">
+    <h1>Browse the Archive</h1>
+    <p>All ${total} sections, grouped by theme</p>
+</section>
+<div class="browse-wrapper">
+  ${groupsHtml}
+  <div class="browse-group">
+    <h2>A&ndash;Z</h2>
+    <div class="browse-links browse-az">
+      ${az}
+    </div>
+  </div>
+</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
 function homepagePage(gotd) {
   const gotdHref = `/games/${gotd.id}`;
   const gotdImgSrc = `/${escapeHtml(gotd.image)}`;
   const gotdDesc = gotd.description ? gotd.description.substring(0, 180) + '…' : '';
+
+  const websiteSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE_NAME,
+    url: `${SITE_URL}/`,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/search?q={search_term_string}` },
+      'query-input': 'required name=search_term_string',
+    },
+  });
 
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosnan – Retro Games Archive</title>
-    <meta name="description" content="Bosnan – explore legendary retro games from the 1960s, 1970s, and 1980s. Browse ${games.length}+ games across Arcade, NES, Atari, C64, and more.">
+    <title>Bosnan – Retro Games Archive: ${games.length}+ Classic Games of the 1960s–80s</title>
+    <meta name="description" content="Bosnan – explore legendary retro games from the 1960s, 1970s, and 1980s. Browse ${games.length}+ games across Arcade, NES, Atari, C64, and more, plus essays, soundtracks, hardware, and gaming history.">
+    <script type="application/ld+json">${websiteSchema}</script>
     ${cssHead()}
 </head>
 <body>
 ${bgLogo()}
+${nav('home')}
 
-<nav>
-    <img src="/logo.svg" alt="Bosnan Logo" width="50" height="50">
-    <div class="menu-toggle" onclick="toggleMenu()" id="menuToggle" aria-label="Open menu" role="button">
-        <span></span><span></span><span></span>
+<section class="home-hero">
+    <h1>Retro Games Archive</h1>
+    <p class="home-tagline">The history of video games, 1962&ndash;1989 — games, hardware, people, and culture</p>
+    <form class="home-search" action="/search" method="GET" role="search">
+        <input type="search" name="q" placeholder="Search ${games.length} games, essays, platforms, people&#8230;" aria-label="Search the archive">
+        <button type="submit">Search</button>
+    </form>
+    <div class="home-stats">
+        <a href="/games">${games.length} games</a>
+        <a href="/platforms">${PLATFORMS.length} platforms</a>
+        <a href="/genres">${GENRES.length} genre histories</a>
+        <a href="/essays">${ESSAYS.length} essays</a>
+        <a href="/browse">all sections &#8594;</a>
     </div>
-    <div class="nav-links" id="navLinks">
-        <a href="/index.html" class="active">Home</a>
-        <a href="/game.html">Game</a>
-        <a href="/games">Games</a>
-        <a href="/platforms">Platforms</a>
-        <a href="/genres">Encyclopedia</a>
-        <a href="/essays">Essays</a>
-        <a href="/random" class="nav-random">&#127922; Random</a>
-    </div>
-</nav>
-
-<section class="hero">
-    <h1>BOSNAN</h1>
-    <p>The Eternal Dragon-Blooded Guardian</p>
-    <a href="game.html" class="btn">Enter Game</a>
-</section>
-
-<section class="section">
-    <h2>The Legend</h2>
-    <p>Before empires, before kings, before history itself - there was Bosnan.</p>
-    <p>Born of the ancient Dragon Zmaj and the mystical Fairy Vila Bosanska, Bosnan walks through time as an immortal guardian. His blood burns with fire, his spirit moves like the wind.</p>
-    <p>He fought Romans. He shattered invaders in the Middle Ages. He rose again against empires and darkness across centuries.</p>
-    <p>Now, a new evil walks the earth — degenerate human hunters who prey on the innocent. But they are no longer the hunters.</p>
-    <p style="color:red;">Bosnan has returned.</p>
 </section>
 
 <div class="gotd-section">
@@ -2401,6 +2575,13 @@ ${bgLogo()}
     <a href="/genres" class="enc-browse-btn">Browse all 10 genres &#8594;</a>
 </div>
 
+<div class="bosnan-game-promo">
+    <h2>The Bosnan Game</h2>
+    <p>Before empires, before kings, before history itself — there was Bosnan. Born of the ancient Dragon Zmaj and the mystical Fairy Vila Bosanska, the eternal dragon-blooded guardian walks through time once more.</p>
+    <p>Play the original Bosnan game — free, for Windows (Java 17+).</p>
+    <a href="/game.html" class="btn">Enter the Game</a>
+</div>
+
 ${toggleScript()}
 </body>
 </html>`;
@@ -2412,34 +2593,34 @@ function gameLauncherPage() {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosnan Game</title>
+    <title>The Bosnan Game – Free Action Game for Windows</title>
+    <meta name="description" content="Play Bosnan, the eternal dragon-blooded guardian — a free Java action game for Windows. Download the JAR and start playing.">
     ${cssHead()}
 </head>
 <body>
 ${bgLogo()}
+${nav('game')}
 
-<nav>
-    <img src="/logo.svg" alt="Bosnan Logo" width="50" height="50">
-    <div class="menu-toggle" onclick="toggleMenu()" id="menuToggle" aria-label="Open menu" role="button">
-        <span></span><span></span><span></span>
-    </div>
-    <div class="nav-links" id="navLinks">
-        <a href="/index.html">Home</a>
-        <a href="/game.html" class="active">Game</a>
-        <a href="/games">Games</a>
-        <a href="/platforms">Platforms</a>
-        <a href="/genres">Encyclopedia</a>
-        <a href="/essays">Essays</a>
-        <a href="/random" class="nav-random">&#127922; Random</a>
-    </div>
-</nav>
+<section class="hero">
+    <h1>BOSNAN</h1>
+    <p>The Eternal Dragon-Blooded Guardian</p>
+</section>
+
+<section class="section">
+    <h2>The Legend</h2>
+    <p>Before empires, before kings, before history itself - there was Bosnan.</p>
+    <p>Born of the ancient Dragon Zmaj and the mystical Fairy Vila Bosanska, Bosnan walks through time as an immortal guardian. His blood burns with fire, his spirit moves like the wind.</p>
+    <p>He fought Romans. He shattered invaders in the Middle Ages. He rose again against empires and darkness across centuries.</p>
+    <p>Now, a new evil walks the earth — degenerate human hunters who prey on the innocent. But they are no longer the hunters.</p>
+    <p style="color:red;">Bosnan has returned.</p>
+</section>
 
 <section class="section">
     <h2>Gameplay</h2>
     <div class="gallery">
-        <img src="/images/screenshot1.png" loading="lazy">
-        <img src="/images/screenshot2.png" loading="lazy">
-        <img src="/images/screenshot3.png" loading="lazy">
+        <img src="/images/screenshot1.png" loading="lazy" alt="Bosnan gameplay screenshot: the guardian in battle">
+        <img src="/images/screenshot2.png" loading="lazy" alt="Bosnan gameplay screenshot: exploring the world">
+        <img src="/images/screenshot3.png" loading="lazy" alt="Bosnan gameplay screenshot: combat encounter">
     </div>
 </section>
 
@@ -2468,16 +2649,27 @@ function gamesListPage() {
   const cardHtml = buildCardHtml(firstPage, EAGER_IMAGES);
   const inlineData = JSON.stringify(gamesSlim);
 
+  const itemListSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `Retro Games Archive – ${games.length} classic games`,
+    numberOfItems: games.length,
+    itemListElement: firstPage.map((g, i) => ({
+      '@type': 'ListItem', position: i + 1, name: g.title, url: `${SITE_URL}/games/${g.id}`,
+    })),
+  });
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retro Games Archive – Bosnan</title>
+    <title>All ${games.length} Retro Games of the 1960s–80s – Bosnan Archive</title>
     <meta name="description" content="Browse ${games.length} legendary retro games from the 1960s, 1970s, and 1980s. Search by title, genre, platform, or decade.">
     <meta property="og:title" content="Retro Games Archive – Bosnan">
     <meta property="og:description" content="Browse ${games.length} legendary retro games from the 1960s, 1970s, and 1980s.">
     <meta property="og:type" content="website">
+    <script type="application/ld+json">${itemListSchema}</script>
     ${cssHead()}
 </head>
 <body>
@@ -2612,24 +2804,38 @@ function gameDetailPage(game, base) {
     url,
   });
 
+  const breadcrumbJson = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${base}/` },
+      { '@type': 'ListItem', position: 2, name: 'Games', item: `${base}/games` },
+      { '@type': 'ListItem', position: 3, name: game.title, item: url },
+    ],
+  });
+
+  const pageTitle = `${escapeHtml(game.title)} (${game.year}) – ${escapeHtml(game.platform)} – Bosnan Retro Archive`;
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${escapeHtml(game.title)} – Bosnan Retro Archive</title>
+    <title>${pageTitle}</title>
     <meta name="description" content="${desc}">
-    <meta property="og:title" content="${escapeHtml(game.title)} – Bosnan Retro Archive">
+    <meta property="og:title" content="${pageTitle}">
     <meta property="og:description" content="${desc}">
     <meta property="og:image" content="${imgUrl}">
     <meta property="og:url" content="${url}">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="${SITE_NAME}">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="${escapeHtml(game.title)} – Bosnan Retro Archive">
+    <meta name="twitter:title" content="${pageTitle}">
     <meta name="twitter:description" content="${desc}">
     <meta name="twitter:image" content="${imgUrl}">
     <link rel="canonical" href="${url}">
     <script type="application/ld+json">${schemaJson}</script>
+    <script type="application/ld+json">${breadcrumbJson}</script>
     ${cssHead()}
 </head>
 <body>
@@ -2637,19 +2843,19 @@ ${bgLogo()}
 ${nav('games')}
 
 <div class="game-detail-wrapper">
-  <a href="/games" class="back-link">&#8592; Back to Games</a>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/games">Games</a> &rsaquo; <span aria-current="page">${escapeHtml(game.title)}</span></nav>
 
   <div class="game-detail-card">
     <div class="game-detail-image-col">
-      <img src="/${escapeHtml(game.image)}" alt="${escapeHtml(game.title)}" class="game-detail-img"
+      <img src="/${escapeHtml(game.image)}" alt="${escapeHtml(game.title)} (${game.year}) gameplay screenshot" class="game-detail-img"
            fetchpriority="high" onerror="this.src='/images/games/placeholder.svg'">
       <div class="game-meta">
-        <div class="meta-item"><span class="meta-label">Year</span><span class="meta-value">${escapeHtml(String(game.year))}</span></div>
-        <div class="meta-item"><span class="meta-label">Decade</span><span class="meta-value">${escapeHtml(game.decade)}</span></div>
-        <div class="meta-item"><span class="meta-label">Genre</span><span class="meta-value">${escapeHtml(game.genre)}</span></div>
-        <div class="meta-item"><span class="meta-label">Platform</span><span class="meta-value">${escapeHtml(game.platform)}</span></div>
-        <div class="meta-item"><span class="meta-label">Developer</span><span class="meta-value">${escapeHtml(game.developer)}</span></div>
-        <div class="meta-item"><span class="meta-label">Publisher</span><span class="meta-value">${escapeHtml(game.publisher)}</span></div>
+        <div class="meta-item"><span class="meta-label">Year</span><span class="meta-value">${metaValue(String(game.year), `/years/${game.year}`)}</span></div>
+        <div class="meta-item"><span class="meta-label">Decade</span><span class="meta-value">${metaValue(game.decade, `/decades/${encodeURIComponent(game.decade)}`)}</span></div>
+        <div class="meta-item"><span class="meta-label">Genre</span><span class="meta-value">${metaValue(game.genre, genreHub(game))}</span></div>
+        <div class="meta-item"><span class="meta-label">Platform</span><span class="meta-value">${metaValue(game.platform, platformHub(game))}</span></div>
+        <div class="meta-item"><span class="meta-label">Developer</span><span class="meta-value">${metaValue(game.developer, developerHub(game))}</span></div>
+        <div class="meta-item"><span class="meta-label">Publisher</span><span class="meta-value">${metaValue(game.publisher, publisherHub(game))}</span></div>
       </div>
     </div>
     <div class="game-detail-info-col">
@@ -2724,6 +2930,11 @@ function platformsListPage() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro Gaming Platforms – Bosnan</title>
     <meta name="description" content="Explore retro gaming platforms from the 1970s and 1980s: Arcade, NES, Atari 2600, Commodore 64, ZX Spectrum, and more.">
+    <script type="application/ld+json">${JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'ItemList', name: 'Retro Gaming Platforms',
+      numberOfItems: PLATFORMS.length,
+      itemListElement: PLATFORMS.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.name, url: `${SITE_URL}/platforms/${p.id}` })),
+    })}</script>
     ${cssHead()}
 </head>
 <body>
@@ -2836,6 +3047,11 @@ function genresListPage() {
     <meta property="og:title" content="Game Encyclopedia – Bosnan Retro Archive">
     <meta property="og:description" content="A wiki-style encyclopedia of video game genre history, from shoot 'em ups to RPGs.">
     <meta property="og:type" content="website">
+    <script type="application/ld+json">${JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'ItemList', name: 'Video Game Genre Encyclopedia',
+      numberOfItems: GENRES.length,
+      itemListElement: GENRES.map((g, i) => ({ '@type': 'ListItem', position: i + 1, name: g.name, url: `${SITE_URL}/genres/${g.id}` })),
+    })}</script>
     ${cssHead()}
 </head>
 <body>
@@ -3012,6 +3228,11 @@ function essaysListPage() {
     <meta name="description" content="Long-form essays on the history, technology, and culture of retro gaming — the golden age of arcades, the designers who shaped the medium, and the worlds they built.">
     <meta property="og:title" content="Essays – Bosnan Retro Archive">
     <meta property="og:type" content="website">
+    <script type="application/ld+json">${JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'ItemList', name: 'Retro Gaming Essays',
+      numberOfItems: ESSAYS.length,
+      itemListElement: ESSAYS.map((e, i) => ({ '@type': 'ListItem', position: i + 1, name: e.title, url: `${SITE_URL}/essays/${e.id}` })),
+    })}</script>
     ${cssHead()}
 </head>
 <body>
@@ -3044,6 +3265,16 @@ function essayDetailPage(essay) {
     `<li><a href="#section-${i}">${escapeHtml(s.title)}</a></li>`
   ).join('');
 
+  const articleSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: essay.title,
+    description: essay.summary,
+    articleSection: categoryLabel,
+    url: `${SITE_URL}/essays/${essay.id}`,
+    publisher: { '@type': 'Organization', name: SITE_NAME, url: `${SITE_URL}/` },
+  });
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3054,6 +3285,7 @@ function essayDetailPage(essay) {
     <meta property="og:title" content="${escapeHtml(essay.title)} – Bosnan">
     <meta property="og:description" content="${escapeHtml(essay.summary)}">
     <meta property="og:type" content="article">
+    <script type="application/ld+json">${articleSchema}</script>
     ${cssHead()}
 </head>
 <body>
