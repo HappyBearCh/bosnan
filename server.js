@@ -946,7 +946,9 @@ function footerHtml() {
 
 function toggleScript() {
   return `<script>function toggleMenu(){var n=document.getElementById("navLinks"),t=document.getElementById("menuToggle"),o=n.classList.toggle("active");if(t)t.setAttribute("aria-expanded",o?"true":"false")}
-document.addEventListener("click",function(e){document.querySelectorAll("details.nav-drop[open]").forEach(function(d){if(!d.contains(e.target))d.removeAttribute("open")})});</script>`;
+document.addEventListener("click",function(e){document.querySelectorAll("details.nav-drop[open]").forEach(function(d){if(!d.contains(e.target))d.removeAttribute("open")})});
+document.addEventListener("keydown",function(e){if(e.key==="/"&&document.activeElement.tagName!=="INPUT"&&document.activeElement.tagName!=="TEXTAREA"&&!e.ctrlKey&&!e.metaKey){var s=document.querySelector(".nav-search input");if(s){e.preventDefault();s.focus();}}});
+(function(){var inp=document.querySelector(".nav-search input");if(!inp)return;var box=document.createElement("ul");box.className="nav-ac";inp.parentNode.style.position="relative";inp.parentNode.appendChild(box);var tmr;inp.addEventListener("input",function(){clearTimeout(tmr);var q=inp.value.trim();if(q.length<2){box.style.display="none";return;}tmr=setTimeout(function(){fetch("/api/search?q="+encodeURIComponent(q)).then(function(r){return r.json();}).then(function(items){box.innerHTML="";if(!items.length){box.style.display="none";return;}items.forEach(function(it){var li=document.createElement("li");li.innerHTML='<a href="'+it.href+'"><span class="ac-title">'+it.title+'</span><span class="ac-sub">'+it.sub+'</span></a>';box.appendChild(li);});box.style.display="block";}).catch(function(){box.style.display="none";});},220);});inp.addEventListener("blur",function(){setTimeout(function(){box.style.display="none";},160);});inp.addEventListener("keydown",function(e){if(e.key==="Escape"){box.style.display="none";inp.blur();}});})();</script>`;
 }
 
 // eagerCount: first N images get fetchpriority=high (no lazy), rest get loading=lazy
@@ -1486,6 +1488,38 @@ app.get('/api/retro-news', async (req, res) => {
   }));
   res.set('Cache-Control', 'public, max-age=1800, stale-while-revalidate=21600');
   res.json(articles);
+});
+
+app.get('/api/search', (req, res) => {
+  const q = (req.query.q || '').trim().toLowerCase();
+  if (q.length < 2) return res.json([]);
+  const results = [];
+  for (const g of games) {
+    if (results.length >= 8) break;
+    if (g.title.toLowerCase().includes(q)) {
+      results.push({ type: 'game', title: g.title, sub: `${g.year} · ${g.platform}`, href: `/games/${g.id}` });
+    }
+  }
+  for (const p of PLATFORMS) {
+    if (results.length >= 8) break;
+    if (p.name.toLowerCase().includes(q) || (p.shortName || '').toLowerCase().includes(q)) {
+      results.push({ type: 'platform', title: p.shortName || p.name, sub: p.era, href: `/platforms/${p.id}` });
+    }
+  }
+  for (const d of DEVELOPERS) {
+    if (results.length >= 8) break;
+    if (d.name.toLowerCase().includes(q)) {
+      results.push({ type: 'studio', title: d.name, sub: 'Developer', href: `/developers/${d.id}` });
+    }
+  }
+  for (const e of ESSAYS) {
+    if (results.length >= 8) break;
+    if (e.title.toLowerCase().includes(q)) {
+      results.push({ type: 'essay', title: e.title, sub: 'Essay', href: `/essays/${e.id}` });
+    }
+  }
+  res.set('Cache-Control', 'no-store');
+  res.json(results.slice(0, 8));
 });
 
 app.get('/games', (req, res) => {
@@ -5702,25 +5736,51 @@ function endingDetailPage(item) {
 }
 
 function notFoundPage() {
+  const rg = games[Math.floor(Math.random() * games.length)];
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Not Found – Bosnan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 – Page Not Found – Bosnan</title>
+    <meta name="robots" content="noindex">
     ${cssHead()}
 </head>
 <body>
 ${bgLogo()}
-<nav><img src="/logo.svg" alt="Bosnan Logo" width="50" height="50">
-  <div class="nav-links">
-    <a href="/index.html">Home</a><a href="/game.html">Game</a><a href="/games">Games</a><a href="/platforms">Platforms</a>
+${nav('')}
+<div class="notfound-wrapper">
+  <div class="notfound-code">404</div>
+  <h1 class="notfound-title">Page not found</h1>
+  <p class="notfound-sub">That page doesn't exist in the archive.</p>
+  <div class="notfound-actions">
+    <a href="/games" class="btn">Browse Games</a>
+    <a href="/random" class="btn notfound-random">&#127922; Random Game</a>
   </div>
-</nav>
-<section class="hero"><h1 style="font-size:40px">Not Found</h1><p>That page doesn't exist.</p>
-<a href="/games" class="btn" style="margin-top:20px">Browse Games</a></section>
+  <div class="notfound-suggest">
+    <p class="notfound-suggest-label">While you're here:</p>
+    <a href="/games/${escapeHtml(rg.id)}" class="game-card notfound-card">
+      <div class="game-card-img-wrap">
+        <img src="/${escapeHtml(rg.image)}" alt="${escapeHtml(rg.title)}" loading="lazy"
+             onerror="this.parentElement.innerHTML='<div class=\\'game-card-placeholder\\'>${escapeHtml(rg.title[0])}</div>'">
+        <div class="game-card-decade">${escapeHtml(rg.decade)}</div>
+      </div>
+      <div class="game-card-body">
+        <h3 class="game-card-title">${escapeHtml(rg.title)}</h3>
+        <div class="game-card-meta"><span>${rg.year}</span><span class="dot">·</span><span>${escapeHtml(rg.genre)}</span></div>
+        <p class="game-card-platform">${escapeHtml(rg.platform)}</p>
+      </div>
+    </a>
+  </div>
+</div>
+${toggleScript()}
 </body>
 </html>`;
 }
+
+app.use((req, res) => {
+  res.status(404).send(notFoundPage());
+});
 
 app.listen(PORT, () => {
   console.log(`Bosnan server running at http://localhost:${PORT}`);
