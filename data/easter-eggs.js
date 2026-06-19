@@ -3,6 +3,10 @@
 module.exports = [
   {
     id: 'adventure-warren-robinett',
+    sources: [
+      { title: 'Adventure — the first known Easter egg', publisher: 'eeggs.com', url: 'https://eeggs.com/items/453.html' },
+      { title: 'So let\'s talk about that Easter Egg', publisher: 'Atari', url: 'https://atari.com/blogs/atari/so-let-s-talk-about-that-easter-egg' },
+    ],
     title: 'Warren Robinett\'s Hidden Room',
     game: 'Adventure',
     platform: 'Atari 2600',
@@ -20,6 +24,10 @@ module.exports = [
   },
   {
     id: 'konami-code-gradius',
+    sources: [
+      { title: 'Konami Code', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Konami_Code' },
+      { title: 'Konami Code', publisher: 'Gradius Wiki', url: 'https://gradius.fandom.com/wiki/Konami_Code' },
+    ],
     title: 'Konami Code — 30 Lives',
     game: 'Gradius',
     platform: 'NES',
@@ -37,6 +45,9 @@ module.exports = [
   },
   {
     id: 'mortal-kombat-blood-code',
+    sources: [
+      { title: 'Controversies surrounding Mortal Kombat', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Controversies_surrounding_Mortal_Kombat' },
+    ],
     title: 'Blood Code (ABACABB)',
     game: 'Mortal Kombat',
     platform: 'Sega Genesis',
@@ -54,6 +65,10 @@ module.exports = [
   },
   {
     id: 'sonic-debug-mode',
+    sources: [
+      { title: 'Debug Mode', publisher: 'Sonic Wiki Zone', url: 'https://sonic.fandom.com/wiki/Debug_Mode' },
+      { title: 'Sonic the Hedgehog (1991 video game)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_(1991_video_game)' },
+    ],
     title: 'Debug Mode',
     game: 'Sonic the Hedgehog',
     platform: 'Sega Genesis',
@@ -71,6 +86,10 @@ module.exports = [
   },
   {
     id: 'super-mario-bros-minus-world',
+    sources: [
+      { title: 'Minus World', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Minus_World' },
+      { title: 'Minus World', publisher: 'Super Mario Wiki', url: 'https://www.mariowiki.com/Minus_World' },
+    ],
     title: 'World -1 (Minus World)',
     game: 'Super Mario Bros.',
     platform: 'NES',
@@ -105,6 +124,10 @@ module.exports = [
   },
   {
     id: 'goldeneye-007-paintball-mode',
+    sources: [
+      { title: 'Cheat Options', publisher: 'GoldenEye Wiki', url: 'https://goldeneye.fandom.com/wiki/Cheat_Options' },
+      { title: 'GoldenEye 007 cheat codes', publisher: 'Video Games Chronicle', url: 'https://www.videogameschronicle.com/guide/goldeneye-007-cheat-codes-how-to-unlock-all-guns-paintball-mode-and-more/' },
+    ],
     title: 'Paintball Mode',
     game: 'GoldenEye 007',
     platform: 'Nintendo 64',
@@ -173,6 +196,9 @@ module.exports = [
   },
   {
     id: 'the-sims-tragic-clown',
+    sources: [
+      { title: 'Tragic Clown', publisher: 'The Sims Wiki', url: 'https://sims.fandom.com/wiki/Tragic_Clown' },
+    ],
     title: 'Tragic Clown Painting',
     game: 'The Sims',
     platform: 'PC',
@@ -190,6 +216,9 @@ module.exports = [
   },
   {
     id: 'final-fantasy-vii-w-item-duplication',
+    sources: [
+      { title: 'W-Item duplication bug', publisher: 'Final Fantasy Wiki', url: 'https://finalfantasy.fandom.com/wiki/W-Item_duplication_bug' },
+    ],
     title: 'W-Item Materia Duplication Glitch',
     game: 'Final Fantasy VII',
     platform: 'PlayStation',
@@ -207,6 +236,10 @@ module.exports = [
   },
   {
     id: 'metroid-justin-bailey',
+    sources: [
+      { title: 'Justin Bailey', publisher: 'Wikitroid', url: 'https://metroid.fandom.com/wiki/Justin_Bailey' },
+      { title: 'Who Was Metroid\'s Justin Bailey?', publisher: 'Mental Floss', url: 'https://www.mentalfloss.com/article/85854/who-was-metroids-justin-bailey' },
+    ],
     title: 'Justin Bailey Password',
     game: 'Metroid',
     platform: 'NES',
@@ -224,6 +257,10 @@ module.exports = [
   },
   {
     id: 'earthbound-anti-piracy',
+    sources: [
+      { title: 'Anti-piracy in the Mother series', publisher: 'WikiBound', url: 'https://wikibound.info/wiki/Anti-piracy_in_the_Mother_series' },
+      { title: 'MOTHER 2 / EarthBound Anti-Piracy Measures', publisher: 'Starmen.Net', url: 'https://starmen.net/mother2/gameinfo/antipiracy/' },
+    ],
     title: 'Anti-Piracy Sequence',
     game: 'EarthBound (Mother 2)',
     platform: 'Super Nintendo (SNES)',
@@ -241,6 +278,10 @@ module.exports = [
   },
   {
     id: 'nba-jam-hidden-characters',
+    sources: [
+      { title: 'NBA Jam', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/NBA_Jam' },
+      { title: 'He\'s On Fire! A History of Secret Characters From NBA Jam', publisher: 'Complex', url: 'https://www.complex.com/pop-culture/a/kevin-wong/a-history-of-secret-characters-nba-jam' },
+    ],
     title: 'Hidden Playable Characters',
     game: 'NBA Jam',
     platform: 'Arcade / Various',

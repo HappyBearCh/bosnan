@@ -2,6 +2,9 @@
 module.exports = [
   {
     id: 'atari-jaguar',
+    sources: [
+      { title: 'Atari Jaguar', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Atari_Jaguar' },
+    ],
     name: 'Atari Jaguar',
     manufacturer: 'Atari Corporation',
     year: 1993,
@@ -22,6 +25,9 @@ module.exports = [
   },
   {
     id: '3do',
+    sources: [
+      { title: '3DO Interactive Multiplayer', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/3DO_Interactive_Multiplayer' },
+    ],
     name: '3DO Interactive Multiplayer',
     manufacturer: 'Various (Panasonic, Sanyo, Goldstar)',
     year: 1993,
@@ -42,6 +48,9 @@ module.exports = [
   },
   {
     id: 'virtual-boy',
+    sources: [
+      { title: 'Virtual Boy', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Virtual_Boy' },
+    ],
     name: 'Virtual Boy',
     manufacturer: 'Nintendo',
     year: 1995,
@@ -62,6 +71,9 @@ module.exports = [
   },
   {
     id: 'philips-cdi',
+    sources: [
+      { title: 'Philips CD-i', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Philips_CD-i' },
+    ],
     name: 'Philips CD-i',
     manufacturer: 'Philips',
     year: 1991,
@@ -82,6 +94,9 @@ module.exports = [
   },
   {
     id: 'sega-32x',
+    sources: [
+      { title: '32X', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/32X' },
+    ],
     name: 'Sega 32X',
     manufacturer: 'Sega',
     year: 1994,
@@ -102,6 +117,9 @@ module.exports = [
   },
   {
     id: 'sega-saturn-west',
+    sources: [
+      { title: 'Sega Saturn', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Sega_Saturn' },
+    ],
     name: 'Sega Saturn (West)',
     manufacturer: 'Sega',
     year: 1995,
@@ -122,6 +140,9 @@ module.exports = [
   },
   {
     id: 'atari-lynx',
+    sources: [
+      { title: 'Atari Lynx', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Atari_Lynx' },
+    ],
     name: 'Atari Lynx',
     manufacturer: 'Atari Corporation',
     year: 1989,
@@ -142,6 +163,9 @@ module.exports = [
   },
   {
     id: 'turbografx-16',
+    sources: [
+      { title: 'TurboGrafx-16', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/TurboGrafx-16' },
+    ],
     name: 'TurboGrafx-16',
     manufacturer: 'NEC / Hudson Soft',
     year: 1989,
@@ -162,6 +186,9 @@ module.exports = [
   },
   {
     id: 'tiger-game-com',
+    sources: [
+      { title: 'Game.com', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Game.com' },
+    ],
     name: 'Tiger Game.com',
     manufacturer: 'Tiger Electronics',
     year: 1997,
@@ -182,6 +209,9 @@ module.exports = [
   },
   {
     id: 'gizmondo',
+    sources: [
+      { title: 'Gizmondo', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Gizmondo' },
+    ],
     name: 'Gizmondo',
     manufacturer: 'Tiger Telematics',
     year: 2005,
@@ -202,6 +232,9 @@ module.exports = [
   },
   {
     id: 'bandai-pippin',
+    sources: [
+      { title: 'Apple Pippin', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Apple_Pippin' },
+    ],
     name: 'Bandai Pippin',
     manufacturer: 'Bandai / Apple',
     year: 1996,
@@ -222,6 +255,9 @@ module.exports = [
   },
   {
     id: 'sega-pico',
+    sources: [
+      { title: 'Sega Pico', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Sega_Pico' },
+    ],
     name: 'Sega Pico',
     manufacturer: 'Sega',
     year: 1993,

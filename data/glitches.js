@@ -11,9 +11,9 @@ module.exports = [
     discoveredBy: 'Community',
     type: 'Became Feature',
     description: 'Firing a rocket at the ground and jumping simultaneously propels the player upward and forward far beyond any normal jump height, exploiting the game\'s own damage physics against the environment. id Software later formalised the technique as an intended mechanic in subsequent games.',
-    longDescription: 'Rocket jumping emerged within weeks of Quake\'s 1996 release as players noticed that the rocket launcher\'s splash-damage physics applied to the player character as well as enemies. By timing a ground-level rocket blast with a simultaneous jump, a skilled player could launch themselves vertically or diagonally across the map at speeds the level designers had not anticipated. The technique required sacrifice — the player absorbed significant self-damage with every use — which created a risk-reward calculation that became one of the defining skill expressions of competitive Quake play.\n\nThe manoeuvre transformed level design expectations: maps began to include pickups and routes accessible only by rocket jump, and competitive players practiced the technique until it became reflexive. Speed-runners built entire runs around rocket-jump sequences that bypassed large sections of the game. id Software\'s response was not to patch the behaviour out but to embrace it — Quake II and Quake III Arena included deliberate rocket-jump routes in their level design, and the technique appeared as a formative element of Team Fortress 2\'s Soldier class, where it became the character\'s signature movement ability and a central axis of competitive play.',
+    longDescription: 'A horizontal form of rocket jumping predates Quake — players used it in Doom (1993) to reach the secret exit in E3M6 — but it was Quake\'s 1996 release that popularised the vertical technique, as players noticed that the rocket launcher\'s splash-damage physics applied to the player character as well as enemies. By timing a ground-level rocket blast with a simultaneous jump, a skilled player could launch themselves vertically or diagonally across the map at speeds the level designers had not anticipated. The technique required sacrifice — the player absorbed significant self-damage with every use — which created a risk-reward calculation that became one of the defining skill expressions of competitive Quake play.\n\nThe manoeuvre transformed level design expectations: maps began to include pickups and routes accessible only by rocket jump, and competitive players practiced the technique until it became reflexive. Speed-runners built entire runs around rocket-jump sequences that bypassed large sections of the game. id Software\'s response was not to patch the behaviour out but to embrace it — Quake II and Quake III Arena included deliberate rocket-jump routes in their level design, and the technique appeared as a formative element of Team Fortress 2\'s Soldier class, where it became the character\'s signature movement ability and a central axis of competitive play.',
     keyFacts: [
-      'Discovered within weeks of Quake\'s 1996 release by the online multiplayer community',
+      'A horizontal precursor appeared in Doom (1993); Quake popularised the vertical technique from 1996',
       'Players absorb their own rocket splash damage to gain height and speed',
       'id Software formalised it as an intended mechanic in Quake II and Quake III Arena',
       'Became the defining movement ability of the Soldier class in Team Fortress 2',
@@ -28,9 +28,16 @@ module.exports = [
         html: '<p>Quake\'s deathmatch community seized on rocket jumping as a skill separator. Players who could execute consistent rocket jumps while managing health pickups held a mobility advantage that changed the calculus of arena combat. Tournament-level play at events like QuakeCon integrated rocket-jump routes as assumed knowledge; maps were designed with the technique as a prerequisite for reaching key weapon positions. The Quake community coined the term "air control" to describe the directional adjustment possible mid-rocket-jump, developing a vocabulary around a technique that had no official name or documentation.</p><p>The technique\'s legacy spans three decades of first-person shooters. Every arena shooter that followed Quake — Unreal Tournament, Tribes, Halo — either incorporated or consciously excluded rocket jumping as a design decision. Team Fortress 2\'s Soldier class was designed around it as a primary mobility tool, with specific map geometry built to reward skilled jump sequences. The rocket jump is now so deeply embedded in shooter design that it appears in games whose developers were born after Quake\'s release.</p>',
       },
     ],
+    sources: [
+      { title: 'Rocket jumping', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Rocket_jumping' },
+      { title: 'Rocket Jump', publisher: 'QuakeWorld Wiki', url: 'https://www.quakeworld.nu/wiki/Rocket_Jump' },
+    ],
   },
   {
     id: 'wavedash-melee',
+    sources: [
+      { title: 'Wavedash', publisher: 'SmashWiki', url: 'https://www.ssbwiki.com/Wavedash' },
+    ],
     title: 'Wavedash',
     game: 'Super Smash Bros. Melee',
     platform: 'GameCube',
@@ -59,6 +66,10 @@ module.exports = [
   },
   {
     id: 'strafe-jumping-quake',
+    sources: [
+      { title: 'Strafe-jumping', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Strafe-jumping' },
+      { title: 'Bunnyhop', publisher: 'QuakeWorld Wiki', url: 'https://www.quakeworld.nu/wiki/Bunnyhop' },
+    ],
     title: 'Strafe Jumping',
     game: 'Quake / Quake III Arena',
     platform: 'PC',
@@ -87,6 +98,10 @@ module.exports = [
   },
   {
     id: 'wall-jump-super-metroid',
+    sources: [
+      { title: 'Wall Jump', publisher: 'Wikitroid', url: 'https://metroid.fandom.com/wiki/Wall_Jump' },
+      { title: 'L+R Walljumping', publisher: 'Super Metroid Speedrunning Wiki', url: 'https://wiki.supermetroid.run/L+R_Walljumping' },
+    ],
     title: 'Wall Jump',
     game: 'Super Metroid',
     platform: 'SNES',
@@ -115,6 +130,10 @@ module.exports = [
   },
   {
     id: 'minus-world-smb',
+    sources: [
+      { title: 'Minus World', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Minus_World' },
+      { title: 'Minus World', publisher: 'Super Mario Wiki', url: 'https://www.mariowiki.com/Minus_World' },
+    ],
     title: 'Minus World (World -1)',
     game: 'Super Mario Bros.',
     platform: 'NES',
@@ -143,6 +162,10 @@ module.exports = [
   },
   {
     id: 'blj-super-mario-64',
+    sources: [
+      { title: 'Backwards Long Jump', publisher: 'SM64 Speedrun Wiki', url: 'https://sm64-speedrun.fandom.com/wiki/Backwards_Long_Jump' },
+      { title: 'Parallel Universes', publisher: 'MIPS Hole Wiki', url: 'https://sm64-conspiracies.fandom.com/wiki/Parallel_Universes' },
+    ],
     title: 'Backwards Long Jump (BLJ)',
     game: 'Super Mario 64',
     platform: 'Nintendo 64',
@@ -199,6 +222,10 @@ module.exports = [
   },
   {
     id: 'bunny-hop-half-life',
+    sources: [
+      { title: 'Bunnyhopping', publisher: 'SourceRuns Wiki', url: 'https://wiki.sourceruns.org/wiki/Bunnyhopping' },
+      { title: 'Bunny Hopping', publisher: 'Quake Wiki', url: 'https://quake.fandom.com/wiki/Bunny_Hopping' },
+    ],
     title: 'Bunny Hopping',
     game: 'Half-Life',
     platform: 'PC',
@@ -255,6 +282,9 @@ module.exports = [
   },
   {
     id: 'weapon-cancel-tekken',
+    sources: [
+      { title: 'Tekken 7 on Hit Box — Korean Back Dash', publisher: 'Hit Box Arcade', url: 'https://www.hitboxarcade.com/blogs/hit-box/tekken-7-on-hit-box-korean-back-dash' },
+    ],
     title: 'Korean Backdash Cancel',
     game: 'Tekken 3',
     platform: 'Arcade / PlayStation',
@@ -283,6 +313,10 @@ module.exports = [
   },
   {
     id: 'freeze-glitch-ocarina',
+    sources: [
+      { title: 'Infinite Sword Glitch', publisher: 'Zelda Dungeon Wiki', url: 'https://www.zeldadungeon.net/wiki/Infinite_Sword_Glitch' },
+      { title: 'Glitches in Ocarina of Time', publisher: 'Zelda Wiki', url: 'https://zelda.fandom.com/wiki/Glitches_in_Ocarina_of_Time' },
+    ],
     title: 'Infinite Sword Glitch',
     game: 'The Legend of Zelda: Ocarina of Time',
     platform: 'Nintendo 64',

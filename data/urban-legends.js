@@ -3,6 +3,10 @@
 module.exports = [
   {
     id: 'polybius',
+    sources: [
+      { title: 'Polybius (urban legend)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Polybius_(urban_legend)' },
+      { title: 'Polybius', publisher: 'Gaming Urban Legends Wiki', url: 'https://gaming-urban-legends.fandom.com/wiki/Polybius' },
+    ],
     title: 'Polybius — The Government Arcade Game',
     era: '1980s',
     verdict: 'Deliberately Created',
@@ -27,6 +31,10 @@ module.exports = [
   },
   {
     id: 'lavender-town-syndrome',
+    sources: [
+      { title: 'Lavender Town', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Lavender_Town' },
+      { title: 'Lavender Town Syndrome Creepypasta', publisher: 'Know Your Meme', url: 'https://knowyourmeme.com/memes/lavender-town-syndrome-creepypasta' },
+    ],
     title: 'Lavender Town Syndrome — The Frequencies That Hurt Children',
     era: '1990s',
     verdict: 'Deliberately Created',
@@ -51,6 +59,10 @@ module.exports = [
   },
   {
     id: 'blowing-on-cartridges',
+    sources: [
+      { title: 'Blowing Into Cartridges', publisher: 'Gaming Urban Legends Wiki', url: 'https://gaming-urban-legends.fandom.com/wiki/Blowing_Into_Cartridges' },
+      { title: 'Does Blowing Into Gaming Cartridges Actually Fix Them?', publisher: 'iFixit', url: 'https://www.ifixit.com/News/97647/ask-ifixit-does-blowing-into-gaming-cartridges-actually-fix-them' },
+    ],
     title: 'Blowing on Cartridges — The Ritual That Never Worked',
     era: '1980s',
     verdict: 'Confirmed False',
@@ -75,6 +87,10 @@ module.exports = [
   },
   {
     id: 'missingno',
+    sources: [
+      { title: 'MissingNo.', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/MissingNo.' },
+      { title: 'MissingNo.', publisher: 'Bulbapedia', url: 'https://bulbapedia.bulbagarden.net/wiki/MissingNo.' },
+    ],
     title: 'MissingNo — The Glitch That Became a Legend',
     era: '1990s',
     verdict: 'Confirmed True',
@@ -99,6 +115,10 @@ module.exports = [
   },
   {
     id: 'lara-croft-nude-code',
+    sources: [
+      { title: 'Nude Raider', publisher: 'Gaming Urban Legends Wiki', url: 'https://gaming-urban-legends.fandom.com/wiki/Nude_Raider' },
+      { title: 'Tomb Raider\'s Nude Raider Myth Was Fake — But It Almost Wasn\'t', publisher: 'TheGamer', url: 'https://www.thegamer.com/tomb-raider-nude-raider-myth-fake/' },
+    ],
     title: 'Nude Raider — The Code That Never Existed',
     era: '1990s',
     verdict: 'Confirmed False',
@@ -147,6 +167,10 @@ module.exports = [
   },
   {
     id: 'pac-man-kill-screen',
+    sources: [
+      { title: 'Map 256 Glitch', publisher: 'Pac-Man Wiki', url: 'https://pacman.fandom.com/wiki/Map_256_Glitch' },
+      { title: 'Kill Screen', publisher: 'TV Tropes', url: 'https://tvtropes.org/pmwiki/pmwiki.php/Main/KillScreen' },
+    ],
     title: 'The Pac-Man Kill Screen — Level 256 and the End of the Maze',
     era: '1980s',
     verdict: 'Confirmed True',
@@ -171,6 +195,10 @@ module.exports = [
   },
   {
     id: 'atari-et-burial',
+    sources: [
+      { title: 'Atari video game burial', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Atari_video_game_burial' },
+      { title: 'From landfill to Smithsonian: E.T. the Extra-Terrestrial Atari 2600 game', publisher: 'National Museum of American History', url: 'https://americanhistory.si.edu/explore/stories/landfill-smithsonian-collections-et-extra-terrestrial-atari-2600-game' },
+    ],
     title: 'Atari\'s E.T. Burial — The Myth That Was Real',
     era: '1980s',
     verdict: 'Partially True',
@@ -219,6 +247,10 @@ module.exports = [
   },
   {
     id: 'mew-under-truck',
+    sources: [
+      { title: 'Mew Under the Truck', publisher: 'Gaming Urban Legends Wiki', url: 'https://gaming-urban-legends.fandom.com/wiki/Mew_Under_the_Truck' },
+      { title: 'S.S. Anne', publisher: 'Bulbapedia', url: 'https://bulbapedia.bulbagarden.net/wiki/S.S._Anne' },
+    ],
     title: 'Mew Under the Truck — The Unreachable Mythical Pokémon',
     era: '1990s',
     verdict: 'Confirmed False',
@@ -243,6 +275,10 @@ module.exports = [
   },
   {
     id: 'konami-code-origin',
+    sources: [
+      { title: 'Konami Code', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Konami_Code' },
+      { title: 'Konami Code', publisher: 'Gradius Wiki', url: 'https://gradius.fandom.com/wiki/Konami_Code' },
+    ],
     title: 'The Konami Code — The Cheat That Became a Cultural Artifact',
     era: '1980s',
     verdict: 'Confirmed True',
@@ -267,6 +303,10 @@ module.exports = [
   },
   {
     id: 'cartridge-blowing-ritual',
+    sources: [
+      { title: 'Blowing Into Cartridges', publisher: 'Gaming Urban Legends Wiki', url: 'https://gaming-urban-legends.fandom.com/wiki/Blowing_Into_Cartridges' },
+      { title: 'Myth debunked: Blowing in your Nintendo games never actually fixed anything', publisher: 'GeekWire', url: 'https://www.geekwire.com/2014/blow-nintendo-games/' },
+    ],
     title: 'The Cartridge Blowing Ritual — A Generation\'s Shared Technology Myth',
     era: '1980s',
     verdict: 'Confirmed False',

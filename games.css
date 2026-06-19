@@ -608,6 +608,98 @@
     gap: 18px;
 }
 
+/* ================== RELATED ENTRIES (cross-links) ================== */
+.related-entries {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 28px 0 0;
+    border-top: 1px solid #1a1a1a;
+}
+.related-entries h2 {
+    font-size: 20px;
+    color: red;
+    text-shadow: 0 0 8px rgba(255,0,0,0.35);
+    margin-bottom: 18px;
+}
+.related-entries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+}
+.related-link {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 14px;
+    background: #111;
+    border: 1px solid #1f1f1f;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: border-color 0.15s, transform 0.15s;
+}
+.related-link:hover {
+    border-color: red;
+    transform: translateY(-2px);
+}
+.related-link .related-cat {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #b0382f;
+    font-weight: 700;
+}
+.related-link .related-title {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+/* ================== ENTRY SOURCES ================== */
+.entry-sources {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 28px 0 0;
+    border-top: 1px solid #1a1a1a;
+}
+.entry-sources h2 {
+    font-size: 20px;
+    color: red;
+    text-shadow: 0 0 8px rgba(255,0,0,0.35);
+    margin-bottom: 14px;
+}
+.entry-sources-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.entry-sources-list li {
+    padding: 7px 0 7px 18px;
+    position: relative;
+    color: #bbb;
+    font-size: 14px;
+    line-height: 1.5;
+    border-bottom: 1px solid #141414;
+}
+.entry-sources-list li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: #b0382f;
+    font-weight: 700;
+}
+.entry-sources-list a {
+    color: #d8d8d8;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+}
+.entry-sources-list a:hover {
+    color: #fff;
+    border-bottom-color: red;
+}
+.entry-sources-list .source-pub {
+    color: #777;
+}
+
 /* ================== GAME OF THE DAY (index.html) ================== */
 .gotd-section {
     max-width: 900px;

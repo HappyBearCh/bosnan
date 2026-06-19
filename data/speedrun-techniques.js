@@ -3,6 +3,10 @@
 module.exports = [
   {
     id: 'alttp-wrong-warp',
+    sources: [
+      { title: 'Exploration Glitch', publisher: 'ALttP Speedrunning Wiki', url: 'https://alttp-wiki.net/index.php/Exploration_Glitch' },
+      { title: 'Glitches in A Link to the Past', publisher: 'Zelda Wiki', url: 'https://zelda.fandom.com/wiki/Glitches_in_A_Link_to_the_Past' },
+    ],
     title: 'Wrong Warp — Dark World Skip',
     game: 'The Legend of Zelda: A Link to the Past',
     platform: 'SNES',
@@ -32,6 +36,10 @@ module.exports = [
   },
   {
     id: 'sm64-blj',
+    sources: [
+      { title: 'Backwards Long Jump', publisher: 'SM64 Speedrun Wiki', url: 'https://sm64-speedrun.fandom.com/wiki/Backwards_Long_Jump' },
+      { title: 'Parallel Universes', publisher: 'MIPS Hole Wiki', url: 'https://sm64-conspiracies.fandom.com/wiki/Parallel_Universes' },
+    ],
     title: 'Backwards Long Jump (BLJ)',
     game: 'Super Mario 64',
     platform: 'Nintendo 64',
@@ -61,6 +69,10 @@ module.exports = [
   },
   {
     id: 'oot-wrong-warp',
+    sources: [
+      { title: 'Glitches in Ocarina of Time', publisher: 'Zelda Wiki', url: 'https://zelda.fandom.com/wiki/Glitches_in_Ocarina_of_Time' },
+      { title: 'Speedrunners Shatter Ocarina of Time World Record By Warping Into The Credits', publisher: 'Kotaku', url: 'https://kotaku.com/speedrunners-shatter-ocarina-of-time-world-record-by-wa-1841045682' },
+    ],
     title: 'Wrong Warp — Child Link to Credits',
     game: 'The Legend of Zelda: Ocarina of Time',
     platform: 'Nintendo 64',
@@ -90,6 +102,10 @@ module.exports = [
   },
   {
     id: 'super-metroid-mockball',
+    sources: [
+      { title: 'Mockball', publisher: 'Super Metroid Speedrunning Wiki', url: 'https://wiki.supermetroid.run/Mockball' },
+      { title: 'Early Super Missiles', publisher: 'Wikitroid', url: 'https://metroid.fandom.com/wiki/Early_Super_Missiles' },
+    ],
     title: 'Mockball and Wall-Jump Sequence Breaks',
     game: 'Super Metroid',
     platform: 'SNES',
@@ -148,6 +164,10 @@ module.exports = [
   },
   {
     id: 'mega-man-2-pause-glitch',
+    sources: [
+      { title: 'Glitches', publisher: 'Mega Man Knowledge Base', url: 'https://megaman.fandom.com/wiki/Glitches' },
+      { title: 'Mega Man 2', publisher: 'Video Game Glitches Wiki', url: 'https://glitches.fandom.com/wiki/Mega_Man_2' },
+    ],
     title: 'Pause Glitch (Damage Cancellation)',
     game: 'Mega Man 2',
     platform: 'NES',
@@ -177,6 +197,9 @@ module.exports = [
   },
   {
     id: 'goldeneye-flag-body',
+    sources: [
+      { title: 'GoldenEye speedrunning', publisher: 'James Bond Wiki', url: 'https://jamesbond.fandom.com/wiki/GoldenEye_speedrunning' },
+    ],
     title: 'Body Flagging Skip',
     game: 'GoldenEye 007',
     platform: 'Nintendo 64',
@@ -264,6 +287,10 @@ module.exports = [
   },
   {
     id: 'quake-trick-jumping',
+    sources: [
+      { title: 'Rocket jumping', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Rocket_jumping' },
+      { title: 'Bunnyhop', publisher: 'QuakeWorld Wiki', url: 'https://www.quakeworld.nu/wiki/Bunnyhop' },
+    ],
     title: 'Trick Jumping (Bunny Hopping and Rocket Jumping)',
     game: 'Quake',
     platform: 'PC',
@@ -293,6 +320,10 @@ module.exports = [
   },
   {
     id: 'doom-sr50',
+    sources: [
+      { title: 'Straferunning', publisher: 'The Doom Wiki', url: 'https://doomwiki.org/wiki/Straferunning' },
+      { title: 'SR-50 automation', publisher: 'The Doom Wiki', url: 'https://doomwiki.org/wiki/SR-50_automation' },
+    ],
     title: 'SR50 Strafing',
     game: 'Doom',
     platform: 'PC',
@@ -322,6 +353,10 @@ module.exports = [
   },
   {
     id: 'half-life-bunny-hop',
+    sources: [
+      { title: 'Bunnyhopping', publisher: 'SourceRuns Wiki', url: 'https://wiki.sourceruns.org/wiki/Bunnyhopping' },
+      { title: 'Bunny Hopping', publisher: 'Quake Wiki', url: 'https://quake.fandom.com/wiki/Bunny_Hopping' },
+    ],
     title: 'Bunny Hopping and Accelerated Back Hop',
     game: 'Half-Life',
     platform: 'PC',

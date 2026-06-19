@@ -3,6 +3,10 @@
 module.exports = [
   {
     id: 'smb-minus-world',
+    sources: [
+      { title: 'Minus World', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Minus_World' },
+      { title: 'Minus World', publisher: 'Super Mario Wiki', url: 'https://www.mariowiki.com/Minus_World' },
+    ],
     title: 'World −1: The Minus World',
     game: 'Super Mario Bros.',
     platform: 'NES',
@@ -30,6 +34,10 @@ module.exports = [
   },
   {
     id: 'pokemon-rby-hall-of-fame-corruption',
+    sources: [
+      { title: 'MissingNo.', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/MissingNo.' },
+      { title: 'MissingNo.', publisher: 'Bulbapedia', url: 'https://bulbapedia.bulbagarden.net/wiki/MissingNo.' },
+    ],
     title: 'Hall of Fame Data Corruption',
     game: 'Pokémon Red / Blue',
     platform: 'Game Boy',
@@ -57,6 +65,10 @@ module.exports = [
   },
   {
     id: 'ff6-sketch-glitch',
+    sources: [
+      { title: 'Sketch bug', publisher: 'Final Fantasy Wiki', url: 'https://finalfantasy.fandom.com/wiki/Sketch_bug' },
+      { title: 'Bugs: Final Fantasy VI', publisher: 'The Cutting Room Floor', url: 'https://tcrf.net/Bugs:Final_Fantasy_VI' },
+    ],
     title: 'The Sketch Glitch — Save Corruption and Chaos',
     game: 'Final Fantasy VI',
     platform: 'SNES',
@@ -84,6 +96,9 @@ module.exports = [
   },
   {
     id: 'mortal-kombat-blood-esrb',
+    sources: [
+      { title: 'Controversies surrounding Mortal Kombat', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Controversies_surrounding_Mortal_Kombat' },
+    ],
     title: 'The Blood Bug That Created the ESRB',
     game: 'Mortal Kombat',
     platform: 'Sega Genesis',
@@ -111,6 +126,10 @@ module.exports = [
   },
   {
     id: 'sonic-debug-mode-cultural',
+    sources: [
+      { title: 'Debug Mode', publisher: 'Sonic Wiki Zone', url: 'https://sonic.fandom.com/wiki/Debug_Mode' },
+      { title: 'Sonic the Hedgehog (1991 video game)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_(1991_video_game)' },
+    ],
     title: 'Debug Mode Left in Retail — Sonic\'s Open Back Door',
     game: 'Sonic the Hedgehog',
     platform: 'Sega Genesis',
@@ -165,6 +184,9 @@ module.exports = [
   },
   {
     id: 'mk-secret-character-blood-bug',
+    sources: [
+      { title: 'Controversies surrounding Mortal Kombat', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Controversies_surrounding_Mortal_Kombat' },
+    ],
     title: 'The Secret Character Bug That Started the Ratings War',
     game: 'Mortal Kombat',
     platform: 'Arcade',
@@ -246,6 +268,10 @@ module.exports = [
   },
   {
     id: 'goldeneye-invincibility-glitch',
+    sources: [
+      { title: 'GoldenEye 007 — Glitch FAQ', publisher: 'GameFAQs', url: 'https://gamefaqs.gamespot.com/n64/197462-goldeneye-007/faqs/9961' },
+      { title: 'GoldenEye speedrunning', publisher: 'James Bond Wiki', url: 'https://jamesbond.fandom.com/wiki/GoldenEye_speedrunning' },
+    ],
     title: 'The Invincibility Glitch — Breaking GoldenEye\'s Body Armour',
     game: 'GoldenEye 007',
     platform: 'Nintendo 64',
@@ -273,6 +299,10 @@ module.exports = [
   },
   {
     id: 'ff6-sketch-cultural',
+    sources: [
+      { title: 'MissingNo.', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/MissingNo.' },
+      { title: 'MissingNo.', publisher: 'Bulbapedia', url: 'https://bulbapedia.bulbagarden.net/wiki/MissingNo.' },
+    ],
     title: 'MissingNo — The Glitch Pokémon That Became a Franchise Icon',
     game: 'Pokémon Red / Blue',
     platform: 'Game Boy',

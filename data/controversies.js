@@ -3,6 +3,9 @@
 module.exports = [
   {
     id: 'congressional-hearings-1993',
+    sources: [
+      { title: '1993–1994 United States Senate hearings on video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1993_United_States_Senate_hearings_on_video_games' },
+    ],
     title: '1993 Congressional Hearings on Video Game Violence',
     year: 1993,
     era: '1990s',
@@ -34,6 +37,10 @@ module.exports = [
   },
   {
     id: 'atari-et-burial',
+    sources: [
+      { title: 'Atari video game burial', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Atari_video_game_burial' },
+      { title: 'From landfill to Smithsonian: E.T. the Extra-Terrestrial Atari 2600 game', publisher: 'National Museum of American History', url: 'https://americanhistory.si.edu/explore/stories/landfill-smithsonian-collections-et-extra-terrestrial-atari-2600-game' },
+    ],
     title: 'The Atari E.T. Landfill',
     year: 1983,
     era: '1980s',
@@ -65,6 +72,10 @@ module.exports = [
   },
   {
     id: 'doom-moral-panic',
+    sources: [
+      { title: '1993–1994 United States Senate hearings on video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1993_United_States_Senate_hearings_on_video_games' },
+      { title: 'DOOMed to be Controversial Forever', publisher: 'The Escapist', url: 'https://www.escapistmagazine.com/doomed-to-be-controversial-forever/' },
+    ],
     title: 'Doom and the Moral Panic Over Violent Games',
     year: 1993,
     era: '1990s',
@@ -96,6 +107,9 @@ module.exports = [
   },
   {
     id: 'hot-coffee',
+    sources: [
+      { title: 'Hot Coffee (minigame)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Hot_Coffee_(minigame)' },
+    ],
     title: 'GTA San Andreas Hot Coffee Scandal',
     year: 2005,
     era: '2000s',
@@ -127,6 +141,10 @@ module.exports = [
   },
   {
     id: 'lara-croft-sexualisation',
+    sources: [
+      { title: 'Lara Croft and Gaming: Feminism in a Hyper-Masculine Industry', publisher: 'PIT Journal (UNC)', url: 'https://pitjournal.unc.edu/2023/01/06/lara-croft-and-gaming-feminism-in-a-hyper-masculine-industry/' },
+      { title: 'A feminist icon or a male fantasy? Tomb Raider\'s representation of Lara Croft', publisher: 'Queen Mary History Journal', url: 'https://qmhistoryjournal.wixsite.com/qmhj/post/a-feminist-icon-or-a-male-fantasy-tomb-raider-s-representation-of-lara-croft-in-popular-culture' },
+    ],
     title: 'Lara Croft and the Sexualisation Debate',
     year: 1996,
     era: '1990s',
@@ -158,6 +176,9 @@ module.exports = [
   },
   {
     id: 'custers-revenge',
+    sources: [
+      { title: 'Custer\'s Revenge', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Custer%27s_Revenge' },
+    ],
     title: "Custer's Revenge",
     year: 1982,
     era: '1980s',
@@ -189,6 +210,9 @@ module.exports = [
   },
   {
     id: 'pokemon-epilepsy-1997',
+    sources: [
+      { title: 'Dennō Senshi Porygon', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Denn%C5%8D_Senshi_Porygon' },
+    ],
     title: 'The Pokémon Seizure Incident',
     year: 1997,
     era: '1990s',
@@ -220,6 +244,9 @@ module.exports = [
   },
   {
     id: 'seaman-dreamcast-controversy',
+    sources: [
+      { title: 'Seaman (video game)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Seaman_(video_game)' },
+    ],
     title: "Seaman and the Dreamcast Microphone Controversy",
     year: 1999,
     era: '1990s',
@@ -251,6 +278,9 @@ module.exports = [
   },
   {
     id: 'video-game-crash-1983',
+    sources: [
+      { title: 'Video game crash of 1983', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Video_game_crash_of_1983' },
+    ],
     title: 'The 1983 North American Video Game Crash',
     year: 1983,
     era: '1980s',
@@ -282,6 +312,9 @@ module.exports = [
   },
   {
     id: 'blizzard-hong-kong-2019',
+    sources: [
+      { title: 'Blitzchung controversy', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Blitzchung_controversy' },
+    ],
     title: 'Blizzard Entertainment and the Hong Kong Controversy',
     year: 2019,
     era: '2010s',
@@ -313,6 +346,10 @@ module.exports = [
   },
   {
     id: 'night-trap-senate-hearings',
+    sources: [
+      { title: 'Night Trap', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Night_Trap' },
+      { title: '1993–1994 United States Senate hearings on video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1993_United_States_Senate_hearings_on_video_games' },
+    ],
     title: 'Night Trap and the Senate Hearings',
     year: 1993,
     era: '1990s',
@@ -344,6 +381,10 @@ module.exports = [
   },
   {
     id: 'acclaim-marketing-controversies',
+    sources: [
+      { title: 'BMX XXX', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/BMX_XXX' },
+      { title: 'Shadow Man: How a Morbid Video Game Ad Campaign Tried to Profit on the Dead', publisher: 'CBR', url: 'https://www.cbr.com/shadow-man-2-morbid-campaign/' },
+    ],
     title: "Acclaim Entertainment's Boundary-Pushing Marketing",
     year: 1999,
     era: '1990s',
