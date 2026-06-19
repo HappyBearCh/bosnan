@@ -355,4 +355,58 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'big-rigs-broken-release',
+    title: 'Big Rigs: Over the Road Racing — Shipped Without a Game',
+    game: 'Big Rigs: Over the Road Racing',
+    platform: 'PC',
+    year: 2003,
+    era: 'Early 2000s',
+    impact: 'Became a benchmark for the most broken commercial game ever released',
+    description: 'Big Rigs was released in a state so unfinished that it had no collision detection, an opponent truck that never moved, and infinite acceleration in reverse. Crossing the finish line displayed the grammatically mangled "YOU\'RE WINNER" — and the game became the definitive example of a product shipped before it was a game at all.',
+    longDescription: 'Marketed as a truck-racing game, Big Rigs: Over the Road Racing arrived in 2003 missing nearly everything that would make it function. There was no collision detection with the environment, so trucks could drive straight through buildings, hills, and barriers. The rival trucks did not move at all, sitting motionless on the start line, which meant the player won every race by default. Reversing accelerated the truck to absurd, ever-increasing speeds with no limit, and driving up certain slopes was impossible because the physics fought the player. Crossing the finish line produced a victory screen reading "YOU\'RE WINNER" over a trophy — a typo that became the game\'s epitaph.\n\nThe release was widely understood to be an unfinished build pushed out for sale, and reviewers treated it as a phenomenon rather than a game, with several outlets giving it the lowest scores they had ever awarded. Rather than fading away, Big Rigs became a celebrated artefact of how badly a commercial product can be broken, studied and replayed precisely because it fails at every level a racing game is supposed to succeed. It endures as a cultural shorthand for software shipped in a state no amount of bug-fixing could salvage.',
+    keyFacts: [
+      'No collision detection — trucks pass through buildings and terrain',
+      'Opponent trucks never move, so the player wins every race automatically',
+      'Reversing accelerates to infinite speed with no upper limit',
+      'The victory screen reads "YOU\'RE WINNER," now its most quoted feature',
+    ],
+    sections: [
+      {
+        title: 'A Game Missing Its Core Systems',
+        html: '<p>What sets Big Rigs apart from merely buggy games is that the failures are not edge cases — they are the foundational systems. Collision detection, opponent AI, and physics limits are the bones of a racing game, and all three were effectively absent. The result is less a game with bugs than a tech demo released as a finished product, where the basic loop of "race an opponent to the finish" cannot meaningfully take place.</p><p>The infinite reverse speed is the most demonstrative flaw: with no cap on acceleration, holding reverse sends the truck backward faster and faster until the numbers become meaningless, breaking even the illusion of a simulated vehicle. Each individual problem would be serious; together they describe software that was never brought to a playable state.</p>',
+      },
+      {
+        title: 'Why It Became Famous',
+        html: '<p>Big Rigs earned lasting infamy not despite its brokenness but because of it. Outlets reviewing it reached for their lowest possible scores, and players shared its failures as entertainment, turning "YOU\'RE WINNER" into a meme that long outlived the game\'s commercial life. It became the reference point invoked whenever a notably unfinished game is released.</p><p>Its legacy is partly a cautionary tale about products rushed to retail without basic quality control, and partly an affectionate cult curiosity. As a documented case, Big Rigs marks the far end of the spectrum of broken releases — the example against which all other "is this even a game?" disasters are measured.</p>',
+      },
+    ],
+  },
+  {
+    id: 'superman-64-broken-release',
+    title: 'Superman 64 — Trapped in the Fog',
+    game: 'Superman: The New Superman Adventures',
+    platform: 'Nintendo 64',
+    year: 1999,
+    era: 'Late 1990s',
+    impact: 'Routinely cited among the worst games ever made',
+    description: 'Superman 64 buried its hero in a thick fog and forced players through repetitive "fly through the rings" challenges hampered by broken controls, unreliable collision, and a punishing timer. It became one of the most notorious examples of a licensed game ruined by technical failure.',
+    longDescription: 'Released for the Nintendo 64 in 1999, the Superman game commonly known as Superman 64 set players loose in a Metropolis smothered by dense fog. The fog was widely understood to be a workaround for the hardware struggling to render the city, and it reduced visibility so severely that flying — the core fantasy of playing Superman — became a chore of squinting through haze. Much of the game consisted of flying through floating rings against a strict time limit, an objective justified by a thin story about Lex Luthor trapping Superman in a virtual reality, repeated to the point of tedium.\n\nThe execution compounded the dull premise. Controls were imprecise, collision detection with the rings and environment was unreliable, and the timer left little room for the mistakes the loose handling encouraged. Bugs and design failures reinforced each other, producing a frustrating experience that critics savaged on release and that has been a fixture of "worst games of all time" lists ever since. Superman 64 became shorthand for how a beloved licence and capable hardware can still yield a broken, joyless game when the underlying technology and design fall short.',
+    keyFacts: [
+      'Dense fog, widely seen as a rendering workaround, crippled visibility',
+      'Gameplay centred on repetitive timed "fly through the rings" tasks',
+      'Loose controls and unreliable collision made the timed tasks punishing',
+      'Routinely ranked among the worst video games ever made',
+    ],
+    sections: [
+      {
+        title: 'The Fog and the Rings',
+        html: '<p>The defining image of Superman 64 is the fog. Believed to be a means of limiting how much of Metropolis the Nintendo 64 had to draw at once, it left the city as a grey haze that the player flies through with little sense of place or speed. For a game whose appeal is soaring over a vibrant city as Superman, obscuring that city undercut the entire premise.</p><p>Layered on top was the ring-flying objective: steer Superman through a sequence of floating hoops before a timer expires. On its own a forgettable mechanic, it became the backbone of the game and was repeated relentlessly. Combined with imprecise flight controls and collision that often failed to register a clean pass through a ring, the central activity was as frustrating as it was monotonous.</p>',
+      },
+      {
+        title: 'A Licence Squandered',
+        html: '<p>Superman 64 is frequently held up as proof that a strong licence guarantees nothing. The character and the platform were both capable of supporting a good game, but technical limitations and uninspired design produced the opposite. Reviewers at the time were scathing, and the game has remained a permanent entry on worst-ever lists in the decades since.</p><p>Its notoriety made it a kind of negative landmark: a reference invoked whenever a high-profile licensed game disappoints. The game\'s failures — the fog, the rings, the controls — are specific enough to remember and broad enough to symbolise a whole category of squandered potential, which is why Superman 64 endures in gaming memory long after better games of its era were forgotten.</p>',
+      },
+    ],
+  },
 ];
