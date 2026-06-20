@@ -3,6 +3,9 @@
 module.exports = [
   {
     id: 'capcom-cps1',
+    sources: [
+      { title: 'CP System', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/CP_System' },
+    ],
     name: 'Capcom CPS-1',
     manufacturer: 'Capcom',
     year: 1988,
@@ -30,6 +33,9 @@ module.exports = [
   },
   {
     id: 'capcom-cps2',
+    sources: [
+      { title: 'CP System II', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/CP_System_II' },
+    ],
     name: 'Capcom CPS-2',
     manufacturer: 'Capcom',
     year: 1993,
@@ -57,6 +63,10 @@ module.exports = [
   },
   {
     id: 'sega-system-16',
+    sources: [
+      { title: 'List of Sega arcade system boards', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/List_of_Sega_arcade_system_boards' },
+      { title: 'Sega System 16', publisher: 'Sega Wiki', url: 'https://sega.fandom.com/wiki/Sega_System_16' },
+    ],
     name: 'Sega System 16',
     manufacturer: 'Sega',
     year: 1985,
@@ -84,6 +94,10 @@ module.exports = [
   },
   {
     id: 'taito-f2',
+    sources: [
+      { title: 'Taito F2 System Hardware', publisher: 'System 16 — The Arcade Museum', url: 'https://www.system16.com/hardware.php?id=661' },
+      { title: 'Taito F2 System (1989)', publisher: 'Arcade History', url: 'https://www.arcade-history.com/?n=taito-f2-system&page=detail&id=82939' },
+    ],
     name: 'Taito F2 System',
     manufacturer: 'Taito',
     year: 1988,
@@ -110,6 +124,9 @@ module.exports = [
   },
   {
     id: 'namco-system-86',
+    sources: [
+      { title: 'Namco System 86 Hardware', publisher: 'System 16 — The Arcade Museum', url: 'https://www.system16.com/hardware.php?id=522' },
+    ],
     name: 'Namco System 86',
     manufacturer: 'Namco',
     year: 1986,
@@ -133,6 +150,9 @@ module.exports = [
   },
   {
     id: 'irem-m92',
+    sources: [
+      { title: 'Irem M92 Hardware', publisher: 'System 16 — The Arcade Museum', url: 'https://www.system16.com/hardware.php?id=747' },
+    ],
     name: 'Irem M92',
     manufacturer: 'Irem',
     year: 1991,
@@ -159,6 +179,10 @@ module.exports = [
   },
   {
     id: 'konami-gx',
+    sources: [
+      { title: 'Konami GX', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Konami_GX' },
+      { title: 'Konami GX Hardware', publisher: 'System 16 — The Arcade Museum', url: 'https://www.system16.com/hardware.php?id=574' },
+    ],
     name: 'Konami GX (System GX)',
     manufacturer: 'Konami',
     year: 1994,
@@ -184,6 +208,9 @@ module.exports = [
   },
   {
     id: 'data-east-deco',
+    sources: [
+      { title: 'Data East Museum (arcade hardware)', publisher: 'System 16 — The Arcade Museum', url: 'https://www.system16.com/museum.php?id=14' },
+    ],
     name: 'Data East DECO System',
     manufacturer: 'Data East',
     year: 1987,
@@ -211,6 +238,10 @@ module.exports = [
   },
   {
     id: 'sega-x-board',
+    sources: [
+      { title: 'Sega X Board Hardware', publisher: 'System 16 — The Arcade Museum', url: 'https://www.system16.com/hardware.php?id=698' },
+      { title: 'List of Sega arcade system boards', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/List_of_Sega_arcade_system_boards' },
+    ],
     name: 'Sega X Board',
     manufacturer: 'Sega',
     year: 1987,
@@ -235,6 +266,9 @@ module.exports = [
   },
   {
     id: 'snk-neo-geo-mvs',
+    sources: [
+      { title: 'Neo Geo', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Neo_Geo' },
+    ],
     name: 'SNK Neo Geo MVS',
     manufacturer: 'SNK',
     year: 1990,

@@ -525,6 +525,9 @@ module.exports = [
   },
   {
     id: 'corrupted-blood-wow',
+    sources: [
+      { title: 'Corrupted Blood incident', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Corrupted_Blood_incident' },
+    ],
     title: 'The Corrupted Blood Incident',
     game: 'World of Warcraft',
     platform: 'PC',
@@ -553,6 +556,10 @@ module.exports = [
   },
   {
     id: 'vanish-doom-ff6',
+    sources: [
+      { title: 'Vanish-Doom bug', publisher: 'Final Fantasy Wiki', url: 'https://finalfantasy.fandom.com/wiki/Vanish-Doom_bug' },
+      { title: 'Final Fantasy VI — Bugs and Glitches', publisher: 'StrategyWiki', url: 'https://strategywiki.org/wiki/Final_Fantasy_VI/Bugs_and_Glitches' },
+    ],
     title: 'Vanish–Doom',
     game: 'Final Fantasy VI',
     platform: 'SNES',
@@ -581,6 +588,10 @@ module.exports = [
   },
   {
     id: 'halo-2-button-combos',
+    sources: [
+      { title: 'BXR', publisher: 'Halopedia', url: 'https://www.halopedia.org/BXR' },
+      { title: 'Button combo', publisher: 'Halopedia', url: 'https://www.halopedia.org/Button_combo' },
+    ],
     title: 'Button Combos (BXR and the Double-Shot)',
     game: 'Halo 2',
     platform: 'Xbox',
@@ -609,6 +620,10 @@ module.exports = [
   },
   {
     id: 'metroid-secret-worlds',
+    sources: [
+      { title: 'Hidden World', publisher: 'Wikitroid', url: 'https://metroid.fandom.com/wiki/Hidden_World' },
+      { title: 'Secret World', publisher: 'Metroid Wiki', url: 'https://www.metroidwiki.org/wiki/Secret_World' },
+    ],
     title: 'Secret Worlds',
     game: 'Metroid',
     platform: 'NES',

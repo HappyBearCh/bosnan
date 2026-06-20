@@ -299,6 +299,9 @@ module.exports = [
   },
   {
     id: 'metal-gear-solid-psycho-mantis',
+    sources: [
+      { title: 'Psycho Mantis', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Psycho_Mantis' },
+    ],
     title: 'Psycho Mantis Reads Your Mind',
     game: 'Metal Gear Solid',
     platform: 'PlayStation',
@@ -316,6 +319,10 @@ module.exports = [
   },
   {
     id: 'diablo-2-secret-cow-level',
+    sources: [
+      { title: 'Cow level', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Cow_level' },
+      { title: 'The Secret Cow Level', publisher: 'Diablo Wiki', url: 'https://diablo.fandom.com/wiki/The_Secret_Cow_Level' },
+    ],
     title: 'The Secret Cow Level',
     game: 'Diablo II',
     platform: 'PC',
@@ -333,6 +340,10 @@ module.exports = [
   },
   {
     id: 'wolfenstein-3d-pac-man-level',
+    sources: [
+      { title: 'PacMan 3D (Episode 3, Floor 10)', publisher: 'Wolfenstein 3D Wiki', url: 'https://wl6.fandom.com/wiki/PacMan_3D' },
+      { title: 'Episode 3/Floor 10', publisher: 'Wolfenstein Wiki', url: 'https://wolfenstein.fandom.com/wiki/Episode_3/Floor_10' },
+    ],
     title: 'The Pac-Man Secret Level',
     game: 'Wolfenstein 3D',
     platform: 'PC',

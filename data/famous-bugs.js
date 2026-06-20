@@ -357,6 +357,9 @@ module.exports = [
   },
   {
     id: 'big-rigs-broken-release',
+    sources: [
+      { title: 'Big Rigs: Over the Road Racing', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Big_Rigs:_Over_the_Road_Racing' },
+    ],
     title: 'Big Rigs: Over the Road Racing — Shipped Without a Game',
     game: 'Big Rigs: Over the Road Racing',
     platform: 'PC',
@@ -384,6 +387,9 @@ module.exports = [
   },
   {
     id: 'superman-64-broken-release',
+    sources: [
+      { title: 'Superman 64', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Superman_64' },
+    ],
     title: 'Superman 64 — Trapped in the Fog',
     game: 'Superman: The New Superman Adventures',
     platform: 'Nintendo 64',
