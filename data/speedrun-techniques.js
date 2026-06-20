@@ -135,6 +135,10 @@ module.exports = [
   },
   {
     id: 'sotn-save-corruption',
+    sources: [
+      { title: 'Symphony of the Night: Glitches', publisher: 'Castlevania Speedrunning Wiki', url: 'https://castlevaniaspeedruns.com/Castlevania:_Symphony_of_the_Night:Glitches' },
+      { title: 'SOTN/Techniques', publisher: 'Castlevania Speedrunning Wiki', url: 'https://castlevaniaspeedruns.com/SOTN/Techniques' },
+    ],
     title: 'Save Corruption Wrong Warp',
     game: 'Castlevania: Symphony of the Night',
     platform: 'PlayStation',
@@ -229,6 +233,10 @@ module.exports = [
   },
   {
     id: 'smb1-warp-zones',
+    sources: [
+      { title: 'Warp Zone', publisher: 'Mario Wiki (Fandom)', url: 'https://mario.fandom.com/wiki/Warp_Zone' },
+      { title: 'Super Mario Bros. speedrunning', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Super_Mario_Bros._speedrunning' },
+    ],
     title: 'Warp Zones — Intentional Design Exploited as Skips',
     game: 'Super Mario Bros.',
     platform: 'NES',
@@ -258,6 +266,10 @@ module.exports = [
   },
   {
     id: 'pokemon-rby-trainer-fly',
+    sources: [
+      { title: 'Pokémon Red/Blue/151 Pokémon (speedrun route)', publisher: 'Pokemon Speedruns Wiki', url: 'http://wiki.pokemonspeedruns.com/index.php/Pok%C3%A9mon_Red/Blue/151_Pok%C3%A9mon' },
+      { title: 'Mew glitch', publisher: 'StrategyWiki', url: 'https://strategywiki.org/wiki/Pok%C3%A9mon_Red_and_Blue/Mew_glitch' },
+    ],
     title: 'Trainer-Fly Glitch (Catch Any Pokémon)',
     game: 'Pokémon Red / Blue',
     platform: 'Game Boy',

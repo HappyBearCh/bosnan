@@ -157,6 +157,10 @@ module.exports = [
   },
   {
     id: 'diablo-butcher-door',
+    sources: [
+      { title: 'The Butcher (Diablo I)', publisher: 'Diablo Wiki', url: 'https://diablo.fandom.com/wiki/The_Butcher_(Diablo_I)' },
+      { title: 'Diablo 1 Guide: The Butcher', publisher: 'PureDiablo', url: 'https://www.purediablo.com/strategy/diablo-1-guide-the-butcher' },
+    ],
     title: 'The Butcher\'s Door — Deliberately Shipped Terror',
     game: 'Diablo',
     platform: 'PC',
@@ -214,6 +218,10 @@ module.exports = [
   },
   {
     id: 'starcraft-map-hack-esports',
+    sources: [
+      { title: 'Hacks', publisher: 'Liquipedia StarCraft Brood War Wiki', url: 'https://liquipedia.net/starcraft/Hacks' },
+      { title: 'Match Fixing Scandal', publisher: 'Liquipedia StarCraft Brood War Wiki', url: 'https://liquipedia.net/starcraft/Match_Fixing_Scandal' },
+    ],
     title: 'Map Hack and the Integrity Crisis of Korean StarCraft',
     game: 'StarCraft: Brood War',
     platform: 'PC',
@@ -241,6 +249,10 @@ module.exports = [
   },
   {
     id: 'everquest-train-exploit',
+    sources: [
+      { title: 'Aggro', publisher: 'Project 1999 Wiki', url: 'https://wiki.project1999.com/Aggro' },
+      { title: 'Aggro', publisher: "Fanra's EverQuest Wiki", url: 'https://everquest.fanra.info/wiki/Aggro' },
+    ],
     title: 'Trains and Zone Griefing — EverQuest\'s Emergent Social Crisis',
     game: 'EverQuest',
     platform: 'PC',
@@ -330,6 +342,10 @@ module.exports = [
   },
   {
     id: 'quake-quakeworld-desync',
+    sources: [
+      { title: 'QuakeWorld by John Carmack (.plan, August 1996)', publisher: 'fabiensanglard.net', url: 'https://fabiensanglard.net/quakeSource/johnc-log.aug.htm' },
+      { title: 'Client-side prediction', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Client-side_prediction' },
+    ],
     title: 'QuakeWorld Prediction Desync — The Bug That Built Online Gaming',
     game: 'Quake / QuakeWorld',
     platform: 'PC',

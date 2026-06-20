@@ -206,6 +206,10 @@ module.exports = [
   },
   {
     id: 'death-warp-zelda',
+    sources: [
+      { title: 'Screen Scroll (Glitch)', publisher: 'Zelda Dungeon Wiki', url: 'https://www.zeldadungeon.net/wiki/Screen_Scroll_(Glitch)' },
+      { title: 'The Legend of Zelda glitch warps straight to the ending in three minutes', publisher: 'Digital Trends', url: 'https://www.digitaltrends.com/gaming/legend-of-zelda-glitch-warps-straight-to-the-ending/' },
+    ],
     title: 'Death Warp',
     game: 'The Legend of Zelda',
     platform: 'NES',
@@ -266,6 +270,10 @@ module.exports = [
   },
   {
     id: 'infinite-combo-sf2',
+    sources: [
+      { title: "Street Fighter II designer opens up about the cancelling 'bug'", publisher: 'Game Developer', url: 'https://www.gamedeveloper.com/business/-i-street-fighter-ii-i-designer-opens-up-about-the-cancelling-bug-' },
+      { title: 'How A Bug In Street Fighter II Led To The Birth Of Fighting Game Combos', publisher: 'ScreenRant', url: 'https://screenrant.com/street-fighter-2-bug-best-combos-fighting-games/' },
+    ],
     title: 'Infinite Combo Loops',
     game: 'Street Fighter II: Hyper Fighting',
     platform: 'Arcade',
@@ -357,6 +365,10 @@ module.exports = [
   },
   {
     id: 'soul-reaver-teleport',
+    sources: [
+      { title: 'Shifting', publisher: 'Legacy of Kain Wiki', url: 'https://legacyofkain.fandom.com/wiki/Shifting' },
+      { title: 'Planar portals', publisher: 'Legacy of Kain Wiki', url: 'https://legacyofkain.fandom.com/wiki/Planar_portals' },
+    ],
     title: 'Spectral Realm Teleport Glitch',
     game: 'Legacy of Kain: Soul Reaver',
     platform: 'PlayStation',
@@ -385,6 +397,10 @@ module.exports = [
   },
   {
     id: 'credits-warp-smw',
+    sources: [
+      { title: 'SethBling', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/SethBling' },
+      { title: 'People Can Now Beat Super Mario World In Less Than A Minute', publisher: 'Kotaku', url: 'https://kotaku.com/people-can-now-beat-super-mario-world-in-less-than-a-mi-1822666925' },
+    ],
     title: 'Credits Warp (Arbitrary Code Execution)',
     game: 'Super Mario World',
     platform: 'SNES',
@@ -413,6 +429,10 @@ module.exports = [
   },
   {
     id: 'donkey-kong-kill-screen',
+    sources: [
+      { title: 'Kill screen', publisher: 'Simple English Wikipedia', url: 'https://simple.wikipedia.org/wiki/Kill_screen' },
+      { title: "How High Can You Get? The Fix for Donkey Kong's Kill Screen", publisher: 'DonHodges.com', url: 'http://donhodges.com/how_high_can_you_get.htm' },
+    ],
     title: 'The Kill Screen (Level 22)',
     game: 'Donkey Kong',
     platform: 'Arcade',
@@ -441,6 +461,10 @@ module.exports = [
   },
   {
     id: 'glitch-city-pokemon',
+    sources: [
+      { title: 'Glitch City', publisher: 'Bulbapedia', url: 'https://bulbapedia.bulbagarden.net/wiki/Glitch_City' },
+      { title: 'Safari Zone exit glitch', publisher: 'Glitch City Wiki', url: 'https://glitchcity.wiki/wiki/Safari_Zone_exit_glitch' },
+    ],
     title: 'Glitch City',
     game: 'Pokémon Red / Blue',
     platform: 'Game Boy',
@@ -469,6 +493,10 @@ module.exports = [
   },
   {
     id: 'nes-tetris-kill-screen',
+    sources: [
+      { title: 'Tetris was finally beaten after 34 years (kill screen at Level 157)', publisher: "Tom's Hardware", url: 'https://www.tomshardware.com/video-games/retro-gaming/tetris-was-finally-beaten-after-34-years-game-kill-screen-pops-up-at-level-157-hypertapping-and-rolling-were-key-techniques' },
+      { title: 'First player to reach the killscreen in Tetris (NES)', publisher: 'Guinness World Records', url: 'https://www.guinnessworldrecords.com/world-records/764734-first-player-to-reach-the-killscreen-in-tetris-nes' },
+    ],
     title: 'The Speed Wall and the Crash',
     game: 'Tetris (NES)',
     platform: 'NES',
@@ -497,6 +525,10 @@ module.exports = [
   },
   {
     id: 'diablo-2-item-dupe',
+    sources: [
+      { title: 'Blizzard vs. Hacked Items', publisher: 'Diablo Wiki (diablowiki.net)', url: 'https://diablo2.diablowiki.net/Blizzard_vs._Hacked_Items' },
+      { title: 'Stone of Jordan', publisher: 'Diablo Wiki (diablowiki.net)', url: 'https://diablo2.diablowiki.net/Stone_of_Jordan' },
+    ],
     title: 'Item Duplication',
     game: 'Diablo II',
     platform: 'PC',

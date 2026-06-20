@@ -143,6 +143,10 @@ module.exports = [
   },
   {
     id: 'mortal-kombat-nudalities',
+    sources: [
+      { title: 'Fatality (Mortal Kombat)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Fatality_(Mortal_Kombat)' },
+      { title: 'Mortal Kombat series', publisher: 'Video Game Lies Wiki', url: 'https://videogamelies.fandom.com/wiki/Mortal_Kombat_series' },
+    ],
     title: 'Nudalities — Mortal Kombat\'s Secret Finishing Move',
     era: '1990s',
     verdict: 'Confirmed False',
@@ -223,6 +227,10 @@ module.exports = [
   },
   {
     id: 'pokemon-creepypasta',
+    sources: [
+      { title: 'Lavender Town', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Lavender_Town' },
+      { title: 'Pokémon: The Terrifying History of Lavender Town', publisher: 'Den of Geek', url: 'https://www.denofgeek.com/games/pokemon-lavender-town-history-haunted-urban-legend-creepypasta-explained/' },
+    ],
     title: 'Pokemon Lost Silver — The Art of the Gaming Creepypasta',
     era: '2000s',
     verdict: 'Deliberately Created',
