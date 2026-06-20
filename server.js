@@ -5641,9 +5641,10 @@ function difficultyListPage() {
 }
 
 function difficultyDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Difficulty – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('difficulty')}<div class="platform-detail-wrapper"><a href="/difficulty" class="back-link">&#8592; All Difficulty Entries</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.difficultyType)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'difficulty', slug: 'difficulty', backLabel: 'All Difficulty Entries', suffix: 'Difficulty', name: item.title,
+    meta: `${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.difficultyType)}`,
+  });
 }
 
 function charactersListPage() {
@@ -5657,9 +5658,11 @@ function charactersListPage() {
 
 function characterDetailPage(item) {
   const abilities = (item.abilities || []).map(a => `<li>${escapeHtml(a)}</li>`).join('');
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.name)} – Characters – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('characters')}<div class="platform-detail-wrapper"><a href="/characters" class="back-link">&#8592; All Characters</a><div class="platform-detail-header"><h1>${escapeHtml(item.name)}</h1><p class="platform-detail-era">${escapeHtml(item.franchise)} &middot; ${escapeHtml(item.role)} &middot; Debut: ${item.debutYear} &middot; ${escapeHtml(item.platform)} &middot; Created by ${escapeHtml(item.creator)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${abilities ? `<div class="dev-notable"><strong>Abilities &amp; Traits:</strong><ul class="trivia-list">${abilities}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'characters', slug: 'characters', backLabel: 'All Characters', suffix: 'Characters', name: item.name,
+    meta: `${escapeHtml(item.franchise)} &middot; ${escapeHtml(item.role)} &middot; Debut: ${item.debutYear} &middot; ${escapeHtml(item.platform)} &middot; Created by ${escapeHtml(item.creator)}`,
+    extra: abilities ? `<div class="dev-notable"><strong>Abilities &amp; Traits:</strong><ul class="trivia-list">${abilities}</ul></div>` : '',
+  });
 }
 
 function coverStoriesListPage() {
@@ -5672,9 +5675,11 @@ function coverStoriesListPage() {
 }
 
 function coverStoryDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Cover Stories – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('cover-stories')}<div class="platform-detail-wrapper"><a href="/cover-stories" class="back-link">&#8592; All Cover Stories</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.magazine)} &middot; ${escapeHtml(item.issue)} &middot; ${escapeHtml(item.game)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'cover-stories', slug: 'cover-stories', backLabel: 'All Cover Stories', suffix: 'Cover Stories', name: item.title,
+    meta: `${escapeHtml(item.magazine)} &middot; ${escapeHtml(item.issue)} &middot; ${escapeHtml(item.game)}`,
+    extra: `<p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>`,
+  });
 }
 
 function controllersListPage() {
@@ -5687,9 +5692,11 @@ function controllersListPage() {
 }
 
 function controllerDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Controllers – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('controllers')}<div class="platform-detail-wrapper"><a href="/controllers" class="back-link">&#8592; All Controllers</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.manufacturer)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'controllers', slug: 'controllers', backLabel: 'All Controllers', suffix: 'Controllers', name: item.title,
+    meta: `${escapeHtml(item.manufacturer)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year}`,
+    extra: `<p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>`,
+  });
 }
 
 function disappointmentsListPage() {
@@ -5703,9 +5710,11 @@ function disappointmentsListPage() {
 
 function disappointmentDetailPage(item) {
   const failedAt = (item.failedAt || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Disappointments – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('disappointments')}<div class="platform-detail-wrapper"><a href="/disappointments" class="back-link">&#8592; All Disappointments</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.series)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; Preceded by: ${escapeHtml(item.predecessor)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${failedAt ? `<div class="dev-notable"><strong>Where It Fell Short:</strong><ul class="trivia-list">${failedAt}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'disappointments', slug: 'disappointments', backLabel: 'All Disappointments', suffix: 'Disappointments', name: item.title,
+    meta: `${escapeHtml(item.series)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; Preceded by: ${escapeHtml(item.predecessor)}`,
+    extra: failedAt ? `<div class="dev-notable"><strong>Where It Fell Short:</strong><ul class="trivia-list">${failedAt}</ul></div>` : '',
+  });
 }
 
 function levelsListPage() {
@@ -5719,9 +5728,11 @@ function levelsListPage() {
 
 function levelDetailPage(item) {
   const principles = (item.designPrinciples || []).map(p => `<li>${escapeHtml(p)}</li>`).join('');
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Levels – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('levels')}<div class="platform-detail-wrapper"><a href="/levels" class="back-link">&#8592; All Levels</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.levelName)} &middot; ${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${principles ? `<div class="dev-notable"><strong>Design Principles:</strong><ul class="trivia-list">${principles}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'levels', slug: 'levels', backLabel: 'All Levels', suffix: 'Levels', name: item.title,
+    meta: `${escapeHtml(item.levelName)} &middot; ${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year}`,
+    extra: principles ? `<div class="dev-notable"><strong>Design Principles:</strong><ul class="trivia-list">${principles}</ul></div>` : '',
+  });
 }
 
 function urbanLegendsListPage() {
@@ -5736,9 +5747,10 @@ function urbanLegendsListPage() {
 
 function urbanLegendDetailPage(item) {
   const verdictColor = v => v === 'Confirmed True' ? '#4a9' : v === 'Confirmed False' ? '#c66' : v === 'Partially True' ? '#c8a44a' : '#888';
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Urban Legends – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('urban-legends')}<div class="platform-detail-wrapper"><a href="/urban-legends" class="back-link">&#8592; All Urban Legends</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">Verdict: <strong style="color:${verdictColor(item.verdict)}">${escapeHtml(item.verdict)}</strong> &middot; ${escapeHtml(item.era)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'urban-legends', slug: 'urban-legends', backLabel: 'All Urban Legends', suffix: 'Urban Legends', name: item.title,
+    meta: `Verdict: <strong style="color:${verdictColor(item.verdict)}">${escapeHtml(item.verdict)}</strong> &middot; ${escapeHtml(item.era)}`,
+  });
 }
 
 function cancelledListPage() {
@@ -5751,9 +5763,10 @@ function cancelledListPage() {
 }
 
 function cancelledDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Cancelled – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('cancelled')}<div class="platform-detail-wrapper"><a href="/cancelled" class="back-link">&#8592; All Cancelled Games</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.developer)}${item.publisher && item.publisher !== 'Unknown' ? ' &middot; ' + escapeHtml(item.publisher) : ''} &middot; <strong>${escapeHtml(item.status)}</strong></p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'cancelled', slug: 'cancelled', backLabel: 'All Cancelled Games', suffix: 'Cancelled', name: item.title,
+    meta: `${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.developer)}${item.publisher && item.publisher !== 'Unknown' ? ' &middot; ' + escapeHtml(item.publisher) : ''} &middot; <strong>${escapeHtml(item.status)}</strong>`,
+  });
 }
 
 function localizationListPage() {
@@ -5767,9 +5780,11 @@ function localizationListPage() {
 
 function localizationDetailPage(item) {
   const changes = (item.changes || []).map(c => `<li>${escapeHtml(c)}</li>`).join('');
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Localization – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('localization')}<div class="platform-detail-wrapper"><a href="/localization" class="back-link">&#8592; All Localization Differences</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.originalRegion)} &#8594; ${escapeHtml(item.localizedRegion)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${changes ? `<div class="dev-notable"><strong>Changes Made:</strong><ul class="trivia-list">${changes}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'localization', slug: 'localization', backLabel: 'All Localization Differences', suffix: 'Localization', name: item.title,
+    meta: `${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.originalRegion)} &#8594; ${escapeHtml(item.localizedRegion)}`,
+    extra: changes ? `<div class="dev-notable"><strong>Changes Made:</strong><ul class="trivia-list">${changes}</ul></div>` : '',
+  });
 }
 
 function prototypesListPage() {
@@ -5783,9 +5798,11 @@ function prototypesListPage() {
 
 function prototypeDetailPage(item) {
   const diffs = (item.differences || []).map(d => `<li>${escapeHtml(d)}</li>`).join('');
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Prototypes – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('prototypes')}<div class="platform-detail-wrapper"><a href="/prototypes" class="back-link">&#8592; All Prototypes</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; Build: ${escapeHtml(item.buildDate)} &middot; Discovered: ${item.discoveredYear} &middot; ${escapeHtml(item.source)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${diffs ? `<div class="dev-notable"><strong>Differences from Final:</strong><ul class="trivia-list">${diffs}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'prototypes', slug: 'prototypes', backLabel: 'All Prototypes', suffix: 'Prototypes', name: item.title,
+    meta: `${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; Build: ${escapeHtml(item.buildDate)} &middot; Discovered: ${item.discoveredYear} &middot; ${escapeHtml(item.source)}`,
+    extra: diffs ? `<div class="dev-notable"><strong>Differences from Final:</strong><ul class="trivia-list">${diffs}</ul></div>` : '',
+  });
 }
 
 function strategyGuidesListPage() {
@@ -5798,9 +5815,11 @@ function strategyGuidesListPage() {
 }
 
 function strategyGuideDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Strategy Guides – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('strategy-guides')}<div class="platform-detail-wrapper"><a href="/strategy-guides" class="back-link">&#8592; All Strategy Guides</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.publisher)} &middot; ${item.year}${item.author && item.author !== 'Staff' ? ' &middot; ' + escapeHtml(item.author) : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'strategy-guides', slug: 'strategy-guides', backLabel: 'All Strategy Guides', suffix: 'Strategy Guides', name: item.title,
+    meta: `${escapeHtml(item.game)} &middot; ${escapeHtml(item.publisher)} &middot; ${item.year}${item.author && item.author !== 'Staff' ? ' &middot; ' + escapeHtml(item.author) : ''}`,
+    extra: `<p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>`,
+  });
 }
 
 function cabinetArtListPage() {
@@ -5813,9 +5832,11 @@ function cabinetArtListPage() {
 }
 
 function cabinetArtDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Cabinet Art – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('cabinet-art')}<div class="platform-detail-wrapper"><a href="/cabinet-art" class="back-link">&#8592; All Cabinet Art</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.manufacturer)} &middot; ${item.year}${item.artist && item.artist !== 'Unknown' ? ' &middot; ' + escapeHtml(item.artist) : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'cabinet-art', slug: 'cabinet-art', backLabel: 'All Cabinet Art', suffix: 'Cabinet Art', name: item.title,
+    meta: `${escapeHtml(item.game)} &middot; ${escapeHtml(item.manufacturer)} &middot; ${item.year}${item.artist && item.artist !== 'Unknown' ? ' &middot; ' + escapeHtml(item.artist) : ''}`,
+    extra: `<p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>`,
+  });
 }
 
 function merchandiseListPage() {
@@ -5828,9 +5849,11 @@ function merchandiseListPage() {
 }
 
 function merchandiseDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Merchandise – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('merchandise')}<div class="platform-detail-wrapper"><a href="/merchandise" class="back-link">&#8592; All Merchandise</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.franchise)} &middot; ${escapeHtml(item.type)} &middot; ${item.year} &middot; ${escapeHtml(item.manufacturer)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'merchandise', slug: 'merchandise', backLabel: 'All Merchandise', suffix: 'Merchandise', name: item.title,
+    meta: `${escapeHtml(item.franchise)} &middot; ${escapeHtml(item.type)} &middot; ${item.year} &middot; ${escapeHtml(item.manufacturer)}`,
+    extra: `<p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>`,
+  });
 }
 
 function bootlegsListPage() {
@@ -5843,9 +5866,11 @@ function bootlegsListPage() {
 }
 
 function bootlegDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Bootlegs – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('bootlegs')}<div class="platform-detail-wrapper"><a href="/bootlegs" class="back-link">&#8592; All Bootlegs</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.region)} &middot; ${escapeHtml(item.type)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'bootlegs', slug: 'bootlegs', backLabel: 'All Bootlegs', suffix: 'Bootlegs', name: item.title,
+    meta: `${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.region)} &middot; ${escapeHtml(item.type)}`,
+    extra: `<p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>`,
+  });
 }
 
 function competitiveListPage() {
@@ -5858,9 +5883,11 @@ function competitiveListPage() {
 }
 
 function competitiveDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Competitive – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('competitive')}<div class="platform-detail-wrapper"><a href="/competitive" class="back-link">&#8592; All Competitive Events</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${item.year} &middot; ${escapeHtml(item.game)} &middot; ${escapeHtml(item.organizer)} &middot; ${escapeHtml(item.location)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${item.winner ? `<p class="platform-detail-desc"><strong>Winner:</strong> ${escapeHtml(item.winner)}</p>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'competitive', slug: 'competitive', backLabel: 'All Competitive Events', suffix: 'Competitive', name: item.title,
+    meta: `${item.year} &middot; ${escapeHtml(item.game)} &middot; ${escapeHtml(item.organizer)} &middot; ${escapeHtml(item.location)}`,
+    extra: item.winner ? `<p class="platform-detail-desc"><strong>Winner:</strong> ${escapeHtml(item.winner)}</p>` : '',
+  });
 }
 
 function endingsListPage() {
@@ -5873,9 +5900,10 @@ function endingsListPage() {
 }
 
 function endingDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Endings – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('endings')}<div class="platform-detail-wrapper"><a href="/endings" class="back-link">&#8592; All Endings</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.type)}${item.spoilerWarning ? ' &middot; <em>Spoilers</em>' : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'endings', slug: 'endings', backLabel: 'All Endings', suffix: 'Endings', name: item.title,
+    meta: `${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.type)}${item.spoilerWarning ? ' &middot; <em>Spoilers</em>' : ''}`,
+  });
 }
 
 function notFoundPage() {
