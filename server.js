@@ -308,6 +308,17 @@ function sourcesSchema(item, src) {
   return `<script type="application/ld+json">${json}</script>`;
 }
 
+// Shared renderer for the "platform-detail" entry family — pages that share an
+// identical skeleton and differ only in nav slug, back link, title suffix, the
+// header name, the meta line, and an optional extra paragraph. o.meta and
+// o.extra are pre-built HTML (fields already escaped); o.name is raw.
+function detailPage(item, o) {
+  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
+  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
+  const name = escapeHtml(o.name);
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${name} – ${o.suffix} – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0, 160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav(o.nav)}<div class="platform-detail-wrapper"><a href="/${o.slug}" class="back-link">&#8592; ${o.backLabel}</a><div class="platform-detail-header"><h1>${name}</h1><p class="platform-detail-era">${o.meta}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${o.extra || ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+}
+
 const PLATFORMS = [
   {
     id: 'arcade', name: 'Arcade', era: '1971 – 1990s',
@@ -5418,9 +5429,10 @@ function glitchesListPage() {
 }
 
 function glitchDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Glitches – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('glitches')}<div class="platform-detail-wrapper"><a href="/glitches" class="back-link">&#8592; All Glitches</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.type)}${item.discoveredBy && item.discoveredBy !== 'Unknown' ? ' &middot; Discovered by ' + escapeHtml(item.discoveredBy) : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'glitches', slug: 'glitches', backLabel: 'All Glitches', suffix: 'Glitches', name: item.title,
+    meta: `${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.type)}${item.discoveredBy && item.discoveredBy !== 'Unknown' ? ' &middot; Discovered by ' + escapeHtml(item.discoveredBy) : ''}`,
+  });
 }
 
 function packagingListPage() {
@@ -5433,9 +5445,11 @@ function packagingListPage() {
 }
 
 function packagingDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Packaging – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('packaging')}<div class="platform-detail-wrapper"><a href="/packaging" class="back-link">&#8592; All Packaging</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${escapeHtml(item.publisher)} &middot; ${item.year}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'packaging', slug: 'packaging', backLabel: 'All Packaging', suffix: 'Packaging', name: item.title,
+    meta: `${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${escapeHtml(item.publisher)} &middot; ${item.year}`,
+    extra: `<p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>`,
+  });
 }
 
 function multiplayerListPage() {
@@ -5448,9 +5462,10 @@ function multiplayerListPage() {
 }
 
 function multiplayerDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Multiplayer – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('multiplayer')}<div class="platform-detail-wrapper"><a href="/multiplayer" class="back-link">&#8592; All Multiplayer Milestones</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${item.playerCount} players &middot; ${escapeHtml(item.type)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'multiplayer', slug: 'multiplayer', backLabel: 'All Multiplayer Milestones', suffix: 'Multiplayer', name: item.title,
+    meta: `${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${item.playerCount} players &middot; ${escapeHtml(item.type)}`,
+  });
 }
 
 function comicsListPage() {
@@ -5463,9 +5478,11 @@ function comicsListPage() {
 }
 
 function comicDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Comics – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('comics')}<div class="platform-detail-wrapper"><a href="/comics" class="back-link">&#8592; All Comics</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.franchise)} &middot; ${escapeHtml(item.publisher)} &middot; From ${item.startYear}${item.issues ? ' &middot; ' + item.issues + ' issues' : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'comics', slug: 'comics', backLabel: 'All Comics', suffix: 'Comics', name: item.title,
+    meta: `${escapeHtml(item.franchise)} &middot; ${escapeHtml(item.publisher)} &middot; From ${item.startYear}${item.issues ? ' &middot; ' + item.issues + ' issues' : ''}`,
+    extra: `<p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>`,
+  });
 }
 
 function studiosListPage() {
@@ -5478,9 +5495,10 @@ function studiosListPage() {
 }
 
 function studioDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.name)} – Studio Origins – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('studios')}<div class="platform-detail-wrapper"><a href="/studios" class="back-link">&#8592; All Studio Origins</a><div class="platform-detail-header"><h1>${escapeHtml(item.name)}</h1><p class="platform-detail-era">Founded ${item.foundedYear} &middot; ${escapeHtml(item.location)} &middot; Founders: ${escapeHtml(item.founders)} &middot; First game: ${escapeHtml(item.firstGame)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'studios', slug: 'studios', backLabel: 'All Studio Origins', suffix: 'Studio Origins', name: item.name,
+    meta: `Founded ${item.foundedYear} &middot; ${escapeHtml(item.location)} &middot; Founders: ${escapeHtml(item.founders)} &middot; First game: ${escapeHtml(item.firstGame)}`,
+  });
 }
 
 function importsListPage() {
@@ -5493,9 +5511,10 @@ function importsListPage() {
 }
 
 function importDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Imports – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('imports')}<div class="platform-detail-wrapper"><a href="/imports" class="back-link">&#8592; All Import Stories</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.originalRegion)} &#8594; ${escapeHtml(item.targetRegion)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'imports', slug: 'imports', backLabel: 'All Import Stories', suffix: 'Imports', name: item.title,
+    meta: `${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.originalRegion)} &#8594; ${escapeHtml(item.targetRegion)}`,
+  });
 }
 
 function speedrunTechniquesListPage() {
@@ -5508,9 +5527,10 @@ function speedrunTechniquesListPage() {
 }
 
 function speedrunTechniqueDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Speedrun Techniques – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('speedrun-techniques')}<div class="platform-detail-wrapper"><a href="/speedrun-techniques" class="back-link">&#8592; All Techniques</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${escapeHtml(item.technique)}${item.timeSaved ? ' &middot; Saves: ' + escapeHtml(item.timeSaved) : ''}${item.discoveredYear ? ' &middot; Documented: ' + item.discoveredYear : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'speedrun-techniques', slug: 'speedrun-techniques', backLabel: 'All Techniques', suffix: 'Speedrun Techniques', name: item.title,
+    meta: `${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${escapeHtml(item.technique)}${item.timeSaved ? ' &middot; Saves: ' + escapeHtml(item.timeSaved) : ''}${item.discoveredYear ? ' &middot; Documented: ' + item.discoveredYear : ''}`,
+  });
 }
 
 function famousBugsListPage() {
@@ -5524,9 +5544,10 @@ function famousBugsListPage() {
 }
 
 function famousBugDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Famous Bugs – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('famous-bugs')}<div class="platform-detail-wrapper"><a href="/famous-bugs" class="back-link">&#8592; All Famous Bugs</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; Impact: ${escapeHtml(item.impact)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'famous-bugs', slug: 'famous-bugs', backLabel: 'All Famous Bugs', suffix: 'Famous Bugs', name: item.title,
+    meta: `${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; Impact: ${escapeHtml(item.impact)}`,
+  });
 }
 
 function retroRevivalListPage() {
@@ -5539,9 +5560,10 @@ function retroRevivalListPage() {
 }
 
 function retroRevivalDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Retro Revival – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('retro-revival')}<div class="platform-detail-wrapper"><a href="/retro-revival" class="back-link">&#8592; All Retro Revival</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.developer)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; Inspired by: ${escapeHtml(item.inspiredBy)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'retro-revival', slug: 'retro-revival', backLabel: 'All Retro Revival', suffix: 'Retro Revival', name: item.title,
+    meta: `${escapeHtml(item.developer)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; Inspired by: ${escapeHtml(item.inspiredBy)}`,
+  });
 }
 
 function soundEffectsListPage() {
@@ -5554,9 +5576,10 @@ function soundEffectsListPage() {
 }
 
 function soundEffectDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Sound Effects – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('sound-effects')}<div class="platform-detail-wrapper"><a href="/sound-effects" class="back-link">&#8592; All Sound Effects</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.sfxType)}${item.creator && item.creator !== 'Unknown' ? ' &middot; ' + escapeHtml(item.creator) : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'sound-effects', slug: 'sound-effects', backLabel: 'All Sound Effects', suffix: 'Sound Effects', name: item.title,
+    meta: `${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.sfxType)}${item.creator && item.creator !== 'Unknown' ? ' &middot; ' + escapeHtml(item.creator) : ''}`,
+  });
 }
 
 function bossfightsListPage() {
@@ -5569,9 +5592,10 @@ function bossfightsListPage() {
 }
 
 function bossfightDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Boss Fights – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('bossfights')}<div class="platform-detail-wrapper"><a href="/bossfights" class="back-link">&#8592; All Boss Fights</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.bossName)} &middot; ${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.type)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'bossfights', slug: 'bossfights', backLabel: 'All Boss Fights', suffix: 'Boss Fights', name: item.title,
+    meta: `${escapeHtml(item.bossName)} &middot; ${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.type)}`,
+  });
 }
 
 function soundtracksListPage() {
@@ -5584,9 +5608,10 @@ function soundtracksListPage() {
 }
 
 function soundtrackDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Soundtracks – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('soundtracks')}<div class="platform-detail-wrapper"><a href="/soundtracks" class="back-link">&#8592; All Soundtracks</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.composer)} &middot; ${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year}${item.trackCount ? ' &middot; ' + item.trackCount + ' tracks' : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'soundtracks', slug: 'soundtracks', backLabel: 'All Soundtracks', suffix: 'Soundtracks', name: item.title,
+    meta: `${escapeHtml(item.composer)} &middot; ${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year}${item.trackCount ? ' &middot; ' + item.trackCount + ' tracks' : ''}`,
+  });
 }
 
 function manualsListPage() {
@@ -5599,9 +5624,11 @@ function manualsListPage() {
 }
 
 function manualDetailPage(item) {
-  const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Manuals – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0,160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('manuals')}<div class="platform-detail-wrapper"><a href="/manuals" class="back-link">&#8592; All Manuals</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${escapeHtml(item.publisher)} &middot; ${item.year}${item.pageCount ? ' &middot; ' + item.pageCount + ' pages' : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p><p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return detailPage(item, {
+    nav: 'manuals', slug: 'manuals', backLabel: 'All Manuals', suffix: 'Manuals', name: item.title,
+    meta: `${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${escapeHtml(item.publisher)} &middot; ${item.year}${item.pageCount ? ' &middot; ' + item.pageCount + ' pages' : ''}`,
+    extra: `<p class="platform-detail-desc"><em>${escapeHtml(item.notableFor)}</em></p>`,
+  });
 }
 
 function difficultyListPage() {
