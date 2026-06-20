@@ -284,7 +284,28 @@ function sourcesBlock(item) {
       ? `<li><a href="${escapeHtml(s.url)}" target="_blank" rel="noopener nofollow">${title}</a>${pub}</li>`
       : `<li>${title}${pub}</li>`;
   }).join('');
-  return `<div class="entry-sources"><h2>Sources &amp; further reading</h2><ul class="entry-sources-list">${items}</ul></div>`;
+  return `<div class="entry-sources"><h2>Sources &amp; further reading</h2><ul class="entry-sources-list">${items}</ul></div>${sourcesSchema(item, src)}`;
+}
+// Emit schema.org citations for any entry that carries sources, so the
+// references render as machine-readable structured data. Injected alongside
+// sourcesBlock, so it covers every sourced category entry automatically.
+function sourcesSchema(item, src) {
+  const citations = src.map(s => {
+    if (typeof s === 'string') return null;
+    if (!s.url) return null;
+    const c = { '@type': 'CreativeWork', name: s.title || s.url, url: s.url };
+    if (s.publisher) c.publisher = { '@type': 'Organization', name: s.publisher };
+    return c;
+  }).filter(Boolean);
+  if (!citations.length) return '';
+  const headline = item.title || item.name || item.term || '';
+  const json = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    citation: citations,
+  }).replace(/</g, '\\u003c');
+  return `<script type="application/ld+json">${json}</script>`;
 }
 
 const PLATFORMS = [
