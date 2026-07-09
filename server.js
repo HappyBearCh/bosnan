@@ -801,6 +801,15 @@ app.use(compression());
 // templates having to repeat the boilerplate. Pages that define their own
 // tags (e.g. game detail pages) are left untouched.
 const DEFAULT_OG_IMAGE = `${SITE_URL}/images/screenshot1.png`;
+const GA_MEASUREMENT_ID = 'G-7PKQSXLCD8';
+const GA_SNIPPET = `\n    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${GA_MEASUREMENT_ID}');
+    </script>`;
 app.use((req, res, next) => {
   const origSend = res.send.bind(res);
   res.send = (body) => {
@@ -808,6 +817,7 @@ app.use((req, res, next) => {
       const cleanPath = req.path === '/index.html' ? '/' : req.path.replace(/\/+$/, '') || '/';
       const canonical = SITE_URL + cleanPath;
       let extra = '';
+      if (!body.includes(GA_MEASUREMENT_ID)) extra += GA_SNIPPET;
       if (!body.includes('rel="canonical"')) extra += `\n    <link rel="canonical" href="${canonical}">`;
       if (!body.includes('property="og:title"')) {
         const t = body.match(/<title>([^<]*)<\/title>/);
