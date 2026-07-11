@@ -431,4 +431,85 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'pokemon-mew-glitch-trainer-fly',
+    sources: [
+      { title: 'Mew glitch', publisher: 'Bulbapedia', url: 'https://bulbapedia.bulbagarden.net/wiki/Mew_glitch' },
+      { title: 'Trainer-Fly glitch', publisher: 'GameFAQs', url: 'https://gamefaqs.gamespot.com/gameboy/367023-pokemon-red-version/faqs/64175/trainer-fly-glitch' },
+    ],
+    title: 'The Mew Glitch',
+    game: 'Pokémon Red / Blue',
+    platform: 'Game Boy',
+    year: 1996,
+    era: '1990s',
+    impact: 'Beloved',
+    description: 'A precise sequence of steps exploits a flaw in how the game handles interrupted trainer battles, letting players legitimately catch Mew — a Pokémon Nintendo had intended to be unobtainable without special events.',
+    longDescription: 'Mew was a last-minute addition to Pokémon Red and Green, squeezed into spare cartridge space by programmer Shigeki Morimoto and never meant to be caught in normal play — it was reserved for official distribution events. But the games contained an exploitable interaction. Certain "long-range" trainers spot the player the instant they appear on screen, and if the player opens the Start menu and uses Fly at the exact frame the trainer’s exclamation triggers, the pending battle is left in limbo. When the player returns to the map, the game immediately starts an encounter using leftover data in memory — and the "Special" stat of the last Pokémon fought determines which species appears. Battle a Pokémon whose Special stat is 21 (such as certain Slowpoke or Shellder) and the wild encounter becomes a level-7 Mew. Unlike cheat-device Mews, the glitch produces a fully legitimate creature, and it spread by word of mouth years before players understood the mechanism behind it.',
+    keyFacts: [
+      'Mew was a hidden last-minute addition never intended to be caught in normal play',
+      'The glitch chains the "Trainer-Fly" escape bug with a Pokémon whose Special stat is 21 (Mew’s index number)',
+      'The resulting Mew is fully legitimate — indistinguishable from an event Mew',
+      'Widely performed for years before players understood the underlying mechanic',
+    ],
+    sections: [
+      {
+        title: 'How the Exploit Chains Together',
+        html: '<p>The glitch relies on two quirks. First, the "Trainer-Fly" bug: some trainers are coded to notice the player from the maximum possible distance, spotting them the moment they walk on-screen. If the player triggers the Start menu on the same step and Flies away, the trainer battle is queued but never resolved, leaving the game in a corrupted state where it force-starts an encounter on return.</p><p>Second, the game decides <em>which</em> wild Pokémon to spawn by reading a value that, in this corrupted state, comes from the Special stat of the last Pokémon the player battled. Pokémon are indexed internally, and Mew’s internal index number is 21. A wild or trainer Pokémon with a Special stat of exactly 21 — a common example being a particular Slowpoke or Shellder — causes the game to spawn Mew at level 7. The most reliable documented route uses the Gambler on Route 8 and a Youngster with a Slowpoke on Route 25.</p>',
+      },
+    ],
+  },
+  {
+    id: 'ocarina-of-time-unused-arwing',
+    sources: [
+      { title: 'Arwing', publisher: 'Zelda Wiki', url: 'https://zelda.fandom.com/wiki/Arwing' },
+      { title: 'Ocarina of Time — Unused Actors & Objects', publisher: 'The Cutting Room Floor', url: 'https://tcrf.net/The_Legend_of_Zelda:_Ocarina_of_Time/Unused_Actors_%26_Objects' },
+    ],
+    title: 'The Unused Star Fox Arwing',
+    game: 'The Legend of Zelda: Ocarina of Time',
+    platform: 'Nintendo 64',
+    year: 1998,
+    era: '1990s',
+    impact: 'Cultural',
+    description: 'A fully functional Star Fox Arwing left dormant in the code of Ocarina of Time — a debug tool that will fly around and shoot lasers at Link if triggered by a cheat device.',
+    longDescription: 'Buried in Ocarina of Time’s data is a complete, working enemy that has nothing to do with Hyrule: an Arwing, the fighter craft from Star Fox 64. Triggered with a cheat device, it swoops through the sky firing twin lasers at Link, who can shoot it down with arrows, the slingshot, the Hookshot, or the boomerang. Its presence is explained by shared staff: programmer Kazuaki Morita worked on both Star Fox 64 and Ocarina of Time, and the Arwing was reused as a moving test target — most likely to tune the flight patterns of Volvagia, the Fire Temple boss, and to exercise the game’s new Z-targeting and projectile systems. Morita later confirmed that a scrapped Easter egg would have had an Arwing attack Link in Hyrule Field after a particular action, and leftover code shows a routine that spawns one relative to Link’s position. It has become one of the most famous datamined discoveries in gaming.',
+    keyFacts: [
+      'The Arwing is a leftover debug/test actor, not an intended enemy',
+      'Programmer Kazuaki Morita worked on both Star Fox 64 and Ocarina of Time',
+      'It was likely used to test Volvagia’s flight patterns and the Z-targeting system',
+      'A scrapped Easter egg would have had it attack Link in Hyrule Field',
+    ],
+    sections: [
+      {
+        title: 'A Fighter Jet in Hyrule',
+        html: '<p>Development studios routinely leave test assets inside finished games, but few are as incongruous as a Nintendo space fighter hiding inside a high fantasy adventure. Because the Arwing already existed as a fully rigged, flyable object in Nintendo’s N64 codebase, Ocarina of Time’s team could drop it in as a ready-made moving target. It behaves like a real enemy — it tracks Link, fires lasers that deal a quarter-heart of damage, and can be destroyed — because it was borrowed wholesale rather than stubbed out.</p><p>The discovery, popularised once cheat devices and later emulators let players spawn it, cemented Ocarina of Time as a favourite of the datamining and glitch-hunting community. It is a vivid reminder that the polished surface of a classic game sits on top of a messy, pragmatic development process where a Star Fox ship makes a perfectly good stand-in for a fire-breathing dragon.</p>',
+      },
+    ],
+  },
+  {
+    id: 'gta-san-andreas-hot-coffee',
+    sources: [
+      { title: 'Hot Coffee (minigame)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Hot_Coffee_(minigame)' },
+      { title: 'ESRB revokes M rating for GTA: San Andreas', publisher: 'ESRB', url: 'https://www.esrb.org/blog/esrb-concludes-investigation-into-grand-theft-auto-san-andreas-revokes-m-mature-rating/' },
+    ],
+    title: 'Hot Coffee',
+    game: 'Grand Theft Auto: San Andreas',
+    platform: 'PlayStation 2',
+    year: 2004,
+    era: '2000s',
+    impact: 'Industry-Changing',
+    description: 'A sexual minigame cut from the game but left intact in its code; a mod re-enabled it, triggering a national controversy that got San Andreas re-rated Adults Only and reshaped ratings enforcement.',
+    longDescription: 'Rockstar built a sex minigame — nicknamed "Hot Coffee" after the in-game invitation to a girlfriend’s house — then disabled rather than deleted it before shipping Grand Theft Auto: San Andreas. In June 2005 modder Patrick Wildenborg discovered the dormant content and released a PC patch, "Hot Coffee," that flipped a single value to re-enable it; equivalent methods soon surfaced for the console versions, proving the data was on every disc. The revelation ignited a political firestorm. On July 20, 2005 the ESRB revoked the game’s Mature rating and re-rated it Adults Only, forcing retailers like Walmart to pull it from shelves. Rockstar halted production and shipped a cleaned "second edition" to restore the M rating, absorbing an estimated multi-million-dollar loss, while U.S. Senator Hillary Clinton pushed for an FTC investigation. Hot Coffee became the defining case for how hidden, non-shipping code can still count against a game, and it made publishers far more careful about what they leave on the disc.',
+    keyFacts: [
+      'The minigame was disabled, not removed — its data shipped on every copy',
+      'Modder Patrick Wildenborg’s PC patch flipped a single value to re-enable it',
+      'The ESRB re-rated San Andreas Adults Only on July 20, 2005, pulling it from major retailers',
+      'Rockstar reissued a censored edition and faced an FTC inquiry, reshaping ratings enforcement',
+    ],
+    sections: [
+      {
+        title: 'A Single Bit With Enormous Consequences',
+        html: '<p>What made Hot Coffee so pivotal was not the crude minigame itself but the precedent it set: the ESRB ruled that content present in the shipped code counted toward a game’s rating even if it was inaccessible without modification. That interpretation put every publisher on notice that "cut but not deleted" content carried real legal and commercial risk.</p><p>The fallout was immediate and expensive. Retailers pulled San Andreas, Take-Two took a financial hit reissuing a scrubbed edition, and lawmakers seized on the episode as evidence that the industry could not police itself. The controversy accelerated scrutiny of game ratings in the United States and made thorough removal of unused adult content a standard part of the QA and certification process — a direct, lasting change to how games are finished and shipped.</p>',
+      },
+    ],
+  },
 ];

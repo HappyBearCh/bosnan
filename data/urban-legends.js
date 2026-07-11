@@ -336,5 +336,81 @@ module.exports = [
         html: '<p>Once the ritual was established, it spread through social transmission with remarkable efficiency. Children who had learned it from siblings or friends passed it on as received wisdom, often adding personal variations — some players blew harder, some blew at specific angles, some added a shake of the cartridge before reinsertion. These variations were rarely corrected because the ritual "worked" regardless of variation, reinforcing the belief that the specific technique mattered.</p><p>The ritual became a social bonding mechanism in gaming culture. Knowing the correct procedure was a marker of gaming literacy, and older players often taught it to younger ones as a form of expertise transfer. The false belief was amplified by the social value of appearing knowledgeable, creating a system where correction of the belief felt socially costly in a way that typical misinformation does not. The cartridge blowing ritual was one of gaming\'s first examples of how a gaming community\'s social dynamics can preserve and transmit false information more effectively than any single authoritative source could correct it.</p>'
       }
     ]
+  },
+  {
+    id: 'nuclear-gandhi',
+    sources: [
+      { title: 'Nuclear Gandhi', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Nuclear_Gandhi' },
+      { title: 'Actually, The Bug That Made Gandhi Drop Nukes In Civilization Is Just A Myth', publisher: 'TheGamer', url: 'https://www.thegamer.com/nuclear-gandhi-meme-civilization/' },
+    ],
+    title: 'Nuclear Gandhi — The Overflow That Never Was',
+    era: '1990s',
+    verdict: 'Confirmed False',
+    description: 'A wildly popular story claims that an integer overflow in the original Civilization (1991) drove the pacifist Gandhi to become the most nuke-happy leader in the game. The bug never existed — the tale was invented online two decades later.',
+    longDescription: 'The Nuclear Gandhi legend holds that Civilization assigned Gandhi an aggression rating of 1, the lowest possible, and that when a civilization adopted Democracy the rating dropped by 2 — underflowing an 8-bit value to 255 and turning the apostle of non-violence into a nuclear warmonger. It is a beautifully tidy programmer’s just-so story, and it is false. Civilization creator Sid Meier has stated the game’s aggression variables were signed, making the described underflow impossible, and lead Civilization II designer Brian Reynolds noted the original had only three aggression levels, with Gandhi sharing the lowest tier alongside a third of all leaders. Researchers traced the claim to a 2012 edit on the TV Tropes wiki by a user who offered no evidence, apparently venting after Gandhi nuked them. From there it spread as gospel until Meier’s memoir and repeated debunkings finally set the record straight — a case study in how a plausible technical explanation can outrun the truth.',
+    keyFacts: [
+      'Sid Meier confirmed Civilization’s aggression variables were signed, so no underflow to 255 was possible',
+      'The original game had only three aggression levels; Gandhi’s low rating was shared by a third of leaders',
+      'The claim was traced to a 2012 TV Tropes edit with no supporting evidence',
+      'A later Civilization did lean into the meme deliberately, cementing the myth in fans’ minds',
+    ],
+    sections: [
+      {
+        title: 'Why the Story Was So Believable',
+        html: '<p>Nuclear Gandhi endures because it is the perfect programmer’s anecdote: a specific, mechanical cause (an unsigned 8-bit value wrapping from 0 to 255) producing an ironic, memorable effect (a pacifist icon threatening nuclear annihilation). It sounds exactly like the kind of subtle bug that ships in real software, which is why engineers and players alike repeated it without checking. The problem is that the mechanism it describes could not have occurred in Civilization’s actual code.</p><p>Its persistence was helped along when later entries in the series embraced the joke — giving Gandhi an outsized fondness for nuclear weapons as a wink to fans. That turned a fabricated bug into an official running gag, which made the false origin story feel retroactively confirmed. It is a clean example of how memes can loop back and manufacture their own evidence.</p>',
+      },
+      {
+        title: 'What Actually Happened',
+        html: '<p>In the real Civilization, Gandhi was simply one of several leaders assigned the least aggressive behaviour profile. Once nuclear weapons became available late in a game, any AI leader could and did use them under the right strategic conditions; Gandhi was no more prone to it than his low-aggression peers. Players who were nuked by the famously peaceful Gandhi found the contrast funny and memorable, and that genuine in-game experience gave the later fabricated explanation fertile ground to take root.</p><p>The episode is now routinely cited in discussions of video-game folklore and misinformation, alongside Polybius and the Lavender Town creepypasta, as an example of how the internet can retroactively write a detailed technical history for something that never happened.</p>',
+      },
+    ],
+  },
+  {
+    id: 'berzerk-deaths',
+    sources: [
+      { title: 'Berzerk (Video Game)', publisher: 'TV Tropes', url: 'https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/Berzerk' },
+      { title: 'The Cursed Berzerk Video Game Arcade Cabinet: The Real Story', publisher: 'The Ghost In My Machine', url: 'https://theghostinmymachine.com/2024/01/29/encyclopaedia-of-the-impossible-the-cursed-berzerk-video-game-arcade-cabinet/' },
+    ],
+    title: 'The Berzerk Curse — The Game That Killed Its Players',
+    era: '1980s',
+    verdict: 'Partially True',
+    description: 'Legend says Stern’s 1980 arcade game Berzerk was cursed, striking down players who chased high scores. One death is genuinely documented; the "curse" that ties the deaths together is not.',
+    longDescription: 'Berzerk, a 1980 maze shooter menaced by the bouncing smiley-faced Evil Otto, acquired a grim reputation: that the stress of playing it killed young men at their cabinets. The core of the legend is real. On April 3, 1982, 18-year-old Peter Bukowski collapsed and died at Friar Tuck’s Game Room in Calumet City, Illinois, minutes after posting two top-ten scores on Berzerk — but an autopsy found he had an undiagnosed heart condition, arrhythmogenic right ventricular dysplasia, and had likely suffered a mild heart attack weeks earlier. He was, in the words of one investigation, a "dead man walking" regardless of the game. A second, earlier victim often cited — 19-year-old Jeff Dailey — appears to be fabricated: no contemporaneous news coverage exists, the story surfaced after Bukowski’s death and was back-dated to seem first, and the only matching Jeffrey Dailey who died in 1981 was killed in a car crash in Virginia. The "curse" is folklore built around a single tragic coincidence.',
+    keyFacts: [
+      'Peter Bukowski’s 1982 death is real, but was caused by an undiagnosed heart condition (ARVD)',
+      'The earlier "Jeff Dailey" death has no contemporaneous evidence and appears fabricated',
+      'Evil Otto, the game’s indestructible smiley antagonist, fuels the sinister imagery',
+      'The legend conflates one genuine coincidence into a supernatural pattern',
+    ],
+    sections: [
+      {
+        title: 'Separating Fact From Folklore',
+        html: '<p>The Bukowski case is unusually well documented for a gaming urban legend. He entered the arcade with a friend, played Berzerk for about fifteen minutes, twice reached the machine’s top-ten scores, and then collapsed. The medical explanation — a hereditary heart condition that had already produced a silent heart attack — means the game was, at most, a final exertion for a heart that was going to fail. It is the kind of story that becomes mythic precisely because the specifics (a teenager dying moments after a high score) are so cinematic.</p><p>The "Jeff Dailey" strand shows how legends accrete. A second death makes a coincidence look like a pattern, and a pattern looks like a curse. But researchers combing news archives find no trace of the Dailey incident from when it supposedly happened; it reads as a later embellishment designed to give the legend a first victim and a body count. Stripped of Dailey, Berzerk killed no one — a vulnerable young man simply died while playing it.</p>',
+      },
+    ],
+  },
+  {
+    id: 'ben-drowned',
+    sources: [
+      { title: 'Ben Drowned', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Ben_Drowned' },
+      { title: 'Majora’s Mask Creepypasta (BEN DROWNED)', publisher: 'Know Your Meme', url: 'https://knowyourmeme.com/memes/majoras-mask-creepypasta-ben-drowned/' },
+    ],
+    title: 'Ben Drowned — The Haunted Majora’s Mask Cartridge',
+    era: '2010s',
+    verdict: 'Deliberately Created',
+    description: 'A landmark creepypasta about a haunted Majora’s Mask cartridge possessed by the ghost of a boy named Ben. Presented as a true account, it was in fact a meticulously crafted alternate-reality game.',
+    longDescription: 'Ben Drowned began in September 2010 as a series of posts on 4chan’s paranormal /x/ board under the handle "Jadusable," narrating a college student’s week with a second-hand Nintendo 64 Majora’s Mask cartridge that behaved impossibly — statues following the player, the haunting "Song of Healing" playing backwards, text reading "You’ve met with a terrible fate, haven’t you?" and an entity called BEN that seemed to be watching. Accompanied by genuinely eerie glitch videos, the story blurred fact and fiction well enough that many early readers believed it. Its author, Alexander D. Hall, later revealed it as an intentional multi-part alternate-reality game, extending the narrative across websites and puzzles. Ben Drowned is now recognised as one of the most influential works of internet horror ever written, credited with codifying the modern creepypasta form and inspiring countless "haunted game" imitators — a rare urban legend whose authorship and fictional status are fully documented, yet whose atmosphere still unsettles.',
+    keyFacts: [
+      'Written by Alexander D. Hall ("Jadusable") and first posted to 4chan’s /x/ board in September 2010',
+      'Presented as a true haunting but built as a deliberate alternate-reality game',
+      'Popularised the phrase "You’ve met with a terrible fate, haven’t you?" as horror shorthand',
+      'Widely credited with legitimising creepypasta as a storytelling genre',
+    ],
+    sections: [
+      {
+        title: 'Fiction That Learned to Look Real',
+        html: '<p>What set Ben Drowned apart from the flood of "haunted cartridge" stories was craft. The narrative unfolded in real time over days, was paced like a genuine diary of escalating dread, and was backed by convincing footage of corrupted Majora’s Mask gameplay — statues that shouldn’t move, reversed music, sudden fires. Because it lived on a board where people posted real paranormal experiences, and because the author never broke character early, readers had every reason to wonder if it was true.</p><p>The reveal that it was an authored alternate-reality game did not diminish its reputation; it enhanced it. Ben Drowned demonstrated that internet horror could be structured, serialised, and interactive rather than a single anonymous scare, and it handed the genre a template. Its DNA is visible in nearly every "haunted game" story and analog-horror project that followed, making it one of the few urban legends whose influence is measured less in belief than in imitation.</p>',
+      },
+    ],
   }
 ];

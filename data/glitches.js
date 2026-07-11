@@ -682,4 +682,60 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'super-mario-world-ace',
+    title: 'Arbitrary Code Execution (Credits Warp)',
+    game: 'Super Mario World',
+    platform: 'SNES',
+    year: 1990,
+    era: '1990s',
+    discoveredBy: 'SNES speedrun/TAS community',
+    type: 'Arbitrary Code Execution',
+    description: 'A jaw-dropping exploit that lets players "program" the SNES from inside Super Mario World, tricking the game into running memory as code and warping straight to the credits — or even booting entirely new games.',
+    longDescription: 'Super Mario World’s credits warp is the most celebrated example of in-game arbitrary code execution (ACE). By arranging sprites at precise coordinates and then getting Yoshi to eat a Chargin’ Chuck — something the game never anticipates — runners send the CPU jumping into "open bus" memory that has no legitimate instructions. Because the values in that region can be set by placing specific objects on screen, the player is effectively writing machine code by hand using shells, sprites, and item positions. Feeding it the right values makes the game set its mode to "credits," ending a full playthrough in under a minute. Runners perform this with extra controllers held down by rubber bands to supply precise input values. The same principle, taken to its extreme, has been used live to reprogram Super Mario World into playable versions of Pong, Snake, and Flappy Bird during charity marathons — an astonishing demonstration that a finished game cartridge is really just a computer waiting for instructions.',
+    keyFacts: [
+      'Tricks the SNES into executing memory values as though they were program code',
+      'Getting Yoshi to eat a Chargin’ Chuck sends the CPU into unhandled "open bus" memory',
+      'Runners use extra controllers, held with rubber bands, to feed exact input values',
+      'The same exploit has been used to reprogram the game into Pong, Snake, and Flappy Bird live on stream',
+    ],
+    sources: [
+      { title: 'How Super Mario World Speedrunners Beat The Game in 40 Seconds By Writing Code With Koopa Shells', publisher: 'TheGamer', url: 'https://www.thegamer.com/how-super-mario-world-speedrunners-beat-the-game-in-40-seconds-by-writing-code-with-koopa-shells/' },
+      { title: 'Someone beat Super Mario World in under a minute with a credits warp glitch', publisher: 'Destructoid', url: 'https://www.destructoid.com/someone-beat-super-mario-world-in-under-a-minute-with-a-credits-warp-glitch/' },
+    ],
+    sections: [
+      {
+        title: 'Turning a Game Into a Computer',
+        html: '<p>ACE is the logical endpoint of glitch hunting. Where most exploits bend a game’s rules, arbitrary code execution abandons them entirely: the player stops playing the game and starts programming the console that runs it. Super Mario World became the canonical demonstration because its physics and sprite systems leave just enough unguarded memory to hijack, and because its speedrun community was willing to map that memory instruction by instruction.</p><p>The cultural high point came at charity speedrun marathons, where performers used the exploit not merely to skip to the credits but to inject whole new programs — a working game of Snake, a Flappy Bird clone — into a 1990 cartridge, live, without any hardware modification. It reframed how people think about old games: not as fixed products but as general-purpose machines whose behaviour is limited only by how cleverly their memory can be manipulated from the controller.</p>',
+      },
+    ],
+  },
+  {
+    id: 'ocarina-of-time-wrong-warp',
+    title: 'Wrong Warp & Stale Reference Manipulation',
+    game: 'The Legend of Zelda: Ocarina of Time',
+    platform: 'Nintendo 64',
+    year: 1998,
+    era: '1990s',
+    discoveredBy: 'Zelda speedrun/TAS community',
+    type: 'Wrong Warp / ACE',
+    description: 'A family of exploits that corrupts Ocarina of Time’s scene and actor data to teleport Link to unintended places — ultimately warping straight into the credits and collapsing the world record to under 13 minutes.',
+    longDescription: 'Ocarina of Time tracks where Link should appear using two internal values — a Base Entrance Index and a Scene Setup Index — and a "wrong warp" sets these to combinations the developers never intended, dropping Link into the wrong area. The more advanced Stale Reference Manipulation (SRM) goes further: by keeping the game referencing an "actor" (an object) in memory after it should have been cleared, runners can overwrite game data, changing a chest’s contents or corrupting execution outright. Chained together, these techniques achieve arbitrary code execution that jumps directly to the game’s ending. The any% credits warp bypasses both boss fights and the entire castle-escape sequence, and its discovery revolutionised Zelda speedrunning — runner Lozoots used it to finish the game in 12:59, cutting more than four minutes off the previous record in a single leap.',
+    keyFacts: [
+      'Manipulates the Base Entrance Index and Scene Setup Index that decide where Link spawns',
+      'Stale Reference Manipulation keeps a cleared "actor" referenced to overwrite game memory',
+      'Chained together they enable a credits warp straight to the ending',
+      'The trick pushed the any% world record under 13 minutes (Lozoots, 12:59)',
+    ],
+    sources: [
+      { title: 'Wrong Warp', publisher: 'ZeldaSpeedRuns', url: 'https://www.zeldaspeedruns.com/oot/wrongwarp/wrong-warp' },
+      { title: 'Speedrunners Shatter Ocarina of Time World Record By Warping Into The Credits', publisher: 'Kotaku', url: 'https://kotaku.com/speedrunners-shatter-ocarina-of-time-world-record-by-wa-1841045682' },
+    ],
+    sections: [
+      {
+        title: 'How You Beat Ocarina of Time in Minutes',
+        html: '<p>To a spectator, an any% Ocarina of Time run looks like nonsense: Link performs a flurry of precise, seemingly meaningless actions in Kokiri Forest and then, abruptly, the end credits roll. Underneath, the runner has been carefully setting the values that control scene transitions and exploiting the game’s failure to clean up objects in memory, steering the console into loading the ending as if the quest were complete.</p><p>The breakthrough reshaped the game’s competitive scene almost overnight. A category that had been measured in careful, hours-long routes suddenly became a sub-13-minute sprint of frame-precise setups, splitting the community into "credits warp" and "no credits warp" categories so that the older, more conventional playthrough could survive alongside the exploit. It stands with the Super Mario World credits warp as proof that even the most polished N64 classics are, at bottom, machines that can be talked into lying about their own state.</p>',
+      },
+    ],
+  },
 ];

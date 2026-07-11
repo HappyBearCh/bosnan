@@ -414,4 +414,82 @@ module.exports = [
       'Acclaim Entertainment filed for Chapter 7 bankruptcy in September 2004 with approximately $100 million in debt',
     ],
   },
+  {
+    id: 'death-race-1976',
+    sources: [
+      { title: 'Death Race (1976 video game)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Death_Race_(1976_video_game)' },
+      { title: 'Death Race and Video Game Violence', publisher: 'The Strong National Museum of Play', url: 'https://www.museumofplay.org/blog/death-race-and-video-game-violence/' },
+    ],
+    title: 'Death Race — The First Video Game Moral Panic',
+    year: 1976,
+    era: '1970s',
+    games: ['Death Race'],
+    description: 'Exidy’s 1976 arcade game, in which players ran over shrieking "gremlins" that turned into tombstones, triggered the first organised public outcry over video game violence — a full 17 years before Mortal Kombat.',
+    longDescription: 'Death Race put the player behind the wheel of a white car on a black screen, tasked with mowing down little white stick figures the developers called "gremlins." Each victim let out a high-pitched shriek and left behind a cross-topped tombstone that became an obstacle. Loosely inspired by the cult film Death Race 2000, the game’s cabinet art — a skeletal Grim Reaper at the wheel — sharpened its menace. The National Safety Council condemned it, behavioural scientist Dr. Gerald Driessen called it "gross" and warned it fed a national "war and killing" mentality, and CBS’s 60 Minutes ran a segment on the psychological impact of video games. It was the first video game to inspire genuine protest in the United States, including organised campaigns, and it established the template every future games-violence panic would follow.',
+    outcome: 'The controversy backfired commercially — the publicity drove up demand and prompted another production run — but protests kept total output to roughly 500 units. More importantly, it set the enduring cultural pattern: a new medium accused of corrupting the young, media amplification, and sales boosted rather than dampened by the outrage. It is remembered as the birth of the video-game "violence debate" that would recur with Mortal Kombat, Doom, and Grand Theft Auto.',
+    sections: [
+      {
+        title: 'The Blueprint for Every Panic That Followed',
+        html: '<p>What makes Death Race historically significant is not its crude monochrome graphics but its role as a first draft. Nearly every element of later moral panics is already present in 1976: lurid press coverage, an expert warning of psychological harm, safety and advocacy groups demanding action, and — crucially — a surge in sales driven by the very notoriety meant to suppress the game. Exidy could not have bought better advertising than the condemnation it received.</p><p>The "gremlins" defence — that the targets were monsters, not people — also previews a recurring tactic in games censorship, one that would resurface two decades later when Carmageddon swapped its human victims for zombies. Death Race proved that controversy sells, a lesson the industry would exploit deliberately by the time Grand Theft Auto arrived.</p>',
+      },
+    ],
+    keyFacts: [
+      'Released by Exidy in 1976; players scored by running over screaming "gremlins"',
+      'Covered by CBS’s 60 Minutes and condemned by the National Safety Council',
+      'Sparked the first organised protests against a video game in the US',
+      'Notoriety boosted demand, but protests held production to roughly 500 units',
+    ],
+  },
+  {
+    id: 'carmageddon-bbfc-ban',
+    sources: [
+      { title: 'Carmageddon', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Carmageddon' },
+      { title: 'Carmageddon, The Controversial Racer That Took On The BBFC And Won', publisher: 'Time Extension', url: 'https://www.timeextension.com/features/the-making-of-carmageddon-the-controversial-racer-that-took-on-the-bbfc-and-won' },
+    ],
+    title: 'Carmageddon vs. the BBFC',
+    year: 1997,
+    era: '1990s',
+    games: ['Carmageddon'],
+    description: 'Stainless Software’s vehicular-combat game, which rewarded players for running over pedestrians, became the first video game refused classification by the BBFC — a fight the developers ultimately won on appeal.',
+    longDescription: 'Carmageddon let players win races by any means, most memorably by mowing down pedestrians for time bonuses and stylish "creative kills." Publisher SCi courted attention by submitting the game to the British Board of Film Classification for an 18 rating even though it contained no film footage; the gambit backfired spectacularly when the BBFC refused to certify it unless all blood and gore was removed. The British tabloids seized on it, campaigning to have the game banned outright. Under pressure, the developers replaced the human bystanders with green-blooded zombies (and, in Germany, robots), since running over non-humans was deemed acceptable. But a "blood patch" quickly appeared online restoring the original humans — later revealed to have been leaked by the developers themselves.',
+    outcome: 'After roughly ten months of appeal, the BBFC reversed itself and certified the original, uncensored version with an 18 rating. Carmageddon thus became both the first game the BBFC refused to classify and a landmark victory for the principle that games deserved the same free-expression latitude as film. The saga — and the enormous free publicity it generated — turned a niche racer into a cult hit and a reference point in every later UK debate over game censorship.',
+    sections: [
+      {
+        title: 'How to Get Banned and Win Anyway',
+        html: '<p>The Carmageddon affair is a case study in how censorship can amplify the very content it targets. SCi’s decision to seek a BBFC rating for a game that legally did not need one invited scrutiny, and the tabloid firestorm that followed gave the game a notoriety no marketing budget could match. The zombie "censored" version and the developer-leaked blood patch became part of the game’s legend, letting players feel they were reclaiming something forbidden.</p><p>The eventual reversal on appeal mattered beyond one game. It affirmed that interactive entertainment in the UK would be judged by comparable standards to other media, and it strengthened the case for a dedicated games-rating framework rather than ad hoc bans. Carmageddon is remembered less for its gameplay than for being the moment the British ratings system and the games industry tested each other’s limits — and the industry won.</p>',
+      },
+    ],
+    keyFacts: [
+      'The first video game refused classification by the BBFC (1997)',
+      'Human victims were replaced with green-blooded zombies to satisfy censors',
+      'A "blood patch" restoring the humans was secretly leaked by the developers',
+      'The original version was certified 18 after a ~10-month appeal',
+    ],
+  },
+  {
+    id: 'grand-theft-auto-1997-moral-panic',
+    sources: [
+      { title: 'Grand Theft Auto (1997 game)', publisher: 'GTA Wiki', url: 'https://gta.fandom.com/wiki/Grand_Theft_Auto_(1997_game)' },
+      { title: 'The Sleazeball Publicist Who Manufactured Grand Theft Auto’s Notorious Reputation', publisher: 'MEL Magazine', url: 'https://melmagazine.com/en-us/story/max-clifford-grand-theft-auto' },
+    ],
+    title: 'Grand Theft Auto’s Manufactured Outrage',
+    year: 1997,
+    era: '1990s',
+    games: ['Grand Theft Auto'],
+    description: 'The moral panic around the original Grand Theft Auto was not an accident but a deliberate PR campaign — publisher BMG Interactive hired tabloid fixer Max Clifford to manufacture the scandal that made the game infamous.',
+    longDescription: 'When DMA Design’s top-down crime game Grand Theft Auto was ready for release in 1997, publisher BMG Interactive took an audacious marketing gamble: rather than defend the game against controversy, it hired Max Clifford — Britain’s most notorious tabloid publicist — to create one. Clifford leaked lurid descriptions of the game’s "amoral" violence to conservative newspapers and politicians, deliberately provoking calls for a ban. The strategy worked flawlessly. Lord Campbell of Croy condemned the game in the House of Lords, handing DMA millions of pounds’ worth of free publicity and transforming an obscure release into the forbidden game every teenager wanted. It was among the first games known to have been marketed by weaponising the outrage of its critics.',
+    outcome: 'The manufactured scandal turned a modest, low-budget game into a cult phenomenon: the original Grand Theft Auto sold around 500,000 copies and launched one of the most commercially dominant franchises in entertainment history. The episode also exposed a cynical dynamic — that political condemnation functions as free advertising — which the series’ later custodian Rockstar would ride through the Hot Coffee scandal and beyond. It stands as the clearest example of the games industry not merely surviving controversy but engineering it on purpose.',
+    sections: [
+      {
+        title: 'Outrage as a Business Model',
+        html: '<p>The genius, and the cynicism, of the campaign lay in recognising that a politician’s denunciation is worth more than any advertisement. Every headline warning parents away from Grand Theft Auto told teenagers exactly what to seek out. Clifford understood the tabloid ecosystem intimately and fed it precisely the story it wanted, ensuring the game was discussed in Parliament before most people had even played it.</p><p>This inverted the usual relationship between games and their critics. Earlier controversies — Death Race, Mortal Kombat — were genuine panics that publishers weathered; Grand Theft Auto’s was courted from the start. The template proved durable: for the next two decades, "banned" or "condemned" became a badge that drove sales, and the GTA series in particular thrived on the notoriety its very first entry had so deliberately cultivated.</p>',
+      },
+    ],
+    keyFacts: [
+      'BMG Interactive hired publicist Max Clifford to deliberately provoke a scandal',
+      'Lord Campbell of Croy condemned the game in the House of Lords',
+      'The free publicity helped the game sell around 500,000 copies',
+      'An early, deliberate example of controversy used as a marketing strategy',
+    ],
+  },
 ];
