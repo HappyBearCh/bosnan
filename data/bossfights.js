@@ -337,4 +337,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'dracula-castlevania',
+    title: 'Dracula',
+    game: 'Castlevania',
+    platform: 'NES',
+    year: 1986,
+    era: '8-bit',
+    bossName: 'Count Dracula',
+    type: 'Final Boss',
+    description: 'The two-phase confrontation with Count Dracula that ends the original Castlevania — a caped vampire hurling fireballs who, upon defeat, erupts into a towering demon — established a template that has climaxed nearly every game in the series since.',
+    longDescription: 'Dracula\'s battle closes out the original 1986 Castlevania, the culmination of Simon Belmont\'s ascent through the vampire lord\'s castle. In his first phase, Dracula appears as a caped, aristocratic figure who teleports around the room and rains down fireballs, forcing the player to dodge and time whip strikes against a foe who will not stand still. It is a demanding fight that tests everything the game has taught, arriving at the end of a gauntlet of earlier bosses and treacherous platforming.\n\nThe encounter\'s defining twist comes when Dracula\'s first health bar is emptied. Rather than dying, his humanoid body collapses and a monstrous second form bursts forth — in the original NES game, a huge frog-like demon that leaps high and low across the arena and spits fireballs, accompanied by intense, driving music. This transformation turned a single boss fight into a two-stage ordeal and delivered a shock of escalation right at the game\'s climax, cementing the idea that the final victory must be earned twice over.\n\nThe transformation carried a deeper meaning in the minds of the game\'s creators. According to original director Hitoshi Akamatsu, the demonic form rising from Dracula\'s headless body was meant to represent the "Curse of Man," and when Simon struck it down, the evil energy released in that moment was precisely what cursed the Belmont line — an origin for the family\'s tragic burden, rather than a curse the Count deliberately cast. This lore gave the spectacle a thematic weight beyond a simple difficulty spike.\n\nDracula\'s two-phase, transforming boss fight became one of the most enduring signatures of the entire Castlevania series. In game after game he returns as the final antagonist, and his second form has taken many shapes over the years — a giant bat, a colossal floating head, various demons, or an empowered humanoid — but the pattern set in 1986 remains constant: defeat the Count, then survive the horror he becomes. Few final bosses in gaming have been reinvented so many times while keeping their essential identity so intact, making Dracula a foundational example of the transforming, multi-stage climax.',
+    keyFacts: [
+      'The final boss of the original Castlevania (1986), fought by Simon Belmont',
+      'First phase: a teleporting, fireball-throwing caped vampire',
+      'Second phase: his body erupts into a leaping frog-like demon when his health is depleted',
+      'The two-phase transforming fight became a signature climax across the entire series',
+    ],
+    sections: [
+      {
+        title: 'Designed to Be Almost Impossible',
+        html: '<p>Dracula\'s battle was built as a true test of mastery, positioned at the end of a punishing gauntlet through his castle. His first form gives the player no easy target — he teleports around the arena and hurls fireballs, demanding precise dodging and well-timed whip strikes. Just when the player believes victory is at hand, his defeated body transforms into a hulking demon that leaps across the room and breathes fire, resetting the tension and forcing the fight to be won a second time. This structure — a difficult first phase followed by a monstrous, escalated second — made the encounter feel like a genuine final trial, and its intensity, underscored by the driving boss music, is a large part of why it left such a lasting impression on players.</p>',
+      },
+      {
+        title: 'Cultural Legacy',
+        html: '<p>The transforming, two-phase Dracula fight became one of Castlevania\'s most recognisable traditions. He returns as the final boss across the series\' many entries, and while his monstrous second form has appeared as a giant bat, an enormous head, assorted demons, or an enhanced humanoid, the core pattern first seen in 1986 endures: beat the Count, then confront what he becomes. Director Hitoshi Akamatsu even embedded series lore in the spectacle, framing the demon that rises from Dracula\'s body as the "Curse of Man" whose defeat cursed the Belmonts. Few video game villains have had a signature fight reinterpreted so consistently across decades, making Dracula a defining model for the multi-stage final boss.</p>',
+      },
+    ],
+  },
+  {
+    id: 'ridley-metroid',
+    title: 'Ridley',
+    game: 'Metroid series',
+    platform: 'NES / SNES / GameCube',
+    year: 1986,
+    era: '8-bit onward',
+    bossName: 'Ridley',
+    type: 'Recurring Boss',
+    description: 'The dragon-like leader of the Space Pirates and Samus Aran\'s archenemy, Ridley is one of gaming\'s most persistent recurring bosses — repeatedly killed and resurrected across the Metroid series as the personal nemesis who slaughtered Samus\'s family.',
+    longDescription: 'Ridley is a high-ranking Space Pirate and one of the most frequently recurring characters in the Metroid series, appearing as a boss in over half its games. Resembling a European dragon — leathery wings, glowing eyes, pteranodon-like features — he made his debut in the original 1986 NES Metroid, where he and the enormous Kraid served as Space Pirate figureheads guarding Mother Brain on the planet Zebes, protecting the base where the pirates were cloning the parasitic Metroids to weaponise them.\n\nWhat elevated Ridley from a recurring enemy to Samus Aran\'s definitive archenemy is his role in her personal tragedy. It was Ridley who led the Space Pirate raid on Samus\'s home colony that killed her parents, an act that transformed him from a mere boss into the central figure of her lifelong vendetta. Though he is never strictly the primary antagonist of any single game — that role usually falls to Mother Brain or other forces — Ridley\'s personal history with Samus has made many fans regard him as the true villain of the franchise, the recurring embodiment of everything she fights against.\n\nHis defining narrative trait is a refusal to stay dead. Samus destroys Ridley again and again, yet he is repeatedly rebuilt and resurrected through various means. After his defeat on Zebes his remains were recovered and reconstructed with cybernetic implants, producing Meta Ridley, the mechanised form that stalks the Metroid Prime games; by the climax of Metroid Prime 3: Corruption he is further mutated by the toxic substance Phazon into the monstrous Omega Ridley. Each incarnation raises the stakes while preserving the essential creature, so that defeating him feels like a temporary reprieve rather than a final victory.\n\nAcross the SNES landmark Super Metroid — where his boss fight and his role as a Space Pirate leader are prominent — through the Prime trilogy and beyond, Ridley has remained a fixture and enforcer of the Pirate armies and a benchmark for the recurring rival boss. His combination of a distinctive, terrifying design, a genuinely personal grudge with the protagonist, and an unkillable persistence has made him one of the most memorable antagonists in gaming, the dark shadow that has haunted Samus Aran across nearly four decades of the series.',
+    keyFacts: [
+      'Debuted in the original Metroid (1986) as a Space Pirate figurehead guarding Mother Brain on Zebes',
+      'A dragon-like Space Pirate leader and Samus Aran\'s archenemy',
+      'Led the raid that killed Samus\'s parents, making their rivalry deeply personal',
+      'Repeatedly resurrected — rebuilt as the cyborg Meta Ridley and the Phazon-infused Omega Ridley',
+    ],
+    sections: [
+      {
+        title: 'Designed to Be Almost Impossible',
+        html: '<p>Ridley\'s battles are built around his agility and menace: a fast, flying, fire-breathing dragon who is difficult to pin down and punishing to face, he serves across the series as a skill check standing between Samus and her goals. His encounters escalate with each incarnation — from the original Space Pirate leader on Zebes, to the cybernetic Meta Ridley of the Prime games, to the Phazon-mutated Omega Ridley — each version larger, more heavily armed, and more dangerous than the last. This pattern of return-and-escalation means a victory over Ridley never feels permanent; he is designed to be beaten and then to come back stronger, embodying the relentless, regenerating threat of the Space Pirates themselves.</p>',
+      },
+      {
+        title: 'Cultural Legacy',
+        html: '<p>Though rarely the top-billed antagonist of any single Metroid game, Ridley has become, in the eyes of many fans, the true villain of the franchise — a status earned through his personal history with Samus and his relentless recurrence. Killing her parents made their conflict intimate rather than incidental, and his repeated resurrections turned him into the series\' enduring dark presence, the nemesis who always comes back. His striking dragon design and his role as a Space Pirate enforcer have kept him a fixture of the series and a favourite of its fans, and his eventual inclusion as a playable fighter in Super Smash Bros. Ultimate — long demanded by fans — confirmed his standing as one of gaming\'s most beloved and iconic recurring bosses.</p>',
+      },
+    ],
+  },
+  {
+    id: 'andross-star-fox-64',
+    title: 'Andross',
+    game: 'Star Fox 64',
+    platform: 'Nintendo 64',
+    year: 1997,
+    era: '64-bit',
+    bossName: 'Andross',
+    type: 'Final Boss',
+    description: 'The mad scientist Andross, transformed by his own experiments into a giant disembodied head and hands, is the multi-phase final boss of Star Fox 64 — with a hidden true form as a floating brain reached only by the game\'s harder path.',
+    longDescription: 'Andross is the arch-villain of the Star Fox series and the climactic final boss of 1997\'s Star Fox 64, awaiting Fox McCloud at the end of the assault on the planet Venom. A brilliant scientist exiled for dangerous experiments, Andross has been so warped by his own research that he no longer possesses a normal body: he confronts Fox as an enormous floating head flanked by a pair of disembodied, gloved hands. On the Nintendo 64 he benefited from proper textures and a range of facial expressions, giving the giant visage an unsettling presence as it grimaces and taunts across the battle.\n\nThe fight is structured in multiple escalating phases. In his first form, Andross attacks as that giant head and hands — the hands clap, grab, and strike while the head inhales debris and exhales attacks, forcing Fox to weave through a barrage while targeting vulnerable points. Defeating this initial form does not end the encounter, and crucially, what comes next depends on the route the player took to reach Venom, since Star Fox 64\'s branching mission paths lead to different versions of the final confrontation.\n\nThis branching produces one of the game\'s most memorable secrets. On the easier route, Andross\'s second form is a giant robotic head — effectively a decoy, a fake Andross. But on the harder path, destroying the first form reveals his true nature: a grotesque giant brain flanked by two disembodied eyes, the real Andross laid bare with all pretence of a body stripped away. Only by braving the more difficult route does the player earn this genuine final battle and the game\'s true ending, in which Fox must escape Andross\'s collapsing base in a tense flight sequence — famously guided by the ghostly reappearance of his father, James McCloud.\n\nAndross\'s battle became an iconic finale of the 64-bit era, memorable both for its striking, body-horror design — a villain reduced to a floating head, hands, and ultimately a naked brain — and for the way it rewarded skilled play with a hidden true form and a better ending. The encounter tied together Star Fox 64\'s branching-path structure, its rail-shooter combat, and its emotional through-line about Fox and his lost father, making Andross not just a boss but the keystone of one of the N64\'s most beloved games.',
+    keyFacts: [
+      'The final boss of Star Fox 64 (1997), fought at the planet Venom',
+      'Transformed by his own experiments into a giant floating head with disembodied hands',
+      'The second form branches by route: a fake robotic head on the easy path, the true brain form on the hard path',
+      'Reaching the true brain form unlocks the game\'s true ending and James McCloud\'s reappearance',
+    ],
+    sections: [
+      {
+        title: 'Designed to Be Almost Impossible',
+        html: '<p>The Andross battle escalates through distinct phases that test the player\'s mastery of Star Fox 64\'s rail-shooter combat. His first form — a giant head and two disembodied hands — attacks with clapping and grabbing hands and inhaled-then-exhaled barrages, demanding precise dodging and well-aimed fire at fleeting weak points. The true challenge, however, is gated behind the game\'s harder branching route: only players skilled enough to reach Venom by the difficult path face his authentic final form, a giant brain flanked by two eyes, followed by a nerve-wracking escape flight through a collapsing base. Easier routes fob the player off with a robotic decoy head, so the genuine, most demanding version of the fight is itself a reward for playing well.</p>',
+      },
+      {
+        title: 'Cultural Legacy',
+        html: '<p>Andross\'s finale is remembered as one of the definitive boss fights of the Nintendo 64, celebrated for its eerie design and for the way it wove together the game\'s systems and story. The reveal of his true form — a floating brain with disembodied eyes, reached only through the harder path — rewarded exploration of Star Fox 64\'s branching structure and gave the game a genuine "true ending," capped by the emotional return of Fox\'s father, James McCloud, to guide his son to safety. That fusion of striking body-horror spectacle, hidden-form reward, and emotional payoff made Andross a keystone of the game\'s enduring reputation, and he has remained the series\' signature villain ever since.</p>',
+      },
+    ],
+  },
 ];

@@ -325,4 +325,85 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'dreamcast-controller',
+    title: 'Dreamcast Controller',
+    platform: 'Sega Dreamcast',
+    manufacturer: 'Sega',
+    year: 1998,
+    era: '128-bit',
+    description: 'Sega\'s controller for the Dreamcast paired a single analog stick and pioneering analog triggers with two expansion slots for the VMU memory card and vibration pack — an inventive design admired for its ideas and criticised for its bulk and forward-facing cable.',
+    longDescription: 'The Dreamcast controller, introduced alongside the console in 1998, was Sega\'s evolution of the analog-focused pad it had developed for the Saturn 3D and the Model 2 arcade era. It featured a single analog stick, a digital d-pad, a start button, four face buttons (A, B, X, Y), and — most notably — two analog triggers on the underside, an innovation that gave players fine, pressure-sensitive control over acceleration and braking in racing games and other pressure-graded actions. Those analog triggers were genuinely ahead of their time and would become a standard feature of controllers for generations to come.\n\nThe controller\'s defining feature, however, was its pair of expansion slots set into the top-centre of the unit. Into these the player could insert Sega\'s peripherals: most commonly the Visual Memory Unit (VMU) in the first slot and a vibration pack (the Jump Pack) in the second. Because the VMU carried its own small LCD screen, slotting it into the controller pointed that screen up toward the player, letting games display secondary information — a character\'s status, hidden data, mini-games — on the pad itself. This second-screen concept, integrated directly into the controller, was one of the Dreamcast\'s most imaginative ideas and prefigured features consoles would revisit years later.\n\nReception of the controller was mixed, and the criticisms have become as well-remembered as the praise. Many players found the pad oversized and awkward to hold for long sessions, with its fin-like grips described as cramp-inducing, and some felt the face buttons were too small. The single analog stick limited its suitability for the dual-stick first-person and action games that were emerging, and the analog triggers, while innovative, were considered too loose for precise input in some genres. Most notoriously, the cable exited from the top of the controller, pointing toward the player rather than away toward the console — an ergonomic oddity that drew persistent complaints.\n\nDespite these flaws, the Dreamcast controller is fondly regarded as a bold, idea-rich design that reflected the console\'s adventurous spirit. Its analog triggers became an industry standard, its VMU second-screen concept remains a beloved curiosity, and its distinctive silhouette is instantly recognisable to anyone who owned Sega\'s final home console. It stands as a fitting emblem of the Dreamcast itself: inventive and influential, if imperfect in execution.',
+    keyFacts: [
+      'Pioneered analog triggers that became a standard feature on later controllers',
+      'Two expansion slots held the VMU memory card and the vibration Jump Pack',
+      'The VMU\'s LCD faced the player, turning the controller into an early second-screen device',
+      'Criticised for its bulk, small face buttons, and a cable that exited toward the player',
+    ],
+    notableFor: 'Introducing analog triggers and integrating the VMU\'s second screen directly into the controller, imaginative ideas that outweighed its ergonomic shortcomings.',
+    sections: [
+      {
+        title: 'The VMU and the Second Screen',
+        html: '<p>The controller\'s two central slots were designed around Sega\'s peripheral ecosystem, chiefly the Visual Memory Unit. Because the VMU had its own monochrome LCD, inserting it into the controller pointed the little screen up at the player, so games could show secondary information — status readouts, hidden moves, or downloadable mini-games — without cluttering the television. Sonic Adventure\'s Chao raising and various games\' private information displays used this to genuine effect. The idea of a small auxiliary screen built into the controller was novel in 1998 and is frequently cited as a forerunner of later second-screen experiments in console design.</p>',
+      },
+      {
+        title: 'Praise and Criticism',
+        html: '<p>Opinion on the Dreamcast controller has always been split. Admirers point to its tough materials, its inventive VMU integration, and its trend-setting analog triggers, which allowed pressure-sensitive control that racing and sports games exploited well. Detractors note that the pad was large and could be difficult to hold comfortably, that its fin-shaped grips cramped some hands, and that the face buttons felt small. The single analog stick constrained it as dual-stick action games arrived, and the triggers were loose enough that some found them imprecise. The most enduring complaint, though, is purely ergonomic: the cable exited toward the player rather than the console, an odd decision that has become a fixture of retrospective discussions of the pad.</p>',
+      },
+    ],
+  },
+  {
+    id: 'colecovision-controller',
+    title: 'ColecoVision Controller',
+    platform: 'ColecoVision',
+    manufacturer: 'Coleco',
+    year: 1982,
+    era: 'Pre-NES',
+    description: 'Coleco\'s controller combined a short joystick with a full 12-key numeric keypad and swappable game-specific overlays — an ambitious, complicated input device that mirrored the Intellivision\'s approach and reflected the pre-standardisation experimentation of the early 1980s.',
+    longDescription: 'The ColecoVision controller, launched with the console in 1982, was one of the most elaborate input devices of its era, and its design reveals just how unsettled the very idea of a game controller still was before the NES imposed a lasting template. Rather than a simple joystick, Coleco offered a rectangular handheld unit closely modelled on Mattel\'s Intellivision controller: the upper portion carried a set of side buttons and a short, roughly 1.5-inch joystick, while the entire lower half was dominated by a full 12-button numeric keypad — the digits 0 through 9 plus asterisk and pound keys.\n\nThe keypad was the controller\'s defining and most divisive feature. It existed to work with game-specific overlays — thin plastic cards that slid into a slot on the right side of the controller and lay over the keypad, printing labels that mapped the numbered keys to a particular game\'s functions. A flight game might map keys to weapons and views; an adventure might map them to actions or menu choices. In principle this gave each game a rich, reconfigurable set of inputs far beyond what a joystick and a button or two could offer; in practice it meant players constantly glanced down at their hands, hunting for the right key mid-game, and swapping overlays whenever they changed cartridges.\n\nColeco built its early success on the strength of its hardware and, crucially, its games — the ColecoVision\'s pack-in port of Donkey Kong was a major selling point, and the system amassed around 145 official cartridges during its 1982–1985 run. The controller served that library adequately, but its ergonomics were a product of their time: the stubby joystick was less comfortable than dedicated arcade-style sticks, and the keypad-centric layout felt more like a calculator than a game pad. Like the Intellivision controller it emulated, it is remembered as much for its awkwardness as for its ambition.\n\nThe ColecoVision controller stands as a snapshot of a formative moment in console history, when manufacturers were still guessing at what players wanted in their hands. Its assumption — that more complex games demanded more buttons, and that a numeric keypad plus overlays was the way to provide them — would be decisively rejected a few years later by the NES\'s simple, elegant d-pad-and-two-buttons design. But the impulse behind it, the desire to give games a deeper and more flexible control vocabulary, would resurface repeatedly in later hardware, making the ColecoVision pad an instructive ancestor even in its overreach.',
+    keyFacts: [
+      'Modelled closely on the Intellivision controller, with a short joystick and full numeric keypad',
+      'A 12-button keypad accepted slide-in plastic overlays that relabelled the keys per game',
+      'Supported a library of around 145 official cartridges, led by its acclaimed Donkey Kong port',
+      'Emblematic of pre-NES experimentation, its complexity later rejected by the simple NES pad',
+    ],
+    notableFor: 'Embodying the early-1980s belief that richer games needed keypad-and-overlay complexity, an approach the NES would soon supersede with radical simplicity.',
+    sections: [
+      {
+        title: 'The Keypad and Overlays',
+        html: '<p>The heart of the ColecoVision controller was its 12-key numeric keypad, designed to be reconfigured for each game by means of overlays — thin plastic cards that slid into a slot on the controller\'s right edge and lay over the keys, printing game-specific labels. This let a single controller present a bespoke control scheme for every title, mapping keys to weapons, views, menu options, or actions as each game required. The concept promised depth and flexibility beyond a joystick and a button, but it came at an ergonomic cost: players had to look down to find keys during play and swap overlays whenever they changed cartridges, friction that made the system feel more like operating an appliance than playing a game.</p>',
+      },
+      {
+        title: 'A Snapshot of Pre-Standardisation',
+        html: '<p>The ColecoVision controller is best understood as an artefact of a moment before the console input device had settled into a standard form. Coleco, following Mattel\'s Intellivision lead, assumed that increasingly complex games would demand increasingly complex controllers, and answered with a keypad-and-overlay design that treated the pad almost like a reprogrammable keyboard. A few years later the NES would reject this premise entirely, proving that a simple d-pad and two buttons could support enormously varied and sophisticated games. Viewed against that outcome, the ColecoVision controller is a fascinating road not taken — ambitious, logical on its own terms, and ultimately a cautionary example of complexity for its own sake.</p>',
+      },
+    ],
+  },
+  {
+    id: 'atari-jaguar-controller',
+    title: 'Atari Jaguar Controller',
+    platform: 'Atari Jaguar',
+    manufacturer: 'Atari',
+    year: 1993,
+    era: '32/64-bit',
+    description: 'The Atari Jaguar\'s bundled controller sported a telephone-style 12-key numeric keypad beneath just three face buttons — a bulky, widely criticised design often cited as one of the worst controllers ever made.',
+    longDescription: 'When Atari launched the Jaguar in 1993, marketing it as the first "64-bit" console, it bundled a controller — sometimes called the PowerPad — that would become a byword for misjudged design. The controller carried 17 buttons in total: a directional pad, three face buttons labelled A, B, and C, dedicated Pause and Option buttons, and, dominating its lower half, a 12-key telephone-style numeric keypad. The keypad was intended to accept game-specific overlays, paper templates laid over the keys to show what each did in a given title — the same concept Atari had used on its 5200 and that Coleco and Mattel had tried a decade earlier.\n\nThe rationale, once again, was that games were growing too complex for a handful of buttons, and that a keypad could function almost like a compact keyboard. Some Jaguar games did make real use of it: Doom used the keypad for rapid weapon selection, and Wolfenstein 3D used it for quicksaving. But the execution undermined the idea. The controller was large and clumsy in the hand, and, more damningly, it offered only three primary face buttons at a time when the Genesis and SNES had already established six-button pads as the norm for the fighting and action games players wanted. A machine billed as a generation ahead of its rivals shipped with fewer accessible action buttons than either of them.\n\nThe consequences for game design were awkward. With only three top buttons, developers had to either keep control schemes basic, contort themselves to cram functions onto those three inputs, or push actions down onto the cumbersome numeric keypad — where reaching them mid-game was slow and uncomfortable. Reviewers of the day, including GamePro, praised the Jaguar\'s raw hardware while singling out the controller as a serious liability, and its reputation has only hardened over time into a standard example of how a poor controller can hamper a console.\n\nAtari eventually acknowledged the problem by releasing a six-button "Pro Controller" that replaced the keypad\'s prominence with three additional face buttons, a revision widely regarded as far superior to the original. But by then the damage was done: the Jaguar sold poorly and the bundled pad became part of the story of its failure. Today the original Jaguar controller is a frequent fixture on "worst controller" lists, remembered as a device that repeated the keypad mistakes of the previous decade just as the industry had firmly moved on.',
+    keyFacts: [
+      'A 17-button design with only three face buttons above a 12-key numeric keypad',
+      'The keypad accepted paper overlays; Doom used it for weapon select, Wolfenstein 3D for quicksaving',
+      'Shipped with fewer action buttons than the six-button Genesis and SNES pads it aimed to beat',
+      'Later replaced by a superior six-button Pro Controller; often called one of the worst controllers ever',
+    ],
+    notableFor: 'Reviving the keypad-and-overlay approach in 1993 with too few face buttons, becoming a textbook example of a controller that undermined its own console.',
+    sections: [
+      {
+        title: 'The Keypad Gamble',
+        html: '<p>Atari\'s justification for the numeric keypad echoed the reasoning behind its own 5200 controller and the earlier Intellivision and ColecoVision pads: as games grew more complex, the thinking went, players would need something closer to a keyboard, and paper overlays could relabel the keys for each title. A handful of Jaguar games genuinely exploited it — Doom mapped weapons to the keypad, Wolfenstein 3D used it to quicksave — but for most games the keypad was an awkward afterthought, slow to reach and uncomfortable to use during action. By 1993 the wider industry had already learned that this approach did not work, making its reappearance on a supposedly cutting-edge console especially puzzling.</p>',
+      },
+      {
+        title: 'Too Few Buttons, Too Late',
+        html: '<p>The controller\'s deeper failing was its shortage of proper action buttons. With only A, B, and C available up front, the Jaguar pad offered less immediate control than the six-button Genesis and SNES controllers that were already standard for fighting and action games. Developers were forced to simplify their schemes, overload those three buttons, or banish functions to the clumsy keypad. GamePro and other outlets praised the console\'s power but condemned the controller, and Atari\'s later six-button Pro Controller — which swapped the keypad emphasis for real face buttons — tacitly admitted the mistake. The original pad endures as a cautionary tale about how badly a controller can hamstring otherwise capable hardware.</p>',
+      },
+    ],
+  },
 ];

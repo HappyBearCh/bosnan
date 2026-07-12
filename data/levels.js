@@ -408,5 +408,104 @@ module.exports = [
         html: '<p>Spencer Nilsen\'s score for Ecco the Dolphin occupies a unique place in game music history. Where most early-1990s game composers were working in melodic structures borrowed from film or popular music, Nilsen created something genuinely ambient — layered synthesizer textures combined with processed natural recordings that function as atmosphere rather than accompaniment.</p><p>The inclusion of actual dolphin sonar recordings was a radical choice that grounds the game\'s alien quality in biological reality. Players are hearing real dolphin communication processed through synthesizers, which creates an uncanny effect: the sounds are natural, but the context is science fiction. The music communicates that Ecco\'s ocean is simultaneously familiar and profoundly strange, which is exactly the emotional register the game is trying to occupy throughout its strange, ambitious journey.</p>'
       }
     ]
+  },
+  {
+    id: 'goldeneye-facility',
+    title: 'GoldenEye 007 — Facility',
+    game: 'GoldenEye 007',
+    platform: 'Nintendo 64',
+    year: 1997,
+    era: '64-bit',
+    levelName: 'Facility (Chemical Warfare Facility)',
+    description: 'The second mission of Rare\'s GoldenEye 007, opening with Bond dropping from a ventilation duct into a bathroom, is a masterclass in stealth-shooter level design and became the most celebrated multiplayer map of its generation.',
+    longDescription: 'Facility is the second campaign level of GoldenEye 007, following the dam bungee jump, and it is where Rare\'s pioneering first-person shooter announces its ambitions. The level opens with one of gaming\'s most memorable introductions: Bond drops silently from a ventilation shaft and finds himself peering down at a guard in a toilet cubicle, able to line up his silenced Walther PPK for a single clean headshot before slipping into the facility proper. From there the mission unfolds through a dense network of corridors, laboratories, and control rooms crammed with patrolling guards and frightened scientists.\n\nWhat made Facility remarkable was its embrace of stealth and choice at a time when console shooters barely existed. Guards were posted at corners and patrolled the halls, and the silenced pistol rewarded careful, quiet play — picking off enemies before they could raise an alarm. But the level also accommodated loud, aggressive approaches, and its objectives (which changed and multiplied on harder difficulty settings) encouraged replay. This layering of difficulty-scaled objectives onto a single handcrafted space was unusual and influential, giving the mission far more depth than a linear shooting gallery.\n\nRare achieved the level\'s convincing sense of place through obsessive attention to authenticity. The studio studied the actual film sets, working from blueprints and photographing textures on real walls to recreate GoldenEye\'s locations faithfully. This dedication to grounding the game in the film\'s physical world gave Facility — and the game as a whole — a coherence and believability that few shooters of the era possessed, and it is a large part of why the game became a critical and commercial landmark.\n\nFacility\'s legacy extends well beyond its campaign role, because its layout became the single most beloved map in GoldenEye\'s legendary four-player split-screen multiplayer. Its tight corridors, memorable rooms, and the infamous vent that let players drop in from above made it a perennial favourite, and for a generation of players "Facility" is synonymous with crowded living-room deathmatches. It is routinely ranked among the best multiplayer maps ever made, and its influence echoes through the console-shooter genre that GoldenEye did so much to establish.',
+    designPrinciples: [
+      'Stealth is rewarded but not mandatory — the silenced pistol enables quiet play while loud approaches remain viable',
+      'Difficulty settings add and change objectives, giving one handcrafted space strong replay value',
+      'Environmental authenticity grounded in the film\'s real sets and blueprints',
+      'A memorable set-piece entrance (the vent drop into the bathroom) anchors the player\'s sense of place',
+    ],
+    keyFacts: [
+      'The second campaign level, following the dam bungee jump',
+      'Opens with Bond dropping from a vent to headshot a guard in a bathroom cubicle',
+      'Rare recreated the film\'s sets from blueprints and photographed real-world textures',
+      'Became the most celebrated map in GoldenEye\'s four-player split-screen multiplayer',
+    ],
+    sections: [
+      {
+        title: 'The Language of the Level',
+        html: '<p>Facility taught console players a new grammar of first-person play. Its silenced Walther PPK made stealth a genuine option — guards could be eliminated quietly before they raised an alarm — yet the level never forced it, leaving room for players who preferred to fight through loudly. Objectives that shifted and multiplied on higher difficulties turned a single space into several different challenges, an early example of designing for replay rather than a one-time playthrough. This combination of stealth, choice, and scalable objectives, wrapped around memorable set-pieces like the opening vent drop, distinguished GoldenEye from the corridor shooters of the PC world and helped define what a console FPS could be.</p>',
+      },
+      {
+        title: 'Legacy and Influence',
+        html: '<p>Facility\'s influence is felt most strongly in multiplayer, where its layout became the canonical GoldenEye deathmatch map — its corridors, control rooms, and drop-in vent producing countless hours of four-player split-screen chaos and topping "best multiplayer map" lists decades later. More broadly, the level exemplified the qualities that made GoldenEye a landmark: film-faithful environments, objective-driven missions, stealth options, and difficulty scaling, all of which fed into the console-shooter genre that GoldenEye and its spiritual successor Perfect Dark helped establish. For many players, Facility is not just a great level but the level that proved shooters belonged on consoles.</p>',
+      },
+    ]
+  },
+  {
+    id: 'ocarina-of-time-water-temple',
+    title: 'Ocarina of Time — Water Temple',
+    game: 'The Legend of Zelda: Ocarina of Time',
+    platform: 'Nintendo 64',
+    year: 1998,
+    era: '64-bit',
+    levelName: 'Water Temple',
+    description: 'The infamous Water Temple of Ocarina of Time is gaming\'s most notorious dungeon — an intricate puzzle of rising and falling water levels and cumbersome Iron Boots that became a byword for frustration, and prompted an apology from its own designer.',
+    longDescription: 'The Water Temple is a dungeon in the 1998 Nintendo 64 masterpiece The Legend of Zelda: Ocarina of Time, and it occupies a singular place in gaming lore as perhaps the most notorious level ever designed. Created by the game\'s director Eiji Aonuma, who drew on his personal love of diving, the temple is built around a central mechanic: the player must repeatedly raise and lower the water level throughout a multi-storey structure to open new paths, using a set of Iron Boots to sink to the bottom, a special tunic to breathe underwater, and the Hookshot to reach distant points.\n\nOn paper the design is elegant and thematically coherent — a genuine three-dimensional puzzle box in which the same physical space transforms as the water shifts. In practice it became the dungeon players loved to hate. The Iron Boots were the chief culprit: on the original N64 release they had to be equipped and unequipped through the pause menu, an interruption required constantly as the player alternated between walking on the floor and floating or swimming. This cumbersome, repetitive menu-diving turned what should have been fluid exploration into a tedious chore, and the temple\'s vertical complexity made it easy to get lost, unsure which water level was needed or where a missed switch or key might be.\n\nThe backlash was severe and lasting. Critics singled the Water Temple out as a blemish on an otherwise near-perfect game; GamesRadar went so far as to call it one of the worst levels in any video game and to argue that it alone kept Ocarina of Time from being the greatest game ever made. The reputation grew into a cultural shorthand for dungeon frustration, referenced for years whenever players discussed the low points of otherwise beloved titles. Remarkably, the criticism reached the developers directly: Aonuma publicly apologised for the temple\'s difficulty, and Shigeru Miyamoto acknowledged that the constant boot-swapping had been a mistake.\n\nNintendo took the unusual step of substantively redesigning the dungeon for the 2011 Nintendo 3DS remake, Ocarina of Time 3D. The most important change let players equip and remove the Iron Boots instantly from the touch-screen item menu without pausing, removing the single biggest source of tedium, while colour-coded markers made the water levels easier to track. The result was widely praised, with some critics arguing the improved version revealed the dungeon\'s underlying design to be clever and satisfying all along — a rare case of a studio directly answering years of player complaint by rebuilding one of its most infamous creations.',
+    designPrinciples: [
+      'A single space transformed by a global variable — the water level — that the player manipulates',
+      'Vertical, three-dimensional puzzle structure inspired by the director\'s love of diving',
+      'Interlocking tools (Iron Boots, underwater tunic, Hookshot) gate progress through the space',
+      'The original\'s flaw — constant menu-based boot swapping — was fixed in the 3DS remake',
+    ],
+    keyFacts: [
+      'Designed by director Eiji Aonuma, inspired by his love of diving',
+      'Built around raising and lowering water levels and sinking with the Iron Boots',
+      'The original required pausing to equip/unequip the Iron Boots constantly, a major source of frustration',
+      'Aonuma apologised for its difficulty; the 3DS remake let players swap boots without pausing',
+    ],
+    sections: [
+      {
+        title: 'The Language of the Level',
+        html: '<p>At its core the Water Temple is a study in transforming a single space through one manipulable variable: the water level. Raising and lowering the water opens and seals paths, turns walls into floors and rooms into pools, and forces the player to think about the dungeon in three dimensions rather than as a flat map — a design rooted in Aonuma\'s fascination with diving. The Iron Boots, underwater tunic, and Hookshot function as the keys that unlock movement through this shifting space. The concept is genuinely sophisticated; its failure on the N64 was one of execution, as the constant need to open the pause menu to change boots broke the flow that the puzzle design depended upon.</p>',
+      },
+      {
+        title: 'Legacy and Influence',
+        html: '<p>The Water Temple became the most infamous dungeon in gaming, a shorthand for frustration invoked for decades and cited by critics as the one flaw preventing Ocarina of Time from perfection. Its notoriety was potent enough to draw a public apology from Eiji Aonuma and an acknowledgement from Shigeru Miyamoto that the boot-swapping was cumbersome. Nintendo\'s response was itself notable: for the 2011 3DS remake the studio rebuilt the dungeon, allowing instant boot changes and adding visual aids for the water levels, and the revised version earned praise that some felt vindicated the original design. The saga stands as a landmark example of player feedback directly reshaping a classic, and a reminder that a strong concept can be undone or redeemed by interface details.</p>',
+      },
+    ],
+  },
+  {
+    id: 'half-life-black-mesa-inbound',
+    title: 'Half-Life — Black Mesa Inbound',
+    game: 'Half-Life',
+    platform: 'PC',
+    year: 1998,
+    era: '32-bit',
+    levelName: 'Black Mesa Inbound (opening tram ride)',
+    description: 'Half-Life opens not with a cutscene but with a slow, silent tram ride through the Black Mesa Research Facility — an unbroken first-person introduction that redefined how games tell stories and immerse the player.',
+    longDescription: 'Half-Life begins with one of the most influential openings in video game history: Black Mesa Inbound, a leisurely automated tram ride that carries the player, as scientist Gordon Freeman, deep into the sprawling Black Mesa Research Facility. For roughly three minutes the player sits in a slow-moving monorail car with no weapon, no combat, and no ability to leave, simply watching the facility unfold through the windows as a recorded announcer\'s voice and passing scenery establish the world. It is a deliberately quiet, unhurried beginning that stood in sharp contrast to the immediate action of most 1998 shooters.\n\nThe genius of the sequence lay in what it refused to do. At a time when games conveyed story and setting almost exclusively through pre-rendered cutscenes that wrested control away from the player, Half-Life kept the entire introduction in first person and in real time. The player never lost control of their viewpoint; they could look around freely, watch workers going about their duties, glimpse hazard signs and mysterious machinery, and absorb the scale and atmosphere of Black Mesa entirely through their own eyes. The technology that made this possible was a train entity added to the engine by programmer Jay Stelly, which allowed the tram to move along its track as a scripted, amusement-park-style ride while gameplay and player agency remained fully intact.\n\nThis approach embodied a design philosophy that would define Half-Life and much of the medium after it: never take the camera away from the player. By delivering exposition through environmental detail and ambient events rather than non-interactive movies, Valve made the player a continuous, present participant in the story from the very first second. The tram ride teaches nothing mechanically — the game\'s controls are relegated to a separate optional training program — but it teaches the player how to be in this world, priming them to watch, listen, and pay attention to their surroundings, habits the rest of the game rewards.\n\nBlack Mesa Inbound became a touchstone of game design, endlessly cited and imitated. Its patient, controlled, cutscene-free introduction demonstrated that a game could build immersion and anticipation more powerfully by trusting the player to simply look, and its influence is visible in countless first-person games that followed. The sequence was faithfully recreated in the community remake Black Mesa, a testament to its enduring status, and it remains the canonical example of environmental, in-engine storytelling — the moment the medium learned it did not need to stop being a game in order to tell a story.',
+    designPrinciples: [
+      'Story and exposition delivered entirely in first person, with no cutscenes',
+      'The player never loses control of the camera or viewpoint',
+      'Environmental detail and ambient events convey setting instead of dialogue dumps',
+      'A slow, weaponless opening builds atmosphere and anticipation rather than immediate action',
+    ],
+    keyFacts: [
+      'A roughly three-minute automated tram ride opens the game with no combat and no cutscene',
+      'Enabled by a train entity added to the engine by programmer Jay Stelly',
+      'Kept the entire introduction in first person, uncommon when rivals relied on pre-rendered cutscenes',
+      'Faithfully recreated in the community remake Black Mesa; a canonical example of in-engine storytelling',
+    ],
+    sections: [
+      {
+        title: 'The Language of the Level',
+        html: '<p>Black Mesa Inbound speaks almost entirely through what the player observes. Trapped in a moving tram they cannot exit, the player is free to look wherever they like, and the level fills that gaze with meaning: an announcer\'s recorded voice, workers at their tasks, warning signs, security doors, and glimpses of strange machinery all establish the scale, tone, and latent danger of Black Mesa without a single line of interactive dialogue or a moment of surrendered control. The sequence trains the player to read the environment — to treat looking and listening as the game\'s core verbs — a lesson that pays off throughout Half-Life, where story continues to be told through the world itself rather than through interruptions to play.</p>',
+      },
+      {
+        title: 'Legacy and Influence',
+        html: '<p>The opening tram ride crystallised a principle — never take control from the player — that shaped Valve\'s design and rippled across the entire medium. By proving that a game could deliver a rich, atmospheric introduction without resorting to cutscenes, Half-Life pushed developers toward in-engine, first-person, environmental storytelling, and its influence is visible in a long lineage of narrative-driven shooters and immersive games. The sequence has been analysed, praised, and imitated for decades, and its careful reconstruction in the fan remake Black Mesa underlines how iconic it became. Black Mesa Inbound endures as the definitive demonstration that the most immersive way to begin a story might be to simply let the player sit back, look out the window, and watch a world reveal itself.</p>',
+      },
+    ],
   }
 ];
