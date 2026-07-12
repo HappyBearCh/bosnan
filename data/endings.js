@@ -337,4 +337,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'half-life-g-man-ending',
+    title: 'Half-Life — The G-Man\'s Offer',
+    game: 'Half-Life',
+    platform: 'PC',
+    year: 1998,
+    type: 'Ambiguous',
+    era: '32-bit',
+    spoilerWarning: true,
+    description: 'Half-Life ends not with a triumphant victory but with a mysterious bureaucrat, the G-Man, offering Gordon Freeman an impossible choice — accept employment with unnamed masters or be abandoned to die — closing the game on one of gaming\'s most enduringly ambiguous notes.',
+    longDescription: 'After Gordon Freeman fights his way across the Black Mesa Research Facility and into the alien borderworld of Xen, defeating the towering final boss, the Nihilanth, the game does not reward him with a conventional ending. Instead, the enigmatic figure who has silently observed Gordon throughout the game — the pale, suited, oddly-spoken G-Man — spirits him away into an abstract, dreamlike sequence of shifting environments viewed from a tram that moves through impossible spaces. There, the G-Man delivers a monologue that reframes everything the player has just done.\n\nThe G-Man strips Gordon of his weapons — remarking that "most of them were government property" — but lets him keep the HEV suit, saying he has "earned it." He then reveals that he has recommended Gordon\'s services to his unnamed "employers," and extends an offer of employment. The choice is stark and coercive: accept the job and be placed into stasis until his services are next required, or refuse and be dropped, defenceless, into an overwhelming swarm of aliens in Xen with no hope of survival. The player selects "yes" or "no" by looking at a portal; choosing to accept fades the screen to the G-Man\'s parting words, while refusing delivers a hopeless death, underlining that the "choice" is barely one at all.\n\nThe ending is deliberately, almost provocatively ambiguous. It answers none of the questions it raises: who are the G-Man\'s employers? What has Gordon actually been fighting for? What will he be asked to do, and when will he be woken? By replacing catharsis with mystery, Valve turned the conclusion into an opening — a set-up rather than a resolution. Half-Life 2 would later reveal that Gordon spent roughly twenty years in stasis before being reactivated, but in 1998 the ending simply left players suspended in uncertainty alongside their protagonist.\n\nThe G-Man\'s offer became one of the most discussed endings in gaming, admired for how completely it subverted the expected power fantasy. Rather than the hero saving the day and being celebrated, Gordon is revealed as a pawn — capable and valuable, but manipulated by hidden forces whose agenda he cannot see. The scene\'s themes of control, powerlessness, and the unseen machinery behind seemingly heroic events resonated deeply, and the G-Man himself became one of gaming\'s most iconic enigmas, his cryptic final speech dissected by players for decades afterward.',
+    keyFacts: [
+      'Follows the defeat of the final boss, the Nihilanth, in the alien world of Xen',
+      'The G-Man offers Gordon employment with unnamed "employers" or death in Xen',
+      'The player "chooses" by looking at a portal — but refusal simply kills Gordon',
+      'Deliberately ambiguous, it set up rather than resolved, foreshadowing the 20-year stasis of Half-Life 2',
+    ],
+    sections: [
+      {
+        title: 'A Choice That Isn\'t',
+        html: '<p>The genius of Half-Life\'s finale is how it presents agency while withholding it. The G-Man offers Gordon a decision — accept the job or refuse it — and lets the player physically make the choice by looking toward a portal. But the alternatives are not equivalent: accepting places Gordon in stasis for future use, while refusing drops him unarmed into a swarm of aliens for an immediate, hopeless death. The illusion of choice, undercut by its coercive reality, mirrors the ending\'s central theme — that Gordon, for all his heroics, is not a free agent but an asset being managed by powers he neither understands nor can resist. The player feels their own powerlessness through the hollowness of the decision they are handed.</p>',
+      },
+      {
+        title: 'The Enduring Enigma',
+        html: '<p>By refusing to explain itself, Half-Life\'s ending transformed its final scene into years of speculation. The identity of the G-Man\'s employers, the true nature of the conflict, and Gordon\'s ultimate purpose were all left open, and the community filled that vacuum with theory and analysis that sustained interest in the series long before a sequel arrived. The G-Man became a defining icon of ambiguous game storytelling — a figure whose cryptic diction and unreadable motives made him fascinating precisely because he was never explained. When Half-Life 2 finally revealed the twenty-year stasis, it deepened rather than dispelled the mystery, confirming the original ending\'s status as a masterclass in leaving the player wanting more.</p>',
+      },
+    ],
+  },
+  {
+    id: 'star-fox-64-true-ending',
+    title: 'Star Fox 64 — The True Ending',
+    game: 'Star Fox 64',
+    platform: 'Nintendo 64',
+    year: 1997,
+    type: 'Emotional',
+    era: '64-bit',
+    spoilerWarning: true,
+    description: 'Reaching Andross by Star Fox 64\'s harder path unlocks its true ending, in which the ghostly figure of Fox McCloud\'s long-dead father, James, appears to guide his son out of a collapsing base with the words "Don\'t ever give up, my son."',
+    longDescription: 'Star Fox 64\'s branching mission structure means the game can end in more than one way, and its finest conclusion — the "true" ending — is gated behind the more difficult route to the final planet, Venom. Only by braving the harder path does the player confront Andross\'s genuine final form, the grotesque giant brain, rather than the robotic decoy encountered on the easier route. Defeating that true form triggers the game\'s most memorable and emotionally resonant sequence.\n\nAs the defeated Andross triggers his laboratory\'s self-destruct, Fox McCloud is trapped deep inside the collapsing base with seemingly no way out. Then, impossibly, the Arwing of his father — James McCloud, the Star Fox team\'s original leader, believed dead for years after being betrayed and lost on a mission to this very planet — appears ahead of him. A voice calls out, "Don\'t ever give up, my son," and James leads Fox on a tense, high-speed flight through the disintegrating structure, guiding him to safety before peeling away and vanishing into the void.\n\nThe scene is left deliberately mysterious. James\'s fate is never explained: he flies away once Fox reaches the exit and disappears, leaving players to wonder whether they witnessed a ghost, a hallucination born of Fox\'s desperation, or the impossible survival of a father long presumed dead. A closing detail rewards attentive players — in the final cutscene, a single point of light can be seen moving against the background stars, hinting that James\'s Arwing might truly be flying off somewhere. The game offers no definitive answer, and that ambiguity is central to the moment\'s power.\n\nThis ending elevated Star Fox 64 from an excellent rail shooter into something with genuine emotional weight. By tying its hardest path to a payoff about Fox\'s relationship with his lost father, the game rewarded skilled play not just with a tougher final boss but with catharsis and meaning. James\'s reappearance, his words of encouragement, and his enigmatic departure became one of the most beloved endings of the Nintendo 64 era — a reminder that even a fast-paced arcade-style shooter could deliver a moment of real heart.',
+    keyFacts: [
+      'Unlocked only by taking the harder route to Venom and defeating Andross\'s true brain form',
+      'Fox\'s father James, presumed dead for years, appears to guide him from the collapsing base',
+      'James\'s parting line — "Don\'t ever give up, my son" — became iconic',
+      'His fate is left ambiguous; a moving star in the final cutscene hints he may have survived',
+    ],
+    sections: [
+      {
+        title: 'A Reward for the Harder Path',
+        html: '<p>Star Fox 64\'s branching structure meant that the ending a player saw depended on the difficulty of the route they had taken, and the true ending was reserved for those who reached Venom by the harder path and defeated Andross\'s authentic final form. This design tied the game\'s most meaningful narrative payoff directly to skilled, ambitious play — the robotic decoy Andross and a lesser conclusion awaited players who took the easy route, while the genuine confrontation and the appearance of James McCloud rewarded those who pushed themselves. It is an elegant example of using difficulty and branching not merely to gate content, but to make the emotional climax itself feel earned.</p>',
+      },
+      {
+        title: 'The Mystery of James McCloud',
+        html: '<p>What makes the ending endure is its refusal to explain James\'s reappearance. Long believed dead after being betrayed on a mission to Venom, he materialises exactly when Fox needs him most, speaks a single line of encouragement, guides his son to safety, and vanishes. Players have debated ever since whether he was a ghost, a vision conjured by Fox\'s desperation, or somehow alive — and the game deliberately withholds an answer, offering only the tantalising detail of a lone star moving against the others in the final shot. That ambiguity transforms a rescue into a haunting, personal moment, and cemented the sequence as one of the most emotionally affecting endings on the N64.</p>',
+      },
+    ],
+  },
+  {
+    id: 'silent-hill-multiple-endings',
+    title: 'Silent Hill — Multiple Endings & the UFO Joke',
+    game: 'Silent Hill',
+    platform: 'PlayStation',
+    year: 1999,
+    type: 'Branching',
+    era: '32-bit',
+    spoilerWarning: true,
+    description: 'Silent Hill helped popularise unlockable multiple endings determined by hidden conditions — ranging from tragic to hopeful — and introduced the series\' beloved recurring tradition of an absurd joke "UFO Ending" in which Harry Mason is abducted by aliens.',
+    longDescription: 'Konami\'s Silent Hill, released in 1999, was a landmark of survival horror, and part of its influence lay in how it handled its conclusions. The game featured several distinct endings that the player could not simply choose, but unlocked according to hidden conditions tracked throughout the playthrough — actions taken, characters saved, items collected, and combat performance all silently steered which of the endings the player received. This reinvigorated the design element of condition-gated multiple endings, encouraging replay and rewarding attentive, exploratory play, and it became a defining feature of the series.\n\nThe "serious" endings ranged across a spectrum of tones. Depending on the player\'s actions, protagonist Harry Mason\'s search for his missing daughter Cheryl could resolve in outcomes that were bleak and tragic or comparatively hopeful, with variations hinging on whether certain characters lived or died. Because the conditions were opaque, discovering which endings existed and how to reach them became a communal puzzle among players, and the ambiguity of the "true" outcome deepened the game\'s unsettling atmosphere.\n\nAgainst this backdrop of dread, Silent Hill introduced one of gaming\'s most cherished traditions: the UFO Ending. Born from a private joke among Team Silent members — Masahiro Ito, Keiichiro Toyama, Takayoshi Sato and others, who amused themselves by pitching absurd explanations for the town\'s horrors, from alien conspiracies to the sun being too bright — the joke ending made it into the finished game as a secret. To unlock it, the player had to complete the game once and then, on a second playthrough, find hidden "channeling stones" and use them at a specific sequence of locations, culminating at the lighthouse.\n\nThe reward was gloriously silly: a group of UFOs descends, blinding Harry with light, followed by a montage of crude hand-drawn images in which aliens surround him as he asks whether they have seen his daughter, respond in an otherworldly language, zap him with a laser, and abduct him to their ship before flying off as the credits roll. The tonal whiplash — from one of the most oppressive horror games ever made to a cartoonish alien abduction — was the entire point, and it delighted players. The UFO Ending became a permanent fixture of the franchise, recurring in nearly every subsequent Silent Hill game and establishing a template for the self-aware joke ending that other horror series would later imitate.',
+    keyFacts: [
+      'Endings were unlocked by hidden conditions tracked across the playthrough, not chosen directly',
+      'Serious outcomes ranged from tragic to hopeful based on who lived and the player\'s actions',
+      'The UFO Ending began as a private joke among Team Silent developers',
+      'Unlocked via hidden channeling stones on a second playthrough; became a series-wide tradition',
+    ],
+    sections: [
+      {
+        title: 'Endings You Had to Earn',
+        html: '<p>Silent Hill\'s multiple endings were not menu selections but consequences: the game quietly tracked the player\'s choices, rescues, exploration, and performance, and delivered one of several conclusions accordingly. Because the conditions were never spelled out, players could not simply pick the outcome they wanted — they had to play in particular ways, often without knowing it, and then compare notes with others to piece together how each ending was reached. This opacity suited the game\'s disorienting horror and gave it enormous replay value, helping to re-establish condition-gated multiple endings as a meaningful design tool rather than a simple branch at the final scene.</p>',
+      },
+      {
+        title: 'The Birth of a Tradition',
+        html: '<p>The UFO Ending turned an in-house joke into a lasting franchise institution. Team Silent had entertained themselves by inventing ridiculous explanations for the town\'s evil — aliens, excessive sunlight, even a dog — and rather than discard the silliness, they hid it in the game as a secret reward for dedicated players. The resulting sequence, with its crude drawings and Harry\'s alien abduction, deliberately shattered the game\'s oppressive tone for comic effect. Its popularity ensured that nearly every future Silent Hill would include its own absurd joke ending, and the concept of the self-aware, tonally opposite secret ending became an influential idea that horror games and beyond would borrow for decades.</p>',
+      },
+    ],
+  },
 ];

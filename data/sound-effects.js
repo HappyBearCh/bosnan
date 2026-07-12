@@ -337,4 +337,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'space-invaders-march',
+    title: 'Space Invaders — The Marching Sound',
+    game: 'Space Invaders',
+    platform: 'Arcade',
+    year: 1978,
+    era: 'Golden Age',
+    creator: 'Tomohiro Nishikado',
+    sfxType: 'Ambient Loop',
+    description: 'The four descending notes that loop beneath Space Invaders — quickening as the aliens advance — created gaming\'s first interactive, tension-building soundtrack, an effect born partly from a hardware limitation.',
+    longDescription: 'Space Invaders, released by Taito in 1978, is accompanied by one of the most recognisable and influential sounds in gaming: a continuous loop of four descending notes that plays as the alien horde marches across the screen. It is unbelievably simple — just four tones, repeated endlessly — yet it functions almost like a heartbeat, a steady pulse that the invaders appear to march to. As the game intensifies, this pulse quickens, and the accelerating tempo transmits the mounting danger directly to the player\'s nerves, making them not only see the threat descending but hear it closing in.\n\nThe most fascinating aspect of the marching sound is that its escalating tempo was, in part, an accident of the hardware. The machine could only move a limited number of on-screen objects efficiently, so with a full screen of invaders the game ran relatively slowly, and the aliens crept along. As the player destroyed invaders, the processor had fewer objects to update, and the survivors sped up as a consequence. Designer Tomohiro Nishikado had arranged for a sound to play each time the invaders moved — so as the remaining aliens accelerated, the marching tone automatically sped up with them. A technical constraint was thus transformed into one of the earliest examples of dynamic, gameplay-responsive audio.\n\nThis coupling of sound to game state was quietly revolutionary. The music was not a fixed backing track but a reactive element that reflected exactly how the game was going: a slow, ominous throb when the screen was full, a frantic, racing pulse in the final desperate moments before the last invaders reached the bottom. The player could gauge the danger with their ears alone, and the rising tension became inseparable from the experience. It was interactive game music before the concept had a name.\n\nThe Space Invaders march has been studied as a foundational moment in game audio, credited with pioneering techniques — visual-audio mirroring, sound competing with sound effects, and tempo interactivity — that remain relevant to game composition today. Its four simple notes evoke instant nostalgia and are among the most iconic sounds the medium has ever produced, a reminder that some of gaming\'s most powerful audio ideas emerged from the tightest technical limitations of its earliest years.',
+    keyFacts: [
+      'A loop of four descending notes that plays as the alien horde advances',
+      'The tempo speeds up as invaders are destroyed, ratcheting up tension',
+      'The acceleration was partly a hardware side effect — fewer objects meant faster updates',
+      'An early example of dynamic, gameplay-responsive game audio',
+    ],
+    sections: [
+      {
+        title: 'A Limitation Turned Into Genius',
+        html: '<p>The march\'s brilliance emerged partly by accident. Space Invaders\' hardware could only efficiently move a limited number of objects, so a full screen of invaders updated slowly and the aliens moved sluggishly; as the player shot them down, the reduced object count let the survivors speed up. Because designer Tomohiro Nishikado had tied a sound to each movement of the invaders, that sound automatically accelerated along with them, so the marching tempo rose in lockstep with the on-screen threat. What began as a processing constraint became one of gaming\'s first pieces of dynamic audio — a soundtrack that responded directly to the state of play without any deliberate system designed to make it do so.</p>',
+      },
+      {
+        title: 'The Blueprint for Game Audio',
+        html: '<p>The four-note march is regarded as a foundational moment in the history of game sound. It demonstrated that audio could be interactive rather than static — that a soundtrack could tell the player how the game was going, building dread as the tempo quickened toward the invaders\' arrival. Scholars have identified in it several techniques still central to game composition: mirroring the visuals in sound, letting music and sound effects compete for the player\'s attention, and making tempo respond to gameplay. Its instantly recognisable tones remain a symbol of early arcade gaming, proof that a handful of simple notes, coupled tightly to play, could achieve an emotional effect out of all proportion to their simplicity.</p>',
+      },
+    ],
+  },
+  {
+    id: 'street-fighter-2-ko',
+    title: 'Street Fighter II — "K.O." & the Announcer',
+    game: 'Street Fighter II: The World Warrior',
+    platform: 'Arcade',
+    year: 1991,
+    era: '16-bit',
+    creator: 'Capcom (voiced by "Mr. Gol" and a programmer, "Mr. Scott")',
+    sfxType: 'Voice',
+    description: 'The booming digitised announcer of Street Fighter II — "Round One… Fight!", the emphatic "K.O.", and the coveted "Perfect" — gave fighting-game victory its definitive voice, recorded almost by chance using whoever happened to be available at Capcom.',
+    longDescription: 'When Street Fighter II: The World Warrior arrived in arcades in 1991 and ignited the fighting-game boom, its digitised announcer became an inseparable part of the experience. Booming out over the CPS-1 hardware, the announcer framed every match with a set of now-iconic callouts: "Round One," the commanding "Fight!" that started the action, the emphatic "K.O." that punctuated a knockout, "Perfect" for a flawless round, and "You Win" for the victor. These samples became so associated with competitive fighting that they effectively defined how a fighting game was supposed to sound.\n\nThe origin of the voice is a charmingly haphazard piece of game-development history. According to accounts from the developers, the announcer was performed by a man remembered as "Mr. Gol" (his name variously rendered Gol, Gor, or Goru), a foreigner who had been introduced to Capcom through a former classmate and collaborator of company president Kenzo Tsujimoto. Artist Akiman called upon him essentially because he was the only foreigner on hand at the time and could deliver the English lines with the right punch. Mr. Gol recorded the country and stage announcements, but when additional words needed recording later, he was no longer available — so a programmer known as "Mr. Scott" was brought in to voice the remaining samples. The definitive sound of Street Fighter II\'s announcer was thus assembled from whoever happened to be present when the microphone was ready.\n\nThe technical context mattered too. These were digitised speech samples running on the CPS-1 arcade board, which gave them their characteristic crunchy, compressed, larger-than-life quality. In a loud arcade, the announcer\'s voice cut through the ambient noise to mark the crucial beats of a match — the start, the knockout, the perfect victory — providing an aural punctuation that heightened the drama and gave spectators and players alike clear, satisfying audio cues for the ebb and flow of a fight.\n\n"K.O." and its companion callouts became foundational to the entire genre. Later fighting games, whether from Capcom or its competitors, adopted the convention of a commanding announcer marking rounds and knockouts, and the specific cadence of Street Fighter II\'s samples has been referenced, parodied, and imitated for decades. What began as an improvised recording session using an available foreigner and a programmer produced some of the most recognisable voice samples in gaming — sounds that, more than thirty years later, still instantly evoke the golden age of the arcade fighter.',
+    keyFacts: [
+      'Iconic callouts included "Round One," "Fight!", "K.O.", "Perfect," and "You Win"',
+      'The announcer was voiced by "Mr. Gol," a foreigner available at Capcom, plus a programmer, "Mr. Scott"',
+      'Digitised speech samples running on the CPS-1 arcade hardware gave them their crunchy quality',
+      'Established the commanding-announcer convention copied across the fighting-game genre',
+    ],
+    sections: [
+      {
+        title: 'Recorded by Whoever Was Available',
+        html: '<p>The announcer\'s voice came together with almost no formal casting. Developers recall that the samples were first recorded by "Mr. Gol," a foreigner introduced to Capcom through a connection of company president Tsujimoto, chosen largely because he was the only foreigner on hand when English lines were needed. When further words had to be recorded and Mr. Gol was unavailable, a programmer remembered as "Mr. Scott" stepped in to voice the rest. The result — one of the most recognisable set of voice samples in gaming — was thus an improvised patchwork of whoever could reach the microphone, a reminder of how informal game production could be even on a title that would reshape the industry.</p>',
+      },
+      {
+        title: 'The Voice of a Genre',
+        html: '<p>Street Fighter II\'s announcer did more than decorate the game; it established the aural template for the entire fighting genre. The crunchy, digitised "Fight!", "K.O.", and "Perfect" that rang out over CPS-1 hardware gave matches clear, dramatic punctuation that cut through the din of a crowded arcade, cueing players and spectators to the key moments of a bout. Subsequent fighting games embraced the commanding-announcer convention, and the specific rhythm and phrasing of Street Fighter II\'s callouts have been echoed and parodied ever since. From an improvised recording session emerged sounds so definitive that they remain shorthand for competitive fighting games decades later.</p>',
+      },
+    ],
+  },
+  {
+    id: 'mortal-kombat-finish-him',
+    title: 'Mortal Kombat — "Finish Him!" & "Fatality"',
+    game: 'Mortal Kombat',
+    platform: 'Arcade',
+    year: 1992,
+    era: '16-bit',
+    creator: 'Midway (definitive voice: Steve Ritchie, from Mortal Kombat II)',
+    sfxType: 'Voice',
+    description: 'The guttural announcer command "Finish Him!" and the triumphant cry of "Fatality!" turned Mortal Kombat\'s gruesome finishing moves into a cultural event — with the series\' definitive voice supplied by a pinball designer working in the same building.',
+    longDescription: 'Mortal Kombat, released by Midway in 1992, built much of its notoriety on its finishing moves — the brutal Fatalities that let a victorious player execute a gruesome final blow on a defeated, dazed opponent. What framed and announced these moments was the game\'s deep, commanding voice: after a round-winning blow left the loser swaying, the announcer would growl "Finish Him!" (or "Finish Her!"), giving the player a brief window to input the secret command for a Fatality, after which the announcer would bellow the word "Fatality!" over the carnage. These two callouts became the auditory signature of the entire franchise and among the most quoted lines in gaming.\n\nThe voice most associated with these lines belongs to Steve Ritchie, though his involvement began not with the 1992 original but with its 1993 sequel. Ritchie was a legendary pinball designer who worked on a different floor of the same building as the Mortal Kombat development team, and this proximity led to his recruitment. For Mortal Kombat II he recorded his take on the majority of the series\' most famous lines — "Fatality," "Flawless Victory," and the ubiquitous "Round One… Fight!" — and his booming, theatrical delivery became so definitive that it is the sound most players associate with the franchise. The original 1992 game had used a different digitised announcer, but Ritchie\'s rendition from the sequel onward set the template.\n\nThe power of these voice samples came partly from their pairing with the game\'s shocking digitised violence. Mortal Kombat used photographed actors rather than drawn sprites, and the realism of its fighters made the Fatalities — and the announcer\'s relish in commanding them — feel transgressive and thrilling in a way no other game had managed. The combination of "Finish Him!", a gory finishing move, and the guttural "Fatality!" created a ritual of spectacle that arcade crowds gathered to witness, and it became central to the moral panic over video game violence that helped spur the creation of the ESRB ratings system.\n\n"Finish Him!" and "Fatality!" transcended the games to become pop-culture catchphrases, endlessly quoted, referenced, and parodied far beyond gaming. The revelation that the imposing voice behind them belonged to a mild-mannered, middle-aged pinball designer only added to their legend. Few voice samples in gaming have achieved such cultural penetration, and the guttural announcer of Mortal Kombat remains instantly recognisable as the sound of over-the-top, gleefully violent arcade combat.',
+    keyFacts: [
+      '"Finish Him!"/"Finish Her!" cues the player to perform a Fatality on a dazed opponent',
+      'The announcer then bellows "Fatality!" over the finishing move',
+      'The definitive voice is Steve Ritchie, a pinball designer recruited from the same building — starting with Mortal Kombat II',
+      'The callouts became pop-culture catchphrases and fed the 1990s debate over game violence',
+    ],
+    sections: [
+      {
+        title: 'The Pinball Designer Behind the Voice',
+        html: '<p>The imposing announcer so central to Mortal Kombat\'s identity came from an unexpected source. Steve Ritchie, a celebrated pinball designer, worked on a different floor of the same building as the Mortal Kombat team, and that simple proximity led to his recruitment. Beginning with Mortal Kombat II in 1993, he recorded the bulk of the series\' most famous lines — "Fatality," "Flawless Victory," "Round One… Fight!" — in a booming, theatrical voice that became the definitive sound of the franchise (the 1992 original had featured a different digitised announcer). The contrast between the ferocious voice and the affable middle-aged man behind it became a beloved piece of gaming trivia, and Ritchie\'s delivery cemented these callouts as some of the medium\'s most iconic.</p>',
+      },
+      {
+        title: 'The Sound of Controversy',
+        html: '<p>The impact of "Finish Him!" and "Fatality!" was inseparable from the digitised violence they accompanied. Mortal Kombat\'s use of photographed actors gave its fighters a shocking realism, and the announcer\'s gleeful command to execute a gruesome finishing move made the Fatalities feel genuinely transgressive. This spectacle drew crowds in arcades and drew fury from critics, feeding the moral panic over video game violence that culminated in congressional hearings and the creation of the ESRB rating system. The callouts escaped gaming entirely to become pop-culture catchphrases, quoted and parodied for decades. Few sounds in gaming have carried such cultural weight, marking both the height of arcade spectacle and a pivotal moment in the debate over content in games.</p>',
+      },
+    ],
+  },
 ];

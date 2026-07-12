@@ -337,4 +337,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'super-mario-kart-1992',
+    title: 'Super Mario Kart',
+    game: 'Super Mario Kart',
+    platform: 'Super Nintendo',
+    year: 1992,
+    era: '16-bit',
+    playerCount: 2,
+    type: 'Competitive',
+    description: 'Super Mario Kart invented the kart-racing genre around two-player split-screen competition, pairing item-based combat racing with a dedicated Battle Mode that made "pick up and play" multiplayer its entire reason for being.',
+    longDescription: 'Super Mario Kart, released for the Super Nintendo in 1992, did not merely add a multiplayer mode to a racing game — it was conceived from the ground up as a multiplayer experience. Where its stablemate F-Zero had been a single-player showcase of the SNES\'s Mode 7 scaling, Mario Kart used the same technology to present the entire game in a permanent two-player-friendly split screen, with the top and bottom halves of the display always ready for a second racer. This design decision shaped everything about the game and gave birth to an entire genre.\n\nThe game offered several ways for two players to compete. In the two-player Mario GP mode, both players raced through the grand prix circuits against a reduced field of computer opponents, with progression to the next track requiring only that one of them finish in the top four. Match Race (later known as VS) mode stripped away the AI entirely for a pure one-on-one race on any track the players chose. But the mode that would prove most influential was Battle Mode, a dedicated combat arena format with no racing objective at all.\n\nBattle Mode placed two players in one of four purpose-built arenas, each surrounded by three balloons representing their lives. The goal was simply to pop the opponent\'s balloons by pelting them with the game\'s arsenal of items — Koopa shells, banana peels, and the rest — while dodging their attacks and manoeuvring around the enclosed course. This distilled the game\'s item-combat racing down to its most direct, competitive essence, and it was invented specifically as another way to enjoy head-to-head play. Battle Mode became a beloved staple that every subsequent Mario Kart would carry forward.\n\nWhat made Super Mario Kart so influential was its focus on accessible, intuitive, weaponised competition. Rather than emphasising complex tracks and single-player time trials like most racing games of the era, it built its identity around two players, easy pick-up-and-play controls, and the chaos of items disrupting one another\'s progress. This template — kart racing as a social, combat-driven multiplayer experience — proved enormously durable, spawning the entire kart-racing genre and establishing Mario Kart as one of gaming\'s definitive multiplayer franchises.',
+    keyFacts: [
+      'Designed from the start as a multiplayer game, presented entirely in split screen',
+      'Offered two-player Grand Prix, one-on-one Match Race, and a dedicated Battle Mode',
+      'Battle Mode had players pop three balloons on their opponent using items in enclosed arenas',
+      'Founded the kart-racing genre and made weaponised, pick-up-and-play competition its core',
+    ],
+    sections: [
+      {
+        title: 'Built for Two From the Start',
+        html: '<p>Super Mario Kart\'s defining choice was to treat multiplayer not as an add-on but as the point of the game. Its permanent split-screen presentation — top and bottom halves always available for two racers — contrasted sharply with the single-player focus of contemporaries like F-Zero, and it meant the whole design was oriented around head-to-head play. The controls were kept simple and intuitive for easy pick-up-and-play, and the item system introduced deliberate chaos so that skill could be upended by a well-timed shell or banana. This orientation toward accessible, social competition is what separated Mario Kart from the more solitary, simulation-minded racing games of its day.</p>',
+      },
+      {
+        title: 'Inventing Battle Mode',
+        html: '<p>The most forward-looking element was Battle Mode, a format with no finish line at all. Two players spawned in one of four enclosed arenas, each protected by three balloons, and fought to pop the other\'s balloons using the game\'s items while evading return fire. It distilled the item-combat racing into its purest competitive form and was conceived specifically as an additional way to enjoy the game with a friend. Battle Mode proved so popular that it became a permanent fixture of the series, and its arena-combat concept influenced multiplayer design well beyond kart racing — a small mode that grew into one of the franchise\'s most cherished traditions.</p>',
+      },
+    ],
+  },
+  {
+    id: 'nba-jam-1993',
+    title: 'NBA Jam',
+    game: 'NBA Jam',
+    platform: 'Arcade',
+    year: 1993,
+    era: '16-bit',
+    playerCount: 4,
+    type: 'Competitive',
+    description: 'Midway\'s NBA Jam turned basketball into over-the-top two-on-two arcade spectacle with four-player simultaneous play, digitised real NBA stars, and the immortal cry of "He\'s on fire!" — earning a billion dollars and defining social arcade multiplayer.',
+    longDescription: 'NBA Jam, developed and published by Midway for arcades in 1993, took the sober sport of basketball and reimagined it as riotous, exaggerated spectacle. Based on the earlier Midway game Arch Rivals, it stripped the sport down to fast, frantic two-on-two matches played with digitised images of real, licensed NBA players and — crucially — no referee, freeing players to shove, elbow, and perform physically impossible dunks that sent players flying metres into the air. This deliberate abandonment of realism in favour of arcade excess was the heart of its appeal.\n\nThe game supported four-player simultaneous multiplayer, seating two teams of two at a shared cabinet, and this social configuration was central to its phenomenon. Four friends could crowd around a single machine, two-on-two, trash-talking and competing in matches short and chaotic enough that a crowd was always cycling through. The combination of easy-to-grasp controls, licensed star players, and constant dramatic momentum swings made NBA Jam a magnet for group play, the kind of game that drew onlookers who would put their quarters up to challenge the winners.\n\nNBA Jam\'s personality was amplified enormously by its audio. Announcer Tim Kitzrow provided a stream of hyperbolic commentary whose lines became cultural touchstones — most famously "Boomshakalaka!" for a monster dunk and "He\'s on fire!" for the game\'s signature mechanic. If a player sank three consecutive baskets, they became "on fire": their shots trailed literal flames, their turbo meter stopped draining, goaltending was never called against them, and their accuracy soared until the opposing team scored. This risk-reward streak system gave matches wild swings of momentum and became one of the most imitated mechanics in sports gaming.\n\nThe commercial results were staggering. During its original arcade run, NBA Jam earned roughly a billion dollars in revenue — approximately three times the box-office take of the 1993 blockbuster Jurassic Park — figures that testify to how completely it dominated arcades. Its blend of licensed authenticity, cartoonish exaggeration, four-player social play, and quotable commentary made it a defining multiplayer experience of the 1990s and established a template for accessible, spectacle-driven sports games that endures to this day.',
+    keyFacts: [
+      'Fast two-on-two basketball with four-player simultaneous play at a shared cabinet',
+      'Featured digitised images of real, licensed NBA players and no referee',
+      'The "on fire" mechanic rewarded three straight baskets with flaming, unstoppable shots',
+      'Earned around $1 billion in arcades — roughly three times the take of Jurassic Park',
+    ],
+    sections: [
+      {
+        title: 'Four Players, One Cabinet',
+        html: '<p>NBA Jam\'s four-player simultaneous mode was the engine of its social success. Two teams of two crowded around a single machine for short, frantic matches, and the shared-cabinet format turned every game into a group event full of trash talk and shifting alliances of attention. The controls were simple enough for anyone to grasp instantly, and the licensed NBA stars gave players real rooting interests, while the constant momentum swings kept spectators invested and ready to challenge the winners. This design made NBA Jam a quintessential arcade gathering point, the kind of machine a crowd formed around, and it demonstrated how powerfully four-player local play could drive a game\'s popularity.</p>',
+      },
+      {
+        title: 'On Fire',
+        html: '<p>The "on fire" mechanic became NBA Jam\'s signature and one of the most copied ideas in sports gaming. Sinking three consecutive baskets set a player ablaze — shots trailed flames, the turbo meter stopped depleting, goaltending calls vanished, and accuracy spiked until the other team finally scored. This created dramatic, swingy momentum that made comebacks and hot streaks genuinely thrilling, and announcer Tim Kitzrow\'s ecstatic "He\'s on fire!" and "Boomshakalaka!" turned those moments into shared spectacle. The mechanic, the commentary, and the exaggerated dunks together defined the game\'s identity, proving that abandoning realism for pure arcade excitement could produce a billion-dollar phenomenon.</p>',
+      },
+    ],
+  },
+  {
+    id: 'micro-machines-1991',
+    title: 'Micro Machines',
+    game: 'Micro Machines',
+    platform: 'NES',
+    year: 1991,
+    era: '8-bit',
+    playerCount: 2,
+    type: 'Competitive',
+    description: 'Codemasters\' Micro Machines raced tiny toy cars across breakfast tables and pool tables on a single shared screen, sidestepping the NES\'s split-screen limits with a clever "force the other player off-screen" design that later evolved into eight-player pad-sharing.',
+    longDescription: 'Micro Machines, developed by Codemasters and published for the NES in 1991, turned the constraint of modest 8-bit hardware into a distinctive and hugely enjoyable multiplayer racer. Themed around the real-world Micro Machines line of miniature toy vehicles, the game raced tiny cars, boats, and tanks across oversized everyday environments — breakfast tables strewn with cereal and spilled milk, pool tables, garden paths, and school desks — from a top-down perspective that made the household scenery into elaborate racetracks.\n\nThe game\'s cleverest solution addressed a real technical problem. Implementing split-screen multiplayer on the NES while maintaining acceptable performance was difficult, so rather than dividing the display, Codemasters kept both players on a single shared screen and built the competition around that limitation. In head-to-head races, the two cars fought to pull ahead of one another on the same view: when one player got far enough in front to push the other off the edge of the screen, a slider at the side of the screen shifted in the leader\'s favour. Winning enough of these micro-contests — pulling ahead decisively several more times than the opponent managed — won the level outright, while completing three laps declared whoever was leading the winner. This elegant system delivered genuine two-player racing without any split screen at all.\n\nThe single-screen approach had a side benefit: it made the racing intensely direct and confrontational, since both players were always visible and in constant, immediate competition rather than off in separate views. Falling behind carried real, escalating jeopardy, and the constant threat of being shoved off-screen kept both players tense and engaged. This design proved so effective that it became a hallmark of the series.\n\nLater entries in the Micro Machines series pushed the shared-controller, single-screen philosophy even further with the famous "Pad Share" feature, which allowed up to eight people to play using only a handful of controllers — two players squeezing onto a single pad, one steering with the directional buttons while the other used the face buttons. This ingenious approach to squeezing maximum players out of minimal hardware made Micro Machines a legendary party game and demonstrated how creative design could turn technical limitations into a defining multiplayer identity, achieving on humble hardware what many bigger games could not.',
+    keyFacts: [
+      'Top-down racing of tiny toy vehicles across breakfast tables, pool tables, and desks',
+      'Avoided split-screen — instead both players shared one screen with a "push them off-screen" system',
+      'Pulling far enough ahead to force the opponent off-screen shifted a slider toward victory',
+      'Later entries added "Pad Share," letting up to eight play by sharing controllers',
+    ],
+    sections: [
+      {
+        title: 'One Screen, Two Racers',
+        html: '<p>Micro Machines turned an NES hardware limitation into its defining mechanic. Because true split-screen was impractical on the console without hurting performance, Codemasters kept both players on a single shared view and made that the basis of competition: the two cars raced on the same screen, and pulling far enough ahead to push the opponent off the edge nudged a scoring slider toward the leader. Win enough of these moment-to-moment battles, or lead after three laps, and the level was yours. The design produced a uniquely direct, confrontational form of racing in which both players were always visible and always in immediate, escalating jeopardy — a constraint transformed into a strength.</p>',
+      },
+      {
+        title: 'The Pad Share Revolution',
+        html: '<p>The single-screen philosophy reached its fullest expression in later Micro Machines games with the "Pad Share" feature, a solution to the perennial problem of too few controllers. Rather than requiring one pad per player, Pad Share let two people share a single controller — one steering with the directional pad, the other with the face buttons — so that up to eight players could compete using only a handful of controllers. This turned Micro Machines into a legendary living-room party game and showcased the series\' knack for wringing maximum multiplayer fun from minimal hardware, an ethos rooted in the original NES game\'s clever single-screen design and carried forward as the franchise\'s signature.</p>',
+      },
+    ],
+  },
 ];
