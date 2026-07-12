@@ -420,5 +420,107 @@ module.exports = [
         html: '<p>Konami\'s decision to make the Belmont clan a hereditary line of vampire hunters rather than a single recurring hero was a sophisticated piece of franchise world-building. Simon is the founding figure of gaming\'s Castlevania lore, but his story takes place within a mythology that extends centuries backward and forward — Quincy Belmont in 1897, Trevor Belmont in 1476, Juste Belmont in 1748. This temporal breadth gave the series a historical epic quality unusual for action games.</p><p>The weight of the Belmont legacy — the obligation to take up the Vampire Killer when Dracula resurfaces every hundred years — gives Simon\'s story a fatalistic dimension. He did not choose to be a monster hunter; he was born to it, trained for it, carries a weapon forged for it. This sense of predestination, of a character defined by lineage as much as by personal choice, distinguishes Simon from the self-made heroes of most action games and gives Castlevania\'s world a tragic grandeur that its 8-bit graphics could only hint at.</p>'
       }
     ]
+  },
+  {
+    id: 'pac-man',
+    name: 'Pac-Man',
+    franchise: 'Pac-Man',
+    platform: 'Arcade',
+    debutYear: 1980,
+    creator: 'Toru Iwatani',
+    era: 'Golden Age',
+    role: 'Protagonist',
+    description: 'A round yellow creature who eats dots while fleeing four coloured ghosts, Pac-Man became the most recognisable video game character in America and the mascot of an entire industry — designed deliberately to appeal beyond the young men who dominated arcades.',
+    longDescription: 'Pac-Man debuted in Namco\'s 1980 arcade maze game, originally titled Puck Man in Japan, where it was released on 22 May 1980 before Midway Manufacturing brought it to North America that August. Designed by Toru Iwatani leading a nine-man team, the game grew out of a deliberate ambition to break away from the war and sports themes that dominated arcades and appeal to women and couples as well as the young men who were the medium\'s core audience. That intent shaped everything from the non-violent premise of eating dots to the friendly, abstract simplicity of the character himself.\n\nThe design of Pac-Man is one of gaming\'s most famous origin stories. Iwatani has recounted seeing a pizza with a slice removed and recognising the remaining shape as a character built around the act of eating — though he has been careful to note in interviews that the pizza was only one of several inspirations. Equally important were the Japanese character for mouth, "kuchi" (口), and the onomatopoeia "paku paku," the sound of repeated chewing, which also gave the character his name. The result was a shape so simple it was instantly legible on primitive hardware yet endlessly expressive: a mouth that consumes the maze.\n\nThe game\'s mechanics gave Pac-Man his enduring drama. He must clear every dot from an enclosed maze while evading four coloured ghosts, each with its own pursuit behaviour, and his only recourse is the flashing Power Pellets that briefly turn the ghosts blue and edible, reversing predator and prey. This simple loop of tension and release proved universally appealing and made Pac-Man a phenomenon far beyond the arcade, spawning a hit single, a Saturday-morning cartoon, and a merchandising empire.\n\nPac-Man\'s cultural reach is difficult to overstate. In 2009 Guinness World Records listed him as the most recognisable video game character in the United States, recognised by 94% of the population — edging out even Mario. As Namco\'s enduring mascot and one of the founding icons of the medium, Pac-Man represents the moment video games broke into mainstream popular culture, and his simple yellow silhouette remains shorthand for the entire art form more than four decades later.',
+    abilities: [
+      'Eating dots and clearing enclosed mazes',
+      'Power Pellets that turn ghosts vulnerable and edible',
+      'Eating bonus fruit for extra points',
+      'Navigating warp tunnels to escape pursuit',
+    ],
+    keyFacts: [
+      'Debuted as Puck Man in Japan on 22 May 1980; renamed Pac-Man for North America',
+      'Designed by Toru Iwatani to appeal to women and couples, not just young men',
+      'Shape inspired by a pizza missing a slice, the kanji for mouth, and the sound "paku paku"',
+      'Named the most recognisable US video game character by Guinness in 2009 (94% recognition)',
+    ],
+    sections: [
+      {
+        title: 'Origins and Design',
+        html: '<p>Development began in early 1979 with Toru Iwatani leading a nine-person team at Namco, motivated by a desire to create a game that women and couples would enjoy at a time when arcades were dominated by shooting and sports titles aimed at young men. The famous account of Iwatani spotting a pizza with a slice removed and seeing a character defined by eating is genuine, but he has repeatedly stressed it was one influence among several — the Japanese character for mouth, "kuchi," and the chewing onomatopoeia "paku paku" mattered just as much, the latter giving the character his name. When Bally/Midway localised the game for America, they renamed it from Puck Man to Pac-Man out of fear that vandals would scratch the "P" into an obscenity.</p>',
+      },
+      {
+        title: 'Cultural Legacy',
+        html: '<p>Pac-Man escaped the arcade to become one of the first true multimedia franchises: a Billboard-charting novelty song ("Pac-Man Fever"), an animated television series, and a flood of merchandise turned the character into a household name. The design\'s abstract simplicity — a shape that reads clearly at any size and carries no cultural or linguistic baggage — helped it travel globally and endure across generations of hardware. By 2009 Guinness had certified him as the most recognisable video game character in the United States, and he remains Namco\'s mascot and a universal symbol of gaming itself, invoked whenever the medium\'s history and cultural arrival are discussed.</p>',
+      },
+    ],
+  },
+  {
+    id: 'kirby',
+    name: 'Kirby',
+    franchise: 'Kirby',
+    platform: 'Game Boy',
+    debutYear: 1992,
+    creator: 'Masahiro Sakurai',
+    era: '16-bit',
+    role: 'Protagonist',
+    description: 'A round pink puffball who inhales enemies and copies their abilities, Kirby debuted in 1992 as the deceptively simple creation of a 19-year-old Masahiro Sakurai — a character built to be approachable for newcomers yet deep enough to anchor one of Nintendo\'s most enduring franchises.',
+    longDescription: 'Kirby made his debut in Kirby\'s Dream Land, a 1992 Game Boy platformer developed by HAL Laboratory and published by Nintendo. It was the first game in the Kirby series and the debut work of designer Masahiro Sakurai, then only nineteen years old, who would later go on to create the Super Smash Bros. series. Sakurai conceived Kirby\'s Dream Land as a game that anyone unfamiliar with action titles could pick up and enjoy, an accessibility-first philosophy embodied in Kirby\'s signature ability to float — by puffing himself up with air — which let struggling players simply fly over obstacles they could not otherwise pass.\n\nKirby\'s most famous colour was, for a time, a matter of confusion. Sakurai always intended the character to be pink, and his concept art reflected that, but the Game Boy\'s monochrome screen made his colour impossible to display in the game itself. This led to a now-legendary situation in which other members of the team were unaware of his intended hue — Shigeru Miyamoto reportedly assumed Kirby was meant to be yellow. The disagreement surfaced when the character appeared in colour on the North American box art, and the definitive pink was ultimately cemented with the character\'s later appearances on colour-capable hardware.\n\nThe name "Kirby" carries a piece of gaming legal history. It was chosen partly in honour of John Kirby, the American lawyer who successfully defended Nintendo in the landmark Universal City Studios v. Nintendo case over Donkey Kong, and partly because the developers were amused by the contrast between the harsh, hard-consonant sound of the name and the character\'s round, cute appearance. That juxtaposition — gentle looks concealing genuine capability — became a running theme of the franchise.\n\nKirby\'s defining mechanic, the Copy Ability, was introduced in the 1993 sequel Kirby\'s Adventure rather than the original game: by inhaling and swallowing certain enemies, Kirby gains their powers, transforming into fire, sword, cutter, and dozens of other variants. This system gave the deceptively simple character remarkable depth and versatility, and it became the foundation of the series\' identity. More than three decades on, Kirby remains one of Nintendo\'s most beloved and recognisable mascots, a fixture of both his own long-running series and the Super Smash Bros. roster.',
+    abilities: [
+      'Inhaling enemies and objects',
+      'Copy Ability — gaining the powers of swallowed enemies',
+      'Floating by puffing up with air',
+      'Star Spit — expelling inhaled foes as projectiles',
+    ],
+    keyFacts: [
+      'Debuted in Kirby\'s Dream Land (1992), the first game designed by a 19-year-old Masahiro Sakurai',
+      'Always intended to be pink, but the Game Boy\'s monochrome screen hid his colour — Miyamoto thought he was yellow',
+      'Named partly after John Kirby, the lawyer who defended Nintendo in the Donkey Kong lawsuit',
+      'The signature Copy Ability was introduced in the 1993 sequel Kirby\'s Adventure',
+    ],
+    sections: [
+      {
+        title: 'Origins and Design',
+        html: '<p>Kirby began as the debut project of Masahiro Sakurai at HAL Laboratory, built around a design goal of total accessibility: Sakurai wanted a game that people with no experience of action titles could immediately enjoy, and Kirby\'s ability to inflate and float gave less-skilled players a way to bypass difficult sections by simply flying over them. The character\'s intended pink colouration could not be shown on the Game Boy\'s monochrome display, producing the famous internal uncertainty about his colour — Shigeru Miyamoto assumed yellow — that was only settled once the character reached colour hardware and box art. The name paired a deliberately harsh sound with a cute form, and nodded to lawyer John Kirby, who had defended Nintendo in the Universal City Studios case.</p>',
+      },
+      {
+        title: 'The Copy Ability',
+        html: '<p>Though absent from the original Dream Land, the Copy Ability introduced in Kirby\'s Adventure (1993) became the franchise\'s defining mechanic. By inhaling and swallowing particular enemies, Kirby absorbs their powers and transforms — gaining swords, flames, cutters, and dozens of other abilities, each altering how he plays. This system turned a character defined by simplicity into one with enormous mechanical variety, letting the series continually reinvent itself while keeping Kirby himself approachable. It is the clearest expression of the franchise\'s core contrast: a soft, unintimidating hero who nonetheless commands a vast and adaptable arsenal, a duality that has kept Kirby a Nintendo mainstay for over thirty years.</p>',
+      },
+    ],
+  },
+  {
+    id: 'ryu',
+    name: 'Ryu',
+    franchise: 'Street Fighter',
+    platform: 'Arcade',
+    debutYear: 1987,
+    creator: 'Takashi Nishiyama',
+    era: '8-bit / Arcade',
+    role: 'Protagonist',
+    description: 'The white-gi\'d wandering warrior of Street Fighter, Ryu is Capcom\'s flagship fighter and the archetypal fighting-game hero — a disciplined martial artist forever seeking stronger opponents, and the origin of the Hadoken that every fighting game since has echoed.',
+    longDescription: 'Ryu made his debut as the main playable character of the 1987 arcade game Street Fighter and has served ever since as the protagonist and mascot of one of gaming\'s most important franchises. Clad in a white karate gi with a red headband and practising the fictional Ansatsuken style, he embodies the ideal of the "wandering warrior": a fighter who travels the world in search of challenging opponents to hone his skills, driven not by glory or wealth but by the pursuit of true strength and the "path of the fighter." That earnest, honourable characterisation made him the template for the disciplined-martial-artist archetype that fighting games would return to again and again.\n\nRyu\'s signature techniques, established in that first game, have become foundational vocabulary for the entire genre. The Hadoken — a projectile of channelled energy thrown from the palms — was conceived by designer Takashi Nishiyama, who drew inspiration from the wave-motion gun of the 1970s anime Space Battleship Yamato. His other two special moves, the rising Shoryuken uppercut and the spinning Tatsumaki Senpukyaku kick, were based on real martial-arts movements exaggerated for dramatic effect. Together these three inputs, executed via directional motions on the joystick, defined a control grammar that countless fighting games have imitated.\n\nEven the character\'s name reflects his designer\'s hand: "Ryu" derived from Takashi Nishiyama\'s own name, since the characters of "Takashi" can also be read as "Ryu" in certain readings. This personal connection underscores how central Ryu was to Street Fighter\'s conception — he was, in a sense, the designer\'s avatar within the game he built.\n\nIt was Street Fighter II (1991), however, that turned Ryu from a promising first-game protagonist into a global icon. As one of the two mirror-matched "shoto" characters alongside his rival Ken, Ryu anchored the game that ignited the fighting-game boom of the 1990s and established competitive fighting games as a genre. Across decades of sequels, crossovers, and appearances in series like Marvel vs. Capcom, Ryu has remained Capcom\'s definitive fighter and one of the most recognisable characters in all of gaming — the quiet, focused embodiment of the martial ideal at the heart of the medium\'s most enduring fighting franchise.',
+    abilities: [
+      'Hadoken — a thrown projectile of channelled energy',
+      'Shoryuken — a rising dragon-punch uppercut',
+      'Tatsumaki Senpukyaku — a spinning hurricane kick',
+      'Mastery of the Ansatsuken fighting style',
+    ],
+    keyFacts: [
+      'Debuted as the main character of the original Street Fighter (1987)',
+      'The Hadoken was inspired by the wave-motion gun from the anime Space Battleship Yamato',
+      'His name derives from designer Takashi Nishiyama\'s own name',
+      'Street Fighter II (1991) made him a global icon and helped launch the fighting-game genre',
+    ],
+    sections: [
+      {
+        title: 'Origins and Design',
+        html: '<p>Ryu was created by Takashi Nishiyama for the original 1987 Street Fighter, where he served as the sole main playable character. Nishiyama built the character around the notion of a travelling martial artist devoted purely to self-improvement, giving him the white gi, red headband, and stoic bearing that became instantly iconic. The signature Hadoken projectile came from Nishiyama\'s memory of the wave-motion gun in Space Battleship Yamato, while the Shoryuken and Tatsumaki Senpukyaku were exaggerated versions of genuine martial-arts techniques. The character\'s name even traces back to Nishiyama himself, since "Takashi" can be read as "Ryu," making Ryu something of an authorial signature embedded in the series\' protagonist.</p>',
+      },
+      {
+        title: 'Cultural Legacy',
+        html: '<p>Although Ryu originated in 1987, it was Street Fighter II in 1991 that elevated him to worldwide fame, pairing him with his rival Ken as the mirror-matched "shoto" fighters at the centre of the game that ignited the fighting-game boom. Ryu\'s move set became the genre\'s shared language: the quarter-circle Hadoken, the anti-air Shoryuken, and the sweeping hurricane kick are inputs that virtually every fighting-game player learns, and countless characters across the medium are variations on his archetype. Through decades of sequels and crossovers he has remained Capcom\'s flagship fighter and one of gaming\'s most recognisable faces, the enduring symbol of the disciplined martial-arts hero.</p>',
+      },
+    ],
   }
 ];

@@ -337,4 +337,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'final-fantasy-vii-ost',
+    title: 'Final Fantasy VII Original Soundtrack',
+    game: 'Final Fantasy VII',
+    platform: 'PlayStation',
+    year: 1997,
+    composer: 'Nobuo Uematsu',
+    era: '1990s',
+    trackCount: 85,
+    description: 'Nobuo Uematsu\'s sprawling four-disc score for Final Fantasy VII carried the series into the 3D era and gave the world "One-Winged Angel," the first Final Fantasy track with digitised vocals and the composer\'s most recognisable creation.',
+    longDescription: 'Released on 10 February 1997 through DigiCube, the Final Fantasy VII Original Soundtrack collected 85 tracks across four CDs, all composed, arranged, and produced by Nobuo Uematsu. It was the first Final Fantasy score written for the PlayStation, and Uematsu approached the transition from the SNES\'s sample-based sound to the PlayStation\'s CD-quality synthesis by composing on a far broader canvas — the game\'s cinematic ambitions and 3D presentation invited a score of correspondingly epic scale.\n\nDespite the hardware leap, most of the soundtrack still used sequenced synthesised instruments rather than recorded audio, since streaming full orchestral recordings would have consumed disc space the game needed elsewhere. Uematsu worked within this constraint to produce an enormous range of moods: the melancholy of "Aerith\'s Theme," the driving urgency of "Those Who Fight," the eerie ambience of the game\'s darker locations, and dozens of character and location themes that anchored the sprawling narrative. The music\'s emotional directness became central to how players remember the game.\n\nThe soundtrack\'s most famous moment is "One-Winged Angel," the climactic battle theme, which was the first track in the series to include digitised vocals — a choir singing Latin fragments (drawn partly from Carl Orff\'s Carmina Burana) over a menacing orchestral-metal fusion. Uematsu built the piece deliberately from short, dissonant fragments assembled into a whole, an unusual compositional method inspired in part by experimental rock. It has been described as his most recognisable contribution to the Final Fantasy canon and remains a fixture of orchestral game-music concerts worldwide.\n\n"Aerith\'s Theme," written for the game\'s most emotionally pivotal character, became equally iconic, its simple, mournful melody functioning as a leitmotif that pays off devastatingly at a key narrative moment. Between these two poles — the delicate and the apocalyptic — the FFVII soundtrack demonstrated the expressive breadth Uematsu could command, and it stands alongside his Final Fantasy VI work as one of the defining achievements of video game music in the 1990s.',
+    keyFacts: [
+      'Four-disc, 85-track compilation released through DigiCube on 10 February 1997',
+      'The first Final Fantasy score composed for the PlayStation',
+      '"One-Winged Angel" was the series\' first track with digitised vocals, using Latin choral fragments',
+      '"Aerith\'s Theme" became one of the most recognisable leitmotifs in all of game music',
+    ],
+    sections: [
+      {
+        title: 'Building "One-Winged Angel"',
+        html: '<p>Uematsu composed the game\'s final boss theme using an unusual fragmentary method, writing short musical phrases and assembling them into a whole rather than developing a single continuous melody, an approach he has likened to the cut-and-paste techniques of experimental rock. The choir sings Latin text partly adapted from Carl Orff\'s <em>Carmina Burana</em>, and the result fuses orchestral grandeur with an almost heavy-metal aggression. Because it was the first Final Fantasy piece to feature digitised vocals, it pushed the PlayStation\'s audio streaming to deliver something no prior entry had attempted, and it has since been re-arranged and performed orchestrally around the world, becoming the sound most listeners associate with the villain Sephiroth.</p>',
+      },
+      {
+        title: 'Working within the PlayStation\'s limits',
+        html: '<p>Although the PlayStation was capable of streaming recorded CD audio, Final Fantasy VII\'s music was still largely built from sequenced, synthesised instruments so that the disc\'s capacity could be reserved for the game\'s pre-rendered backgrounds and full-motion video. Uematsu therefore continued to rely on his craft as a sequencer-composer, coaxing emotional weight and variety from synthesised timbres across 85 tracks. The contrast between this technical modesty and the score\'s enormous emotional and dramatic reach is part of what makes the soundtrack a landmark, and later official arrangements — orchestral albums and the piano collections — revealed how strong the underlying compositions were once freed from the hardware.</p>',
+      },
+    ],
+  },
+  {
+    id: 'secret-of-mana-ost',
+    title: 'Secret of Mana Original Soundtrack',
+    game: 'Secret of Mana',
+    platform: 'Super Nintendo',
+    year: 1993,
+    composer: 'Hiroki Kikuta',
+    era: '1990s',
+    trackCount: 44,
+    description: 'Hiroki Kikuta\'s debut score for Secret of Mana wove progressive rock, ambient, and world-music influences into some of the most atmospheric music the SNES ever produced — the product of two years spent all but living in the studio.',
+    longDescription: 'Secret of Mana (1993) was Hiroki Kikuta\'s first video game score, and Square granted the newcomer an unusual degree of creative freedom. Kikuta responded by devoting more than two years to the music, reportedly leaving the office only twice a month as he refined every sound the SNES could produce. That obsessive investment is audible throughout: the soundtrack has a depth of texture and mood that sets it apart from the brighter, more melodic conventions of contemporary game music.\n\nKikuta was determined to extract maximum fidelity from the SNES\'s sample-based sound hardware, and he pursued this through a series of technical tricks. He sampled the console\'s instruments onto his own synthesiser to gain finer control over manipulating them, and he created a three-dimensional stereo effect by doubling an instrument across two tracks and applying vibrato to only one side of the stereo field — a subtle technique that gives the music an unusual sense of space and movement. He also allocated sound quality strategically, using lower-fidelity samples for low-register instruments like the bass drum while reserving the console\'s limited memory for crisp, high-quality cymbals and hi-hats where sharpness mattered most.\n\nStylistically, the score ranges widely, drawing on progressive rock, ambient soundscapes, and world music. It moves between ominous, solemn passages — marked by dark pianos and low bells — and lighter, pastoral melodies, giving the game\'s world a shifting emotional atmosphere rather than a single consistent tone. Tracks like the opening "Fear of the Heavens" establish a contemplative, almost meditative mood that few 16-bit soundtracks attempted, and the music\'s use of bells and unconventional harmonies became a signature of Kikuta\'s style.\n\nThe Secret of Mana soundtrack is widely regarded as one of the masterpieces not only of the 16-bit era but of game music as a whole, and it remains Kikuta\'s most celebrated work. Its influence lies in demonstrating how far the SNES\'s audio hardware could be pushed by a composer willing to treat its limitations as a creative discipline, and it helped establish atmosphere and mood — rather than pure melody — as legitimate goals for a game score.',
+    keyFacts: [
+      'Hiroki Kikuta\'s debut score, on which he spent more than two years of near-total studio focus',
+      'Created a 3D stereo effect by doubling instruments and applying vibrato to only one channel',
+      'Allocated sample fidelity strategically — low-fi for bass, hi-fi for crisp cymbals and hi-hats',
+      'Blended progressive rock, ambient, and world music into one of the 16-bit era\'s most atmospheric scores',
+    ],
+    sections: [
+      {
+        title: 'Coaxing depth from the SNES',
+        html: '<p>Kikuta began by sampling the SNES\'s built-in instruments onto his own synthesiser, giving himself far greater control over how each sound could be shaped and manipulated than the console\'s standard tools allowed. His most distinctive trick was a pseudo-stereo, three-dimensional effect achieved by doubling a single instrument across two tracks and applying vibrato to only one side of the stereo image, producing a shimmering sense of width and motion. Because the SNES\'s 64KB of audio memory could not hold everything in high fidelity, he made deliberate trade-offs — bass-register instruments could tolerate lower-quality samples, while cymbals and hi-hats were given the memory needed to stay crisp — squeezing maximum perceived quality from tightly limited hardware.</p>',
+      },
+      {
+        title: 'Mood over melody',
+        html: '<p>Where many contemporary game soundtracks prioritised hummable, upbeat themes, Kikuta pursued atmosphere. The score alternates between ominous, solemn passages built on dark pianos and low bells and lighter, pastoral pieces, giving the world of Mana a shifting emotional weather rather than a fixed identity. This emphasis on ambience and texture, drawn from his interest in progressive rock and world music, gave the soundtrack a contemplative quality unusual for 1993 and is a large part of why it is remembered as a landmark — proof that a 16-bit score could aim for immersive mood as seriously as any other element of game design.</p>',
+      },
+    ],
+  },
+  {
+    id: 'streets-of-rage-2-ost',
+    title: 'Streets of Rage 2 Original Soundtrack',
+    game: 'Streets of Rage 2 (Bare Knuckle II)',
+    platform: 'Sega Genesis / Mega Drive',
+    year: 1992,
+    composer: 'Yuzo Koshiro (with Motohiro Kawashima)',
+    era: '1990s',
+    trackCount: 26,
+    description: 'Yuzo Koshiro\'s soundtrack for Streets of Rage 2 brought club-ready techno and house to the Genesis, pushing the console\'s FM sound chip into genuine electronic dance music that critics have called years ahead of its time.',
+    longDescription: 'The Streets of Rage 2 soundtrack, composed mostly by Yuzo Koshiro with several tracks by Motohiro Kawashima, is one of the most acclaimed scores of the 16-bit era and a landmark in the integration of contemporary electronic dance music into video games. When Streets of Rage\'s development began around 1990, Koshiro was immersed in the club music of the day — techno and house in particular — and he set out to bring those sounds into a medium still dominated by chiptune conventions. The result was a soundtrack that functioned less like traditional game music and more like genuine dance music that happened to accompany a beat-\'em-up.\n\nThe music spans a remarkable breadth of electronic genres — electro, house, techno, hardcore, breakbeat, and ambient among them — with Koshiro describing his own approach as "hard-core techno." Tracks like "Go Straight" and "Dreamer" pair propulsive basslines and driving rhythms with melodic hooks, creating an energy that drives the on-screen action forward. This stylistic ambition was unusual for 1992 and gave the game a distinctive identity: its soundtrack felt current with the club scene rather than confined to the sonic vocabulary of games.\n\nAchieving this on the Genesis was a technical feat. The music was produced using the Yamaha FM synthesis chips of the Mega Drive (the YM2612) alongside the YM2608 in Koshiro\'s NEC PC-88 computer, and — crucially — Koshiro drove them with his own custom audio programming language, "Music Love," which he had developed to gain precise control over the hardware beyond what standard sound drivers permitted. This tooling let him sequence complex rhythms and evolving textures that showcased just how much expressive electronic music the YM2612 could produce in the right hands.\n\nThe soundtrack\'s reputation has only grown with time. It is routinely cited as being ahead of its era and as one of the finest achievements in game music, and its influence has been traced through chiptune, electronica, grime, and dubstep artists into the present day. Vinyl reissues and remasters have introduced it to new audiences, and it stands as the definitive demonstration of the Genesis sound chip\'s potential as an instrument for real electronic music.',
+    keyFacts: [
+      'Brought techno and house club music to the Genesis, described by Koshiro as "hard-core techno"',
+      'Driven by Koshiro\'s own custom audio programming language, "Music Love," for deep hardware control',
+      'Produced on the Mega Drive\'s YM2612 FM chip alongside the YM2608 in his PC-88',
+      'Widely cited as ahead of its time; influenced chiptune, electronica, grime, and dubstep artists',
+    ],
+    sections: [
+      {
+        title: 'Club music on a game console',
+        html: '<p>Koshiro\'s guiding ambition was to import the sound of early-1990s club culture — the techno and house he was listening to as Streets of Rage began development around 1990 — into a form of media that had almost no tradition of it. Rather than writing melodies designed around the limitations of game hardware, he wrote dance tracks first and made the hardware serve them, producing music that would not have sounded out of place in a nightclub of the period. This inversion of the usual priorities is why the soundtrack feels so distinct from its contemporaries and why it has aged so well: it was engaging with the wider music culture of its moment, not just the conventions of game audio.</p>',
+      },
+      {
+        title: 'The "Music Love" advantage',
+        html: '<p>Central to the soundtrack\'s technical achievement was Koshiro\'s custom audio programming language, "Music Love," which he wrote himself to control the Yamaha FM chips at a lower level than off-the-shelf sound drivers allowed. With it he could sequence intricate percussion, evolving synth textures, and the punchy basslines that give the score its momentum, extracting a richness from the YM2612 that few other Genesis composers matched. The combination of a composer fluent in contemporary electronic music and a bespoke toolchain built for expressive control is precisely why Streets of Rage 2 became the benchmark for what the Genesis sound hardware could do as a musical instrument.</p>',
+      },
+    ],
+  },
 ];
