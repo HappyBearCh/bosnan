@@ -396,4 +396,103 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'sm64-parallel-universes',
+    sources: [
+      { title: 'pannenkoek2012', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Pannenkoek2012' },
+      { title: '0.5x A Presses / But First We Need to Talk About Parallel Universes', publisher: 'Know Your Meme', url: 'https://knowyourmeme.com/memes/05x-a-presses-but-first-we-need-to-talk-about-parallel-universes' },
+    ],
+    title: 'Parallel Universes & the Half A-Press',
+    game: 'Super Mario 64',
+    platform: 'Nintendo 64',
+    year: 1996,
+    era: '64-bit',
+    discoveredYear: 2016,
+    technique: 'Position overflow exploitation (TAS-only)',
+    timeSaved: 'None — it costs 12+ hours to save a single button press',
+    description: 'By accelerating Mario to speeds so extreme that his position value overflows, players can reach "parallel universes" — copies of the level existing outside the map — in order to complete a star using only half of an A-press.',
+    longDescription: 'Super Mario 64 stores Mario\'s position as a number, and like all such numbers it has limits. If Mario moves fast enough in a single frame, his position value overflows and wraps around, placing him at a location far outside the intended map — a region the community calls a parallel universe, or PU. These are not new areas but arithmetic ghosts: the game\'s collision detection still functions there, so Mario can stand on floors that exist only as a mathematical echo of the real level.\n\nCritically, reaching a PU requires quadrupling the effect, because the engine checks Mario\'s hitbox four times during a single movement. The community therefore speaks of Quadruple Parallel Universes (QPUs), and travelling between them demands speeds so absurd that they cannot be reached by ordinary play. Building that speed means exploiting a glitch repeatedly, frame by frame, for an extraordinarily long time.\n\nThe technique achieved fame through the Super Mario 64 researcher pannenkoek2012, whose work centres on an unusual challenge: completing the game\'s stars using as few presses of the A button as possible. On 12 January 2016 he uploaded a commentated video, "SM64 – Watch for Rolling Rocks – 0.5x A Presses," explaining how a star could be obtained in half an A-press — the "half" arising because the press is held over from an earlier action rather than initiated fresh. The strategy took 14.8 hours from start to finish in a tool-assisted superplay, roughly twelve of which were spent building Mario\'s speed to the point where PU travel became possible.\n\nThe video went viral, spreading from 4chan\'s video game board and beyond, propelled by the surreal spectacle of a man explaining, with total scholarly seriousness, that "first, we need to talk about parallel universes." It became one of gaming\'s most famous pieces of technical folklore. It is worth stressing that this is not a speedrun technique in any practical sense — it costs half a day to save a single button press — but it is perhaps the purest example of a community reverse-engineering a game so deeply that it discovers spaces its creators never knew existed.',
+    keyFacts: [
+      'Mario\'s position value overflows at extreme speeds, placing him in "parallel universes" outside the map',
+      'The engine checks Mario\'s hitbox four times per movement, so travel requires Quadruple Parallel Universes (QPUs)',
+      'Popularised by pannenkoek2012\'s 12 January 2016 video "Watch for Rolling Rocks – 0.5x A Presses"',
+      'The tool-assisted strategy took 14.8 hours, about 12 of them spent building speed',
+    ],
+    sections: [
+      {
+        title: 'How Parallel Universes Work',
+        html: '<p>Super Mario 64 tracks Mario\'s position as a numeric value with finite limits. Push his speed high enough and, in a single frame, that value overflows and wraps around, depositing him at coordinates far outside the level as designed. The game does not know anything is wrong: collision detection keeps working, so Mario can land on floors that exist only as arithmetic echoes of the real map. Because the engine validates his hitbox four separate times during each movement, meaningful travel requires reaching a Quadruple Parallel Universe — a demand so extreme that the necessary speed cannot be built through normal play, only by exploiting a glitch repeatedly for hours on end.</p>',
+      },
+      {
+        title: 'The Half A-Press',
+        html: '<p>The technique became famous through pannenkoek2012, whose Super Mario 64 research pursues a peculiar goal: completing stars with the fewest possible presses of the A button. A press can count as "half" when it is held over from a prior action rather than initiated anew — and on 12 January 2016 he published a commentated video showing how the star in "Watch for Rolling Rocks" could be obtained in half an A-press, using parallel universe travel to get there. The tool-assisted strategy ran 14.8 hours, roughly twelve of them spent simply accelerating Mario. The video went viral on the strength of its narrator\'s deadpan gravity — "first, we need to talk about parallel universes" — and became a permanent piece of gaming folklore, an emblem of a community that had reverse-engineered a game more thoroughly than its makers ever did.</p>',
+      },
+    ],
+  },
+  {
+    id: 'super-metroid-x-ray-climb',
+    sources: [
+      { title: 'X-Ray Climb', publisher: 'Super Metroid Speedrunning Wiki', url: 'https://wiki.supermetroid.run/X-Ray_Climb' },
+      { title: 'Super Metroid', publisher: 'Speed Demos Archive Knowledge Base', url: 'https://kb.speeddemosarchive.com/Super_Metroid' },
+    ],
+    title: 'X-Ray Climb',
+    game: 'Super Metroid',
+    platform: 'Super Nintendo',
+    year: 1994,
+    era: '16-bit',
+    discoveredYear: 2000,
+    technique: 'Out-of-bounds vertical traversal',
+    timeSaved: 'Enables entire glitched categories, skipping most of the game',
+    description: 'By getting Samus stuck inside a wall and repeatedly toggling the X-Ray Scope, runners force the game to shunt her upward five pixels at a time — climbing out of bounds and skipping vast swathes of the game.',
+    longDescription: 'The X-Ray Climb is the foundational out-of-bounds technique in Super Metroid speedrunning, and it exploits a conflict between two of the game\'s systems. Samus can occupy two vertical states, crouching and standing, and the game will resolve a conflict between them by forcing her into the standing position — moving her up by five pixels in the process. Ordinarily this never matters. Inside a wall, it becomes a ladder.\n\nExecuting it requires the X-Ray Scope. The runner gets Samus stuck in a wall — most commonly by exploiting a door transition — while standing, then crouches. Using the X-Ray Scope, they face the opposite direction and immediately cancel the scope. The game, resolving the resulting state conflict, forces Samus back to standing and lifts her five pixels. Repeat this, and she ascends through solid terrain into the space above and beyond the level as designed.\n\nThe execution is punishing and frame-precise. The optimal cycle, starting from a crouch, is to hold run for eleven frames, press backward for one, press down for one, and wait four — repeated over and over, sometimes for a very long time, to gain meaningful height. Runners must also be careful not to morph into a ball partway through, which softlocks the game entirely; many pause and unassign the Morph Ball beforehand purely to remove the risk.\n\nThe payoff is enormous. Once Samus is out of bounds, the ordinary structure of Planet Zebes ceases to constrain her, and she can drop into rooms she has no business reaching — bypassing bosses, items, and entire regions. Most out-of-bounds categories in Super Metroid speedrunning, including Any% Glitched, depend on X-Ray Climbing to function, making it the single technique that unlocked the game\'s most extreme routes. It is a perfect example of speedrunners weaponising an incidental engine behaviour into a tool that dismantles a game\'s entire architecture.',
+    keyFacts: [
+      'Exploits the game forcing Samus from crouching to standing, which moves her up five pixels',
+      'Requires the X-Ray Scope and getting stuck in a wall, usually via a door transition',
+      'The optimal cycle is frame-precise: run for 11 frames, back for 1, down for 1, wait 4',
+      'Morphing partway through causes a softlock, so runners often unassign the Morph Ball first',
+    ],
+    sections: [
+      {
+        title: 'How the Climb Works',
+        html: '<p>Super Metroid resolves a conflict between Samus\'s crouching and standing states by forcing her upright — and lifting her five pixels to make room. Harmless in open space, this becomes a means of ascent when she is embedded in a wall. The runner wedges Samus into terrain, typically through a door transition, crouches, then uses the X-Ray Scope while turning to face the opposite direction and cancels it immediately. The game resolves the confusion by standing her up, and she rises five pixels into the wall. Repeated with frame-perfect timing — eleven frames of run, one backward, one down, four of waiting — this inches her up through solid rock and out of the level entirely.</p>',
+      },
+      {
+        title: 'Why It Broke the Game Open',
+        html: '<p>Once Samus is out of bounds, Zebes stops being a designed space and becomes a set of rooms she can enter in any order. Bosses, items, and whole regions can simply be skipped, and the intended progression collapses. Nearly every out-of-bounds category in Super Metroid speedrunning, Any% Glitched among them, is built on X-Ray Climbing, which makes it the technique that unlocked the game\'s most radical routes. The danger is real — morphing into a ball mid-climb softlocks the game outright, so runners often unassign the Morph Ball beforehand — but the reward is nothing less than the dismantling of the game\'s entire architecture.</p>',
+      },
+    ],
+  },
+  {
+    id: 'oot-bottle-adventure',
+    sources: [
+      { title: 'Bottle Adventure', publisher: 'ZeldaSpeedRuns', url: 'https://www.zeldaspeedruns.com/oot/ba/bottle-adventure' },
+      { title: 'Reverse Bottle Adventure', publisher: 'ZeldaSpeedRuns', url: 'https://www.zeldaspeedruns.com/oot/ba/reverse-bottle-adventure' },
+    ],
+    title: 'Bottle Adventure',
+    game: 'The Legend of Zelda: Ocarina of Time',
+    platform: 'Nintendo 64',
+    year: 1998,
+    era: '64-bit',
+    discoveredYear: 2003,
+    technique: 'Inventory memory corruption',
+    timeSaved: 'Enables warping directly to the credits',
+    description: 'Placing a bottle on the B button causes Ocarina of Time to write item values outside the space reserved for the inventory — letting runners conjure almost any item in the game, and eventually warp straight to the end credits.',
+    longDescription: 'Ocarina of Time never expects a bottle to occupy the B button. B is reserved for the sword, and the game\'s inventory routine assumes as much. Bottle Adventure exploits the fact that this assumption is never enforced: by manoeuvring a bottle onto B, the runner induces the game to apply its inventory update formula from an unfamiliar starting point, writing item values into memory outside the region reserved for the inventory proper.\n\nThe result is a controllable corruption. When certain bottled items or child trade items are placed on the C-right button, the game reads the quantity of a linked item and writes a new item onto B whose internal value matches that number. The canonical example: putting a Big Poe on C-right while holding exactly nineteen Deku Seeds places Nayru\'s Love on B. By adjusting ammunition counts, the runner effectively types a number into memory and receives the corresponding item — almost any item with a value between 0 and 50, with only a few exceptions such as the Fairy Slingshot, Bombchus, and Fairy Bow.\n\nThe deeper variant, Reverse Bottle Adventure, inverts the process to write values rather than read them, and the two together render Ocarina of Time\'s inventory algorithm, in the community\'s memorable phrase, more fragile than glass. When a version of the technique was found that worked across all releases of the game, an entire world of inventory manipulation opened up.\n\nThe destination was inevitable. Using Bottle Adventure, a runner can place Farore\'s Wind on the B button and cast it anywhere — not merely inside dungeons, as the game intends — creating a warp portal in arbitrary locations. With the ability to warp into scenes the game never meant to be reachable, there was only one logical conclusion: warp directly to the end credits. Bottle Adventure is the technique that turned Ocarina of Time from a fifty-hour adventure into a game that can be finished in minutes, and it remains one of the most elegant memory-corruption exploits ever found in a console game.',
+    keyFacts: [
+      'Placing a bottle on B causes the game to write item values outside the inventory\'s memory space',
+      'Item quantities act as the input: a Big Poe on C-right with 19 Deku Seeds yields Nayru\'s Love on B',
+      'Can produce almost any item valued 0–50, excepting the Slingshot, Bombchus, and Fairy Bow',
+      'Enables casting Farore\'s Wind anywhere, and ultimately warping straight to the end credits',
+    ],
+    sections: [
+      {
+        title: 'Breaking the Inventory',
+        html: '<p>The B button in Ocarina of Time is meant for the sword, and the game\'s inventory routine is written on that assumption — but it never verifies it. Manoeuvre a bottle onto B and the update formula runs from an unfamiliar starting point, writing values into memory beyond the inventory\'s allotted space. The corruption is controllable: placing certain bottled or trade items on C-right makes the game read a linked item\'s quantity and materialise an item on B whose internal value matches that number. Adjust your Deku Seed count and you are, in effect, typing a number into memory and receiving the corresponding item. Nineteen seeds and a Big Poe yield Nayru\'s Love.</p>',
+      },
+      {
+        title: 'Warping to the Credits',
+        html: '<p>Once a runner can conjure arbitrary items onto the B button, the game\'s structure ceases to hold. The decisive application is Farore\'s Wind: normally castable only within dungeons, it can be placed on B via Bottle Adventure and then used anywhere, planting a warp portal in locations the designers never contemplated. From there the conclusion writes itself — if you can warp into scenes the game never meant to be reached, you can warp into the ending. Bottle Adventure, together with its Reverse variant, is what reduced a fifty-hour epic to a run measured in minutes, and it remains among the most elegant memory-corruption exploits discovered in any console game.</p>',
+      },
+    ],
+  },
 ];

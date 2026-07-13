@@ -325,4 +325,85 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'hollow-knight',
+    title: 'Hollow Knight',
+    platform: 'PC / Switch / PlayStation / Xbox',
+    year: 2017,
+    developer: 'Team Cherry',
+    inspiredBy: 'Super Metroid, Castlevania: Aria of Sorrow, Zelda II, Mega Man X',
+    era: 'Modern',
+    description: 'Two Australians who explicitly refused to call their game a "metroidvania" built the game that redefined the genre — a vast, hand-drawn, melancholy underworld that owes its bones to Super Metroid and its movement to Mega Man X.',
+    longDescription: 'Hollow Knight was made by Team Cherry, an Adelaide studio founded by artist Ari Gibson and web designer William Pellen. The concept emerged from a 2013 Ludum Dare game jam, and the pair set out to make something inspired by older platformers that recaptured the exploratory pleasures of the games they loved. The result, released for Windows on 24 February 2017 after a Kickstarter and an engine switch from Stencyl to Unity, became one of the most acclaimed independent games ever made.\n\nIts influences are explicit and instructive. Team Cherry has cited Zelda II, Faxanadu, Super Metroid, and Castlevania: Aria of Sorrow as the games that shaped Hollow Knight\'s structure — the interconnected, gated world, the sense of a vast map slowly unlocking itself, the atmosphere of a civilisation gone wrong. For movement specifically, they looked to Mega Man and Mega Man X, and the precision and weight of the Knight\'s jump and dash reflect that lineage directly.\n\nWhat is striking is that Team Cherry deliberately refused the genre label. Gibson has said they "shied away completely" from calling the game a metroidvania, not wanting to let a genre dictate their design decisions while they were making it. That refusal is arguably why the game works: rather than assembling the expected checklist of abilities and gates, they built a world first and let the structure follow, producing a game that feels discovered rather than constructed.\n\nThe irony is total. By avoiding the label, Team Cherry produced the game that now defines it — Hollow Knight set a standard that essentially every subsequent game in the genre has had to reckon with, and it did so with hand-drawn art, a haunting score, and a story told almost entirely through environment and implication. It stands as the clearest modern proof that the 16-bit exploration platformer was not a dated form but an unfinished one.',
+    keyFacts: [
+      'Made by Team Cherry, founded by artist Ari Gibson and web designer William Pellen',
+      'Conceived at a 2013 Ludum Dare game jam; released 24 February 2017',
+      'Cited influences: Zelda II, Faxanadu, Super Metroid, and Castlevania: Aria of Sorrow',
+      'Team Cherry deliberately avoided calling it a "metroidvania" during development',
+    ],
+    sections: [
+      {
+        title: 'Refusing the Label',
+        html: '<p>Team Cherry actively resisted describing Hollow Knight as a metroidvania while building it. Ari Gibson has explained that they "shied away completely" from the term, not wanting a genre to dictate their design decisions — an unusual position for a game so obviously descended from Super Metroid and Castlevania: Aria of Sorrow. The effect of that refusal is visible in the finished game: rather than checking off the genre\'s expected structure of abilities and gates, they built the kingdom of Hallownest first and let its shape emerge, producing a world that feels excavated rather than engineered. The irony is that by declining the label, they made the game every subsequent metroidvania is measured against.</p>',
+      },
+      {
+        title: 'Borrowed Bones, Original Body',
+        html: '<p>Hollow Knight\'s debts are specific and openly acknowledged. Its interconnected, slowly unlocking world descends from Super Metroid; its combat and charm system echo Castlevania: Aria of Sorrow; its sense of a decayed civilisation nods to Zelda II and Faxanadu. Even its movement was modelled on the Mega Man and Mega Man X games, which is why the Knight\'s jump and dash carry that particular precision and weight. Yet the game these parts assemble into is entirely its own — hand-drawn, melancholy, and narratively told almost entirely through environment and implication. It is the finest demonstration that the 16-bit exploration platformer was never an exhausted form, only an interrupted one.</p>',
+      },
+    ],
+  },
+  {
+    id: 'celeste',
+    title: 'Celeste',
+    platform: 'PC / Switch / PlayStation / Xbox',
+    year: 2018,
+    developer: 'Maddy Makes Games',
+    inspiredBy: 'Super Mario Bros. 3, precision platformers, 8-bit difficulty',
+    era: 'Modern',
+    description: 'A brutally precise platformer in the tradition of 8-bit difficulty, built on a single rule its creators never broke: the game should feel hard, but it must always feel fair.',
+    longDescription: 'Celeste, released on 25 January 2018 by the studio then known as Matt Makes Games (later Maddy Makes Games), casts the player as Madeline, a young woman contending with anxiety and depression as she climbs the fictional Celeste Mountain. Beneath that framing sits one of the most exactingly tuned precision platformers ever built — a game that throws back explicitly to the era of 8-bit platforming and its unforgiving difficulty.\n\nThe design was deliberately minimal. Madeline can run, jump, climb, and dash, and that is essentially all; every one of the game\'s hundreds of screens is constructed from those few verbs. The team drew on Super Mario Bros. 3 and on creator Maddy Thorson\'s own TowerFall (2013), and aimed to mirror the feeling of bouldering — small, discrete, physical problems, each demanding a specific sequence of movements executed exactly.\n\nWhat separates Celeste from mere brutality is its governing philosophy: the developers wanted the game to feel hard, but they always wanted it to feel fair. The game works in the player\'s favour wherever it can — generous input buffering, forgiving edge detection, instant restarts with no penalty — and when a level or mechanic felt difficult in the "wrong" way, it was cut or modified rather than defended. Death is frequent, immediate, and consequence-free, so the loop is not punishment but iteration.\n\nThat combination of retro difficulty and modern generosity is the game\'s central insight, and it reframed a debate the medium had been having for decades. Celeste demonstrated that the punishing platformers of the 8-bit era were not beloved because they were cruel, but despite it — and that a game could preserve everything demanding about them while stripping out the arbitrary unfairness that had always been mistaken for the point. Its optional B-side and C-side levels push difficulty to genuinely extreme heights, but never by cheating.',
+    keyFacts: [
+      'Released 25 January 2018 by Matt Makes Games, later Maddy Makes Games',
+      'Movement is deliberately minimal: run, jump, climb, and a single dash',
+      'Inspired by Super Mario Bros. 3 and creator Maddy Thorson\'s own TowerFall',
+      'Governing rule: the game should feel hard, but it must always feel fair',
+    ],
+    sections: [
+      {
+        title: 'Hard, But Never Unfair',
+        html: '<p>Celeste\'s design philosophy was explicit: the developers wanted the game to feel difficult, but insisted it must always feel fair. In practice this meant building generosity into the machinery — forgiving input timing, lenient edge detection, and instantaneous restarts with no penalty whatsoever, so that dying is not a punishment but simply the next attempt. When a level or mechanic proved hard in the "wrong" way, it was cut or reworked rather than defended as a test of endurance. The result is a game that can kill the player thousands of times without ever feeling cruel, because every death is legible and every retry is immediate.</p>',
+      },
+      {
+        title: 'What the 8-bit Era Got Wrong',
+        html: '<p>Celeste amounts to an argument about retro difficulty. It draws openly on Super Mario Bros. 3 and the punishing platformers of the 8-bit years, and it is at least as demanding as any of them — its optional B-side and C-side levels reach genuinely extreme heights. But it strips out the arbitrary cruelty those games carried: no limited lives, no lost progress, no unfair deaths from off-screen hazards. In doing so it makes a quiet case that the classics were beloved despite their unfairness rather than because of it, and that the precision, the tension, and the euphoria of finally clearing a screen were always the real point.</p>',
+      },
+    ],
+  },
+  {
+    id: 'bloodstained-curse-of-the-moon',
+    title: 'Bloodstained: Curse of the Moon',
+    platform: 'PC / Switch / 3DS / PlayStation 4 / Vita',
+    year: 2018,
+    developer: 'Inti Creates',
+    inspiredBy: 'Castlevania III: Dracula\'s Curse',
+    era: 'Modern',
+    description: 'A Kickstarter stretch goal that turned into one of the finest 8-bit tributes ever made — an homage to Castlevania III so faithful that IGN suggested it walked a thin line between tribute and outright theft.',
+    longDescription: 'Bloodstained: Curse of the Moon exists because a crowdfunding campaign overperformed. When Koji Igarashi\'s Kickstarter for Bloodstained: Ritual of the Night — his spiritual successor to the Castlevania games he had shepherded at Konami — blew past its goals, one of the promises made was a retro-styled companion game. Inti Creates delivered it: revealed at the BitSummit indie festival in Kyoto on 12 May 2018 and released a fortnight later on 24 May across the 3DS, Switch, PlayStation 4, Vita, and Windows.\n\nThe game is an unabashed homage to Castlevania III: Dracula\'s Curse, and specifically to the two features that made that 1989 game exceptional: branching pathways through the castle, and multiple playable characters with entirely different abilities. Curse of the Moon follows Zangetsu, a cursed swordsman hunting demons for revenge, who is joined over the course of the game by Miriam, Alfred, and Gebel — a whip-adjacent acrobat, a frail spellcaster, and a powerful demon, each mapping recognisably onto the Castlevania III roster while remaining distinct.\n\nThe 8-bit presentation is meticulous rather than merely nostalgic: the sprite work, the stiff-but-fair jump arcs, the sub-weapon system, the knockback on damage, and the deliberate pacing all reconstruct the feel of an NES Castlevania with a precision that suggests genuine study rather than pastiche. IGN wrote that the game "treads a thin line between homage and outright theft," concluding that it was a successful tribute — perhaps done "a little too accurately for its own good."\n\nThat ambivalence is the point. Curse of the Moon is not a modern game wearing retro clothes but a genuine attempt to make the Castlevania III sequel that Konami never did, by the people who best understood what made it work. Crucially, it also offers a choice at each character encounter — recruit them, ignore them, or kill them — which alters the difficulty and the ending, a modern touch that deepens the original\'s structure without betraying it.',
+    keyFacts: [
+      'Created by Inti Creates as a Kickstarter stretch goal for Bloodstained: Ritual of the Night',
+      'Revealed at BitSummit in Kyoto on 12 May 2018 and released on 24 May 2018',
+      'An explicit homage to Castlevania III: Dracula\'s Curse, with branching paths and multiple characters',
+      'IGN said it "treads a thin line between homage and outright theft" — a successful tribute done almost too accurately',
+    ],
+    sections: [
+      {
+        title: 'The Castlevania III Sequel Konami Never Made',
+        html: '<p>Curse of the Moon takes direct aim at the two things that made Castlevania III: Dracula\'s Curse special: branching routes through the game and a cast of playable characters with wholly different movesets. Zangetsu is joined by Miriam, Alfred, and Gebel, each recognisably echoing a member of the 1989 game\'s roster while standing on their own. The 8-bit reconstruction is exacting — sprite work, jump arcs, sub-weapons, damage knockback, and pacing all rebuilt with the fidelity of genuine study rather than surface pastiche. IGN\'s verdict that it walks "a thin line between homage and outright theft," done perhaps "a little too accurately for its own good," is less a criticism than a description of the ambition.</p>',
+      },
+      {
+        title: 'A Stretch Goal That Outgrew Its Purpose',
+        html: '<p>The game exists only because Koji Igarashi\'s Kickstarter for Bloodstained: Ritual of the Night overshot its funding targets, obliging the team to produce a retro-styled companion piece. Inti Creates could have delivered a throwaway novelty; instead they built one of the finest 8-bit tributes ever made, and released it a full year before the game it was meant to accompany. It even improves on its model in one respect: at each character encounter the player may recruit, ignore, or kill the newcomer, and those choices alter both difficulty and ending — a modern structural idea layered onto a 1989 design without ever betraying it.</p>',
+      },
+    ],
+  },
 ];
