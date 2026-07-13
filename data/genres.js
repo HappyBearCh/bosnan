@@ -408,5 +408,116 @@ module.exports = [
         html: `<p>US arcades generated over $8 billion in 1982 — more than Hollywood box office and recorded music combined — almost entirely from action games. Space Invaders, Pac-Man, Donkey Kong, and Defender were the four pillars of this golden age. The psychological concepts action games pioneered — flow state, challenge-skill balance, variable reward schedules — became the foundational vocabulary of game design as an academic and professional discipline. Every game that asks you to react fast, survive pressure, and improve through repetition stands on the tradition built in arcades between 1978 and 1985.</p>`
       }
     ]
+  },
+  {
+    id: 'simulation',
+    name: 'Simulation',
+    shortName: 'Simulation',
+    era: '1980 – present',
+    subtitle: 'Modelling reality — from cockpits and cities to entire civilisations',
+    description: 'Simulation games model real systems in detail, prizing fidelity and depth over arcade immediacy. From flight simulators demanding hours of study to city builders where the player is planner rather than hero, the genre asks players to understand a system rather than beat it.',
+    genres: ['Flight Simulator', 'Vehicle Simulator', 'City Builder', 'Business / Tycoon', 'Life Simulation', 'God Game', 'Sports Management'],
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Airbus_A320_FlightGear_3.7.png/250px-Airbus_A320_FlightGear_3.7.png',
+    imageCaption: 'FlightGear, the open-source flight simulator, in the tradition of Microsoft Flight Simulator — the genre that made fidelity itself the goal.',
+    imageAlt: 'Screenshot of an Airbus A320 cockpit and wing in the FlightGear open-source flight simulator',
+    imageLicense: 'GPL',
+    stats: [
+      { label: 'Foundational title', value: 'Flight Simulator (subLOGIC, 1980)' },
+      { label: 'Defining title', value: 'SimCity (Maxis, 1989)' },
+      { label: 'Best-selling PC game', value: 'The Sims (Maxis, 2000)' },
+      { label: 'Key developers', value: 'Maxis, MicroProse, subLOGIC, Bullfrog' },
+    ],
+    sections: [
+      {
+        title: 'Overview',
+        html: '<p>Simulation games are defined less by a common set of mechanics than by a shared ambition: to model a real system faithfully enough that understanding the model becomes the pleasure. A flight simulator does not reward reflexes so much as procedure — checklists, instruments, and the patience to learn what each switch does. A city builder gives the player no avatar and no enemies, only a system of traffic, taxation, zoning, and pollution to be understood and nudged. What unites them is that mastery means comprehension rather than execution.</p><p>This makes simulation the genre least concerned with being a game in the conventional sense. Many of its most celebrated titles have no win condition at all: SimCity cannot be beaten, only sustained or ruined, and The Sims simply continues. The genre trades victory for the deeper satisfaction of watching a complex system respond intelligibly to your decisions — a pleasure closer to gardening or engineering than to combat.</p>',
+      },
+      {
+        title: 'History',
+        html: '<p>The genre began in the air. subLOGIC\'s Flight Simulator (1980) brought genuine aviation modelling to home computers, and when Microsoft licensed and published it the series became one of the longest-running in software history, prized by hobbyists who studied real aircraft manuals to fly it properly. MicroProse, founded by "Wild Bill" Stealey and Sid Meier, built a business on military vehicle simulation through the 1980s.</p><p>Then Will Wright changed what a simulation could be. SimCity (1989) had no combat, no protagonist, and no ending — a proposition publishers found so baffling that it struggled to find a home — yet it became a phenomenon and spawned an entire lineage of Sim titles at Maxis. Peter Molyneux\'s Populous (1989) meanwhile invented the god game, casting the player as an unseen deity shaping terrain. Wright would go on to produce The Sims (2000), a simulation of ordinary domestic life that became the best-selling PC game ever made and drew an audience of players who had never considered themselves gamers.</p>',
+      },
+      {
+        title: 'Mechanics',
+        html: '<p>Simulation mechanics are built from interlocking systems rather than discrete challenges. The player typically has indirect control: a mayor cannot place a citizen, only zone the land and hope; a god cannot command a follower, only raise the ground beneath them. This indirection is deliberate, forcing the player to work with a system\'s logic instead of overriding it, and it produces the genre\'s characteristic emergent surprises — the traffic jam nobody designed, the family disaster nobody scripted.</p><p>Fidelity is the other axis. Hardcore simulators pursue accuracy relentlessly, modelling stall behaviour, fuel burn, and instrument failure, and they expect the player to consult documentation. Lighter simulations abstract aggressively to keep the systems legible. The genre\'s enduring internal tension is exactly this: how much realism can be added before the model stops being playable, and how much can be stripped before it stops being a simulation.</p>',
+      },
+      {
+        title: 'Cultural Impact',
+        html: '<p>Simulation has repeatedly pulled video games toward audiences that other genres could not reach. SimCity was adopted by educators and even urban planning courses, giving games an unusual claim to intellectual respectability, and The Sims reached an enormous audience — notably including many women and older players who had been alienated by the shooting and sports titles dominating the market. Its commercial success made it, for years, the best-selling PC game in the world.</p><p>The genre also proved something the industry has never entirely absorbed: that a game does not need a win condition, an antagonist, or a protagonist to be compelling. That argument, made most forcefully by Will Wright, opened the door for the management, builder, and life-simulation games that remain among the most played in the world, and it stands as one of the clearest cases of the medium expanding by refusing its own conventions.</p>',
+      },
+    ],
+  },
+  {
+    id: 'rhythm',
+    name: 'Rhythm & Music Games',
+    shortName: 'Rhythm',
+    era: '1996 – present',
+    subtitle: 'Playing to the beat — the genre that turned the arcade into a stage',
+    description: 'Rhythm games ask the player to match inputs to music with precise timing. Born in Japan in the late 1990s and exploding with Dance Dance Revolution, the genre turned playing games into a physical, public performance — and made the arcade a stage.',
+    genres: ['Rhythm', 'Dance', 'Music Creation', 'Instrument Simulation', 'Beatmatching'],
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Dance_Dance_Revolution_Extreme_arcade_machine_arrow_panel.png/250px-Dance_Dance_Revolution_Extreme_arcade_machine_arrow_panel.png',
+    imageCaption: 'The arrow panel of a Dance Dance Revolution Extreme arcade machine — the genre\'s most recognisable interface, played with the feet.',
+    imageAlt: 'The illuminated four-arrow foot panel of a Dance Dance Revolution arcade machine',
+    imageLicense: 'CC BY-SA 4.0',
+    stats: [
+      { label: 'Foundational title', value: 'PaRappa the Rapper (NanaOn-Sha, 1996)' },
+      { label: 'Defining title', value: 'Dance Dance Revolution (Konami, 1998)' },
+      { label: 'Key hardware', value: 'Konami System 573 arcade board' },
+      { label: 'Key developers', value: 'Konami, NanaOn-Sha, Sega, Namco' },
+    ],
+    sections: [
+      {
+        title: 'Overview',
+        html: '<p>Rhythm games are built on a single, elegant premise: the game tells you when to press, and your score depends on how precisely you obey. Notes, arrows, or symbols scroll toward a target line, and the player must hit the corresponding input at the exact moment of arrival, with timing windows typically graded — perfect, great, good, miss — so that the difference between competence and mastery is measured in fractions of a second.</p><p>What distinguishes the genre is that the music is not accompaniment but the game itself. In most games a soundtrack decorates the action; in a rhythm game the soundtrack <em>is</em> the level design, and playing well means the player is, in effect, performing the song. This gives the genre a directness of feedback that few others match — success sounds and feels correct, and failure is immediately, audibly wrong.</p>',
+      },
+      {
+        title: 'History',
+        html: '<p>The genre crystallised in Japan in the late 1990s. NanaOn-Sha\'s PaRappa the Rapper (1996) established the core call-and-response loop with a distinctive visual style, and Konami\'s Beatmania (1997) brought DJ-style turntable play to arcades. But the explosion came with Dance Dance Revolution in 1998, which replaced buttons with a floor panel and demanded that players move their feet.</p><p>DDR transformed the arcade. Its machines were loud, brightly lit, and impossible to play discreetly, so a skilled player attracted a crowd — and the genre turned gaming into public spectacle in a way nothing had before. Konami built an entire ecosystem of rhythm hardware around the concept, much of it running on its System 573 board, and the "Bemani" family of games became a pillar of the Japanese arcade through its late golden years. The Western guitar-and-drum boom of the mid-2000s, and the rhythm titles that followed, all descend from this moment.</p>',
+      },
+      {
+        title: 'Mechanics',
+        html: '<p>The genre\'s mechanical core is timing precision measured against a fixed, unyielding tempo. Because the music cannot slow down for the player, rhythm games are among the least forgiving in the medium: there is no cover to hide behind and no pausing to think, only the next note arriving exactly on schedule. Difficulty scales by increasing note density, introducing irregular patterns, and demanding inputs that cross or overlap physically.</p><p>Interface is unusually central here. A rhythm game is defined as much by what the player touches as by its software — a dance pad, a turntable, a plastic guitar, a set of drums — and the physicality of that interface determines the whole experience. This makes the genre one of the few where the peripheral is not an accessory but the entire point, and it explains why so many of its landmark titles were built around bespoke hardware.</p>',
+      },
+      {
+        title: 'Cultural Impact',
+        html: '<p>Rhythm games changed what playing a video game in public looked like. A skilled Dance Dance Revolution player is visibly, athletically performing, and the machines drew spectators, competitions, and a genuine subculture — one of the earliest examples of gaming as a physical, social, watchable activity rather than a solitary one. The genre also anticipated by nearly a decade the motion-control boom that Nintendo would later bring to living rooms.</p><p>Its influence on how games use music has been equally lasting. By making the soundtrack the mechanical substance of play rather than its background, rhythm games licensed a generation of designers to think about audio as a system rather than a decoration — and by proving that people would pay to dance in an arcade, they helped keep the coin-op business alive well past the point at which home consoles had otherwise made it redundant.</p>',
+      },
+    ],
+  },
+  {
+    id: 'light-gun-shooter',
+    name: 'Light-Gun Shooters',
+    shortName: 'Light Gun',
+    era: '1972 – present',
+    subtitle: 'Point at the screen and pull the trigger — the arcade\'s most physical genre',
+    description: 'Light-gun shooters put a gun-shaped controller in the player\'s hands and a screen full of targets in front of them. On rails and unrelenting, the genre defined the arcade\'s later years — and died with the CRT televisions its technology depended upon.',
+    genres: ['Light-Gun Shooter', 'Rail Shooter', 'Shooting Gallery', 'Horror Shooter'],
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Light_gun_R%C3%A9tro_Arcade.jpg/250px-Light_gun_R%C3%A9tro_Arcade.jpg',
+    imageCaption: 'A light gun in use at a retro arcade cabinet — the genre\'s defining interface, aimed directly at the screen.',
+    imageAlt: 'A red pistol-shaped light gun controller being aimed at a retro arcade cabinet screen',
+    imageLicense: 'CC BY 4.0',
+    stats: [
+      { label: 'Earliest home light gun', value: 'Magnavox Odyssey Shooting Gallery (1972)' },
+      { label: 'Defining home title', value: 'Duck Hunt (Nintendo, 1984)' },
+      { label: 'Defining arcade title', value: 'Virtua Cop (Sega, 1994) / Time Crisis (Namco, 1995)' },
+      { label: 'Key developers', value: 'Sega, Namco, Konami, Nintendo' },
+    ],
+    sections: [
+      {
+        title: 'Overview',
+        html: '<p>Light-gun shooters hand the player a gun-shaped controller and ask them to aim it at the screen itself. Movement is almost always automatic — the camera advances along a fixed path, which is why the genre is often called the rail shooter — leaving the player with a single responsibility: point and shoot, accurately and fast. Ammunition must be reloaded, usually by pointing off-screen and pulling the trigger, and enemies fire back on a timer that punishes hesitation.</p><p>Stripping away movement is the genre\'s central design decision, and its greatest strength. Freed from navigation, the player can be relentlessly overwhelmed with targets, and the designer retains total control over pacing, framing, and spectacle. The result is pure, escalating tension, delivered in short bursts perfectly suited to the economics of the arcade.</p>',
+      },
+      {
+        title: 'History',
+        html: '<p>Light guns predate the video game industry itself, with electro-mechanical shooting galleries appearing in arcades long before screens did. The Magnavox Odyssey offered a rifle accessory in 1972, and Nintendo\'s NES Zapper made the genre a household fixture with Duck Hunt (1984), which sold roughly 28 million copies and taught a generation to point plastic guns at the family television.</p><p>The genre reached its peak in the 1990s arcade. Sega\'s Virtua Cop (1994) brought polygonal 3D to light-gun shooting, and its House of the Dead series turned the format toward horror. Namco\'s Time Crisis (1995) added a foot pedal that let players duck into cover, injecting a rhythm of exposure and retreat that transformed the genre\'s tension. Konami\'s Lethal Enforcers brought digitised photographic graphics and a controversy over realism. For a decade these machines — loud, physical, and impossible to replicate at home — were among the strongest arguments the arcade had left.</p>',
+      },
+      {
+        title: 'Mechanics',
+        html: '<p>The classic light gun works by exploiting the CRT screen itself. When the trigger is pulled, the game blanks the screen for a single frame and redraws only the targets as bright shapes; a photodiode in the gun barrel detects whether it is pointed at brightness at that instant, registering a hit. It is an elegant trick that requires almost no hardware — and it is precisely why these games no longer work on modern displays, since LCD and plasma screens do not refresh in the manner the technique depends upon.</p><p>Design-wise, the genre lives on reload management, target prioritisation, and the punishing accuracy of its enemies. Because the player cannot dodge, survival depends on clearing threats before their attack timers expire, and the best games — Time Crisis above all — layer cover mechanics on top, turning a shooting gallery into a rhythm of hiding, popping out, and firing under pressure.</p>',
+      },
+      {
+        title: 'Cultural Impact',
+        html: '<p>No genre was more physical, more social, or more visible in the arcade. A light-gun cabinet demanded that the player stand, aim, and perform, and its cabinets — often with two guns bolted to the front — made co-operative play the default rather than an afterthought. For much of the 1990s these machines were the clearest demonstration of what an arcade could offer that a living room could not.</p><p>The genre also proved unusually mortal. Its dependence on CRT technology meant that when flat-panel displays replaced tube televisions, an entire library of games became effectively unplayable on modern hardware — a preservation problem with few parallels in the medium. Duck Hunt, one of the best-selling games ever made, cannot be played as intended on a contemporary TV. The light-gun shooter is thus a rare case of a genre killed not by changing taste but by the quiet obsolescence of the display technology it was built upon.</p>',
+      },
+    ],
   }
 ];
