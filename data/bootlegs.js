@@ -346,5 +346,92 @@
         html: '<p>The Dizzy series, featuring an anthropomorphic egg navigating adventure game puzzles, was Codemasters\' flagship property and had established a devoted following on Amstrad, Spectrum, and Commodore platforms. The NES adaptations preserved the puzzle-adventure format and brought the character to console audiences who had missed the earlier versions.</p><p>Other Codemasters NES releases included Aladdin Deck Enhancer-compatible titles and sports games. The Aladdin Deck Enhancer was a peripheral designed to reduce cartridge size and cost — an innovative if ultimately unsuccessful hardware concept that demonstrated Codemasters\' willingness to invest in platform infrastructure.</p><p>Contemporary reviews of Codemasters\' NES games were generally positive by unlicensed standards, noting the higher production values compared to typical unauthorized releases. The games are now collected as much for their unusual publishing history as for their gameplay.</p>'
       }
     ]
+  },
+  {
+    id: 'street-fighter-ii-rainbow-edition',
+    title: 'Street Fighter II: Rainbow Edition',
+    baseGame: 'Street Fighter II: Champion Edition',
+    platform: 'Arcade',
+    year: 1992,
+    region: 'Taiwan / worldwide',
+    type: 'Arcade Hack',
+    era: '16-bit',
+    description: 'The most notorious bootleg arcade game ever made — an unauthorised hack of Champion Edition with homing fireballs, mid-air specials, and mid-match character swapping, whose ideas were good enough that Capcom copied them into an official release.',
+    longDescription: 'Street Fighter II: Rainbow Edition was an unauthorised hack of Capcom\'s 1992 Street Fighter II: Champion Edition, produced by the Taiwanese hacking outfit Hung Hsi Enterprise. It circulated widely in arcades on modified boards and became the world\'s most notorious bootleg arcade game — a version of Street Fighter II so gleefully unbalanced that it barely resembled a serious fighting game, yet so entertaining that players sought it out deliberately.\n\nThe hack\'s modifications were extravagant. Gameplay ran dramatically faster than the official release. Ryu and Ken could fire Hadoukens five times in rapid succession. Projectiles homed in on opponents rather than travelling in straight lines. Special moves that had always been ground-bound could be executed in mid-air. Most absurdly of all, a player could change their character mid-match simply by pressing the start button, swapping fighters in the middle of a round. The result was chaotic, ridiculous, and enormously fun in a way the carefully balanced original never attempted to be.\n\nWhat elevates Rainbow Edition beyond a mere curiosity is its extraordinary influence on the official series. The bootleg became so popular in Japan that Capcom\'s own designers played it. They recognised it as thoroughly broken — but they also recognised that some of its modifications, particularly the accelerated gameplay speed and the ability to perform special moves in the air, were genuinely good ideas that made the game more exciting. Rather than merely suppressing the hack, Capcom absorbed its best concepts.\n\nJust nine months after Champion Edition\'s release, Capcom shipped Street Fighter II\' Turbo: Hyper Fighting, which incorporated the faster gameplay and air attacks that Rainbow Edition had pioneered. Rainbow Edition is widely credited as the reason Capcom developed Turbo so rapidly, making it one of the very few instances in gaming history where a pirate hack directly shaped the design of the official product it had stolen from. It stands as a remarkable case of unauthorised modification feeding back into the mainstream and permanently altering one of the most important fighting game series ever made.',
+    keyFacts: [
+      'An unauthorised hack of Champion Edition by Taiwan\'s Hung Hsi Enterprise',
+      'Featured homing projectiles, five rapid Hadoukens, mid-air specials, and mid-match character swapping',
+      'Capcom\'s own designers played it and recognised some of its ideas as genuinely good',
+      'Directly prompted Street Fighter II\' Turbo: Hyper Fighting, released just nine months later',
+    ],
+    notableFor: 'Being the rare bootleg whose ideas were so good that Capcom folded them into an official sequel, making it one of the most influential pirate hacks in gaming history.',
+    sections: [
+      {
+        title: 'Gloriously Broken',
+        html: '<p>Rainbow Edition took Capcom\'s meticulously tuned fighting game and detonated it. Speed was cranked far beyond the original, Ryu and Ken could unleash five Hadoukens in quick succession, fireballs curved to chase their targets, moves that had been strictly grounded could suddenly be thrown in mid-air, and — most surreally — a player could change characters mid-match with a press of the start button. Nothing about it was balanced, and that was precisely the appeal: arcade-goers sought out Rainbow boards specifically because the chaos was so entertaining. It was Street Fighter II reimagined as pure spectacle, and its notoriety spread across the world.</p>',
+      },
+      {
+        title: 'The Bootleg That Changed the Official Game',
+        html: '<p>What makes Rainbow Edition genuinely historic is that Capcom paid attention. The hack grew so popular in Japan that Capcom\'s own designers played it, and while they saw a game thoroughly out of balance, they also spotted real ideas worth keeping — chiefly the faster pace and the ability to perform special moves in the air. Nine months after Champion Edition, Capcom released Street Fighter II\' Turbo: Hyper Fighting, incorporating exactly those innovations, and Rainbow Edition is widely credited as the reason Turbo arrived so quickly. It is one of the only cases in gaming where an illegal hack directly shaped the evolution of the franchise it had pirated.</p>',
+      },
+    ]
+  },
+  {
+    id: 'super-mario-world-famicom',
+    title: 'Super Mario World (Famicom)',
+    baseGame: 'Super Mario World',
+    platform: 'Famicom / NES',
+    year: 1995,
+    region: 'Taiwan / China',
+    type: 'Unlicensed Port',
+    era: '8-bit',
+    description: 'A remarkably faithful unlicensed port of the SNES classic squeezed onto Famicom hardware by Taiwanese pirate studio Hummer Team — preserving the cape, Yoshi, and the overworld map on a console that should not have been able to run it.',
+    longDescription: 'Super Mario World for the Famicom is a bootleg port of Nintendo\'s Super Nintendo launch title, developed by Hummer Team — a prolific Taiwanese pirate developer — and released by J.Y. Company in 1995. It is among the best-known examples of an unlicensed downport, and it earns its reputation not through novelty but through genuine technical achievement: cramming a 16-bit flagship onto 8-bit hardware while retaining a surprising proportion of what made the original work.\n\nThe conversion preserved far more than anyone might expect. The Fire Flower and the signature Cape power-ups both survive, as does Yoshi, the overworld map that structures the game\'s progression, and even relatively subtle mechanics like the more powerful Spin Jump and the ability to throw held items upward. Graphics and music were taken from the SNES original and redrawn and downgraded to fit the Famicom\'s far more limited PPU and APU respectively, resulting in a smaller selection of music tracks that are nonetheless recognisable renditions of the originals. A two-player mode is included, with the second player controlling Luigi via the same controller as player one.\n\nThe port is not without the tell-tale flaws of Hummer Team\'s work. Mario\'s physics behave strangely: as in Somari, the studio\'s notorious Sonic-on-NES bootleg, a jump taken at full speed causes Mario to abruptly decelerate to a walking pace in mid-air, making him awkward to control in precisely the situations where momentum matters most. This quirk is a signature of Hummer Team\'s platform games and betrays the underlying engine\'s limitations, undermining the precision that made the genuine Super Mario World feel so good.\n\nStill, the port stands as a testament to the ingenuity of the unlicensed development scene. Hummer Team\'s programmers were working without documentation, tooling, or legal cover, reverse-engineering both the source material and the target hardware to produce something that a legitimate studio would likely have deemed impossible. The result is a fascinating artifact — a game that no one should have been able to make, distributed through channels that no one should have been using, preserving a shadow version of one of the greatest platformers ever designed.',
+    keyFacts: [
+      'Developed by Taiwanese pirate studio Hummer Team, published by J.Y. Company in 1995',
+      'Retained the Cape and Fire Flower power-ups, Yoshi, and the overworld map',
+      'Graphics and music were redrawn and downgraded for the Famicom\'s PPU and APU',
+      'Suffers Hummer Team\'s trademark physics flaw: Mario abruptly slows mid-air after a full-speed jump',
+    ],
+    notableFor: 'Being one of the most technically impressive unlicensed downports ever made, squeezing a 16-bit flagship onto 8-bit hardware with startling fidelity.',
+    sections: [
+      {
+        title: 'An Impossible Conversion',
+        html: '<p>Porting Super Mario World from the SNES to the Famicom meant discarding an entire generation of hardware capability, yet Hummer Team retained a remarkable share of the original. The Cape and Fire Flower survived, Yoshi remained rideable, the overworld map still structured progression, and even fine details like the Spin Jump\'s extra power and upward item throws made the transition. Graphics and music were painstakingly redrawn and downgraded to fit the Famicom\'s limited PPU and APU, yielding fewer tracks but recognisable arrangements. That a pirate studio working without documentation or tools achieved this at all is a genuine feat of reverse engineering.</p>',
+      },
+      {
+        title: 'The Hummer Team Signature',
+        html: '<p>For all its fidelity, the port carries the distinctive flaw of its makers. Mario\'s physics misbehave in a way familiar to anyone who has played Somari, Hummer Team\'s infamous Sonic-on-Famicom bootleg: jumping at full speed causes him to abruptly decelerate to a walking pace in mid-air, robbing the player of the momentum that Super Mario World\'s level design depends upon. This quirk recurs across Hummer Team\'s platformers, exposing the shared engine beneath them and undercutting the precision that made Nintendo\'s original such a masterpiece of feel. It is the clearest reminder that, however impressive the conversion, it remains a shadow of the real thing.</p>',
+      },
+    ]
+  },
+  {
+    id: 'pokemon-diamond-jade',
+    title: 'Pokémon Diamond & Jade',
+    baseGame: 'Keitai Denjū Telefang',
+    platform: 'Game Boy Color',
+    year: 2001,
+    region: 'China',
+    type: 'Rebranded Hack',
+    era: '8-bit handheld',
+    description: 'Chinese pirates rebranded the Japanese monster-collecting game Telefang as fake Pokémon titles, producing legendarily incomprehensible Engrish, anti-piracy sabotage that broke saving, and a generation of children who bought them thinking they were rare Pokémon games.',
+    longDescription: 'Pokémon Diamond and Pokémon Jade are bootleg hacks of Keitai Denjū Telefang, a pair of Game Boy Color monster-collecting games that had been released only in Japan — Pokémon Diamond being a rebranded hack of Telefang\'s Power Version and Pokémon Jade of its Speed Version. Chinese pirates recognised that Telefang\'s creature-catching premise superficially resembled Pokémon, slapped Pokémon branding onto the cartridges, and sold them internationally, where they were widely mistaken for legitimate, obscure entries in Nintendo\'s franchise.\n\nThe bootlegs are most infamous for their translation, which is one of the great disasters in the history of localisation. Evidence suggests the text was first translated from Japanese into Chinese and then from Chinese into English, compounding errors at every stage and carrying the mistakes of the intermediate translation into the final product. The result is a game whose dialogue is largely grammatically intact yet almost entirely incomprehensible in context, littered with bizarre non-sequiturs and even occasional profanity. Lines from the games have become beloved internet curiosities precisely because they read as an alien parody of English.\n\nThe cartridges were also plagued by serious technical failures. Most copies simply cannot load a saved game — a defect that turns out not to be a bug at all, but the consequence of anti-piracy protection built into the original Telefang, which the hackers failed to fully defeat. The games were further riddled with genuine bugs and game-breaking glitches entirely absent from legitimate releases, making them not merely strange but frequently unplayable.\n\nThe deception was remarkably effective and long-lived. For years these cartridges circulated on auction sites such as eBay masquerading as rare Pokémon games, and countless children received them as gifts from relatives who had no way of knowing the difference. Today Pokémon Diamond and Jade are celebrated as perhaps the most famous bootleg games ever made — objects of genuine affection in retro circles, valued not despite their broken translation and sabotaged saves but precisely because of them, as monuments to the strange creativity of the piracy underground.',
+    keyFacts: [
+      'Rebranded hacks of the Japan-only Game Boy Color game Keitai Denjū Telefang',
+      'Text was translated Japanese → Chinese → English, producing legendary incomprehensible Engrish',
+      'Most copies cannot load saves — a result of Telefang\'s anti-piracy protection, not a bug',
+      'Widely sold on eBay as "rare Pokémon games," deceiving countless buyers',
+    ],
+    notableFor: 'Being perhaps the most famous bootleg games ever made, beloved for a translation so broken it became an internet legend.',
+    sections: [
+      {
+        title: 'A Translation Through Two Languages',
+        html: '<p>The bootlegs\' infamous script appears to have passed through Chinese on its way from Japanese to English, and each hop compounded the damage. The result is dialogue that is often grammatically well-formed yet completely meaningless in context — a stream of confident, fluent-sounding nonsense punctuated by bizarre word choices and the occasional profanity. Unlike a merely clumsy translation, Telefang\'s reads like a dispatch from a parallel reality, and its lines have been quoted, screenshotted, and celebrated online for decades. It is the definitive example of what happens when localisation is performed with no reference to the source material and no editorial oversight whatsoever.</p>',
+      },
+      {
+        title: 'Sabotaged by Anti-Piracy',
+        html: '<p>Beyond the language, the cartridges suffered a crippling technical flaw: most cannot load a saved game at all. This is not incompetence in the ordinary sense but the residue of anti-piracy protection built into the original Telefang, which the hackers never fully disabled — the game\'s own defences quietly punishing the pirates. Combined with an assortment of genuine glitches absent from legitimate releases, this made the games frequently unplayable. Yet the deception worked for years, with the cartridges passed off as rare Pokémon titles on auction sites and gifted to unsuspecting children, cementing Diamond and Jade as the most notorious bootlegs in gaming.</p>',
+      },
+    ]
   }
 ];

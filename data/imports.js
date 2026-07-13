@@ -337,4 +337,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'radiant-silvergun-import',
+    title: 'Radiant Silvergun',
+    game: 'Radiant Silvergun',
+    originalRegion: 'Japan',
+    targetRegion: 'North America / Europe',
+    platform: 'Sega Saturn',
+    year: 1998,
+    era: '32-bit',
+    description: 'Treasure\'s revered shoot-\'em-up was released only in Japan and sold around 50,000 copies — scarcity that turned it into one of the most expensive and sought-after imports in gaming, routinely commanding hundreds of dollars.',
+    longDescription: 'Radiant Silvergun, developed and published by the acclaimed studio Treasure, debuted in Japanese arcades in 1998 and was ported to the Sega Saturn later the same year, reaching retail on 23 July 1998. It was released only in Japan, and it sold roughly 50,000 copies — a modest figure even by the standards of the Saturn\'s troubled Western fortunes, and one that would have profound consequences for the game\'s later availability.\n\nDespite never being localised, the game found an audience abroad. Western critics imported it and reviewed it enthusiastically, and word spread through the import-gaming press and the shoot-\'em-up community that Treasure had produced something exceptional. The Saturn version offered both an Arcade mode and a dedicated Saturn mode, and its intricate weapon system — in which a small set of shot types combine into a wide array of attacks, and a chain-scoring system rewards destroying enemies of the same colour in sequence — gave it a depth that rewarded obsessive study rather than mere reflexes.\n\nThe combination of tiny print run, Japan-only release, and outstanding critical reputation created a perfect storm for collectors. Radiant Silvergun rapidly became one of the most expensive and sought-after items in retro gaming: by 2011 copies were selling for at least $150, and prices continued climbing thereafter, with sealed copies reaching around $500 through import retailers and second-hand copies rarely dipping below $200 on the open market. For years, simply playing the game legally required either a substantial financial outlay or access to someone else\'s Saturn.\n\nIn retrospective assessments Radiant Silvergun is regularly named one of the greatest shoot-\'em-ups ever made and among the very best games on the Sega Saturn, and Treasure later followed it with the spiritual successor Ikaruga. Its story is emblematic of the import era: a masterpiece stranded behind a regional wall, its reputation growing through word of mouth among the few who could obtain it, and its price climbing ever higher as demand outstripped a supply that had been fixed at 50,000 copies since 1998.',
+    keyFacts: [
+      'Released only in Japan for the Sega Saturn on 23 July 1998, selling around 50,000 copies',
+      'Imported and reviewed enthusiastically by Western critics despite no localisation',
+      'By 2011 copies sold for at least $150; prices later climbed toward $200–$500',
+      'Widely regarded as one of the greatest shoot-\'em-ups and best Saturn games ever made',
+    ],
+    sections: [
+      {
+        title: 'Scarcity Meets Acclaim',
+        html: '<p>Radiant Silvergun\'s legendary price is a straightforward function of supply and demand. Treasure pressed roughly 50,000 copies for a Japan-only Saturn release, and that number never grew — while the game\'s reputation, spread by importing Western critics and the shoot-\'em-up community, grew relentlessly. As retrospective assessments increasingly named it among the greatest shooters ever made, a fixed and tiny supply collided with rising global demand, driving second-hand prices from $150 in 2011 toward $200 and beyond, with sealed copies reaching around $500. For years the only affordable way to experience one of the Saturn\'s finest games was, for most players, no way at all.</p>',
+      },
+      {
+        title: 'Worth the Hunt',
+        html: '<p>What sustained the demand was that the game genuinely merited it. Radiant Silvergun offered both Arcade and Saturn modes, and built its depth around an intricate weapon system in which a handful of shot types combine into a broad arsenal, paired with a chain-scoring mechanic rewarding players who destroy same-coloured enemies in sequence. This rewarded study and mastery rather than raw reflex, giving the game extraordinary longevity among dedicated players. Treasure would later refine these ideas into Ikaruga, but Radiant Silvergun remains the object of collector obsession — a genuine masterpiece whose regional exclusivity turned it into one of retro gaming\'s great white whales.</p>',
+      },
+    ],
+  },
+  {
+    id: 'sakura-wars-import',
+    title: 'Sakura Wars',
+    game: 'Sakura Wars (Sakura Taisen)',
+    originalRegion: 'Japan',
+    targetRegion: 'North America / Europe',
+    platform: 'Sega Saturn',
+    year: 1996,
+    era: '32-bit',
+    description: 'A Saturn killer app that sold out within hours in Japan and topped the charts, Sakura Wars was never localised because Sega doubted the West would embrace its blend of strategy, dating sim, and steampunk theatre.',
+    longDescription: 'Sakura Wars — Sakura Taisen in Japan — arrived on the Sega Saturn in 1996 and was an immediate sensation. It sold out in many stores within hours of release, and Famitsu\'s data recorded an estimated 205,270 units sold in its first week, placing it at the top of the sales charts. It is widely considered a killer app for the Saturn in Japan, one of the games that justified the console\'s existence in its home market even as the system struggled elsewhere.\n\nThe game\'s appeal lay in an unusual and audacious fusion of genres. Set in a steampunk alternate Tokyo, it combined turn-based tactical mecha combat with an extensive adventure and dating-sim component, in which the player, as the commander of an all-female combat troupe who moonlight as a theatre company, builds relationships with the cast through timed dialogue choices. The bonds forged in conversation directly affect performance in battle, tying the two halves of the game together in a way few titles had attempted. Rich character art, full voice acting, and animated cutscenes gave it a lavish presentation that made it feel like an interactive anime series.\n\nDespite this success, Sakura Wars never received an English release. Creator Oji Hiroi wanted a Western localisation, but Sega declined to pursue one, uncertain whether the game\'s idiosyncratic genre blend — heavy on Japanese theatrical and romantic conventions, and dependent on enormous quantities of voiced dialogue — could find an audience large enough in the West to be profitable. The cost and cultural risk of translating it appeared, to Sega, to outweigh the likely return.\n\nThe result was a game that Western enthusiasts could only reach as importers. Contemporary English-language coverage was scarce, though GameFan, which specialised in import games, reviewed it in 1996; most English reviews appeared years after release. The series became legendary among import fans as the great untranslated treasure, and in 1999 IGN\'s Anoop Gantayat described it as "probably the greatest series of games to never make their way stateside." It stands as the definitive example of a game lost to Western audiences not through technical barriers but through a publisher\'s judgement that its culture would not travel.',
+    keyFacts: [
+      'Sold an estimated 205,270 units in its first week, topping the Japanese charts',
+      'Blended turn-based mecha strategy with a dating-sim adventure in a steampunk Tokyo',
+      'Sega declined to localise it, doubting Western audiences for its genre blend',
+      'IGN called the series "probably the greatest series of games to never make their way stateside"',
+    ],
+    sections: [
+      {
+        title: 'A Killer App Japan Kept',
+        html: '<p>Sakura Wars was an unqualified phenomenon in its home market: it sold out within hours in many stores, moved over 205,000 copies in its first week, and topped the Japanese sales charts, becoming one of the titles that made owning a Saturn worthwhile. Its fusion of turn-based mecha combat with an elaborate dating-sim adventure — in which the relationships the player builds through conversation directly influence battlefield performance — was genuinely novel, and its voice acting, character art, and animated sequences gave it the feel of a playable anime series. Yet none of this success translated into a Western release.</p>',
+      },
+      {
+        title: 'The Great Untranslated Treasure',
+        html: '<p>Creator Oji Hiroi wanted the game localised, but Sega concluded that its blend of genres, steeped in Japanese theatrical and romantic conventions and carrying an enormous voiced script, was unlikely to find a profitable Western audience. The decision left the game accessible only to importers, and English coverage was correspondingly thin — GameFan\'s 1996 import review was a rare contemporary exception, with most English assessments arriving years later. Among import enthusiasts the series became the archetypal untranslated classic, prompting IGN in 1999 to call it probably the greatest series never to reach America, a verdict that captured the frustration of a generation of import fans.</p>',
+      },
+    ],
+  },
+  {
+    id: 'terranigma-import',
+    title: 'Terranigma',
+    game: 'Terranigma',
+    originalRegion: 'Japan / Europe',
+    targetRegion: 'North America',
+    platform: 'Super Nintendo',
+    year: 1995,
+    era: '16-bit',
+    description: 'Quintet\'s acclaimed action-RPG reached Japan, Europe, and Australia — but never North America, cancelled because Enix had already shuttered its US branch by the time the English localisation was finished.',
+    longDescription: 'Terranigma is a 1995 action role-playing game developed by Quintet, published in Japan by Enix on 20 October 1995 and brought to Europe and Australia by Nintendo from December 1996. It is the third in what fans regard as an unofficial thematic trilogy of Quintet action-RPGs, following Soul Blazer (1992) and Illusion of Gaia (1993), and it is widely considered the studio\'s finest work — an ambitious, melancholy story about the resurrection and evolution of a dying world.\n\nThe circumstances of its non-release in North America are among the most frustrating in RPG history. An English localisation was actually completed — the game exists fully translated — but Enix had already closed its American branch by the time that work was finished, leaving no publisher in place to bring it to market. Nintendo handled the European localisation itself, which is why the PAL version exists at all, and why Terranigma remains exclusive to Europe and Australia despite an English script sitting ready. North American players were denied a finished, translated game not for creative or technical reasons but through pure corporate misfortune and timing.\n\nThis produced an unusual import situation. Rather than the typical pattern of Japanese-only games requiring fan translation, Terranigma\'s English version existed and simply could not be bought in America — meaning North American players had to import a PAL cartridge and contend with the region and timing differences between PAL and NTSC hardware, or resort to other means. For years the game circulated among North American RPG enthusiasts as a legendary title that they could read perfectly well but could not legitimately obtain.\n\nIts extremely limited release has made Terranigma a highly sought-after collectible, with European copies commanding substantial prices on the secondary market. Its reputation has only grown with time; retrospective coverage regularly laments its absence from North America and ranks it among the finest RPGs of the 16-bit era. It stands as a peculiar and poignant kind of import story — a game lost to an entire continent not because nobody translated it, but because the company that had was no longer there to sell it.',
+    keyFacts: [
+      'Published in Japan by Enix in October 1995 and in Europe/Australia by Nintendo from December 1996',
+      'Never released in North America because Enix had closed its US branch before localisation finished',
+      'An English localisation was completed — the PAL version — but never sold in America',
+      'The third of Quintet\'s unofficial trilogy after Soul Blazer (1992) and Illusion of Gaia (1993)',
+    ],
+    sections: [
+      {
+        title: 'A Finished Translation Nobody Could Sell',
+        html: '<p>Terranigma\'s North American absence is uniquely galling because the barrier was never language. An English localisation was completed, and Nintendo published that version across Europe and Australia — but by the time the work was done, Enix had already shut its American branch, leaving no publisher positioned to release it in the United States. The game therefore exists in perfect English and simply could not be legitimately purchased on an entire continent. North American players who wanted it had to import PAL cartridges and grapple with the incompatibilities between PAL and NTSC hardware, chasing a game they could read fluently but were never meant to own.</p>',
+      },
+      {
+        title: 'Quintet\'s Masterpiece',
+        html: '<p>The frustration is sharpened by the game\'s quality. Terranigma completes the unofficial trilogy Quintet began with Soul Blazer and continued with Illusion of Gaia, and it is widely held to be the studio\'s finest achievement — an ambitious, melancholy action-RPG about resurrecting and shepherding the evolution of a dying world, with a scope and emotional weight unusual for the 16-bit era. Its scarce release has made European copies valuable collectibles, and retrospective coverage regularly ranks it among the best RPGs of its generation while lamenting that an entire region never got to play it. Few games have had their reputations so shaped by the accident of where they were sold.</p>',
+      },
+    ],
+  },
 ];
