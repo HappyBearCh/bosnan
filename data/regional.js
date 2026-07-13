@@ -305,4 +305,52 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'dragon-quest-dragon-warrior',
+    title: 'Dragon Quest vs Dragon Warrior',
+    subtitle: 'Japan\'s biggest RPG flopped so badly in America that Nintendo gave it away free — and accidentally built Nintendo Power',
+    game: 'Dragon Quest / Dragon Warrior',
+    region1: 'Japan',
+    region2: 'North America',
+    readTime: '7 min read',
+    summary: 'Dragon Quest was a national phenomenon in Japan. Renamed Dragon Warrior and published in North America by Nintendo in 1989 with better graphics, a battery save, and a bundled strategy guide, it stiffed completely — leaving warehouses full of cartridges that Nintendo eventually handed out for free.',
+    sections: [
+      {
+        title: 'A Phenomenon That Did Not Translate',
+        html: '<p>In Japan, Dragon Quest was not merely a successful game but a cultural event, with later entries prompting reports of children skipping school on release day. Its success rested heavily on two things that had nothing to do with the game\'s mechanics: character and monster artwork by Akira Toriyama, already a household name through Dragon Ball, and relentless promotion in the manga magazine Shōnen Jump, which gave it access to essentially every young reader in the country. It arrived pre-sold to an audience that already loved its art and trusted its pedigree.</p><p>None of that existed in North America. Toriyama was largely unknown, Shōnen Jump had no American equivalent, and the console RPG as a genre had no meaningful audience. Nintendo published the game itself in 1989 as Dragon Warrior — the Dragon Quest name being unavailable in the United States for trademark reasons — and it invested seriously in the release, enhancing the graphics over the Japanese original, writing a genuinely good localisation with a distinctive faux-archaic voice, adding a battery save in place of the original\'s password system, and bundling a strategy guide with every copy.</p><p>It was a resounding flop. The cartridges sat in warehouses, unsold and apparently unsellable.</p>',
+      },
+      {
+        title: 'Giving It Away',
+        html: '<p>Faced with an inventory it could not shift, Nintendo did something extraordinary: it gave the game away. Toward the end of 1990, the company offered a free copy of Dragon Warrior to anyone who took out a $20 subscription to Nintendo Power. The promotion was a way of converting dead stock into something useful, and it worked far better than anyone expected.</p><p>Nintendo Power gained nearly 500,000 new subscribers on the back of the offer. And since Nintendo Power was, as has been observed, essentially a hundred-page monthly advertisement for Nintendo products, the company had just placed that advertisement into half a million additional households — at the cost of cartridges it had already written off. The magazine\'s reach and influence in the early 1990s owes a great deal to a role-playing game nobody wanted to buy.</p>',
+      },
+      {
+        title: 'What the Giveaway Built',
+        html: '<p>The consequences ran further than a subscription bump. Hundreds of thousands of American children who would never have chosen to buy a turn-based Japanese RPG suddenly owned one, free, in the post. Many of them played it — and a meaningful number discovered that they liked it. The giveaway seeded the genre in a market that had shown no appetite for it, and it is frequently credited with helping create the American audience that Final Fantasy and its successors would later find waiting.</p><p>Commercially, it also kept the series alive in the West: the promotion\'s eventual success allowed Enix to bring the next three Dragon Quest games to North America. The episode is one of the strangest in localisation history — a game so unwanted that giving it away for nothing turned out to be the most profitable thing anyone could have done with it, and in the process helped establish both a magazine and a genre.</p>',
+      },
+    ],
+  },
+  {
+    id: 'secret-of-mana-woolsey-translation',
+    title: 'Secret of Mana — The Cut Game',
+    subtitle: 'Built for a CD add-on that never shipped, gutted to fit a cartridge, then translated in thirty days with 40% of the text "nuked"',
+    game: 'Secret of Mana',
+    region1: 'Japan',
+    region2: 'North America',
+    readTime: '7 min read',
+    summary: 'Secret of Mana was designed for the cancelled Super Nintendo CD add-on. Forced onto a cartridge, Square spent months stripping the game down — and then Ted Woolsey had thirty days to translate what survived into a text box far too small to hold it.',
+    sections: [
+      {
+        title: 'A Game Built for Hardware That Never Came',
+        html: '<p>Secret of Mana was conceived as a launch title for the Super Nintendo CD-ROM add-on — the collaboration between Nintendo and Sony that famously collapsed, and whose wreckage produced the PlayStation. When the add-on fell through, Square was left with a contractual obligation to deliver the game and nowhere to put it but a standard cartridge, a medium with a tiny fraction of the storage the team had designed for.</p><p>What followed was months of demolition. Square stripped the game down to fit: large sections of the game world were removed, the script was shortened, the plot was adjusted, and a great deal of dialogue was rewritten or deleted outright. The music had to be recomposed with compressed instruments to fit the SNES sound format. The scars are still visible in the finished game — there are places on the world map that look as though they should be landable but are not, because whatever was once there is gone.</p><p>Some of that discarded material found a home. Much of the content left on Secret of Mana\'s cutting room floor made its way into Chrono Trigger two years later, which is a small mercy but underlines the scale of what was lost.</p>',
+      },
+      {
+        title: 'Thirty Days and a Text Box',
+        html: '<p>Then came the localisation, and it fell to Ted Woolsey — the translator responsible for much of Square\'s early Western output and for a distinctive, witty prose voice that a generation of players grew up on. He was given thirty days. He has said the job "nearly killed" him, and that roughly 40 percent of the text had to be, in his word, "nuked" because there was simply no room for it: the game\'s dialogue windows and memory budget could not hold a faithful English rendering of the Japanese script.</p><p>The conditions were worse than a tight deadline. Woolsey has described being handed the text organised in a bizarre, non-logical order, forcing him to translate the game one arbitrary chunk of dialogue at a time with no knowledge of how individual scenes fitted into the overall story. He was writing dialogue for characters whose situations he could not see, under a hard character limit, in a month.</p>',
+      },
+      {
+        title: 'What Survived, and Why It Still Works',
+        html: '<p>Given all that, the remarkable thing about Secret of Mana\'s English script is not that it is compressed but that it has any character at all. Woolsey\'s terse, economical lines — sometimes cryptic, occasionally strange — became beloved in their own right, and the "Woolseyism" is now a recognised term of art among localisation enthusiasts for a translation that departs from the literal in order to preserve the spirit.</p><p>The episode is a useful corrective to the assumption that localisation problems are failures of care. Secret of Mana was mangled by a cancelled hardware deal, then compressed by cartridge economics, then squeezed through a thirty-day schedule and a text box too small for it. That the game emerged as a beloved classic anyway is a testament to what survived the process — and a reminder that a great many of the games remembered fondly in the West are, in truth, the salvaged remains of something larger.</p>',
+      },
+    ],
+  },
 ];
