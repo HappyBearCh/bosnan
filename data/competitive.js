@@ -334,5 +334,89 @@
         html: '<p>Starcade\'s significance lies in demonstrating, as early as 1982, that competitive gaming could sustain a television entertainment format. The show attracted sufficient viewership on TBS to run for over a hundred episodes — a commercial viability that validated gaming as spectator entertainment at a time when the concept was still genuinely novel.</p><p>The show has been rediscovered by retro gaming communities and is now available in various archival forms. Its documentation of early 1980s arcade culture — the specific games featured, the competitive scenarios created, the treatment of skill as achievement — makes it a valuable historical record independent of its entertainment value.</p><p>Starcade was ahead of its time in a way that is easier to recognize from the present than it would have been in 1984, when the arcade boom was ending and the industry was contracting. Its direct descendants would not appear on television until the late 1990s, when the esports phenomenon finally created the audience for gaming broadcasts that Starcade had imagined over a decade earlier.</p>'
       }
     ]
+  },
+  {
+    id: 'space-invaders-championship-1980',
+    title: 'National Space Invaders Championship',
+    year: 1980,
+    game: 'Space Invaders',
+    organizer: 'Atari',
+    location: 'United States (regionals) / Warner HQ, New York (finals)',
+    era: 'Golden Age',
+    description: 'Atari\'s November 1980 tournament drew more than 10,000 contestants across five regional cities and is widely regarded as the first major video game competition — the event that established competitive gaming as a mainstream pursuit.',
+    longDescription: 'The National Space Invaders Championship, held in November 1980, is the event most often identified as the true beginning of competitive video gaming. Atari organised it in conjunction with the release of its Atari 2600 Space Invaders cartridge — a home conversion that would go on to quadruple the console\'s sales — and the tournament drew over 10,000 contestants, a staggering figure for a medium barely half a decade into its commercial life.\n\nThe structure was ambitious for its time. Regional competitions were held in five major American cities — Los Angeles, San Francisco, Fort Worth, Chicago, and New York — with each regional producing a champion. The five regional winners then travelled to Warner Communications\' New York headquarters (Warner then owned Atari) to compete in the finals, playing not the arcade original but the home version of the game, a deliberate choice that tied the competition directly to the product Atari was selling.\n\nThe finals were won by Bill Heineman of Los Angeles — later known as Rebecca Heineman — who took home a new Asteroids cocktail cabinet as the prize. Heineman would go on to a distinguished career in the industry, co-founding Interplay Productions and becoming one of the most respected programmers of her generation, giving the tournament an unexpectedly consequential winner. The prize itself, an arcade machine rather than a cash purse, captures how different the economics of competitive gaming were in 1980.\n\nThe championship\'s significance was recognised almost immediately. Electronic Games wrote that "more than any other single tournament, the \'Space Invaders\' Tournament established electronic arcading as a major hobby" — a verdict history has largely upheld. By demonstrating that tens of thousands of people would compete publicly at a video game, and by generating national press coverage, the event helped transform gaming from a solitary pastime into a spectator activity with champions, rankings, and prestige. Every esports tournament that followed traces its lineage, however distantly, to this moment.',
+    winner: 'Bill (later Rebecca) Heineman of Los Angeles, who won an Asteroids cocktail cabinet and later co-founded Interplay',
+    keyFacts: [
+      'Held in November 1980, drawing more than 10,000 contestants',
+      'Regionals in Los Angeles, San Francisco, Fort Worth, Chicago, and New York',
+      'Finals were played on the Atari 2600 home version at Warner\'s New York headquarters',
+      'Won by Bill (later Rebecca) Heineman, future co-founder of Interplay',
+    ],
+    sections: [
+      {
+        title: 'Format and Competition',
+        html: '<p>Atari built the championship around the launch of its Atari 2600 Space Invaders cartridge, running regional qualifiers in five major American cities and bringing the five regional champions to Warner Communications\' New York headquarters for the final. Notably, the finals were contested on the home console version rather than the arcade cabinet, tying the competition directly to the product Atari wanted to sell — an early example of a tournament serving as marketing. The prize was an Asteroids cocktail cabinet rather than a cash purse, a reminder of how modest the stakes were before competitive gaming developed a professional economy.</p>',
+      },
+      {
+        title: 'The Birth of Competitive Gaming',
+        html: '<p>The championship\'s scale — over 10,000 entrants — proved that video games could sustain genuine mass competition, and the national press attention it attracted helped push gaming from a solitary hobby toward a public, spectator-facing activity. Electronic Games judged that no other single tournament did more to establish electronic arcading as a major hobby, and that assessment has largely stood. The winner, Bill (later Rebecca) Heineman, went on to co-found Interplay and become one of the industry\'s most respected programmers, giving the event an unexpectedly weighty legacy. Every esports competition since descends, however distantly, from this 1980 tournament.</p>',
+      },
+    ]
+  },
+  {
+    id: 'world-cyber-games-2000',
+    title: 'World Cyber Games',
+    year: 2000,
+    game: 'StarCraft: Brood War, Quake III Arena, Age of Empires II, FIFA 2000',
+    organizer: 'International Cyber Marketing / Samsung',
+    location: 'Yongin, South Korea',
+    era: '32-bit / early 2000s',
+    description: 'Billed as the "Esports Olympics," the World Cyber Games launched in South Korea in 2000 with 174 players from 17 countries — a nation-versus-nation competition, backed by Samsung and the Korean government, that internationalised professional gaming.',
+    longDescription: 'The World Cyber Games was founded in 2000 by the South Korean entrepreneur Hank Jeong through his company International Cyber Marketing, with substantial financial backing from Samsung. Explicitly modelled on the Olympic Games — competitors represented their countries, and the event traded in national flags, ceremonies, and medals — it became known as the "Esports Olympics" and represented the most serious attempt yet to give competitive gaming an international institutional framework.\n\nThe inaugural WCG Challenge ran from 7 to 15 October 2000 in Yongin, South Korea, gathering 174 players from 17 countries to compete across four core titles: StarCraft: Brood War, Quake III Arena, Age of Empires II, and FIFA 2000. The total prize pool was $200,000 — a substantial figure for the era, and a signal that professional gaming was becoming financially serious. The event was sponsored not only by Samsung but by the Republic of Korea\'s Ministry of Culture and Tourism and Ministry of Information and Communications, an extraordinary display of state endorsement that reflected South Korea\'s early recognition of esports as a legitimate industry and cultural export.\n\nThe first full annual main event followed in 2001, hosted in Seoul with a prize pool of $300,000 and an expanded roster of titles including Counter-Strike, FIFA, and Unreal Tournament. From there the WCG grew steadily, drawing over 700 participants from 70 countries by 2006 and rotating its host venue around the world to cities in the United States, Italy, Germany, Singapore, and China — genuinely globalising a scene that had until then been fragmented into national and regional circuits.\n\nThe WCG\'s importance lies in its ambition and its legitimacy. By staging esports as a nation-versus-nation spectacle with government and corporate backing, it lent competitive gaming a respectability and visibility it had struggled to achieve elsewhere, and it cemented South Korea\'s position as the world\'s foremost esports nation. Its Olympic framing shaped how the world understood professional gaming for a generation, and its structure influenced the international tournament circuits that would follow.',
+    winner: 'Multiple national champions across four titles; South Korea emerged as the dominant esports nation',
+    keyFacts: [
+      'Founded in 2000 by Hank Jeong with backing from Samsung and the Korean government',
+      'The inaugural WCG Challenge ran 7–15 October 2000 with 174 players from 17 countries',
+      'Core titles were StarCraft: Brood War, Quake III Arena, Age of Empires II, and FIFA 2000',
+      'Grew to over 700 participants from 70 countries by 2006, hosted in cities worldwide',
+    ],
+    sections: [
+      {
+        title: 'The Esports Olympics',
+        html: '<p>The World Cyber Games deliberately borrowed the Olympic template: players competed as national representatives, complete with flags, ceremonies, and medals, transforming esports from a contest between individuals into a contest between countries. This framing gave competitive gaming a legitimacy and narrative structure that spectators instantly understood, and it was reinforced by remarkable institutional backing — Samsung\'s money alongside sponsorship from the Korean Ministry of Culture and Tourism and Ministry of Information and Communications. State endorsement at this level was unheard of elsewhere, and it reflected South Korea\'s early conviction that esports was a serious industry and a cultural export worth investing in.</p>',
+      },
+      {
+        title: 'Globalising the Scene',
+        html: '<p>From a modest start — 174 players, 17 countries, a $200,000 prize pool in Yongin — the WCG expanded rapidly, staging its first full main event in Seoul in 2001 with $300,000 in prizes and a broader slate of games including Counter-Strike and Unreal Tournament. By 2006 it drew over 700 competitors from 70 nations and rotated between host cities across the United States, Europe, and Asia, knitting previously separate regional scenes into a genuinely international circuit. In doing so it confirmed South Korea as the world\'s leading esports nation and established the model of the global, corporate-backed championship that shaped professional gaming for years afterward.</p>',
+      },
+    ]
+  },
+  {
+    id: 'evo-moment-37',
+    title: 'Evo Moment 37 — The Daigo Parry',
+    year: 2004,
+    game: 'Street Fighter III: 3rd Strike',
+    organizer: 'Evolution Championship Series',
+    location: 'California State Polytechnic University, Pomona',
+    era: '128-bit',
+    description: 'With one pixel of health remaining, Daigo Umehara parried all fifteen hits of Justin Wong\'s super move and won — a single exchange, captured on video, that became the most iconic moment in the history of competitive gaming.',
+    longDescription: 'On 1 August 2004, at California State Polytechnic University in Pomona, the Street Fighter III: 3rd Strike semifinal of the Evolution Championship Series pitted Japan\'s Daigo Umehara against America\'s Justin Wong. What happened in the closing seconds of that match would be replayed millions of times and become the defining highlight of the entire fighting game community.\n\nUmehara\'s Ken was down to his final sliver of health — so low that even a blocked special attack would finish him, since blocked specials in 3rd Strike still inflict a small amount of chip damage. With 26 seconds left on the clock, Wong could simply have run down the timer and won on health. Instead, eager to finish the match, he launched Chun-Li\'s Super Art II, the Hoyokusen — a multi-hit super move that would kill Umehara whether he blocked it or not.\n\nUmehara\'s only survival was to parry. Parrying in 3rd Strike requires tapping forward at the precise instant an attack connects, a window of a few frames; Umehara had to execute this fifteen consecutive times, in rhythm, against every hit of the super, including a final airborne hit that had to be parried while jumping. He did exactly that, parried all fifteen hits, and then immediately launched a counter-attack that killed Chun-Li outright, as the crowd erupted into disbelieving screams that have become as famous as the play itself.\n\nUmehara won the match, though he lost the Grand Final to Kenji "KO" Obata. After the tournament, organiser and ring announcer Ben Cureton was asked to cut a highlight video of the parry, and uploaded it under the title "Evo Moment #37," picking an arbitrary two-digit number that stuck forever. The clip spread across the early internet and became the most-viewed moment in competitive gaming, routinely described as the single most iconic play in esports history. It gave the fighting game community its founding myth — proof that at the highest level, execution and nerve could produce something genuinely miraculous — and it remains the clip shown to anyone asking why people care about competitive games.',
+    winner: 'Daigo Umehara won the semifinal; Kenji "KO" Obata won the tournament',
+    keyFacts: [
+      'Occurred in the 3rd Strike semifinal at Evo 2004 on 1 August, at Cal Poly Pomona',
+      'Umehara parried all 15 hits of Chun-Li\'s Hoyokusen super with one pixel of health',
+      'Blocked specials still deal chip damage, so blocking would have killed him — parrying was his only option',
+      'Named by announcer Ben Cureton, who picked the arbitrary number "37" for the highlight video',
+    ],
+    sections: [
+      {
+        title: 'The Play Itself',
+        html: '<p>The situation was hopeless by any normal reading. Umehara\'s Ken had a single unit of health, and in 3rd Strike even a blocked special move inflicts chip damage — meaning Justin Wong\'s Chun-Li super would finish him whether he blocked or not. The only escape was to parry, tapping forward within a window of a few frames at the exact instant each hit landed, fifteen times in a row, with the final hit parried in mid-air. Umehara did it flawlessly and immediately counter-attacked for the kill. The crowd\'s eruption, audible on every copy of the clip, has become inseparable from the play, capturing the moment a room full of people watched something they did not believe was possible.</p>',
+      },
+      {
+        title: 'The Clip That Made Esports',
+        html: '<p>After the tournament, organiser and ring announcer Ben Cureton was asked to produce a highlight of the parry and uploaded it as "Evo Moment #37," choosing the two-digit number arbitrarily — an offhand decision that gave the moment its permanent name. The video spread across the early internet and became the most watched and most replayed clip in competitive gaming, endlessly cited as the greatest play in esports history. For the fighting game community it functions as a founding myth, the proof that skill and composure at the highest level can produce genuine miracles, and it remains the single piece of footage most likely to convince a sceptic that competitive gaming is worth watching.</p>',
+      },
+    ]
   }
 ];

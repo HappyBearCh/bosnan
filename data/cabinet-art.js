@@ -337,4 +337,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'asteroids-upright',
+    title: 'Asteroids (Upright)',
+    game: 'Asteroids',
+    manufacturer: 'Atari',
+    year: 1979,
+    artist: 'Atari in-house design',
+    era: 'Golden Age',
+    description: 'Atari\'s best-selling arcade cabinet ever, the black Asteroids upright paired a glowing white vector monitor with vivid side art of a starship amid a field of asteroids and red explosions — a machine whose austerity became iconic.',
+    longDescription: 'Asteroids was designed primarily by Ed Logg with input from Lyle Rains, developed in roughly six months, and released in November 1979. It became Atari\'s best-selling arcade game of all time, with 56,565 units produced — 47,840 uprights and 8,725 cocktail cabinets — and its distinctive machine became one of the defining physical objects of the golden age of arcades.\n\nThe cabinet\'s visual identity was built around contrast. The body was black, giving the machine a stark, almost severe presence on the arcade floor, and against that darkness the side art blazed: a starship set within a blue field of tumbling asteroids punctuated by red explosions. The marquee above the screen carried a similar composition beneath the yellow Asteroids logo, and the whole assembly was topped by a lightbox that made the artwork glow in the dim arcade. The control panel completed the look with a red, white, and blue scheme — and, unusually, no joystick at all, since the game was controlled entirely by buttons for rotation, thrust, fire, and hyperspace.\n\nThe screen itself was the machine\'s real spectacle. Asteroids used Atari\'s custom vector display hardware driving a Wells-Gardner 19V2000 black-and-white vector monitor, which drew sharp, luminous lines directly rather than rendering pixels. The result was a crispness and glow that raster monitors of the era simply could not reproduce — the rocks and the player\'s ship appeared as bright, clean geometry floating in absolute blackness. The stark monochrome of the screen and the black cabinet body reinforced one another, while the colourful side art supplied the imaginative context that the minimalist graphics deliberately withheld.\n\nThat tension between austere presentation and vivid packaging is precisely what makes the Asteroids cabinet such an effective piece of design. The game itself shows the player nothing but white outlines in a void; the cabinet art tells them they are piloting a starship through a lethal asteroid belt. Together they demonstrate one of the central lessons of arcade design — that the cabinet was not merely a container but a crucial part of the experience, supplying the fiction that the hardware of 1979 could not render.',
+    keyFacts: [
+      'Atari\'s best-selling arcade game — 56,565 cabinets produced (47,840 upright, 8,725 cocktail)',
+      'Black cabinet body with side art of a starship among blue asteroids and red explosions',
+      'Used a Wells-Gardner 19V2000 black-and-white vector monitor for sharp, glowing lines',
+      'The control panel had buttons only — no joystick at all',
+    ],
+    notableFor: 'Pairing an austere monochrome vector screen with vivid colour cabinet art, showing how the cabinet supplied the fiction the hardware could not render.',
+    sections: [
+      {
+        title: 'Design and Visual Identity',
+        html: '<p>The Asteroids upright was defined by contrast: a stark black body offset by blazing side art depicting a starship amid a blue field of asteroids and red explosions, with the yellow Asteroids logo anchoring a matching marquee lit by a lightbox above the screen. The red, white, and blue control panel carried buttons only — no joystick, an unusual choice reflecting the game\'s rotate-and-thrust control scheme. Every element was chosen to make the machine unmistakable across a crowded arcade floor while framing a screen whose contents were nothing but glowing white lines in a void.</p>',
+      },
+      {
+        title: 'The Vector Advantage',
+        html: '<p>Asteroids drew its graphics on a Wells-Gardner black-and-white vector monitor via Atari\'s custom vector hardware, producing luminous, razor-sharp lines that no raster display of 1979 could match. The effect was a screen of pure geometry floating in absolute darkness — beautiful, but abstract. This is where the cabinet art earned its keep: the colourful painted panels told the player they were piloting a starship through a lethal belt of rock, supplying an imaginative context the minimalist graphics deliberately withheld. The pairing is a textbook demonstration of how arcade cabinets functioned as an essential part of the game, not merely its housing.</p>',
+      },
+    ],
+  },
+  {
+    id: 'star-wars-cockpit',
+    title: 'Star Wars (Deluxe Cockpit)',
+    game: 'Star Wars',
+    manufacturer: 'Atari',
+    year: 1983,
+    artist: 'Mike Jang (industrial design)',
+    era: 'Golden Age',
+    description: 'Atari\'s sit-down Star Wars cockpit enclosed the player in a machine styled after the Millennium Falcon, with a flight yoke, a 25-inch colour vector monitor, and side art of Darth Vader looming behind the Death Star.',
+    longDescription: 'Star Wars arrived in arcades in May 1983 in two configurations: 10,245 standard uprights and 2,450 deluxe sit-down cockpits, for a combined run of just under 13,000 units. It was Atari\'s top-selling arcade release of that year and topped the Play Meter chart for street locations in October 1983. But it is the cockpit version that has become legendary — a machine that did not merely display Star Wars but attempted to put the player inside it.\n\nThe cabinet was the work of industrial designer Mike Jang, whose sketches gave the cockpit its now-iconic look. Rather than simply enclosing the player in a box, Jang drew on the film\'s visual language directly: the plastic mouldings around the monitor carried hydraulic-ram detailing that echoed the ramp mechanisms of the Millennium Falcon, and the roof was built as an angled truss structure extending that same mechanical, lived-in aesthetic. Sitting inside it felt less like using an arcade machine than climbing into a piece of the film\'s hardware.\n\nThe artwork completed the illusion. The cockpit\'s side panels depicted Darth Vader with his red lightsaber looming behind the Death Star, with X-Wings and TIE fighters duelling across a star-filled galaxy, and the marquee carried a similar explosively colourful composition around the game\'s title. Inside, the control panel presented a flight yoke with four buttons — two triggers and two positioned for the thumbs — closely emulating the flight controls of Luke Skywalker\'s X-Wing, so that the physical act of playing mirrored the fiction on screen.\n\nCrucially, the cockpit version also delivered a superior game. Where the upright used a 19-inch Wells-Gardner monitor, the sit-down housed a 25-inch Amplifone colour vector display, and the larger screen dramatically amplified the impact of the game\'s glowing wireframe TIE fighters and Death Star trench. Enclosed, seated, gripping a yoke, surrounded by Vader and the Death Star, and staring into a huge vector display, the player got as close to piloting an X-Wing as 1983 technology could manage — which is precisely why the Star Wars cockpit remains one of the most coveted cabinets in collecting.',
+    keyFacts: [
+      'Released May 1983 in two forms: 10,245 uprights and 2,450 deluxe sit-down cockpits',
+      'Cabinet designed by Mike Jang, with hydraulic-ram detailing echoing the Millennium Falcon',
+      'Side art showed Darth Vader behind the Death Star amid X-Wing and TIE fighter combat',
+      'The cockpit used a 25-inch Amplifone colour vector monitor versus the upright\'s 19-inch',
+    ],
+    notableFor: 'Enclosing the player in a Millennium Falcon–inspired cockpit with a yoke and an oversized colour vector screen, the closest 1983 could come to flying an X-Wing.',
+    sections: [
+      {
+        title: 'Designed Like a Piece of the Film',
+        html: '<p>Industrial designer Mike Jang built the cockpit to feel like Star Wars hardware rather than an arcade machine. The plastic mouldings framing the monitor carried hydraulic-ram detailing borrowed from the Millennium Falcon\'s ramp mechanisms, and the angled truss-style roof extended that mechanical, used-universe aesthetic overhead. Side panels showed Darth Vader looming behind the Death Star with X-Wings and TIEs duelling across the stars, while the control panel offered a yoke with four buttons — two triggers, two thumb-operated — that consciously imitated the flight controls of Luke\'s X-Wing. Every surface worked to convince the seated player they had climbed into the film.</p>',
+      },
+      {
+        title: 'The Bigger Screen',
+        html: '<p>Beyond its styling, the cockpit was simply the better machine. Atari fitted it with a 25-inch Amplifone colour vector monitor against the 19-inch Wells-Gardner display used in the upright, and on a game built entirely from glowing wireframe geometry — TIE fighters swarming, the Death Star trench rushing past — that extra size transformed the experience. The combination of an enclosed cockpit, an authentic yoke, dramatic side art, and an oversized vector screen produced one of the most immersive arcade experiences of the era, and it is why the sit-down Star Wars remains among the most sought-after cabinets in collecting today.</p>',
+      },
+    ],
+  },
+  {
+    id: 'after-burner-deluxe',
+    title: 'After Burner (Deluxe Motion Cabinet)',
+    game: 'After Burner',
+    manufacturer: 'Sega',
+    year: 1987,
+    artist: 'Sega AM2 (Yu Suzuki, design)',
+    era: '16-bit',
+    description: 'Sega\'s hydraulic After Burner cabinet strapped the player into a rotating cockpit that tilted, rolled, and spun in sync with the on-screen jet — a £4,000 machine that made the arcade a physical experience, not just a visual one.',
+    longDescription: 'After Burner, a 1987 rail shooter designed by Sega veteran Yu Suzuki, was conceived as Sega\'s first true blockbuster, and its most extravagant cabinet configuration remains one of the most spectacular pieces of hardware the arcade industry has ever produced. Sega released the game in three cabinet types — a standard upright and two cockpit versions, one that tilted left and right and one that rotated fully — and it is the rotating deluxe cabinet that made the game legendary.\n\nThe deluxe machine simulated an aircraft cockpit in earnest. The player climbed into a chair fitted with a seatbelt, gripped a flight stick, and was then physically moved by hydraulic motion technology synchronised to the action on screen. As the player banked and rolled their jet with the stick, the cabinet moved in tandem: the seat rotated horizontally while the cockpit itself rotated vertically, tilting and spinning the player through the manoeuvres they were performing on screen. Combat became a whole-body sensation — a rare instance where the marketing promise of "putting you in the game" was close to literally true.\n\nThe presentation extended to audio. The rotating cockpit housed two speakers mounted inside the enclosure at head level, delivering stereo sound directly to the player\'s ears and dramatically heightening the sense of being sealed inside a fighter jet. Combined with the sprite-scaling visuals Sega\'s Super Scaler hardware produced — a rush of scaling enemies, missiles, and horizon — the effect was overwhelming by 1987 standards.\n\nSuch spectacle was expensive. In Europe, where the game arrived in September 1987, the hydraulic sit-in cabinet cost operators around £4,000, roughly $6,500 at the time and equivalent to something like $18,000 today — a serious capital investment that only larger arcades could justify. That cost made the deluxe After Burner a rarity even in its heyday, which only enhanced its mystique: encountering one was an event. It stands as the definitive expression of Sega\'s late-1980s philosophy that the arcade\'s advantage over home consoles lay not merely in graphics but in physical experiences that could never be replicated in a living room.',
+    keyFacts: [
+      'Designed by Yu Suzuki and intended as Sega\'s first true blockbuster',
+      'Released in three cabinet types: an upright, a tilting cockpit, and a fully rotating cockpit',
+      'Hydraulics rotated the seat horizontally and the cockpit vertically in sync with the flight stick',
+      'The hydraulic sit-in cabinet cost around £4,000 in the UK — roughly $18,000 in today\'s money',
+    ],
+    notableFor: 'Delivering full hydraulic motion synchronised to the player\'s own flight controls, making the arcade a physical experience no home console could imitate.',
+    sections: [
+      {
+        title: 'Motion as the Main Event',
+        html: '<p>The deluxe After Burner cabinet did something no home system could: it moved the player. Strapped into a seatbelt-equipped chair with a flight stick in hand, the player found the entire cockpit responding to their inputs through hydraulic motion — the seat rotating horizontally while the cockpit rolled vertically, tilting and spinning in sync with the jet on screen. Head-level speakers mounted inside the enclosure completed the seal, delivering stereo sound directly to the pilot. Combined with the rush of scaling sprites from Sega\'s Super Scaler hardware, the result turned aerial combat into a whole-body sensation and made "putting you in the game" close to literally true.</p>',
+      },
+      {
+        title: 'The Price of Spectacle',
+        html: '<p>Such an experience did not come cheap. When the game reached Europe in September 1987, the hydraulic sit-in cabinet cost operators roughly £4,000 — about $6,500 then, and equivalent to something in the region of $18,000 today — an investment only substantial arcades could justify. Its rarity became part of its legend: encountering a working rotating After Burner was an event rather than a routine visit. The machine embodied Sega\'s core late-1980s conviction that the arcade\'s edge over home consoles lay in physical, embodied experiences that a living room could never reproduce, a philosophy the company would pursue through the Super Scaler era and beyond.</p>',
+      },
+    ],
+  },
 ];
