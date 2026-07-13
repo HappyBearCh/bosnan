@@ -406,4 +406,56 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'nintendo-game-counselors',
+    title: 'The Game Counselors',
+    subtitle: 'Before the internet, if you were stuck in a dungeon you picked up the telephone and a human being talked you through it — at $1.50 a minute',
+    category: 'culture',
+    summary: 'From 1987 to 2005 Nintendo ran a phone hotline staffed by hundreds of people whose entire job was helping strangers finish video games. It is one of the strangest customer service operations ever built, and its death tells you exactly what the internet did to gaming.',
+    readTime: '9 min read',
+    sections: [
+      {
+        title: 'A Number to Call When You Were Stuck',
+        html: '<p>It is genuinely difficult to explain to anyone under thirty. You are eleven years old, it is 1990, and you have been wandering the same Zelda dungeon for two weeks. There is no internet. There is no GameFAQs. The strategy guide, if one exists, costs money you do not have and is not in any shop near you. Your friends are as lost as you are.</p><p>So you pick up the telephone and call Nintendo, and a person answers — a person whose actual job, whose paid employment, is knowing where the thing you cannot find is hidden.</p><p>Nintendo launched its Game Play Counselor hotline in the late 1980s, and it ran until 2005. Callers reached a trained counsellor who could tell them how many coins earned an extra life in Mario, which dungeon held which treasure in Zelda, how to beat the boss that had blocked them for a month. The counsellors kept binders of maps and notes, played the games exhaustively, and fielded call after call from frustrated children across an entire continent.</p>',
+      },
+      {
+        title: 'The Scale of It',
+        html: '<p>The operation was not small. At its peak the service ran a call centre with more than a hundred people answering phones, and during busy periods — Christmas above all, when a nation\'s worth of children unwrapped games simultaneously and got stuck in them by New Year — Nintendo reportedly staffed between 200 and 500 counsellors across multiple shifts.</p><p>Think about what that means. A major corporation employed hundreds of people, full time, for nearly two decades, whose entire function was to talk individual customers through the games they had already sold them. No modern platform holder does anything remotely like this. The closest analogue today is a community forum where unpaid strangers answer each other, which is to say: the closest analogue is nothing like it at all.</p><p>The service developed real sophistication. From 1989 it added a pre-recorded information system, letting callers who wanted a common answer listen to a voicemail tree rather than wait for a live counsellor. It also ran a TDD system — a Telecommunication Device for the Deaf — so that hearing-impaired players could get help too, a genuinely thoughtful accommodation for a service aimed largely at children in 1989.</p>',
+      },
+      {
+        title: 'And Your Parents Got the Bill',
+        html: '<p>None of it was free. The Game Counselor line was a toll number, and for much of the 1990s calls ran at around $1.50 per minute. Nintendo\'s own materials carried a warning that has since become a small piece of generational folklore: before you call, either be the person who pays the phone bill, or get permission from whoever does.</p><p>Every child who ever called that number understood the arithmetic instinctively. A counsellor walking you through a lengthy section could burn through real money — a fifteen-minute call was over twenty dollars, more than the price of a game. There are countless stories of children calling anyway, being talked through a dungeon, and then facing a parent holding an itemised phone bill at the end of the month.</p><p>This is the detail that makes the whole thing feel so alien now. Information about how to finish a video game was a scarce commodity with a per-minute price. It had to be extracted from an expert, in real time, over a metered line. That was simply what knowledge cost.</p>',
+      },
+      {
+        title: 'What Killed It, and What It Was Really For',
+        html: '<p>Nintendo retired the Game Counselor hotline in 2005, and the reason is obvious: the internet had made it pointless. Free walkthroughs, faster and more thorough than any counsellor could deliver, sat a search away. GameFAQs volunteers had documented every game more exhaustively than a call centre ever could, and they had done it for nothing. The hotline did not fail — it was rendered absurd.</p><p>But it is worth being precise about what disappeared. What died was not just a support line but a whole relationship between players and the games industry. Being stuck used to be a social condition: you asked friends, you traded rumours in the schoolyard, you called a stranger who knew. Half the mythology of the era — the persistent playground legends about hidden characters, the urban legends that grew up around games — existed precisely because reliable information was scarce and expensive.</p><p>The internet dissolved that scarcity utterly, and with it went both the frustration and the folklore. We gained instant, free, perfect knowledge, and we lost the peculiar intimacy of a phone line where an adult, somewhere in Redmond, picked up and helped a stranger\'s child find their way out of a dungeon. It was an absurd way to run a business. It is remembered with an affection that almost nothing in modern customer service inspires.</p>',
+      },
+    ],
+  },
+  {
+    id: 'memory-card',
+    title: 'The Memory Card',
+    subtitle: 'Sony took your save file out of the console and put it in your pocket — and quietly changed what a saved game was for',
+    category: 'technology',
+    summary: 'Before the PlayStation, your progress lived inside a cartridge or was written on paper as a password. The memory card made saves portable, visual, and social — and turned a technical necessity into one of the console\'s most underrated innovations.',
+    readTime: '9 min read',
+    sections: [
+      {
+        title: 'The Problem Discs Created',
+        html: '<p>Saving a game used to be the cartridge\'s job. A battery-backed cartridge — the gold Legend of Zelda cart being the famous example — carried its own small store of memory and a watch battery to keep it alive, so the game you owned and the progress you had made in it lived inside the same plastic shell. Games without that luxury made you write down a password, a string of characters that encoded your progress and had to be typed back in, one error away from disaster.</p><p>The optical disc broke this arrangement completely. A CD-ROM is read-only; there is nowhere on it to write anything. When Sony built the PlayStation around discs, it inherited an obvious problem: the medium that gave the console its enormous storage advantage could not remember a single thing the player did.</p><p>The solution was the memory card, introduced with the console in 1994 — a small proprietary flash cartridge that slotted into the front of the machine and held the save data the disc could not.</p>',
+      },
+      {
+        title: 'Fifteen Blocks',
+        html: '<p>The official Sony card was frequently advertised as holding 1 MB, which was true only if you did not look closely: the figure was one megabit, and the actual capacity was 128 KB — divided, in the interface players actually saw, into fifteen blocks.</p><p>Those fifteen blocks became one of the defining constraints of the era. Games consumed them at wildly different rates, and a serious player accumulated cards the way earlier generations accumulated cartridges. The arithmetic of what to keep and what to delete — surrendering a completed game\'s save to make room for a new one, agonising over whether a friend\'s file could be sacrificed — was a routine and slightly stressful part of owning a PlayStation. Third-party cards promised more space and sometimes corrupted everything instead.</p><p>Sony also made the interface unusually humane. Where earlier systems represented save data as text on stark black-and-white screens, the PlayStation gave every save a small animated icon, colourful and playful, so that browsing your card was a visual act rather than an administrative one. It is a tiny piece of design, and it did an enormous amount of work in making the card feel like a place rather than a file system.</p>',
+      },
+      {
+        title: 'Taking Your Game to a Friend\'s House',
+        html: '<p>The consequence nobody planned for was social. A cartridge save lived in the cartridge; a battery-backed Zelda file could travel only if you carried the game itself. But a memory card was small, cheap, and separable — you could pull it out of your console, put it in your pocket, walk to a friend\'s house, and continue your own game on their machine.</p><p>This changed something real. Progress became a possession you carried rather than a property of the hardware you owned. Kids took their memory cards to sleepovers. Save files were traded, borrowed, and shown off. A maxed-out character or a completed game became a portable trophy, something you could produce and plug in to prove.</p><p>It also made the save file legible as an object in its own right — a thing with a name, an icon, a size, and an owner. That framing, which the PlayStation established almost incidentally, is the ancestor of every cloud save and profile system that followed.</p>',
+      },
+      {
+        title: 'An Underrated Revolution',
+        html: '<p>The memory card is rarely listed among the PlayStation\'s important innovations, which tend to be catalogued as CD-ROM storage, 3D graphics, and a marketing campaign aimed at adults. But every disc-based console from every major manufacturer that followed adopted memory cards, because the problem Sony solved was structural rather than incidental: as long as games shipped on read-only media, the save had to live somewhere else.</p><p>The card\'s eventual death was equally structural. Once consoles shipped with internal hard drives, the save file went back inside the machine, and once they connected to the internet, it left the machine entirely for the cloud. The portability that the memory card introduced was, in the end, generalised so completely that the physical object became unnecessary — your save now follows you to any console you log into, which is the memory card\'s promise fulfilled by other means.</p><p>What remains is the idea it established: that your progress is yours, that it exists as a discrete thing, and that it can travel. That seems obvious now. In 1994, with a read-only disc spinning in the drive and nowhere to write, it was a problem someone had to solve — and the answer they found was a little grey brick you could put in your pocket.</p>',
+      },
+    ],
+  },
 ];

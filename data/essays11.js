@@ -241,4 +241,56 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'emulation-on-trial',
+    title: 'Emulation on Trial',
+    subtitle: 'Sony lost the case that made emulators legal — then destroyed the company it had lost to anyway',
+    category: 'Business',
+    summary: 'In 1999 two small companies built software that let PlayStation games run on ordinary computers. Sony sued both. The courts ruled decisively that emulation was legal — and Sony won regardless, by simply outspending its opponents until they ceased to exist.',
+    readTime: '10 min read',
+    sections: [
+      {
+        title: 'Two Programs Sony Could Not Tolerate',
+        html: '<p>By the late 1990s the PlayStation was the most successful console in the world, and its value to Sony rested on a simple proposition: if you wanted to play PlayStation games, you had to buy Sony\'s hardware. Two small companies set out to break that proposition, independently and almost simultaneously.</p><p>Connectix began developing the Virtual Game Station in July 1998 — a Macintosh application that emulated the PlayStation, allowing genuine PlayStation discs to run on an Apple computer. Bleem!, released in March 1999, did the same thing for Windows PCs, and later for the Sega Dreamcast, of all things. Neither product pirated games; both required the player to own and insert a real, legitimately purchased disc. What they attacked was not Sony\'s software revenue but its hardware monopoly.</p><p>Sony sued them both.</p>',
+      },
+      {
+        title: 'The Ruling That Legalised Emulation',
+        html: '<p>The Connectix case produced one of the most important rulings in the history of the medium. To build an emulator, Connectix had needed to understand the PlayStation\'s BIOS — the low-level firmware that games expect to find — and in the course of reverse-engineering it, the company had made intermediate copies of Sony\'s copyrighted code. Sony argued this was straightforward infringement.</p><p>The Ninth Circuit Court of Appeals disagreed, and did so emphatically. It held that copying copyrighted BIOS software during the development of an emulator does not constitute copyright infringement, because it is protected by fair use. The court reversed the district court on both the copyright claim and Sony\'s trademark tarnishment claim, and lifted the injunction that had been imposed on Connectix. Sony attempted to take the case to the Supreme Court and failed.</p><p>This is the legal foundation on which the entire emulation and preservation community rests. It establishes that reverse-engineering a console in order to make software that interoperates with it — copying code along the way, as any such effort must — is lawful. Every emulator you have ever used exists in the space that ruling defined.</p>',
+      },
+      {
+        title: 'Winning Anyway',
+        html: '<p>And then Sony won. Having lost decisively against Connectix, it simply kept litigating against Bleem!. The legal question had been settled; the commercial question had not. Bleem! was a tiny operation with no meaningful capital, and defending itself against a corporation of Sony\'s size was ruinous regardless of the merits. It could win the argument and still lose the war, and it did. Bleem! ran out of money and shut down in November 2001.</p><p>Connectix survived only technically. About a year after the appellate ruling, the two companies settled out of court, and on 15 March 2001 Sony purchased the Virtual Game Station rights from Connectix outright — and promptly buried the product. Sony had lost in the courts and then acquired the thing it had failed to prohibit, ensuring that nobody would ever be able to buy it.</p><p>Both emulators were gone within two years of the ruling that vindicated them.</p>',
+      },
+      {
+        title: 'The Lesson Nobody Wanted',
+        html: '<p>Legal scholars have picked over these cases ever since, and the thing they illuminate is uncomfortable. The law said emulation was legal. The outcome was that both emulators disappeared. Litigation costs money, and when one party has effectively unlimited money and the other has almost none, the merits of the case become close to irrelevant — a company can be right and still be destroyed by the expense of proving it.</p><p>The cases also foreshadowed a shift in tactics. Sony\'s copyright argument failed, so the industry increasingly turned to a different instrument: the anti-circumvention provisions of the Digital Millennium Copyright Act, which prohibit defeating technical protection measures regardless of whether any copyright has actually been infringed. That framework lets a platform holder attack an interoperable product without having to win a fair use argument at all — precisely the argument Sony lost.</p><p>The Connectix ruling remains good law, and emulator authors still rely on it. But the fate of Bleem! is the part of the story worth remembering, because it explains why so much emulation happens in the shadows, written by anonymous hobbyists and distributed for free. The people who tried to do it openly, commercially, and legally were proven right in court and put out of business anyway. Everyone who came after them learned the obvious lesson.</p>',
+      },
+    ],
+  },
+  {
+    id: 'bit-wars-blast-processing',
+    title: 'The Bit Wars',
+    subtitle: 'How a number that meant almost nothing became the most powerful word in game marketing',
+    category: 'Business',
+    summary: 'For a decade, consoles were sold on a single number — 8, 16, 32, 64 — that told consumers essentially nothing useful. "Blast Processing" was the purest expression of the con, and the Atari Jaguar was its reductio ad absurdum.',
+    readTime: '10 min read',
+    sections: [
+      {
+        title: 'A Number That Sounded Like a Fact',
+        html: '<p>The bit count of a console\'s processor is a real technical property. It describes, roughly, the width of the data the CPU handles in one operation. It is also, as a predictor of whether games will be good or even whether they will look good, close to worthless — a fact the industry understood perfectly and concealed with enthusiasm for over a decade.</p><p>The appeal of the number to marketers was that it was simple, it was quantitative, and it sounded like a fact rather than a claim. Sixteen is twice eight. Thirty-two is twice sixteen. A consumer standing in a shop with no way to evaluate architecture, memory bandwidth, or graphics hardware could grasp instantly that a larger number was better, and the industry spent ten years ensuring they never learned otherwise.</p><p>The reality was messier at every turn. The Super Nintendo\'s CPU ran at 3.58 MHz against the Genesis\'s 7.67 MHz, which sounds decisive until you notice that the SNES had a vastly more capable graphics chip, better colour, and hardware scaling and rotation the Genesis could not touch. Neither machine was simply "better." Both were 16-bit. The number explained nothing.</p>',
+      },
+      {
+        title: 'Blast Processing',
+        html: '<p>Sega\'s answer to this ambiguity was one of the great marketing coinages in the history of the medium, and its origins are more honest than its use. Sega of America\'s Marty Franz discovered a genuine technique that allowed developers to push data onto the Genesis graphics chip while a scanline was actively being drawn, exploiting the DMA unit\'s bandwidth to change the colour palette mid-scanline. His colleague Scott Bayliss gave it a name: Blast Processing.</p><p>As an engineering term for an obscure DMA trick, it was fine. As a marketing weapon, it was devastating — and completely untethered from what it originally described. Sega\'s advertising deployed "Blast Processing" not as a specific capability but as a vague, thrilling assertion that the Genesis was simply <em>faster</em>, and consumers, who had no idea what the phrase had ever meant, accepted it as a technical fact about the hardware.</p><p>The blowback was inevitable. Because almost nobody knew what the term had originally referred to, Nintendo was later able to dismiss Blast Processing as a pure myth with no basis whatsoever — a rebuttal that was itself misleading, since the underlying technique was real. The truth, awkwardly, sat in the middle, which is precisely where marketing arguments go to die. The man who coined the phrase has since publicly apologised for creating "that ghastly phrase."</p>',
+      },
+      {
+        title: 'The Arms Race Eats Itself',
+        html: '<p>Once bits became the axis of competition, escalation was the only strategy available. The 16-bit generation gave way to a scramble for 32, and the claims grew increasingly desperate and increasingly meaningless. Sega\'s 32X bolted two 32-bit processors onto a 16-bit console specifically so the box could say 32; the Sega CD, the 32X, and the Saturn coexisted in the market simultaneously, fragmenting Sega\'s message and its customers.</p><p>The absurdity peaked with the Atari Jaguar, marketed relentlessly as "the world\'s first 64-bit interactive multimedia system." The claim was arrived at by counting the width of a bus rather than the CPU, an accounting exercise designed to produce a bigger number than anyone else could claim. The Jaguar was not meaningfully more powerful than its 32-bit rivals; it had a bewildering multi-processor architecture that developers struggled to program, a controller with a numeric keypad and three face buttons, and a game library that never materialised. It sold catastrophically.</p><p>The Jaguar is the perfect endpoint of the bit wars because it demonstrates the whole logic collapsing: a console that won the number and lost everything else. Nintendo, meanwhile, put 64 in the actual name of its console — a final, cheerful admission that the number had become the product.</p>',
+      },
+      {
+        title: 'What Replaced It',
+        html: '<p>The bit wars ended not because consumers grew sophisticated but because the number stopped scaling usefully. Once processors moved past 64-bit, the figure ceased to be a differentiator, and the industry needed a new axis. It found several: polygons per second, then resolution, then frame rate, then teraflops. Each has been deployed in exactly the same way — a single quantitative claim, technically real, presented as though it settled a question it does not actually address.</p><p>It is worth being clear about what the bit wars actually were. They were not a technical debate that consumers happened to misunderstand. They were a deliberate strategy of substituting a legible number for an illegible reality, because the real question — which console has the better games, the better development tools, the better architecture for what developers actually want to do — cannot be printed on a box.</p><p>The most instructive fact in the whole saga is that the SNES and the Genesis, the two machines whose rivalry the bit wars were invented to adjudicate, were both 16-bit, both excellent, and both produced masterpieces the other could not have run. The number never had an answer. It just had a bigger version.</p>',
+      },
+    ],
+  },
 ];

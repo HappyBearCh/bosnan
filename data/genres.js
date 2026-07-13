@@ -519,5 +519,42 @@ module.exports = [
         html: '<p>No genre was more physical, more social, or more visible in the arcade. A light-gun cabinet demanded that the player stand, aim, and perform, and its cabinets — often with two guns bolted to the front — made co-operative play the default rather than an afterthought. For much of the 1990s these machines were the clearest demonstration of what an arcade could offer that a living room could not.</p><p>The genre also proved unusually mortal. Its dependence on CRT technology meant that when flat-panel displays replaced tube televisions, an entire library of games became effectively unplayable on modern hardware — a preservation problem with few parallels in the medium. Duck Hunt, one of the best-selling games ever made, cannot be played as intended on a contemporary TV. The light-gun shooter is thus a rare case of a genre killed not by changing taste but by the quiet obsolescence of the display technology it was built upon.</p>',
       },
     ],
+  },
+  {
+    id: 'roguelike',
+    name: 'Roguelikes',
+    shortName: 'Roguelike',
+    era: '1980 – present',
+    subtitle: 'Permanent death, generated dungeons, and the game that has never been finished',
+    description: 'Roguelikes generate a new dungeon every time you play and delete your character permanently when you die. Born on university mainframes in 1980, the genre made randomness and loss into design principles — and its ideas now sit inside games of every kind.',
+    genres: ['Traditional Roguelike', 'Roguelite', 'Dungeon Crawler', 'Permadeath Survival'],
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Nethack.png/250px-Nethack.png',
+    imageCaption: 'NetHack, the open-source roguelike in continuous development since 1987 — its dungeon drawn entirely from ASCII characters.',
+    imageAlt: 'An ASCII-art dungeon screen from the roguelike game NetHack',
+    imageLicense: 'NetHack GPL',
+    stats: [
+      { label: 'Foundational title', value: 'Rogue (Toy, Wichman, Arnold, 1980)' },
+      { label: 'Defining title', value: 'NetHack (NetHack DevTeam, 1987)' },
+      { label: 'Core principles', value: 'Procedural generation, permadeath, turn-based movement' },
+      { label: 'Key influence', value: 'Dungeons & Dragons and the DEC mainframes it ran on' },
+    ],
+    sections: [
+      {
+        title: 'Overview',
+        html: '<p>A roguelike generates its world anew each time you play. The dungeon you descend today did not exist yesterday and will never exist again, and the character you are guiding through it will, when they die, be gone permanently — no continues, no reloading, no second chances. These two ideas, procedural generation and permadeath, are the genre\'s foundation, and everything else follows from them.</p><p>The consequence is a peculiar relationship between player and game. Because the dungeon cannot be memorised, mastery is not knowledge of a level but knowledge of a system: what monsters do, how items interact, which risks are survivable. And because death is final, every decision carries genuine weight — a roguelike player is not optimising a route but managing an ongoing crisis, and the story of a run emerges from the choices made under that pressure rather than from anything an author wrote.</p>',
+      },
+      {
+        title: 'History',
+        html: '<p>The genre begins with Rogue, written around 1980 by Michael Toy, Glenn Wichman, and later Ken Arnold on the university mainframes of the era. Working with a text terminal and nothing else, they drew a dungeon out of ASCII characters — hashes for corridors, letters for monsters, an @ for the player — and had the computer build a fresh one each session. The influence of Dungeons & Dragons is everywhere in its potions, scrolls, and monsters, but the crucial innovation was letting the machine do the dungeon-mastering.</p><p>Rogue spread across university networks and spawned imitators that took its name: Hack, then NetHack, first released in 1987 and still under active development by its DevTeam decades later — one of the longest continuously maintained programs in existence. Angband, Moria, Ancient Domains of Mystery, and Dungeon Crawl Stone Soup followed, each elaborating the formula into systems of extraordinary depth. These games were free, open, and endlessly modified, and they developed in a culture entirely separate from the commercial industry.</p>',
+      },
+      {
+        title: 'Mechanics',
+        html: '<p>The traditional roguelike is turn-based and grid-based: the world moves only when you do, which turns every step into a decision with no time pressure and no excuse. Interaction between systems is prized above scripted content — in NetHack, famously, almost anything you can think to try has been anticipated, from writing words in the dust to dipping items in fountains, and the community\'s maxim that "the DevTeam thinks of everything" reflects a design philosophy of exhaustive systemic depth rather than handcrafted set-pieces.</p><p>Permadeath is what gives all of this teeth. Without it, procedural generation is merely variety; with it, generation becomes danger, since the player cannot rehearse a solution and must instead reason about an unfamiliar situation with everything at stake. Modern "roguelites" soften this by allowing some progress to persist between runs — an accommodation that made the genre commercially viable and that purists regard with suspicion.</p>',
+      },
+      {
+        title: 'Cultural Impact',
+        html: '<p>For most of its life the roguelike was a curiosity: free, forbidding, drawn in ASCII, and played by a devoted few. Its ideas then escaped and colonised the entire medium. Procedural generation now appears everywhere from Diablo\'s randomised dungeons to the vast generated universes of modern exploration games, and permadeath — once a bizarre imposition — has become a celebrated feature, revived by an indie generation that recognised how much tension it produces.</p><p>The genre also demonstrates something unusual about software longevity. NetHack has been in continuous development since 1987, maintained by volunteers, and is still being patched and played; Rogue\'s descendants are older than most of the companies that dominate the industry. In an art form obsessed with the new, the roguelike is a reminder that a design can be so fundamentally sound that it never actually needs replacing — only deepening, one turn at a time, for forty years.</p>',
+      },
+    ],
   }
 ];
