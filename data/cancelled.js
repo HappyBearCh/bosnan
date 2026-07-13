@@ -449,4 +449,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'sonic-mars-32x',
+    title: 'Sonic Mars',
+    platform: 'Sega 32X',
+    year: 1995,
+    developer: 'Sega Technical Institute',
+    publisher: 'Sega',
+    status: 'Cancelled; retooled into Sonic X-treme',
+    era: '32-bit',
+    description: 'The first attempt at a fully 3D polygonal Sonic game, built for the 32X and named after the add-on\'s "Project Mars" codename — abandoned when the 32X collapsed, and dragged onto the Saturn where it became the doomed Sonic X-treme.',
+    longDescription: 'Sonic Mars was to be the moment Sonic went 3D. Developed by Sega Technical Institute — the American studio behind Sonic 2, Sonic 3, Sonic Spinball, The Ooze, and Comix Zone — it was conceived as the first fully polygonal, three-dimensional entry in the series, with 3D environments and characters drawn from Sonic\'s world. It took its name from "Project Mars," the internal codename for the Sega 32X, and worked under the alternative title Sonic 32X.\n\nThe project also drew on the Sonic the Hedgehog animated television series, which was airing while it was in development, and the plan was to incorporate elements from the show — an unusual case of a game taking its cues from a cartoon rather than the other way round. Sega of America\'s management green-lit the concept and handed development to STI.\n\nTrouble arrived almost immediately. Not long after the proposal was approved, Michael Kosaka left Sega following conflict with Comix Zone\'s developer Dean Lester, and Chris Senn took over as lead designer — the first of many disruptions that would characterise the project\'s tortured life. Meanwhile, the platform beneath it was disintegrating: the 32X was failing catastrophically in the market, and Sega was abandoning it.\n\nSo the game moved. Sonic Mars was shifted to the Sega Saturn, where it was gradually reworked into Sonic X-treme — a project that would become one of the most infamous development disasters in gaming history, cycling through engines, designers, and directives before being cancelled outright, leaving the Saturn without the flagship Sonic game it desperately needed. Sonic Mars is the origin point of that catastrophe: the first draft of a 3D Sonic that Sega spent years failing to make, on a console that was already dying when the work began.',
+    keyFacts: [
+      'Named after "Project Mars," the internal codename for the Sega 32X',
+      'Developed by Sega Technical Institute, the US studio behind Sonic 2, Sonic 3, and Comix Zone',
+      'Intended as the first fully 3D polygonal Sonic game, drawing on the Sonic animated series',
+      'Moved to the Saturn as the 32X collapsed, where it was reworked into the doomed Sonic X-treme',
+    ],
+    sections: [
+      {
+        title: 'A Flagship for a Dying Platform',
+        html: '<p>Sonic Mars was pitched as the game that would take Sega\'s mascot into three dimensions, and Sega of America green-lit it for the 32X — a console that would sell around 800,000 units and be abandoned by its own maker within fourteen months. Building the most important game in the company\'s catalogue for a platform in freefall was a strategic error visible from the outside at the time. Development was disrupted early when lead designer Michael Kosaka departed after friction with a colleague, handing the project to Chris Senn, and as the 32X\'s failure became undeniable the entire effort was pulled onto the Sega Saturn instead.</p>',
+      },
+      {
+        title: 'The Seed of a Disaster',
+        html: '<p>What Sonic Mars became is the reason it matters. Transplanted to the Saturn, it was gradually reworked into Sonic X-treme, a project that has entered legend as one of the worst development experiences in the industry — engines discarded and rebuilt, directives reversed, staff worked to exhaustion, and finally cancellation, leaving the Saturn to face the PlayStation and the N64 without a flagship Sonic title. The failure is usually told as an X-treme story, but its roots lie here: a 3D Sonic conceived for a console that was already collapsing, and never able to escape the instability of its own origins.</p>',
+      },
+    ],
+  },
+  {
+    id: 'zelda-mystical-seed-of-courage',
+    title: 'The Legend of Zelda: Mystical Seed of Courage',
+    platform: 'Game Boy Color',
+    year: 2001,
+    developer: 'Capcom / Flagship',
+    publisher: 'Nintendo',
+    status: 'Cancelled; its mechanics absorbed into Oracle of Ages',
+    era: '8-bit handheld',
+    description: 'The third Zelda Oracle game, planned alongside Ages and Seasons as a linked trilogy — cancelled because making three games talk to each other proved impossible to debug.',
+    longDescription: 'The Oracle games were meant to be a trilogy. Capcom\'s Flagship studio, working under Nintendo, developed three linked Game Boy Color Zelda titles — Mystical Seed of Power, Mystical Seed of Wisdom, and Mystical Seed of Courage — corresponding to the three parts of the Triforce, each with its own oracle and its own central mechanic, and all designed to interconnect through password systems so that progress in one game affected the others.\n\nMystical Seed of Courage was to feature the oracle Farore, and its defining mechanic was time: puzzles were built around the time of day, with some solutions available only at particular hours. Its siblings had their own conceits — Mystical Seed of Wisdom was originally themed around colour, with every event and puzzle relating to it in some way, while Mystical Seed of Power took a different tack again.\n\nThe trilogy collapsed under its own ambition. The three games had to communicate with one another, and the debugging problems that arose from those interactions proved intractable — coordinating three interlocking titles was simply too complex to make work reliably. Rather than ship something broken, the decision was taken to cut the series down to two.\n\nCourage was the casualty, but it did not vanish entirely. Its time-based mechanic was too good to waste, and it was transplanted into Mystical Seed of Wisdom, which abandoned its colour theme and became The Legend of Zelda: Oracle of Ages — a game built around time travel, exactly as Courage had been. Mystical Seed of Power became Oracle of Seasons. The two games that shipped in 2001, with their celebrated password linking, are therefore a salvage operation: two-thirds of a trilogy, carrying the best idea of the third inside one of them.',
+    keyFacts: [
+      'Planned as the third of three linked Oracle games, developed by Capcom\'s Flagship studio',
+      'Would have featured the oracle Farore and puzzles built around the time of day',
+      'Cancelled because debugging the interactions between three linked games proved too complex',
+      'Its time mechanic was transplanted into Mystical Seed of Wisdom, which became Oracle of Ages',
+    ],
+    sections: [
+      {
+        title: 'Three Games That Had to Talk to Each Other',
+        html: '<p>The Oracle project was conceived as a trilogy mapped onto the Triforce — Power, Wisdom, and Courage — with each game carrying its own oracle and its own governing mechanic, and all three linked so that a player\'s progress in one would ripple into the others. It was an extraordinarily ambitious structure for the Game Boy Color, and the ambition is what killed it. Making three separate games interact correctly created debugging problems that the team could not resolve; the coordination required was simply too complex to guarantee. Rather than ship a trilogy that did not work, Nintendo and Capcom cut it to two.</p>',
+      },
+      {
+        title: 'What Survived',
+        html: '<p>Courage was the game that died, but its central idea outlived it. Its time-of-day puzzle mechanic was too strong to discard, so it was moved into Mystical Seed of Wisdom — which duly abandoned its original colour theme and emerged as The Legend of Zelda: Oracle of Ages, a game about travelling through time. Mystical Seed of Power became Oracle of Seasons. The two 2001 releases, celebrated for the password system that lets each game recognise a completed save from the other, are therefore a trilogy folded into a pair: a salvage job so clean that most players never suspected a third game had ever existed.</p>',
+      },
+    ],
+  },
+  {
+    id: 'twelve-tales-conker-64',
+    title: 'Twelve Tales: Conker 64',
+    platform: 'Nintendo 64',
+    year: 1998,
+    developer: 'Rare',
+    publisher: 'Nintendo',
+    status: 'Cancelled; retooled into Conker\'s Bad Fur Day',
+    era: '64-bit',
+    description: 'A cheerful, family-friendly Rare platformer starring a cute squirrel — cancelled because it was indistinguishable from every other Mario 64 clone, and reborn as one of the most obscene games Nintendo ever published.',
+    longDescription: 'Twelve Tales: Conker 64 was announced as Conker\'s Quest at E3 1997 and renamed in early 1998. It was exactly what Rare was expected to produce at that moment: a bright, colourful, family-friendly 3D platformer starring Conker, a cute red squirrel who had already appeared in Diddy Kong Racing, collecting things across cheerful worlds in the manner of Super Mario 64 and Rare\'s own Banjo-Kazooie.\n\nThat was the problem. Rare struggled with the project — citing difficulties in project management — but the deeper issue was that the market had become saturated with Mario 64-style collect-a-thons, several of them made by Rare itself. Looking at what they had built, the team came to an uncomfortable conclusion: Twelve Tales was competent and completely unremarkable. It brought nothing to the genre that Banjo-Kazooie had not already done better. So they cancelled it and started again.\n\nWhat they did next is one of the most drastic creative pivots in the history of the medium. In 1999 Rare announced that the game would be entirely redesigned to appeal to an older audience — a claim so implausible that many assumed it was an April Fools\' joke. It was not. Conker, formerly a wholesome children\'s character, was rebuilt as a foul-mouthed, hard-drinking, fourth-wall-breaking alcoholic armed with guns, throwing knives, and a frying pan, and the game around him became a torrent of scatological humour, gore, and film parody.\n\nConker\'s Bad Fur Day arrived in 2001, at the very end of the Nintendo 64\'s life, and it is astonishing that Nintendo published it at all. It sold poorly — a mature-rated game on a console owned overwhelmingly by children, released after most people had moved on — but it has become a cult classic and one of the most fondly remembered games on the platform. Twelve Tales was cancelled for being ordinary, and the decision to burn it down and start over produced something nobody else could have made.',
+    keyFacts: [
+      'Announced as Conker\'s Quest at E3 1997; renamed Twelve Tales: Conker 64 in early 1998',
+      'A family-friendly 3D platformer in the mould of Super Mario 64 and Banjo-Kazooie',
+      'Cancelled partly because the market was oversaturated with Mario 64-style platformers',
+      'Retooled in 2000 into Conker\'s Bad Fur Day — a decision many initially assumed was a joke',
+    ],
+    sections: [
+      {
+        title: 'Cancelled for Being Ordinary',
+        html: '<p>Twelve Tales was not abandoned because it was broken. By all accounts it was a perfectly serviceable 3D platformer — bright, cheerful, and stuffed with collectibles, starring a cute squirrel in exactly the register the market expected of Rare in 1998. That was precisely the problem. The Mario 64 collect-a-thon had been done to exhaustion, in large part by Rare itself with Banjo-Kazooie, and the team recognised that their game brought nothing distinctive to a crowded field. Rather than ship something adequate and forgettable, they killed it — an unusually clear-eyed decision from a studio at the height of its commercial success.</p>',
+      },
+      {
+        title: 'The Most Extreme Pivot in Gaming',
+        html: '<p>The rebuild is what makes the story remarkable. In 1999 Rare announced that Conker would be redesigned entirely for an older audience, a claim so absurd that many took it for an April Fools\' prank. The wholesome squirrel became a swearing, vomiting, gun-toting alcoholic; the cheerful platformer became a gleeful parade of scatological humour, gore, and shot-for-shot film parody. Conker\'s Bad Fur Day shipped in 2001 on a console owned mostly by children, sold badly, and became a cult classic — proof that the most interesting thing a studio can do with a mediocre game is have the nerve to destroy it.</p>',
+      },
+    ],
+  },
 ];

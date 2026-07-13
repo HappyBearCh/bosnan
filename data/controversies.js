@@ -492,4 +492,105 @@ module.exports = [
       'An early, deliberate example of controversy used as a marketing strategy',
     ],
   },
+  {
+    id: 'postal-1997',
+    sources: [
+      { title: 'Postal (video game)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Postal_(video_game)' },
+    ],
+    title: 'Postal and the "Mass Shooter Simulator"',
+    year: 1997,
+    era: '32-bit',
+    games: ['Postal'],
+    description: 'Running With Scissors built a game about a man committing mass murder in an American town, named it after the phrase for workplace shootings, and became a lightning rod for every argument about violence in games — banned in fourteen countries.',
+    longDescription: 'Postal, released in 1997 by the small Arizona studio Running With Scissors, is an isometric shooter in which the player controls an anonymous gunman — informally the "Postal Dude" — as he commits mass murder across the town of Paradise, Arizona. The franchise took its name directly from "going postal," the American idiom derived from a series of workplace shootings committed by United States Postal Service employees in the 1980s and 1990s. The game did not stumble into controversy; it was engineered for it.\n\nThe reaction was immediate and international. The perception of Postal as a mass shooter simulator made it a target for governments and media across the world, and it was banned outright in fourteen countries, including Australia and New Zealand, while being effectively blacklisted by major American retailers. Senator Joe Lieberman — who had co-chaired the 1993 congressional hearings that produced the ESRB — made his assessment memorably concise: "The three worst things about American society are Marilyn Manson, Calvin Klein Underwear ads and the Postal video game."\n\nWhat makes Postal awkward as a case study is that the ordinary defences do not fit it comfortably. Doom was violent but abstract, its targets demons in a hell dimension. Mortal Kombat\'s gore was cartoonish and its combatants were fighters who had agreed to fight. Postal put the player in the position of a man murdering civilians in an ordinary American town, and it did so deliberately, with an aesthetic of nihilistic provocation that its developers have never disavowed. Running With Scissors have leaned into the notoriety for decades, treating each ban as a marketing achievement.\n\nThe game\'s legacy is genuinely ambivalent. It stands as the strongest available test case for anyone who believes video game content should have limits, because it takes the medium\'s most defensible principles — that games are fiction, that players distinguish fantasy from reality, that art may explore ugly subjects — and applies them to material chosen for maximum offence. That the arguments still largely hold, and that no credible evidence has ever linked the game to real violence, is precisely why the case is worth remembering. Running With Scissors remains banned in New Zealand and Germany to this day.',
+    outcome: 'Banned in fourteen countries and blacklisted by major American retailers; the studio remains banned in New Zealand and Germany, and has embraced the notoriety as its brand ever since.',
+    keyFacts: [
+      'Named after "going postal," the idiom derived from real US Postal Service workplace shootings',
+      'Banned in fourteen countries, including Australia and New Zealand',
+      'Senator Joe Lieberman named it one of "the three worst things about American society"',
+      'Running With Scissors has embraced the controversy rather than defending the game on artistic grounds',
+      'No credible evidence has ever linked the game to real-world violence',
+    ],
+    sections: [
+      {
+        title: 'Engineered for Outrage',
+        html: '<p>Postal was not a game that accidentally offended. It cast the player as a gunman murdering civilians in an ordinary American town, took its title from the vocabulary of real workplace massacres, and pursued an aesthetic of nihilistic provocation with complete deliberateness. Running With Scissors understood exactly what they were making and exactly how it would be received, and the international bans that followed — fourteen countries, plus retail blacklisting in the United States — functioned less as a setback than as confirmation of the brand.</p>',
+      },
+      {
+        title: 'The Hardest Case to Defend',
+        html: '<p>What makes Postal genuinely difficult is that the standard defences of violent games fit it badly. Doom\'s violence was abstract and its targets were demons; Mortal Kombat\'s gore was cartoonish and consensual within its fiction. Postal offered neither shield. It is the strongest test case available for anyone who believes there should be limits on game content, because it applies the medium\'s most principled arguments — that games are fiction, that players distinguish fantasy from reality — to material selected precisely for its capacity to appal.</p>',
+      },
+      {
+        title: 'What the Case Actually Proved',
+        html: '<p>Thirty years on, the arguments have largely survived the test. No credible evidence has ever connected Postal to real-world violence, and the moral panic it provoked followed the identical arc as those around Death Race, Mortal Kombat, and Doom before it: alarm, legislative attention, calls for prohibition, and eventual quiet irrelevance. Running With Scissors remains banned in New Zealand and Germany, and remains in business. The lesson the case teaches is uncomfortable for both sides: that a genuinely tasteless game can be defended on principle, and that defending it on principle does not oblige anyone to pretend it is good.</p>',
+      },
+    ],
+  },
+  {
+    id: 'manhunt-2003',
+    sources: [
+      { title: 'Manhunt (video game)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Manhunt_(video_game)' },
+    ],
+    title: 'Manhunt and the Stefan Pakeerah Case',
+    year: 2003,
+    era: '128-bit',
+    games: ['Manhunt'],
+    description: 'Rockstar\'s snuff-film stealth game was blamed by British newspapers for the murder of a fourteen-year-old boy — until police confirmed the game had been found in the victim\'s bedroom, not the killer\'s.',
+    longDescription: 'Manhunt, released by Rockstar Games in 2003, casts the player as a death row inmate forced to kill his way through a city while a director watches through cameras, rewarding executions performed with maximum brutality. It is a stealth game structured around snuff filmmaking, and its executions are graded on savagery. Even by Rockstar\'s standards it was designed to disturb.\n\nNew Zealand banned it on 11 December 2003, making possession a criminal offence. The country\'s Chief Censor, Bill Hastings, explained the reasoning bluntly: "It\'s a game where the only thing you do is kill everybody you see... You have to at least acquiesce in these murders and possibly tolerate, or even move towards enjoying them, which is injurious to the public good."\n\nThen came the case that defined its reputation. On 28 July 2004, fourteen-year-old Stefan Pakeerah was murdered in Leicestershire by seventeen-year-old Warren Leblanc. Initial media reports stated that police had found a copy of Manhunt in Leblanc\'s bedroom, and the victim\'s parents publicly blamed the game for influencing the killing. The British press seized on the story, and Manhunt became, for a period, the definitive example of a video game that had allegedly caused a murder. The American attorney Jack Thompson claimed he had warned Rockstar the game could inspire copycat killings, and on 2 August 2004 the Pakeerahs retained him for a £50 million wrongful death claim against Sony and Rockstar.\n\nThe factual foundation collapsed. Police officially denied any link between the game and the murder, identifying drug-related robbery as the motive — and revealed that the copy of Manhunt had in fact been found in the bedroom of Stefan Pakeerah, the victim, not his killer. At the conclusion of the investigation, police reaffirmed that they had found no sufficient evidence connecting the game to the crime. The correction received a fraction of the coverage the original claim had, and the association between Manhunt and the murder persists in public memory to this day.',
+    outcome: 'Banned in New Zealand with possession a criminal offence; police explicitly rejected any link to the Pakeerah murder, revealing the game belonged to the victim, not the killer — but the association endures regardless.',
+    keyFacts: [
+      'Banned in New Zealand on 11 December 2003, with possession made a criminal offence',
+      'Blamed by British media for the July 2004 murder of 14-year-old Stefan Pakeerah',
+      'Police found the game in the victim\'s bedroom, not the killer\'s, and cited drug-related robbery as the motive',
+      'Attorney Jack Thompson was hired for a £50 million wrongful death claim against Sony and Rockstar',
+      'Police concluded there was no sufficient evidence linking the game to the murder',
+    ],
+    sections: [
+      {
+        title: 'A Game Built to Disturb',
+        html: '<p>Manhunt gave the player a director watching through cameras and a scoring system that rewarded executions performed with greater brutality. It was a stealth game about making snuff films, and Rockstar made no attempt to soften it. New Zealand\'s Chief Censor banned it outright, arguing that the game required the player to acquiesce in its murders and perhaps come to enjoy them. Whatever one concludes about the ban, the description was not unfair: this was a game whose central mechanic was the aestheticisation of killing.</p>',
+      },
+      {
+        title: 'The Story That Was Not True',
+        html: '<p>When Stefan Pakeerah was murdered in July 2004, British newspapers reported that police had found Manhunt in the killer\'s bedroom and that the crime mirrored the game. The victim\'s family blamed it publicly; Jack Thompson was retained for a £50 million claim against Sony and Rockstar; retailers pulled the game from shelves. Then the police stated plainly that they saw no link, that the motive was drug-related robbery, and — crucially — that the copy of Manhunt had been found in the bedroom of the victim, not the person who killed him. The central factual claim of the entire moral panic was simply wrong.</p>',
+      },
+      {
+        title: 'Why the Correction Never Caught Up',
+        html: '<p>The retraction travelled a fraction of the distance the accusation had. Manhunt remains, in popular memory, the game that led to a murder, and it is still cited as such decades later. The case is the clearest illustration in the medium\'s history of a pattern that recurs constantly: an emotionally overwhelming story, an immediate causal explanation reached for by grieving parents and amplified by a press with no incentive to check, and a quiet official correction that changes nothing. The game is genuinely grim. The thing it was accused of, it did not do.</p>',
+      },
+    ],
+  },
+  {
+    id: 'wolfenstein-3d-german-ban',
+    sources: [
+      { title: 'Wolfenstein Removed From Sale In Germany Due To Nazi Symbols', publisher: 'Game Developer', url: 'https://www.gamedeveloper.com/game-platforms/-i-wolfenstein-i-removed-from-sale-in-germany-due-to-nazi-symbols' },
+    ],
+    title: 'Wolfenstein 3D and the German Ban',
+    year: 1994,
+    era: '32-bit',
+    games: ['Wolfenstein 3D'],
+    description: 'Germany banned the game about shooting Nazis — partly for its swastikas, under laws written to suppress Nazi propaganda, in one of the medium\'s most instructive collisions between law, history, and art.',
+    longDescription: 'Wolfenstein 3D casts the player as an American soldier escaping a Nazi castle, killing SS guards and ultimately a mechanised Adolf Hitler. It is, unambiguously, an anti-Nazi game. Germany banned it anyway, and the reasons are more tangled — and more interesting — than the usual retelling allows.\n\nTwo things happened in 1994, and they are frequently conflated. First, lower regional courts in Munich and Berlin banned versions of the game on the basis of its use of outlawed Nazi symbols, under sections 86 and 86a of the German penal code, which prohibit the dissemination of propaganda and symbols of unconstitutional organisations. These laws were written after the war to prevent the rehabilitation of Nazism, and they contained an exemption for art — but that exemption, in the view of the authorities, did not extend to video games, which were not then regarded as art at all.\n\nSecond, and separately, the federal agency BPjM placed the game on its index of media considered harmful to young people. The grounds for the indexing were not the swastikas. They were the violence: the game\'s glorification of vigilante justice and what the agency regarded as a sarcastic treatment of death and suffering.\n\nThe result was a paradox that has been mocked for thirty years — a nation banning a game about killing Nazis on the grounds that it depicted Nazis. But the mockery misses the point. The German prohibition on Nazi symbols is not squeamishness; it is a deliberate constitutional response to the country\'s own history, and the reason it caught Wolfenstein 3D is that German law did not consider games to be art capable of claiming the artistic exemption that films like Schindler\'s List enjoyed without difficulty.\n\nThat is the real story, and it has a resolution. The court bans lapsed in 1997 and 2004, and in 2018 Germany\'s regulators finally recognised that video games could qualify for the same artistic exemption as any other medium, permitting Nazi symbols in games where they serve an artistic or educational purpose. Wolfenstein 3D was a casualty not of censorship for its own sake but of a legal system that had not yet accepted games as art — and its eventual unbanning marks precisely the moment that acceptance arrived.',
+    outcome: 'Banned by regional courts under Nazi-symbol laws and indexed by the BPjM for violence; the bans lapsed in 1997 and 2004, and in 2018 Germany granted video games the same artistic exemption other media had long enjoyed.',
+    keyFacts: [
+      'Banned by Munich and Berlin regional courts in 1994 under German penal code sections 86 and 86a',
+      'Separately indexed by the BPjM — not for swastikas, but for violence and "glorification of vigilante justice"',
+      'German law exempted art from the Nazi-symbol ban, but did not then regard video games as art',
+      'The court bans lapsed in 1997 and 2004; games gained the artistic exemption in 2018',
+    ],
+    sections: [
+      {
+        title: 'Two Bans, Constantly Confused',
+        html: '<p>The story is usually told as a single absurdity, but there were two separate actions with different reasoning. Regional courts in Munich and Berlin banned the game under sections 86 and 86a of the German penal code, which prohibit the dissemination of Nazi symbols and propaganda. Independently, the federal agency BPjM added it to the index of media harmful to youth — and notably, the indexing had nothing to do with swastikas at all. The BPjM objected to the violence, to what it saw as a glorification of vigilante justice, and to a sarcastic treatment of death and suffering.</p>',
+      },
+      {
+        title: 'The Art Exemption Games Could Not Claim',
+        html: '<p>German law prohibiting Nazi symbols has always carried an exemption for art, which is why Schindler\'s List and Downfall could depict the Third Reich without difficulty. Wolfenstein 3D could not claim that exemption, and the reason is the whole point of the story: German authorities did not consider video games to be art. The game was not punished for being pro-Nazi — it is emphatically the opposite — but for being a game, and therefore, in the eyes of the law, mere entertainment with no claim to the protections extended to serious work.</p>',
+      },
+      {
+        title: 'The Ban That Ended When Games Became Art',
+        html: '<p>The court orders lapsed in 1997 and 2004, though the BPjM continued to treat the game as blacklisted for years afterward. The genuine resolution came in 2018, when German regulators finally accepted that video games could qualify for the same artistic exemption as film and literature, allowing Nazi imagery where it serves an artistic or educational purpose. Wolfenstein\'s German exile is therefore not really a story about censorship at all. It is a story about a medium waiting to be recognised as art — and the moment the ban lifted is the moment that recognition was formally granted.</p>',
+      },
+    ],
+  },
 ];
