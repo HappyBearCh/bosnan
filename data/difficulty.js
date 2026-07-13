@@ -322,5 +322,86 @@
         html: '<p>The Ghoul Realm stages in the second half of Ghouls \'n Ghosts feature enemy spawning that treats the screen as a resource to be filled. Multiple enemy types appeared simultaneously from different positions and directions, requiring Arthur to manage spatial awareness across the full vertical and horizontal range of the screen while maintaining forward movement on platforms over bottomless drops.</p><p>The individual enemies were not especially dangerous in isolation. Most could be destroyed with a single weapon hit and their attacks were patterned. The density made them dangerous collectively — eliminating one required positioning that exposed Arthur to two others, and the visual noise of multiple projectiles from multiple directions degraded the player\'s ability to track the environmental geometry beneath the combat.</p><p>Ghouls \'n Ghosts was, by design, a game that wanted players to feel overwhelmed. The difficulty was not a failure of balance but an intended atmosphere. Arthur was a knight in hell, and the game wanted the screen to look like hell. For players who had the skill to navigate it, the density was spectacle. For players who did not, it was simply a wall.</p>'
       }
     ]
+  },
+  {
+    id: 'zelda-ii-adventure-of-link',
+    title: 'Zelda II: The Adventure of Link',
+    game: 'Zelda II: The Adventure of Link',
+    platform: 'NES',
+    year: 1987,
+    era: '8-bit',
+    difficultyType: 'Nintendo Hard',
+    description: 'The black sheep of the Zelda series, Zelda II abandoned the top-down formula for side-scrolling combat and RPG levelling, and is widely regarded by fans as the single most difficult game in the entire franchise.',
+    longDescription: 'Released in 1987, Zelda II: The Adventure of Link was a radical departure from the acclaimed original. Where The Legend of Zelda had been a top-down action-adventure of open exploration, its sequel kept an overhead overworld map but shifted all combat, dungeon-crawling, and town interaction into side-scrolling, platform-style action closer to Castlevania than to its own predecessor. Layered on top of this was a full role-playing system: rather than finding upgrades in the environment, Link earned experience points from defeating monsters and spent them to level up his Attack, Magic, and Life independently.\n\nThis combination produced a game of punishing, often unforgiving difficulty that the Zelda community frequently cites as the hardest entry in the series. Like the original, Zelda II offers wandering players very little guidance, but its challenge is sharper and more relentless. Enemies deal heavy damage, the side-scrolling combat demands precise sword timing and shield positioning against foes like the notorious sword-wielding Iron Knuckles, and death sends the player back to the start of the overworld, forcing lengthy treks back to where they fell.\n\nThe experience-point system, intended to give the player a sense of growth, became one of the game\'s chief sources of frustration. Because enemies award relatively little experience, players are effectively compelled to spend long stretches grinding for levels simply to survive the next area, an attritional slog that clashes with the exploratory spirit players expected from a Zelda game. The tension between wanting to press forward and needing to stop and grind made progress feel laborious, and a single ill-fated dungeon run could undo significant effort.\n\nZelda II\'s reputation is complicated. Its bold experimentation — RPG mechanics, magic spells, towns full of NPCs, and a persistent overworld — influenced later games and is admired in retrospect by many, but its brutal difficulty and grinding requirements left it the odd one out in a series otherwise defined by accessibility and wonder. It remains the entry Zelda fans most often single out as the hardest and most divisive, a fascinating and formidable detour whose challenge has kept it a subject of debate for decades.',
+    keyFacts: [
+      'Abandoned the top-down formula for side-scrolling combat and RPG levelling',
+      'Often cited by fans as the most difficult game in the entire Zelda series',
+      'Experience points bought separate upgrades to Attack, Magic, and Life',
+      'Low experience rewards forced extensive, frustrating level-grinding to progress',
+    ],
+    sections: [
+      {
+        title: 'A Radical, Punishing Departure',
+        html: '<p>Zelda II broke almost every convention its predecessor had established. It retained a top-down overworld for travel but moved combat, dungeons, and towns into side-scrolling action, giving Link a sword-and-shield fighting system that rewarded precise timing against tough enemies like the Iron Knuckles. Death was severely punished, returning the player to the overworld\'s start and demanding long journeys back to the point of failure. This structural overhaul, combined with sparse guidance and aggressive enemies, produced a game far less forgiving than the original, and it is precisely this relentlessness that earned Zelda II its enduring reputation as the series\' hardest entry.</p>',
+      },
+      {
+        title: 'The Grind Problem',
+        html: '<p>The RPG levelling system was Zelda II\'s most divisive feature. By tying Link\'s power to experience points earned from combat, the game forced players who found themselves under-levelled to grind — repeatedly fighting weak enemies for meagre experience just to build up enough Attack, Magic, or Life to survive ahead. Because the rewards were so small, this grinding could consume hours and felt at odds with the adventurous exploration players wanted, and a disastrous dungeon attempt could waste much of that hard-won progress. The result was a game that demanded patience and repetition to a degree unusual even for the notoriously hard NES library, cementing its status as a formidable outlier in the Zelda canon.</p>',
+      },
+    ]
+  },
+  {
+    id: 'super-ghouls-n-ghosts-snes',
+    title: 'Super Ghouls \'n Ghosts',
+    game: 'Super Ghouls \'n Ghosts',
+    platform: 'Super Nintendo',
+    year: 1991,
+    era: '16-bit',
+    difficultyType: 'Brutal by Design',
+    description: 'Capcom\'s SNES entry in the Ghosts \'n Goblins series is often called the most difficult game in the console\'s library — and famously demands that players beat the entire game twice, the second time armed with a deliberately terrible weapon, just to see the true ending.',
+    longDescription: 'Super Ghouls \'n Ghosts, released for the Super Nintendo in 1991, continued the Ghosts \'n Goblins series\' tradition of merciless difficulty and is frequently described as probably the hardest game in the entire SNES library. As the armoured knight Arthur, the player battles through hordes of demons and undead across treacherous, hazard-strewn stages, protected by only two hits of armour before a single further blow strips Arthur to his underwear, and one more kills him. Precise jumping — including the game\'s signature awkward mid-air double jump — and careful weapon management are required at every step.\n\nThe game\'s most infamous demand is its two-loop structure. Reaching and defeating the final boss on the first playthrough does not end the game; instead, the player is told they must complete the entire game a second time, and this second loop automatically ramps up the difficulty even further. Only by surviving both loops can the player reach the true final confrontation and see the real ending, effectively doubling an already gruelling challenge and testing the player\'s endurance as much as their skill.\n\nCompounding this is one of the cruellest requirements in game design: the bracelet. On the second loop, a new weapon — the bracelet, dropped by a fairy — begins to appear, and the player must be holding it to damage the true final boss. Without the bracelet, the final door simply cannot be opened and the real ending cannot be reached. The catch is that the bracelet is, by common consensus, a terrible weapon: it has brutally short range, is not especially powerful, cannot be upgraded by the green or gold armour that improves every other weapon, and lacks the charged special attacks the other armaments gain. Players must therefore navigate the hardest stretch of the game armed with its worst tool.\n\nThis design made Super Ghouls \'n Ghosts a byword for punishing, uncompromising difficulty. The two-loop requirement and the mandatory sub-par bracelet were not oversights but deliberate tests of dedication, ensuring that only the most persistent players would ever witness the true ending. Its reputation as one of the hardest games ever made on Nintendo\'s 16-bit console endures, and it stands as a monument to an era when developers routinely built games designed to defeat all but the most determined.',
+    keyFacts: [
+      'Frequently called the most difficult game in the SNES library',
+      'Arthur can take only two hits before dying; combat demands precise jumps and weapon use',
+      'Players must beat the entire game twice, with the second loop even harder, to reach the true ending',
+      'The second loop requires the weak, un-upgradeable bracelet weapon to damage the true final boss',
+    ],
+    sections: [
+      {
+        title: 'Beat It Twice, and Then Some',
+        html: '<p>Super Ghouls \'n Ghosts refuses to end when players expect it to. Defeating the final boss on the first pass simply informs the player that they must play the entire game again, and the second loop cranks up the difficulty automatically, throwing more and tougher threats at an already stretched player. Only by conquering both loops does the true final battle and real ending become available. This structure effectively doubles the game\'s length and challenge, turning it into a test of stamina and consistency as much as raw skill — a design that ensured its true conclusion remained out of reach for all but the most committed players.</p>',
+      },
+      {
+        title: 'The Cruelty of the Bracelet',
+        html: '<p>The bracelet requirement is one of gaming\'s most notorious pieces of designed frustration. On the second loop a fairy drops the bracelet, and the player must be wielding it to harm the true final boss — without it, the path to the real ending is sealed. Yet the bracelet is widely regarded as the game\'s worst weapon: short-ranged, unremarkable in power, incompatible with the armour upgrades that strengthen everything else, and lacking any charged special attack. Forcing players to face the game\'s most difficult stretch equipped with its feeblest tool was a deliberate cruelty, and it perfectly encapsulates why Super Ghouls \'n Ghosts is remembered as a masterclass in punishing, uncompromising game design.</p>',
+      },
+    ]
+  },
+  {
+    id: 'ikaruga',
+    title: 'Ikaruga',
+    game: 'Ikaruga',
+    platform: 'Arcade / Dreamcast / GameCube',
+    year: 2001,
+    era: '128-bit',
+    difficultyType: 'Bullet Hell',
+    description: 'Treasure\'s revered shoot-\'em-up demands not just dodging dense bullet patterns but constantly flipping between black and white polarities to absorb same-coloured fire — turning survival into a high-speed puzzle that is one of the genre\'s most demanding.',
+    longDescription: 'Ikaruga, developed by the acclaimed studio Treasure and first released in Japanese arcades in December 2001, is a bullet hell shoot-\'em-up and the spiritual sequel to Radiant Silvergun (1998). The player pilots a fighter craft called the Ikaruga through five stages against an enemy nation, but its defining feature is a single ingenious mechanic that reshapes the entire genre: the ship can flip at will between two polarities, black and white, and every enemy and every bullet in the game is likewise one of those two colours.\n\nThe polarity system inverts the usual shoot-\'em-up survival logic. Bullets of the same colour as the player\'s current polarity are harmlessly absorbed by the ship\'s Battle Aura, while bullets of the opposite colour are instantly lethal. The player\'s own shots damage enemies of both colours, but deal double damage to enemies of the opposite polarity. This means survival is less about pure reflexive dodging and more about correctly reading the colour of incoming fire and switching polarity at precisely the right instant to absorb what would otherwise kill you — a constant, split-second puzzle layered on top of the genre\'s already frantic action.\n\nThis puzzle-like challenge is the heart of Ikaruga\'s formidable difficulty. Where many bullet hell games test the player\'s ability to thread their ship through gaps in overwhelming barrages, Ikaruga tests their ability to think in polarities under extreme time pressure, planning routes through walls of coloured bullets by anticipating which shots can be absorbed and which must be evaded. A scoring system deepens this further, rewarding "chains" of three same-coloured enemies destroyed in sequence, tempting expert players to take enormous risks for higher scores. The original design even limited the player\'s ammunition, replenished only by absorbing enemy bullets, tying offence and defence tightly together.\n\nIkaruga is regarded by critics as one of the greatest shoot-\'em-ups ever made and among Treasure\'s finest works. Its elegant fusion of bullet hell intensity with polarity-based puzzle-solving created a game that is punishingly hard yet meticulously fair, its every pattern a solvable problem for the player skilled enough to read it. That combination of ferocious difficulty and crystalline design has made it a lasting benchmark for the genre and a favourite among players who prize challenge and precision above all.',
+    keyFacts: [
+      'The player\'s ship flips between black and white polarities at will',
+      'Same-polarity bullets are absorbed harmlessly; opposite-polarity bullets are instantly lethal',
+      'Difficulty stems from puzzle-like polarity switching rather than pure bullet-dodging',
+      'A chain-scoring system rewards destroying three same-coloured enemies in a row',
+    ],
+    sections: [
+      {
+        title: 'Survival as a Puzzle',
+        html: '<p>Ikaruga\'s genius is that it reframes the bullet hell genre as a puzzle. Rather than simply weaving through gaps in dense barrages, the player must constantly assess the colour of incoming fire and flip their ship\'s polarity to absorb same-coloured bullets while dodging the opposite colour, which kills instantly. Enemies come in both polarities too, and the player\'s shots deal double damage to the opposite colour, so offence and defence both hinge on continuous, precise colour management. The result is a game whose difficulty comes not from reflexes alone but from reading and solving each wall of bullets in real time — a demanding mental challenge layered onto the genre\'s traditional intensity.</p>',
+      },
+      {
+        title: 'Punishing Yet Fair',
+        html: '<p>What elevates Ikaruga above mere difficulty is its fairness. Every pattern is deterministic and solvable: the polarity system means there is always a correct way through, and mastery comes from learning to read and execute those solutions under pressure. The chain-scoring system, which rewards destroying three same-coloured enemies in a row, and the original ammunition limit replenished by absorbing bullets, encourage players to take calculated risks and integrate offence with defence. This meticulous, puzzle-like design earned Ikaruga a reputation as one of the finest and most demanding shoot-\'em-ups ever made — a game that is brutally hard precisely because it is so precisely constructed, rewarding study and skill rather than luck.</p>',
+      },
+    ]
   }
 ];

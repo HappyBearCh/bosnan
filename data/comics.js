@@ -337,4 +337,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'super-mario-adventures',
+    title: 'Super Mario Adventures',
+    franchise: 'Super Mario',
+    publisher: 'Nintendo Power',
+    startYear: 1992,
+    issues: 12,
+    era: '16-bit',
+    description: 'Serialised across all twelve 1992 issues of Nintendo Power, Super Mario Adventures told a complete Mario story — Bowser kidnapping Princess Toadstool with the intent of marrying her — in a charming manga-influenced style that has kept it in print for decades.',
+    longDescription: 'Super Mario Adventures ran in Nintendo Power throughout 1992, appearing in twelve monthly installments from the January issue to the December issue. Written by Kentaro Takekuma and illustrated by Charlie Nozawa — an artist who also worked under the pen name Tamakichi Sakura — it was an original comic loosely based on Super Mario World, giving the Mushroom Kingdom a continuous narrative rather than the disconnected gags of other licensed strips.\n\nThe story follows Mario and Luigi as they set out to rescue Princess Toadstool after she is kidnapped by Bowser, who intends to marry her. Across its twelve parts the comic builds a genuine adventure with recurring characters, escalating stakes, and a satisfying arc, treating the Mario cast with real affection while keeping the slapstick energy the games were known for. Its manga-influenced art style, expressive and dynamic, distinguished it sharply from the Western-cartoon aesthetic of most Nintendo licensed material of the period.\n\nFor Nintendo Power subscribers, the serial was a monthly highlight. It ran alongside another prestige comic, Shotaro Ishinomori\'s adaptation of The Legend of Zelda: A Link to the Past, and together the two strips represented the magazine at its most ambitious — commissioning original, high-quality comics from accomplished Japanese creators rather than filling pages with promotional filler. The comic\'s popularity was such that the collected installments were offered as a graphic novel through the July 1993 issue, which celebrated the magazine\'s fiftieth issue and fifth anniversary. In 1993 the story was also serialised in Japan in CoroCoro Comic under the title Mario\'s Big Adventure.\n\nSuper Mario Adventures has enjoyed a long afterlife well beyond its original run. Viz Media returned it to print in a modern collected edition, introducing it to readers who never saw the Nintendo Power serialisation, and it remains one of the most fondly remembered pieces of Mario media outside the games themselves. It stands as a high-water mark for video game comics — an original, well-crafted story that captured the spirit of its source material without condescending to its audience.',
+    keyFacts: [
+      'Serialised in twelve monthly installments across every 1992 issue of Nintendo Power',
+      'Written by Kentaro Takekuma and illustrated by Charlie Nozawa (aka Tamakichi Sakura)',
+      'Follows Mario and Luigi rescuing Princess Toadstool from Bowser, who plans to marry her',
+      'Collected as a graphic novel offered through the July 1993 issue; later reprinted by Viz Media',
+    ],
+    notableFor: 'Delivering an original, complete, manga-influenced Mario adventure through Nintendo Power, and remaining in print decades later as one of the finest video game comics ever made.',
+    sections: [
+      {
+        title: 'A Real Story for the Mushroom Kingdom',
+        html: '<p>Unlike the disposable gag strips that filled much licensed material of the era, Super Mario Adventures committed to a genuine serialised narrative: Bowser kidnaps Princess Toadstool intending to marry her, and Mario and Luigi must mount a rescue that unfolds across twelve monthly chapters. Loosely rooted in Super Mario World, the comic built escalating stakes and recurring characters while preserving the games\' slapstick charm, and Charlie Nozawa\'s expressive, manga-influenced art gave it a look quite distinct from the Western-cartoon style typical of Nintendo\'s licensed output. The result was a story that treated the Mario cast — and its young readers — with real respect.</p>',
+      },
+      {
+        title: 'Nintendo Power at Its Best',
+        html: '<p>The serial ran alongside Shotaro Ishinomori\'s Legend of Zelda: A Link to the Past comic, and together the two represented Nintendo Power at its most ambitious — commissioning original work from accomplished Japanese creators rather than padding the magazine with promotional filler. Reader affection was strong enough that the collected chapters were offered as a graphic novel through the July 1993 fiftieth-issue anniversary edition, and the story was later serialised in Japan\'s CoroCoro Comic. Viz Media\'s modern reprint has kept it available to new generations, cementing Super Mario Adventures as one of the best-loved pieces of Mario media outside the games themselves.</p>',
+      },
+    ],
+  },
+  {
+    id: 'zelda-link-to-the-past-ishinomori',
+    title: 'The Legend of Zelda: A Link to the Past (Ishinomori)',
+    franchise: 'The Legend of Zelda',
+    publisher: 'Nintendo Power',
+    startYear: 1992,
+    issues: 12,
+    era: '16-bit',
+    description: 'Nintendo Power serialised a twelve-part Zelda comic drawn by Shotaro Ishinomori — one of Japan\'s most revered manga legends, creator of Cyborg 009 and Kamen Rider — giving A Link to the Past a lavish adaptation with new characters and its own dramatic twists.',
+    longDescription: 'Running across twelve monthly parts from the January 1992 issue (Volume 32) through December 1992, The Legend of Zelda: A Link to the Past was a comic adaptation of the celebrated SNES game, and it carried extraordinary pedigree. It was drawn by Shotaro Ishinomori, one of the most famous and influential comic creators in Japanese history — the creator of Cyborg 009, Kamen Rider, and Hotel, and a foundational figure in postwar manga whose output and impact rank among the medium\'s greatest.\n\nRather than transcribing the game beat for beat, Ishinomori\'s adaptation took liberties in service of drama. While the story loosely follows the plot of A Link to the Past, new twists and characters were introduced deliberately, both to preserve the element of surprise for readers who had played the game and to give the comic its own narrative momentum and emotional flow. This resulted in a version of Hyrule that felt familiar yet distinct, with sequences and figures that exist nowhere in the game itself, and a Link rendered with the weight and heroism characteristic of Ishinomori\'s work.\n\nThe comic was presented in full colour and painted with a lushness rare for the medium, and its appearance in Nintendo Power represented a remarkable coup for the magazine. That Nintendo secured a creator of Ishinomori\'s stature — a genuine giant of manga — for a serialised tie-in comic in an American gaming magazine speaks to the ambition of Nintendo Power\'s early-1990s editorial output. The Zelda serial ran alongside Super Mario Adventures, and together the two strips made the magazine a destination for original comics as much as for game coverage.\n\nThe series was collected as a graphic novel in 1993 and has since been reissued in modern editions, most notably by Viz Media, keeping it accessible long after its original run. It is widely regarded as one of the finest video game comic adaptations ever produced — a work elevated by a master cartoonist who brought genuine artistry and narrative invention to what could easily have been a routine licensed tie-in, and it remains a treasured artifact for Zelda fans and manga readers alike.',
+    keyFacts: [
+      'Serialised in twelve parts in Nintendo Power from January to December 1992',
+      'Drawn by Shotaro Ishinomori, the legendary creator of Cyborg 009 and Kamen Rider',
+      'Added new characters and twists rather than following the game\'s plot exactly',
+      'Collected as a graphic novel in 1993 and later reissued by Viz Media',
+    ],
+    notableFor: 'Bringing one of Japan\'s greatest manga legends, Shotaro Ishinomori, to a Nintendo Power serial, producing one of the finest video game comic adaptations ever made.',
+    sections: [
+      {
+        title: 'A Manga Legend Takes on Hyrule',
+        html: '<p>The comic\'s greatest distinction is its creator. Shotaro Ishinomori was not a jobbing licensed-tie-in artist but one of the towering figures of Japanese comics — the mind behind Cyborg 009, Kamen Rider, and Hotel, and a foundational influence on postwar manga. Securing him for a serialised Zelda comic in an American gaming magazine was an extraordinary coup for Nintendo Power, and his involvement lent the adaptation genuine artistic weight. His rendering of Link and Hyrule carried the heroism and dramatic craft that defined his broader career, elevating the strip far above the standard of typical game tie-in comics.</p>',
+      },
+      {
+        title: 'Not Just a Retelling',
+        html: '<p>Ishinomori\'s adaptation deliberately departed from the game it was based on. Though the story loosely tracks the plot of A Link to the Past, new characters and twists were introduced to preserve surprise for readers who had already finished the game and to give the comic its own dramatic flow. The result is a Hyrule that feels familiar yet contains sequences and figures found nowhere in the original, making the comic a genuine creative work rather than a transcription. Collected as a graphic novel in 1993 and reissued by Viz Media decades later, it endures as one of the most artistically accomplished adaptations the medium has produced.</p>',
+      },
+    ],
+  },
+  {
+    id: 'mortal-kombat-malibu',
+    title: 'Mortal Kombat (Malibu Comics)',
+    franchise: 'Mortal Kombat',
+    publisher: 'Malibu Comics',
+    startYear: 1994,
+    issues: 27,
+    era: '16-bit',
+    description: 'Malibu Comics published 27 Mortal Kombat issues across 1994–95 — a tangled chain of interlocking miniseries including Blood & Thunder, Tournament Edition, and Battlewave — riding the peak of the franchise\'s violent, controversial popularity.',
+    longDescription: 'At the height of Mortal Kombat mania, Malibu Comics acquired the licence and published a run of tie-in comics across 1994 and 1995, releasing 27 issues in total. Rather than a single ongoing series, the line took an unusual and often confusing structure: a chain of interlocking miniseries and one-shots that fed into one another. The main sequence began with Mortal Kombat: Blood and Thunder, which led into Mortal Kombat: Tournament Edition, followed by Mortal Kombat: Battlewave, which in turn led into Mortal Kombat: Tournament Edition II — a structure that rewarded committed readers but bewildered casual ones.\n\nThe books were mostly written by Charles Marshall and drawn by Patrick Rolo, and they leaned into everything that had made the games a phenomenon and a scandal: the elaborate mythology of the Outworld tournament, the roster of ninjas and monsters, and the brutal violence that had provoked congressional hearings and helped create the ESRB rating system. The comics expanded on the games\' then-thin backstory, giving characters like Sub-Zero, Scorpion, Raiden, and Liu Kang narrative depth that the arcade cabinets had only hinted at.\n\nMortal Kombat co-creator John Tobias was credited as consulting editor on the Malibu line, lending it a degree of official sanction. Tobias, who had himself designed much of the games\' visual identity and lore, also produced separate tie-in comics published by Midway that hewed more closely to the games\' actual storyline — meaning the Mortal Kombat comic universe was split between Tobias\'s own Midway-published books and Malibu\'s licensed adaptation, a division that has long confused collectors.\n\nThe Malibu run is a vivid artifact of mid-1990s comics and gaming culture colliding at full speed. It arrived when both the comic industry\'s speculator boom and Mortal Kombat\'s cultural notoriety were near their peaks, and it captured the gleeful excess of both. Though not remembered as great literature, the series is a fascinating document of how aggressively video game properties were licensed during the franchise\'s height, and it remains a nostalgic curiosity for fans of the era\'s most controversial fighting game.',
+    keyFacts: [
+      'Malibu released 27 Mortal Kombat issues across 1994 and 1995',
+      'Structured as interlocking miniseries: Blood & Thunder, Tournament Edition, Battlewave',
+      'Mostly written by Charles Marshall and drawn by Patrick Rolo',
+      'Game co-creator John Tobias served as consulting editor and made separate Midway-published comics',
+    ],
+    notableFor: 'Capturing Mortal Kombat at the height of its controversial popularity through a sprawling, interlocking 27-issue licensed comic line.',
+    sections: [
+      {
+        title: 'A Tangle of Miniseries',
+        html: '<p>Malibu declined to publish a conventional ongoing title, opting instead for a chain of interconnected miniseries and one-shots that flowed into one another: Blood and Thunder led into Tournament Edition, which was followed by Battlewave, which fed into Tournament Edition II. Across 27 issues this structure built a continuous saga for readers who followed every part, but its convoluted publishing pattern made it difficult for newcomers to know where to start. Written largely by Charles Marshall with art by Patrick Rolo, the books fleshed out the Outworld tournament mythology and gave Sub-Zero, Scorpion, Raiden, and Liu Kang the backstories the games had only gestured at.</p>',
+      },
+      {
+        title: 'Two Competing Comic Universes',
+        html: '<p>Complicating matters further, Mortal Kombat co-creator John Tobias — credited as consulting editor on the Malibu line — also produced his own separate tie-in comics published by Midway, and those hewed far more closely to the games\' actual canon. The result was a Mortal Kombat comic landscape split between Tobias\'s authoritative Midway books and Malibu\'s more freewheeling licensed adaptation, a division that has confused collectors ever since. Arriving as both the comics speculator boom and Mortal Kombat\'s cultural notoriety peaked, the Malibu run stands today as a vivid, excessive artifact of mid-1990s licensing at its most unrestrained.</p>',
+      },
+    ],
+  },
 ];

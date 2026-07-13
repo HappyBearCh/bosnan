@@ -346,5 +346,92 @@
         html: '<p>Contra is famous for its difficulty — three lives, limited continues, and enemy patterns that required memorization to survive. The manual\'s job was to make players want to endure this difficulty by establishing stakes worth suffering for. An alien terrorist organization threatening global security, two elite soldiers dispatched to stop them alone — the framing was engineered to make dying on stage three feel like the cost of genuine heroism rather than mere game failure.</p><p>This tonal alignment between manual and game is something Konami executed particularly well. The game felt like an action movie; the manual sounded like one. Players who absorbed both had a coherent experience in which the difficulty was not arbitrary cruelty but the realistic cost of fighting aliens with a handgun and a determination to never stop running forward.</p><p>The Konami Code — which granted ninety-nine lives and became one of gaming\'s most enduring cultural references — was not documented in the manual. It was discovered by players who needed it. This gap between what the manual gave and what the game secretly allowed is itself a small piece of gaming history.</p>'
       }
     ]
+  },
+  {
+    id: 'chrono-trigger-manual',
+    title: 'Chrono Trigger Instruction Manual',
+    game: 'Chrono Trigger',
+    platform: 'Super Nintendo',
+    year: 1995,
+    publisher: 'Square',
+    era: '16-bit',
+    pageCount: 40,
+    description: 'The Chrono Trigger manual showcased character and monster artwork by Akira Toriyama, the legendary Dragon Ball and Dragon Quest creator whose distinctive style gave the game its instantly recognisable look and made the booklet a keepsake in its own right.',
+    longDescription: 'Chrono Trigger, released in 1995, was the product of a celebrated collaboration that Square dubbed the "Dream Team," bringing together Final Fantasy creator Hironobu Sakaguchi, Dragon Quest creator Yuji Horii, and — most visibly for players — Akira Toriyama, the freelance manga artist famous worldwide for Dragon Ball and for designing the characters of the Dragon Quest series. Toriyama supplied the character designs and illustrations for Chrono Trigger, and the game\'s instruction manual was one of the first places North American players encountered his art in full.\n\nThe manual presented Toriyama\'s renditions of the game\'s cast — the silent hero Crono, the spirited Marle, the inventor Lucca, the noble amphibian Frog, and the rest — in the clean, expressive style that gave Chrono Trigger a visual identity distinct from Square\'s Final Fantasy line, one that evoked the look of Dragon Ball. His artwork extended to the game\'s bestiary as well, rendering its many enemies and monsters with the same characterful flair, so that the manual doubled as a small gallery of Toriyama illustration alongside its explanations of the game\'s systems.\n\nBeyond the artwork, the booklet had the practical job of introducing players to a game of unusual mechanical richness. Chrono Trigger\'s time-travel structure, its Active Time Battle combat, and especially its "Tech" system — combination attacks in which party members pooled their abilities into joint techniques — needed clear explanation, and the manual laid out these concepts for newcomers. The game\'s cartridge box famously included a complimentary Toriyama poster depicting Crono, Frog, and Marle mid-battle, extending the art-forward presentation beyond the manual itself.\n\nFor a generation of players, the Chrono Trigger manual is remembered less as a rulebook than as an object of desire — a beautifully illustrated companion to one of the most beloved role-playing games ever made. Toriyama\'s involvement lent the game enormous cachet, and the manual\'s pages of his character and monster art became part of why owning a physical copy of Chrono Trigger felt special. It stands as a prime example of the 16-bit era\'s tradition of treating the instruction booklet as an extension of a game\'s artistic identity.',
+    keyFacts: [
+      'Featured character and monster artwork by Akira Toriyama of Dragon Ball and Dragon Quest fame',
+      'Introduced Toriyama\'s designs for Crono, Marle, Lucca, Frog, and the rest of the cast',
+      'Explained the game\'s time-travel structure, ATB combat, and combination "Tech" attacks',
+      'The cartridge box also included a complimentary Toriyama battle-scene poster',
+    ],
+    notableFor: 'Serving as a showcase for Akira Toriyama\'s character and monster art, making the booklet a treasured collectible for one of the most beloved RPGs ever made.',
+    sections: [
+      {
+        title: 'The Toriyama Touch',
+        html: '<p>The manual\'s defining feature was the artwork of Akira Toriyama, part of the "Dream Team" Square assembled for Chrono Trigger. His clean, expressive character designs — instantly evocative of Dragon Ball — gave the game a look distinct from Square\'s Final Fantasy titles, and the booklet presented these renderings of Crono, Marle, Lucca, Frog and the others alongside his characterful monster illustrations. For many North American players the manual was their first extensive encounter with Toriyama\'s art, and its pages functioned as a gallery as much as a guide, lending the whole package a prestige that reinforced Chrono Trigger\'s status as a flagship release.</p>',
+      },
+      {
+        title: 'Explaining a Rich Game',
+        html: '<p>Beyond its visual appeal, the manual had to prepare players for a mechanically ambitious RPG. Chrono Trigger\'s time-travel plot, its Active Time Battle system, and its signature "Tech" combination attacks — in which characters merged their abilities into joint techniques — all needed clear introduction, and the booklet walked newcomers through these systems. Paired with the complimentary Toriyama poster included in the box, the manual exemplified the 16-bit philosophy of treating printed materials as an extension of a game\'s artistry, and it remains fondly remembered as a beautiful companion to a classic rather than a mere set of instructions.</p>',
+      },
+    ]
+  },
+  {
+    id: 'pokemon-red-blue-manual',
+    title: 'Pokémon Red & Blue Instruction Manual',
+    game: 'Pokémon Red and Blue',
+    platform: 'Game Boy',
+    year: 1998,
+    publisher: 'Nintendo',
+    era: '8-bit handheld',
+    pageCount: 68,
+    description: 'The manual that introduced Western players to the world of Pokémon, framing the adventure through Professor Oak\'s guidance and the fateful choice between Bulbasaur, Squirtle, and Charmander at the start of the journey to become a Pokémon Master.',
+    longDescription: 'When Pokémon Red and Blue launched in North America in 1998, the instruction manual carried the weighty task of explaining an entirely unfamiliar concept to Western children: the capturing, training, trading, and battling of pocket monsters. It opened by casting the player as an eleven-year-old boy living in Pallet Town with his mother, next door to a rival, and introduced Professor Oak — described as the leading expert on Pokémon — as the guide who sets the adventure in motion.\n\nThe manual\'s framing device was Professor Oak\'s lecture, echoing the game\'s own opening. It explained that there were more than a hundred Pokémon in existence (151 in total across the two versions), that Pokémon grow more powerful the more they fight, gaining new and stronger techniques as they level up — a Pokémon with only simple moves like Tackle or Tail Whip would learn stronger attacks such as Bite or Water Gun — and that some Pokémon evolve and change appearance entirely. These core ideas, foreign to most Western players, were laid out plainly to orient newcomers to the game\'s systems.\n\nMost memorably, the manual walked players through the pivotal opening choice. After leaving home to visit the rival and Professor Oak, the player is offered one of three starter Pokémon — Bulbasaur, Squirtle, or Charmander — and told to choose the one they like. The manual conveyed the significance of this decision, which shaped the early difficulty and feel of the entire playthrough, and it went on to cover the Gym Leaders, general mechanics, and guidance for the early game as the player set out on their quest to become a Pokémon Master.\n\nBeyond its instructional role, the manual was a crucial piece of the Pokémon phenomenon\'s Western launch. For millions of children encountering Pokémon for the first time, it was the primary document explaining what this strange, enormous world actually was and how to begin exploring it. As the franchise exploded into "Pokémania," the humble Game Boy manual served as the gateway text — the first thing many players read as they were pulled into what would become one of the largest entertainment franchises on the planet.',
+    keyFacts: [
+      'Cast the player as an 11-year-old from Pallet Town beginning a Pokémon journey',
+      'Used Professor Oak\'s lecture to explain catching, levelling, and evolution to newcomers',
+      'Guided players through the pivotal starter choice of Bulbasaur, Squirtle, or Charmander',
+      'Served as the gateway text introducing Western children to the Pokémon phenomenon',
+    ],
+    notableFor: 'Introducing an unfamiliar Western audience to the entire concept of Pokémon at the dawn of "Pokémania," making it the franchise\'s first point of contact for millions.',
+    sections: [
+      {
+        title: 'Professor Oak\'s Introduction',
+        html: '<p>The manual leaned on Professor Oak, the games\' resident Pokémon expert, as its narrative guide, mirroring the opening of the game itself. Through his framing, it explained the foundational concepts a Western audience had never encountered: that more than a hundred Pokémon existed, that they grew stronger and learned new techniques through battle — a creature with only Tackle or Tail Whip would come to know Bite or Water Gun — and that some evolved into entirely new forms. Presenting these unfamiliar ideas clearly was essential, since the whole appeal of Pokémon depended on players grasping the loop of catching, training, and evolving that the franchise was built upon.</p>',
+      },
+      {
+        title: 'The Fateful First Choice',
+        html: '<p>The manual placed special emphasis on the game\'s defining opening decision. After leaving home to seek out the rival and Professor Oak, the player must choose one of three starter Pokémon — Bulbasaur, Squirtle, or Charmander — and the manual made clear how consequential this pick was, shaping the difficulty and character of the journey ahead. Alongside coverage of Gym Leaders and basic mechanics, this guidance oriented newcomers at the crucial first steps of their quest. As the entry point for millions of children during the Western launch, the manual functioned as the gateway to Pokémon itself, the first document to explain a world that would soon become a global obsession.</p>',
+      },
+    ]
+  },
+  {
+    id: 'secret-of-mana-manual',
+    title: 'Secret of Mana Instruction Manual',
+    game: 'Secret of Mana',
+    platform: 'Super Nintendo',
+    year: 1993,
+    publisher: 'Square',
+    era: '16-bit',
+    pageCount: 52,
+    description: 'The Secret of Mana manual carried the lush, painterly cover art of Hiro Isono — an intricately detailed naturalistic illustration of a vast tree and forest — pairing one of the era\'s most beautiful game artworks with a guide to the SNES\'s pioneering cooperative action-RPG.',
+    longDescription: 'Secret of Mana, released for the Super Nintendo in 1993, is remembered as much for its visual identity as for its innovative gameplay, and at the centre of that identity is the artwork of Hiro Isono. The same striking illustration graced the game\'s cartridge, box, and manual cover: a lush, meticulously detailed rendering of an immense tree amid a verdant forest, evoking a sense of awe before the natural world and the idea of humanity as a small part of nature rather than its master. Its excruciatingly precise linework — every fern leaf distinguished by its own play of light and colour, moss climbing the central tree feeling at once soft and exact — made it one of the most beautiful images of the 16-bit era.\n\nIsono\'s style stood in deliberate contrast to the game\'s colourful pixel art, yet gestured in the same direction, conjuring the same reverence for nature that suffuses Secret of Mana\'s world. The illustration was flat and heightened in colour, unmistakably an artwork proud of its own artifice rather than an attempt at realism, and it lent the whole package an atmosphere of painterly wonder. For players, opening the box to this image set the tone for the adventure inside, and the manual carried that aesthetic forward across its pages.\n\nThe booklet also had substantial mechanical ground to cover, because Secret of Mana was an unusually ambitious game. It was a real-time action-RPG rather than a turn-based one, built around a distinctive "Ring Command" menu system that paused the action to let players select weapons, magic, and items from radial menus. Most notably, it supported cooperative multiplayer: with the SNES Multitap, up to three players could control the three party members simultaneously, a rare and celebrated feature for a role-playing game of the period. The manual explained these systems — the ring menus, the charge-based weapon attacks, the spell-casting, and the co-op play — to players encountering a genre-blending experience unlike most RPGs of its day.\n\nTogether, the sumptuous Isono artwork and the clear explanation of Secret of Mana\'s innovative systems made the manual a cherished companion to a beloved game. The cover illustration in particular has endured as an icon of SNES-era game art, frequently celebrated and reproduced, and its presence on the manual is a reminder of how completely a single image could define a game\'s character. For collectors and fans, the Secret of Mana booklet remains a small treasure, emblematic of the care lavished on physical game materials in the 16-bit years.',
+    keyFacts: [
+      'Cover art by Hiro Isono depicting a vast tree and forest in intricate naturalistic detail',
+      'The same painterly illustration appeared on the cartridge, box, and manual',
+      'Explained the game\'s real-time combat and distinctive radial "Ring Command" menus',
+      'Covered the celebrated three-player cooperative mode enabled by the SNES Multitap',
+    ],
+    notableFor: 'Showcasing Hiro Isono\'s lush cover illustration, one of the most admired pieces of SNES-era game art, alongside a guide to Secret of Mana\'s pioneering co-op action-RPG systems.',
+    sections: [
+      {
+        title: 'The Art of Hiro Isono',
+        html: '<p>The manual\'s cover carried Hiro Isono\'s celebrated illustration — a densely detailed painting of a colossal tree and surrounding forest that also appeared on the cartridge and box. Isono\'s obsessive linework gave every leaf and frond its own contrast of light and colour, and the moss on the central tree read as both soft and precisely defined, producing an image of remarkable beauty that evoked awe at the natural world. Deliberately flat and heightened in colour, the artwork embraced its own artifice, contrasting with the game\'s pixel art while sharing its reverence for nature. It has endured as one of the most admired pieces of 16-bit game art, and its presence set the tone for the entire package.</p>',
+      },
+      {
+        title: 'Explaining an Ambitious Game',
+        html: '<p>Beyond its beauty, the manual had to introduce players to a genre-blending game. Secret of Mana was a real-time action-RPG built around the innovative "Ring Command" system, radial menus that paused the action to let players choose weapons, magic, and items, and it featured charge-based attacks and a deep magic system. Most distinctively, it supported three-player cooperative play through the SNES Multitap, letting friends each control a party member simultaneously — a rare feature for an RPG of the era. The booklet laid out these systems for players encountering something quite unlike the turn-based RPGs of the time, making it both a beautiful object and a practical guide to one of the SNES\'s most beloved and forward-thinking games.</p>',
+      },
+    ]
   }
 ];

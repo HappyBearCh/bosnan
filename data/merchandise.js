@@ -337,4 +337,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'pokemon-anime-1997',
+    title: 'Pokémon (Anime)',
+    franchise: 'Pokémon',
+    type: 'Anime',
+    year: 1997,
+    manufacturer: 'OLM / TV Tokyo',
+    era: '32-bit',
+    description: 'The Pokémon anime, following Ash Ketchum and Pikachu on their journey, became an instant phenomenon on its 1997 debut and a cornerstone of the franchise\'s global explosion — while also causing one of media history\'s most infamous incidents, the seizure-inducing "Porygon" episode.',
+    longDescription: 'The Pokémon anime premiered in Japan on 1 April 1997, adapting the hit Game Boy games into a television series following the young trainer Ash Ketchum and his electric-mouse partner Pikachu as they travelled to catch and battle Pokémon. It became an instant sensation: by December of that year, a striking 55 percent of kindergarten, elementary, and middle-school-aged children in Tokyo\'s Kawasaki school district were tuning in on Tuesday evenings. The anime rapidly became one of the most important pillars of the Pokémon media empire, driving interest in the games, trading cards, and merchandise and helping transform a video game into a worldwide cultural juggernaut.\n\nThe series\' early success was interrupted by one of the most notorious incidents in television history. On 16 December 1997, at 6:30 p.m., the episode "Dennō Senshi Porygon" ("Electric Soldier Porygon") aired its sole broadcast, watched by roughly 4.6 million households and topping its time slot. About twenty minutes in, a scene in which Pikachu stops missiles with a Thunderbolt attack produced an explosion depicted with rapidly flashing red and blue lights. The intense strobing triggered photosensitive epileptic seizures in viewers across Japan, and more than 600 people, mostly children, were taken to hospital in an event that became known in Japan as "Pokémon Shock."\n\nThe fallout was immediate and lasting. The anime went on a nearly four-month hiatus, and the following week\'s scheduled episode was pulled. When production resumed, the studio OLM dropped the strobing effects from Pikachu\'s electric attacks, and the incident prompted the introduction of important safety standards and guidelines for flashing imagery in television broadcasting — reforms whose influence extended well beyond Pokémon. The Porygon episode itself was never rebroadcast and never aired outside Japan, and in a curious twist, Porygon — despite being an innocent bystander in the episode, with Pikachu\'s attack causing the flashes — was quietly sidelined and never again given a prominent role in the series.\n\nDespite this dramatic early crisis, the Pokémon anime went on to achieve massive and enduring global success, becoming one of the longest-running and most widely distributed animated series in the world. Ash and Pikachu became the human faces of the franchise for a generation, and the show functioned as a powerful engine of merchandising and brand-building that helped make Pokémon one of the highest-grossing media franchises ever created. Its combination of phenomenal reach and a genuinely consequential real-world incident makes the anime one of the most significant pieces of video game–derived media in history.',
+    keyFacts: [
+      'Premiered in Japan on 1 April 1997, following Ash Ketchum and Pikachu',
+      'A phenomenon: 55% of some Tokyo-area schoolchildren were watching by December 1997',
+      'The "Porygon" episode (16 Dec 1997) induced seizures in 600+ viewers, mostly children',
+      'The incident spurred TV broadcast safety standards for flashing imagery worldwide',
+    ],
+    notableFor: 'Becoming a global phenomenon that powered the Pokémon franchise while causing the infamous "Pokémon Shock" seizure incident that reshaped broadcast safety standards.',
+    sections: [
+      {
+        title: 'An Instant Phenomenon',
+        html: '<p>From its April 1997 debut, the Pokémon anime was a runaway hit, quickly capturing a majority of the young television audience in parts of Japan and becoming a driving force behind the franchise\'s explosive growth. By following Ash and Pikachu on an accessible, episodic journey, it gave the games\' abstract catch-and-battle loop a warm, character-driven face that children could follow week to week, feeding demand for the games, the trading-card game, and an ocean of merchandise. As Pokémon spread worldwide, the anime travelled with it, becoming one of the most widely distributed animated series ever and a central engine of the brand\'s rise to the top tier of global entertainment franchises.</p>',
+      },
+      {
+        title: 'Pokémon Shock',
+        html: '<p>The anime is also inseparable from one of television\'s most infamous incidents. On 16 December 1997, the "Electric Soldier Porygon" episode aired a scene of rapidly flashing red and blue light that induced photosensitive seizures in viewers nationwide, sending more than 600 people — mostly children — to hospital. The event, dubbed "Pokémon Shock," forced the series into a months-long hiatus and led the studio to remove strobing effects from Pikachu\'s attacks, while prompting broadcasters to adopt new safety standards limiting flashing imagery. The episode was never rebroadcast or shown abroad, and Porygon, though blameless, was permanently sidelined — a strange coda to an incident whose influence on broadcast safety endures to this day.</p>',
+      },
+    ],
+  },
+  {
+    id: 'pac-man-fever-craze',
+    title: 'Pac-Man Fever & the Merchandise Craze',
+    franchise: 'Pac-Man',
+    type: 'Music / Merchandise',
+    year: 1982,
+    manufacturer: 'Buckner & Garcia / CBS Records / various',
+    era: 'Golden Age',
+    description: 'At the height of Pac-Mania, the novelty hit "Pac-Man Fever" reached the Billboard Top 10 and sold over a million copies, part of a merchandising explosion that put the yellow character on cereal boxes, a Saturday-morning cartoon, apparel, and even a cameo in Tron.',
+    longDescription: 'By the early 1980s, Pac-Man had transcended the arcade to become a full-blown pop-culture phenomenon, and nothing captured that "Pac-Man fever" better than the song of the same name. Written and recorded by Jerry Buckner and Gary Garcia — a songwriting duo from Akron, Ohio, who worked on jingles and commercials in the Atlanta area and became hooked on Pac-Man at a restaurant in Marietta, Georgia — "Pac-Man Fever" was a novelty single that rode the video game craze straight up the charts. After an Atlanta radio station played it and was flooded with calls demanding to hear it again, CBS Records took notice, and the song peaked at number nine on the Billboard Hot 100 in March 1982.\n\nThe single was a genuine commercial success rather than a mere curiosity. It was certified Gold, selling roughly 1.2 million copies by the end of 1982 and around 2.5 million in total over the following decades, and it spent three weeks in Billboard\'s Top 10 — a remarkable feat for a song built entirely around an arcade game, complete with sampled Pac-Man sound effects. Its popularity was itself a symptom of the broader craze: millions of people were, quite literally, willing to turn a novelty song about eating dots and dodging ghosts into a gold record.\n\nThe song was only one facet of an enormous merchandising blitz. Pac-Man graced apparel of every kind, had his own General Mills breakfast cereal — featuring marshmallow Pac-Man, ghost, and pellet shapes floating in the milk — and starred in a Saturday-morning animated series that ran from 1982 to 1983, one of the first cartoons based on a video game. The character even earned a brief cameo in Disney\'s original Tron (1982). Pac-Man\'s image appeared on lunchboxes, board games, stickers, and countless other products, saturating early-1980s popular culture to a degree no video game character had managed before.\n\nThis merchandising explosion marked a watershed moment: the first time a video game character became a mainstream licensing and marketing juggernaut, proving that games could spawn media empires spanning music, television, food, and fashion. Pac-Man\'s deliberately friendly, gender-neutral design — created by Toru Iwatani to appeal broadly — made him ideal for such ubiquity, and the "Pac-Man fever" craze became the template for the character-licensing bonanzas that later franchises like Super Mario and Pokémon would follow. It stands as the moment video games first fully arrived in the wider cultural marketplace.',
+    keyFacts: [
+      '"Pac-Man Fever" by Buckner & Garcia hit #9 on the Billboard Hot 100 in March 1982',
+      'The single went Gold, selling around 1.2 million copies by the end of 1982',
+      'Pac-Man had his own cereal, a 1982–83 Saturday-morning cartoon, and a Tron cameo',
+      'The first video game character to become a mainstream licensing and merchandising juggernaut',
+    ],
+    notableFor: 'Marking the moment a video game character first became a full mainstream merchandising phenomenon, from a Top 10 hit single to cereal, cartoons, and apparel.',
+    sections: [
+      {
+        title: 'A Novelty Song Goes Gold',
+        html: '<p>"Pac-Man Fever" began when Ohio songwriters Jerry Buckner and Gary Garcia, working on jingles in the Atlanta area, became obsessed with the game and turned that enthusiasm into a novelty single laced with actual Pac-Man sound effects. Local radio play produced an overwhelming listener response, CBS Records signed it, and the song climbed to number nine on the Billboard Hot 100 in March 1982, spending three weeks in the Top 10 and earning Gold certification with over a million copies sold. That a song about an arcade game could become a genuine chart hit was itself proof of how deeply Pac-Man had penetrated popular consciousness — the craze was real enough to make a novelty record into a bona fide success.</p>',
+      },
+      {
+        title: 'Saturating the Culture',
+        html: '<p>The song was just one thread in a vast merchandising tapestry. Pac-Man appeared on apparel, lunchboxes, board games, and stickers; General Mills gave him a breakfast cereal with marshmallow Pac-Man and ghost shapes; a Saturday-morning cartoon ran from 1982 to 1983; and the character even cameoed in Disney\'s Tron. No video game character had ever been licensed so aggressively or so successfully, and Pac-Man\'s friendly, broadly appealing design made him perfect for the role. This blitz established the template for character-driven licensing empires, showing that a video game could generate media across music, television, food, and fashion — a blueprint that Super Mario, Sonic, and Pokémon would all later follow.</p>',
+      },
+    ],
+  },
+  {
+    id: 'legend-of-zelda-cartoon-1989',
+    title: 'The Legend of Zelda (Animated Series)',
+    franchise: 'The Legend of Zelda',
+    type: 'Cartoon',
+    year: 1989,
+    manufacturer: 'DIC Entertainment',
+    era: '8-bit',
+    description: 'The 1989 Legend of Zelda cartoon adapted Nintendo\'s adventure games into a 13-episode series best remembered for its brash, wisecracking Link and his endlessly repeated catchphrase, "Well, excuse me, Princess!" — a line that became an enduring internet meme.',
+    longDescription: 'The Legend of Zelda animated series was produced by DIC Entertainment and distributed by Viacom, airing thirteen episodes from 8 September to 1 December 1989 as a Friday feature within The Super Mario Bros. Super Show! Adapting the first two Zelda games — 1986\'s The Legend of Zelda and 1987\'s Zelda II: The Adventure of Link — it followed the hero Link (voiced by Jonathan Potts) and Princess Zelda (Cynthia Preston) as they defended the kingdom of Hyrule and its Triforce of Wisdom against the evil wizard Ganon (Len Carlson), who already possessed the Triforce of Power, with the addition of a fairy companion named Spryte.\n\nThe cartoon\'s most defining and infamous element was its characterisation of Link. Far from the silent, noble hero of the games, the animated Link was a brash, cocky, wisecracking teenager perpetually angling for a kiss from Princess Zelda and reacting to her rebuffs with exasperated sarcasm. This interpretation was reportedly inspired by the bickering romantic dynamic of the television series Moonlighting and by a snarky line from a Steve Martin routine, and it gave the show a tone quite at odds with the mystique of the games.\n\nThat characterisation crystallised in a single line. Link\'s catchphrase, "Well, excuse me, Princess!", delivered with withering annoyance whenever Zelda criticised him, was spoken an astonishing 29 times across the thirteen episodes — appearing in every single one. Repetitive to the point of self-parody even at the time, the line became the show\'s signature and, decades later, its lasting legacy: resurfacing on the early internet, it became a widely referenced meme that far outlived the series itself and remains its most remembered contribution to gaming culture.\n\nThe series is generally regarded as a minor and somewhat maligned entry in Zelda\'s history, its irreverent Link and low-budget animation contrasting sharply with the reverent tone Nintendo would cultivate for the franchise. Yet its very ridiculousness has given it a durable cult afterlife. "Well, excuse me, Princess!" endures as a piece of gaming folklore, and the cartoon stands as a curious artifact of the era when Nintendo\'s properties were being hastily adapted into Saturday-morning television, before the company exercised the tight control over its characters\' portrayals that would come later.',
+    keyFacts: [
+      'Produced by DIC, it aired 13 episodes in 1989 within The Super Mario Bros. Super Show!',
+      'Adapted the first two Zelda games and depicted Link as a brash, wisecracking teen',
+      'Link says "Well, excuse me, Princess!" 29 times across the 13 episodes',
+      'The catchphrase became an enduring internet meme long after the show ended',
+    ],
+    notableFor: 'Its brash reinterpretation of Link and the endlessly repeated catchphrase "Well, excuse me, Princess!", which became a lasting internet meme.',
+    sections: [
+      {
+        title: 'A Very Different Link',
+        html: '<p>The cartoon\'s Link bore little resemblance to the stoic hero players knew. Reimagined as a cocky, sarcastic teenager forever chasing a kiss from Princess Zelda, the animated Link drew reported inspiration from the sparring romance of Moonlighting and a Steve Martin comedy routine, resulting in a brash personality wildly at odds with the games\' silent protagonist. This interpretation defined the show\'s irreverent tone and has made it a curiosity in Zelda history — a portrayal so far from Nintendo\'s later carefully guarded image of the character that it could only have emerged from the loosely licensed Saturday-morning cartoon boom of the late 1980s.</p>',
+      },
+      {
+        title: 'The Immortal Catchphrase',
+        html: '<p>The series\' lasting legacy rests almost entirely on four words. "Well, excuse me, Princess!" — Link\'s exasperated retort to Zelda\'s criticisms — was uttered 29 times across just thirteen episodes, appearing in every one and quickly becoming the show\'s trademark to the point of unintentional comedy. Decades later the line found new life on the early internet, becoming a widely quoted meme that vastly outlasted the cartoon that spawned it. Today the show is remembered less for its plots than for this single endlessly repeated phrase, a piece of gaming folklore that keeps a minor, maligned 1989 cartoon alive in cultural memory.</p>',
+      },
+    ],
+  },
 ];
