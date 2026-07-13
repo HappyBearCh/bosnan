@@ -233,4 +233,76 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'pokemon-red-green-vs-red-blue',
+    title: 'Pokémon Red & Green vs Red & Blue',
+    subtitle: 'Why the West never got Pokémon Green — and why that was a mercy',
+    game: 'Pokémon Red and Blue',
+    region1: 'Japan',
+    region2: 'North America',
+    readTime: '7 min read',
+    summary: 'Japan\'s original 1996 pair was Pocket Monsters Red and Green, whose Pokémon sprites were so poorly received that a revised version, Blue, was released to fix them. When Pokémon came West, Nintendo built Red and Blue on the improved Japanese Blue — meaning the games the world knows are visually a generation removed from the originals.',
+    sections: [
+      {
+        title: 'Red and Green, Not Red and Blue',
+        html: '<p>The pair of games that launched the Pokémon phenomenon in Japan in 1996 were Pocket Monsters Red and Pocket Monsters Green, fronted by Charizard and Venusaur respectively. Green — not Blue — was the counterpart to Red, and it carried the same version-exclusive Pokémon and structure that Western players would later associate with Blue. The Blue name did exist in Japan, but it belonged to a later, separately released revision rather than one of the original pair. This is why the Japanese and Western version histories do not line up, and why "Pokémon Green" remains an object of curiosity for players who grew up with Red and Blue and never encountered it.</p>',
+      },
+      {
+        title: 'The Sprite Problem',
+        html: '<p>The reason Green never travelled is that its artwork was, by broad consensus, bad. The Pokémon sprites in the original Japanese Red and Green were drawn without the benefit of Ken Sugimori\'s official artwork as reference, and under the harsh constraints of the Game Boy\'s display, producing creature sprites that are notoriously misshapen — worse even than the somewhat awkward sprites Western players know from Red and Blue. Poor sprite quality was one of the principal criticisms levelled at the games in Japan, and it was significant enough that the developers went back and redrew them. Those unique original sprites exist in no English copy of the game, making them a curiosity that Western players only encounter through emulation or import.</p>',
+      },
+      {
+        title: 'Built on Japanese Blue',
+        html: '<p>Japanese Pocket Monsters Blue was the fixed version: the same game with substantially improved sprites, a revised script, and refined graphics. When Nintendo prepared Pokémon for its 1998 Western launch, it wisely built Red and Blue on the foundation of Japanese Blue rather than the flawed originals. The graphics, script, and sprite designs that hundreds of millions of players around the world associate with the first generation of Pokémon are therefore borrowed from that Japanese revision. The result is a peculiar regional inversion: the Western versions carry the Red and Blue names of the originals but the polished content of the do-over, so the games that conquered the world were, in a real sense, the second draft.</p>',
+      },
+    ],
+  },
+  {
+    id: 'link-to-the-past-religious-censorship',
+    title: 'A Link to the Past — Localisation & Religious Censorship',
+    subtitle: 'How "Triforce of the Gods" became "A Link to the Past," and the priest became a wise man',
+    game: 'The Legend of Zelda: A Link to the Past',
+    region1: 'Japan',
+    region2: 'North America',
+    readTime: '6 min read',
+    summary: 'Nintendo of America\'s content guidelines forbade religious imagery, so the international release of A Link to the Past stripped out crosses, hexagrams, and hieroglyph-derived script, turned churches into sanctuaries and priests into sages, and renamed the game entirely. The Japanese version remains uncensored.',
+    sections: [
+      {
+        title: 'The Title Itself',
+        html: '<p>The most conspicuous change happened before the player pressed a single button. In Japan the game is called <em>Zeruda no Densetsu: Kamigami no Toraifōsu</em> — "The Legend of Zelda: Triforce of the Gods." That subtitle was unacceptable under Nintendo of America\'s content policy, which barred explicit religious references from its published games, and the international release was rechristened <em>A Link to the Past</em>. The new title is a pun on the protagonist\'s name and the game\'s time-spanning structure, and it is now so familiar in the West that most players never learn the original invoked gods at all. It is a rare case of censorship producing a genuinely elegant replacement.</p>',
+      },
+      {
+        title: 'Priests, Churches, and Symbols',
+        html: '<p>The purge continued throughout the game. The Church became the Sanctuary; the Priest became the Loyal Sage. Agahnim, a priest in the Japanese original, was recast as a wizard in the international version — a change that subtly alters the story\'s thrust, since a corrupt clergyman betraying his flock is a different kind of villain from a scheming sorcerer. Visual religious content was scrubbed too: star-shaped hexagrams were removed from the game\'s imagery, and the font used to render Hylian, the setting\'s unreadable written language, had been based on Egyptian hieroglyphs — which carry religious associations — and so was redesigned for the English release. The Japanese version retains all of it, uncensored.</p>',
+      },
+      {
+        title: 'Nintendo\'s Content Policy',
+        html: '<p>These changes were not idiosyncratic decisions about one game but the application of a blanket policy. Nintendo of America in the early 1990s maintained strict content guidelines prohibiting religious imagery, alongside restrictions on blood, nudity, alcohol, and profanity, and localisation teams applied them systematically across the catalogue — a policy that also reshaped Castlevania, Final Fantasy, and many other titles. A Link to the Past is among the most instructive examples because the alterations run so deep, from the game\'s title through its institutions, its antagonist\'s profession, and even its invented alphabet. It is a reminder that for a generation of Western players, the games they knew had been quietly rewritten before they ever arrived.</p>',
+      },
+    ],
+  },
+  {
+    id: 'resident-evil-biohazard-regional',
+    title: 'Resident Evil vs Biohazard',
+    subtitle: 'The West got a shorter, black-and-white intro, no auto-aim, and a deliberately harder game',
+    game: 'Resident Evil',
+    region1: 'Japan',
+    region2: 'North America',
+    readTime: '6 min read',
+    summary: 'Capcom\'s 1996 survival horror shipped in Japan as Biohazard with a full-colour live-action opening and auto-aim. Western releases cut the intro to black-and-white, removed the auto-aim, and halved the saves per ink ribbon — the last change made specifically to defeat the rental market.',
+    sections: [
+      {
+        title: 'The Censored Opening',
+        html: '<p>Biohazard opened in Japan with a violent live-action film sequence presented in full colour. Western releases received a version that was shorter by around thirty seconds and rendered entirely in black and white, a decision taken because the footage was judged too violent for American players. The content itself was altered as well: newspaper clippings replaced shots of dead bodies, a scene with a disembodied hand was cut down, one character\'s gruesome death was shortened, and a shot of a severed head falling was removed. Even the end credits differed — a sequence showing various grisly Game Over deaths, seen after finishing the game with the rocket launcher, was omitted from the Western release.</p>',
+      },
+      {
+        title: 'Auto-Aim and Difficulty',
+        html: '<p>The mechanical differences cut deeper than the presentational ones. Biohazard included an auto-aiming function that helped the player line up shots against shambling zombies; the Western Resident Evil removed it entirely, making combat markedly more demanding with the game\'s stiff tank controls. Capcom also reduced the number of saves available per ink ribbon from six to three, sharply tightening one of the game\'s central resources and raising the tension of every decision about whether to record progress. Together these changes made the Western version of Resident Evil a substantially harder game than the one Japanese players bought.</p>',
+      },
+      {
+        title: 'Designed to Defeat Rentals',
+        html: '<p>The reasoning behind the added difficulty is unusually candid. Renting video games was illegal in Japan, so Capcom had no reason to worry that Japanese players might finish Biohazard over a weekend without buying it. In North America, where game rental was a thriving business, that risk was real — and so the Western version was deliberately made harder, with auto-aim removed and saves restricted, to reduce the chance a player could complete it on a rental and never purchase a copy. It is one of the clearest documented cases of a game\'s difficulty being tuned not for player experience but for the commercial structure of a regional market.</p>',
+      },
+    ],
+  },
 ];
