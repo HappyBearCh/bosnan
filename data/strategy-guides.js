@@ -337,4 +337,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'ocarina-of-time-players-guide',
+    title: 'The Legend of Zelda: Ocarina of Time — Official Nintendo Player\'s Guide',
+    game: 'The Legend of Zelda: Ocarina of Time',
+    publisher: 'Nintendo Power',
+    year: 1998,
+    author: 'Nintendo of America',
+    era: '64-bit',
+    description: 'A 128-page companion to the most acclaimed game ever made, opening with a signed preface from Shigeru Miyamoto and closing with a fold-out map of Hyrule — the Player\'s Guide line at the peak of its powers.',
+    longDescription: 'When Ocarina of Time arrived in 1998 to universal acclaim — including Famitsu\'s first ever perfect 40/40 score — Nintendo of America published a Player\'s Guide under its Nintendo Power imprint that treated the game with the reverence it had earned. Running to 128 pages, the guide was less a walkthrough than a companion volume, and it remains among the most fondly remembered artefacts of the Nintendo Power era.\n\nThe book opened with a preface written and signed by Shigeru Miyamoto himself, an unusual gesture that framed the guide as an official document of the game\'s significance rather than a mere product. It then devoted four pages to the history of the Legend of Zelda series up to that point, positioning Ocarina of Time as the culmination of a twelve-year lineage — an editorial choice that reflected Nintendo\'s own understanding that this game was a landmark.\n\nWhat followed was exhaustive. The guide provided a complete walkthrough alongside a wealth of official artwork covering the game\'s items, characters, bosses, and scenes — art that, in an era before the internet made such material trivially accessible, was for many players their only chance to see the game\'s designs rendered properly. A four-page fold-out presented an overworld map of Hyrule together with a listing of the ocarina songs, turning the centre of the book into a reference chart players could keep open beside them.\n\nThe appendices completed the picture, cataloguing every item, the trading sequence, all Pieces of Heart, the magic bean locations, and the hundred Gold Skulltulas whose collection had become the game\'s most notorious completionist task. Taken together, the guide represents the Player\'s Guide format at its zenith: comprehensive, beautifully produced, and treated as a keepsake rather than a disposable manual. It is a reminder that for a brief period, the strategy guide was a genuine publishing art form — one that free online walkthroughs would shortly render commercially obsolete.',
+    keyFacts: [
+      '128 pages, published by Nintendo of America under the Nintendo Power imprint in 1998',
+      'Opens with a preface written and signed by Shigeru Miyamoto',
+      'Includes four pages on the history of the Zelda series up to Ocarina of Time',
+      'Features a four-page fold-out Hyrule overworld map and full appendices for Skulltulas and Heart Pieces',
+    ],
+    notableFor: 'Being the Player\'s Guide format at its absolute peak — a lavish, Miyamoto-endorsed companion volume to the most acclaimed game ever made.',
+    sections: [
+      {
+        title: 'The Guide\'s Cultural Context',
+        html: '<p>In 1998 the internet was not yet the default place to look things up, and a game as vast as Ocarina of Time — with its hundred Gold Skulltulas, its trading sequence, its magic beans and Heart Pieces scattered across two timelines — was genuinely difficult to complete without help. The Player\'s Guide filled that gap and then some, offering not only a full walkthrough but the game\'s official artwork, a four-page fold-out map of Hyrule, and complete appendices for every collectible. For most players it was the only way to see this material, and the book became a fixture beside the television rather than a reference consulted once and shelved.</p>',
+      },
+      {
+        title: 'A Keepsake, Not a Manual',
+        html: '<p>What distinguishes the Ocarina of Time guide is how clearly it was designed to be kept. Shigeru Miyamoto contributed a signed preface, and four pages were given over to the history of the series — editorial decisions that make sense only if the publisher understood it was documenting a landmark rather than shifting a product. The result is the Player\'s Guide line at its zenith, and a poignant one: within a few years GameFAQs and its volunteer army would make every piece of information in these pages available for nothing, and lavish printed guides like this would cease to be commercially viable.</p>',
+      },
+    ],
+  },
+  {
+    id: 'gamefaqs',
+    title: 'GameFAQs',
+    game: 'All games',
+    publisher: 'Jeff Veasey (independent)',
+    year: 1995,
+    author: 'Volunteer contributors',
+    era: '32-bit onward',
+    description: 'A plain-text archive of volunteer-written walkthroughs, founded in November 1995, that gave away for free what publishers were charging twenty dollars for — and quietly dismantled the printed strategy guide industry.',
+    longDescription: 'GameFAQs was created by Jeff Veasey on 5 November 1995, beginning life as the Video Game FAQ Archive — initially hosted on America Online and originally serving as a mirror of Andy Eddy\'s FTP archive of game FAQs. Its purpose was simply to gather the guides scattered across the early internet into one place, and that modest ambition turned out to have enormous consequences.\n\nDespite the name, most of the documents on the site were never lists of frequently asked questions. They were, in substance, strategy guides: full walkthroughs, item lists, weapon tables, maps, boss strategies, puzzle solutions, and completionist checklists, often running to tens of thousands of words. They were written entirely by volunteers — players who had finished a game and wanted to document it — and they were given away free of charge to anyone who visited.\n\nThe economic implication was devastating for the printed guide business. Publishers like Prima, BradyGames, and Nintendo Power were selling glossy strategy guides for fifteen or twenty dollars, and GameFAQs offered the same information, sometimes in greater depth and always more current, at no cost. The site\'s ASCII-art headers, monospaced tables, and unformatted plain text were aesthetically the opposite of a printed guide, but the content was frequently more thorough, and — crucially — it could be updated the moment a new secret was discovered.\n\nThe volunteer contributors who wrote these documents became genuinely significant figures in gaming culture, some producing dozens of guides of remarkable rigour purely for the satisfaction of documenting a game completely. GameFAQs represents one of the earliest and purest expressions of the internet\'s capacity to obliterate an entire commercial category through collective, unpaid enthusiasm. The lavish printed strategy guide, a genuine art form at its peak, could not compete with free — and by the mid-2000s the industry that produced it had largely collapsed.',
+    keyFacts: [
+      'Founded by Jeff Veasey on 5 November 1995 as the Video Game FAQ Archive',
+      'Originally hosted on AOL, mirroring Andy Eddy\'s FTP archive of game FAQs',
+      'All guides are written by volunteers and provided free of charge',
+      'Its plain-text walkthroughs offered for free what printed guides sold for $15–20',
+    ],
+    notableFor: 'Dismantling the commercial strategy guide industry by giving away, for free, more thorough and more current information than publishers could sell.',
+    sections: [
+      {
+        title: 'Not Actually FAQs',
+        html: '<p>Despite its name, GameFAQs was never really an archive of frequently asked questions. Its documents were full strategy guides in everything but format — exhaustive walkthroughs, item and weapon tables, maps rendered in ASCII art, boss strategies, and completionist checklists, frequently running to tens of thousands of words. They were written by volunteers who had finished a game and wanted to document it properly, and they were posted free. The monospaced plain text looked nothing like a glossy printed guide, but the information was often deeper, and it could be corrected or expanded the day a new secret surfaced — an advantage no printed book could ever match.</p>',
+      },
+      {
+        title: 'The Guide Industry\'s Quiet Death',
+        html: '<p>Prima, BradyGames, and Nintendo Power were selling strategy guides for fifteen or twenty dollars apiece, and GameFAQs gave the same knowledge away for nothing. The arithmetic was unanswerable. Within a decade the commercial guide business — which at its height had produced genuinely beautiful books, full of official artwork, fold-out maps, and developer prefaces — had largely collapsed, undone not by a competitor but by an army of unpaid enthusiasts typing walkthroughs into text files. It stands as one of the earliest and clearest demonstrations of the internet\'s capacity to erase an entire commercial category through sheer collective goodwill.</p>',
+      },
+    ],
+  },
+  {
+    id: 'final-fantasy-ultimania',
+    title: 'Final Fantasy Ultimania',
+    game: 'Final Fantasy series',
+    publisher: 'DigiCube / Square Enix',
+    year: 1998,
+    author: 'Studio BentStuff',
+    era: '32-bit onward',
+    description: 'Japan\'s Ultimania books treat games as subjects worthy of scholarship — dense volumes of artwork, developer interviews, and lore that have sold over 12 million copies and put Western strategy guides to shame.',
+    longDescription: 'The Ultimania series — the name a portmanteau of "ultimate" and "mania" — is Square Enix\'s line of companion books, produced since 1998 and written by Studio BentStuff, which had previously produced game guides for Square including work on Final Fantasy VII. Replacing the earlier Perfect Works line, the Ultimania books established a standard for game companion publishing that the Western strategy guide industry never approached.\n\nThe crucial difference is one of purpose. Where an American strategy guide existed principally to help a player finish a game, an Ultimania exists to document one. The books are dense with artwork, character profiles, extensive developer interviews, and detailed background information about the fictional worlds — the histories, the cosmologies, the design decisions and abandoned ideas. They are closer to critical companions or art books than to walkthroughs, treating the games as works with authors and intentions worth interrogating.\n\nThis approach found an enormous audience. By July 2007 the Ultimania series had sold over ten million books, a figure that rose past twelve million by 2017. The best-selling individual volumes are staggering: Final Fantasy VIII Ultimania has sold over 2.2 million copies, and Final Fantasy X Scenario Ultimania over a million — sales figures that would be respectable for the games themselves, let alone their companion books.\n\nThe series has had a complicated publishing history, appearing under DigiCube until that company was dissolved in 2003, after which Square Enix resumed publication following its merger. For decades the books were available only in Japanese, making them prized import objects among Western fans who could not read them but wanted the art and the sense of completeness. Dark Horse eventually published English translations of the three-volume 2012 Final Fantasy 25th Memorial Ultimania as the Final Fantasy Ultimania Archive in 2018. The line stands as evidence that a games publisher can treat its own catalogue as a subject for serious documentation — and that millions of people will buy the result.',
+    keyFacts: [
+      'Written by Studio BentStuff and published since 1998, replacing the Perfect Works line',
+      'Focuses on artwork, developer interviews, and world lore rather than walkthroughs',
+      'Sold over 10 million books by 2007, and more than 12 million by 2017',
+      'Final Fantasy VIII Ultimania alone has sold over 2.2 million copies',
+    ],
+    notableFor: 'Treating video games as subjects worthy of serious documentation and scholarship, selling over 12 million copies of what are effectively critical companion volumes.',
+    sections: [
+      {
+        title: 'Documentation, Not Instruction',
+        html: '<p>The Ultimania books invert the logic of the Western strategy guide. Rather than existing to help a player finish a game, they exist to record one — packing in official artwork, character profiles, developer interviews, and deep background on the fictional worlds, including design decisions and ideas that never made it into the final product. They function as critical companions and art books rather than walkthroughs, and they assume a reader who has already played the game and wants to understand it more completely. It is a fundamentally more respectful posture toward both the games and their audience, and it produced a publishing line of remarkable depth.</p>',
+      },
+      {
+        title: 'A Twelve-Million-Copy Vindication',
+        html: '<p>The commercial results demolish any assumption that serious game documentation is a niche pursuit. The Ultimania line had sold over ten million books by 2007 and more than twelve million by 2017, with Final Fantasy VIII Ultimania alone moving over 2.2 million copies and Final Fantasy X Scenario Ultimania passing a million — numbers many games would envy. Published by DigiCube until its 2003 dissolution and then by Square Enix directly, the books were long available only in Japanese, becoming prized imports for Western fans who could not read a word of them. Dark Horse\'s 2018 Ultimania Archive translation finally opened them up, revealing what English-language publishing had been missing for two decades.</p>',
+      },
+    ],
+  },
 ];

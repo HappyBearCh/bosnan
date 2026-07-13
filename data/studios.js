@@ -325,4 +325,85 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'treasure',
+    name: 'Treasure',
+    foundedYear: 1992,
+    founders: ['Masato Maegawa'],
+    location: 'Tokyo, Japan',
+    firstGame: 'Gunstar Heroes (1993)',
+    era: '16-bit / 32-bit',
+    description: 'Founded by Konami veterans exhausted by endless sequels, Treasure built a reputation as the finest action-game studio in the world — small, uncompromising, and technically fearless.',
+    longDescription: 'Treasure was founded on 19 June 1992, its name chosen from the ambition of becoming a "treasure" to the industry. Its founder and president, Masato Maegawa, had learned programming in junior high school, studied it in college, and joined Konami on graduation. There he and the colleagues who would follow him worked on an extraordinary run of games: the arcade titles The Simpsons (1991) and Bucky O\'Hare (1992), and on the Super NES, Super Castlevania IV (1991), Contra III: The Alien Wars (1992), and Axelay (1992).\n\nThe break came from frustration. In 1991 Maegawa and several Konami colleagues began planning an original game — the project that would become Gunstar Heroes — and Konami rejected the concept. The team had grown increasingly weary of the company\'s reliance on sequels to established franchises like Castlevania and Teenage Mutant Ninja Turtles, and the rejection crystallised their decision to leave. Just over ten people founded Treasure with the explicit purpose of making original games.\n\nTheir first act was a statement of principle. Although nearly all the staff had built their careers on the Super NES at Konami, they chose to develop Gunstar Heroes (1993) for the Sega Genesis, because the Genesis\'s Motorola 68000 processor was necessary for the visual density and speed they wanted. It was a decision made on purely technical grounds, in defiance of their own experience, and it produced one of the most explosively inventive action games ever made.\n\nWhat followed was a catalogue of remarkable consistency and restlessness: Dynamite Headdy, Alien Soldier, Guardian Heroes, Mischief Makers, Sin and Punishment, and — most revered of all — the shoot-\'em-ups Radiant Silvergun (1998) and Ikaruga (2001), games of such depth and difficulty that they remain benchmarks of the genre. Treasure never grew large, never chased mass-market trends, and never abandoned its founding premise. It is the definitive example of a small studio surviving on craft alone.',
+    keyFacts: [
+      'Founded 19 June 1992 by Konami veterans, with just over ten staff',
+      'The founders left after Konami rejected the concept that became Gunstar Heroes',
+      'They were frustrated by Konami\'s growing reliance on sequels to Castlevania and TMNT',
+      'Chose the Genesis over the SNES for Gunstar Heroes purely because its 68000 CPU suited the design',
+    ],
+    sections: [
+      {
+        title: 'Leaving Konami',
+        html: '<p>Treasure exists because Konami said no. In 1991 Masato Maegawa and several colleagues — veterans of Super Castlevania IV, Contra III, and Axelay — proposed an original game and were turned down, at a moment when the team was already chafing at the company\'s dependence on sequels to Castlevania, Teenage Mutant Ninja Turtles, and other established properties. The rejected concept became Gunstar Heroes, and rather than abandon it, the group left to found their own studio in June 1992 with a little over ten people. The name they chose reflected the ambition: to be a treasure to an industry they felt was becoming complacent.</p>',
+      },
+      {
+        title: 'Technical Fearlessness',
+        html: '<p>Treasure\'s defining trait was a willingness to follow the technology rather than the safe path. Despite the fact that nearly all its staff had built their careers making Super NES games at Konami, the studio developed Gunstar Heroes for the Sega Genesis, because that machine\'s Motorola 68000 processor was the one capable of the visual density and speed the design demanded. That instinct — to choose whatever hardware would let the idea work, and to push it further than anyone thought reasonable — ran through everything that followed, from Alien Soldier and Guardian Heroes to the revered shoot-\'em-ups Radiant Silvergun and Ikaruga. Treasure stayed small, stayed original, and became one of the most respected studios in the medium on craft alone.</p>',
+      },
+    ],
+  },
+  {
+    id: 'dma-design',
+    name: 'DMA Design',
+    foundedYear: 1988,
+    founders: ['David Jones', 'Russell Kay', 'Steve Hammond', 'Mike Dailly'],
+    location: 'Dundee, Scotland',
+    firstGame: 'Menace (1988)',
+    era: '16-bit / 32-bit',
+    description: 'A Dundee bedroom studio that made Lemmings, then invented the modern open-world game with Grand Theft Auto — and became Rockstar North.',
+    longDescription: 'DMA Design began with a redundancy cheque. David Jones lost his job at the Timex factory in Dundee in 1987 and used the severance pay to buy an Amiga 1000, on which he developed the shoot-\'em-up Menace alongside friends Russell Kay, Steve Hammond, and Mike Dailly. The company was founded in 1988 in Jones\'s hometown of Dundee, and Menace, released that October under a six-game publishing deal with Psygnosis, sold 15,000 copies and earned Jones £20,000 — enough to prove the venture was real.\n\nThe studio\'s first phenomenon arrived in 1991. Lemmings was an ingenious puzzle game whose streams of suicidally oblivious creatures had to be guided to safety by assigning them specialised roles, and it sold 55,000 copies on its first day on the Amiga alone. Psygnosis pushed DMA hard to capitalise, and the studio produced Oh No! More Lemmings (1991), Lemmings 2: The Tribes (1993), and All New World of Lemmings (1994) as the franchise was ported to more than thirty platforms and sold millions.\n\nThe second phenomenon was larger still, and stranger in origin. Jones had been developing an idea for a fighting game set in a city; after the release of Syndicate Wars in 1996, the concept was revised into something quite different — a "living city" crossed with a driving game. The result was Grand Theft Auto, an enormously successful and enormously controversial title that spawned one of the biggest franchises in entertainment, and whose third instalment would go on to define the 3D open-world genre for the entire industry.\n\nSuccess made DMA an acquisition target. The studio was bought by Gremlin Interactive, beginning a chain of ownership changes that eventually delivered it into the hands of Take-Two, whereupon it was renamed Rockstar North — the studio it remains today. Few developers have created two franchises as culturally significant as Lemmings and Grand Theft Auto, and fewer still have done it from a bedroom in Dundee.',
+    keyFacts: [
+      'Founded 1988 in Dundee after David Jones bought an Amiga with Timex redundancy pay',
+      'Debut game Menace (1988) sold 15,000 copies under a six-game Psygnosis deal',
+      'Lemmings (1991) sold 55,000 copies on its first day on the Amiga',
+      'Acquired by Gremlin Interactive and eventually renamed Rockstar North',
+    ],
+    sections: [
+      {
+        title: 'From Redundancy to Lemmings',
+        html: '<p>The studio\'s origin is almost absurdly humble: David Jones was made redundant from Dundee\'s Timex factory in 1987 and spent the severance on an Amiga 1000, using it to build the shoot-\'em-up Menace with three friends. That game earned him a six-title deal with Psygnosis and £20,000, and DMA Design was in business. Four years later came Lemmings, a puzzle game of such immediate, universal appeal that it moved 55,000 copies on its first day on the Amiga and went on to reach more than thirty platforms and an estimated 15 million sales. For a bedroom studio in Scotland, it was an extraordinary arrival.</p>',
+      },
+      {
+        title: 'Inventing Grand Theft Auto',
+        html: '<p>DMA\'s second act reshaped the entire medium. Jones had been circling an idea for a fighting game set in a city, and after Syndicate Wars shipped in 1996 the concept was reworked into something far more ambitious — a "living city" fused with a driving game. Grand Theft Auto arrived as a top-down crime game, a commercial success and a lightning rod for controversy, and its 2001 sequel GTA III would drag the series into three dimensions and define the open-world genre for everyone who followed. The studio was acquired by Gremlin Interactive and, through a chain of ownership changes, became Rockstar North — meaning the team that made Lemmings also made the biggest entertainment franchise on earth.</p>',
+      },
+    ],
+  },
+  {
+    id: 'sega-am2',
+    name: 'Sega AM2',
+    foundedYear: 1984,
+    founders: ['Yu Suzuki'],
+    location: 'Tokyo, Japan',
+    firstGame: 'Hang-On (1985)',
+    era: '16-bit / 32-bit / 128-bit',
+    description: 'Yu Suzuki\'s division drove Sega\'s arcade dominance for eighteen years — inventing the Super Scaler pseudo-3D game, then the polygonal 3D fighter, and finally the open-world epic Shenmue.',
+    longDescription: 'Sega AM2 — Sega AM Research & Development No. 2 — was the arcade division led by Yu Suzuki, who headed it for eighteen years and in doing so produced perhaps the most consequential run of arcade games any single team has managed. Suzuki was the department\'s first manager, and its efforts culminated first in Hang-On (1985), a motorcycle racer played on a full-sized bike the player physically leaned into.\n\nThrough the mid-to-late 1980s, AM2 defined the Super Scaler era. Using custom sprite-scaling hardware, Suzuki\'s team produced games that simulated three-dimensional space without any polygons at all: the racers Hang-On, Out Run (1986), and Power Drift, and the rail shooters Space Harrier and After Burner. These were paired with hydraulic motion cabinets that tilted, rolled, and rotated the player in sync with the action — machines so physically spectacular that they turned the arcade into an experience a living room could not begin to imitate.\n\nThe second transformation was to true 3D. AM2\'s Virtua Racing (1992) brought real-time polygons to arcades, and Virtua Fighter (1993) established the 3D fighting game as a genre, with Virtua Fighter 2 (1994) running on Sega Model 2 hardware at 57.5 frames per second with motion-captured, texture-mapped fighters. Daytona USA followed. In the space of a decade, one division had defined two entirely different technological eras of arcade gaming.\n\nSuzuki\'s final ambition was the largest. Wanting to create something far longer and more detailed than an arcade game could contain, he conceived Shenmue as a multi-part epic — an enormously expensive, extraordinarily detailed open-world adventure for the Dreamcast that pushed the boundaries of what a game could simulate and became one of the medium\'s great beautiful failures. Suzuki left AM2 on 1 October 2003 to start a new studio, and Hiroshi Kataoka took charge. The division\'s legacy is written across the whole history of the arcade.',
+    keyFacts: [
+      'Led by Yu Suzuki for eighteen years, beginning with Hang-On (1985)',
+      'Defined the Super Scaler era with Out Run, Space Harrier, and After Burner',
+      'Pioneered polygonal 3D arcade gaming with Virtua Racing and Virtua Fighter',
+      'Suzuki left AM2 on 1 October 2003; Hiroshi Kataoka succeeded him',
+    ],
+    sections: [
+      {
+        title: 'The Super Scaler Era',
+        html: '<p>Before polygons, AM2 faked three dimensions better than anyone. Using custom sprite-scaling hardware, Yu Suzuki\'s team produced Hang-On, Out Run, Space Harrier, After Burner, and Power Drift — games that conjured convincing depth and speed entirely from scaled and rotated 2D sprites. Crucially, Suzuki paired them with cabinets that moved: full-sized motorcycles to lean, hydraulic cockpits that rolled and rotated in sync with the on-screen jet. The point was not merely graphical but physical, and it established AM2\'s governing conviction that the arcade\'s advantage over the home lay in experiences a living room could never reproduce.</p>',
+      },
+      {
+        title: 'From Virtua Fighter to Shenmue',
+        html: '<p>AM2 then reinvented itself for the polygon age. Virtua Racing (1992) brought real-time 3D to arcades, and Virtua Fighter (1993) created the 3D fighting game outright, with its Model 2 sequel rendering motion-captured, texture-mapped fighters at 57.5 frames per second. Having defined two technological eras, Suzuki pursued a third ambition: Shenmue, conceived as a multi-part epic and built as an obsessively detailed open world for the Dreamcast, simulating a Japanese town down to the contents of its drawers. Ruinously expensive and commercially disappointing, it nonetheless remains one of the medium\'s most influential works — and a fitting final statement from the division that spent eighteen years refusing to make ordinary games.</p>',
+      },
+    ],
+  },
 ];
