@@ -337,4 +337,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'infocom-feelies',
+    title: 'Infocom Feelies',
+    game: 'Deadline, Zork, and the Infocom catalogue',
+    platform: 'PC / Home Computers',
+    year: 1982,
+    publisher: 'Infocom',
+    era: 'Pre-NES',
+    description: 'Infocom filled its text adventure boxes with elaborate physical props — police evidence folders, plastic pills, in-world documents, coins — that doubled as copy protection and became the most beloved packaging in gaming.',
+    longDescription: 'Infocom\'s text adventures shipped in elaborate boxes stuffed with physical props that the company called "feelies," and they remain the gold standard for what game packaging can be. Each feelie was an imaginative object tied directly to the game\'s fiction, and collectively they solved a serious commercial problem while simultaneously deepening the experience of playing — a rare instance of a business constraint producing genuine art.\n\nThe tradition began in earnest with Deadline, a murder-mystery text adventure that shipped not merely with a manual but with an entire case file. The box contained a police folder, an inspector\'s casebook, a small bag holding three plastic pills, transcripts of police interrogations, the coroner\'s notes on the victim, an official memo from an in-game officer, and a laboratory report on a piece of evidence. Playing the game meant sitting with these documents spread around the keyboard, cross-referencing them against what the parser told you — the props were not souvenirs but genuine gameplay materials, and the mystery could not properly be solved without them.\n\nThe Zork series carried the practice forward, packaging short manuals with in-world backstory, partial maps of the game\'s geography, postcards, and assorted trinkets. The most coveted of all is the Zorkmid, the fictional currency of the Great Underground Empire, supplied as a physical coin in the Zork Trilogy packaging and now among the most sought-after props from any old computer game.\n\nThe commercial function of feelies was copy protection. A pirated disk was useless without the physical documents that contained the information the game required, and this scheme had a quality that virtually no other anti-piracy measure of the era possessed: players did not resent it. Where disk-check routines, manual look-up codes, and dongles were experienced as insults and obstacles, feelies were experienced as gifts. Because they were clever, beautiful, and genuinely enriching, the copy protection became the reason to buy the box rather than the price of doing so — a lesson the industry has been relearning ever since.',
+    keyFacts: [
+      'Deadline shipped with a police folder, interrogation transcripts, coroner\'s notes, and three plastic pills',
+      'The Zork Trilogy included a physical Zorkmid coin, now among the most coveted game props',
+      'Feelies functioned as copy protection — a pirated disk lacked the documents the game required',
+      'Unlike other anti-piracy schemes, players welcomed feelies rather than resenting them',
+    ],
+    notableFor: 'Turning copy protection into a gift rather than an obstacle, and setting the standard for physical game packaging that collectors still measure everything against.',
+    sections: [
+      {
+        title: 'Physical Objects as Game Design',
+        html: '<p>Infocom\'s feelies were not bonus trinkets but working components of the games themselves. Deadline\'s box contained an entire police case file — folder, casebook, interrogation transcripts, coroner\'s notes, a lab report, and a bag of plastic pills — and solving the murder meant spreading these documents around the keyboard and cross-referencing them against what the parser revealed. The information lived in the box, not in the code. This made playing an Infocom game a hybrid physical-digital activity decades before that idea had a name, and it gave the printed materials a purpose no manual could claim.</p>',
+      },
+      {
+        title: 'Copy Protection Players Loved',
+        html: '<p>The business logic behind feelies was piracy: a copied disk was worthless without the physical props that carried the information the game demanded. What made Infocom\'s approach extraordinary is that it worked without antagonising anyone. Contemporary schemes — disk checks, manual look-up codes, hardware dongles — were experienced by players as punishments inflicted on the honest, but feelies were experienced as generosity. The props were imaginative, well-made, and genuinely enriching, so the anti-piracy measure became the very reason to buy a legitimate copy. It remains the most elegant solution anyone has found to a problem the industry still struggles with.</p>',
+      },
+    ],
+  },
+  {
+    id: 'monkey-island-dial-a-pirate',
+    title: 'Dial-A-Pirate (The Secret of Monkey Island)',
+    game: 'The Secret of Monkey Island',
+    platform: 'PC / Amiga / Atari ST',
+    year: 1990,
+    publisher: 'Lucasfilm Games',
+    era: '16-bit',
+    description: 'LucasArts\' most famous copy protection was a cardboard wheel of severed pirate faces — match the top half to the bottom half, read the hanging date through a window, and the joke was funny enough that players kept the wheel for decades.',
+    longDescription: 'The Secret of Monkey Island, designed by Ron Gilbert with Tim Schafer and Dave Grossman and released by Lucasfilm Games in 1990, shipped with one of the most beloved objects in the history of game packaging: the Dial-A-Pirate wheel. Included in early floppy releases, it was a cardboard disc assembly that functioned as copy protection while being genuinely, memorably funny — a combination the industry has almost never managed.\n\nThe mechanism was ingenious. The wheel consisted of two independently rotating cardboard disks. The front disk displayed fifteen bottom halves of pirate faces around its edge, with seven island-shaped windows cut into its middle; the back disk carried fifteen top halves of pirate faces along with a matrix of years. On starting the game, the player was shown a complete pirate face — a specific top half paired with a specific bottom half — and asked in which year that pirate had been hanged at a named island. The player rotated the wheel to align the matching top and bottom halves, then read off the year visible through the window for the correct island.\n\nWhat elevated it above every other code wheel was the humour. The pirate faces were grotesque, gap-toothed, eyepatched cartoons, and mixing halves at random produced absurd hybrid faces — an activity that players cheerfully engaged in for its own sake, entirely apart from the game. A copy protection device that people played with recreationally is a genuinely singular achievement, and it perfectly suited a game whose central pleasure was its comic voice.\n\nDial-A-Pirate is probably the most well-known example of physical copy protection in any PC game, and its influence was immediate: Monkey Island 2: LeChuck\'s Revenge shipped with a similar wheel, the "Mix\'n\'Mojo," which required aligning voodoo spell reagents. Both wheels are now prized collectibles, and digital recreations circulate online so that players of modern re-releases can still perform the ritual. Like Infocom\'s feelies, Dial-A-Pirate demonstrated that anti-piracy measures need not be resented if they are witty enough to become part of the game\'s charm.',
+    keyFacts: [
+      'A two-disc cardboard wheel: 15 pirate top halves, 15 bottom halves, and a matrix of years',
+      'The game showed a composite pirate face and asked the year it was hanged at a given island',
+      'The absurd mix-and-match faces made it fun to play with for its own sake',
+      'Monkey Island 2 followed with a similar "Mix\'n\'Mojo" voodoo-reagent wheel',
+    ],
+    notableFor: 'Being the most famous physical copy protection in PC gaming — and the only one players enjoyed so much they kept it as a toy.',
+    sections: [
+      {
+        title: 'How the Wheel Worked',
+        html: '<p>The Dial-A-Pirate consisted of two independently rotating cardboard disks. The front carried fifteen bottom halves of pirate faces around its rim, punctuated by seven island-shaped windows; the back carried fifteen top halves plus a grid of years. When the game began, it displayed a complete pirate face and asked in which year that particular pirate had been hanged at a specific island. The player rotated the disks to align the matching top and bottom halves, then read the answer through the window corresponding to the named island. It was simple, tactile, and impossible to circumvent without the physical object — precisely what copy protection needed to be.</p>',
+      },
+      {
+        title: 'Copy Protection as Comedy',
+        html: '<p>What made Dial-A-Pirate legendary was not its effectiveness but its wit. The pirate faces were grotesque cartoon caricatures, and spinning the disks to random positions produced hilarious hybrid monstrosities — a pastime players indulged in purely for amusement, entirely separate from the game. Anti-piracy measures were universally loathed in this era, experienced as punishments inflicted on paying customers; Dial-A-Pirate was instead a toy that people kept for decades. It suited a game built on comic voice perfectly, and its success prompted the similar Mix\'n\'Mojo wheel for the sequel, cementing LucasArts\' reputation for making even its DRM funny.</p>',
+      },
+    ],
+  },
+  {
+    id: 'neo-geo-aes-packaging',
+    title: 'Neo Geo AES Cartridge Boxes',
+    game: 'Neo Geo AES catalogue',
+    platform: 'Neo Geo AES',
+    year: 1990,
+    publisher: 'SNK',
+    era: '16-bit',
+    description: 'SNK\'s home cartridges were enormous — six inches tall and over an inch thick — housed in thick black binder-like boxes and priced from $200 to $600 apiece, packaging that announced the Neo Geo as an unapologetic luxury product.',
+    longDescription: 'When SNK launched the Neo Geo Advanced Entertainment System in 1990 as a home console running the same hardware and the same cartridges as its MVS arcade boards, it priced the machine and its software as luxury goods — and packaged them accordingly. Individual AES game cartridges cost between $200 and $600 at launch, sums that dwarfed the $40 to $60 that SNES and Genesis games commanded, and the physical presentation had to justify that extraordinary premium.\n\nThe cartridges themselves were physically imposing objects, measuring roughly six inches tall, seven and a half inches long, and more than an inch thick — vastly larger than a SNES or Genesis cart, and heavy in the hand. This size was a direct consequence of the hardware: Neo Geo games carried enormous amounts of ROM by the standards of the era, and SNK made a marketing virtue of it, printing each game\'s capacity in "megabits" prominently on the packaging. Figures ranged from 26 megabits up to 350, and the number functioned as a badge of technical superiority aimed squarely at a market where "bits" were a marketing battleground.\n\nThe boxes matched the ambition. Packaging was genuinely first class: thick black boxes that resembled small binders, fitted with clear plastic sleeves through which the cover artwork was displayed, and lined inside with a moulded black plastic insert that held the cartridge and manual securely in place. Opening one felt less like unwrapping a game than opening a piece of premium hardware, and the presentation deliberately evoked the substance and permanence of an expensive object rather than the disposability of a toy.\n\nThis packaging was inseparable from the Neo Geo\'s entire proposition. SNK was not selling a home console competing on price; it was selling arcade-perfect hardware to enthusiasts wealthy or devoted enough to pay for it, and every physical detail — the size, the weight, the binder-like box, the megabit count on the spine — reinforced that message. The result is some of the most coveted packaging in collecting, and boxed AES titles today command prices that would have seemed absurd even at their eye-watering original cost.',
+    keyFacts: [
+      'AES cartridges launched at $200 to $600 each, against $40–$60 for SNES and Genesis games',
+      'Cartridges measured about six inches tall, seven and a half long, and over an inch thick',
+      'Boxes were thick, black, binder-like cases with clear sleeves and moulded plastic inserts',
+      'Each game\'s ROM size in "megabits" — from 26 up to 350 — was printed prominently as a boast',
+    ],
+    notableFor: 'Packaging that unapologetically presented games as luxury goods, matching the Neo Geo\'s arcade-perfect hardware with premium physical presentation.',
+    sections: [
+      {
+        title: 'Selling a Luxury Object',
+        html: '<p>The Neo Geo AES was never intended to compete on price. SNK sold arcade-identical hardware to enthusiasts who would pay for it, and the packaging carried that argument physically. Cartridges were enormous — six inches tall and over an inch thick — and housed in thick black binder-style boxes with clear cover sleeves and moulded plastic inserts holding the cart and manual in place. At $200 to $600 per game, the presentation had to feel like premium hardware rather than a toy, and it did. Opening one was an event, and the substance of the object justified, or at least explained, the price.</p>',
+      },
+      {
+        title: 'The Megabit Boast',
+        html: '<p>SNK printed each game\'s ROM capacity in megabits directly on its packaging, with figures running from 26 up to 350 — a number that served as a permanent, visible boast about the Neo Geo\'s technical supremacy. In an era when "bits" had become a marketing weapon, and rivals argued over 16 versus 32, SNK simply displayed a far larger number on the box and let it speak. The oversized cartridges that housed all that ROM made the claim tangible: the sheer physical bulk of a Neo Geo cart was itself the argument. It is one of the purest examples of packaging as competitive positioning in gaming history.</p>',
+      },
+    ],
+  },
 ];

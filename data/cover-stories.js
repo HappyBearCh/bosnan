@@ -336,5 +336,89 @@ module.exports = [
         html: '<p>EGM\'s 1994 PC gaming coverage arrived at a moment when the lines between PC and console gaming were beginning to blur in interesting ways. DOOM\'s deathmatching required networking infrastructure — modems, BBS systems, eventually the internet — that consoles could not yet provide, but the game\'s success demonstrated an appetite for multiplayer competition that console manufacturers were watching carefully. The online gaming features that would become central to Xbox Live and PlayStation Network in the following decade were visible in embryo in DOOM\'s networked deathmatching.</p><p>The Pentium processor\'s arrival in 1993 also created PC hardware that surpassed the graphical capabilities of existing consoles. For the first time since the early 1980s, the most powerful gaming hardware was on a general-purpose computer rather than a dedicated console. This shift was temporary — the PlayStation and Saturn would partially close the gap — but it signaled a changing relationship between the platforms that EGM\'s console-focused readership needed to understand. The magazine\'s willingness to cover PC gaming seriously in 1994 reflected an editorial maturity about the gaming landscape that serves its archive well as a historical record of the period.</p>'
       }
     ]
+  },
+  {
+    id: 'famitsu-first-perfect-score',
+    title: 'Famitsu\'s First Perfect 40/40',
+    magazine: 'Weekly Famitsu',
+    issue: '#519',
+    year: 1998,
+    game: 'The Legend of Zelda: Ocarina of Time',
+    era: '64-bit',
+    description: 'Seven years after introducing its four-reviewer scoring system, Japan\'s most influential games magazine finally awarded a perfect 40 out of 40 — to Ocarina of Time, creating a benchmark of prestige that endures to this day.',
+    longDescription: 'Weekly Famitsu, first published in 1986, is the most institutionally powerful games magazine in Japan, and its verdicts have long carried commercial weight that Western publications can only envy. In 1991 it introduced the scoring format that would define it: the "Cross Review," in which four critics each independently rate a game from 1 to 10, producing an aggregate score out of 40. The system was designed to blunt individual bias, and its practical effect was to make a perfect score almost impossible — all four reviewers had to be unreserved in their enthusiasm.\n\nFor seven years, no game achieved it. Then, in issue #519, published on 27 November 1998, Famitsu awarded its first perfect 40/40 to The Legend of Zelda: Ocarina of Time. Four reviewers, four tens. It was an unprecedented editorial statement — the magazine\'s way of saying that Nintendo\'s first 3D Zelda was not merely excellent but flawless, a game against which everything else would be measured.\n\nThe scarcity of the honour is what gives it force. As of 2025, only around thirty games have ever received a 40/40 in nearly four decades of Famitsu reviews — a rate of roughly one every eighteen months across an industry publishing thousands of titles a year. Achieving the score became a marketing event in itself, reported worldwide and printed on Japanese box art, and the announcement of a new 40 remains a genuine piece of industry news.\n\nOcarina of Time\'s place as the first recipient has become inseparable from its reputation as one of the greatest games ever made. The score arrived alongside near-universal Western acclaim, and the convergence of Japanese and international critical opinion helped cement the game\'s canonical status almost immediately upon release. For a magazine whose influence rests on the perceived rigour of its judgements, holding back the perfect score for seven years and then spending it on Ocarina of Time was a decision that defined both the game and the institution.',
+    keyFacts: [
+      'Famitsu launched in 1986 and introduced its four-reviewer "Cross Review" system in 1991',
+      'The first perfect 40/40 went to Ocarina of Time in issue #519, dated 27 November 1998',
+      'Seven years passed between the scoring system\'s debut and the first perfect score',
+      'Only around 30 games have ever earned a 40/40 across nearly four decades',
+    ],
+    notableFor: 'Establishing the 40/40 as gaming\'s rarest and most prestigious review score by withholding it for seven years and finally awarding it to Ocarina of Time.',
+    sections: [
+      {
+        title: 'The Cross Review System',
+        html: '<p>Famitsu\'s scoring format, introduced in 1991, has four critics independently rate each game from 1 to 10, summing to a maximum of 40. The design was intended to temper individual bias, but its more significant consequence was to make perfection extraordinarily difficult — a 40 requires that not one of four reviewers harbours a single reservation. That structural hurdle is precisely why the score carries such weight: it cannot be the enthusiasm of a lone advocate. Seven years passed after the system\'s debut before any game cleared the bar, and only around thirty have managed it since, making the 40/40 arguably the scarcest prestige marker in games criticism.</p>',
+      },
+      {
+        title: 'Why It Mattered',
+        html: '<p>Awarding the first perfect score to Ocarina of Time in November 1998 was an editorial statement with immediate consequences. The 40/40 was reported internationally, printed on Japanese packaging, and treated as genuine industry news — a pattern that has held for every subsequent perfect score. It also converged with overwhelming Western acclaim to lock in Ocarina of Time\'s canonical status almost from the moment of release, giving the game a critical consensus across both hemispheres that few titles ever achieve. For Famitsu, spending its long-hoarded first 40 on this particular game defined the institution as much as the game, and the score remains a benchmark the industry still watches for.</p>',
+      },
+    ]
+  },
+  {
+    id: 'egm-sheng-long-hoax',
+    title: 'The Sheng Long Hoax',
+    magazine: 'Electronic Gaming Monthly',
+    issue: 'April 1992',
+    year: 1992,
+    game: 'Street Fighter II',
+    era: '16-bit',
+    description: 'EGM\'s April Fools feature invented a hidden Street Fighter II boss named Sheng Long, seeded it with joke clues nobody noticed, and watched the fiction spread worldwide — eventually influencing Capcom\'s own canon.',
+    longDescription: 'The Sheng Long hoax began with a mistranslation. In Street Fighter II, one of Ryu\'s victory quotes was rendered in English as "You must defeat Sheng Long to stand a chance" — a garbling of a line that should have read approximately "If you cannot overcome the Rising Dragon Punch, you cannot win!" The Japanese term for the Shoryuken had been mistaken for a proper name, and players across the world were left wondering who this mysterious Sheng Long might be.\n\nElectronic Gaming Monthly editor Ken Williams saw an opportunity. For the magazine\'s April Fools feature in 1992, EGM published an article claiming that Sheng Long was a real hidden character: if a player completed the game\'s arcade mode as Ryu without taking any damage across several consecutive matches, Sheng Long would appear, hurl M. Bison bodily off the stage, and challenge the player to a final untimed bout. The piece was written straight, complete with instructions and photographs.\n\nEGM seeded the article with clues intended to give the joke away. Among them was an "Honorable Mention" credited to one "W.A. Stokins" of "Fuldigen, HA" — read aloud, "waste tokens" of "fooled again, ha." The editors assumed these tells made the prank unmistakable. They were wrong. Players around the world took the article entirely seriously and poured countless hours and quarters into damage-free runs, and — more damagingly — other publications reprinted the claims as fact without checking, propelling the fiction across the globe and far beyond EGM\'s control.\n\nThe hoax\'s strangest consequence is that it partly came true. The name Sheng Long lodged so deeply in the Street Fighter mythos that Capcom eventually engaged with it: a character named Gouken, introduced in Masaomi Kanzaki\'s 1993 Street Fighter II manga as the master of both Ryu and Ken, was woven into the series\' official backstory, and Capcom later made him a playable fighter. A magazine\'s April Fools joke, born from a translation error, thus fed back into the canon of one of gaming\'s biggest franchises — making the Sheng Long hoax the most consequential prank in the history of games journalism.',
+    keyFacts: [
+      'Originated from a mistranslation of Ryu\'s victory quote about the Shoryuken (Rising Dragon Punch)',
+      'Conceived by EGM editor Ken Williams for the magazine\'s 1992 April Fools feature',
+      'Hidden clues included "W.A. Stokins" of "Fuldigen, HA" — "waste tokens," "fooled again, ha"',
+      'Other magazines reprinted it as fact, and the fiction eventually influenced Capcom\'s own canon',
+    ],
+    notableFor: 'Being the most consequential prank in games journalism — a joke that spread worldwide as fact and ultimately fed back into Street Fighter\'s official canon.',
+    sections: [
+      {
+        title: 'A Joke Nobody Got',
+        html: '<p>EGM believed it had made the gag obvious. The article was studded with tells, most notoriously an "Honorable Mention" to "W.A. Stokins" of "Fuldigen, HA" — a groan-worthy pun that reads aloud as "waste tokens" of "fooled again, ha." But readers, primed by a genuinely baffling in-game line about a mysterious Sheng Long, took the piece completely at face value and set about attempting damage-free arcade runs in pursuit of a character who did not exist. Worse, rival publications reprinted the claims as fact without verification, and the hoax escaped its author entirely, spreading across the world as accepted knowledge.</p>',
+      },
+      {
+        title: 'The Joke That Became Canon',
+        html: '<p>What makes Sheng Long extraordinary is that the fiction refused to die and eventually shaped reality. The name embedded itself so thoroughly in Street Fighter lore that Capcom engaged with the mythology it had accidentally spawned: Gouken, the master of Ryu and Ken, first appeared in Masaomi Kanzaki\'s 1993 Street Fighter II manga and was subsequently absorbed into the series\' official backstory and made playable. A translation error produced a phantom, a magazine turned the phantom into a hoax, players turned the hoax into folklore, and the publisher ultimately turned the folklore into canon — a chain of events unique in gaming history.</p>',
+      },
+    ]
+  },
+  {
+    id: 'next-generation-launch',
+    title: 'Next Generation Issue 1',
+    magazine: 'Next Generation',
+    issue: '#1',
+    year: 1995,
+    game: 'The 32-bit generation',
+    era: '32-bit',
+    description: 'Launched in January 1995, Next Generation covered the games industry rather than individual games, ran interviews with developers instead of hype, and refused bylines on the grounds that the whole staff shared responsibility for every word.',
+    longDescription: 'Next Generation launched in January 1995, initially under GP Publications and, from May of that year, under Imagine Media — the company that would become Future US. Published by Jonathan Simpson-Bint and edited by Neil West, who had left his post at MEGA to take the job, it arrived at the precise moment the 32-bit era was beginning, covering the 3DO, the Atari Jaguar, and the then-unreleased Sony PlayStation and Sega Saturn.\n\nWhat set it apart was its readership and its posture. Where GamePro and Electronic Gaming Monthly addressed themselves to players hungry for tips, scores, and screenshots, Next Generation aimed at readers interested in the industry itself — its economics, its strategies, its technologies, and above all its people. Nearly every feature and preview carried extensive commentary and input from the developers actually making the games, and the magazine\'s interviews with industry figures became its signature, treating game creators as serious professionals with ideas worth interrogating rather than as sources of promotional quotes.\n\nOne of its most distinctive editorial decisions was the abolition of bylines. Apart from a handful of regular columns, articles and reviews ran unsigned, and the editors explained the policy plainly: they believed the magazine\'s entire staff should share the credit — and the responsibility — for every piece it published. This gave Next Generation an unusual institutional voice, one that presented its judgements as the considered position of a publication rather than the opinion of an individual, and it lent the reviews a peculiar authority.\n\nThe magazine ran until January 2002, and its influence on games writing considerably outlasted it. By demonstrating that a mainstream newsstand magazine could take the industry seriously — treating game development as a craft and a business worth analysing rather than merely celebrating — Next Generation helped establish the intellectual register that later publications such as Edge would refine, and that much of today\'s more thoughtful games journalism still inhabits. It was, for many readers, the first gaming magazine that felt genuinely grown-up.',
+    keyFacts: [
+      'Launched January 1995, edited by Neil West, who left MEGA to take the role',
+      'Covered the industry itself rather than individual games, unlike GamePro and EGM',
+      'Nearly every feature carried extensive input and commentary from actual developers',
+      'Ran almost entirely without bylines — the staff shared credit and responsibility for every article',
+    ],
+    notableFor: 'Proving a newsstand games magazine could take the industry seriously, establishing the analytical register that later shaped Edge and modern games journalism.',
+    sections: [
+      {
+        title: 'A Magazine About the Industry',
+        html: '<p>Next Generation\'s founding insight was that there was an audience for coverage of the games business, not just the games. Arriving as the 32-bit generation dawned — 3DO and Jaguar on shelves, PlayStation and Saturn imminent — it wrote about strategy, technology, and economics, and built its identity around interviews in which developers were treated as serious professionals rather than sources of promotional soundbites. Nearly every preview and feature carried substantial input from the people actually building the games. For readers who had outgrown tips and high-score tables, it was the first magazine that seemed to assume they were adults.</p>',
+      },
+      {
+        title: 'No Bylines',
+        html: '<p>Perhaps its most striking policy was the near-total absence of bylines: outside a few regular columns, articles and reviews were published unsigned. The editors justified this on the grounds that the whole staff should share both the credit and the responsibility for everything the magazine printed. The effect was to give Next Generation a single institutional voice — verdicts arrived as the considered position of the publication rather than one writer\'s opinion, lending them an unusual weight. The magazine ran until 2002, and its serious, analytical register directly shaped the tone that Edge and much of today\'s more thoughtful games writing would adopt.</p>',
+      },
+    ]
   }
 ];
