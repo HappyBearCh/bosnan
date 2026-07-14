@@ -420,5 +420,92 @@ module.exports = [
         html: '<p>Perhaps its most striking policy was the near-total absence of bylines: outside a few regular columns, articles and reviews were published unsigned. The editors justified this on the grounds that the whole staff should share both the credit and the responsibility for everything the magazine printed. The effect was to give Next Generation a single institutional voice — verdicts arrived as the considered position of the publication rather than one writer\'s opinion, lending them an unusual weight. The magazine ran until 2002, and its serious, analytical register directly shaped the tone that Edge and much of today\'s more thoughtful games writing would adopt.</p>',
       },
     ]
+  },
+  {
+    id: 'electronic-games-issue-1',
+    title: 'The First Video Game Magazine',
+    magazine: 'Electronic Games',
+    issue: 'Issue 1 (Winter 1981)',
+    year: 1981,
+    game: 'N/A — the medium itself',
+    era: '1980s',
+    description: 'Before Electronic Games there was no such thing as a video game magazine. Its editors had to invent the vocabulary as they went — "playfield", "scrolling", "screenshot".',
+    longDescription: 'Electronic Games launched on 15 October 1981 as the first magazine in the United States devoted entirely to video games, co-founded by Bill Kunkel, Arnie Katz and Joyce Worley. It grew out of Arcade Alley, a column Kunkel and Katz had been writing since 1979 for Video, a monthly published by Reese Publishing about televisions and home video electronics. In the early days they struggled to fill the column — there simply was not enough happening. Then Activision was founded, the home game market began to look like a national phenomenon, and Kunkel persuaded Reese\'s management to produce a one-off magazine devoted entirely to video games.\n\nThe one-off became an institution that ran, under various titles, until 1997. Its significance is difficult to overstate: there was no established way to write about video games in 1981, no house style, no review format, no agreed terminology. Electronic Games invented them, and as editor Kunkel expanded the medium\'s vocabulary directly, coining or popularising words that are now so standard they feel like they were always there — "playfield", "scrolling", "screenshot". Its basic structure became the prototype for essentially every American games magazine that followed it.',
+    keyFacts: [
+      'Launched 15 October 1981 as the first US magazine devoted entirely to video games',
+      'Co-founded by Bill Kunkel, Arnie Katz and Joyce Worley',
+      'Grew out of Arcade Alley, a column Kunkel and Katz wrote for Video magazine from 1979',
+      'Kunkel coined or popularised the terms "playfield", "scrolling" and "screenshot"',
+      'Its format became the template for nearly every American games magazine that followed',
+    ],
+    notableFor: 'Inventing games journalism, and much of the language games journalism uses',
+    sections: [
+      {
+        title: 'Writing About Something With No Words For It',
+        html: '<p>The problem Electronic Games faced in 1981 was not a shortage of opinions but a shortage of nouns. How do you describe the area a game takes place in? How do you describe the way the screen moves sideways as the character advances? How do you refer to a still image captured from a game? These are not rhetorical questions — they were practical editorial obstacles, and the magazine\'s answers to them are the words the industry still uses.</p><p>That is a rarer achievement than it sounds. Most publications inherit a vocabulary from the field they cover. Electronic Games had to build one, in public, issue by issue, while simultaneously persuading a publisher that a magazine about video games was a viable commercial product at all. The fact that terms like "screenshot" now feel inevitable is the measure of how well they chose.</p>',
+      },
+      {
+        title: 'From a Column Nobody Could Fill',
+        html: '<p>The origin story contains a detail that is easy to skip past: Kunkel and Katz initially had trouble filling Arcade Alley. In 1979 there were not enough games being released to sustain a regular column in a magazine about televisions. Two years later, the same men were launching a standalone monthly.</p><p>That compression is the entire early history of the industry in miniature. The founding of Activision — the first third-party publisher, and therefore the first proof that anyone other than a console manufacturer could make games — is the hinge, and Kunkel saw it immediately for what it was: not merely a new company, but the moment the medium acquired enough independent output to be worth covering as a field rather than as a curiosity.</p>',
+      },
+    ]
+  },
+  {
+    id: 'crash-magazine-oliver-frey',
+    title: 'Crash and the Airbrush',
+    magazine: 'Crash',
+    issue: 'Issue 1 (February 1984)',
+    year: 1984,
+    game: 'ZX Spectrum software',
+    era: '1980s',
+    description: 'A ZX Spectrum magazine whose covers were hyper-detailed airbrushed paintings by Oliver Frey — so striking that people bought the magazine for the art before they read a word.',
+    longDescription: 'Crash launched in January 1984 (cover-dated February) from Newsfield Publications, devoted to the ZX Spectrum, and it was immediately successful for two reasons that reinforced each other: the quality of the writing, and the covers. Those covers were painted by Oliver Frey in a hyper-detailed airbrushed style borrowed from pulp science fiction and sword-and-sorcery paperbacks — dynamic, saturated, frequently lurid, and occasionally controversial. The first issue set the tone with a stern "Chairman of the Board" figure presiding over a chaotic office, a deliberately strange and confident image at a moment when rival magazines were still leading with photographs of hardware and technical diagrams.\n\nThe strategy worked. Frey\'s work made a Spectrum magazine look like a fantasy novel or a heavy metal album, which was a substantially more exciting proposition to a fourteen-year-old than a listing of memory addresses, and Crash rode it to become the biggest-selling British computer magazine — over 100,000 copies a month by 1986. It ran until 1991. Frey\'s covers remain the most recognisable visual artefact of the British 8-bit era, and they established a principle that the industry has never abandoned: that the packaging of games culture could be more thrilling than what the hardware could actually render.',
+    keyFacts: [
+      'Launched January 1984 (cover-dated February) by Newsfield Publications, covering the ZX Spectrum',
+      'Cover art by Oliver Frey, in a hyper-detailed airbrushed pulp science-fiction style',
+      'By 1986 it was the biggest-selling British computer magazine, at over 100,000 copies a month',
+      'The first issue depicted a "Chairman of the Board" figure overseeing a chaotic office scene',
+      'Ran until 1991; Frey\'s covers remain the defining visual signature of the British 8-bit era',
+    ],
+    notableFor: 'Making magazine cover art more exciting than the games it advertised',
+    sections: [
+      {
+        title: 'Painting What the Spectrum Could Not Render',
+        html: '<p>There is a productive dishonesty at the heart of Frey\'s covers. The ZX Spectrum could display eight colours with severe attribute clash, at a resolution that made most games a suggestion rather than a depiction. What Frey painted was not what the games looked like — it was what they were supposed to feel like, rendered with the full apparatus of professional airbrush illustration.</p><p>This gap could have been a liability and was instead the entire point. The Spectrum player was already performing an imaginative translation, converting a handful of blocky sprites into a warrior and a dungeon in their own head. Frey\'s covers simply did that work for them, at full fidelity, on the newsagent\'s shelf. The magazine was not misrepresenting the games so much as depicting the experience of playing them.</p>',
+      },
+      {
+        title: 'Newsfield\'s House Style',
+        html: '<p>Crash\'s success established a template that Newsfield promptly replicated — most directly with Zzap!64 for the Commodore 64, launched in 1985 with Frey providing art there too. The house approach combined opinionated, personality-driven reviewing with visual presentation borrowed from comics and genre fiction rather than from computing journalism, and it made the British magazine scene of the 1980s something genuinely distinct from its American counterpart.</p><p>Where Electronic Games in the US invented the vocabulary of games criticism, Newsfield\'s magazines invented its attitude: partisan, funny, unembarrassed about being enthusiasts, and visually loud. Nearly every British games publication of the following two decades, up to and including Edge, is arguing either with that inheritance or from it.</p>',
+      },
+    ]
+  },
+  {
+    id: 'zzap64-issue-1',
+    title: 'Zzap!64 and the Reviewers\' Faces',
+    magazine: 'Zzap!64',
+    issue: 'Issue 1 (May 1985)',
+    year: 1985,
+    game: 'Commodore 64 software',
+    era: '1980s',
+    description: 'Newsfield\'s C64 magazine put its reviewers\' own faces — painted, reacting — next to their scores, turning criticism into a matter of personality rather than authority.',
+    longDescription: 'Zzap!64 was released on 11 April 1985 with a May cover date, launched by Newsfield as a sister publication to Crash and covering Commodore machines, principally the C64. The inaugural team was editor Chris Anderson, software editor Bob Wade, freelance writer Steve Cooke — who arrived from the recently folded Personal Computer Games — and reviewers Gary Penn and Julian Rignall, both of whom got their jobs after placing as finalists in a video game competition, which is a hiring process the industry has never quite managed to repeat.\n\nIts most durable innovation was the review format. Rather than presenting criticism as an impersonal institutional verdict, Zzap!64 attached the reviewers\' own faces to their opinions — rendered artistically by in-house artists Oliver Frey and Mark Kendrick, and drawn to express each reviewer\'s reaction to the game in question. The reader therefore did not simply learn that a game scored well; they learned that Julian liked it and Gary did not, and could calibrate accordingly. The magazine\'s early life was not without friction: the editorial office was in Yeovil, over 120 miles from Newsfield\'s base in Ludlow, and when the team was relocated to cut costs, Anderson and Wade left rather than move.',
+    keyFacts: [
+      'Released 11 April 1985 with a May cover date, as Newsfield\'s Commodore sister magazine to Crash',
+      'Reviewers Gary Penn and Julian Rignall were hired after placing as finalists in a video game competition',
+      'Reviews carried painted caricatures of the reviewers\' faces, drawn to express their reaction to the game',
+      'Artwork by Oliver Frey and Mark Kendrick, the same team behind Crash\'s covers',
+      'Founding editor Chris Anderson and software editor Bob Wade both left rather than relocate from Yeovil to Ludlow',
+    ],
+    notableFor: 'Inventing the personality-driven review, decades before YouTube did it again',
+    sections: [
+      {
+        title: 'Criticism With a Face On It',
+        html: '<p>The painted reviewer faces look like a whimsical layout flourish and are actually a substantive editorial position. By attaching a specific human being — with a known personality, known tastes, and a visible reaction — to every score, Zzap!64 was arguing that a review is not a measurement but an opinion, and that the reader\'s job is to work out whose opinions are useful to them.</p><p>That is precisely the model that dominates games criticism today, when audiences follow individual critics and personalities rather than mastheads. Zzap!64 arrived at it in 1985, on paper, using an airbrush, because a magazine with three reviewers had no way of pretending to be an institution and sensibly decided not to try.</p>',
+      },
+      {
+        title: 'Hired From a Competition',
+        html: '<p>Gary Penn and Julian Rignall were recruited as reviewers because they were exceptionally good at playing games — finalists in a competition — rather than because they were writers. That is an almost perfect illustration of how young the field was in 1985: the qualification for the job did not exist yet, so the magazine substituted the nearest available proxy, which was demonstrable expertise at the thing.</p><p>It also happened to work. Rignall in particular became one of the most influential British games journalists of his generation, and the model of the critic-as-expert-player rather than critic-as-professional-writer shaped the tone of the British magazine scene for years. The competition-finalist hire is a joke about the industry\'s youth, and it is also, on the evidence, a defensible recruitment strategy.</p>',
+      },
+    ]
   }
 ];
