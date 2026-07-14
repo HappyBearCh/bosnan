@@ -403,5 +403,88 @@
         html: '<p>What elevates Ikaruga above mere difficulty is its fairness. Every pattern is deterministic and solvable: the polarity system means there is always a correct way through, and mastery comes from learning to read and execute those solutions under pressure. The chain-scoring system, which rewards destroying three same-coloured enemies in a row, and the original ammunition limit replenished by absorbing bullets, encourage players to take calculated risks and integrate offence with defence. This meticulous, puzzle-like design earned Ikaruga a reputation as one of the finest and most demanding shoot-\'em-ups ever made — a game that is brutally hard precisely because it is so precisely constructed, rewarding study and skill rather than luck.</p>',
       },
     ]
+  },
+  {
+    id: 'gradius-iii-arcade',
+    title: 'Gradius III (Arcade)',
+    game: 'Gradius III',
+    platform: 'Arcade',
+    year: 1989,
+    era: '1980s',
+    difficultyType: 'Punitive Memorisation',
+    description: 'The only arcade game in history believed to have been pulled from cabinets by its own developer for being too hard.',
+    longDescription: 'Konami released Gradius III into Japanese arcades in late 1989, and it is widely held to be the hardest game the series ever produced — and, in the shoot-\'em-up community, a serious candidate for the hardest arcade shooter of any kind. It is brutal by every available axis at once: dense bullet patterns, enemy placements that must be memorised rather than reacted to, and the series\' notorious punishment loop, in which death strips the player of every upgrade and drops them back into a section calibrated for a fully-powered ship. The arcade release compounded this with an extraordinary decision — it offered no continue, and did not even provide an operator-selectable option to enable one. When you lost your last life, the game was over, whatever coins you had.\n\nStage 4 has its own reputation: the only pseudo-3D level ever to appear in a Gradius game, presenting the Vic Viper from behind and requiring the player to thread it through walls in a perspective the series had never used before and never used again. The difficulty was reportedly so severe that Konami withdrew the game from arcades unusually quickly — as far as anyone has been able to establish, the sole occasion in arcade history on which a developer pulled its own machine for being too punishing. The SNES conversion was substantially softened, given continues and difficulty settings, which is why the arcade original remains the version enthusiasts mean when they invoke the name.',
+    keyFacts: [
+      'Believed to be the only arcade game ever pulled from cabinets by its own developer for excessive difficulty',
+      'The arcade release offered no continues, and no operator option to enable them',
+      'Death strips all power-ups, returning the player to a section designed for a fully-upgraded ship',
+      'Stage 4 is the only pseudo-3D level in the entire Gradius series',
+      'The SNES version added continues and reduced difficulty, and is a substantially different experience',
+    ],
+    sections: [
+      {
+        title: 'The Death Spiral',
+        html: '<p>The Gradius power-up system is the mechanism that makes the series hard, and Gradius III turns the screw as far as it will go. The player accumulates speed, missiles, shields and Options over the course of a stage, and the level design assumes those upgrades — later sections are built for a ship that has them. Dying removes all of them at once and returns the player to that same section, now flying a stock craft into content designed for a fully-armed one.</p><p>The result is not a difficulty curve but a cliff with no way back up. A single mistake in stage five does not cost one life; it costs, in practice, the run, because the stripped ship cannot survive long enough to rebuild what it lost. And with no continues available in the arcade release, there was no coin-operated escape hatch. Gradius III is one of the purest examples of a design in which the punishment for failure is calibrated to make further failure inevitable.</p>',
+      },
+      {
+        title: 'Why Konami Blinked',
+        html: '<p>An arcade machine is a commercial instrument before it is anything else, and its economics depend on a player believing they can do better next time. Gradius III appears to have violated that contract so comprehensively that it stopped earning: too hard to make progress feel possible, too unforgiving to justify another coin, and — critically — offering no continue to sell the player at the moment of defeat. A cabinet that cannot take a second coin from a beaten player is a cabinet an operator does not want.</p><p>Konami withdrawing its own game is an admission of exactly that. It is also, in retrospect, the moment the shoot-\'em-up genre\'s central tension became visible: the players who love these games most are precisely the ones who want them at a difficulty that makes them commercially unviable. The genre spent the following decade drifting out of arcades and into a devoted, self-selecting niche, and Gradius III is where the drift is easiest to see.</p>',
+      },
+    ]
+  },
+  {
+    id: 'r-type-arcade',
+    title: 'R-Type',
+    game: 'R-Type',
+    platform: 'Arcade',
+    year: 1987,
+    era: '1980s',
+    difficultyType: 'Pure Memorisation',
+    description: 'Irem\'s horizontal shooter is not a test of reflexes but a test of whether you have been here before — every enemy spawns in the same place, every time, and the first time will kill you.',
+    longDescription: 'R-Type, released by Irem in 1987, puts the player in the R-9 "Arrowhead" against the Bydo, and established a difficulty philosophy that the genre has never entirely escaped. Its enemy patterns are extremely rigid: every wave spawns at a fixed point, in a fixed formation, at a fixed moment. There is no randomisation to react to and no adaptive difficulty to accommodate you. Consequently there is essentially no such thing as playing R-Type well on sight. The correct path through each stage exists, it is narrow, and the only way to find it is to die repeatedly at each point until you have learned where the danger was.\n\nThe central mechanic complicates this beautifully. The R-9 can attach a glowing invulnerable orb called the Force, which absorbs enemy fire and adds firepower, and which can be detached and re-attached to the front or rear of the ship. The Force turns each stage into a positioning puzzle — it is a shield, a weapon, and a battering ram, and knowing when to launch it forward and when to dock it behind you is most of what expertise in R-Type consists of. Every action has a purpose, and a slight error in timing is fatal, which is why the game demands both memorisation and, in the moment of execution, real reflexive precision.',
+    keyFacts: [
+      'Enemy spawns and patterns are entirely fixed — the game cannot be improvised, only learned',
+      'The detachable "Force" orb serves simultaneously as shield, weapon and puzzle piece',
+      'Widely credited alongside Gradius with defining the horizontal shoot-\'em-up as a genre',
+      'The design assumes death as the primary teaching mechanism, not as a failure state',
+    ],
+    sections: [
+      {
+        title: 'Death as the Instruction Manual',
+        html: '<p>R-Type belongs to a category of game in which dying is not a punishment but the only available way of acquiring information. The player cannot see what is coming, cannot react quickly enough once it arrives, and therefore must be killed by it in order to learn that it exists. On the second attempt, that particular hazard is trivial — and the next one kills them instead. Progress is a slow accretion of specific, hard-won facts about a fixed sequence.</p><p>In an arcade this was a business model as much as a design philosophy: each death was a coin, and the knowledge purchased with it was real. Transplanted to home consoles and modern re-releases, where the coins are free, the same structure reads very differently — as a long, patient act of study. It is the reason shoot-\'em-up culture places so much weight on the "1CC", the single-credit clear. Finishing R-Type is not the achievement. Finishing it without buying the knowledge again is.</p>',
+      },
+      {
+        title: 'The Force and the Puzzle Shooter',
+        html: '<p>What elevates R-Type above a mere memory test is the Force. Because the orb is invulnerable, it can be parked in the mouth of a hazard; because it can be detached and recalled, it can be sent ahead to clear a corridor the ship cannot enter; because it can be mounted front or rear, it changes the ship\'s entire firing geometry. Each stage is therefore not just a sequence to be memorised but a series of small spatial problems with correct answers.</p><p>That is what separates R-Type from its imitators, and why it is remembered as a landmark rather than merely a hard game. It gave the horizontal shooter something to be <em>about</em> beyond dodging, and the "puzzle shooter" lineage that runs through the genre for the next twenty years starts here.</p>',
+      },
+    ]
+  },
+  {
+    id: 'ninja-gaiden-xbox-2004',
+    title: 'Ninja Gaiden (2004)',
+    game: 'Ninja Gaiden',
+    platform: 'Xbox',
+    year: 2004,
+    era: '2000s',
+    difficultyType: 'Deliberate Hostility',
+    description: 'Tecmo\'s testers told Tomonobu Itagaki the game was too hard. He made it harder.',
+    longDescription: 'Team Ninja\'s 2004 reboot of Ninja Gaiden for the Xbox put the player in control of Ryu Hayabusa on a quest to recover a stolen sword and avenge his slaughtered clan, and it arrived with a reputation for punishment that has never left it. Its combat is fast, precise and deeply unforgiving: enemies attack in coordinated groups, they interrupt, they punish greed, and they do not politely wait their turn in the way that the action games of the period had trained players to expect. Blocking, dodging and positioning are not optional refinements but the basic vocabulary, and the game assumes fluency in all three from very early on.\n\nDirector Tomonobu Itagaki was entirely unapologetic and remarkably candid about how it got that way. Responding to complaints that the game was too difficult, he explained that this was deliberate — "the testers who tested this game went nuts", and that "at first it was easier, but when the testers said \'this is too difficult\', I made it even more difficult." The revised release, Ninja Gaiden Black, offered five difficulty settings — Ninja Dog, Normal, Hard, Very Hard and Master Ninja — with Itagaki adding both the gentler Ninja Dog mode and the punishing Master Ninja tier in response to the reaction, while maintaining that any player who persisted was capable of finishing the game.',
+    keyFacts: [
+      'Itagaki responded to playtesters calling it too hard by making it harder still',
+      'Enemies attack in coordinated groups, interrupt combos, and punish over-aggression',
+      'Ninja Gaiden Black added five difficulty tiers: Ninja Dog, Normal, Hard, Very Hard and Master Ninja',
+      'Ninja Dog, the easiest setting, was added only after complaints — and named to needle the players who chose it',
+      'Itagaki maintained publicly that any sufficiently persistent player could complete the game',
+    ],
+    sections: [
+      {
+        title: 'Difficulty as an Authored Statement',
+        html: '<p>Most hard games are hard as a by-product — of arcade economics, of primitive design, of technical limitation. Ninja Gaiden is hard on purpose, as an aesthetic position, and Itagaki said so out loud in a way almost nobody else in the industry was willing to. Hearing that his testers were struggling, he treated that as evidence the game was working and increased the pressure. That is not a defensible product decision by any conventional metric. It is an authorial one.</p><p>The design backs the rhetoric. Ninja Gaiden\'s enemies are engineered specifically to break the habits players brought from other action games: they do not queue up politely, they interrupt attack animations, and they punish the reflexive mashing that most contemporaries rewarded. The game is not merely difficult; it is difficult in a way that is specifically hostile to the skills its audience arrived with, which is a much harder thing to build and a much more insulting thing to receive.</p>',
+      },
+      {
+        title: 'Ninja Dog',
+        html: '<p>The concession Itagaki eventually made is the most revealing thing about him. He added an easier difficulty, as requested — and called it Ninja Dog. Selecting it dresses Ryu in a ribbon and has the game address the player with open condescension. The accommodation was real, and it was delivered as an insult.</p><p>That gesture, more than any individual boss or enemy encounter, is why Ninja Gaiden occupies the place it does in arguments about difficulty in games. It stakes out an uncompromising position — that a game is permitted to be exactly as hard as its author wants, that accessibility is a courtesy rather than an obligation, and that the courtesy may be extended with contempt. Two decades of subsequent argument about difficulty options, much of it conducted around the Souls games, is still working through the question Ninja Gaiden posed with a ribbon.</p>',
+      },
+    ]
   }
 ];

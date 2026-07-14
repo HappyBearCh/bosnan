@@ -406,4 +406,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'xbox-duke-controller',
+    title: 'The Xbox "Duke" Controller',
+    platform: 'Xbox',
+    manufacturer: 'Microsoft',
+    year: 2001,
+    era: '2000s',
+    description: 'The largest controller ever bundled with a major console — so poorly received that Game Informer gave it "Blunder of the Year", and Microsoft replaced it within a year.',
+    longDescription: 'The original Xbox controller, nicknamed the "Fatty" and later immortalised as "the Duke", shipped with the console in every territory except Japan in 2001. It was enormous: a broad, heavy slab with a bulging grip, a rounded face crowded with six buttons including two black-and-white auxiliary buttons crammed below the main four, and a footprint that made it uncomfortable for anyone without large hands and genuinely unusable for children.\n\nThe reception was hostile from the beginning. During the announcement, some audience members reportedly threw objects at Seamus Blackley on stage. Game Informer awarded the controller "Blunder of the Year" in 2001. Microsoft had already anticipated at least part of the problem — Japan was given a smaller pad from the start, on the reasonable assumption that the Duke would be laughed out of the market there — and that smaller design, the Controller S, codenamed "Akebono", was subsequently rolled out everywhere else. It replaced the Duke in the American retail package during 2002 and in Europe in 2003. The Duke lasted barely a year as the default, and its reputation has been rehabilitated only by nostalgia and by an official Hyperkin reissue for the Xbox One.',
+    keyFacts: [
+      'Bundled with the Xbox at launch in every territory except Japan, which received a smaller pad from the start',
+      'Awarded "Blunder of the Year" by Game Informer in 2001',
+      'Objects were reportedly thrown at Seamus Blackley on stage during its announcement',
+      'Replaced by the smaller Controller S (codename "Akebono") in the US in 2002 and Europe in 2003',
+      'Officially revived decades later as a licensed Hyperkin reissue for the Xbox One',
+    ],
+    notableFor: 'The most notorious ergonomic failure in mainstream console history',
+    sections: [
+      {
+        title: 'How Did This Ship?',
+        html: '<p>The Duke is easy to mock and slightly harder to explain, because Microsoft was not staffed by people who had never held a controller. The most plausible reading is that the Xbox was designed by a company whose entire hardware instinct came from the PC, where input devices are sold separately, chosen by the user, and expected to accommodate an adult sitting at a desk. A large, heavy, PC-peripheral-shaped object is a perfectly sensible thing for that company to build. It is simply not a console controller, which has to work for a twelve-year-old on a sofa.</p><p>The tell is that Japan got a different pad from day one. Microsoft evidently understood that the Duke would not fly in a market with a strong existing sense of what a controller feels like — it just failed to draw the obvious conclusion, which was that the objection was not about Japan.</p>',
+      },
+      {
+        title: 'What It Got Right',
+        html: '<p>Buried under the size problem, the Duke established two things that survived into every Xbox controller since and were widely copied elsewhere: the offset analogue stick layout, with the left stick raised above the d-pad, and the use of genuinely analogue face and trigger inputs. The offset arrangement in particular is now so standard that it is invisible — it is what an Xbox and a modern PlayStation-alternative pad simply <em>are</em>.</p><p>The Controller S was not a redesign so much as a shrink: the same fundamental layout, executed at a size a human hand could actually close around. That is the strongest evidence that the Duke\'s problem was never its concept. Microsoft got the architecture right on the first attempt and the ergonomics catastrophically wrong, which is an unusual way round for a hardware company to fail.</p>',
+      },
+    ],
+  },
+  {
+    id: 'gamecube-controller',
+    title: 'The GameCube Controller',
+    platform: 'Nintendo GameCube',
+    manufacturer: 'Nintendo',
+    year: 2001,
+    era: '2000s',
+    description: 'A controller built around a single enormous green button, with hybrid analogue triggers that click at the bottom of their travel — asymmetric, opinionated, and still in competitive use today.',
+    longDescription: 'The GameCube controller (model DOL-003) launched in Japan on 14 September 2001, North America on 18 November, and Europe the following May. Its face is the most opinionated button layout Nintendo has ever shipped: a single large green A button sits in the centre, with a smaller red B below and to the left, and two kidney-shaped X and Y buttons curving around them. The arrangement is not symmetrical, not conventional, and not accidental — the GameCube\'s design philosophy held that A was the primary action in essentially every game, so A was made physically dominant and the rest arranged to fall around it. Your thumb rests on A by default; everything else is a deliberate reach.\n\nThe shoulder buttons are the other significant idea. Rather than choosing between analogue and digital, Nintendo built hybrid triggers: each L and R behaves as an analogue input across its travel and then, when fully depressed, clicks to register a separate digital signal. One physical button therefore delivers two distinct kinds of input — a graduated value for aiming or braking, and a discrete on/off at the bottom of the pull — without adding a second control. Combined with an unusually good octagonal-gated main stick, the result is a pad that the competitive Super Smash Bros. Melee community has refused to give up on for more than two decades.',
+    keyFacts: [
+      'Model DOL-003; launched in Japan on 14 September 2001 and North America on 18 November',
+      'The face layout is built around a single dominant green A button, with B, X and Y arranged around it',
+      'L and R are hybrid triggers: analogue through their travel, then a digital "click" when fully depressed',
+      'The octagonal stick gate remains prized by the competitive Super Smash Bros. Melee community',
+      'Nintendo has continued to manufacture and re-release it for Smash Bros. long after the GameCube itself died',
+    ],
+    notableFor: 'The only controller from a dead console still in mainstream competitive use',
+    sections: [
+      {
+        title: 'The Argument for an Asymmetric Face',
+        html: '<p>Every other major controller of the era gave the player four equal face buttons in a diamond, implicitly asserting that all four actions are equally important. Nintendo looked at what players actually do — press A, constantly, in nearly every game — and built the hardware around that observation instead of around symmetry. The large green A is a claim about frequency: this is the button you will press ten thousand times, so it should be the one your thumb finds without looking.</p><p>The cost is that the GameCube pad is bad at anything requiring four equally-weighted inputs, which is why it was a poor fit for fighting games and for multi-platform titles designed around a diamond layout. Nintendo accepted that trade because Nintendo was not, in 2001, building a controller for multi-platform titles. It was building one for its own games, in which A does nearly everything.</p>',
+      },
+      {
+        title: 'Why It Refuses to Die',
+        html: '<p>The GameCube controller is the only pad in history that has substantially outlived its console as a competitive standard. Super Smash Bros. Melee\'s enduring tournament scene is built on it, and the reasons are mechanical rather than sentimental: the octagonal gate around the main stick gives reproducible angles for the precise directional inputs Melee\'s movement techniques demand, and the analogue triggers permit the partial presses the game reads as distinct actions.</p><p>Nintendo, to its considerable credit, simply accepted this. It has repeatedly re-manufactured the controller and shipped USB adapters for it across two subsequent console generations, so that players of a 2001 game on a 2001 pad could keep competing on hardware released two decades later. Very few companies would keep a dead console\'s peripheral in production because a tournament scene asked them to.</p>',
+      },
+    ],
+  },
+  {
+    id: 'atari-paddle-controller',
+    title: 'The Atari Paddle Controller',
+    platform: 'Atari 2600',
+    manufacturer: 'Atari',
+    year: 1977,
+    era: '1970s',
+    description: 'A knob on a potentiometer, sold in pairs, with about 330 degrees of travel — the analogue input that made Pong, Breakout and Kaboom! possible before the joystick took over.',
+    longDescription: 'The paddle controller shipped alongside the Atari 2600 on 11 September 1977 and was, mechanically, the simplest input device the console supported: an analogue dial mounted on a potentiometer, with a single digital trigger button on the side. Turning the dial varies a resistance, the console reads the resulting value, and an on-screen object maps directly to the knob\'s position. The dial does not rotate freely — it has roughly 330 degrees of travel and stops hard at either end, which matters, because it means the paddle is an absolute positional input rather than a relative one. Where your hand is <em>is</em> where the object is.\n\nPaddles were sold and wired in pairs, two units sharing a single joystick port, so a 2600 with both ports occupied supported four players. They were designed with Pong in mind and were the natural controller for anything requiring a bat, a bar, or a horizontally-tracked target: Pong itself, Breakout, Super Breakout, Night Driver, Warlords, Video Olympics, Demons to Diamonds. Over thirty games used them across the system\'s life. The one most associated with the hardware is Kaboom!, whose entire design — catching falling bombs with a bucket that must move faster than any digital d-pad could manage — is only possible because the paddle is analogue.',
+    keyFacts: [
+      'Released 11 September 1977 alongside the Atari 2600 itself',
+      'An analogue potentiometer dial with roughly 330 degrees of travel and a hard stop at each end',
+      'Sold in wired pairs sharing one console port, so two ports allowed four players',
+      'Used by over thirty 2600 games, including Pong, Breakout, Warlords and Night Driver',
+      'Kaboom! is the definitive paddle game — its speed is unachievable with a digital controller',
+    ],
+    notableFor: 'The analogue input that games would abandon for a decade and then have to reinvent',
+    sections: [
+      {
+        title: 'Absolute Position, and Why It Felt So Good',
+        html: '<p>The paddle\'s defining property is that it is an absolute rather than a relative control. A joystick or a d-pad tells the game "move left, now" — the on-screen object has a velocity, and the player steers it. A paddle tells the game "be <em>here</em>" — there is a fixed mapping between the angle of the knob and the position of the bat, and the object is wherever your hand has put it.</p><p>This is why paddle games feel so immediate and why nothing quite replicates them. In Kaboom!, the bucket does not accelerate toward where you want it; it simply is where you want it, as fast as your wrist can rotate. The skill ceiling is the speed and precision of your hand, not the responsiveness of an abstraction layer. Once the industry standardised on the digital joystick — cheaper, more durable, better suited to the scrolling games that came to dominate — that directness was lost, and analogue positional control did not return to consoles in force until the analogue stick arrived in the mid-1990s.</p>',
+      },
+      {
+        title: 'The Controller That Defined Its Games',
+        html: '<p>It is unusual for an input device to determine a genre, but the paddle did. Breakout, Warlords, Night Driver and Kaboom! are not games that happen to support paddles; they are games that could not exist without one, and they died out as a category more or less exactly when the paddle did. The bat-and-ball design space that dominated the first half-decade of home video games was, in a real sense, a design space made of potentiometers.</p><p>What replaced it — the joystick, and with it the platformer, the shooter and the scrolling action game — was not better so much as differently shaped. The 2600\'s paddle remains one of the clearest illustrations in the medium that the controller is not a neutral pipe through which intentions pass. It is part of the design, and changing it changes what games are possible.</p>',
+      },
+    ],
+  },
 ];

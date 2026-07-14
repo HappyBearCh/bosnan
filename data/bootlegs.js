@@ -433,5 +433,95 @@
         html: '<p>Beyond the language, the cartridges suffered a crippling technical flaw: most cannot load a saved game at all. This is not incompetence in the ordinary sense but the residue of anti-piracy protection built into the original Telefang, which the hackers never fully disabled — the game\'s own defences quietly punishing the pirates. Combined with an assortment of genuine glitches absent from legitimate releases, this made the games frequently unplayable. Yet the deception worked for years, with the cartridges passed off as rare Pokémon titles on auction sites and gifted to unsuspecting children, cementing Diamond and Jade as the most notorious bootlegs in gaming.</p>',
       },
     ]
+  },
+  {
+    id: 'hong-kong-97',
+    title: 'Hong Kong 97',
+    baseGame: 'Original (unlicensed)',
+    platform: 'Super Famicom',
+    year: 1995,
+    region: 'Japan',
+    type: 'Unlicensed Original',
+    era: '1990s',
+    description: 'A game journalist made a Super Famicom shoot-\'em-up in a week, put Jackie Chan\'s face on it from a film poster, scored it with a stolen LaserDisc track, and sold about thirty copies.',
+    longDescription: 'Hong Kong 97 was written by the Japanese games journalist Kowloon Kurosawa and released in 1995 for the Super Famicom, unlicensed, on floppy disk. Kurosawa has said it was intended as satire of the games industry, which is either a defence or an aggravating factor depending on the reader. He made it in seven days with a friend, and since he could not really program, an Enix employee did the actual coding in two days.\n\nEverything in it is stolen or arbitrary. The premise concerns the 1997 handover of Hong Kong from the United Kingdom to China. The player character is a sprite of Jackie Chan, lifted from a poster for the 1984 martial arts film Wheels on Meals. The music is a single looping audio clip of "I Love Beijing Tiananmen", taken from a second-hand LaserDisc Kurosawa bought on Shanghai Street. Because game backup devices were illegal in Japan at the time, he could not advertise it openly: he wrote articles about it under pseudonyms for underground gaming magazines and ran a mail-order service, selling it for ¥2,000–¥2,500. It sold roughly thirty copies. He had printed several hundred inserts, which he later threw away.',
+    keyFacts: [
+      'Written in seven days by games journalist Kowloon Kurosawa, with an Enix employee coding it in two',
+      'The player sprite is Jackie Chan, lifted from a poster for the 1984 film Wheels on Meals',
+      'The music is a looped clip of "I Love Beijing Tiananmen" from a second-hand LaserDisc',
+      'Advertised via pseudonymous articles in underground magazines because backup devices were illegal in Japan',
+      'Sold approximately thirty copies; Kurosawa binned the several hundred surplus inserts he had printed',
+    ],
+    notableFor: 'Routinely named one of the worst video games ever made, and beloved for it',
+    sections: [
+      {
+        title: 'Satire, or the Excuse of Satire',
+        html: '<p>Kurosawa\'s claim that the game was a deliberate satire of the industry is doing a great deal of work, and it is worth taking seriously without taking it entirely at face value. The game is genuinely, structurally hostile: the difficulty is nonsensical, the death animation is a photograph of a mushroom cloud, the single music track loops with a relentlessness that becomes a physical experience, and the whole thing is assembled from copyright infringements. That is either a very pointed comment on what commercial games of the era were made of, or it is what happens when a person with no programming ability makes a game in a week.</p><p>The honest answer is probably that both are true. Hong Kong 97 works as satire precisely because it was made with total indifference to whether it worked at all, and the indifference is the argument. It is the rare bad game that could not have been improved without being destroyed.</p>',
+      },
+      {
+        title: 'Thirty Copies to a Global Cult',
+        html: '<p>Almost nobody played Hong Kong 97 in 1995. Its entire cultural existence is a product of emulation: the ROM circulated, and the game found audiences in Japan, Thailand and Taiwan, and then in the West after it became the subject of an Angry Video Game Nerd episode. It is now vastly more famous than any of the legitimate Super Famicom releases it was made alongside.</p><p>Kurosawa eventually made his peace with it, putting the game up as a free download from his personal website in 2023 — an unusually graceful ending for a work whose original commercial performance was thirty sales and a bin full of unused inserts.</p>',
+      },
+    ]
+  },
+  {
+    id: 'pokemon-vietnamese-crystal',
+    title: 'Pokémon Vietnamese Crystal',
+    baseGame: 'Pokémon Crystal',
+    platform: 'Game Boy Color',
+    year: 2001,
+    region: 'Asia (grey market)',
+    type: 'Bootleg Translation',
+    era: '2000s',
+    description: 'A pirated Pokémon Crystal run through Japanese to Chinese to English by two different people, producing a script so broken it became one of gaming\'s most quoted texts.',
+    longDescription: 'Pokémon Vietnamese Crystal is a bootleg cartridge of Pokémon Crystal whose English script was produced by a chain of translations rather than a translation. The original Japanese was rendered into Chinese by one of the bootleggers, almost certainly a native Chinese speaker; that Chinese text was then rendered into English by a different member of the team, with no reference back to the original. The compounding of two lossy passes destroyed the script comprehensively.\n\nThe result is famous. "Pocket Monsters" survived the first hop into Chinese and emerged from the second as "elf", so the word Pokémon simply does not appear anywhere in the game — the player is instead invited into "elf\'s world", told to "go to the elf\'s world", and greeted by a professor who introduces himself with the line "EVERYONE CALL ME ELF MONSTER". Nearly every line of dialogue in the game is similarly disassembled, rendering a sixty-hour RPG close to incomprehensible while remaining fully playable. The bootleg\'s name is a slight misnomer: it acquired the "Vietnamese" label because the specific copy that made it famous was bought in Vietnam and donated to an ExtraLives charity marathon run by Monotone Tim. A Let\'s Play by DeliciousCinnamon then turned it into a permanent internet fixture.',
+    keyFacts: [
+      'The script passed from Japanese to Chinese to English via two different translators, compounding the damage',
+      '"Pokémon" became "elf" — Professor Oak introduces himself with "EVERYONE CALL ME ELF MONSTER"',
+      'Despite the mangled text the game remains fully playable from start to finish',
+      'Named "Vietnamese" only because the famous copy was purchased in Vietnam for a charity marathon',
+      'Popularised by a Let\'s Play from DeliciousCinnamon, which turned it into an enduring meme',
+    ],
+    notableFor: 'The most quoted bad translation in video game history',
+    sections: [
+      {
+        title: 'How a Script Dies',
+        html: '<p>The specific failure here is instructive, because it is not simply carelessness. A single bad translation produces awkward English. Two chained bad translations produce something qualitatively different: errors introduced in the first pass are treated as source material by the second, which then compounds them into constructions that bear no recoverable relationship to the original. "Pocket Monsters" → a Chinese rendering → "elf" is a chain in which every individual step is defensible and the endpoint is nonsense.</p><p>Because the bootleggers were working without any access to the original Japanese during the second pass, there was no mechanism anywhere in the process for catching the drift. The result is a text that reads like a dream transcript — grammatically shaped, tonally confident, and semantically unmoored — which is precisely why it is funny rather than merely bad.</p>',
+      },
+      {
+        title: 'Preservation by Accident',
+        html: '<p>Vietnamese Crystal occupies an odd place in the historical record. It is an illegal product, made for profit, of no artistic intent whatsoever, and it is now better documented than a great many legitimate commercial games of its era — with wikis, transcripts, video archives and a stable position in internet folklore.</p><p>What it preserves is something no official release does: the texture of the enormous grey-market Pokémon economy of the early 2000s, in which cartridges of dubious provenance circulated across Asia and beyond, and children played versions of games that Nintendo neither made nor knew about. The broken script is the joke. The cartridge itself is the historical document.</p>',
+      },
+    ]
+  },
+  {
+    id: 'squirrel-king-super-mario-world-genesis',
+    title: 'Super Mario World (Genesis)',
+    baseGame: 'Squirrel King (itself a Chip \'n Dale clone)',
+    platform: 'Sega Genesis / Mega Drive',
+    year: 1994,
+    region: 'China / Taiwan',
+    type: 'Bootleg Hack',
+    era: '1990s',
+    description: 'Mario on a Sega console — achieved by hacking a bootleg Chip \'n Dale game and dropping in stolen Super Mario All-Stars graphics, with the can-can playing on the menu.',
+    longDescription: 'This is a bootleg of a bootleg. The base is Squirrel King, an unlicensed Genesis platformer loosely modelled on Chip \'n Dale: Rescue Rangers, probably connected to the Taiwanese developer Gamtec. Unknown hands then hacked Squirrel King, replaced Chip and Dale with Mario and Luigi, and released it as 超級瑪莉兄弟 — Super Mario Bros. — putting Nintendo\'s mascot on Sega hardware, which is roughly the most transgressive thing a 1994 cartridge could do.\n\nThe construction is a study in mixed provenance. The level graphics were lifted from the Super Mario All-Stars rendition of Super Mario Bros. on the SNES. The Mario, Luigi and enemy sprites, by contrast, are entirely original work by the bootleggers, and are not good. The first two acts were replaced with levels drawn from Super Mario Bros. and The Lost Levels, each capped with Bowser as a boss. Two new music tracks were added: the Super Mario Bros. overworld theme, and — for the main menu, for no reason anyone has ever established — the "Infernal Galop" from Offenbach\'s Orpheus in the Underworld, better known as the can-can.',
+    keyFacts: [
+      'A hack of Squirrel King, which was itself an unlicensed Genesis clone of Chip \'n Dale: Rescue Rangers',
+      'Level graphics were stolen from the SNES Super Mario All-Stars version of Super Mario Bros.',
+      'The Mario, Luigi and enemy sprites are original work by the bootleggers rather than lifted art',
+      'The first two acts are rebuilt from Super Mario Bros. and The Lost Levels, each ending with Bowser',
+      'The main menu plays Offenbach\'s can-can — the "Infernal Galop" from Orpheus in the Underworld',
+    ],
+    notableFor: 'Putting Mario on a Sega Genesis, via a chain of theft two links long',
+    sections: [
+      {
+        title: 'The Economics of Stealing From Thieves',
+        html: '<p>The reason this cartridge exists in this particular shape is purely economic. Building a Genesis platformer from scratch is expensive; hacking one that already exists is nearly free. Squirrel King was available, already unlicensed, already running, and already a platformer with a two-character premise — so replacing its two rodents with two plumbers was the shortest possible path to the one thing that would actually sell a cartridge in a Chinese street market in 1994, which was Mario\'s face on the box.</p><p>The graphical strategy follows the same logic. Backgrounds and tiles were lifted wholesale from Super Mario All-Stars because copying them was cheap and they looked authentic. The character sprites had to be drawn from scratch, because Mario\'s SNES sprites would not fit the Genesis palette or the borrowed engine\'s animation frames — and drawing them was the one place the bootleggers had to actually produce something, which is exactly where the cartridge visibly falls apart.</p>',
+      },
+      {
+        title: 'A Document of the Grey Market',
+        html: '<p>Bootlegs like this are the reason large parts of the world\'s childhood gaming memories do not match any official release history. In markets where neither Nintendo nor Sega maintained a real distribution presence, the console you owned and the games you played were determined by what the local market could source and modify — and a Genesis with a Mario cartridge in it was not a contradiction, it was Tuesday.</p><p>The bootleg is also a small monument to Nintendo\'s brand power. Nobody hacked Squirrel King to insert a different squirrel. The entire value of the exercise came from the two characters the pirates could not legally have, and were therefore prepared to build a whole cartridge around stealing.</p>',
+      },
+    ]
   }
 ];
