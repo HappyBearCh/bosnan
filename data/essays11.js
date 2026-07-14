@@ -293,4 +293,82 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'copy-protection-era',
+    title: 'Code Wheels and Prisms',
+    subtitle: 'How the games industry spent a decade defending itself with cardboard, and what it lost when it stopped',
+    category: 'Technology',
+    summary: 'Before DRM servers and online activation, publishers fought piracy with physical objects: cardboard dials, plastic prisms, booklets of lies, and instructions to look up the fourth word on page eleven. These schemes were trivially defeated and frequently punished the wrong people — and yet they produced some of the most beloved artefacts the medium has ever put in a box.',
+    readTime: '10 min read',
+    sections: [
+      {
+        title: 'The Problem With a Floppy Disk',
+        html: '<p>The economics of software piracy in the 1980s were brutally simple. A game was a pattern of bits on a magnetic medium, and the machine that played it was also a machine that could copy it. A child with two disk drives, or one drive and enough patience, could reproduce a £9.99 cassette in a few minutes at a cost of essentially nothing, and the copy was perfect. There was no meaningful technical barrier at the level of the medium itself.</p><p>So publishers moved the barrier off the medium. The insight that defined a decade of anti-piracy design was that while a disk could be copied trivially, the <em>box</em> could not. A cardboard wheel with interlocking layers, a printed booklet, a moulded plastic lens — these were manufactured objects, and reproducing them required a print shop rather than a spare floppy. If the game refused to run without information that existed only in the packaging, then a copied disk was worthless on its own.</p><p>This was, for a while, genuinely effective. It also meant that the copy protection lived in the physical world, in the player\'s hands, and that fact changed what it could be.</p>',
+      },
+      {
+        title: 'The Wheel, the Lens and the Black Book',
+        html: '<p>The code wheel is the emblematic form. Two or more cardboard discs, riveted at the centre, printed with symbols and windows; the game asks a question that can only be answered by rotating them into a particular alignment and reading what appears. The Secret of Monkey Island shipped with the finest example ever made — Dial-A-Pirate, a wheel of pirate faces divided into segments, which the player assembled to match a face shown on screen and then read off a date. It is copy protection that is also a toy, and it is also, quietly, a piece of world-building.</p><p>Its sequel went further with the Mix\'n\'Mojo voodoo ingredient dial, and the form spread across the industry. Manual lookup was the duller cousin: type the fourth word on page eleven. Leisure Suit Larry II showed the player a photograph of a woman and required them to find her in the printed "Black Book" and enter her telephone number — a scheme that worked precisely because the book was too specific and too laborious to photocopy casually.</p><p>And then there was Lenslok, which deserves its infamy. Games including the original Elite shipped with a folding plastic lens containing angled prisms, unique per title. The screen displayed a scrambled code; viewed through the correct Lenslok, it resolved into readable letters. In principle, elegant. In practice, the prism had to be calibrated against the physical size of the television, so owners of unusually large or small sets simply could not read the code — and there were documented cases of the wrong Lenslok being packed with the wrong game. Honest customers were locked out of software they had paid for by an object that did not work.</p>',
+      },
+      {
+        title: 'Protection That Lies to You',
+        html: '<p>The most interesting schemes did not merely withhold access; they retaliated. Wasteland\'s paragraph book — a printed collection of numbered passages that the game instructs you to read at the appropriate moment — contained an entire fabricated storyline about a mission to Mars, planted for no reason other than to mislead anyone reading the booklet out of sequence, along with bogus passwords that would punish a cheat by changing a character\'s sex or detonating a bomb in their party.</p><p>This is a philosophical shift. A code wheel says: prove you own this. A poisoned paragraph book says: I know what you are doing, and I have prepared something for you. It treats the pirate not as a lost sale but as an adversary in an ongoing game, and it is impossible to read about without concluding that the developers were enjoying themselves enormously.</p><p>That instinct — that anti-piracy could be an act of authorship rather than an act of accounting — persisted well beyond the cardboard era, resurfacing in games that let a pirated copy run and then quietly made it unwinnable. But it was born here, in a booklet full of deliberate fiction.</p>',
+      },
+      {
+        title: 'What the Box Was For',
+        html: '<p>Every one of these schemes failed. Code wheels were photocopied and, once cracked, the check was patched out of the executable entirely; a single person with a disassembler could liberate a game for everyone, permanently. The economics were hopeless from the start, and by the mid-1990s the industry had abandoned the physical approach in favour of disc checks, serial keys, and eventually online activation.</p><p>What is worth noticing is what disappeared with it. The code wheel was a piece of copy protection, but it was also a beautiful printed object that arrived in the box, that a player handled every time they sat down to play, and that made the physical package feel like part of the game rather than a container for it. Dial-A-Pirate is remembered fondly by people who have never once thought about software licensing, because it was <em>fun</em> — and it was fun by necessity, since a publisher forcing you to interact with an object on every launch had a strong incentive to make that object delightful.</p><p>Modern DRM has no such incentive. It is invisible when it works and infuriating when it does not, and nobody has ever kept a fond memory of an activation server. The industry solved the piracy problem it had in 1990 and, in doing so, threw away the one form of copy protection anyone ever loved.</p>',
+      },
+    ],
+  },
+  {
+    id: 'kill-screen-integer-overflow',
+    title: 'The Kill Screen',
+    subtitle: 'What happens when a game reaches a number its own hardware cannot count to',
+    category: 'Technology',
+    summary: 'Pac-Man has no ending. Neither does Donkey Kong. Both simply arrive, after hours of perfect play, at a level where an eight-bit counter runs out of room and the game destroys itself. The kill screen is the point where the fiction of an infinite arcade game collides with the arithmetic of the machine running it.',
+    readTime: '9 min read',
+    sections: [
+      {
+        title: 'Games That Were Never Meant to End',
+        html: '<p>An arcade game of the early 1980s does not have a final level, because a final level would be a design error. The machine exists to take coins, and a player who finishes the game stops feeding it. So the games loop: the levels repeat, the speed increases, the enemies grow more aggressive, and the sequence continues indefinitely — or at least, that was the intention.</p><p>The intention was not tested. Nobody at Namco in 1980 was seriously contemplating what would happen to Pac-Man on level 256, because reaching level 256 requires playing a perfect or near-perfect game for several hours without losing a life to any significant degree, and the number of humans capable of doing that was, for years, zero. The design assumed infinity. The hardware did not provide it.</p>',
+      },
+      {
+        title: 'Pac-Man, Level 256',
+        html: '<p>Pac-Man stores its level counter in a single byte — an eight-bit integer, capable of holding values from 0 to 255. On level 256, the game attempts to increment a value already at its maximum, and the byte overflows and wraps to zero.</p><p>What follows is not a crash but something far stranger. The routine that draws the fruit display at the bottom of the screen uses that counter to decide how many fruit to render. With the counter corrupted, it reads far past the end of its intended data and begins interpreting unrelated memory as drawing instructions, vomiting garbage across the right-hand half of the screen. The maze is destroyed. The dots on that side are gone.</p><p>And this is the cruel part: the level is not merely ugly, it is arithmetically impossible. The corrupted right half contains just nine edible dots. The intact left half holds 122. That gives a maximum of 131 dots available to eat — and the game requires 244 to clear the level. There is no route, no trick and no degree of skill that can finish it. Pac-Man does not end; it becomes unwinnable, which is a different and more unsettling thing.</p>',
+      },
+      {
+        title: 'Donkey Kong, Level 22',
+        html: '<p>Donkey Kong reaches the same wall by a different road. The game calculates the bonus timer for a stage by multiplying the level number by ten and storing the result. At level 22, that calculation wants to produce 260 — and 260 does not fit in an unsigned eight-bit variable, which tops out at 255. The value wraps around, and the game awards the player a timer of four seconds.</p><p>Four seconds is not enough to do anything. Mario dies, repeatedly, as the timer expires almost immediately on each attempt, and the run ends. It is a purer failure than Pac-Man\'s — no visual corruption, no garbled tiles, just a number that quietly became wrong and a game that is now over whether or not it says so.</p><p>The level 22 kill screen became the defining boundary of competitive Donkey Kong. Because no one can pass it, the only remaining contest is who can accumulate the highest score before arriving there, which turns a game with no ending into a game with a fixed and universally shared finish line — one imposed not by a designer but by the width of a variable.</p>',
+      },
+      {
+        title: 'The Machine Showing Through',
+        html: '<p>What makes kill screens compelling, decades later, is that they are the one moment when the machine stops pretending. For hours, Pac-Man is a yellow creature in a maze; at level 256, it is unmistakably a program manipulating bytes, and the bytes have run out. The fiction does not degrade gracefully — it shatters, and behind it is raw memory being drawn to the screen as though it were art.</p><p>They also constitute a strange kind of achievement. Reaching a kill screen is not something the designers rewarded, anticipated, or in any sense endorsed; it is a place the game was never supposed to be able to go, discovered by players operating far beyond the skill ceiling anyone had imagined. The kill screen is the point at which a player has beaten not just the game but the assumptions of the people who wrote it — and their reward is to watch it fall apart.</p><p>Later games patched such errors, used wider integers, or simply capped the level counter. The kill screen belongs to a specific era: one in which memory was scarce enough that a single byte was worth economising on, and in which nobody seriously believed a human being would ever play well enough to find out.</p>',
+      },
+    ],
+  },
+  {
+    id: 'pal-problem',
+    title: 'The PAL Problem',
+    subtitle: 'How an accident of electrical engineering made a generation of European games slower, quieter and smaller',
+    category: 'Hardware',
+    summary: 'European consoles ran at 50Hz because European mains electricity runs at 50Hz. American and Japanese consoles ran at 60. For roughly two decades, that difference meant European players received the same games running about 17% slower, with the music pitched down and black bars across the screen — and most of them never knew.',
+    readTime: '9 min read',
+    sections: [
+      {
+        title: 'A Decision Made by the Power Grid',
+        html: '<p>The root cause has nothing to do with video games. North America distributes mains electricity at 60Hz; most of Europe uses 50Hz. Early television standards were built to synchronise their vertical refresh to the local supply — a sensible engineering decision in an era when doing otherwise invited visible interference — and so NTSC televisions refresh at roughly 60 fields per second while PAL televisions refresh at 50.</p><p>Early consoles synced their output to the television. The consequence, once games were being written in Japan and America and shipped to Europe, was that the same code found itself running on a machine that ticked five times for every six ticks it expected. Everything that was tied to the refresh rate — which, in an era when games ran their logic once per frame, meant essentially everything — ran slow.</p>',
+      },
+      {
+        title: 'Seventeen Per Cent',
+        html: '<p>Fifty is about 83% of sixty, which means a game ported carelessly from NTSC to PAL runs roughly 17% slower than it was designed to. That is not a subtlety. It is the difference between a game that feels tight and a game that feels like it is being played underwater, and it applies to every aspect of the experience at once: movement speed, animation, enemy behaviour, the scroll of the background, and the music, which plays back at a lower pitch and a slower tempo because it too is driven by the frame clock.</p><p>The correct fix was straightforward in principle and laborious in practice: reprogram the game logic to compensate, so that the PAL version performs the same amount of simulation per second despite rendering fewer frames. Some developers did this. Many did not, because it meant retuning a finished, tested, shipped game for a secondary market — and the European market, through much of the 1980s and 1990s, was exactly that.</p><p>So Europe played slower games. The Mega Drive Sonic the Hedgehog is the canonical example, and the irony is exquisite: a game whose entire identity is speed, delivered to an entire continent at 83% of the speed its designers intended.</p>',
+      },
+      {
+        title: 'The Black Bars',
+        html: '<p>The second insult was spatial. A PAL television draws more scanlines than an NTSC one — the lower refresh rate buys more vertical resolution. A game written for NTSC produces an image with fewer lines than the PAL display expects, and unless somebody reworks the graphics to fill the extra space, the result is a picture that does not reach the top or bottom of the screen.</p><p>Japanese and American developers rarely did that rework. So European players received games rendered in a letterboxed strip with thick black borders above and below — a smaller image, on the same television, for the same money. Combined with the slowdown, the PAL version of a game was frequently inferior in every measurable respect to the NTSC one, and it typically arrived months later.</p>',
+      },
+      {
+        title: 'Nobody Knew',
+        html: '<p>The strangest part of the PAL problem is how invisible it was to the people it affected. A European child playing Sonic in 1991 had no NTSC console to compare against, no internet on which to learn that their version ran slower, and no reason whatsoever to suspect that the game in front of them was a degraded copy. It was simply what Sonic was. An entire generation grew up with a version of the medium that was, unbeknownst to them, systematically slower and smaller than the one their American counterparts were playing.</p><p>The awareness arrived retroactively, largely through the internet and the emulation scene, and it produced a genuinely peculiar retrospective grievance — thousands of adults discovering, decades later, that the games of their childhood had been quietly wrong. Modern hardware runs at 60Hz everywhere and the problem is gone, but the PAL era remains one of the clearest illustrations in the medium of how deeply the physical infrastructure of a country can reach into the experience of playing a game — all the way down to the frequency of the electricity coming out of the wall.</p>',
+      },
+    ],
+  },
 ];

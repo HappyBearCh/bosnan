@@ -467,5 +467,83 @@ module.exports = [
 <p>The demo scene tradition that emerged from home computer programming in the 1980s — competitions to produce the most impressive graphical effects on specific constrained hardware — is the direct descendant of the same impulse. The best 2600 programmers, and the best demo coders after them, were doing something that was simultaneously engineering and art: finding the maximum possible expression within the minimum possible means. David Crane's Pitfall! is as good an example as any of what that looks like when it succeeds.</p>`
       }
     ]
+  },
+  {
+    id: 'attract-mode',
+    title: 'Attract Mode',
+    subtitle: 'The arcade cabinet playing itself to an empty room, hoping someone walks past',
+    category: 'design',
+    summary: 'An arcade machine with nobody at it is not idle. It is performing — cycling its title screen, demonstrating its own gameplay, displaying the high scores of strangers, and blinking INSERT COIN at anyone who glances over. Attract mode is advertising, tutorial and social pressure compressed into a loop that runs all day.',
+    readTime: '8 min read',
+    sections: [
+      {
+        title: 'A Machine That Must Sell Itself',
+        html: '<p>Every arcade cabinet exists in a hostile environment. It stands in a dark room full of competing machines, each screaming for the same coin, and it has no salesman. It cannot describe itself. The only thing it controls is the light and sound it emits, and it has to use them to convert a passer-by into a player before that person reaches the next cabinet along.</p><p>Attract mode — also called advertise mode or demo mode — is the answer. When nobody is playing, the machine loops through a sequence intended to entice: the title screen, the story if it has one, a computer-controlled demonstration of actual gameplay, the high score table, and, blinking insistently over all of it, the words INSERT COIN.</p><p>It is easy to overlook how sophisticated this is as a piece of design. In under a minute, with no interaction and no explanation, the cabinet must establish what kind of game it is, prove that it is worth playing, teach enough that a novice will not feel lost, and make the viewer want to beat someone.</p>',
+      },
+      {
+        title: 'The Demo That Teaches',
+        html: '<p>The gameplay demonstration inside an attract loop is doing double duty, and the second job is the more interesting one. Ostensibly it exists to show off the game — here is what it looks like, here is the action. But it is also, in practice, the tutorial, and for most players it is the only tutorial they will ever get.</p><p>A player standing in front of a cabinet watching the attract mode is learning the rules for free. They see what the enemies do. They see what kills you. They see the scoring, the power-ups, the shape of a level. By the time they put a coin in, they are not a complete novice — they have already watched somebody play, and the somebody was the machine.</p><p>This matters enormously for a medium with no manual and a hard commercial deadline. An arcade game has perhaps ten seconds to make a paying customer feel competent before frustration turns them away, and the attract mode has already spent thirty seconds preparing them. It is the earliest and one of the most elegant solutions the medium found to the problem of teaching without instruction.</p>',
+      },
+      {
+        title: 'The High Score Table as a Weapon',
+        html: '<p>The most psychologically potent component of an attract loop is the list of initials. High score tables are not there to reward past players — they are there to provoke present ones. Three letters and a number, cycling on a screen in a public room, are a claim: somebody stood here and was better than you are.</p><p>The genius of the mechanism is that it is entirely social and costs nothing to implement. The machine has no idea who AAA or ASS or the local kid with the initials of an expletive actually is; it simply displays the number they achieved, and lets the viewer supply the resentment. Sinistar took this further and made the cabinet actively hostile — its digitised voice taunting the room with "Beware, I live!" and "Run, coward!" while nobody was even playing — but the ordinary high score table achieves much the same thing with no audio at all.</p><p>Home consoles inherited attract modes for decades, running demo loops on shop-floor televisions to persuade shoppers to buy the game or the machine. But without the coin slot and without the local high score table, the form was always a shadow of its arcade original. The attract mode in a shop is an advertisement. The attract mode in an arcade is a challenge.</p>',
+      },
+      {
+        title: 'What Disappeared With It',
+        html: '<p>Attract mode faded from consoles as digital distribution replaced the shop floor, and it has no equivalent at all in the modern storefront, where a game is sold by a trailer, a screenshot gallery and a review score — all of them produced by marketing departments rather than by the game itself.</p><p>Something specific was lost in that transition. An attract loop was the game arguing for itself, in its own engine, with its own rules, in public, to an audience that had not paid and owed it nothing. It could not lie, because what it showed was what you got: the demo ran on the same hardware in the same room, and if the game looked bad it looked bad. A modern trailer is a piece of advertising about a game. An attract mode was the game, performing, to an empty arcade, on the chance that somebody might look up.</p>',
+      },
+    ]
+  },
+  {
+    id: 'isometric-projection',
+    title: 'The Illusion of Depth',
+    subtitle: 'How British bedroom coders faked three dimensions with a mathematical trick and a masking algorithm',
+    category: 'technology',
+    summary: 'Before polygons, before texture mapping, before any home machine could plausibly render a 3D scene, a handful of developers discovered that you could suggest a third dimension simply by drawing everything at an angle. Isometric projection gave 8-bit games depth they had no right to possess — and Ultimate Play the Game turned it into an engine.',
+    readTime: '9 min read',
+    sections: [
+      {
+        title: 'Cheating Perspective',
+        html: '<p>True 3D rendering requires perspective: objects further from the viewer must be drawn smaller, and the mathematics involved — division, per-pixel, in real time — was hopelessly beyond an 8-bit home computer. Isometric projection sidesteps the entire problem by simply refusing to do perspective at all.</p><p>In an isometric view, the three axes are drawn at fixed angles and objects do not shrink with distance. A cube far from the camera is exactly the same size as a cube nearby. This is, technically, wrong — it is not how human vision works — and it is precisely why it is cheap. There is no division, no vanishing point, no depth-dependent scaling. A sprite drawn once can be placed anywhere in the scene, and the geometry is just addition.</p><p>The result reads, to the eye, as three-dimensional space. It should not work as well as it does. Zaxxon in 1982 used it to make a flying game with genuine altitude; Q*bert used it the same year for a pyramid that clearly had a top and sides; Ant Attack followed in 1983 with an isometric city you could walk through. The technique was established well before its most famous exponent arrived.</p>',
+      },
+      {
+        title: 'Filmation',
+        html: '<p>The problem with isometric graphics is not drawing them. It is working out what is in front of what. If a character walks behind a pillar, the pillar must be drawn over the character; if the character walks in front of it, the reverse. Get this wrong and the illusion of depth collapses instantly into a flat mess of overlapping sprites — and on a ZX Spectrum, whose graphics hardware offered no help whatsoever, getting it right was a serious engineering problem.</p><p>Knight Lore, written in 1984 by Chris and Tim Stamper at Ultimate Play the Game, solved it. Its image-masking technique — christened Filmation — allowed sprites to pass in front of and behind one another correctly, without their contents bleeding into each other, establishing a genuine depth ordering across a scene full of independent objects. Suddenly an 8-bit machine had a coherent three-dimensional room, and a character who could walk around inside it.</p><p>Edge magazine would later describe the Filmation engine as "the single greatest advance in the history of video games" — an extravagant claim, and an understandable one from anyone who saw Knight Lore running on a machine they had assumed was incapable of it.</p>',
+      },
+      {
+        title: 'The Wave It Started',
+        html: '<p>The influence was immediate and enormous, particularly across the British software industry, which was in the mid-1980s an ecosystem of small teams capable of turning a new technique into a shipped product within months. Ultimate followed Knight Lore with Alien 8, and the wider industry copied the style wholesale: Fairlight, The Great Escape, Batman, M.O.V.I.E., Head Over Heels and Solstice all descend visibly from it.</p><p>What these games share is not merely a viewing angle but a genre sensibility. Isometric projection makes a room into a puzzle. Because you can see the whole space at once, including its height, level design becomes architectural — stack the boxes, reach the ledge, understand how the geometry connects. The Filmation games are exploration puzzles rather than action games, and they are that way because of what the rendering technique made legible.</p>',
+      },
+      {
+        title: 'The Angle That Never Left',
+        html: '<p>Isometric projection was supposed to be a stopgap — a way of faking depth until hardware could deliver the real thing. Hardware duly delivered, and the technique did not go away.</p><p>It survived because it turned out to be good for reasons that have nothing to do with technical limitation. An isometric view shows a player the whole battlefield without a camera to manage. It keeps every unit the same size and therefore equally legible. It renders spatial relationships unambiguously in a way a first-person view cannot. Strategy games, tactical RPGs, city builders and countless action RPGs adopted it and never let go — not because they could not afford perspective, but because they did not want it.</p><p>What began as an arithmetic dodge on machines that could not divide fast enough became a permanent visual language. Chris and Tim Stamper were solving a hardware problem in a bedroom in 1984. They ended up inventing a way of looking at games that outlived the constraint entirely.</p>',
+      },
+    ]
+  },
+  {
+    id: 'loading-screens',
+    title: 'The Loading Screen',
+    subtitle: 'Five minutes of screeching tape, a picture appearing line by line, and the particular agony of a failed load',
+    category: 'culture',
+    summary: 'Loading a game from cassette took minutes, made a noise like a fax machine being tortured, and could fail at the very end for no reason you could identify. Into that void, British developers put artwork — a single static image, drawn a line at a time, that became one of the defining aesthetic experiences of the 8-bit era.',
+    readTime: '8 min read',
+    sections: [
+      {
+        title: 'The Wait',
+        html: '<p>To load a game on a ZX Spectrum, you pressed play on a cassette recorder and waited. The machine read data as audio — an unbroken screech of modulated tone — and the screen border strobed in bands of colour indicating what the computer was currently receiving: red and cyan while waiting for a header, yellow and blue while taking in header or data. This continued, typically, for several minutes.</p><p>And it could fail. A slightly stretched tape, a misaligned head, a volume level marginally wrong, and the load would collapse — sometimes at the very end, after four minutes of screeching, returning you to a blank screen and an error message and the necessity of rewinding and starting again. There was no diagnosis and no remedy other than trying once more and hoping.</p><p>Larger games made it worse. Multiload titles were split across multiple tape sides or multiple tapes, prompting the player mid-game to stop, flip the cassette, and wait again — a loading screen appearing between levels not as a design choice but as a physical errand.</p>',
+      },
+      {
+        title: 'Something to Look At',
+        html: '<p>Into this dead time, developers put a picture. The loading screen was a full-screen image transmitted at the very start of the tape, which appeared — famously, unforgettably — line by line as the data arrived, and then sat there for the remaining minutes while the game itself loaded behind it.</p><p>It was not free. A Spectrum loading screen occupied around 6K, which on a 48K game meant roughly a 13% increase in loading time. Developers were deliberately making the wait longer in order to give the player something to look at during it, and it is difficult to think of a clearer statement of priorities: the experience of waiting was considered worth spending real resources on.</p><p>The line-by-line reveal became a ritual in its own right. Buying a new game and watching its loading screen resolve for the first time, stripe by stripe, was one of the genuine thrills of Spectrum ownership — a slow unveiling that no instant-loading medium can reproduce, because the pleasure was entirely a function of the delay.</p>',
+      },
+      {
+        title: 'The Gap Between the Picture and the Game',
+        html: '<p>There was a catch, and everybody who lived through it knows exactly what it was. The loading screen was often the best-looking thing about the game.</p><p>Cassette inlays carried lavish airbrushed artwork — Bob Wakelin\'s covers for Ocean were miniature film posters — and the loading screen frequently attempted to reproduce something of that promise in Spectrum graphics. Then the game finished loading, and what appeared was a handful of monochrome blocks with attribute clash. The distance between the fantasy on the cassette box, the intermediate promise of the loading screen, and the reality of the running game was, for a great many titles, considerable.</p><p>This was not really dishonesty; it was the condition of the medium. Everybody was performing an imaginative translation, and the artwork existed to fuel it. But it does mean that a substantial part of the aesthetic memory of 8-bit gaming is composed of images that were never actually playable.</p>',
+      },
+      {
+        title: 'Waiting, Abolished',
+        html: '<p>The loading screen as an art form died with the medium that necessitated it. Disks were faster; CDs were faster still; hard drives and solid-state storage have compressed the wait to the point where the modern loading screen is a spinner, a tip, or nothing at all. Nobody misses the four minutes of screeching, and nobody should.</p><p>But the cassette era produced something no efficient medium can: an enforced pause between the decision to play and the ability to play, which the game filled with an image, and which the player filled with anticipation. The load was the overture. It was the moment when the thing was arriving but had not yet arrived, when it could still be anything, and when a picture drawn one line at a time was the only evidence that something was coming.</p><p>The tape did eventually stop screeching. And then, if you were lucky and the volume was right, you played.</p>',
+      },
+    ]
   }
 ];

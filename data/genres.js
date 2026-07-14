@@ -556,5 +556,116 @@ module.exports = [
         html: '<p>For most of its life the roguelike was a curiosity: free, forbidding, drawn in ASCII, and played by a devoted few. Its ideas then escaped and colonised the entire medium. Procedural generation now appears everywhere from Diablo\'s randomised dungeons to the vast generated universes of modern exploration games, and permadeath — once a bizarre imposition — has become a celebrated feature, revived by an indie generation that recognised how much tension it produces.</p><p>The genre also demonstrates something unusual about software longevity. NetHack has been in continuous development since 1987, maintained by volunteers, and is still being patched and played; Rogue\'s descendants are older than most of the companies that dominate the industry. In an art form obsessed with the new, the roguelike is a reminder that a design can be so fundamentally sound that it never actually needs replacing — only deepening, one turn at a time, for forty years.</p>',
       },
     ],
+  },
+  {
+    id: 'first-person-shooter',
+    name: 'First-Person Shooter',
+    shortName: 'FPS',
+    era: '1990s',
+    subtitle: 'A gun, a corridor, and a camera behind your own eyes',
+    description: 'The first-person shooter put the player inside the world rather than above it, and in doing so became the defining genre of PC gaming. Its lineage runs from maze crawlers on mainframes through Wolfenstein 3D and Doom — which gave the form its name, its speed and its shareware distribution model — to Quake\'s true 3D engine and Half-Life\'s insistence that a shooter could tell a story without ever taking the camera away from you.',
+    genres: ['Corridor Shooter', 'Arena Shooter', 'Tactical Shooter', 'Immersive Sim'],
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Freedoom-0.13-uzdoom-4.14.3-screenshot-1.png/250px-Freedoom-0.13-uzdoom-4.14.3-screenshot-1.png',
+    imageCaption: 'Freedoom, a free-content game built on the Doom engine, running the genre\'s foundational sprite-and-corridor grammar',
+    imageAlt: 'Screenshot of Freedoom showing a first-person view down a corridor with a weapon held at the bottom of the screen',
+    imageLicense: 'CC BY-SA 4.0',
+    stats: [
+      { label: 'Foundational title', value: 'Wolfenstein 3D (id Software, 1992)' },
+      { label: 'Defining title', value: 'Doom (id Software, 1993)' },
+      { label: 'Core principles', value: 'First-person camera, spatial navigation, ranged combat, level as maze' },
+      { label: 'Key influence', value: 'Mainframe maze games and id Software\'s ray-casting renderer' },
+    ],
+    sections: [
+      {
+        title: 'The Camera Is the Genre',
+        html: '<p>Everything that distinguishes the first-person shooter follows from where the camera sits. Put it behind the player\'s eyes and you cannot see your own character, cannot see behind you, and cannot survey the level from above — which means that spatial awareness stops being a matter of reading a screen and becomes a matter of memory, sound, and turning around at the right moment.</p><p>That single decision generates the genre\'s entire vocabulary. Ambushes work because you cannot see behind you. Corridors are tense because they constrain what you can check. The minimap, the radar, the footstep audio cue and the hitscan weapon all exist to manage information that the camera has deliberately withheld. No other genre makes ignorance so central to its design.</p>',
+      },
+      {
+        title: 'Doom and the Shareware Bomb',
+        html: '<p>Wolfenstein 3D established the form in 1992, but Doom in 1993 is where the genre acquired its identity — and, crucially, its distribution. id Software gave the first episode away, free, and let it propagate across bulletin boards, university networks and floppy disks passed between friends, charging only for the remaining episodes. The game did not need a publisher, a retail chain or a marketing budget. It needed a modem.</p><p>The consequences ran far beyond sales. Doom shipped with its data separated from its engine, which meant players could build their own levels; it shipped with deathmatch, which meant they could shoot each other; and it was, for a period, installed on more PCs than Microsoft Windows. The genre and the modding scene and the culture of networked competitive play all arrived at once, in the same package.</p>',
+      },
+      {
+        title: 'From Corridors to Worlds',
+        html: '<p>Doom\'s engine was not truly three-dimensional — its levels could not have one room above another, and its enemies were flat sprites rotating to face you. Quake, in 1996, was: real polygonal geometry, true vertical freedom, and a renderer that let the player look up and down. The corridor became a space.</p><p>What followed was a split that still defines the genre. One branch pursued speed and precision, producing the arena shooter — Quake III, Unreal Tournament — in which the map is a machine and mastery is measured in movement. The other pursued immersion, producing Half-Life\'s scripted, seamless, never-interrupted storytelling and the immersive sims that descended from it. Both are recognisably the same genre, and they want almost nothing in common.</p>',
+      },
+      {
+        title: 'The Genre That Ate PC Gaming',
+        html: '<p>By the end of the 1990s, the first-person shooter was not a genre on the PC so much as the reason to own one. It drove the graphics card market, justified the 3D accelerator, popularised the mouse-and-keyboard control scheme that remains standard, and provided the technical engines — id Tech, Unreal, GoldSrc, Source — on which an enormous proportion of the rest of the industry was subsequently built.</p><p>Its influence on hardware is difficult to overstate. Consumers bought expensive graphics cards to run shooters; manufacturers built cards to run shooters faster; developers built shooters to exploit the new cards. That loop financed the 3D revolution, and every genre that benefited from cheap polygon rendering — which is to say, all of them — was riding on it.</p>',
+      },
+    ],
+  },
+  {
+    id: 'real-time-strategy',
+    name: 'Real-Time Strategy',
+    shortName: 'RTS',
+    era: '1990s',
+    subtitle: 'Chess, if the other player did not wait for you to finish thinking',
+    description: 'Real-time strategy took the war game off the turn-based grid and set it running against a clock. Gather resources, build a base, produce an army, and destroy the enemy — all while they are doing exactly the same thing, at the same moment, and every second you spend deciding is a second they spend acting. Dune II established the template, Command & Conquer and Warcraft made it a phenomenon, and StarCraft turned it into a professional sport.',
+    genres: ['Base-Building RTS', '4X Strategy', 'Real-Time Tactics', 'MOBA (descendant)'],
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/0_A.D._game_screenshot_Discovery.jpg/250px-0_A.D._game_screenshot_Discovery.jpg',
+    imageCaption: '0 A.D., a free and open-source historical RTS by Wildfire Games, showing the genre\'s characteristic overhead view and base-building',
+    imageAlt: 'Screenshot of the open-source real-time strategy game 0 A.D., showing an overhead view of an ancient settlement with units and buildings',
+    imageLicense: 'CC BY-SA 3.0',
+    stats: [
+      { label: 'Foundational title', value: 'Dune II (Westwood Studios, 1992)' },
+      { label: 'Defining title', value: 'StarCraft (Blizzard, 1998)' },
+      { label: 'Core principles', value: 'Resource gathering, base building, unit production, simultaneous play' },
+      { label: 'Key influence', value: 'Tabletop war games, and the pressure of a clock that never stops' },
+    ],
+    sections: [
+      {
+        title: 'Removing the Turn',
+        html: '<p>Strategy games had existed for as long as computers had, and they were turn-based because war games are turn-based: you consider, you commit, your opponent responds. Dune II\'s innovation in 1992 was to delete the turn — and in doing so it changed what a strategy game actually tests.</p><p>In a turn-based game, the scarce resource is judgement. Given unlimited time, a sufficiently thoughtful player will find the optimal move. In a real-time strategy game, the scarce resource is <em>attention</em>. Every decision costs time you do not have, and while you are deciding, your opponent\'s economy is growing. The genre therefore rewards a skill that had never previously mattered in strategy gaming: the ability to think correctly while being rushed.</p>',
+      },
+      {
+        title: 'The Loop',
+        html: '<p>The classic RTS structure is a self-reinforcing spiral, and it is beautifully simple. Workers gather resources. Resources buy buildings. Buildings produce units and unlock better units. Units defend your workers and kill the enemy\'s. Everything feeds everything else, and any interruption anywhere compounds.</p><p>What makes this a genuine strategic problem rather than an exercise in bookkeeping is that every resource spent on defence is a resource not spent on growth. Build too many soldiers and you fall behind economically; build too few and you die. The whole genre lives inside that tension, and the reason "rush" and "boom" and "turtle" became universal vocabulary is that they are the three coherent answers to a question the design refuses to settle.</p>',
+      },
+      {
+        title: 'StarCraft and the Professionalisation of a Game',
+        html: '<p>StarCraft did something no strategy game had done: it achieved a balance between three genuinely asymmetric factions — Terran, Protoss, Zerg — that were not merely reskins of each other but played by different rules entirely. That asymmetry is extraordinarily difficult to balance and it is the reason the game sustained competitive play for two decades.</p><p>In South Korea it became something else again: a televised professional sport with leagues, sponsors, salaried players and a broadcast infrastructure that predated the word "esports" being in common use. Games were watched by audiences in the hundreds of thousands. The skill ceiling proved effectively unreachable, measured in actions per minute that ordinary players could not physically produce.</p>',
+      },
+      {
+        title: 'Decline, and What Grew From It',
+        html: '<p>The RTS is no longer a mainstream commercial genre, and the reason is unsentimental: it is extraordinarily demanding. It asks for macro-management and micro-management simultaneously, punishes a moment\'s inattention across a forty-minute match, and offers a new player an experience consisting almost entirely of being defeated by systems they cannot yet see.</p><p>But its DNA did not vanish; it was repackaged. The MOBA — descended directly from a Warcraft III custom map — took the RTS\'s unit control, its item systems and its lane structure, threw away the base-building and the economy, and gave each player exactly one unit to worry about. It became the most-played competitive genre on earth. The RTS did not die so much as get distilled into something the rest of the world was willing to learn.</p>',
+      },
+    ],
+  },
+  {
+    id: 'mmorpg',
+    name: 'MMORPG',
+    shortName: 'MMO',
+    era: '1990s',
+    subtitle: 'A world that keeps running when you log out, full of people you did not choose',
+    description: 'The massively multiplayer online role-playing game took the persistent worlds of MUDs and gave them graphics, then handed them to tens of thousands of simultaneous strangers. Ultima Online proved the commercial case in 1997, EverQuest turned it into an obsession, and the genre spent the next decade discovering that the hardest problem in world design is not building the world — it is the people you let into it.',
+    genres: ['Persistent World MMO', 'Themepark MMO', 'Sandbox MMO', 'MUD (ancestor)'],
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Ryzom_screenshot.png/250px-Ryzom_screenshot.png',
+    imageCaption: 'Ryzom, a persistent-world MMORPG whose engine and much of its content were released under free licences',
+    imageAlt: 'Screenshot of the MMORPG Ryzom showing a player character in a large open outdoor environment',
+    imageLicense: 'CC BY-SA 2.0',
+    stats: [
+      { label: 'Foundational title', value: 'Ultima Online (Origin Systems, 1997)' },
+      { label: 'Defining title', value: 'EverQuest (989 Studios, 1999)' },
+      { label: 'Core principles', value: 'Persistence, simultaneous players, character progression, social interdependence' },
+      { label: 'Key influence', value: 'MUDs — text-based multi-user dungeons running on university networks' },
+    ],
+    sections: [
+      {
+        title: 'The World Does Not Pause',
+        html: '<p>Persistence is the whole idea. In a single-player RPG, the world exists only while you are looking at it; close the game and it politely freezes. In an MMORPG it does not. The dragon you failed to kill is still there. So is the player who killed it while you were asleep, wearing its head.</p><p>That one property changes every design decision downstream. Loot must be contested, because everyone wants it and it cannot simply be handed to each player individually. Progression must be long, because a world that everyone finishes is a world nobody stays in. And the game cannot be balanced solely around what is fun for one person, because it is not being played by one person — it is being played by thousands, simultaneously, all pursuing their own interests inside the same simulation.</p>',
+      },
+      {
+        title: 'What Ultima Online Learned the Hard Way',
+        html: '<p>Origin\'s ambitions for Ultima Online were extraordinary and largely defeated by its own players. The most famous casualty was the Virtual Ecology — a genuine simulated food chain in which plants grew, herbivores ate them, and carnivores ate the herbivores. Players killed everything on sight, faster than the system could regenerate any level of it, the herbivores were exterminated, the carnivores starved, and the entire model collapsed before launch.</p><p>The lesson generalises far beyond wildlife, and every subsequent MMO absorbed it. A persistent world containing thousands of rational actors will have any exploitable system exhausted immediately — not by griefers but by ordinary players behaving sensibly. Which is why wildlife in every MMO since simply respawns on a timer in a fixed location, in open defiance of the fiction. It is a deliberate, load-bearing lie, and Ultima Online is the reason everyone tells it.</p>',
+      },
+      {
+        title: 'The Time Sink as a Business Model',
+        html: '<p>The MMORPG is the genre in which the commercial model most nakedly shapes the design. A subscription is charged per month, which means the game\'s financial interest is not that you enjoy it but that you keep playing it — and those two goals overlap only partially.</p><p>Hence the grind: content calibrated to take a very long time, progression curves that lengthen as you climb them, and rewards gated behind repetition rather than skill. Hence, too, the social architecture, which is the most effective retention mechanism ever devised. A player will quit a game they have tired of. A player will not so easily quit a guild of forty people who are relying on them to show up on Thursday.</p>',
+      },
+      {
+        title: 'The Real Content Is the Other Players',
+        html: '<p>Every MMORPG eventually discovers the same thing: the systems are the pretext, and the people are the product. The economies that emerge, the guilds, the reputations, the rivalries, the elaborate social hierarchies built around who can kill what — none of it is authored, and all of it is why anyone stays.</p><p>This is the genre\'s great achievement and its permanent liability. It can produce experiences no designer could script, because thousands of humans in a shared persistent world will produce stories nobody planned. It can also produce harassment, exploitation, and economic behaviour of a viciousness that regularly surprises the people who built the place. An MMORPG is not really a game with players in it. It is a society with a game attached, and every serious problem in the genre is a social problem wearing a technical costume.</p>',
+      },
+    ],
   }
 ];
