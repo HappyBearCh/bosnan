@@ -412,5 +412,89 @@ module.exports = [
         html: '<p>What set Ben Drowned apart from the flood of "haunted cartridge" stories was craft. The narrative unfolded in real time over days, was paced like a genuine diary of escalating dread, and was backed by convincing footage of corrupted Majora’s Mask gameplay — statues that shouldn’t move, reversed music, sudden fires. Because it lived on a board where people posted real paranormal experiences, and because the author never broke character early, readers had every reason to wonder if it was true.</p><p>The reveal that it was an authored alternate-reality game did not diminish its reputation; it enhanced it. Ben Drowned demonstrated that internet horror could be structured, serialised, and interactive rather than a single anonymous scare, and it handed the genre a template. Its DNA is visible in nearly every "haunted game" story and analog-horror project that followed, making it one of the few urban legends whose influence is measured less in belief than in imitation.</p>',
       },
     ],
+  },
+  {
+    id: 'l-is-real-2401',
+    sources: [
+      { title: 'Luigi in Super Mario 64', publisher: 'Super Mario Wiki', url: 'https://www.mariowiki.com/Luigi#Super_Mario_64' },
+      { title: 'L is Real 2401', publisher: 'Gaming Urban Legends Wiki', url: 'https://gaming-urban-legends.fandom.com/wiki/L_is_Real_2401' },
+    ],
+    title: 'L is Real 2401 — Hunting Luigi in Super Mario 64',
+    era: '1990s',
+    verdict: 'Busted (But Rooted in Truth)',
+    description: 'A blurry inscription on a statue in the Super Mario 64 courtyard was read by thousands of players as "L is real 2401" — the supposed key to unlocking Luigi in a game he never appeared in. Nintendo stayed silent for twenty-four years.',
+    longDescription: 'In the courtyard outside Princess Peach\'s castle stands a statue whose plaque carries an inscription rendered in a texture too low-resolution to read cleanly on a 1996 television. The intended text was "Eternal Star", but the smeared pixels admitted a second reading that spread across playgrounds and early web forums: "L is real 2401". From that ambiguity grew one of gaming\'s longest-running myths — that Luigi was hidden somewhere in Super Mario 64, waiting behind a sequence of obscure actions. Players ground out 121 stars, jumped in specific patterns, and traded elaborate unlock instructions, none of which worked. What made the legend unusually durable was that its underlying premise was correct. Luigi genuinely had been planned for the game and was cut; the myth was wrong only about him still being in there. The story finally closed in an unexpectedly literal way when a 2020 leak of Nintendo development material surfaced an unfinished Luigi model — arriving, as fans immediately noticed, an eerie twenty-four years and one month after the game\'s Japanese release.',
+    keyFacts: [
+      'The statue\'s inscription was intended to read "Eternal Star" — the low-resolution texture made "L is real 2401" a plausible misreading',
+      'IGN offered a $100 bounty in November 1996 for proof that Luigi could be unlocked; it was never claimed',
+      'Shigeru Miyamoto later confirmed a two-player Mario and Luigi mode was planned but cut for memory reasons',
+      'The July 2020 "Gigaleak" of Nintendo source material revealed an unfinished Luigi model, 24 years and 1 month after release',
+    ],
+    sections: [
+      {
+        title: 'Why a Blurry Texture Beat Twenty Years of Debunking',
+        html: '<p>The rumour survived because it sat exactly on the line where a player cannot resolve the question themselves. The inscription really is ambiguous at N64 output resolution, so any player who squinted at it could confirm the "evidence" with their own eyes. There was no authoritative denial to consult, no patch notes, no developer blog — only a cartridge and a rumour, and the rumour offered something the cartridge did not: a reason to keep playing.</p><p>The unlock methods circulated in the pre-broadband era, when a friend-of-a-friend claim could not be checked in thirty seconds. Every failed attempt was absorbed rather than falsifying: you had not done it <em>quite</em> right, you were one star short, you had jumped in the wrong order. That structure — an unfalsifiable instruction set attached to a genuinely ambiguous artefact — is the engine that drove nearly every 1990s secret-character myth, from Sheng Long to Ermac.</p>',
+      },
+      {
+        title: 'The Myth That Was Half Right',
+        html: '<p>Most gaming legends collapse entirely when the facts arrive. This one did something stranger: the facts arrived and vindicated its premise while destroying its claim. Miyamoto confirmed that a Mario and Luigi two-player mode had been designed and abandoned when the team ran out of memory on the cartridge, meaning the players who insisted "Luigi was supposed to be in this game" were simply correct. They were wrong only about whether he had survived to the shipped ROM.</p><p>The 2020 Gigaleak turned that vindication into something close to a punchline. Among the leaked Nintendo development files sat an incomplete Luigi model built for Super Mario 64 — never finished, never reachable, never hidden in any retail cartridge. The hunt had been futile the entire time, and yet its central intuition had been right from the beginning. Few urban legends get to be debunked and confirmed in the same breath.</p>',
+      },
+    ],
+  },
+  {
+    id: 'ermac-mortal-kombat',
+    sources: [
+      { title: 'Ermac', publisher: 'Mortal Kombat Wiki', url: 'https://mortalkombat.fandom.com/wiki/Ermac' },
+      { title: 'Ermac', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Ermac' },
+    ],
+    title: 'Ermac — The Debug Message That Became a Character',
+    era: '1990s',
+    verdict: 'Busted, Then Made Real',
+    description: 'A stray "ERMACS" entry on a Mortal Kombat diagnostic screen convinced players a red ninja was hidden in the game. He was not — until Midway, watching the rumour refuse to die, put him in for real.',
+    longDescription: 'The original Mortal Kombat\'s audits menu — the diagnostic screen arcade operators used to check the cabinet — listed an entry reading "ERMACS". Players who saw it assumed they had caught Midway hiding something, and the name was quickly attached to a rumoured red palette-swap ninja, slotting neatly alongside the real hidden fighters Reptile and Scorpion. Doctored photographs circulated showing a red Scorpion above a victory banner reading "ERMAC WINS", and Electronic Gaming Monthly\'s reader letters column kept the hunt alive. The truth was mundane: co-creator Ed Boon has explained that "ERMACS" was an abbreviation of "error macro", an internal counter tracking software errors during play. But by the time that was widely known, Ermac had acquired enough cultural mass that the rumour outweighed the fact — so Midway simply capitulated and made him canonical, adding a genuine playable Ermac to Ultimate Mortal Kombat 3 in 1995.',
+    keyFacts: [
+      '"ERMACS" on the arcade audits menu was short for "error macro" — a counter for software errors, not a character',
+      'The best-known "proof" was a doctored photo of a red Scorpion with an "ERMAC WINS" banner',
+      'Ed Boon has repeatedly confirmed the original Ermac never existed in Mortal Kombat',
+      'Midway made the rumour real, adding a playable Ermac to Ultimate Mortal Kombat 3 in October 1995',
+    ],
+    sections: [
+      {
+        title: 'A Rumour With Unusually Good Credentials',
+        html: '<p>Most secret-character myths ask you to believe something with no evidence at all. Ermac asked you to believe something with evidence you could walk up to a cabinet and read for yourself — a real string, printed by the real machine, that no one at Midway had explained. And crucially, Mortal Kombat had already established that hidden palette-swap ninjas were exactly the sort of thing it did. Reptile was real. Why not a red one?</p><p>That combination — a verifiable artefact plus an established precedent — gave Ermac a plausibility that pure playground invention never achieves. The doctored screenshots that followed were not what convinced people; they were what people produced <em>because</em> they were already convinced. The rumour supplied the demand, and the forgeries met it.</p>',
+      },
+      {
+        title: 'When the Fanbase Wins',
+        html: '<p>Midway\'s response is what makes Ermac more than a footnote. Faced with a fictional character their own debug output had accidentally conjured, they did not keep issuing denials — they shipped him. The Ermac who debuted in Ultimate Mortal Kombat 3 in October 1995 was given a real backstory as a construct of the souls of dead warriors, a telekinetic moveset, and a permanent place in the roster; he has appeared in the series ever since, across sequels, films, and comics.</p><p>It is one of the few cases in gaming where an urban legend did not merely survive being debunked but was retroactively converted into fact by the people it embarrassed. Ermac exists today for exactly one reason: enough players believed in him hard enough, for long enough, that not making him real became the stranger option.</p>',
+      },
+    ],
+  },
+  {
+    id: 'gta-san-andreas-bigfoot',
+    sources: [
+      { title: 'Bigfoot (GTA San Andreas)', publisher: 'GTA Myths Wiki', url: 'https://gta-myths.fandom.com/wiki/Bigfoot_(GTA_San_Andreas)' },
+      { title: 'Sasquatch', publisher: 'GTA Wiki', url: 'https://gta.fandom.com/wiki/Sasquatch' },
+    ],
+    title: 'Bigfoot in the Woods of San Andreas',
+    era: '2000s',
+    verdict: 'Busted',
+    description: 'Grand Theft Auto: San Andreas gave players a vast, empty, fog-shrouded countryside and no reason to go there. Players filled it themselves — with a monster that was never in the game.',
+    longDescription: 'From the game\'s 2004 release, players reported glimpsing a large hairy figure in the wilderness of San Andreas — most often on the slopes of Mount Chiliad, around the Shady Cabin, or in the isolated valley of Back o\' Beyond. The sightings followed a consistent script: a distant shape at the treeline, seen briefly, gone before you could reach it. Rockstar never included any such creature. Terry Donovan addressed it in a 2005 interview with the flat and faintly teasing line "There is no Bigfoot, just like in real life", and Obbe Vermeij — Rockstar North\'s technical director through the era — has since confirmed the team simply never built one. The most deflating explanation concerns the rumoured "growling" players heard while hunting in the woods: it was CJ\'s stomach, the game\'s own hunger system reminding a player who had been wandering the wilderness for hours that he had not eaten.',
+    keyFacts: [
+      'Rockstar\'s Terry Donovan denied it outright in 2005: "There is no Bigfoot, just like in real life"',
+      'Obbe Vermeij, Rockstar North\'s technical director, has confirmed no Bigfoot was ever implemented',
+      'The "growling" heard by myth hunters in the woods was CJ\'s stomach from the game\'s hunger system',
+      'Rockstar eventually added a real Sasquatch to Grand Theft Auto V, acknowledging the myth it had spent a decade denying',
+    ],
+    sections: [
+      {
+        title: 'The Map Made the Monster',
+        html: '<p>San Andreas was the first Grand Theft Auto with genuine wilderness. Previous games were cities: dense, scripted, saturated with things to do. San Andreas gave players mountains, forests, and long stretches of countryside where the game had nothing planned for them — and rendered it all through a heavy draw-distance fog that turned every distant object into an ambiguous silhouette.</p><p>That is a near-perfect apparatus for generating false positives. A player alone in the woods at night, primed by rumour, watching low-resolution scenery resolve out of fog, will eventually see something. The myth did not spread despite the emptiness of the countryside; it spread <em>because</em> of it. An open world that refuses to tell you what is out there is implicitly inviting you to decide for yourself.</p>',
+      },
+      {
+        title: 'Rockstar Gives In',
+        html: '<p>Rockstar spent years denying the Bigfoot, and the denials achieved nothing — the myth hunters were not persuadable, and the videos and mods kept coming. So in Grand Theft Auto V, returning to a reimagined San Andreas, Rockstar surrendered and built the thing: a genuine Sasquatch, complete with a dedicated questline, a peyote-hallucination system that lets you become one, and a knowing nod to the players who had spent a decade insisting he was already there.</p><p>Like Ermac before him, the San Andreas Bigfoot is a case of a myth being answered not with proof but with implementation. The players were wrong for ten years, and then, in the way that matters most to a player, they were retroactively right.</p>',
+      },
+    ],
   }
 ];

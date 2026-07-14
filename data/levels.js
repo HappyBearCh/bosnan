@@ -507,5 +507,107 @@ module.exports = [
         html: '<p>The opening tram ride crystallised a principle — never take control from the player — that shaped Valve\'s design and rippled across the entire medium. By proving that a game could deliver a rich, atmospheric introduction without resorting to cutscenes, Half-Life pushed developers toward in-engine, first-person, environmental storytelling, and its influence is visible in a long lineage of narrative-driven shooters and immersive games. The sequence has been analysed, praised, and imitated for decades, and its careful reconstruction in the fan remake Black Mesa underlines how iconic it became. Black Mesa Inbound endures as the definitive demonstration that the most immersive way to begin a story might be to simply let the player sit back, look out the window, and watch a world reveal itself.</p>',
       },
     ],
+  },
+  {
+    id: 'sonic-green-hill-zone',
+    title: 'Green Hill Zone: A Year of Work for Four Minutes of Play',
+    game: 'Sonic the Hedgehog',
+    platform: 'Sega Mega Drive / Genesis',
+    year: 1991,
+    era: '1990s',
+    levelName: 'Green Hill Zone, Act 1',
+    description: 'The most recognisable stage in Sega\'s history took Yuji Naka close to a year to build, and was constructed and thrown away repeatedly before it was allowed to teach the world what a Sonic game felt like.',
+    longDescription: 'Green Hill Zone had one job: make a player understand, within seconds and without being told, that this was a game about momentum. Level designer Hirokazu Yasuhara built it around rolling Californian hills, and art director Naoto Ohshima dressed it in a palette so saturated it functioned as a hardware demonstration — checkerboard earth, chrome-blue water, candy-striped flowers scrolling in parallax layers the NES could not have attempted. But the level exists as it does mainly because of an obsessive iteration process. Yuji Naka has said that Green Hill Zone took him close to a year, and that it was created and destroyed multiple times before the final version emerged. What survived that grinding process is a stage that opens with a straight run and a gentle downslope, gives the player speed before it gives them any obstacle, and then arranges every subsequent element — the first loop, the first spring, the first Motobug — so that momentum is always the reward and never the punishment. It is a tutorial that never stops moving.',
+    designPrinciples: [
+      'Give speed before demanding skill — the level grants momentum in its opening seconds',
+      'Loops as spectacle and reward, not obstacle: the player is carried through them by physics they already have',
+      'Downward slopes teach the roll mechanic implicitly, by making it feel good rather than by requiring it',
+      'Layered parallax scrolling turns visual design into a demonstration of hardware capability',
+      'Multiple vertical routes reward exploration without ever punishing the player who simply runs right'
+    ],
+    keyFacts: [
+      'Programmer Yuji Naka has said Green Hill Zone took him close to a year and was created and destroyed several times',
+      'Level designer Hirokazu Yasuhara drew on the landscape of California for the zone\'s rolling hills',
+      'Art direction came from Naoto Ohshima, who also designed Sonic himself',
+      'The zone has been remade or referenced in Sonic games across nearly every generation since 1991'
+    ],
+    sections: [
+      {
+        title: 'Designing a Feeling Rather Than a Challenge',
+        html: '<p>Most platformer opening levels are built to test the player. Green Hill Zone is built to <em>convince</em> them. Its first screen offers a flat run to the right with nothing in the way, and the terrain immediately begins to slope downward — Sonic accelerates whether the player intends it or not, and the game\'s central sensation is delivered before any skill has been asked for. The first loop arrives shortly afterwards and requires nothing but continued forward motion.</p><p>This is the inverse of the Super Mario Bros. approach, where World 1-1 introduces a threat within four seconds. Sonic\'s designers understood that their game\'s selling point was not mastery but sensation, and that a player who has already felt the speed will forgive the difficulty that follows. Every Sonic level that works is, in some sense, still running the argument Green Hill Zone makes in its first ten seconds.</p>'
+      },
+      {
+        title: 'Built, Destroyed, Rebuilt',
+        html: '<p>The year Naka spent on the zone is easy to misread as perfectionism. It was closer to necessity: the momentum physics and the level geometry could not be designed separately, because each one determined what the other could be. A slope angle that felt exhilarating at one acceleration curve felt sluggish at another; a loop that worked at one radius launched Sonic into the ceiling at another. The level and the engine had to converge, and converging them meant tearing the level down repeatedly.</p><p>The result is a stage where the geometry and the physics agree so completely that neither draws attention to itself. Sonic games have kept returning to it — remade in Sonic Adventure 2, Sonic Generations, Sonic Mania and beyond — partly out of nostalgia and partly because it remains the clearest statement the series has ever made about what it is for.</p>'
+      }
+    ]
+  },
+  {
+    id: 'ff6-opera-house',
+    title: 'The Opera House: A JRPG Stages an Opera',
+    game: 'Final Fantasy VI',
+    platform: 'SNES',
+    year: 1994,
+    era: '1990s',
+    levelName: 'The Opera House — "Maria and Draco"',
+    description: 'Final Fantasy VI stops its own plot to perform an opera, hands the player a soprano aria rendered on an SNES sound chip, and then drops a giant octopus through the ceiling.',
+    longDescription: 'By the mid-1990s the Final Fantasy series had built a reputation for ambition, but the Opera House sequence is the moment it visibly reached past what its hardware was supposed to allow. The setup is pure caper: Celes, a defected Imperial general, happens to resemble the famed diva Maria, and the party substitutes her into a performance of "Maria and Draco" in order to reach the gambler Setzer, who plans to abduct the real singer from the stage. What follows is a four-part composition by Nobuo Uematsu — "Overture", "Aria di Mezzo Carattere", "Wedding Waltz – Duel" and "Grand Finale" — with a libretto written by Yoshinori Kitase, staged in-engine with scripted blocking, timed lyric cues the player must follow correctly, and a rendering of a soprano voice built entirely out of synthesised SNES instrumentation. The scene refuses to become solemn: the octopus Ultros crashes the performance from the rafters, and the operatic register collapses into a boss fight and a chase through the catwalks above the stage.',
+    designPrinciples: [
+      'Diegetic music: the score is not accompaniment but the literal content of the scene',
+      'Player participation inside a cutscene — the lyric-selection sequence makes the audience complicit in the performance',
+      'Hardware pushed past its intent: an operatic vocal line synthesised on a chip designed for sound effects',
+      'Tonal whiplash used deliberately — grandeur undercut by farce before it can curdle into pomposity',
+      'Character work smuggled into spectacle: the aria is where Celes stops being a defector and becomes a protagonist'
+    ],
+    keyFacts: [
+      'The sequence comprises four tracks by Nobuo Uematsu, with a libretto by Yoshinori Kitase',
+      '"Aria di Mezzo Carattere" became one of the most performed pieces in the entire Final Fantasy catalogue',
+      'The SNES rendered the "vocal" line instrumentally — there is no recorded human voice in the original',
+      'The Pixel Remaster finally added genuine sung vocals, recorded in seven languages'
+    ],
+    sections: [
+      {
+        title: 'Making a Voice Out of a Sound Chip',
+        html: '<p>The SNES had eight audio channels and a small pool of sound memory. It had no capacity for a sung human voice, and Uematsu did not attempt one. Instead "Aria di Mezzo Carattere" hands the vocal line to a synthesised instrument and lets the player\'s own ear finish the job — the melody phrases like singing, breathes like singing, and is accompanied like singing, so the listener supplies a soprano the hardware never produced.</p><p>Simultaneously the game puts the lyrics on screen and requires the player to choose the correct lines in sequence. This is the mechanism that turns the scene from a cutscene into an experience: you are not watching Celes perform, you are performing as her, and a wrong lyric is a genuine failure in front of a genuine audience. It is one of the earliest examples in a mainstream game of interactivity being used to create stage fright.</p>'
+      },
+      {
+        title: 'The Octopus in the Rafters',
+        html: '<p>The scene\'s most under-appreciated decision is that it will not let itself be taken entirely seriously. Having spent several minutes constructing something genuinely beautiful, Final Fantasy VI drops Ultros — a purple cartoon octopus with a taste for insults — through the ceiling, and the aria becomes a boss fight and then a chase across the catwalks with a countdown running.</p><p>That deflation is what keeps the sequence from ageing badly. A 16-bit JRPG staging a sincere opera could easily have become embarrassing; a 16-bit JRPG staging a sincere opera and then knowingly wrecking it is a work with a sense of humour about its own ambition. The Opera House is remembered as Final Fantasy\'s most audacious set piece precisely because it dares to be grand and then refuses to be pompous about it.</p>'
+      }
+    ]
+  },
+  {
+    id: 'half-life-2-ravenholm',
+    title: 'We Don\'t Go to Ravenholm',
+    game: 'Half-Life 2',
+    platform: 'PC',
+    year: 2004,
+    era: '2000s',
+    levelName: 'Chapter 6 — "We Don\'t Go To Ravenholm..."',
+    description: 'Half-Life 2 spends five chapters teaching you to shoot, then takes your ammunition away and drops you into a zombie-infested mining town with a physics toy and a great many circular saw blades.',
+    longDescription: 'Ravenholm is the sixth chapter of Half-Life 2: an Eastern European mining town whose inhabitants were overrun after Combine headcrab shelling and turned into zombies, leaving a single survivor — Father Grigori, a shotgun-carrying priest of highly ambiguous sanity who cackles at Gordon Freeman from the rooftops. Level designer Dario Casali has explained that Ravenholm survived from an early build of the game and was retained specifically to give the newly introduced Gravity Gun a stage where it could dominate. The chapter is starved of conventional ammunition, and the town has been elaborately rigged by Grigori with sawblade traps, swinging car hulks, gas canisters and crushing weights, so the player is obliged to fight with the environment rather than with a weapon — and the environment is full of saws. Lighting is kept minimal and high-contrast, used to guide the eye and to withhold information. PC Gamer\'s Andy Kelly later called it "probably the best level Valve has ever designed".',
+    designPrinciples: [
+      'Remove the familiar tool to force mastery of the new one — ammunition scarcity makes the Gravity Gun mandatory',
+      'The level is the weapon: traps, saws and physics props replace the arsenal',
+      'Enter in medias res — the catastrophe already happened, and the player reconstructs it from what is left',
+      'Darkness as design rather than decoration: light is rationed, then used to lead the eye or spike the tension',
+      'A single unstable NPC supplies tonal contrast, comic relief and unspoken exposition at once'
+    ],
+    keyFacts: [
+      'Level designer Dario Casali has said Ravenholm survived from an early build and was kept as a showcase for the Gravity Gun',
+      'The chapter deliberately starves the player of ammunition to force physics-based improvisation',
+      'Father Grigori is the town\'s sole survivor and the chapter\'s only friendly voice',
+      'PC Gamer\'s Andy Kelly described it as "probably the best level Valve has ever designed"'
+    ],
+    sections: [
+      {
+        title: 'Teaching by Deprivation',
+        html: '<p>Valve\'s standard technique is to introduce a mechanic and then build an environment in which that mechanic is the path of least resistance. Ravenholm is the most aggressive application of the method in the studio\'s history: rather than encouraging Gravity Gun use, it removes the alternative. Ammunition is scarce to the point of anxiety, and every room contains something heavy, sharp, explosive or swinging that is far more effective than the bullets the player is hoarding.</p><p>The result is that players do not so much learn the Gravity Gun in Ravenholm as get converted to it. By the chapter\'s end a saw blade has stopped being scenery and become a verb. Valve never states any of this — the town simply presents its inventory of lethal objects and lets scarcity do the teaching, which is the same pedagogy Half-Life had used since the original game\'s tram ride.</p>'
+      },
+      {
+        title: 'Horror in a Game That Isn\'t One',
+        html: '<p>Half-Life 2 is a science-fiction shooter about occupation and resistance. Ravenholm is, for about forty minutes, a horror game — and the seam is invisible because the chapter is motivated entirely from within the fiction. The Combine shelled the town with headcrab canisters; this is what a town looks like afterwards. Nothing is contrived for atmosphere that is not also a plausible consequence of the plot.</p><p>Grigori is what makes it work rather than merely work well. A silent, empty Ravenholm would be atmospheric; a Ravenholm containing one hysterical priest who has been alone with his congregation-turned-zombies for an unknown length of time, and who has spent that time building saw traps and singing to himself, is disturbing in a way the zombies alone could not manage. The chapter\'s title — spoken by Alyx, flatly, as a refusal to discuss the place — does more world-building in five words than most games manage in an hour.</p>'
+      }
+    ]
   }
 ];
