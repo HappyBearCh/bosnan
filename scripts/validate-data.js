@@ -34,6 +34,14 @@ for (const file of files) {
     continue;
   }
 
+  // Field shape census for this file. Detail pages call .map() on list-valued
+  // fields (e.g. `(item.notableWork || []).map(...)`), so a field that is an
+  // array in most entries but a scalar in one will throw at render time and
+  // 500 that page. Nothing else here catches that, so census the types and
+  // treat any array/scalar split within a file as a hard error.
+  const shapes = new Map(); // field -> Map(kind -> [ids])
+  const kindOf = (v) => (Array.isArray(v) ? 'array' : v === null ? 'null' : typeof v);
+
   const localIds = new Set();
   arr.forEach((e, i) => {
     totalEntries++;
@@ -50,6 +58,15 @@ for (const file of files) {
       localIds.add(e.id);
       if (!globalIds.has(e.id)) globalIds.set(e.id, []);
       globalIds.get(e.id).push(file);
+    }
+    // record the shape of every field on this entry
+    for (const [k, v] of Object.entries(e)) {
+      if (v === undefined) continue;
+      if (!shapes.has(k)) shapes.set(k, new Map());
+      const byKind = shapes.get(k);
+      const kind = kindOf(v);
+      if (!byKind.has(kind)) byKind.set(kind, []);
+      byKind.get(kind).push(e.id || `[${i}]`);
     }
     // year sanity (only when present)
     if (e.year != null) {
@@ -78,6 +95,19 @@ for (const file of files) {
       }
     }
   });
+
+  // an array/scalar split on the same field means one of these entries will
+  // blow up whichever page renders it as a list
+  for (const [field, byKind] of shapes) {
+    if (!byKind.has('array') || byKind.size < 2) continue;
+    const odd = [...byKind]
+      .filter(([kind]) => kind !== 'array')
+      .map(([kind, ids]) => `${kind}: ${ids.slice(0, 3).join(', ')}${ids.length > 3 ? `, +${ids.length - 3} more` : ''}`);
+    errors.push(
+      `${file}: field '${field}' is an array in ${byKind.get('array').length} entr${byKind.get('array').length === 1 ? 'y' : 'ies'} ` +
+        `but not in others (${odd.join('; ')}) — a detail page calling .map() on it will throw`
+    );
+  }
 }
 
 // cross-file duplicate ids are NOT a routing collision — detail routes are

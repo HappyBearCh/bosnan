@@ -414,7 +414,6 @@ module.exports = [
   {
     id: 'keith-stuart',
     name: 'Keith Stuart',
-    born: 1971,
     nationality: 'British',
     era: '1990s',
     role: 'Journalist, Editor & Novelist',
