@@ -421,4 +421,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'the-end-metal-gear-solid-3',
+    title: 'The End: The Boss You Can Outlive',
+    game: 'Metal Gear Solid 3: Snake Eater',
+    platform: 'PlayStation 2',
+    year: 2004,
+    era: '2000s',
+    bossName: 'The End',
+    type: 'Sniper Duel',
+    description: 'A hundred-year-old sniper hidden somewhere in three zones of forest. You can hunt him for hours — or put the game down for a week and let him die of old age.',
+    longDescription: 'The End is an ancient sniper, so old that he is wheeled into his own boss arena in a chair and dozes between engagements. The fight is unlike anything else in the genre: rather than an arena, the player is given three connected zones of dense forest — Sokrovenno North, South and West, comprising a river, a plateau and a clearing — and told only that The End is somewhere in them. There is no health bar to whittle down through pattern recognition, because there is no visible enemy. The player must find him, using footprints, birdsong, the glint of a scope, directional microphones and the smell of gunpowder, while he does exactly the same in reverse. It is a stalking contest in which both parties are hunting, and losing means a tranquilliser dart from a direction you never identified.\n\nAnd then there is the exit that made it famous. The End is old. If the player saves during the fight, sets the PlayStation 2\'s internal clock forward a week, and reloads, they will find that he has died of natural causes in the interim. The same result can be achieved by simply not playing for a week of real time. The boss can also be skipped entirely by sniping him in his wheelchair during an earlier cutscene, before the fight ever begins.',
+    keyFacts: [
+      'The battle spans three connected forest zones rather than a conventional arena, with no marked enemy position',
+      'Waiting a real-world week — or advancing the PlayStation 2\'s system clock — causes The End to die of old age',
+      'He can be killed pre-emptively in his wheelchair during an earlier cutscene, skipping the fight entirely',
+      'Critics have cited the old-age method as one of gaming\'s defining moments of metafiction',
+    ],
+    sections: [
+      {
+        title: 'A Boss Fight That Is Actually a Search',
+        html: '<p>Almost every boss in games is a pattern to be learned: watch, identify the tell, exploit the window, repeat. The End inverts the entire structure by hiding the pattern behind a search problem. Before the player can learn anything about how The End fights, they have to solve the prior question of <em>where he is</em> — and the game gives them only the tools a real tracker would use. Broken twigs. Footprints in mud. A parrot circling a position. The faint reflection off a scope lens at three hundred metres.</p><p>The consequence is that no two players\' accounts of the fight resemble each other. Some spend twenty minutes; some spend two hours; some are killed repeatedly by an enemy they never once see. It is one of the very few boss encounters in a mainstream action game that produces genuinely different narratives rather than different completion times, and it is the clearest demonstration in the series of Kojima\'s conviction that stealth should be a contest of information rather than a contest of reflexes.</p>',
+      },
+      {
+        title: 'The Clock Trick',
+        html: '<p>Setting your console\'s clock forward to kill a boss is not a bug and was never treated as one. Konami built it deliberately, and it is the purest expression of Metal Gear Solid 3\'s willingness to break the wall between the game and the machine it runs on — the same instinct that had Psycho Mantis read the player\'s memory card two games earlier, and that would later have the player physically switch controller ports to escape mind control.</p><p>What makes the old-age death land is that it is not a cheat so much as a joke with a premise. The End is established, insistently, as extremely old — he sleeps constantly, he is pushed around in a chair, he is described as a legend from a war two generations past. The game tells you he is running out of time. Taking that literally, and simply outwaiting him, is the reward for listening. Players who found it in 2004 mostly did not believe it until they tried it, and the version in Metal Gear Solid Delta preserves the trick intact two decades later.</p>',
+      },
+    ],
+  },
+  {
+    id: 'yellow-devil-mega-man',
+    title: 'The Yellow Devil and the Pause Button',
+    game: 'Mega Man',
+    platform: 'NES',
+    year: 1987,
+    era: '1980s',
+    bossName: 'Yellow Devil',
+    type: 'Fortress Guardian',
+    description: 'A blob that disassembles itself into blocks, hurls them across the screen one at a time, and reassembles — with a single vulnerable eye and a one-hit-per-cycle limit. Unless you abuse the pause menu.',
+    longDescription: 'The Yellow Devil guards the first stage of Dr. Wily\'s fortress in the original Mega Man, and it is widely regarded not merely as the hardest boss in that game but as one of the hardest in the entire franchise. Its behaviour is simple to describe and brutal to survive: the creature dissolves into a stream of yellow blocks that fly across the screen at varying heights, requiring a precise sequence of jumps and ducks to avoid, then reassembles on the far side and opens a single eye. That eye is the only vulnerable point, and — critically — it can normally be struck only once per cycle. With the Thunder Beam, the boss requires seven hits, which means seven complete, flawless traversals of the block barrage.\n\nWhat made the Yellow Devil legendary, however, was the way out. On the NES, pressing Start opens a pause overlay without stopping the game\'s damage evaluation, and a Thunder Beam that is in contact with the eye at the moment of the pause registers a fresh hit every time the game is paused and unpaused. Rapidly tapping Start while the beam connects therefore inflicts the full seven hits in a couple of seconds, killing in moments a boss that could otherwise consume an afternoon. The trick is specific to the original NES release; it was closed in Mega Man Legacy Collection.',
+    keyFacts: [
+      'The eye is the only vulnerable point and can normally be hit just once per full block cycle',
+      'The Thunder Beam needs seven hits — meaning seven flawless runs through the block barrage',
+      'Rapidly tapping the pause button while the Thunder Beam connects re-applies damage on each unpause',
+      'The pause exploit works on the original NES release but was removed in Mega Man Legacy Collection',
+    ],
+    sections: [
+      {
+        title: 'Why It Was So Hard',
+        html: '<p>The Yellow Devil is not difficult because it is unfair — it is difficult because it is a memorisation test disguised as a reflex test, presented at a point in the game where the player has not been trained for either. The block sequence is fixed. Each block enters at a specific height, in a specific order, and the correct response is a specific jump or crouch. A player who has memorised the sequence can clear a cycle without taking a scratch; a player who is reacting will be hit, and being hit knocks Mega Man back, which usually means being hit again.</p><p>Layered on top is a resource problem. The Yellow Devil sits at the start of Wily\'s fortress, meaning the player arrives with whatever energy and weapon ammunition survived the stage before it, and a failed attempt costs the entire run back up. It punishes not just imprecision in the moment but poor management of the twenty minutes that preceded it — a design philosophy the Mega Man series would keep, refine, and never really apologise for.</p>',
+      },
+      {
+        title: 'The Most Famous Exploit on the NES',
+        html: '<p>The pause trick is arguably the single best-known glitch of the 8-bit era, and it endures because of what it represents rather than what it does. It is not an obscure memory corruption or a frame-perfect input; it is a child, cornered by a boss they cannot beat, mashing the Start button in frustration — and discovering that the game breaks.</p><p>Capcom\'s decision to close it in the Legacy Collection re-releases was a defensible act of preservation-by-correction and also, to a certain generation, a small act of vandalism. The Yellow Devil without the pause trick is simply a very hard boss. The Yellow Devil <em>with</em> the pause trick is a story about how players relate to games that will not yield: you learn the pattern, or you find the seam. Mega Man\'s reputation for punishing difficulty and its reputation for exploitable jank were, from the very first game, the same reputation.</p>',
+      },
+    ],
+  },
+  {
+    id: 'emerald-ruby-weapon-ff7',
+    title: 'Emerald and Ruby Weapon: The Optional Wall',
+    game: 'Final Fantasy VII',
+    platform: 'PlayStation',
+    year: 1997,
+    era: '1990s',
+    bossName: 'Emerald Weapon & Ruby Weapon',
+    type: 'Optional Superboss',
+    description: 'Two monsters that exist entirely outside the plot, are vastly harder than the game\'s actual final boss, and can be safely ignored forever — which is exactly why people fight them.',
+    longDescription: 'Final Fantasy VII contains an ending that most players reach, and two creatures that most players never touch. Emerald Weapon sits on the ocean floor, encountered only by taking a submarine down and making physical contact with it — a collision the player can avoid entirely by keeping the sub near the surface. Ruby Weapon buries itself in the sand near the Gold Saucer and only surfaces after Ultimate Weapon has been defeated and one further random battle fought. Neither is required. Neither is mentioned in the ending. The plot proceeds identically whether they live or die.\n\nWhat they are is a difficulty statement. Both are dramatically harder than Sephiroth, the game\'s actual final boss, and both punish the party compositions and Materia setups that carried the player comfortably through the story. Emerald imposes a time limit unless a specific accessory is equipped and scales its damage to the number of Materia the party is carrying — meaning the player who has hoarded the most power is the player it punishes hardest. Ruby ejects two of the player\'s three party members at the start of the fight, forcing a solo opening against an enemy that can casually erase a fully-levelled character. Beating them requires understanding Final Fantasy VII\'s systems at a depth the sixty-hour main narrative never once demands.',
+    keyFacts: [
+      'Both are entirely optional and have no bearing on the story or the ending',
+      'Emerald Weapon lives on the ocean floor and can be avoided by keeping the submarine near the surface',
+      'Ruby Weapon only appears in the sand near the Gold Saucer after Ultimate Weapon is defeated',
+      'Both are substantially harder than Sephiroth, the game\'s actual final boss',
+    ],
+    sections: [
+      {
+        title: 'The Boss as a Systems Exam',
+        html: '<p>The Weapons work because they attack the player\'s habits rather than the player\'s reflexes. Emerald Weapon\'s damage output scales with the amount of Materia equipped, which turns the game\'s core progression loop into a liability — the natural instinct to load every character with every powerful ability is precisely the instinct that gets the party annihilated. Ruby Weapon opens by removing two of the three party members, so any strategy built on a balanced trio collapses in the first turn.</p><p>Neither can be brute-forced by grinding levels, and that is the point. They are exams on the material the main game taught but never tested: Materia combination, status immunity, damage cancellation, the arithmetic of the game\'s own formulae. A player who beat Sephiroth by levelling up and pressing Attack has learned almost nothing that will help here, and the Weapons exist to make that gap visible.</p>',
+      },
+      {
+        title: 'Inventing the Superboss for a Mainstream Audience',
+        html: '<p>Optional superbosses were not new in 1997 — Final Fantasy had experimented with them before, and Japanese RPGs had long hidden brutal secret encounters in their late game. What was new was the scale of the audience. Final Fantasy VII sold to millions of people who had never played a JRPG, and it presented them with two enemies that were confidently, deliberately beyond them, and which the game made no attempt to explain or signpost.</p><p>That established an expectation the genre has never let go of. The idea that a well-made RPG owes its most committed players a wall to break themselves against — content that exists purely as a difficulty artefact, offering nothing but a trophy weapon and the knowledge that you did it — runs through the two decades of the genre that followed. The Weapons are the reason a generation of players understands, instinctively, that the credits are not the end of the game.</p>',
+      },
+    ],
+  },
 ];

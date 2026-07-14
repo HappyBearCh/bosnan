@@ -522,5 +522,107 @@ module.exports = [
         html: '<p>Although Ryu originated in 1987, it was Street Fighter II in 1991 that elevated him to worldwide fame, pairing him with his rival Ken as the mirror-matched "shoto" fighters at the centre of the game that ignited the fighting-game boom. Ryu\'s move set became the genre\'s shared language: the quarter-circle Hadoken, the anti-air Shoryuken, and the sweeping hurricane kick are inputs that virtually every fighting-game player learns, and countless characters across the medium are variations on his archetype. Through decades of sequels and crossovers he has remained Capcom\'s flagship fighter and one of gaming\'s most recognisable faces, the enduring symbol of the disciplined martial-arts hero.</p>',
       },
     ],
+  },
+  {
+    id: 'chun-li',
+    name: 'Chun-Li',
+    franchise: 'Street Fighter',
+    platform: 'Arcade (CPS-1)',
+    debutYear: 1991,
+    creator: 'Akira Nishitani & Akira Yasuda',
+    era: '1990s',
+    role: 'Interpol Officer / Playable Fighter',
+    description: 'The first playable woman in a fighting game to reach a mass audience — designed in five weeks, and never balanced as a novelty.',
+    longDescription: 'Chun-Li arrived in Street Fighter II: The World Warrior in 1991 as the roster\'s only woman, and the decision to include her was deliberate rather than incidental. Director Akira Nishitani has said plainly that there had previously been no women in fighting games and that he wanted one; he determined her fighting abilities first, and her Chinese origin followed afterwards. Akira "Akiman" Yasuda designed her, and the pair had roughly five weeks to finalise the character. What emerged was a martial artist and Interpol officer hunting M. Bison for the murder of her father — a motive that gave her more narrative weight than most of the men she fought alongside.\n\nCrucially, she was not designed as a gimmick or a handicap. Chun-Li is fast, has exceptional reach with her kicks, and possesses in the Hyakuretsukyaku (Lightning Legs) a move so effective it required its own input convention — rapid button mashing rather than a motion command. She was viable at the highest level of competition from the start, and remains so in every subsequent iteration of the series. That combination — first, prominent, and genuinely good — is why she became the reference point she is, rather than a footnote.',
+    abilities: [
+      'Hyakuretsukyaku (Lightning Legs) — a rapid-fire kick barrage executed by mashing the kick button',
+      'Kikoken — a projectile fireball, thrown from a low, braced stance',
+      'Spinning Bird Kick — an inverted aerial attack executed with a charge input',
+      'Exceptional walk speed and kick reach, making her one of the strongest zoning characters in the original roster',
+    ],
+    keyFacts: [
+      'The first playable female character in a fighting game to achieve mainstream recognition',
+      'Director Akira Nishitani decided her fighting style first; her Chinese homeland came afterwards',
+      'Designed by Akira "Akiman" Yasuda; the character had to be finalised in roughly five weeks',
+      'Her motive — avenging her father\'s death at M. Bison\'s hands — gave her a stronger narrative than most of the original cast',
+    ],
+    sections: [
+      {
+        title: 'Designed to Win, Not to Be Included',
+        html: '<p>The easy failure mode for a "first female fighter" in 1991 would have been tokenism: a character present for variety, tuned weak, and quietly ignored by serious players. Capcom avoided it, apparently without much agonising, by treating Chun-Li as a design problem rather than a representation problem. Nishitani decided how she fought before he decided anything else about her, and the result is a character built around genuine competitive strengths — speed, reach, and a zoning game that punishes opponents who try to walk her down.</p><p>The Lightning Legs deserve particular note. In a game whose entire input vocabulary was built on quarter-circles and charges, giving a character a move activated by mashing was an oddity — and it made her immediately accessible to a beginner while remaining a legitimate tool in expert hands. Thirty-five years and a dozen sequels later, Chun-Li has never once been a bad character in a Street Fighter game, which is not something that can be said of most of the original eight.</p>',
+      },
+      {
+        title: 'The Reference Point',
+        html: '<p>Chun-Li\'s cultural position is unusual: she is cited constantly as the first playable woman in fighting games, and the citation is doing real work. Street Fighter II was not merely a successful game but the template from which an entire genre was copied, and every studio that built a fighting game in its wake was copying a game with a woman on the roster who was demonstrably not there as decoration.</p><p>That does not mean the decade that followed handled its female fighters well — much of it did not. But Chun-Li established that the question had an answer, and that the answer did not have to cost anything competitively. She remains one of the two or three most recognisable characters Capcom has ever produced, and the only one from the original World Warrior roster whose defining trait is a kick.</p>',
+      },
+    ],
+  },
+  {
+    id: 'gordon-freeman',
+    name: 'Gordon Freeman',
+    franchise: 'Half-Life',
+    platform: 'PC',
+    debutYear: 1998,
+    creator: 'Gabe Newell & Marc Laidlaw',
+    era: '1990s',
+    role: 'Silent Protagonist / Theoretical Physicist',
+    description: 'A bespectacled MIT physicist with a crowbar who never speaks a word, never appears on screen, and never once relinquishes control to a cutscene.',
+    longDescription: 'Gordon Freeman was created by Gabe Newell and designed by Marc Laidlaw for Half-Life in 1998: a theoretical physicist with a PhD from MIT, employed at the Black Mesa Research Facility, defined visually by wire-rimmed glasses, brown hair and a circle beard, and defined behaviourally by an absolute refusal to say anything. The design is a philosophy statement. Half-Life has no cutscenes and no mission briefings; every event is witnessed through Gordon\'s eyes with the player retaining control of his body at nearly all times, and the character never speaks because a speaking character would be someone other than the player.\n\nLaidlaw has been explicit about the logic — Gordon Freeman is "just a name", an eyepiece into the Half-Life universe, a motive force that enables the player to move through it. The team wanted a figure who would not get in the way of the player exploring on their own while still making them feel they occupied a specific role. Newell has said Valve sees no reason to give Gordon a voice. Even the visual design was a committee effort of a strange kind: the head texture proved too large a job for one artist, so Valve combined references from four different people. An early iteration known internally as "Ivan the Space Biker" had a full beard, later trimmed; other passes gave him a ponytail, a helmet, and different glasses.',
+    abilities: [
+      'The crowbar — a melee weapon so associated with the character it became the series\' emblem',
+      'The HEV suit, which supplies armour, health monitoring and the character\'s only actual dialogue (in the suit\'s synthesised voice)',
+      'Zero-point energy manipulation via the Gravity Gun, introduced in Half-Life 2',
+      'A doctorate in theoretical physics that the games take pains never to let him use',
+    ],
+    keyFacts: [
+      'Created by Gabe Newell and designed by Marc Laidlaw; debuted in Half-Life in 1998',
+      'Never speaks and never appears in a cutscene — the player retains control at nearly all times',
+      'Laidlaw described him as "just a name", an eyepiece into the game\'s world',
+      'His head texture was built by combining photographic references from four different people',
+    ],
+    sections: [
+      {
+        title: 'The Argument for Silence',
+        html: '<p>Half-Life\'s design thesis is that immersion breaks the instant the game takes the camera away from you, and Gordon is the character that thesis requires. He cannot speak, because the moment he speaks he has opinions, and the moment he has opinions he is a person the player is watching rather than a person the player is being. He cannot appear in a cutscene, because a cutscene is a confession that the game has run out of ways to tell you something while you are still holding the controller.</p><p>The cost of this is real and Valve accepted it. Gordon cannot have an arc. He cannot be surprised, or afraid, or funny. Every scrap of characterisation has to be done by the people around him — by Alyx\'s exasperated affection, by Barney\'s familiarity, by the G-Man\'s proprietorial interest — which is why the Half-Life games are so unusually dense with NPCs who talk <em>at</em> a man who never answers.</p>',
+      },
+      {
+        title: 'The Blank That Isn\'t Blank',
+        html: '<p>The interesting thing about Gordon Freeman is that despite being designed as an empty vessel, he is not perceived as one. Players have a firm sense of who he is: competent, unflappable, faintly absurd — a physicist who solves an alien invasion with a crowbar and a great deal of applied violence. That characterisation was never written. It emerges entirely from what the game asks the player to do and from how other characters react to having done it.</p><p>That accidental personality is the strongest evidence for Valve\'s approach. A silent protagonist does not become characterless; the character simply gets assembled by the player out of their own actions and other people\'s reactions, and the version they assemble is one they are incapable of disliking, because it is partly them. The idea has been copied endlessly and rarely executed as rigorously, largely because most studios lose their nerve and let the hero talk.</p>',
+      },
+    ],
+  },
+  {
+    id: 'sub-zero',
+    name: 'Sub-Zero',
+    franchise: 'Mortal Kombat',
+    platform: 'Arcade (Midway Y Unit)',
+    debutYear: 1992,
+    creator: 'Ed Boon & John Tobias',
+    era: '1990s',
+    role: 'Lin Kuei Assassin / Playable Fighter',
+    description: 'A cryomancer ninja born from a technical shortcut — the same digitised actor, the same animations, a different palette, and one of gaming\'s most enduring rivalries.',
+    longDescription: 'Sub-Zero debuted in the original Mortal Kombat in 1992, performed by martial artist Daniel Pesina — who also played Johnny Cage, Scorpion and Reptile in the same game, and served as its martial arts coordinator. That is not a coincidence but the whole origin story. Mortal Kombat\'s characters were digitised photographs of real actors, an expensive process in both money and memory, and the masked ninjas Scorpion, Sub-Zero and Reptile were produced by palette-swapping a single set of digitised footage: one performance, one costume, three fighters distinguished by colour and a handful of unique special moves.\n\nWhat should have been a transparent cost-saving measure became the franchise\'s mythology instead. John Tobias built a fiction around the shortcut, splitting the palette-swapped ninjas into rival clans and giving Sub-Zero and Scorpion opposed national origins to embody an argument about the Lin Kuei\'s history — the blue ninja a cryomancer of the Chinese Lin Kuei, the yellow a vengeful Japanese spectre. The rivalry that resulted is arguably the most recognisable in fighting games, and it exists because Midway could not afford to film a second costume.',
+    abilities: [
+      'Ice Blast — a freezing projectile that leaves the opponent immobile and defenceless',
+      'Ice Clone — a frozen duplicate of himself that damages any opponent who touches it',
+      'Slide — a low, fast ground attack that closes distance under projectiles',
+      'The spine-rip Fatality, one of the two finishing moves that made the original game infamous',
+    ],
+    keyFacts: [
+      'Portrayed by Daniel Pesina, who also played Johnny Cage, Scorpion and Reptile in the same 1992 game',
+      'Scorpion, Sub-Zero and Reptile were created by palette-swapping a single set of digitised footage',
+      'John Tobias gave Sub-Zero and Scorpion opposed Chinese and Japanese origins as part of the Lin Kuei fiction',
+      'His spine-rip Fatality was central to the moral panic that produced the ESRB',
+    ],
+    sections: [
+      {
+        title: 'A Limitation That Became a Universe',
+        html: '<p>Palette-swapping was one of the oldest tricks in arcade development and almost always looked like what it was — a cheap way to reuse an asset. Mortal Kombat is the rare case where the audience did not read it as cheapness at all. Because the ninjas were digitised photographs of a real human being rather than drawn sprites, the identical animations read as <em>trained identically</em> rather than <em>drawn once</em>. Two men in the same uniform who move the same way do not look like a shortcut. They look like they went to the same school.</p><p>Tobias then wrote that reading into canon, and the Lin Kuei — a clan of assassins trained to fight as one — is the fiction that retroactively justifies the technical decision. It is one of the most elegant recoveries in game design history: an artefact of the production budget was rewritten as the central mythology of the franchise, and thirty years of sequels have been building on it ever since.</p>',
+      },
+      {
+        title: 'The Rivalry',
+        html: '<p>Sub-Zero and Scorpion are, in commercial terms, Mortal Kombat. They appear on the boxes, the arcade marquees, the films and the merchandise, and they have anchored the roster of every entry in the series. What makes the pairing work is that it is genuinely legible without a word of exposition: one is blue and cold and disciplined, the other is yellow and burning and driven by revenge, and their signature moves — a freeze and a spear — are perfect mechanical expressions of those temperaments.</p><p>The rivalry also gave Mortal Kombat something Street Fighter conspicuously lacked in 1992: a story that mattered inside the fights themselves. Capcom\'s roster was a tournament bracket. Midway\'s was a blood feud, and its two most iconic combatants hated each other for reasons the player could grasp from their colours alone.</p>',
+      },
+    ],
   }
 ];
