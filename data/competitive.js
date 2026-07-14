@@ -418,5 +418,92 @@
         html: '<p>After the tournament, organiser and ring announcer Ben Cureton was asked to produce a highlight of the parry and uploaded it as "Evo Moment #37," choosing the two-digit number arbitrarily — an offhand decision that gave the moment its permanent name. The video spread across the early internet and became the most watched and most replayed clip in competitive gaming, endlessly cited as the greatest play in esports history. For the fighting game community it functions as a founding myth, the proof that skill and composure at the highest level can produce genuine miracles, and it remains the single piece of footage most likely to convince a sceptic that competitive gaming is worth watching.</p>',
       },
     ]
+  },
+  {
+    id: 'nintendo-powerfest-1994',
+    title: 'Nintendo PowerFest \'94',
+    year: 1994,
+    game: 'Super Mario Kart / Super Mario All-Stars / Ken Griffey Jr. Home Run Derby',
+    organizer: 'Nintendo of America',
+    location: 'United States (touring)',
+    era: '1990s',
+    description: 'A national Nintendo competition whose custom cartridge became the rarest SNES game in existence — Nintendo made 33, then destroyed 31 of them for parts.',
+    longDescription: 'PowerFest \'94 was Nintendo of America\'s touring competition for that year, following the model established by the Nintendo World Championships. Competitors played a single custom cartridge containing three timed challenges — a Super Mario Kart time trial, a Super Mario All-Stars segment, and a round of Ken Griffey Jr. Home Run Derby — and were ranked on a combined score, with teams advancing through regional rounds toward a final.\n\nWhat makes PowerFest historically significant is what happened to the hardware afterwards. Nintendo produced 33 of the custom cartridges, and once the competition ended, Nintendo of America dismantled 31 of them for parts. Two survive. That makes the PowerFest \'94 cartridge the rarest Super Nintendo game in existence by a wide margin, and in 2012 the collector J.J. Hendricks acquired one for $12,000. The two survivors are not even identical: one is a preliminary-round build, in which a home run in the Ken Griffey segment is worth 10,000 points, and the other is the finals build, in which Nintendo had rescored a home run at 1,000,000 points — a change that completely reshapes which of the three games a competitor should prioritise.',
+    winner: 'Not widely documented; the tournament is remembered chiefly for its cartridge',
+    keyFacts: [
+      'Competitors played one custom cartridge containing timed Super Mario Kart, Super Mario All-Stars and Ken Griffey Jr. challenges',
+      'Nintendo made 33 cartridges and then dismantled 31 of them for parts after the event',
+      'The two survivors make it the rarest Super Nintendo game in existence',
+      'Collector J.J. Hendricks acquired one of the two for $12,000 in 2012',
+      'The two surviving carts differ: a home run is worth 10,000 points in one and 1,000,000 in the other',
+    ],
+    sections: [
+      {
+        title: 'Scarcity by Destruction',
+        html: '<p>Most rare games are rare by accident — a small print run, a cancelled release, a warehouse fire. PowerFest \'94 is rare by policy. Nintendo built exactly as many cartridges as the competition required, and when the competition was over the cartridges were no longer required, so they were broken down and their components recovered. From Nintendo\'s point of view in 1994 this was simply tidy asset management. Nobody in the building appeared to consider that they were destroying the future rarest artefact of the console.</p><p>The result is an object whose value derives entirely from an internal administrative decision rather than from anything about the game itself. The software on the cartridge is not remarkable; it is three commercially available games, cut into timed segments. What is remarkable is that Nintendo made thirty-three of something and then chose to unmake thirty-one.</p>',
+      },
+      {
+        title: 'Two Cartridges, Two Different Games',
+        html: '<p>The scoring difference between the two survivors is the detail collectors find most interesting, because it is a window into how Nintendo tuned the competition in real time. In the preliminary build, a Ken Griffey home run scores 10,000 points, which places it roughly in balance with what a competitor can earn in the Mario Kart and All-Stars segments. In the finals build, a home run scores 1,000,000 — a hundredfold increase that makes the baseball segment overwhelmingly the most valuable thing on the cartridge.</p><p>That is not a small adjustment; it is a different competition. It means the optimal strategy in the final round bore little resemblance to the optimal strategy that qualified you for it, and that finalists arrived having trained for a scoring system that no longer applied. Whether that was deliberate — a way of preventing preparation from dominating the final — or simply a late balance patch, Nintendo has never said.</p>',
+      },
+    ]
+  },
+  {
+    id: 'dwango-doom-1994',
+    title: 'DWANGO: Paying to Deathmatch',
+    year: 1994,
+    game: 'Doom / Doom II / Heretic / Duke Nukem 3D',
+    organizer: 'Bob Huntley and Kee Kimbrell',
+    location: 'Houston, Texas, USA',
+    era: '1990s',
+    description: 'Before the internet was practical for gaming, ten thousand people were paying $9.95 a month to dial a phone number in Texas so they could shoot each other in Doom.',
+    longDescription: 'DWANGO — Dial-up Wide-Area Network Game Operation — was founded in 1994 in Houston, Texas by Bob Huntley and Kee Kimbrell, and it is the first commercially successful competitive online gaming service. The first version shipped alongside the shareware release of Heretic. The mechanism was crude and effective: a player paid a subscription, ran the DWANGO client, and the client dialled a DWANGO server over a modem. The interface was ASCII. Once connected, players sat in a lobby, chatted, and assembled matches for the game of their choice — which in practice meant Doom, and then Doom II, Heretic, Duke Nukem 3D, Blood and Shadow Warrior.\n\nThe crucial detail is the phone call. Initially there was one server, and it had a Houston telephone number, which meant that anyone outside the Houston local calling area was paying long-distance charges on top of the subscription in order to play. Servers in other cities followed, but even so: by early 1995, ten thousand subscribers were paying $9.95 a month, some of them dialling in from as far away as Italy and Australia. People were making international phone calls to deathmatch. DWANGO\'s dial-in model was rendered obsolete by the spread of the actual internet, and the service ceased operating in October 1998.',
+    winner: 'N/A — a service rather than a tournament',
+    keyFacts: [
+      'Founded 1994 in Houston by Bob Huntley and Kee Kimbrell; first shipped with the shareware release of Heretic',
+      'Players dialled a DWANGO server by modem and used an ASCII lobby to arrange matches',
+      'By early 1995, ten thousand subscribers were paying $9.95 a month',
+      'Some subscribers dialled in from Italy and Australia, incurring international call charges to play',
+      'Killed by the rise of internet multiplayer; the service shut down in October 1998',
+    ],
+    sections: [
+      {
+        title: 'The Cost of Wanting to Play',
+        html: '<p>It is difficult to overstate what DWANGO\'s subscribers were willing to pay. The $9.95 monthly fee was the small part. The genuinely striking cost was the telephone call: a modem connection held open for the duration of a Doom session, billed at long-distance rates, from a household phone line that could not be used for anything else while the game was running. Somebody in Australia dialling Houston to play deathmatch in 1995 was making a decision with a real and recurring financial consequence.</p><p>They did it anyway, in numbers, which is the whole point. DWANGO is the earliest hard evidence that competitive online multiplayer was not a feature people would enjoy if it were convenient — it was something they wanted badly enough to pay through the nose for, under conditions of considerable technical friction. Every assumption the games industry now makes about online play rests on a proposition that DWANGO tested first, at $9.95 a month plus tolls.</p>',
+      },
+      {
+        title: 'Obsoleted by Success',
+        html: '<p>DWANGO died of exactly the thing it had proven. The service existed because there was no practical way for two strangers to find each other and establish a low-latency connection to play a game, and it solved that problem with a phone number and a server. Within four years, the internet had solved the same problem for free, and id Software and its successors had begun building server browsers directly into their games.</p><p>The service shut down in October 1998, having demonstrated a market and then been eaten by it. Its architecture — a paid lobby, a matchmaking list, a chat room around a game — survives essentially unchanged in every multiplayer title shipped since, which is a rather better legacy than most companies get for four years of work.</p>',
+      },
+    ]
+  },
+  {
+    id: 'major-league-gaming-founding',
+    title: 'Major League Gaming Is Founded',
+    year: 2002,
+    game: 'Halo (and later Halo 2)',
+    organizer: 'Sundance DiGiovanni and Mike Sepso',
+    location: 'New York City, USA',
+    era: '2000s',
+    description: 'Two men in New York decided console gaming deserved a professional league with a season, a circuit and a television deal — and then went and got one.',
+    longDescription: 'Major League Gaming was founded in 2002 by Sundance DiGiovanni and Mike Sepso in New York City, with a stated aim that sounded faintly absurd at the time: to elevate computer and console game tournaments into viable competitive and spectator events. The competitive scene that existed in 2002 was almost entirely PC-based — Quake, Counter-Strike, StarCraft — organised around LAN events and, in Korea, a genuine broadcast infrastructure. Console competition was regarded as a contradiction in terms, the domain of party games and split-screen rather than of professionals.\n\nMLG built its circuit around Halo, and then Halo 2, running official tournaments across the United States and Canada with a season structure, standings, and professional teams. The bet paid off in 2006, when MLG became the first televised console gaming league in the United States: the Halo 2 Pro Series was broadcast by USA Network as the Boost Mobile MLG Pro Circuit. The organisation went on to define North American console esports for a decade, and on 31 December 2015 it was reported that substantially all of MLG\'s assets had been acquired by Activision Blizzard for $46 million.',
+    winner: 'N/A — a league rather than a single event',
+    keyFacts: [
+      'Founded in 2002 by Sundance DiGiovanni and Mike Sepso, based in New York City',
+      'Built its circuit around console play — Halo and then Halo 2 — when competitive gaming was almost entirely PC-based',
+      'Became the first televised console gaming league in the US in 2006, with Halo 2 on USA Network',
+      'Ran a season-and-standings structure with professional teams across the US and Canada',
+      'Substantially all of MLG\'s assets were acquired by Activision Blizzard for $46 million at the end of 2015',
+    ],
+    sections: [
+      {
+        title: 'The Console Heresy',
+        html: '<p>MLG\'s founding premise was, in 2002, close to disreputable. Competitive gaming meant a keyboard and mouse. The prevailing view among PC players — held with some vehemence — was that a thumbstick was too imprecise an instrument for serious competition, and that console play was therefore recreational by definition. Building a professional league on Halo was, in that context, a deliberate provocation as much as a business plan.</p><p>It was also correct, for reasons that had nothing to do with input precision. Console games had vastly more players, sold through retail channels that reached ordinary households, and — critically — Halo was designed for four people in a room, which meant its competitive scene was social and local before it was ever professional. MLG did not have to persuade people to start playing Halo competitively. It had to find the people already doing it in living rooms and give them a structure, a season and somewhere to go.</p>',
+      },
+      {
+        title: 'Getting Esports on Television',
+        html: '<p>The USA Network broadcast in 2006 is the moment the argument was settled, and it is worth remembering how strange the proposition was. Televising video games had been tried — Starcade in the 1980s, various one-off specials since — and had reliably failed, because a game designed to be played is not automatically a game that can be watched. Halo 2 on a split-screen feed, with commentary, running as a series on a mainstream cable network, was a genuine test of whether spectating was a thing an American audience would do.</p><p>The answer, in 2006, was a qualified yes, and the qualification mattered less than the precedent. Every subsequent attempt to build a spectator business around console competition in North America is working in a market that MLG demonstrated existed — and Activision Blizzard\'s $46 million valuation of the assets in 2015 is the industry\'s own assessment of what that demonstration turned out to be worth.</p>',
+      },
+    ]
   }
 ];
