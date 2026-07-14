@@ -433,5 +433,95 @@
         html: '<p>Beyond its beauty, the manual had to introduce players to a genre-blending game. Secret of Mana was a real-time action-RPG built around the innovative "Ring Command" system, radial menus that paused the action to let players choose weapons, magic, and items, and it featured charge-based attacks and a deep magic system. Most distinctively, it supported three-player cooperative play through the SNES Multitap, letting friends each control a party member simultaneously — a rare feature for an RPG of the era. The booklet laid out these systems for players encountering something quite unlike the turn-based RPGs of the time, making it both a beautiful object and a practical guide to one of the SNES\'s most beloved and forward-thinking games.</p>',
       },
     ]
+  },
+  {
+    id: 'wasteland-paragraph-book',
+    title: 'Wasteland — The Paragraph Book',
+    game: 'Wasteland',
+    platform: 'Apple II / C64 / MS-DOS',
+    year: 1988,
+    publisher: 'Electronic Arts / Interplay',
+    era: '1980s',
+    pageCount: 'Paragraph booklet plus manual',
+    description: 'Most of Wasteland\'s story was not in the game. It was printed in a booklet, and the game told you which numbered paragraph to read — including paragraphs that were deliberate lies planted to catch cheats.',
+    longDescription: 'Wasteland shipped with a printed collection of numbered paragraphs. At the appropriate moment the game would instruct the player to read paragraph 47, or 112, and the booklet would supply the encounter, the conversation, or the clue. This is where a substantial portion of the game\'s writing actually lives — not on the disk, but on paper in the box.\n\nThe universal assumption at the time was that this was copy protection, and it functioned as such: anyone playing a pirated copy would be missing story content and, critically, clues needed to progress. But according to the game\'s own creators, that was not the primary motivation. Disk space was simply at a premium, and it was cheaper in resources to print the prose than to store it. Copy protection was a happy side effect of a storage constraint.\n\nThe developers then had fun with it. Because a reader could obviously just sit down and read the entire booklet from cover to cover, the paragraphs include an entire fabricated storyline about a mission to Mars — pure fiction, planted to mislead anyone reading out of sequence — along with a set of bogus passwords that punish cheaters with consequences ranging from having a character\'s sex changed to detonating a bomb.',
+    keyFacts: [
+      'Much of Wasteland\'s prose was printed in a numbered paragraph booklet rather than stored on disk',
+      'The game directed players to read specific numbered paragraphs at the appropriate moments',
+      'Widely assumed to be copy protection, but the creators say the real reason was a shortage of disk space',
+      'The booklet contains a fake storyline about a mission to Mars, planted to mislead people reading ahead',
+      'Bogus passwords in the booklet punished cheaters — outcomes included character sex changes and a detonating bomb',
+    ],
+    notableFor: 'A manual containing deliberate fiction designed to entrap the reader',
+    sections: [
+      {
+        title: 'The Constraint That Looked Like a Feature',
+        html: '<p>The paragraph book is a perfect illustration of how thoroughly hardware limitations shaped the texture of 1980s games. Text is cheap to print and expensive to store when your medium is a floppy disk, so the economically rational move is to put the words on paper and keep the disk for things that must be interactive. The result reads, thirty-five years later, as a bold design choice about the relationship between a game and its physical object. It was, in fact, an accountant\'s decision.</p><p>What makes it interesting is that the constraint produced something genuinely good. Reading paragraph 112 aloud from a booklet, at the table, while the game waits, is a fundamentally different experience from watching text scroll on screen — it is closer to tabletop role-playing, which is precisely the tradition Wasteland came from. The limitation pushed the game toward its own roots.</p>',
+      },
+      {
+        title: 'Booby-Trapping the Documentation',
+        html: '<p>The fake Mars storyline is the detail that elevates the whole apparatus. The designers understood perfectly well that the booklet\'s weakness was that it could simply be read — nothing stops a player from working through every paragraph in order and spoiling the game for themselves, or from using it to shortcut puzzles. So they salted it. Anyone reading out of sequence encounters an elaborate, entirely fictional narrative that goes nowhere, and anyone tempted by the passwords printed within finds that using them can blow up their party.</p><p>This is copy protection as practical joke, and it is very much of its era — a period in which developers regarded pirates and cheats not merely as a commercial problem but as adversaries worth outwitting in person. The paragraph book does not simply withhold information from the dishonest. It actively lies to them.</p>',
+      },
+    ]
+  },
+  {
+    id: 'civilization-manual',
+    title: 'Sid Meier\'s Civilization — The Manual and the Civilopedia',
+    game: 'Sid Meier\'s Civilization',
+    platform: 'MS-DOS',
+    year: 1991,
+    publisher: 'MicroProse',
+    era: '1990s',
+    pageCount: 'Full manual plus an in-game encyclopedia',
+    description: 'MicroProse shipped a strategy game with a reference encyclopedia — and then built a second one into the game itself, with hyperlinks, years before most people had seen a hyperlink.',
+    longDescription: 'Civilization arrived in 1991 as a turn-based strategy game of extraordinary scope, and MicroProse understood that a game spanning six thousand years of human history could not be explained by a quick-reference card. The printed manual is a substantial document, structured as much like a textbook as a rulebook, and it was accompanied by something more unusual: the Civilopedia.\n\nThe Civilopedia — written by B.C. Milligan, Jeffery L. Briggs and Bruce Shelley — is an in-game encyclopedia presenting the accumulated knowledge of the civilisations the player is building. Crucially, it was navigable by clicking entries to jump to pictures, descriptions and statistics, which is to say it was hypertext, shipped in a commercial DOS game in 1991, several years before the World Wide Web would make that interaction pattern familiar to anyone. A player who wanted to know what Bronze Working actually was, or why Democracy behaved the way it did, could simply click through and find out.\n\nThe design consequence is significant. Civilization is a game about the relationship between technologies, governments, wonders and units, and the Civilopedia makes that relational structure directly explorable. The manual explains how to play; the Civilopedia explains what the things you are playing with mean.',
+    keyFacts: [
+      'The Civilopedia was written by B.C. Milligan, Jeffery L. Briggs and Bruce Shelley',
+      'It functioned as hypertext — clicking an entry jumped to its pictures, description and statistics',
+      'It shipped in a commercial DOS game in 1991, before the web made hyperlinks commonplace',
+      'The printed manual is structured closer to a textbook than a conventional rulebook',
+      'Both documents have been extensively archived and preserved by the Civilization fan community',
+    ],
+    notableFor: 'Shipping a clickable encyclopedia inside a 1991 DOS game',
+    sections: [
+      {
+        title: 'Documentation as Part of the Design',
+        html: '<p>Civilization poses a problem that few games of its era had to face: it is a systems game whose systems are drawn from real history, and the player\'s enjoyment depends substantially on understanding what those systems represent. Knowing that Bronze Working unlocks Phalanxes is a rule. Knowing what bronze working <em>was</em>, and why it produced heavier infantry, is what makes the rule feel like history rather than arbitrary progression.</p><p>The Civilopedia exists to carry that second kind of knowledge, and putting it inside the game rather than only in the box was the crucial call. A manual on the desk is consulted grudgingly. An encyclopedia one click away, while you are actively wondering why your Legion just lost, is consulted constantly — and each consultation deepens the fiction that you are running a civilisation rather than a spreadsheet.</p>',
+      },
+      {
+        title: 'Hypertext Before the Web',
+        html: '<p>It is worth pausing on the chronology. The Civilopedia shipped in 1991. Tim Berners-Lee\'s first web page went online that same year, and the web would not be a meaningful part of ordinary computing life for another three or four. The overwhelming majority of Civilization\'s players in 1991 had never used a hyperlink in their lives, and here was a DOS game presenting them with a cross-referenced, clickable body of knowledge and simply expecting them to work it out.</p><p>They did, immediately, because the interaction is intuitive in a way that took the rest of the software industry years to fully internalise. The Civilopedia is a small but genuine piece of evidence that games were experimenting with information architecture well ahead of the mainstream — and it remains a fixture of the series more than thirty years later, largely unchanged in concept.</p>',
+      },
+    ]
+  },
+  {
+    id: 'falcon-4-manual',
+    title: 'Falcon 4.0 — The Manual as Flight School',
+    game: 'Falcon 4.0',
+    platform: 'MS-DOS / Windows',
+    year: 1998,
+    publisher: 'MicroProse / Hasbro Interactive',
+    era: '1990s',
+    pageCount: 'A multi-volume documentation set',
+    description: 'Falcon 4.0 did not ship with a manual. It shipped with a library — a Flight Handbook, a Cadet\'s Guide and a Communications Handbook, because one book could not hold an F-16.',
+    longDescription: 'Falcon 4.0, developed by MicroProse and published by Hasbro Interactive in 1998, simulated the F-16 Fighting Falcon at a level of fidelity that made conventional game documentation impossible. The response was to abandon the idea of a single manual entirely. The package shipped as a documentation set: a Flight Handbook, a Cadet\'s Guide, a Communications Handbook, and quick-reference material — separate volumes, each addressing a different domain of competence, in the manner of actual military and aviation documentation rather than of a games manual.\n\nThe structure is the point. Learning Falcon 4.0 is not a matter of learning controls; it requires understanding avionics, radar modes, weapons employment, air traffic and radio communication procedure, and the tactical picture of a dynamic campaign that continues to run whether or not the player is flying. No single introductory chapter can bridge that, so the documentation instead does what a flight school does: it separates the disciplines and teaches them in parallel. The Cadet\'s Guide exists precisely because someone has to be taken from zero to airborne, and the Flight Handbook exists because after that they have to actually operate the aircraft.\n\nThe documentation has outlived the publisher. The community that maintains Falcon BMS — the long-running, still-updated fan continuation of the simulation — has produced its own manuals that supersede the originals, and the entire original set has been extensively archived.',
+    keyFacts: [
+      'Developed by MicroProse and published by Hasbro Interactive in 1998',
+      'Shipped as a set of separate volumes rather than a single manual',
+      'The set included a Flight Handbook, a Cadet\'s Guide and a Communications Handbook',
+      'The structure mirrors real aviation and military documentation rather than games documentation',
+      'The community-maintained Falcon BMS project has since produced its own manuals superseding the originals',
+    ],
+    notableFor: 'Documentation so extensive it had to be split into separate handbooks',
+    sections: [
+      {
+        title: 'When the Game Cannot Teach Itself',
+        html: '<p>Modern design orthodoxy holds that a game should teach itself — that anything requiring a manual represents a failure of onboarding. Falcon 4.0 is the standing counterexample, and it is not a failure. The thing being simulated is genuinely, irreducibly complicated. An F-16\'s radar has modes, and the modes matter, and no amount of clever tutorial design can compress the understanding of when to use which into a contextual pop-up without simply throwing away the fidelity that is the entire reason the simulation exists.</p><p>The documentation set is therefore an honest admission rather than a shortcoming. Falcon 4.0 tells the player, on opening the box, that they are about to undertake a course of study — and the players who wanted a course of study, who form one of the most durable communities in PC gaming, found exactly the game they were looking for.</p>',
+      },
+      {
+        title: 'A Manual That Outlived Its Publisher',
+        html: '<p>MicroProse as it existed in 1998 is gone; Hasbro Interactive is gone; the retail product has been unavailable for decades. Falcon 4.0 is still being played, still being patched, and still being documented — by the Falcon BMS community, which has spent years rebuilding the simulation and rewriting its manuals to match.</p><p>That is a remarkable afterlife for a set of printed handbooks, and it says something about what deep documentation actually buys. A game that explains itself only through its interface dies with its interface. A game that ships a body of knowledge hands its community something they can maintain, extend and pass on — and Falcon 4.0\'s manuals are the reason a 1998 flight simulator has a living, working population of pilots a quarter of a century later.</p>',
+      },
+    ]
   }
 ];
