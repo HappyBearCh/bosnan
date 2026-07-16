@@ -371,4 +371,82 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'parallax-scrolling',
+    title: 'Parallax Scrolling',
+    subtitle: 'How 2D games faked depth by borrowing a trick from 1930s animation, and why the Mega Drive built it into silicon',
+    category: 'Technology',
+    summary: 'Move the background slower than the foreground and a flat scene acquires depth — the same principle that makes distant hills drift lazily past a car window while the roadside blurs. Games borrowed it from the multiplane camera of 1930s animation, deployed it in arcades from 1981, and by 1988 Sega had committed it to hardware. For a decade it was the primary means by which two dimensions pretended to be three.',
+    readTime: '9 min read',
+    sections: [
+      {
+        title: 'A Trick Older Than Games',
+        html: '<p>Parallax is not a computing idea. It is a fact about vision: objects nearer the observer appear to move more across the visual field than distant ones, which is why the fence beside a moving car is a blur while the mountains behind it barely shift. Traditional animation had been exploiting this since the 1930s with the multiplane camera, a rig that separated a scene into physically distinct layers of artwork at different distances from the lens and moved them at different rates. Depth from flat drawings, achieved mechanically.</p><p>Games inherited the technique directly. Jump Bug (1981) used a limited form in the arcade; Moon Patrol followed in 1982 with the full expression of the idea, running three separate background layers at three different speeds behind the playfield. Nothing about the underlying principle had changed since Disney\'s animators worked it out — what changed was that the layers were now made of pixels and the camera was a raster display.</p>',
+      },
+      {
+        title: 'What the Hardware Actually Does',
+        html: '<p>The mechanic is disarmingly simple in principle. A game holds several background layers and, each frame, offsets each one by a different amount in the same direction. Layers moved further per frame read as nearer; layers that barely budge read as distant. Nothing is rotated, scaled, or projected — the depth is entirely in the differential rates, and the player\'s visual system supplies the rest for free.</p><p>Layers need not sit behind the action. Placing one in front of the playfield produces foreground elements that sweep past the camera — pillars, foliage, crowd silhouettes — which deepens the scene and can also deliberately obscure the player\'s view, an effect designers have used both to enrich atmosphere and to make life harder. The playfield itself is just one layer among several, distinguished only by being the one the player interacts with.</p>',
+      },
+      {
+        title: 'The Genesis Builds It In',
+        html: '<p>Sega\'s Mega Drive, in 1988, was the first console to support true hardware parallax scrolling: two background planes that the video display processor could scroll at independent rates without the CPU intervening. Its VDP went further, supporting line-scrolling and row-scrolling — the ability to offset individual scanlines or rows differently — which allowed effects considerably more elaborate than two flat planes sliding past each other. Waves, heat haze, curving roads, and pseudo-3D floors all fall out of the same capability.</p><p>This was a meaningful competitive advantage and Sega used it. The visual signature of the Genesis era — those layered, rushing backgrounds in Sonic and Thunder Force — is substantially a consequence of parallax being free in hardware rather than expensive in software. The lineage ended with the Saturn, the last home console to support hardware parallax, which could drive six independent scrolling planes; by then the industry was moving to polygons, and depth would be computed rather than implied.</p>',
+      },
+      {
+        title: 'Faking It Without Silicon',
+        html: '<p>Systems without hardware support did it anyway, using a technique that reveals how intimate 1980s programming was with the display itself. The trick is to wait for the horizontal blank — the brief interval as the electron beam returns to start the next scanline — and change the layer\'s scroll position in that gap, before the hardware draws the line. Do this every scanline and different bands of the screen can scroll at different speeds despite the machine having no notion of multiple planes. These are raster effects, and they require code synchronised to the beam sweeping across a CRT.</p><p>The C64 and countless arcade boards produced convincing parallax this way, which is worth dwelling on: the programmer is not describing a scene to a graphics system but manually intervening in the act of drawing, dozens of times per frame, timed to microseconds. It is the clearest illustration of what the phrase "close to the metal" actually meant. When the Genesis put parallax in silicon it was not introducing a new effect — it was industrialising something programmers had been hand-crafting against the raster for years, and freeing them to spend those cycles on something else.</p>',
+      },
+    ],
+  },
+  {
+    id: 'galoob-game-genie-lawsuit',
+    title: 'Galoob, Nintendo, and the Right to Alter Your Game',
+    subtitle: 'The 1992 ruling that a cheat device does not infringe copyright, and what it established about who controls how you play',
+    category: 'Business',
+    summary: 'Nintendo sued to kill the Game Genie, arguing that a device altering its games created infringing derivative works. The Ninth Circuit disagreed in 1992, holding that the Game Genie enhanced rather than replaced Nintendo\'s audiovisual displays, and that Nintendo had shown no market harm — if anything, the device required buying authentic cartridges. The Supreme Court declined to hear it, leaving a durable precedent about modification.',
+    readTime: '10 min read',
+    sections: [
+      {
+        title: 'What the Device Did',
+        html: '<p>The Game Genie, made by Lewis Galoob Toys, sat between cartridge and console and intercepted the data flowing between them, allowing a player to alter up to three features of a game — infinite lives, a different starting level, altered physics. It changed nothing permanently. The cartridge was untouched, the code on it unmodified; remove the device and the game reverted exactly to what Nintendo had shipped. The alteration existed only while the Genie was in the slot.</p><p>Nintendo\'s objection was that the resulting audiovisual display was a derivative work of its copyrighted games, created without permission. This was not a frivolous argument. Copyright does grant the holder control over derivative works, and a Game Genie session unquestionably produces something on screen that Nintendo did not author. The question the courts had to resolve was whether an ephemeral, user-controlled modification that leaves no fixed artefact is the kind of thing copyright\'s derivative-work right was meant to reach.</p>',
+      },
+      {
+        title: 'Enhance, Not Replace',
+        html: '<p>The Ninth Circuit\'s answer in 1992 turned on a distinction that has proved durable: the Game Genie merely enhanced the audiovisual display rather than replacing it. It did not incorporate Nintendo\'s work into a new work; it did not exist independently of the original; it produced nothing that could be sold, distributed, or possessed apart from the cartridge it was augmenting. The court held it was not a derivative work — and added that even if the displays were derivative, Galoob would not be liable, because the use was fair.</p><p>The fair-use analysis leaned heavily on harm, and here Nintendo\'s case collapsed on the evidence. The company could not demonstrate any injury to its market or any likelihood of one. It offered no proof of reduced sales attributable to the device. The court pointed out the obvious corollary: a Game Genie is useless without an authentic Nintendo cartridge, so if the device had any effect on Nintendo\'s sales, the plausible direction was upward — players buying games to experiment with. Nintendo was arguing that a product which required purchasing its products was damaging its business.</p>',
+      },
+      {
+        title: 'Why Nintendo Fought Anyway',
+        html: '<p>The economics of the suit make sense only if the dispute was never really about lost sales. Nintendo in 1992 exercised extraordinary control over its platform — the lockout chip governed what cartridges would run, the licensing programme governed who could make them, and Nintendo of America\'s content guidelines governed what those games could depict. The Game Genie was a device that let players step outside all of it, in their own living rooms, and change a Nintendo game into something Nintendo had not approved.</p><p>Understood that way, the litigation was about authority rather than revenue. If a game as shipped is the only legitimate version, then the publisher determines the entire experience; if players may alter it at will, the shipped version is a starting point and the publisher\'s control ends at the sale. The Ninth Circuit affirmed in May 1992 and the Supreme Court denied certiorari in 1993, settling the matter: the player may change the game. Nintendo lost the argument about who owns the play.</p>',
+      },
+      {
+        title: 'The Precedent\'s Long Reach',
+        html: '<p>Galoob has outlived the hardware that occasioned it because the principle it established keeps recurring in new costumes. Every subsequent fight about mods, trainers, ROM patches, accessibility tools, texture packs, and emulator enhancements circles the same question the Ninth Circuit answered: does a temporary, user-side alteration of a copyrighted work, which requires possessing a legitimate copy and produces nothing separable from it, infringe? The court said no, and that answer underpins a great deal of what modding communities have assumed they may do.</p><p>The limits matter too, and later cases explored them. Galoob does not licence distributing modified copies, circumventing protection measures, or building businesses on someone else\'s assets — it concerns the narrow case of a device that alters a display in real time for the person who owns the game. But that narrow case turns out to cover a lot of ground, and the reasoning has aged well precisely because it attends to what the modification actually is rather than to whether the rights holder objects. Nintendo objected strenuously and comprehensively. The court asked what harm had occurred, found none, and let players keep their cheat devices.</p>',
+      },
+    ],
+  },
+  {
+    id: 'sprite-flicker-slowdown',
+    title: 'Flicker and Slowdown',
+    subtitle: 'The NES could show 64 sprites but only 8 per scanline — and the two most familiar failure modes of the era have entirely different causes',
+    category: 'Technology',
+    summary: 'Anyone who played an NES remembers characters strobing in and out of view when the screen filled up, and the whole game lurching into slow motion when things got busy. They look like the same problem and are not. Flicker is a deliberate programming technique working around a hard limit in the graphics chip; slowdown is the CPU failing to finish its work in time. Understanding the difference explains much of how 8-bit games were built.',
+    readTime: '9 min read',
+    sections: [
+      {
+        title: 'Eight Per Line',
+        html: '<p>The NES\'s picture processing unit can track 64 hardware sprites, which sounds generous, and can draw only 8 of them on any single television scanline, which is the constraint that actually governs everything. The reason is architectural: as the PPU prepares each line it walks the sprite list in order, finds the first eight that intersect that line, and copies their attributes into a small internal buffer. The buffer holds eight. There is no ninth slot. Sprites beyond the eighth on a given line are simply not drawn.</p><p>Left alone, this produces catastrophe. A boss made of six sprites plus two enemies and the player\'s bullets, all sharing a horizontal band, means somebody vanishes — and because the PPU takes the first eight in list order, the same somebody vanishes every frame. Objects disappearing permanently because of where they happen to sit vertically is not a graphical blemish; it is a game that cannot be played.</p>',
+      },
+      {
+        title: 'Flicker Is the Fix, Not the Fault',
+        html: '<p>So programmers made the loss democratic. Rather than let the hardware silently drop whichever sprites fell late in the list, they tracked what was competing for each scanline and rotated the sprite order every frame, so a different subset was sacrificed each time. Nothing disappears permanently; everything appears most of the time; and the visual signature of the compromise is the strobing that anyone who played Contra or Mega Man can picture instantly.</p><p>This reframes flicker considerably. It is not the console failing — it is a programmer noticing a hardware limit that would break the game and choosing the least destructive way to distribute the damage. A flickering sprite is being drawn, just not every frame, and it remains trackable by eye and hittable by the player. The alternative was invisible objects that kill you. Flicker is the sound of the workaround functioning correctly.</p>',
+      },
+      {
+        title: 'Slowdown Is a Different Machine',
+        html: '<p>Slowdown looks related and comes from somewhere else entirely: the CPU, not the PPU. Each frame the processor must update every object — physics, collisions, AI, timers — and hand the results to the graphics chip before the display needs them. Give it too many active objects and it does not finish in time; the frame is missed and everything proceeds in slow motion. This has nothing to do with the eight-sprite limit. A game can slow to a crawl with only a few sprites on screen if what those sprites are doing is expensive.</p><p>The two are confused because they appear together, and for an understandable reason: the conditions producing one usually produce the other. A screen crowded with enemies is simultaneously a heavy CPU load and a scanline-crowding problem, so slowdown and flicker arrive as a pair. There is also a genuine interaction — when the game slows, the flicker rate slows with it, so each strobe lasts longer and becomes much more noticeable. The visible flickering gets worse because the game is running slowly, which makes the two look like a single symptom of one underlying failure.</p>',
+      },
+      {
+        title: 'Designing Around the Ceiling',
+        html: '<p>Once these constraints are visible, a great deal of 8-bit design stops looking like style and starts looking like engineering. Enemies arriving in small waves, bosses built from a few large sprites rather than many small ones, level layouts that stagger encounters vertically rather than stacking them on one line, projectile limits that cap how many bullets can exist — none of these are arbitrary. Each is a way of staying under a ceiling the hardware imposes without negotiation.</p><p>The best developers turned the constraint into vocabulary. Deliberate slowdown, for instance, became a feature in shooters, where a screen saturated with bullets slows the game and gives the player a fractional advantage precisely when the difficulty peaks — a hardware failure recast as a mercy. And the flicker itself has become period signature: modern games imitating the NES often reproduce strobing sprites for authenticity, faithfully simulating a workaround for a limit their hardware does not have. What was once a programmer\'s reluctant compromise is now an aesthetic choice, which is about the strangest possible fate for a bug-avoidance technique.</p>',
+      },
+    ],
+  },
 ];

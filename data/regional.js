@@ -353,4 +353,76 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'final-fantasy-numbering',
+    title: 'The Final Fantasy Numbering Mess',
+    subtitle: 'How skipped Japanese releases left America with a Final Fantasy II that was really IV, and a III that was really VI',
+    game: 'Final Fantasy series',
+    region1: 'Japan',
+    region2: 'North America',
+    readTime: '7 min read',
+    summary: 'Square released six Final Fantasy games in Japan before North America had seen three. Rather than ship games out of order or leave gaps in the numbering, Square\'s American arm simply renumbered what it localised: Final Fantasy IV became Final Fantasy II, and Final Fantasy VI became Final Fantasy III. The two territories did not share a numbering scheme again until Final Fantasy VII, and a generation of American players learned the series under names that did not exist anywhere else.',
+    sections: [
+      {
+        title: 'Six Games, Three Releases',
+        html: '<p>The problem was arithmetic. Square was shipping Final Fantasy games in Japan at a pace its North American operation could not match — localisation was expensive, the Famicom and Super Famicom audiences did not map neatly onto their American equivalents, and Square America made its own judgements about which titles would sell. Final Fantasy II and III for the Famicom never crossed the Pacific. Final Fantasy V, for the Super Famicom, did not either.</p><p>That left a numbering problem with no elegant solution. The first Final Fantasy had arrived in North America under its own number in 1990. The next one Square chose to localise was the fourth. Calling it Final Fantasy IV would advertise to every buyer that they had missed two games they could not obtain; calling it Final Fantasy II implied a continuity that was, at the level of marketing if not of plot, broadly true — it was the second Final Fantasy an American player could actually buy. Square America chose the second option. When Final Fantasy VI followed, it became Final Fantasy III by the same logic.</p>',
+      },
+      {
+        title: 'The Consequences of a Convenient Lie',
+        html: '<p>The renumbering worked as marketing and created decades of confusion as history. American players who finished "Final Fantasy II" on the SNES and later encountered discussion of Final Fantasy IV had no straightforward way to know these were the same game. The actual Final Fantasy II and III — genuinely different games, with genuinely different systems — existed in conversations they could not participate in. The series\' internal history became something you had to be told rather than something you could infer from the boxes on a shelf.</p><p>The confusion compounded because the games were not interchangeable. Final Fantasy II\'s stat-growth-through-use system and Final Fantasy III\'s job system were significant designs that influenced later entries; a player tracing the series\' evolution through the American numbering would find inexplicable jumps, mechanics appearing from nowhere, and references to events they had never seen. The numbering told a coherent story about a series that had not actually happened.</p>',
+      },
+      {
+        title: 'Realignment at Seven',
+        html: '<p>Final Fantasy VII ended the divergence by the simplest available means: Square called it Final Fantasy VII everywhere. The PlayStation had made a worldwide simultaneous-ish release strategy viable, the marketing budget was enormous, and the game was going to be a global event in a way none of its predecessors had been. Keeping the American numbering would have meant releasing "Final Fantasy IV" as the follow-up to a game called Final Fantasy III, which was both absurd and commercially pointless when the Japanese number was going to appear in every magazine anyway.</p><p>So the numbers snapped back into alignment, and the American gap became permanent history rather than ongoing policy. Later re-releases eventually brought the missing entries west under their correct numbers, which resolved the availability problem while leaving the archaeological one intact: a substantial population of players still thinks of Final Fantasy VI as Final Fantasy III, because that is what it said on the cartridge they owned. The renumbering was a reasonable answer to a real constraint, and it is a useful reminder that the canonical version of a series\' history is often just whichever version got printed on the box in your territory.</p>',
+      },
+    ],
+  },
+  {
+    id: 'mega-man-box-art',
+    title: 'Mega Man\'s 24-Hour Box Art',
+    subtitle: 'Why the American cover of a beloved Japanese platformer depicts a middle-aged man in an ill-fitting jumpsuit holding a pistol',
+    game: 'Mega Man',
+    region1: 'Japan',
+    region2: 'North America',
+    readTime: '6 min read',
+    summary: 'Rockman\'s Japanese cover art presented the character as designed: a small blue robot with a cannon for an arm. The 1987 North American box for Mega Man showed something else entirely — a paunchy man in a blue and yellow jumpsuit aiming a handgun, drawn by an artist who had never seen the game and was given roughly a day to produce it. The result is among the most notorious pieces of art in the medium, and Capcom eventually made the joke official.',
+    sections: [
+      {
+        title: 'A Day to Draw a Character You Have Not Seen',
+        html: '<p>The explanation, when it finally emerged from the people involved, was not mysterious. The artist commissioned to produce the North American cover had never seen the game and had no access to the source material — no character designs, no screenshots, nothing establishing what Rockman actually looked like. The deadline was roughly twenty-four hours: Nintendo needed the artwork by the following day, and there was no time to obtain reference or ask questions.</p><p>Working from that brief — essentially, a title and a deadline — the artist produced what the title suggested. "Mega Man" describes a man. The resulting figure appears middle-aged, wears a blue and yellow jumpsuit that fits poorly, carries a conventional pistol, and bears no resemblance to the character in the game, who is a child-proportioned robot in blue and light blue armour whose weapon is his arm. Every individual decision is defensible given what the artist knew. The cumulative result is a cover that documents its own production conditions with unusual clarity.</p>',
+      },
+      {
+        title: 'Two Characters, One Game',
+        html: '<p>The gap between the territories was total. Japanese buyers of Rockman saw the character they were going to play, drawn in a style consistent with the game\'s design language. American buyers of Mega Man saw a man who does not appear in the game, holding a weapon that does not exist in it, in a colour scheme the character never wears. Both audiences then played the identical software.</p><p>What makes this more than an amusing anecdote is what it reveals about how North American publishing treated Japanese games in 1987. Box art was not understood as an extension of the work; it was a sales asset produced locally, quickly, and often by people with no relationship to the product. The prevailing theory held that American children would not buy a game with a cute Japanese robot on the cover, so the art was Westernised — made more adult, more armed, more conventionally heroic — by people guessing at what that meant. Mega Man is the most extreme surviving example, but the practice was routine, and a large number of NES-era American covers bear only a passing relationship to the games inside them.</p>',
+      },
+      {
+        title: 'Capcom Adopts the Mistake',
+        html: '<p>The cover\'s afterlife is the strangest part. Rather than quietly disowning it, Capcom eventually canonised the figure as a character in his own right — "Bad Box Art Mega Man" — a playable joke acknowledging that the company\'s American debut had been represented for decades by a man who had nothing to do with the game. The mistake became intellectual property.</p><p>This is a fitting resolution, because the cover has long since stopped functioning as a failure. It is one of the most recognisable images in game history, discussed far more than a competent piece of art would have been, and it endures precisely because it is so completely wrong. A generation of American players who grew up with that box remember it fondly, not despite the absurdity but because of it. An artist with one day and no reference produced, by accident, a more durable cultural artefact than most carefully-art-directed covers of the era managed on purpose.</p>',
+      },
+    ],
+  },
+  {
+    id: 'metal-gear-nes-port',
+    title: 'The Metal Gear Most of the West Played Was Not Kojima\'s',
+    subtitle: 'A three-month NES port with no Metal Gear in it introduced America to the series and outsold the original',
+    game: 'Metal Gear',
+    region1: 'Japan',
+    region2: 'North America',
+    readTime: '7 min read',
+    summary: 'Hideo Kojima\'s Metal Gear was an MSX2 game. The version that reached North America in June 1988 through Konami\'s Ultra Games label was a different piece of software: an NES port built in roughly three months by a separate team without Kojima\'s involvement, which cut the Metal Gear walking tank — the object the game is named after — and replaced it with a supercomputer. It sold over a million copies and defined the series for a continent.',
+    sections: [
+      {
+        title: 'Three Months and a Different Team',
+        html: '<p>The MSX2 Metal Gear was Kojima\'s design, built around the hardware\'s specific constraints — the machine could not render many moving sprites at once, which is a substantial part of why the game is about avoiding enemies rather than fighting them. The NES was the console with the American install base, so Konami commissioned a port. It went to a separate team, was completed in approximately three months, and Kojima was not involved in it.</p><p>The changes were not cosmetic. The MSX2 game opens with Solid Snake infiltrating underwater; the NES version drops him into a jungle by parachute alongside three other soldiers. The second alert phase is gone. The music is different. Big Boss\'s message after the credits is removed. And the Metal Gear itself — the bipedal nuclear-launch platform that gives the game and the entire subsequent series its name — does not appear at all, replaced by a supercomputer. The final confrontation of a game called Metal Gear does not contain a Metal Gear.</p>',
+      },
+      {
+        title: 'The Port Wins the Continent',
+        html: '<p>Ultra Games published it in North America in June 1988, and it sold more than a million copies. The MSX2, meanwhile, was essentially absent from the American market. The practical consequence is that for virtually every North American player, the NES version was not a port of Metal Gear — it simply was Metal Gear, the only version that existed, the game that established Solid Snake and the premise of the series on that continent.</p><p>Kojima has been consistently and publicly unimpressed. He has called the NES release a "pitiful title" and criticised it as too difficult relative to his original design, which is a pointed complaint given that the difficulty was not a design decision so much as a consequence of rebuilding someone else\'s game in three months on different hardware. His objection has had no effect on the historical record: the million-selling version is the one most Western players remember, and its success led Konami to commission further NES sequels — including Snake\'s Revenge — with no involvement from the series\' creator.</p>',
+      },
+      {
+        title: 'Which Version Is the Game?',
+        html: '<p>This is a genuinely awkward case for anyone trying to describe what Metal Gear is. The canonical text — the one the author made, the one the series\' later entries treat as history — ran on a computer almost nobody in North America owned. The text that actually reached the audience and built the franchise\'s Western reputation was an unauthorised-in-spirit rebuild that removed the title object. Both are called Metal Gear. Only one of them was played.</p><p>The situation persisted for years because the MSX2 original was not readily available in English until much later re-releases bundled it with the Metal Gear Solid games, at which point Western players could finally see the thing they had supposedly been playing all along. The gap between the two versions is a useful illustration of how thoroughly regional publishing decisions could rewrite a work — not through censorship or translation choices, which at least operate on the original, but by shipping a different game under the same name and letting a continent draw its conclusions from it.</p>',
+      },
+    ],
+  },
 ];

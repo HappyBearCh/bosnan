@@ -406,4 +406,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'sonic-mania',
+    title: 'Sonic Mania',
+    platform: 'PC, PlayStation 4, Xbox One, Nintendo Switch',
+    year: 2017,
+    developer: 'Christian Whitehead, Headcannon, PagodaWest Games',
+    inspiredBy: 'Sonic the Hedgehog 1–3, Sonic & Knuckles, Sonic CD',
+    era: '2010s',
+    description: 'Sega spent two decades failing to make a good 2D Sonic game, then hired the fan who had already been making them — Christian Whitehead, whose Retro Engine had been reverse-engineering the feel of the Genesis originals since 2007.',
+    longDescription: 'Christian "Taxman" Whitehead, an Australian programmer, built the Retro Engine in 2007 for a fangame called Retro Sonic. The engine was designed specifically to produce 2D games in the idiom of 32-bit-and-below hardware — Genesis, SNES, Saturn — and it prioritised raster graphics and palette manipulation, the actual techniques of the era, rather than approximating the look with modern tools. What made Retro Sonic notable was that it was not a ROM hack or a modification of existing code; Whitehead had rebuilt Sonic\'s physics and feel from observation, and the result was more faithful than anything Sega had shipped.\n\nIn 2009 he demonstrated a Sonic CD concept running on his engine. Sega, to its considerable credit, hired him rather than issuing a cease-and-desist — and in 2011 confirmed an official Sonic CD re-release powered by the Retro Engine, followed by Whitehead\'s remasters of Sonic 1 and Sonic 2 for mobile in 2013. Development of an original game began in 2015, with Whitehead leading and the studios Headcannon and PagodaWest Games collaborating. Sonic Mania shipped in 2017 as the first genuinely acclaimed 2D Sonic game since the Genesis era, and its success rested on an uncomfortable premise: the people who understood what made classic Sonic work were the fans who had spent a decade studying it, not the company that owned it.',
+    keyFacts: [
+      'Christian Whitehead built the Retro Engine in 2007 for the fangame Retro Sonic, rebuilding Sonic\'s physics from observation rather than modifying existing code',
+      'The engine targets raster graphics and palette manipulation — the actual techniques of Genesis-era hardware',
+      'Sega hired Whitehead after his 2009 Sonic CD engine demo rather than shutting the project down',
+      'He delivered official Sonic CD (2011) and Sonic 1 and 2 mobile remasters (2013) before Mania began development in 2015',
+      'Co-developed with Headcannon and PagodaWest Games and released in 2017 to the best reception a 2D Sonic had received in over twenty years',
+    ],
+    sections: [
+      {
+        title: 'The Fan Who Did the Homework',
+        html: '<p>What separates the Retro Engine from the long tail of Sonic fangames is methodological seriousness. Whitehead did not modify Sonic 2\'s code or approximate its behaviour with a modern physics library; he reconstructed the underlying systems — the slope handling, the momentum, the specific way Sonic accelerates and loses speed — closely enough that the result felt correct to people who had spent their childhoods internalising it. That fidelity is unglamorous, extremely difficult, and precisely what a decade of official 2D Sonic games had failed to achieve.</p><p>The engine\'s design choices reveal the same discipline. Building around raster effects and palette manipulation rather than modern rendering is not nostalgia for its own sake; those techniques produce specific visual behaviours that define how the originals look in motion, and reproducing the look without reproducing the technique gets you something that resembles a screenshot but not a game. Whitehead understood the hardware well enough to know which constraints were load-bearing.</p>',
+      },
+      {
+        title: 'Sega Hires Its Own Fandom',
+        html: '<p>The 2009 Sonic CD demo put Sega at a familiar corporate fork. The standard response to an unauthorised project using your intellectual property is a legal letter, and the games industry has issued thousands of them, frequently to fans whose only offence was excessive devotion. Sega instead recognised that Whitehead had built something it could not build, and contracted him. The 2011 Sonic CD release, and the 2013 Sonic 1 and 2 mobile remasters, were the trial period; Sonic Mania was the payoff.</p><p>The implication is not especially comfortable for Sega, and the company deserves credit for accepting it anyway. Sonic Mania\'s reception — the first 2D Sonic in over two decades that people unreservedly liked — amounted to a public finding that the franchise\'s custodians had lost the thread and that outsiders had kept it. The lesson generalises beyond Sonic: a fan community that has spent years studying why something worked can accumulate expertise that the rights holder, reorganised and re-staffed across multiple hardware generations, simply no longer possesses. Most publishers respond to that expertise with lawyers. Sega hired it, and got the best game its flagship character had starred in since the Genesis.</p>',
+      },
+    ],
+  },
+  {
+    id: 'streets-of-rage-4',
+    title: 'Streets of Rage 4',
+    platform: 'PC, PlayStation 4, Xbox One, Nintendo Switch',
+    year: 2020,
+    developer: 'Dotemu, Lizardcube, Guard Crush Games',
+    inspiredBy: 'Streets of Rage 1–3 (Sega Genesis)',
+    era: '2020s',
+    description: 'A sequel arriving twenty-six years after Streets of Rage 3, built by three small European studios on a licence Sega granted them — and made by a core team of roughly five people.',
+    longDescription: 'Streets of Rage 4 exists because of an aborted plan. After finishing Wonder Boy: The Dragon\'s Trap, Lizardcube artist Ben Fiquet wanted to remaster the original Streets of Rage games, but the programmer he needed had moved on to a personal project. Rather than abandon the idea, Fiquet and publisher Dotemu approached Sega with a larger proposal: not a remaster but a genuine sequel to a trilogy that had been dormant since 1994. Sega agreed and licensed the franchise, and production began at the start of 2018.\n\nThe execution was collaborative and small. Dotemu, Lizardcube, and Guard Crush Games co-developed, with Guard Crush contributing a modified version of the engine from its own game Streets of Fury — meaning the beat-\'em-up technology underpinning an official Sega sequel came from an independent studio\'s prior project. The core development team numbered around five people across the three companies. What they produced in 2020 was a continuation rather than a nostalgia exercise: Lizardcube\'s hand-drawn art replaced the pixel work entirely, the combat added modern systems, and the result was received as a legitimate fourth entry in a series whose last instalment predated most of its new audience.',
+    keyFacts: [
+      'Arrived twenty-six years after Streets of Rage 3 (1994), the trilogy\'s final Genesis entry',
+      'Began as a Lizardcube remaster plan that became a sequel proposal to Sega when the needed programmer was unavailable',
+      'Sega licensed the franchise to Dotemu; production started at the beginning of 2018',
+      'Built on a modified version of Guard Crush Games\' engine from their own game Streets of Fury',
+      'Core development team of roughly five people across the three collaborating studios',
+    ],
+    sections: [
+      {
+        title: 'Licensing Out the Crown Jewels',
+        html: '<p>Sega\'s decision here is the structurally interesting part. Streets of Rage is not a minor property — it is one of the defining series of the Genesis era and a pillar of the company\'s 16-bit identity. Handing it to Dotemu, Lizardcube, and Guard Crush, three small European studios with a combined headcount that would not fill a meeting room at a major publisher, was a bet that enthusiasm and specific expertise mattered more than scale.</p><p>It is the same bet Sega made with Christian Whitehead and Sonic Mania, and it worked for the same reason. A beat-\'em-up is a genre with precise, unfashionable requirements — hit feedback, crowd management, the exact weight of a punch — that a large studio without genre veterans would have to rediscover from scratch. Guard Crush had already built the technology on Streets of Fury; Lizardcube had already proven its art and its reverence on Wonder Boy. Sega was not taking a risk on unknowns so much as recognising that the relevant skills now lived outside the building.</p>',
+      },
+      {
+        title: 'Five People and Twenty-Six Years',
+        html: '<p>A core team of about five, producing a sequel to a beloved trilogy after a twenty-six-year gap, is a proposition that would have been dismissed as fantasy in most eras of the industry. It was viable in 2018 for concrete reasons: the engine existed already, digital distribution removed the manufacturing and retail barriers that once made small releases uneconomic, and the scope of a beat-\'em-up is bounded in a way that an open-world game\'s is not. Constraints that once made a genre look obsolete turned out to make it perfectly suited to a small team.</p><p>The gap itself did real work. Twenty-six years meant there was no institutional expectation to satisfy and no recent entry to be measured against — the developers were answering to memory rather than to a predecessor anyone had played lately. That freed them to rebuild the art entirely in Lizardcube\'s hand-drawn style rather than performing pixel-art nostalgia, and to modernise the combat rather than reproducing 1994\'s. The result is a sequel that feels continuous with the trilogy without imitating it, which is a far harder thing to achieve than a faithful remaster and a considerably better argument for the series still being alive.</p>',
+      },
+    ],
+  },
+  {
+    id: 'cuphead',
+    title: 'Cuphead',
+    platform: 'PC, Xbox One, Nintendo Switch, PlayStation 4',
+    year: 2017,
+    developer: 'Studio MDHR',
+    inspiredBy: 'Contra, Gunstar Heroes, 1930s rubber hose animation',
+    era: '2010s',
+    description: 'Two brothers remortgaged their homes to finish a run-and-gun game animated cel by cel in the style of 1930s cartoons — a production method the industry had abandoned as economically impossible.',
+    longDescription: 'Chad and Jared Moldenhauer began Cuphead in 2010 as a side project while holding full-time jobs in marketing and construction. The concept was a boss-rush run-and-gun in the lineage of Contra and Gunstar Heroes, rendered entirely in the visual language of American animation\'s golden age — the rubber hose style of Fleischer Studios, early Walt Disney, Warner Bros. Cartoons, MGM, and Walter Lantz, complete with the surrealism those studios traded in.\n\nThe method was the problem. Every asset was produced through traditional animation, drawn by hand with deliberate human imperfections left intact, and the soundtrack was written for and recorded with a full big band. This is not a stylistic filter applied to digital art; it is the actual labour of 1930s animation, and it consumed years. As the scope expanded the brothers left their jobs, and in 2015 they remortgaged their homes to finance completion — a detail that became central to press coverage of the game precisely because it is so stark an illustration of what the aesthetic cost. Released in 2017, Cuphead took Best Independent Game, Best Art Direction, and Best Debut Indie Game at The Game Awards, and was nominated for Best Action Game and Best Original Score.',
+    keyFacts: [
+      'Chad and Jared Moldenhauer began development in 2010 as a side project alongside full-time jobs',
+      'Every asset was hand-drawn using traditional animation, with human imperfections deliberately preserved',
+      'The soundtrack was written for and recorded with a full big band',
+      'The brothers quit their jobs and remortgaged their homes in 2015 to finish the game',
+      'Won Best Independent Game, Best Art Direction, and Best Debut Indie Game at The Game Awards 2017',
+    ],
+    sections: [
+      {
+        title: 'Paying 1930s Prices',
+        html: '<p>The reason no studio had made Cuphead before is that the arithmetic does not work. Hand-drawn cel animation is enormously labour-intensive — it is why the animation industry itself moved to digital production — and a game requires vastly more animation than a film, because every action needs frames for every state and the player controls when they occur. A publisher costing this out arrives at a number that cannot be justified against a run-and-gun\'s expected return, which is why the style existed in games only as imitation: digital art that gestures at the look without incurring the cost.</p><p>The Moldenhauers did not solve this problem. They absorbed it personally, first with years of unpaid evenings, then by leaving their jobs, then by putting their houses against it in 2015. That is not a business model and cannot be recommended as one. It is, however, the only way the game was going to exist, because the thing that makes Cuphead remarkable is inseparable from the thing that makes it uneconomic — the imperfections, the hand-inked line, the sense that a person drew each frame, all of which vanish the moment you optimise the process.</p>',
+      },
+      {
+        title: 'Difficulty as Period Detail',
+        html: '<p>Cuphead\'s reputation for punishing difficulty is often discussed separately from its art, but the two are the same decision. A boss-rush structure descended from Contra and Gunstar Heroes demands pattern memorisation and repeated failure; that is what the genre is. And repetition is what justifies the animation budget — a boss you fight once does not reward frames that a boss you fight forty times does. The player who dies repeatedly is the player who actually sees the work.</p><p>The 1930s framing extends the logic. Rubber hose animation was built on elastic, surreal transformation, characters whose bodies could become anything, and a boss whose form mutates across phases is exactly the kind of subject that style was invented to depict. The game\'s cartoons are not a skin over a shooter; the shooter is a delivery mechanism for the cartoons, and its structure is calibrated to make you watch them. Cuphead is often cited as the retro revival\'s high-water mark for authenticity, and the reason is that its authenticity is not a look. The brothers reproduced the method, absorbed the cost that the method imposes, and built the game around making that cost worth paying.</p>',
+      },
+    ],
+  },
 ];

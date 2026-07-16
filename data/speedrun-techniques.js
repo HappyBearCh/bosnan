@@ -495,4 +495,127 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'smw-credits-warp',
+    sources: [
+      {
+        title: 'People Can Now Beat Super Mario World In Less Than A Minute',
+        publisher: 'Kotaku',
+        url: 'https://kotaku.com/people-can-now-beat-super-mario-world-in-less-than-a-mi-1822666925',
+      },
+      {
+        title: 'How Super Mario World Speedrunners Beat The Game in 40 Seconds By Writing Code With Koopa Shells',
+        publisher: 'TheGamer',
+        url: 'https://www.thegamer.com/how-super-mario-world-speedrunners-beat-the-game-in-40-seconds-by-writing-code-with-koopa-shells/',
+      },
+    ],
+    title: 'Super Mario World Credits Warp',
+    game: 'Super Mario World',
+    platform: 'SNES',
+    year: 1990,
+    era: '16-bit',
+    discoveredYear: 2015,
+    technique: 'Arbitrary code execution',
+    timeSaved: 'The entire game — full runs reduced to under a minute',
+    description: 'By arranging Koopa shells at pixel-perfect positions, runners write machine code into the SNES\'s sprite table and make Super Mario World execute it, jumping straight to the credits from the first level.',
+    longDescription: 'The credits warp is arbitrary code execution performed by hand, in real time, with a game\'s own objects as the input device. The insight is that Super Mario World\'s sprite table — the region of memory tracking every active object\'s position and state — is just memory, and that the values in it are determined by where the sprites are. A runner who can place sprites with pixel precision can therefore choose the bytes in that table. Choose the right bytes and they are not data describing shells; they are valid SNES machine code.\n\nGetting the console to run them requires a second exploit. Eating a Chargin\' Chuck at the correct moment causes the game to treat that region of memory as executable and jump into it, at which point the runner\'s hand-assembled program takes over and directs the game to its ending. The setup is as strange as the theory. Runners play with two five-player multitaps, each holding two controllers — four in total. Only one is used to play; the other three have buttons held down with elastic bands, because the controller registers themselves are read as part of the exploit, and the held buttons supply specific values the code depends on. The result is a category in which Super Mario World is completed without being played in any conventional sense: the world record stood at 41.02 seconds, set by the runner FURiOUS in June 2020.',
+    keyFacts: [
+      'Koopa shells are positioned pixel-perfectly to write chosen bytes into the SNES sprite table',
+      'Eating a Chargin\' Chuck causes the game to execute that memory region as code',
+      'Runners use two multitaps and four controllers; three have buttons held with elastic bands to supply values the exploit reads',
+      'FURiOUS set a 41.02-second world record in the category in June 2020',
+    ],
+    sections: [
+      {
+        title: 'Memory Does Not Know What It Is',
+        html: '<p>The credits warp rests on a fact true of nearly all computers and rarely visible to their users: memory has no inherent type. A byte does not know whether it is a sprite\'s X coordinate or a processor instruction — that is determined entirely by whether something reads it as data or jumps to it as code. Super Mario World stores its sprite positions in memory, and the processor is perfectly capable of executing that region if pointed at it. Nothing prevents this except that, ordinarily, nothing points at it.</p><p>What the runners found was both halves of the exploit: a way to control the bytes, by placing shells with pixel precision, and a way to make the game jump to them, via the Chargin\' Chuck. Neither is useful alone. Together they convert Super Mario World from a game into a programmable machine, and the player from someone following the game\'s rules into someone writing new ones. The shells are not being used cleverly within the game; they have stopped being shells.</p>',
+      },
+      {
+        title: 'The Elastic Bands',
+        html: '<p>The four-controller setup is the detail that makes the category legible as a physical act rather than a theoretical one. The exploit reads controller registers as part of the data it operates on, which means the buttons being held at that instant are effectively parameters to the program. A human cannot hold the required combination across four controllers while also playing, so runners hold them mechanically — elastic bands around three pads, buttons permanently depressed, feeding constants into an exploit while the fourth controller does the actual playing.</p><p>This is where the credits warp stops resembling speedrunning and starts resembling hardware hacking. The performer is not demonstrating mastery of Super Mario World; they are executing a precise physical procedure that happens to be mediated by a Mario game, with rubber bands as part of the toolchain. Whether this counts as playing the game is a question the speedrunning community has largely resolved by separating such categories from conventional ones — the 41.02-second record is not competing against runs where someone actually goes through the levels. It is its own discipline, and its object is not Mario but the SNES.</p>',
+      },
+    ],
+  },
+  {
+    id: 'quake-rocket-jump',
+    sources: [
+      {
+        title: 'Rocket jumping',
+        publisher: 'Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Rocket_jumping',
+      },
+      {
+        title: 'From whence came that rocket?',
+        publisher: 'Quake Speed Demos Archive',
+        url: 'https://quake.speeddemosarchive.com/quake/qdq/articles/WallHug/rjump.htm',
+      },
+    ],
+    title: 'Rocket Jumping',
+    game: 'Quake',
+    platform: 'PC',
+    year: 1996,
+    era: '1990s',
+    discoveredYear: 1996,
+    technique: 'Movement exploit',
+    timeSaved: 'Varies; enables major shortcuts in levels such as E1M3 and E2M6',
+    description: 'id Software assumed nobody would fire a rocket at their own feet because the damage would be suicidal. The damage turned out not to scale the way they expected, and a programmer discovered by accident that it launches you across the map.',
+    longDescription: 'The technique was found by John Cash, one of Quake\'s own programmers, during a deathmatch against Tim Willits on the level Introduction. Cash had picked up armour and then trapped himself in a corner with death looking certain. Choosing to take his opponents with him, he fired the rocket launcher at the ground — and instead of dying, sailed into the air and landed behind them.\n\nid had considered rocket jumping and dismissed it. The studio reasoned that self-inflicted splash damage would be lethal enough that no player would ever do it deliberately, so the behaviour was left in as a physical consequence nobody would exploit. The assumption was wrong in a specific way: the relationship between the damage taken and the momentum imparted meant that a player with reasonable health could survive the blast and keep the velocity, making the trade favourable rather than suicidal. Quake\'s fully 3D engine was what made it possible at all — aiming directly downward requires freedom of view that earlier shooters did not have, though horizontal variants had already appeared in Doom (1993), where runners used rocket splash to boost forward across gaps. Yonatan Donner was incorporating multiple rocket jumps into Quake speedrun demos by June 1997, opening shortcuts on levels including E1M3 and E2M6, and the technique became foundational to both the Quake done Quick series and competitive deathmatch.',
+    keyFacts: [
+      'Discovered accidentally by Quake programmer John Cash while cornered in a deathmatch against Tim Willits',
+      'id Software had assumed the self-damage would be suicidal and that no player would attempt it deliberately',
+      'Quake\'s full 3D engine enabled it; horizontal rocket boosting had already appeared in Doom (1993)',
+      'Yonatan Donner used multiple rocket jumps in speedrun demos by June 1997, opening shortcuts on E1M3 and E2M6',
+    ],
+    sections: [
+      {
+        title: 'The Developers Did the Maths Wrong',
+        html: '<p>Rocket jumping is unusual among famous exploits in that the developers considered it in advance and concluded it would not matter. Their reasoning was sound as far as it went: firing an explosive at your own feet should hurt badly enough to be self-defeating, and a player who does it once will not do it twice. What they had not worked through was how the damage and the impulse actually related to each other — the blast is survivable at reasonable health while the velocity it imparts is substantial, which makes the exchange a bargain rather than a sacrifice.</p><p>That gap between the intended discouragement and the actual numbers is where the entire technique lives. id did not fail to anticipate the mechanic; it failed to anticipate that the mechanic would be worth using. The lesson is one that recurs constantly in emergent play: a designer\'s intuition about whether a cost is prohibitive is a guess, and the players will find out the real answer by measurement.</p>',
+      },
+      {
+        title: 'Found by the House',
+        html: '<p>The discovery story is almost too neat. It was not a player probing for exploits but John Cash, a programmer on the game, cornered in a deathmatch with Tim Willits and choosing to go out spitefully. He fired at the floor expecting to die and take his opponents with him, and instead found himself airborne and behind them. The person best positioned to know the code was as surprised as anyone — which is the clearest possible demonstration that understanding a system\'s rules is not the same as understanding its consequences.</p><p>From there the technique moved outward fast. Speedrunners took it first, because a movement exploit that trades health for distance is exactly what a run needs on a level with a gap in it; Yonatan Donner\'s demos were using multiple chained rocket jumps by mid-1997. Deathmatch players took it as vertical mobility. And the industry eventually took it as design: later shooters shipped rocket jumping as an intended feature, having watched an accident become a genre expectation. Quake\'s version of it began as a bug the developers had explicitly decided to ignore, and ended as one of the most consequential movement mechanics in the medium.</p>',
+      },
+    ],
+  },
+  {
+    id: 'tetris-hypertapping',
+    sources: [
+      {
+        title: 'Tetris (NES video game)',
+        publisher: 'Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Tetris_(NES_video_game)',
+      },
+      {
+        title: 'How Gen Z is pushing NES Tetris to its limits',
+        publisher: 'Engadget',
+        url: 'https://www.engadget.com/teens-tetris-and-rolling-130002013.html',
+      },
+    ],
+    title: 'Hypertapping and Rolling',
+    game: 'Tetris',
+    platform: 'NES',
+    year: 1989,
+    era: '1980s',
+    discoveredYear: 2011,
+    technique: 'Input rate exploitation',
+    timeSaved: 'Not a time save — enables play past level 29, previously considered impossible',
+    description: 'NES Tetris was thought to end at level 29, where pieces fall faster than the game\'s input delay allows you to move them. Two techniques — vibrating your arm, then drumming the back of the controller — proved otherwise.',
+    longDescription: 'On level 29 of NES Tetris the pieces drop one grid cell per frame, the maximum speed the NTSC version reaches. The obstacle is not the fall speed itself but the game\'s input delay: holding the D-pad shifts a piece too slowly to reach the edges of the board before it lands, so level 29 was regarded for two decades as a hard wall — the kill screen, where every run necessarily ended.\n\nThor Aackerlund broke it by not holding the D-pad. Hypertapping means tapping the direction more than ten times per second, bypassing the delay entirely by issuing discrete inputs rather than a held one, and the physical method is genuinely strange: the player tenses their bicep until it tremors and lets the involuntary shake drive their thumb against the pad. Aackerlund demonstrated in 2011 that level 29 could be passed, and is shown reaching level 30 in the documentary Ecstasy of Order: The Tetris Masters. Rolling came later and superseded it. The player rests a stationary finger on the D-pad and drums the fingers of the other hand across the back of the controller, pushing the buttons up into the waiting finger — an approach that is both far faster, reaching around thirty horizontal shifts per second, and much less physically punishing than sustained bicep tremor. Since 2021 rolling has produced a run of world records and become standard at the Classic Tetris World Championship, pushing play far beyond the wall that defined the game for thirty years.',
+    keyFacts: [
+      'Level 29 drops pieces one cell per frame; the game\'s input delay makes a held D-pad too slow to reach the board\'s edges',
+      'Hypertapping exceeds ten taps per second by tensing the bicep until it tremors and letting the shake drive the thumb',
+      'Thor Aackerlund first demonstrated passing level 29 in 2011 and reaches level 30 in Ecstasy of Order: The Tetris Masters',
+      'Rolling — drumming the controller\'s back against a stationary finger — reaches around thirty shifts per second and has been standard since 2021',
+    ],
+    sections: [
+      {
+        title: 'The Wall That Was Not There',
+        html: '<p>For most of NES Tetris\'s history, level 29 was understood as the game\'s terminus — not a difficulty spike but a physical impossibility, the point at which the hardware outruns the human. That belief was correct given an unexamined assumption: that you move a piece by holding the D-pad. Under that assumption the maths is unarguable, because the input delay caps how far a piece can travel before it lands, and at one cell per frame that distance is insufficient.</p><p>Hypertapping did not make players faster at holding the pad. It discarded holding entirely. Discrete taps are not subject to the repeat delay that governs a held direction, so a player who can tap more than ten times a second is operating outside the constraint that defined the wall. The kill screen was never a property of the game; it was a property of how everyone had decided to press the buttons. Two decades of consensus about a hard limit turned out to be a consensus about technique.</p>',
+      },
+      {
+        title: 'From Tremor to Drumroll',
+        html: '<p>Hypertapping\'s physicality is what makes it remarkable and what made it a dead end. Deliberately inducing a bicep tremor to drive your thumb is not a refinement of normal play; it is a hack of the player\'s own body, exploiting an involuntary muscle response because voluntary movement is not fast enough. It is also exhausting and injurious over a long run, which capped how far it could take anyone.</p><p>Rolling solved the same problem from the other direction, and better. Instead of generating speed in the thumb, the player holds the thumb still and brings the controller to it, drumming the back of the pad with the other hand so the buttons are driven upward into a stationary finger. Around thirty shifts per second, sustainable, and far less punishing on the body. Since 2021 it has rewritten the record books and become the Classic Tetris World Championship\'s default, carrying play into levels the game\'s programmers never contemplated — until, eventually, runners reached a genuine kill screen in the code itself rather than in their hands. A thirty-year-old game turned out to have decades of headroom left, hidden behind an assumption about how fingers work.</p>',
+      },
+    ],
+  },
 ];
