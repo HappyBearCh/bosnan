@@ -495,4 +495,148 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'year-1982',
+    year: 1982,
+    headline: 'Eight Billion Quarters, and the Ground Giving Way',
+    summary: 'The arcade industry took in $8 billion in coins in 1982 — twice what the entire recorded music business earned and nearly three times Hollywood\'s box office. It was the peak of the golden age and the peak of the second console generation simultaneously. Pac-Man was the highest-grossing arcade game for the third consecutive year, the Atari 2600 was the best-selling home system, and the Commodore 64 arrived to become one of the best-selling computers ever made. It was also the year Atari shipped E.T. and its own botched 2600 Pac-Man, and the year its troubles began the slide that would break the industry within twelve months.',
+    topGames: [
+      'Pac-Man (Arcade)',
+      'Ms. Pac-Man (Arcade)',
+      'Donkey Kong (Arcade)',
+      'Robotron: 2084 (Arcade)',
+      'Dig Dug (Arcade)',
+      'Pitfall! (Atari 2600)',
+      'Zaxxon (Arcade)',
+    ],
+    topEvents: [
+      {
+        title: 'Arcades Take $8 Billion in Quarters',
+        desc: 'The video arcade industry earned $8 billion in 1982, surpassing the pop music business at roughly $4 billion in annual sales and Hollywood films at around $3 billion. It was the high-water mark of the golden age of arcade video games.',
+      },
+      {
+        title: 'Pac-Man Tops the Arcades for a Third Year',
+        desc: 'Namco\'s Pac-Man was the year\'s highest-grossing video game for the third consecutive year, a run of commercial dominance no arcade title had previously sustained.',
+      },
+      {
+        title: 'Commodore 64 Launches',
+        desc: 'Commodore Business Machines released the Commodore 64, which went on to lead the European market and become one of the best-selling computers of all time — and the platform that made bedroom game development a mass phenomenon.',
+      },
+      {
+        title: 'Atari Releases the 5200',
+        desc: 'Atari launched the 5200, built on its 8-bit computer hardware with analogue joysticks but no keyboard. It struggled against the entrenched 2600 and never established a clear identity of its own.',
+      },
+      {
+        title: 'E.T. and 2600 Pac-Man Damage Atari',
+        desc: 'Atari shipped both E.T. the Extra-Terrestrial and a poorly-received Atari 2600 conversion of Pac-Man. The company\'s troubles later in the year set in motion the video game crash of 1983.',
+      },
+    ],
+    quote: '"The video arcade industry took in $8 billion in quarters in 1982 — more than pop music and Hollywood films combined."',
+    sections: [
+      {
+        title: 'The Peak Nobody Recognised',
+        html: '<p>Two curves reached their maximum in 1982 at the same moment. The golden age of arcade video games peaked, with $8 billion flowing into coin slots — a figure that dwarfed the recorded music industry and Hollywood, and one that reads today as a claim requiring verification rather than an ordinary fact. The second generation of home consoles peaked alongside it, with the Atari 2600 outselling every rival. From inside 1982, the only visible direction was up.</p><p>What the numbers concealed was that both peaks were built on the same assumption: that demand was effectively unlimited and that quality was therefore optional. Arcades were saturating with cabinets, and the home market was filling with cartridges produced on the theory that anything with a licence would sell. When Pac-Man leads the arcades for a third straight year, the lesson a publisher draws is that the audience wants more of what it already has. The lesson it does not draw is that the audience is capable of noticing when it is being sold garbage.</p>',
+      },
+      {
+        title: 'Atari Loads the Gun',
+        html: '<p>Atari\'s 1982 contained the whole future in miniature. Its 2600 conversion of Pac-Man — the most wanted game in the world, rendered on the 2600 with flickering ghosts and a maze that barely resembled the original — sold in enormous numbers precisely because the name guaranteed it would, and disappointed nearly everyone who bought it. Then came E.T., built against a licence Atari had paid heavily for, on a schedule that allowed no possibility of the game being good. Both moved units. Both taught millions of customers that an Atari cartridge was not a reliable purchase.</p><p>That is the mechanism of the crash, and it was fully assembled in 1982 even though the collapse is dated to 1983. A market can absorb a great deal of low-quality product as long as buyers cannot tell in advance which is which — right up until they conclude that none of it can be trusted and stop buying altogether. Atari released the 5200 into this environment as well, a console with no clear reason to exist beside the 2600 it was meant to succeed. The year the industry earned more than music and film combined was the same year it manufactured the conditions of its own near-destruction.</p>',
+      },
+    ],
+  },
+  {
+    id: 'year-1990',
+    year: 1990,
+    headline: 'The 16-Bit Era Begins in Japan, and the Game Boy Wins Anyway',
+    summary: 'Nintendo launched the Super Famicom in Japan on 21 November 1990 alongside Super Mario World, and the first 300,000 units sold out within hours. But the year\'s best-selling hardware worldwide was not 16-bit at all: the Game Boy shipped roughly five million units in 1990, passing eight million cumulative by early 1991. Nintendo also took its NES catalogue on the road with the Nintendo World Championships, a twenty-nine-city competition built around a custom cartridge that became one of the most sought-after objects in the hobby.',
+    topGames: [
+      'Super Mario World (Super Famicom)',
+      'F-Zero (Super Famicom)',
+      'Dr. Mario (NES / Game Boy)',
+      'Final Fantasy III (Famicom)',
+      'Phantasy Star II (Mega Drive)',
+      'Castlevania III: Dracula\'s Curse (NES)',
+      'Wing Commander (PC)',
+    ],
+    topEvents: [
+      {
+        title: 'Super Famicom Launches in Japan',
+        desc: 'Nintendo released the Super Famicom on 21 November 1990 alongside Super Mario World, bringing 16-bit graphics and sound to its home console line. The first batch of 300,000 units sold out in hours.',
+      },
+      {
+        title: 'Game Boy Outsells Everything',
+        desc: 'The Game Boy was the top-selling hardware worldwide in 1990, shipping roughly five million units during the year and passing eight million cumulative by early 1991 — outpacing every home console on the market.',
+      },
+      {
+        title: 'Nintendo World Championships Tours America',
+        desc: 'Beginning 8 March, Nintendo\'s competition toured twenty-nine US cities. Competitors played a custom NES cartridge containing Super Mario Bros., Rad Racer, and Tetris, scoring points within a time limit of 6 minutes and 21 seconds.',
+      },
+      {
+        title: 'Game Boy Reaches Europe',
+        desc: 'Nintendo launched the Game Boy in Europe on 21 April, completing the handheld\'s rollout across the three major territories and extending the Tetris phenomenon to a new continent.',
+      },
+      {
+        title: 'Super Mario World Redefines the Pack-In',
+        desc: 'Bundled with the Super Famicom at launch, Super Mario World introduced Yoshi and a ninety-six-exit world map, establishing the standard by which every subsequent 16-bit platformer would be measured.',
+      },
+    ],
+    quote: '"The first batch of 300,000 Super Famicom units sold out in hours."',
+    sections: [
+      {
+        title: 'Two Nintendos at Once',
+        html: '<p>1990 is the year Nintendo ran two completely different businesses successfully at the same time, and the more impressive one was the less glamorous. The Super Famicom launch on 21 November was the event — 16-bit hardware, Super Mario World in the box, 300,000 units gone within hours, a demonstration of demand so total that it framed the entire coming console war. It is what the year is remembered for.</p><p>Meanwhile the Game Boy, a monochrome handheld already regarded as technically unambitious when it launched, shipped around five million units in 1990 and outsold every home console on earth. By early 1991 it had passed eight million cumulative. Nintendo had simultaneously proved that it could sell the most powerful thing it had ever made and the least powerful, and that the second was the larger business. The lesson — that hardware capability and commercial success are only loosely related — is one the industry has had to relearn roughly once a decade ever since.</p>',
+      },
+      {
+        title: 'The Championship Cartridge',
+        html: '<p>The Nintendo World Championships began on 8 March and toured twenty-nine American cities, and its structure was a small piece of design brilliance. Competitors played a custom NES cartridge holding three games — Super Mario Bros., Rad Racer, and Tetris — and had exactly 6 minutes and 21 seconds to accumulate points across all three. The time limit turned a competition about skill into a competition about allocation: how long to spend on each game, when to cut losses, what a marginal second was worth.</p><p>The cartridges themselves outlived the event by a wide margin. Produced in tiny numbers and never sold at retail, they became among the most coveted objects in game collecting, with individual copies trading for sums that would have astonished anyone who competed in 1990. The Championships were conceived as a marketing tour for an ageing console at the exact moment Nintendo was preparing to replace it — and they accidentally created an artefact whose value derives entirely from that obsolescence.</p>',
+      },
+    ],
+  },
+  {
+    id: 'year-2001',
+    year: 2001,
+    headline: 'Two New Consoles, and Three Games That Rewrote Their Genres',
+    summary: 'The sixth console generation reached full strength in 2001: Nintendo\'s GameCube arrived on 14 September in Japan and 18 November in North America, and Microsoft entered the hardware business with the Xbox on 15 November. The software was even more consequential. Grand Theft Auto III (22 October) invented the modern open world, Halo: Combat Evolved shipped as the Xbox\'s launch title on 15 November and rebuilt the console first-person shooter, and Konami\'s Silent Hill 2 arrived in September as the most psychologically sophisticated horror game yet made.',
+    topGames: [
+      'Grand Theft Auto III (PlayStation 2)',
+      'Halo: Combat Evolved (Xbox)',
+      'Silent Hill 2 (PlayStation 2)',
+      'Metal Gear Solid 2: Sons of Liberty (PlayStation 2)',
+      'Final Fantasy X (PlayStation 2)',
+      'Super Smash Bros. Melee (GameCube)',
+      'Ico (PlayStation 2)',
+    ],
+    topEvents: [
+      {
+        title: 'Microsoft Enters the Console Business',
+        desc: 'The Xbox launched in North America on 15 November 2001, bringing a PC-derived architecture, a built-in hard drive, and the deepest corporate pockets the console market had ever faced into a business dominated by Sony and Nintendo.',
+      },
+      {
+        title: 'Nintendo Launches the GameCube',
+        desc: 'Nintendo released the GameCube on 14 September in Japan and 18 November in North America — its first console to abandon cartridges, and its first to face two competitors with vastly greater resources.',
+      },
+      {
+        title: 'Grand Theft Auto III Redefines the Open World',
+        desc: 'Released in North America and Europe on 22 October, GTA III moved the series into 3D and delivered a city that could be inhabited rather than merely traversed. It is routinely described as an industry-defining work.',
+      },
+      {
+        title: 'Halo Makes the Console Shooter Work',
+        desc: 'Bungie\'s Halo: Combat Evolved arrived as the Xbox\'s flagship launch title on 15 November, solving the analogue-stick aiming problem and establishing conventions — two-weapon limits, regenerating shields, vehicle sections — that the genre adopted wholesale.',
+      },
+      {
+        title: 'Silent Hill 2 Elevates Horror',
+        desc: 'Konami published Team Silent\'s Silent Hill 2 in September. By discarding the first game\'s plot entirely and making the town a projection of one man\'s guilt, it set a standard for psychological horror the medium still measures itself against.',
+      },
+    ],
+    quote: '"2001 was the peak year for the sixth generation of video game consoles, with the launch of the GameCube and Xbox."',
+    sections: [
+      {
+        title: 'The Year the Field Filled Up',
+        html: '<p>By the end of 2001 the sixth generation had all its contestants on the board: Sony\'s PlayStation 2 already entrenched from the previous year, Sega\'s Dreamcast finished, Nintendo\'s GameCube out in both major territories, and Microsoft\'s Xbox on North American shelves. The arrival of Microsoft was the structural event. Here was a company with resources no games publisher could approach, entering hardware not because it saw a gap but because it had decided the living room mattered — and it launched with a machine built from PC parts, including a hard drive no console had shipped as standard.</p><p>Nintendo\'s position that autumn was more precarious than the GameCube\'s reception suggested. It had abandoned cartridges at last, priced aggressively, and produced capable hardware, but for the first time it faced two rivals with deeper pockets and no particular need for the console business to be profitable soon. The generation that began in 2001 is where Nintendo stopped being able to win on power and started needing to win on being different — a strategic corner it would not fully turn until the Wii.</p>',
+      },
+      {
+        title: 'Three Games, Three Genres',
+        html: '<p>What makes 2001 exceptional is not the hardware but the concentration of software that permanently changed how games are made. Grand Theft Auto III turned the open world from a genre into the default ambition of the entire industry: a city with traffic, pedestrians, radio stations, and no obligation to do the mission. Halo solved the problem that had defeated console shooters for a decade — aiming with thumbsticks — and packaged the solution with a two-weapon limit, regenerating shields, and vehicles, a set of conventions that the genre absorbed so completely they now read as natural law rather than design choices.</p><p>Silent Hill 2 did something different and arguably harder. It took a horror franchise and discarded its plot, cast, and mythology, keeping only the town, then used that freedom to build a game about grief in which every monster was a symptom rather than an enemy. Where GTA III and Halo expanded what games could do mechanically, Silent Hill 2 expanded what they could be about. Three games, three genres, one autumn — and a strong argument that no year in the medium\'s history has been more consequential.</p>',
+      },
+    ],
+  },
 ];
