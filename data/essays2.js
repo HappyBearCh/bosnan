@@ -509,5 +509,95 @@ module.exports = [
 <p>The history of the platformer is the history of designers discovering how many different things can be done with those properties. The jump as survival (avoid the pit), the jump as combat (land on the enemy), the jump as exploration (reach the elevated area), the jump as expression (achieve a particular aesthetic arc), the jump as physics puzzle (calculate momentum to reach a distant platform) — all of these uses of the fundamental mechanic have produced distinct and valuable game experiences. The genre's durability is the durability of its core mechanic: the jump is simple enough to be universal and expressive enough to generate variety indefinitely.</p>`
       }
     ]
+  },
+  {
+    id: 'tetris-rights-saga',
+    title: 'Who Owned Tetris?',
+    subtitle: 'A Soviet state agency, three companies who each thought they had the rights, and 500,000 Atari cartridges in a landfill',
+    category: 'history',
+    summary: 'Alexey Pajitnov created Tetris in 1984 and owned none of it. What followed was a chain of licences sold by people who did not hold them, resolved in a Moscow negotiating room and a San Francisco courtroom.',
+    readTime: '13 min read',
+    sections: [
+      {
+        title: 'The author who owned nothing',
+        html: `<p>Alexey Pajitnov wrote Tetris in 1984 as a side project while working at the Soviet Academy of Sciences. Under the arrangements of the USSR, that made the game the property of the state rather than the programmer. The rights sat with ELORG, a government body established to handle foreign trade in Soviet software — an organisation whose staff had no particular interest in video games and every interest in not being taken advantage of by Western businessmen.</p>
+<p>This is the fact that generates everything that follows. Every Western party in the story approached Tetris with the assumption that somewhere there was an owner who could sell them rights, and that having paid someone, they had bought something. In an ordinary commercial context that assumption is safe. Here it was not, because the entity that actually held the rights was a Soviet trade bureau most of them had never dealt with, and the man who wrote the game could not sell it to anyone.</p>`
+      },
+      {
+        title: 'Licences from people who did not have them',
+        html: `<p>British entrepreneur Robert Stein discussed licensing Tetris with Pajitnov and came away convinced he had the rights. He did not — as ELORG informed him once it learned the game was being sold internationally, because the Soviet government owned the intellectual property and Stein had never obtained anything from the party that held it. By then Stein had already been dealing onward, and Mirrorsoft had sold Atari the rights to develop the game for home consoles and coin-operated machines before those rights had been properly secured.</p>
+<p>The result was a chain in which each link had been sold in good faith by someone with nothing to sell. Companies had paid money, signed contracts, begun development and made manufacturing commitments on the strength of a licence that traced back to a conversation with a programmer who had no authority to grant it. Nobody in the chain was obviously a villain. Everyone had behaved roughly as Western business practice suggested, and the entire structure rested on air.</p>`
+      },
+      {
+        title: 'The Moscow room',
+        html: `<p>Henk Rogers, an agent working with Japanese gaming companies, played Tetris at a Las Vegas trade show and became convinced of it. In early 1989 he went to Moscow, hired an interpreter on 21 February, and found ELORG — arriving, as it happened, at roughly the same time as the other claimants, each unaware of the others' presence and each expecting to confirm rights they believed they already held.</p>
+<p>What ELORG did next decided the matter. Stein's contract was amended to exclude console rights, and he left the negotiation unaware that the document he had signed no longer covered what he thought it covered. Nintendo took the console rights. The detail that makes this more than a procedural footnote is that ELORG was not outmanoeuvred by sophisticated Western dealmakers; it outmanoeuvred them, using the precision of contract language against parties who had been sloppy about what they actually owned. The Soviet trade bureau read the paperwork more carefully than the businessmen did.</p>`
+      },
+      {
+        title: 'The landfill',
+        html: `<p>Nintendo sued Atari. Atari's position was that it had licensed the rights through Mirrorsoft in good faith, which was true and legally irrelevant, since the rights had not been Mirrorsoft's to convey and Stein's contract had been quietly amended out from under it. A San Francisco judge sided with Nintendo. The 500,000 Tetris cartridges Atari had manufactured in anticipation of launch went to a landfill.</p>
+<p>Half a million cartridges destroyed is the kind of number that invites comparison to the E.T. burial, but the causes are opposite. Atari's 1983 landfill held games nobody wanted. Its Tetris cartridges were a perfectly good version of the most compelling puzzle game ever made, destroyed purely because of who had signed what. Nintendo went on to sell 35 million copies, bundling it with the Game Boy and turning a Soviet programmer's side project into the definitive portable game. Pajitnov, whose name was on none of the contracts, saw no money from any of it for years.</p>`
+      }
+    ]
+  },
+  {
+    id: 'julian-gollop-xcom',
+    title: 'Julian Gollop and the Making of X-COM',
+    subtitle: 'A British studio pitched a sequel to a 1988 tactics game and delivered the template every turn-based strategy since has borrowed from',
+    category: 'profile',
+    summary: 'X-COM began life as Laser Squad 2, a modest two-player tactical demo on the Atari ST. Thirty months and a year of overrun later, Mythos Games shipped something considerably stranger and more durable.',
+    readTime: '12 min read',
+    sections: [
+      {
+        title: 'Laser Squad 2',
+        html: `<p>Julian and Nick Gollop founded Mythos Games in 1988, originally as Target Games, and Julian's pitch for what became X-COM was unassuming: a sequel to Mythos's 1988 tactical game Laser Squad, but with much neater graphics, using an isometric style similar to Populous. The 1991 demo he showed ran on the Atari ST and presented a relatively simple two-player tactical game then known as Laser Squad 2.</p>
+<p>Nothing in that description forecasts the game's eventual reputation. It is a sequel proposal from a small British independent developer, promising better presentation of something they had already made. The transformation from that pitch into UFO: Enemy Unknown — released in North America as X-COM: UFO Defense — happened during development, and it is the reason the game feels less designed than accumulated.</p>`
+      },
+      {
+        title: 'Two games in one box',
+        html: `<p>The structural idea that makes X-COM what it is was the decision to bolt a real-time management simulation onto the turn-based tactics. You run a global organisation: funding from member nations, bases to build, scientists to assign, engineers to task, interceptors to scramble, alien technology to research and reverse-engineer. Then, when a UFO comes down, the game drops you into a turn-based squad battle with the soldiers and equipment your management decisions produced.</p>
+<p>The two halves feed each other in a way that neither could achieve alone. A research decision made months earlier determines whether your squad has laser weapons tonight. A soldier who survives a mission becomes an asset you have invested in and cannot replace cheaply, which is what makes losing them hurt. The strategic layer supplies the stakes that make the tactical layer tense, and the tactical layer supplies the losses that make the strategic layer matter. Laser Squad had the tactics. X-COM found the thing that gives tactics weight.</p>`
+      },
+      {
+        title: 'Thirty months',
+        html: `<p>The game was completed in March 1994, thirty months after the initial contract and a full twelve months behind schedule — a year of overrun on a project of this size, developed by Mythos with MicroProse publishing. That overrun is worth noting rather than glossing, because a year late in 1994 was not a routine slip, and the game that emerged is visibly the product of a design that kept growing beyond what anyone had budgeted for.</p>
+<p>The results include the parts nobody would sign off on today: permanent death for soldiers you have named and equipped, a research tree that hides essential capabilities behind discoveries you may never make, an economy that can quietly become unwinnable, and a difficulty curve that will kill an entire veteran squad because you opened the wrong door. These are not polished decisions. They are what happens when a small team follows an idea for twelve months longer than planned and nobody is standing over them removing the sharp edges.</p>`
+      },
+      {
+        title: 'The template',
+        html: `<p>X-COM's influence is easiest to see in how thoroughly its vocabulary has been absorbed. Time units, overwatch, line of sight and destructible cover; the base-management layer feeding a tactical layer; the named squaddie whose death is a permanent entry in a memorial wall. Turn-based tactics games have been iterating on this arrangement for thirty years, and the 2012 Firaxis reboot succeeded largely by reproducing the shape of the 1994 design with modern edges filed onto it.</p>
+<p>What is harder to reproduce is the specific quality Gollop's version has of feeling indifferent to you. X-COM does not curate its difficulty; it presents a situation and permits you to handle it badly, at length, without intervening. That tone is a direct product of the circumstances that made it — a small independent studio, a design that outgrew its pitch, thirty months, and a publisher that let it run a year late. It is the sort of game that gets made when nobody is optimising it, and its durability is the argument for occasionally allowing that.</p>`
+      }
+    ]
+  },
+  {
+    id: 'masaya-nakamura-namco',
+    title: 'Masaya Nakamura: From Rocking Horses to Pac-Man',
+    subtitle: 'A shipbuilding graduate started with two coin-operated horses on a department store roof and ended up owning Atari Japan',
+    category: 'profile',
+    summary: 'Nakamura founded what became Namco in 1955 to run children\'s rides on a Yokohama rooftop. The slogan was "From Rocking Horses to Monorails." Pac-Man arrived twenty-five years later.',
+    readTime: '11 min read',
+    sections: [
+      {
+        title: 'Rooftop amusements',
+        html: `<p>Masaya Nakamura graduated from the Yokohama Institute of Technology in 1948 with a degree in shipbuilding, which tells you something about the state of Japanese industry in the immediate postwar years and nothing whatsoever about where he ended up. In 1955 he founded Nakamura Manufacturing, and the entire business consisted of operating children's rides on the roof of a department store in Yokohama.</p>
+<p>The company slogan captures the ambition exactly: "From Rocking Horses to Monorails." That is a statement about amusement as an industry — the idea that the impulse driving a child onto a coin-operated horse scales, that it does not stop at small rides, and that a company organised around providing fun could grow indefinitely along that axis. Nakamura was not in the toy business or the machine business. He was in the business of charging people for a good time, and the specific apparatus was negotiable.</p>`
+      },
+      {
+        title: 'Becoming Namco',
+        html: `<p>In 1958 the firm was reorganised as the Nakamura Amusement Machine Manufacturing Company — a name whose initials would eventually contract into the acronym everyone knows. It was formally renamed Namco in 1977, and released its first in-house video game the following year: Gee Bee (1978), designed by Toru Iwatani.</p>
+<p>The move into video games came through an acquisition that reads, in hindsight, as one of the great bargains in the industry's history. In 1974 Nakamura bought the struggling Japanese division of Atari, and with it the right to distribute games like Breakout in Japan. He was buying a distribution business from a company that had decided Japan was not working out. What he had actually acquired was a position in the arcade video game market at the moment it was about to become the largest entertainment business on earth.</p>`
+      },
+      {
+        title: 'Pac-Man',
+        html: `<p>Pac-Man (1980) sold over 400,000 arcade units in the United States alone and made Namco a global company. Nakamura's role in it was not design — that was Iwatani's — but the entire apparatus that let Iwatani design it existed because a shipbuilding graduate had spent twenty-five years building a company on the theory that amusement was a serious industry with room to grow.</p>
+<p>He came to be described as "the father of Pac-Man," a title that sits oddly on a man who did not draw it or program it, and is nonetheless roughly right in the way that matters. Someone had to decide that a Japanese amusement company should make video games in-house rather than distribute other people's, hire the designers, and back a game about a yellow circle eating dots in an industry then convinced that the money was in shooting aliens. Nakamura received the Order of the Rising Sun, Gold Rays with Rosette, in 2007, and was inducted into the International Video Game Hall of Fame in 2010. He died in 2017 at 91.</p>`
+      },
+      {
+        title: 'The long view',
+        html: `<p>The through-line from 1955 to 1980 is the part worth extracting. Nakamura's business changed medium completely — mechanical rides to electromechanical machines to video games — while the underlying proposition never moved an inch. Put an amusement where people are, charge them a small amount, make the experience good enough that they come back. A rooftop rocking horse and a Pac-Man cabinet are the same business model executed with twenty-five years of intervening technology.</p>
+<p>This is why the Atari Japan acquisition looks like foresight rather than luck. Nakamura was not betting on video games as a technology; he was recognising a new kind of amusement machine and moving into it the way he had moved into every previous kind. Companies that understood themselves as being in the electronics business, or the toy business, had a much harder time making that transition, because their self-definition was attached to an apparatus rather than to a purpose. "From Rocking Horses to Monorails" was not marketing copy. It was an accurate description of a company that knew what it was for, and it is the reason Namco was standing in the right place in 1980.</p>`
+      }
+    ]
   }
 ];

@@ -595,5 +595,95 @@ module.exports = [
 <p>The designers who built the concept had hardware that could barely display it. Crowther ran Colossal Cave on a PDP-10 mainframe. Garriott sold his first games in plastic bags from a computer store. Miyamoto programmed Zelda into a console with 2 kilobytes of RAM. The idea — that a world could be made, and that exploring it could be the point — proved robust enough to survive the transition to hardware of almost incomprehensibly greater capability. It's still the idea at the centre of the medium's most ambitious work.</p>`
       }
     ]
+  },
+  {
+    id: 'ralph-baer',
+    title: 'Ralph Baer and the Brown Box',
+    subtitle: 'An engineer at a military contractor decided in 1966 that televisions should be played with, and built the thing every console descends from',
+    category: 'profile',
+    summary: 'Ralph Baer was working at a defence contractor when he began asking why the millions of televisions in American homes could only be watched. The answer became the first home console.',
+    readTime: '12 min read',
+    sections: [
+      {
+        title: 'The question nobody was asking',
+        html: `<p>In 1966 the television was a settled technology with a settled purpose. Tens of millions of American households had one, everybody understood what it was for, and the idea that the appliance in the living room might be an interactive device rather than a broadcast receiver was not a live question anywhere in the consumer electronics industry. Ralph Baer, an engineer at Sanders Associates in Nashua, New Hampshire — a defence contractor, not a toy company — started asking it anyway.</p>
+<p>The insight was not really technical. Nothing in a 1966 television prevented what Baer wanted; the hardware to drive spots of light around a screen was buildable with the era's components. The obstacle was conceptual. A television was for receiving, and the notion of a box that made the set do something under the viewer's control had no category to belong to. Baer's contribution begins with recognising that the installed base of televisions was an installed base of displays, and that whoever worked out what to plug into them had a market of millions already wired into homes.</p>`
+      },
+      {
+        title: 'Building it',
+        html: `<p>Baer worked through a series of test units between 1967 and 1969 with colleagues Bill Harrison and Bill Rusch, iterating toward a machine that could do more than one thing. The result was the Brown Box: a prototype for the first multiplayer, multiprogram video game system. Both adjectives matter. Multiplayer meant the box was social, a thing two people did together in a living room. Multiprogram meant it was not a single-purpose appliance but a platform, capable of hosting different games.</p>
+<p>The games Baer built for it establish how thoroughly he had thought it through: ping-pong, handball, soccer, volleyball, target shooting, checkers, and golf. That list is a deliberate survey of what an interactive television might be for — sport, competition, strategy, skill — produced years before there was any evidence that anyone wanted such a thing. He was not prototyping a product so much as mapping a medium.</p>`
+      },
+      {
+        title: 'From defence contractor to Magnavox',
+        html: `<p>The Brown Box was patented on 17 April 1973 as U.S. Patent No. 3,728,480. Sanders had no business selling toys, so it licensed the system to Magnavox, which released the design in 1972 as the Magnavox Odyssey — the first commercial home video game console, arriving in living rooms before Atari existed as a going concern.</p>
+<p>The patent mattered enormously, and its ownership explains much of the industry's early legal history. A defence contractor held the foundational intellectual property of home video gaming, which meant the companies who built the business through the 1970s did so on licensed ground. The division of credit that eventually settled — Baer as the father of the home console, Nolan Bushnell as the originator of the arcade machine — is roughly fair, and it obscures how differently the two men arrived. Bushnell built a company and a culture. Baer built a prototype at his day job and handed it to someone else to sell.</p>`
+      },
+      {
+        title: 'The engineer who kept going',
+        html: `<p>Baer did not treat the Odyssey as a career-defining event to be lived off. He continued working in electronics until his death in 2014, accumulating over 150 patents — a working engineer to the end, in a field he had personally caused to exist. His prototypes are now held by the National Museum of American History, an unusual fate for hardware built in a defence contractor's lab as a side interest.</p>
+<p>What makes his story worth telling apart from the chronology is the shape of the insight. Baer did not invent a technology; the components were available, and someone would have assembled them eventually. He noticed that a device already sitting in tens of millions of homes was being used for one thing when it could do another, and he was willing to pursue that observation inside a company with no reason to care about it. Every console since — through Atari, Nintendo, Sony, and Microsoft — descends from a question about what the furniture in the living room was actually for.</p>`
+      }
+    ]
+  },
+  {
+    id: 'chris-sawyer-assembly',
+    title: 'Chris Sawyer Wrote a Blockbuster in Assembly',
+    subtitle: 'RollerCoaster Tycoon was 99 percent x86 assembly language, built almost single-handedly, and it earned him around $30 million',
+    category: 'technology',
+    summary: 'By 1999, assembly language was for device drivers and demoscene stunts, not commercial games. Chris Sawyer wrote RollerCoaster Tycoon in it anyway, and not for sport — the simulation he wanted would not run any other way.',
+    readTime: '11 min read',
+    sections: [
+      {
+        title: 'The choice that looks insane',
+        html: `<p>Writing a commercial game in assembly in the late 1990s reads today as an eccentricity — the programming equivalent of building a house with hand tools. High-level languages existed and were mature, C and C++ were the industry standard, and compilers were good. Sawyer wrote 99 percent of RollerCoaster Tycoon in x86 assembly for the Microsoft Macro Assembler, leaving roughly one percent in C, and he did it for a reason that had nothing to do with preference.</p>
+<p>The reason was that the game he wanted did not fit. Sawyer has explained that he struggled to keep performance reasonable on PCs of the era even using highly optimised machine code, and that a high-level language would have made the game far too slow or forced him to simplify the simulation. That is a specific technical claim, not a boast. RollerCoaster Tycoon tracks every guest in the park as an individual with their own state, preferences, nausea, and pathfinding, and doing that for thousands of guests on a 1999 consumer PC sat at the edge of what the hardware could do. The language was not a stylistic choice. It was the difference between the game existing and not existing.</p>`
+      },
+      {
+        title: 'What the simulation bought',
+        html: `<p>The payoff is visible in what the game lets you notice. Guests in RollerCoaster Tycoon are not crowd texture. Each one has a name, a wallet, an opinion about your park, and a set of internal states that respond to what you build. A guest gets thirsty, walks to a drink stall, finds it too expensive, gets annoyed, and eventually drops litter on a path — and you can click on them and read all of it. Players spent enormous amounts of time doing exactly that, following individuals around, and the game's reputation rests substantially on that granularity.</p>
+<p>None of it works at half the frame rate. The whole design depends on simulating thousands of independent agents fast enough that the park feels alive rather than sluggish, which puts the performance budget directly upstream of the creative concept. Sawyer's assembly is therefore not separable from what the game is: he chose a punishing implementation because the punishing implementation was what allowed the idea. Most developers make the opposite trade without noticing, scaling the ambition down to fit the tools.</p>`
+      },
+      {
+        title: 'Almost alone',
+        html: `<p>The staffing is as striking as the language. Sawyer built RollerCoaster Tycoon essentially by himself, using only freelance graphic artist Simon Foster and composer Allister Brimble — a three-person credit list, one of whom wrote the entire game, on a title that became one of the best-selling PC games of its era. He arrived there sideways, too. He was working on the engine for a Transport Tycoon sequel, developed an interest in roller coasters and their design, and took a break from Transport Tycoon 2 to explore the idea.</p>
+<p>The royalties came to roughly $30 million. It is worth sitting with that number in the context of what produced it: one programmer, an interest in roller coasters, a side project taken up as a break from the real work, and a language nobody else was using for games. The modern industry's structure makes this combination close to impossible to repeat — not because the talent does not exist, but because nothing about a large production pipeline permits a single person to hold an entire game in their head. Sawyer could write RollerCoaster Tycoon in assembly because he was the only one who ever had to read it.</p>`
+      },
+      {
+        title: 'The code as artefact',
+        html: `<p>RollerCoaster Tycoon has become a standing reference in arguments about programming productivity, usually deployed as evidence that individual capability varies by more than the profession likes to admit. The example is genuinely striking, but the lesson most often drawn from it is the wrong one. Sawyer did not succeed because assembly is good. Assembly is a terrible way to build most software: unmaintainable by teams, hostile to change, and punishing to debug.</p>
+<p>He succeeded because he correctly identified a case where the constraint was real. The simulation was performance-bound, the performance ceiling determined the design, and he had the specific skill to move that ceiling. That is a diagnosis, not a preference, and the reason the game remains remarkable is that the diagnosis was right — the finished product does something the hardware of 1999 should not have permitted. The eventual open-source reimplementations, built by fans painstakingly decompiling his work, are their own kind of tribute: it took a community years to unpick what one person wrote alone.</p>`
+      }
+    ]
+  },
+  {
+    id: 'elite-procedural-galaxy',
+    title: 'Elite Fit a Galaxy in 22 Kilobytes',
+    subtitle: 'Braben and Bell could not store eight galaxies of 256 planets, so they generated them from a number instead',
+    category: 'technology',
+    summary: 'Elite gave BBC Micro owners in 1984 eight galaxies of 256 planets each, with positions, economies, names and descriptions, inside 22 kilobytes. The trick was to store none of it.',
+    readTime: '11 min read',
+    sections: [
+      {
+        title: 'The memory problem',
+        html: `<p>David Braben and Ian Bell wanted a universe. The BBC Micro gave them roughly 22 kilobytes to put it in — a figure worth pausing on, since it is smaller than a single modern icon file. Storing eight galaxies of 256 planets each, with every planet's position, economy, government, commodity prices, name and description written out as data, was not a matter of tight optimisation. It was arithmetically impossible by orders of magnitude.</p>
+<p>The escape was to stop thinking of the universe as data at all. If a planet's properties can be computed from a number, the planet does not need to be stored — only the number does, and only briefly. Elite takes a single seed, runs it through a fixed algorithm the appropriate number of times, and produces a sequence that determines each planet's complete composition: where it sits, what it trades, how it is governed, what it is called. Nothing is saved because nothing needs to be. The galaxy is regenerated, identically, every time you look at it.</p>`
+      },
+      {
+        title: 'Determinism is the whole trick',
+        html: `<p>The property that makes this work rather than merely sounding clever is determinism. The same seed run through the same algorithm yields the same results forever, which means a planet you visited an hour ago has the same name, the same economy and the same prices when you return — not because the game remembered, but because arithmetic is reliable. The player experiences a persistent universe. The machine is doing nothing of the kind.</p>
+<p>This distinction is the conceptual core of procedural generation, and it is what separates the technique from randomness. Random numbers give you variety and nothing else: you cannot go back, and you must store whatever you made. A deterministic function of a seed gives you variety and permanence simultaneously, at a memory cost of one number. Braben and Bell were not compressing their universe. They had found a representation in which it never needed compressing, because it was never written down.</p>`
+      },
+      {
+        title: 'The galaxies they were not allowed to keep',
+        html: `<p>The best detail in Elite's development is a publishing decision. Braben and Bell originally intended 248 galaxies. Acornsoft insisted on a smaller universe — specifically to hide the galaxies' mathematical origins. With 248 of them, the artifice would become apparent; a player wandering that far would begin to sense the algorithm behind the scenery, and the universe would collapse into what it actually was, a function being evaluated.</p>
+<p>So the publisher cut a universe that cost nothing to include, purely to preserve the illusion. This is a genuinely sophisticated piece of design thinking for 1984, and it identifies the permanent tension in procedural generation: the technique's capacity is effectively unbounded, and human interest in its output is not. Eight galaxies feel like a universe. Two hundred and forty-eight feel like a spreadsheet. Every procedurally generated game since has had to find the same line, and most of them have found it later than Acornsoft did.</p>`
+      },
+      {
+        title: 'What Elite started',
+        html: `<p>Elite's inheritance is usually summarised as three things: the open-world format, wire-frame 3D graphics, and procedurally generated content. That is accurate but it undersells the first. Elite did not merely have an open world; it demonstrated that an open world could be an economic and navigational system rather than a handcrafted place — that a game could offer freedom by generating possibility rather than by authoring it. The trading, the reputation, the choice to be a merchant or a pirate all fall out of a universe large enough that the designers could not have anticipated your route through it.</p>
+<p>The planet descriptions carry the point best. Text strings assembled numerically from lookup tables produced entries like a world of "carnivorous arts graduates" — nonsense generated by arithmetic, and funny in a way no writer scripted. Players remember those descriptions decades later precisely because nobody wrote them. The game had found a way to surprise its own authors, on a machine with 22 kilobytes, and that is the promise procedural generation has been chasing ever since.</p>`
+      }
+    ]
   }
 ];

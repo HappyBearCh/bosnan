@@ -310,7 +310,7 @@ module.exports = [
     ],
   },
   {
-    id: 'ff6-sketch-cultural',
+    id: 'missingno-glitch-pokemon',
     sources: [
       { title: 'MissingNo.', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/MissingNo.' },
       { title: 'MissingNo.', publisher: 'Bulbapedia', url: 'https://bulbapedia.bulbagarden.net/wiki/MissingNo.' },
@@ -509,6 +509,123 @@ module.exports = [
       {
         title: 'A Single Bit With Enormous Consequences',
         html: '<p>What made Hot Coffee so pivotal was not the crude minigame itself but the precedent it set: the ESRB ruled that content present in the shipped code counted toward a game’s rating even if it was inaccessible without modification. That interpretation put every publisher on notice that "cut but not deleted" content carried real legal and commercial risk.</p><p>The fallout was immediate and expensive. Retailers pulled San Andreas, Take-Two took a financial hit reissuing a scrubbed edition, and lawmakers seized on the episode as evidence that the industry could not police itself. The controversy accelerated scrutiny of game ratings in the United States and made thorough removal of unused adult content a standard part of the QA and certification process — a direct, lasting change to how games are finished and shipped.</p>',
+      },
+    ],
+  },
+  {
+    id: 'myth-ii-uninstaller-recall',
+    sources: [
+      {
+        title: 'Myth II: Total Recall',
+        publisher: 'GameSpot',
+        url: 'https://www.gamespot.com/articles/myth-ii-total-recall/1100-2465957/',
+      },
+      {
+        title: 'When Uninstalling A PC Game Erases the Entire Hard Drive',
+        publisher: 'Max Woolf\'s Blog',
+        url: 'https://minimaxir.com/2013/06/working-as-intended/',
+      },
+    ],
+    title: 'The Myth II Uninstaller — Caught by One Employee',
+    game: 'Myth II: Soulblighter',
+    platform: 'PC',
+    year: 1998,
+    era: '1990s',
+    impact: 'Industry-Changing',
+    description: 'Bungie found a bug in Myth II\'s uninstaller that could erase an entire hard drive — after 200,000 copies had shipped to retailers. The recall cost roughly $800,000, and in the end exactly one person ever fell victim to it.',
+    longDescription: 'The flaw was in the uninstaller\'s logic about what it was allowed to delete. It removed the directory the game had been installed into, without adequately guarding against the case where that directory was the drive\'s root — so a player who installed Myth II to the root of their hard drive and later uninstalled it would find the uninstaller working outward through everything on the disk.\n\nThe discovery was almost accidental and came from the far edge of the company. A Bungie employee in the Japanese office, working on the Asian versions, attempted to uninstall a final build she had placed in the main root folder of her drive and watched it consume the machine. By that point copies were already moving to retailers. Bungie recalled roughly 200,000 units before they reached customers, produced corrected discs, and absorbed a cost estimated at around $800,000 — a substantial sum for a studio of that size in 1998, and one spent entirely on a disaster that had not yet happened to any customer. The final tally is the part that lodges in the memory: despite the recall, exactly one person is known to have been hit by the bug.',
+    keyFacts: [
+      'The uninstaller deleted its install directory without properly guarding against that directory being the drive root',
+      'Found by a Bungie employee in the Japanese office who had installed the final build to her root folder',
+      'Bungie recalled roughly 200,000 copies before they reached customers',
+      'The recall cost an estimated $800,000; only one person is known to have hit the bug',
+    ],
+    sections: [
+      {
+        title: 'The $800,000 Decision',
+        html: '<p>Bungie\'s position in 1998 was genuinely awful. The discs were made, the boxes were moving, and the bug required a specific and uncommon user choice — installing to the root of a drive rather than a subfolder — to trigger at all. A studio inclined toward optimism could construct a comfortable argument for shipping: most people install to Program Files, a patch can go out, the exposure is small. That argument would even have been mostly right, as the eventual single-victim count demonstrates.</p><p>They recalled it anyway, at a cost of roughly $800,000. The reasoning holds up better than the arithmetic does. A bug that destroys a customer\'s entire hard drive is not a defect in a product; it is a catastrophe visited on someone who trusted you, and the cost to them is unbounded — work, photographs, everything on the disk. Weighing that against a probability estimate is the wrong frame. Bungie paid a large sum to avoid a small chance of doing something unforgivable, which is a defensible way to think about risk and a rare one.</p>',
+      },
+      {
+        title: 'The Ending Nobody Would Write',
+        html: '<p>Exactly one person ever fell prey to the uninstaller bug. That fact does something strange to the story: measured purely by outcomes, Bungie spent $800,000 to prevent one incident, and the recall looks like a catastrophic overreaction. Measured by what was known at the time, it was straightforwardly correct — nobody could have known the number would be one, and the plausible range extended to thousands.</p><p>This is the uncomfortable shape of most good risk decisions. They are judged afterwards against an outcome that only one branch of the possibility tree produced, and the branch that materialised makes the precaution look either prophetic or foolish depending on luck. The Myth II recall is remembered as an industry parable precisely because both readings are available. It is simultaneously a story about a studio doing the honourable expensive thing, and a story about a studio spending nearly a million dollars to protect a single unlucky person from an uninstaller. Both are true.</p>',
+      },
+    ],
+  },
+  {
+    id: 'pool-of-radiance-uninstaller',
+    sources: [
+      {
+        title: 'Pool of Radiance: Ruins of Myth Drannor',
+        publisher: 'PCGamingWiki',
+        url: 'https://www.pcgamingwiki.com/wiki/Pool_of_Radiance:_Ruins_of_Myth_Drannor',
+      },
+      {
+        title: 'Pool of Radiance Uninstall Bug',
+        publisher: 'RPGFan',
+        url: 'https://www.classic.rpgfan.com/news/2001/1416.html',
+      },
+    ],
+    title: 'The Game That Deleted Your Operating System',
+    game: 'Pool of Radiance: Ruins of Myth Drannor',
+    platform: 'PC',
+    year: 2001,
+    era: '2000s',
+    impact: 'Data Loss',
+    description: 'Where Bungie caught its hard-drive-destroying uninstaller before release, this one shipped. Uninstalling the original 1.0 release deleted system files and left the operating system unable to boot.',
+    longDescription: 'The uninstaller in the 1.0 release of Pool of Radiance: Ruins of Myth Drannor removed system files along with the game, taking out enough of Windows that the machine would no longer start. A player who bought the game, decided against keeping it, and uninstalled it in the ordinary way was left with a computer that needed the operating system reinstalled.\n\nThe timing made it far worse than the same bug would be today. This was 2001, comfortably before games patched themselves on installation, so getting the fix — the 1.1 uninstaller patch — required knowing the bug existed, having a working internet connection, and going to find it, all before uninstalling. The people most likely to be destroyed were exactly those least engaged with the game: someone who played briefly, never read a forum, and removed it. Later retail pressings shipped pre-updated to 1.2 with the corrected uninstaller included, but the original run was already in circulation. The episode produced one of the great changelog entries in software history, in patch 1.4: "removed automatic /System32/ deletion on uninstall due to player feedback."',
+    keyFacts: [
+      'The 1.0 uninstaller deleted Windows system files, leaving the operating system unable to boot',
+      'Fixed by the 1.1 uninstaller patch, which players had to find and apply before uninstalling',
+      'Later retail pressings shipped pre-updated to version 1.2 with the corrected uninstaller',
+      'Patch 1.4\'s changelog recorded: "removed automatic /System32/ deletion on uninstall due to player feedback"',
+    ],
+    sections: [
+      {
+        title: 'Punishing the Least Invested',
+        html: '<p>The cruelty of this bug is in who it selected for. Triggering it required uninstalling the game — an action taken by people who had decided they were finished, which is to say the players with the least investment and the least reason to have gone looking for patches. Someone deeply engaged with the game, reading forums and applying updates, was comparatively safe. Someone who tried it, shrugged, and tidied up their hard drive lost their operating system.</p><p>The 2001 context is essential. Automatic patching on install did not exist as a norm, broadband was far from universal, and a large share of players had no routine mechanism for learning that a fix existed. The remedy — apply the 1.1 uninstaller patch — presupposed knowledge that the bug was there, which the affected population by definition did not have. A fix that requires the victim to already know is not much of a fix, and the original run stayed in circulation regardless.</p>',
+      },
+      {
+        title: '"Due to Player Feedback"',
+        html: '<p>The patch 1.4 note — "removed automatic /System32/ deletion on uninstall due to player feedback" — has survived as a joke, and it earns the laugh honestly. The phrase "due to player feedback" belongs to balance changes and quality-of-life requests; attaching it to the destruction of the Windows system directory produces a bureaucratic deadpan no comedy writer would attempt. It reads as though deleting the operating system had been a design decision that testing eventually found unpopular.</p><p>Underneath the joke is the real comparison. Bungie found essentially this bug in 1998 before release and spent $800,000 recalling 200,000 copies; one person was ultimately affected. Pool of Radiance shipped it, and the fix was a patch that the people at risk were structurally unlikely to find. Same class of defect, opposite decisions, and the difference between them is the difference between treating a customer\'s hard drive as their property and treating it as an acceptable casualty of a release schedule.</p>',
+      },
+    ],
+  },
+  {
+    id: 'ultima-ix-broken-release',
+    sources: [
+      {
+        title: 'Ultima IX: Ascension',
+        publisher: 'Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Ultima_IX:_Ascension',
+      },
+      {
+        title: 'Ultima IX: Ascension',
+        publisher: 'Hardcore Gaming 101',
+        url: 'http://www.hardcoregaming101.net/ultima-ix-ascension/',
+      },
+    ],
+    title: 'Ultima IX and the Ship-or-Kill Deadline',
+    game: 'Ultima IX: Ascension',
+    platform: 'PC',
+    year: 1999,
+    era: '1990s',
+    impact: 'Routinely cited as a franchise-ending release',
+    description: 'A storyline bug made Ultima IX impossible to finish without cheating, saves corrupted, and it ran properly only on 3Dfx cards in the year 3Dfx collapsed. EA had set a ship-or-kill deadline for Thanksgiving 1999.',
+    longDescription: 'Ultima IX\'s failures were not really bugs so much as the visible symptoms of a development history that had been dismantled twice over. Partway through production, EA and Origin moved most of the Ultima IX team onto Ultima Online after its beta succeeded, effectively halting the game. When the team eventually returned, the work they had done was dated and many of the people who had done it were gone; two key designers departed for John Romero\'s Ion Storm, one of them after a personality conflict with Richard Garriott. Then EA imposed a ship-or-kill deadline for Thanksgiving 1999, and large portions of the game were cut or drastically shortened to hit it.\n\nWhat shipped was extraordinary in its brokenness. Saves corrupted; the game crashed while saving; it crashed to the desktop with no error at all; memory leaks degraded performance the longer it ran. A storyline bug made the adventure impossible to complete without cheating — the final entry in a fourteen-year series could not be finished. And the compatibility situation was almost comically unlucky: the game really only worked on 3Dfx hardware, apparently because there had been no time to test the less popular APIs, in the exact year 3Dfx\'s market position collapsed. The audience that could run Ultima IX properly was evaporating as it shipped. GameSpot named it 1999\'s Most Disappointing Game.',
+    keyFacts: [
+      'EA and Origin moved most of the Ultima IX team to Ultima Online mid-development, stalling the project',
+      'Two key designers left for Ion Storm; one resigned after a personality conflict with Richard Garriott',
+      'EA imposed a ship-or-kill deadline for Thanksgiving 1999, forcing large cuts',
+      'A storyline bug made the game impossible to finish without cheating; it ran well only on collapsing 3Dfx hardware',
+    ],
+    sections: [
+      {
+        title: 'The Team That Was Taken Away',
+        html: '<p>The decision that broke Ultima IX was made years before release and had nothing to do with programming. Ultima Online\'s beta was a success, and EA and Origin responded rationally by moving people to it — Ultima Online was the future, the money was there, and Ultima IX could wait. What that reasoning missed is that a game in development is not a file sitting on a server; it is a shared understanding held in the heads of the people building it, and it decays when they leave.</p><p>By the time the team reassembled, the work was technically dated and, worse, the institutional memory had dispersed. Key designers had gone to Ion Storm, one after clashing with Garriott directly. The people who returned inherited a codebase and a design whose reasoning had walked out the door. This is why the eventual bug list reads the way it does — corrupted saves, silent crashes, a storyline that cannot be completed — these are the signature of a project nobody fully understood any more, finished under duress.</p>',
+      },
+      {
+        title: 'Unfinishable, and Unrunnable',
+        html: '<p>Two failures stand out for what they say about the deadline. The first is the storyline bug that made the game impossible to complete without cheating. Ultima IX was the conclusion of a fourteen-year narrative, the entry the entire series had been building toward, and it shipped in a state where reaching the ending required stepping outside the game. No amount of schedule pressure makes that acceptable; it means the critical path was not tested end-to-end, which is the single test a story-driven RPG cannot skip.</p><p>The second is the graphics situation, which is where bad decisions met bad luck. There was no time to test the less popular APIs, so the game worked properly only on 3Dfx cards — a defensible gamble in 1997, when 3Dfx dominated. It shipped in 1999, the year 3Dfx\'s fortunes fell out from under it in one of the sharpest reversals in PC hardware history. The practical effect was that a large share of buyers physically could not run the game well. EA got its Thanksgiving release, and what it purchased for the deadline was a franchise finale that could neither be run by most of its audience nor finished by the ones who could.</p>',
       },
     ],
   },
