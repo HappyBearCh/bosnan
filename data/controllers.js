@@ -490,4 +490,85 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'nes-advantage',
+    title: 'The NES Advantage — The Arcade Stick for the Living Room',
+    platform: 'Nintendo Entertainment System',
+    manufacturer: 'Nintendo (manufactured by Asciiware)',
+    year: 1987,
+    era: '1980s',
+    description: 'Nintendo\'s official tabletop arcade stick, built by Asciiware, brought a microswitched joystick, adjustable turbo dials, and a pseudo-slow-motion button to the NES — the definitive way to get the arcade feel at home in the late 1980s.',
+    longDescription: 'The NES Advantage, released in 1987, was Nintendo\'s answer to a specific desire: NES owners in the 1980s had grown up feeding quarters into upright arcade cabinets, and the small rectangular NES control pad did not feel like that. Manufactured for Nintendo by Asciiware, the Advantage was a large, heavy unit designed to sit flat on a table or the floor while the player operated a tall, ball-topped joystick with the left hand and the face buttons with the right — the ergonomics of a standing arcade cabinet, reproduced for a seated living-room player.\n\nBeyond the arcade-style layout, the Advantage added two features the standard pad lacked. Each of the A and B buttons had a turbo function with an adjustable dial, letting the player set the auto-fire rate anywhere from a gentle repeat to a rapid stream — invaluable in the shooters and action games that punished a tiring thumb. It also offered a "slow" button that produced a pseudo-slow-motion effect by rapidly pausing and unpausing the game, easing difficult sections; because it worked by hammering the pause line, it did not function with every game, and titles using the Zapper or R.O.B. were incompatible.\n\nOn release the Advantage was well received as the closest thing to a home arcade experience, and it became one of the era\'s most recognisable peripherals — recognisable enough to earn a cameo in Ghostbusters II, where a character uses one to steer the Statue of Liberty through New York. Its heft and its microswitched stick gave it a durability and a tactile authority the standard pad could not match, and it developed a lasting association with the more hardcore end of NES play.\n\nThe Advantage endures as the archetype of the third-party-style deluxe controller made official — a peripheral that existed not to fix a flaw in the standard input but to serve a particular kind of player who wanted the arcade in their home. Its combination of a proper joystick, adjustable turbo, and slow-motion assist set a template that arcade sticks for later consoles would keep returning to, and it remains a fondly-remembered icon of the NES accessory ecosystem.',
+    keyFacts: [
+      'Released 1987; manufactured for Nintendo by Asciiware as an official tabletop arcade stick',
+      'Adjustable turbo dials on the A and B buttons set the auto-fire rate',
+      'A "slow" button faked slow motion by rapidly pausing; incompatible with some games',
+      'Appeared in Ghostbusters II, steering the Statue of Liberty through the city',
+    ],
+    notableFor: 'Bringing an authentic microswitched arcade-stick experience, adjustable turbo, and slow-motion assist to the NES as an official Nintendo peripheral.',
+    sections: [
+      {
+        title: 'The Arcade at Home',
+        html: '<p>The Advantage sold a feeling more than a function. The NES pad worked perfectly well, but it did not feel like the cabinets players had learned games on, and the Advantage existed to close that gap — a big, weighty slab with a tall ball-top stick you gripped like the real thing. Sitting a player behind it, joystick under the left hand and buttons under the right, deliberately recreated the posture of standing at an arcade machine. It was a peripheral built to make the living room feel a little more like the arcade, and for a generation of NES owners in 1987 it succeeded.</p>'
+      },
+      {
+        title: 'Turbo, Slow-Mo, and the Hardcore Player',
+        html: '<p>The Advantage\'s two signature features both served players pushing against the difficulty of late-1980s games. Adjustable turbo dials turned the exhausting mash of a shooter or a sports game into a held button, and could be tuned to each game\'s needs. The slow-motion button — a clever hack that worked by pulsing pause on and off many times a second — let players crawl through sections that were otherwise beyond them, though the trick\'s crudeness meant it simply did not work with a number of titles. Together they marked the Advantage as a tool for the committed player, and helped fix its reputation as the serious NES owner\'s controller.</p>'
+      },
+    ],
+  },
+  {
+    id: 'sega-activator',
+    title: 'The Sega Activator — The Full-Body Controller That Didn\'t Work',
+    platform: 'Sega Genesis / Mega Drive',
+    manufacturer: 'Sega (developed by Interactive Light)',
+    year: 1993,
+    era: '1990s',
+    description: 'An octagonal ring the player stood inside, firing infrared beams at the ceiling to read body movement — the first full-body motion controller, a decade before the Wii and Kinect, and a near-total failure in practice.',
+    longDescription: 'The Sega Activator, shown at the Winter CES in 1993, was one of the most ambitious and least successful control peripherals of its era. Developed for Sega by Interactive Light and derived from a laser-based musical instrument called the Light Harp, it was an octagonal ring the player laid on the floor and stood inside. Each of the eight segments emitted an infrared beam straight up toward the ceiling; when the player moved a hand or foot through a segment, the beam\'s reflection changed, and the Activator read that as an input. It was, more than a decade before the Wii Remote or Kinect, the first full-body motion controller for a home console.\n\nThe marketing sold a fantasy: stand in the ring, throw a roundhouse kick, and watch your character do the same in Mortal Kombat II or Eternal Champions. The reality was far more limited. Each of the eight beams was simply mapped to a button on the three-button Mega Drive controller, so the Activator was not translating the player\'s movements into analogous in-game motion at all — it was an elaborate, unreliable way of pressing eight buttons by waving limbs through beams. In theory each beam could register at two heights for a "low" and "high" input, but in practice even that was inconsistent.\n\nThe device\'s problems were fundamental. Its accuracy depended on a flat, unobstructed ceiling for the beams to reflect from — anything less than a straight ceiling, or the presence of a ceiling fan, degraded it — and the physical act of standing in a ring waving at the floor to press buttons was both tiring and imprecise. At an initial price around $80, it asked players to pay a premium for a control method that was worse than the controller it replaced. It was dismissed by consumers as unwieldy and inaccurate and discontinued after only a few months.\n\nThe Activator is remembered now as a fascinating failure — a genuine first attempt at full-body motion control that arrived with neither the sensor technology nor the software design to make the idea work. It sits alongside the era\'s other motion-control curiosities as evidence of how long the industry chased body-tracking before the hardware could actually deliver it, and as a reminder that being first to an idea is not the same as executing it.',
+    keyFacts: [
+      'Shown at Winter CES 1993; developed by Interactive Light from its Light Harp instrument',
+      'The first full-body motion controller — over a decade before the Wii and Kinect',
+      'Eight upward infrared beams, each simply mapped to a Mega Drive button',
+      'Required a flat ceiling, was inaccurate and tiring, and was discontinued within months',
+    ],
+    notableFor: 'Being the first home-console full-body motion controller — and a cautionary failure whose beams simply mapped to ordinary buttons and needed a perfectly flat ceiling to work.',
+    sections: [
+      {
+        title: 'A Decade Too Early',
+        html: '<p>The Activator\'s ambition is easy to admire in hindsight because the industry spent the next fifteen years chasing exactly the thing it promised. Full-body motion control — no controller in your hands, your movements becoming the game\'s — is what the Wii and then Kinect eventually delivered to mass audiences. The Activator wanted to be that in 1993, and it failed not because the idea was wrong but because the technology to realise it did not exist yet. Eight infrared beams bouncing off a living-room ceiling could not capture a body\'s motion; they could only, crudely, be broken.</p>'
+      },
+      {
+        title: 'The Gap Between the Ad and the Ring',
+        html: '<p>What sank the Activator was the distance between what it promised and what it did. The commercials showed players kicking and punching and their fighters mirroring them; the device underneath mapped eight beams to eight buttons and asked the player to trigger them by waving limbs through the air. A roundhouse kick did not become a roundhouse kick — it became, at best, whichever button happened to sit in that segment, if the beam read the motion at all. Standing in a ring to press buttons less reliably than a $25 pad could, for $80 and a flat ceiling, was a proposition few players accepted, and the Activator vanished almost as quickly as it appeared.</p>'
+      },
+    ],
+  },
+  {
+    id: 'neo-geo-aes-joystick',
+    title: 'The Neo Geo AES Joystick — The Arcade Board You Held',
+    platform: 'SNK Neo Geo AES',
+    manufacturer: 'SNK',
+    year: 1990,
+    era: '1990s',
+    description: 'SNK\'s home console shared its hardware with its arcade boards, so its controller was built to match — a heavy, microswitched, ball-top arcade stick with four large buttons, bundled in the box with the $599 system.',
+    longDescription: 'When SNK launched the Neo Geo AES (Advanced Entertainment System) in 1990, its selling point was unprecedented: the home machine ran the identical hardware as SNK\'s MVS arcade boards, so a Neo Geo game at home was not a downgraded port but literally the arcade game. A console making that promise could not ship a small gamepad, and it did not. Each AES came bundled with a pair of controllers that were, in effect, home versions of an arcade control panel.\n\nThe controller was a large, heavy slab — roughly 280mm wide — dominated by an old-fashioned ball-handle joystick and four big, rounded action buttons, matching the four-button layout of the MVS cabinets exactly. The stick was microswitched, giving it the crisp, positive click of a real arcade joystick rather than the mushier feel of a membrane pad, and reviewers consistently singled out its "give" and the tappability of its large buttons as genuinely arcade-grade. This was not a controller trying to evoke the arcade; it was arcade hardware repackaged for a coffee table.\n\nThat quality came at a price that matched the rest of the system. The AES launched at around $599 to $650 and its cartridges could run from $200 well past $500 each — a console positioned as a luxury item for players who wanted the arcade experience uncompromised and could pay for it. The bundled controllers were part of that proposition: their weight and build signalled that this was premium hardware, and to this day the AES joystick is a collectible object in its own right, changing hands for meaningful sums separate from the console.\n\nThe Neo Geo joystick stands as the purest expression of a design philosophy the rest of the console market avoided for cost reasons: rather than approximate the arcade with a cheaper input, reproduce the arcade control panel exactly and charge accordingly. For the fighting and run-and-gun games that defined the Neo Geo library, that fidelity mattered — the games were built for that exact stick and those exact buttons — and it gave the AES a tactile authenticity no gamepad-based console of its generation could claim.',
+    keyFacts: [
+      'Bundled with the Neo Geo AES, which shared identical hardware with SNK\'s MVS arcade boards',
+      'A heavy ~280mm slab with a microswitched ball-top stick and four large arcade buttons',
+      'Matched the MVS cabinet\'s four-button layout exactly for true arcade fidelity at home',
+      'Part of a luxury system priced around $599–650 with cartridges from $200 upward',
+    ],
+    notableFor: 'Reproducing a genuine arcade control panel as a home controller, matching the Neo Geo AES\'s promise of identical-to-arcade hardware.',
+    sections: [
+      {
+        title: 'Arcade Fidelity as the Whole Point',
+        html: '<p>Every other console of the era made a compromise the Neo Geo refused to make: to hit a consumer price, they shipped a gamepad that approximated arcade control. SNK\'s entire pitch was that the AES did not approximate anything — it ran the same boards as the arcade, so it shipped the same kind of stick. The bundled controller\'s heft, its microswitched ball-top joystick, and its four big buttons were not luxuries bolted on; they were the logical endpoint of a console whose reason to exist was that it was the arcade, unaltered, in your home.</p>'
+      },
+      {
+        title: 'The Price of No Compromise',
+        html: '<p>That fidelity is inseparable from the Neo Geo\'s reputation as gaming\'s great luxury object. A system at $599 and up, with cartridges that could cost more than a rival console, was never going to be a mass-market machine — and its controller was priced and built to match, a premium object for a premium system. The result is that the AES joystick outlived its era as a collector\'s piece, sought after both by Neo Geo owners and by fighting-game players who still regard it as one of the best arcade sticks ever bundled with a console. It is the rare pack-in controller that people buy the console\'s successors hoping to plug in.</p>'
+      },
+    ],
+  },
 ];

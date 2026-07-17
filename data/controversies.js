@@ -593,4 +593,111 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'mortal-kombat-nintendo-censorship',
+    sources: [
+      {
+        title: 'Controversies surrounding Mortal Kombat',
+        publisher: 'Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Controversies_surrounding_Mortal_Kombat',
+      },
+    ],
+    title: 'Mortal Kombat\'s Blood Code and Nintendo\'s Censorship',
+    year: 1993,
+    era: '1990s',
+    games: [
+      'Mortal Kombat (SNES)',
+      'Mortal Kombat (Sega Genesis)',
+    ],
+    description: 'When Mortal Kombat came home in 1993, Nintendo scrubbed the blood and toned down the fatalities for the SNES, while Sega hid the full gore behind a cheat code — and the Genesis version outsold the sanitised SNES one, teaching the industry a lesson it never forgot.',
+    longDescription: 'Mortal Kombat had been a sensation in arcades in 1992, notorious for digitised actors, buckets of blood, and its finishing "Fatalities." When the home ports arrived on 13 September 1993 — a heavily-promoted "Mortal Monday" — the two console giants took opposite approaches to that content, and the contrast became one of the defining episodes of the 16-bit console war.\n\nNintendo, still committed to a family-friendly image, ordered the violence removed from its version: the blood was recoloured grey and reframed as "sweat," and the goriest Fatalities were softened or replaced. Crucially, the SNES version had no way to restore the missing content — the censorship was baked in. Sega took the other path. The Genesis version also shipped bloodless by default, but a code entered on the "Code of Honour" screen — A, B, A, C, A, B, B — restored the full blood and gore. The sequence, "ABACABB," was a nod to the arrangement of the 1981 Genesis album Abacab, and players memorised it instantly.\n\nThe market delivered its verdict. Freed to be as violent as the arcade with a few button presses, the Genesis version substantially outsold the sanitised SNES release — by many estimates roughly three to one. Sega\'s willingness to let players choose the mature experience fit its whole "edgier than Nintendo" marketing posture, and Mortal Kombat became a concrete example of that positioning paying off in sales. Nintendo\'s censorship, intended to protect its image, instead handed its rival a marketing victory and made Nintendo look out of step with what teenage players actually wanted.\n\nThe episode fed directly into the political storm already gathering around game violence. Mortal Kombat, alongside Night Trap, was a centrepiece of the U.S. Senate hearings that convened later in 1993, and the industry\'s response — self-regulation through the Entertainment Software Rating Board — arrived in 1994. Nintendo\'s reversal was telling: by the time Mortal Kombat II came home, Nintendo had abandoned its censorship stance and allowed the blood, letting the new ratings system rather than corporate policy decide what players could see.',
+    outcome: 'The uncensored Genesis version outsold the sanitised SNES version roughly three to one; Nintendo reversed its policy for Mortal Kombat II, and the broader violence controversy helped produce the ESRB in 1994.',
+    sections: [
+      {
+        title: 'Two Consoles, Two Philosophies',
+        html: '<p>The split screen of the console war has rarely been as literal as it was on Mortal Monday. The same game, on the two rival machines, embodied the two companies\' entire brand strategies. Nintendo\'s SNES version — grey "sweat" instead of blood, Fatalities defanged, no way to undo any of it — was the family-friendly Nintendo made playable. Sega\'s Genesis version, bloodless until you entered ABACABB and then every bit as violent as the arcade, was the edgier, older-skewing Sega made playable. Players did not have to read a marketing deck to understand the difference; they could see it in the blood, or its absence.</p>'
+      },
+      {
+        title: 'The Lesson Nintendo Learned',
+        html: '<p>The sales gap was the argument. When the Genesis version outsold the SNES one by roughly three to one, it demonstrated in the clearest possible terms that Nintendo\'s core teenage audience wanted the mature version and would buy the hardware that offered it. Nintendo absorbed the lesson quickly: it dropped the censorship for Mortal Kombat II and thereafter leaned on the new ESRB ratings to manage mature content rather than removing it outright. The blood code is remembered as a fun piece of trivia, but its real significance is that it marked the moment the console industry accepted that "mature" games were a market to be served, not a problem to be sanitised away.</p>'
+      },
+    ],
+    keyFacts: [
+      'Home ports launched 13 September 1993 on a heavily-promoted "Mortal Monday"',
+      'Nintendo\'s SNES version recoloured blood as grey "sweat" with no way to restore it',
+      'The Genesis "Blood Code" — A,B,A,C,A,B,B — nodded to the 1981 Genesis album Abacab',
+      'The uncensored Genesis version outsold the SNES one roughly 3-to-1; Nintendo reversed course for MKII',
+    ],
+  },
+  {
+    id: 'columbine-and-doom',
+    sources: [
+      {
+        title: 'Sanders v. Acclaim Entertainment, Inc.',
+        publisher: 'Justia',
+        url: 'https://law.justia.com/cases/federal/district-courts/FSupp2/188/1264/2576960/',
+      },
+    ],
+    title: 'Columbine and the Blaming of Doom',
+    year: 1999,
+    era: '1990s',
+    games: [
+      'Doom',
+      'Wolfenstein 3D',
+    ],
+    description: 'After the 1999 Columbine High School massacre, the media and a lawsuit blamed violent video games — Doom above all — for influencing the shooters, in what became the most intense moral panic the medium had faced. The courts rejected the claim.',
+    longDescription: 'On 20 April 1999, two students killed twelve classmates and a teacher at Columbine High School in Colorado before taking their own lives. In the search for explanations that followed, violent video games — and Doom in particular — became a prominent target. The killers had been Doom players; during the investigation, police found a videotape in which one of them referred to his sawed-off shotgun as "Arlene," a name drawn from a Doom character. Details like that, amplified across television and print, helped cement a narrative that immersive violent games had trained or inspired the shooters.\n\nThe panic was more intense and more sustained than the earlier controversies over Mortal Kombat or the 1993 Senate hearings, because it was now attached to a specific, horrifying real-world atrocity rather than to a general worry about content. Doom, released in 1993 and already a lightning rod for concern about first-person violence, became shorthand in public discourse for the supposed danger of the entire medium. The pressure translated into litigation: the family of murdered teacher Dave Sanders, together with others acting on behalf of victims, sued a long list of entertainment companies — including video-game makers such as Sony Computer Entertainment America, Activision, and Doom\'s developer id Software, alongside film and media firms — arguing they shared responsibility for the killings.\n\nThe legal system did not accept the argument. In March 2002, U.S. District Judge Lewis Babcock dismissed the suit, granting the motions to dismiss filed by the eleven video-game companies as well as the film and media defendants. The ruling reflected the established legal principle that creators of expressive media are not liable for the criminal acts of people who consume that media, and that the harm was neither foreseeable nor legally caused by the games. It was a significant affirmation that video games enjoyed protection comparable to other forms of expression.\n\nThe Columbine episode nonetheless left a lasting mark. It hardened a public association between violent games and real-world violence that would be revived after subsequent tragedies, and it made "video games cause violence" a durable political talking point despite a growing body of research finding no causal link. For the industry it was a formative trial by fire — a demonstration that the medium could be made a scapegoat for a national trauma, and that its legal protections, while real, would have to be defended repeatedly in the court of public opinion long after they were secured in the court of law.',
+    outcome: 'A federal judge dismissed the Sanders v. Acclaim lawsuit in March 2002, freeing the game makers of liability; but the episode entrenched a lasting public and political association between violent games and real-world violence.',
+    sections: [
+      {
+        title: 'A Panic Attached to a Tragedy',
+        html: '<p>What made the Columbine backlash different from the game-violence controversies before it was that it was no longer abstract. The 1993 Senate hearings worried about what games might do; Columbine offered a concrete, devastating event and a pair of perpetrators who had demonstrably played Doom. That combination gave the panic an emotional force earlier controversies lacked, and it made Doom — a six-year-old game by then — a national symbol of a supposed threat. Facts that would otherwise be trivia, like a shotgun nicknamed after a Doom character, became evidence in a story the country was desperate to make sense of.</p>'
+      },
+      {
+        title: 'The Law Says No, the Culture Says Maybe',
+        html: '<p>The courts gave a clear answer: creators of expressive works are not liable for the crimes of those who consume them, and the 2002 dismissal of the Sanders suit applied that principle squarely to video games. But a legal victory did not settle the cultural question. The Columbine-era association between violent games and violent acts proved remarkably durable, resurfacing after later shootings and remaining a reliable political talking point for decades, even as academic research repeatedly failed to establish a causal link. The episode is the clearest demonstration of a gap the industry still lives with — between the legal protection games plainly enjoy and the public suspicion they have never fully escaped.</p>'
+      },
+    ],
+    keyFacts: [
+      'After the 20 April 1999 Columbine massacre, Doom became the media\'s prime video-game scapegoat',
+      'A killer\'s videotape referred to his shotgun as "Arlene," a Doom character name',
+      'The Sanders family sued 11 game companies, including id Software, Activision, and SCEA',
+      'Judge Lewis Babcock dismissed the suit in March 2002 on established free-expression grounds',
+    ],
+  },
+  {
+    id: 'phantasmagoria-1995',
+    sources: [
+      {
+        title: 'Phantasmagoria (video game)',
+        publisher: 'Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Phantasmagoria_(video_game)',
+      },
+    ],
+    title: 'Phantasmagoria and the Limits of FMV Horror',
+    year: 1995,
+    era: '1990s',
+    games: [
+      'Phantasmagoria',
+    ],
+    description: 'Roberta Williams\' 1995 full-motion-video horror game was banned outright in Australia and refused by major US retailers over a graphic sexual-assault scene — yet it became Sierra\'s best-selling game to date.',
+    longDescription: 'Phantasmagoria, designed by Sierra co-founder Roberta Williams and released on 24 August 1995, was one of the most ambitious full-motion-video games of the CD-ROM era: a point-and-click horror story shot with live actors composited over pre-rendered environments, spanning seven CDs. Williams, best known for the family-friendly King\'s Quest adventures, had deliberately made something adult and disturbing — and one scene in particular pushed past what much of the market would tolerate.\n\nThe opening of the game\'s fourth chapter depicts the protagonist, Adrienne, being sexually assaulted by her demon-possessed husband following an initially consensual encounter. The scene\'s subject matter, rendered with live actors rather than abstracted sprites, provoked immediate and serious backlash. In the United States, several major retail chains — CompUSA among them — simply refused to stock the game, and some reviewers accused it of "making a game of sexual violence." Williams defended the scene as essential to the plot, the pivotal moment at which Adrienne realises how badly wrong her husband has become.\n\nIn Australia the reaction was absolute: the game was banned outright for all audiences. Seven classification officials reviewed it — reportedly after a live demonstration by a representative from distributor Sega-Ozisoft on the company\'s own equipment — and were unanimous in refusing it classification, which under Australian law meant it could not legally be sold to anyone. The FMV format was central to the controversy: the same content depicted in the stylised graphics of an earlier era might have drawn far less scrutiny, but photographed actors made the violence feel real in a way regulators and retailers were not prepared to accept.\n\nAnd yet Phantasmagoria was a commercial triumph. Despite — or partly because of — the controversy, it became the best-selling game in the United States on release and Sierra\'s best-selling computer game to date, reportedly grossing around $12 million and selling some 300,000 copies in its opening weekend. The episode captured a specific tension of the mid-1990s: full-motion video briefly let games reach for the visceral realism of film, and in doing so ran straight into the content boundaries film had spent decades negotiating — boundaries the young medium had never had to confront when its violence was made of pixels.',
+    outcome: 'Banned for all audiences in Australia and refused by several major US retailers, yet it became Sierra\'s best-selling computer game to date — grossing about $12 million and selling roughly 300,000 copies in its opening weekend.',
+    sections: [
+      {
+        title: 'When Actors Made It Real',
+        html: '<p>The heart of the Phantasmagoria controversy was the medium, not just the content. Games had depicted violence for years, but they had done it in sprites and polygons — abstractions the eye could hold at a distance. Full-motion video replaced those abstractions with photographed human beings, and the same assault scene that might have passed as lurid pixel art became, in live action, something regulators and retailers treated as closer to a filmed act. The FMV era briefly gave games cinema\'s realism, and Phantasmagoria discovered the cost of that realism: it inherited cinema\'s scrutiny along with its verisimilitude.</p>'
+      },
+      {
+        title: 'Banned and Best-Selling',
+        html: '<p>The most striking thing about Phantasmagoria is that the controversy and the commercial success were the same story. Refused by CompUSA, banned outright in Australia, condemned by reviewers — and simultaneously the best-selling game in America and the biggest hit in Sierra\'s history, with a reported $12 million and 300,000 copies in a single weekend. The episode is an early, vivid demonstration of a pattern the games industry would see again and again: that public outrage and retail refusal do not necessarily suppress a game\'s sales, and can amplify them. Phantasmagoria was punished and rewarded for exactly the same quality — its willingness to show, in live action, what games had previously only implied.</p>'
+      },
+    ],
+    keyFacts: [
+      'Roberta Williams\' seven-CD FMV horror game, released 24 August 1995 by Sierra On-Line',
+      'A chapter-four sexual-assault scene, acted by live performers, drove the backlash',
+      'Banned for all audiences in Australia; CompUSA and other US chains refused to stock it',
+      'Still became Sierra\'s best-selling game to date — ~$12M and ~300,000 copies in its opening weekend',
+    ],
+  },
 ];
