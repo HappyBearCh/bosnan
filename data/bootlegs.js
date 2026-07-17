@@ -523,5 +523,92 @@
         html: '<p>Bootlegs like this are the reason large parts of the world\'s childhood gaming memories do not match any official release history. In markets where neither Nintendo nor Sega maintained a real distribution presence, the console you owned and the games you played were determined by what the local market could source and modify — and a Genesis with a Mario cartridge in it was not a contradiction, it was Tuesday.</p><p>The bootleg is also a small monument to Nintendo\'s brand power. Nobody hacked Squirrel King to insert a different squirrel. The entire value of the exercise came from the two characters the pirates could not legally have, and were therefore prepared to build a whole cartridge around stealing.</p>',
       },
     ]
+  },
+  {
+    id: 'kart-fighter',
+    title: 'Kart Fighter: Street Fighter With the Mario Kart Cast',
+    baseGame: 'Super Mario Kart (characters) / Street Fighter II (engine)',
+    platform: 'Famicom',
+    year: 1993,
+    region: 'Asia',
+    type: 'Unlicensed Fighting Game',
+    era: '1990s',
+    description: 'An unlicensed Famicom fighting game that took the eight racers from Super Mario Kart and dropped them into a Street Fighter II-style one-on-one brawler, complete with special moves and projectiles — and was good enough that reviewers rated it above some licensed games.',
+    longDescription: 'Kart Fighter was produced by the prolific Hong Kong-area pirate studio known as Hummer Team (also credited as Gouder) and published by Ge De Industry, with sources placing its release in the early-to-mid 1990s — most commonly around 1993, though the exact date is not firmly documented. The concept was a mash-up of two things Nintendo had never combined: it took the roster of the 1992 Super Famicom hit Super Mario Kart — Mario, Luigi, Peach, Bowser, Koopa, Toad, Donkey Kong Jr., and Yoshi — and put them into a one-on-one fighting game built on an engine derived from Street Fighter II.\n\nEach character had punches, kicks, and special moves including projectiles and charge attacks, and the game supported single-player against an AI with five difficulty levels or two-player versus. This was an ambitious thing to attempt on the Famicom, whose hardware was a generation behind the Super Famicom the characters came from and never intended for the large sprites and layered animation of a competitive fighter. That Hummer Team pulled it off at a playable standard was itself notable.\n\nKart Fighter earned a reputation as one of the better unlicensed Famicom games precisely because it did not feel broken. Retrospective coverage praised its originality, its music, and its relative lack of bugs — a low bar for pirate software, which was frequently unfinished or barely functional, but one Kart Fighter cleared comfortably. Several writers judged it to meet or exceed the quality of licensed Famicom fighters such as Teenage Mutant Ninja Turtles: Tournament Fighters, and one outlet described it flatly as fairly advanced for a pirate NES game.\n\nThe game endures as a favourite example of the pirate scene\'s stranger creativity. It exists only because a team with no licence and no oversight could ask a question Nintendo never would — what if the Mario Kart drivers fought each other? — and then had the technical competence to answer it well. Kart Fighter is regularly cited in surveys of unlicensed games as evidence that the bootleg world occasionally produced work that stood on its own merits rather than purely on novelty or infringement.',
+    keyFacts: [
+      'Made by Hummer Team / Gouder and published by Ge De Industry; commonly dated around 1993',
+      'Puts the eight Super Mario Kart racers into a Street Fighter II-derived one-on-one fighter',
+      'Five AI difficulty levels plus two-player versus, with projectiles and charge special moves',
+      'Reviewers rated it above some licensed Famicom fighters like TMNT: Tournament Fighters',
+    ],
+    notableFor: 'Being one of the most competent unlicensed Famicom games — a genuinely playable fighter starring a roster Nintendo never authorised for combat.',
+    sections: [
+      {
+        title: 'A Question Nintendo Would Never Ask',
+        html: '<p>Kart Fighter exists because its makers had no reason not to make it. A licensed studio could never have shipped the Super Mario Kart cast in a Street Fighter clone; the idea would die in legal review before it reached a designer. Hummer Team, operating outside licensing entirely, could simply build it. The result is a snapshot of the pirate scene\'s odd freedom: the same lack of authorisation that made the game illegal also made it possible, and the studio spent that freedom not on a cynical cash-in but on a competent, complete fighting game with a full roster, multiple difficulty settings, and working special moves.</p>'
+      },
+      {
+        title: 'Better Than It Had Any Right to Be',
+        html: '<p>Most pirate Famicom games are remembered, if at all, for being broken. Kart Fighter is remembered for the opposite reason. Retrospective coverage consistently notes its stability, its music, and its playability, and more than one writer has placed it alongside or above licensed fighters of the same era on the same hardware. That verdict is what gives the game its lasting interest: it complicates the easy assumption that unlicensed automatically meant shoddy. On the Famicom, at least once, a team with no rights and no oversight produced a fighting game people still boot up to enjoy rather than to laugh at.</p>'
+      },
+    ],
+  },
+  {
+    id: '7-grand-dad',
+    title: '7 Grand Dad: The Bootleg That Became a Meme',
+    baseGame: 'The Flintstones: The Rescue of Dino & Hoppy',
+    platform: 'Famicom',
+    year: 1993,
+    region: 'Asia',
+    type: 'Bootleg Hack',
+    era: '1990s',
+    description: 'A crude hack that grafted a Mario sprite onto a Flintstones platformer and scrubbed the copyrights — obscure for two decades until a Twitch streamer found it in a multicart in 2014 and turned it into one of the internet\'s most enduring gaming memes.',
+    longDescription: 'The Flintstones: The Rescue of Dino & Hoppy was a legitimate 1992 platformer by Taito. 7 Grand Dad, also called Primitive Mario VII, is an unlicensed hack of it, produced by a Taiwanese pirate publisher (credited to J.Y. Company). The exact date of the hack is not firmly recorded, but it circulated on pirate Famicom multicarts in the early-to-mid 1990s. The modifications were exactly the kind pirate publishers made to launder a stolen game: the title screen logo was fully replaced, and every copyright line — Taito, Hanna-Barbera, Nintendo — was stripped or garbled so the cartridge could be sold as an original product.\n\nWhat makes 7 Grand Dad distinctive rather than just another laundered platformer is the sprite work. The title screen carries a prominent Mario figure, and in the game Fred Flintstone\'s head is replaced with Mario\'s, taken from Super Mario Bros. 3. That Mario is not Nintendo\'s exact Mario, though. Both images trace back to Dian Shi Ma Li, an unlicensed Taiwanese Famicom gambling game from around 1989 whose off-model Mario lookalike — a figure fans later nicknamed "Grand Dad" or "Fortran" — had already been recycled across the Taiwanese pirate ecosystem. 7 Grand Dad is thus a bootleg built partly from the assets of an earlier bootleg.\n\nThe game was effectively unknown outside collector circles for roughly two decades. Its second life began in 2014, when the Twitch streamer Vargskelethor — Joel of the Vinesauce channel — encountered it while playing through a bootleg "Mario 7-in-1" multicart on stream, and the absurd title screen and off-model Mario became an instant running joke among his viewers. From there it spread, most durably through the SiIvaGunner music channel, which made "Grand Dad" a recurring motif and cemented the game\'s place in internet culture.\n\n7 Grand Dad is a case study in how the historical record of bootleg games gets written. The cartridge was commercially trivial and technically unremarkable — a copyright-scrubbed reskin of a Taito game — and would almost certainly have remained a footnote known only to pirate-hardware specialists. Instead a single streamer\'s chance encounter turned it into one of the most recognised bootleg games in the world, a reminder that a bootleg\'s eventual fame often has nothing to do with the qualities of the bootleg itself.',
+    keyFacts: [
+      'An unlicensed hack of Taito\'s 1992 The Flintstones: The Rescue of Dino & Hoppy',
+      'Replaces Fred Flintstone\'s head with a Mario sprite and strips all original copyright text',
+      'Its off-model "Grand Dad" Mario derives from the ~1989 gambling bootleg Dian Shi Ma Li',
+      'Made internet-famous in 2014 by Vinesauce Joel and later the SiIvaGunner channel',
+    ],
+    notableFor: 'Being an obscure copyright-scrubbed platformer hack that a 2014 Twitch stream transformed into one of the internet\'s most enduring gaming memes.',
+    sections: [
+      {
+        title: 'Laundering a Stolen Game',
+        html: '<p>Mechanically, 7 Grand Dad is a demonstration of standard pirate practice. To sell a stolen game as an original, a bootleg publisher had to remove the fingerprints of the real owners — so the Flintstones logo was replaced, and the Taito, Hanna-Barbera, and Nintendo copyright notices were scrubbed or scrambled. The Mario sprite grafted over Fred Flintstone served the same commercial goal: dressing a licensed platformer in the most recognisable mascot in games, without the licence, to make a familiar-looking product for buyers who might never know the difference. Nothing about the process was unusual for the era; thousands of Famicom bootlegs did the same.</p>'
+      },
+      {
+        title: 'Fame by Accident',
+        html: '<p>What separates 7 Grand Dad from those thousands is pure chance. For twenty years it was a nonentity. Then, in 2014, Vinesauce\'s Joel happened to load it from a bootleg multicart on a live stream, and its title screen and off-model Mario struck his audience as so absurd that it became a joke that would not die — carried onward by the SiIvaGunner channel until "Grand Dad" was a fixture of internet gaming culture. The game itself never changed. Its transformation from footnote to legend was entirely a matter of who found it and when, which is how a large share of bootleg history actually gets made: not by the cartridges that were best or worst, but by the ones somebody happened to point a camera at.</p>'
+      },
+    ],
+  },
+  {
+    id: 'dian-shi-ma-li',
+    title: 'Dian Shi Ma Li: The Gambling Bootleg That Spawned a Genre',
+    baseGame: 'Xiao Ma Li arcade gambling machines',
+    platform: 'Famicom',
+    year: 1989,
+    region: 'Taiwan',
+    type: 'Unlicensed Gambling Game',
+    era: '1980s',
+    description: 'A 1989 Taiwan-only Famicom adaptation of local slot-machine gambling, fronted by an off-model Mario with an "F" on his cap — the game that seeded a whole genre of Taiwanese Famicom gambling bootlegs and, decades later, the "Grand Dad" meme.',
+    longDescription: 'Dian Shi Ma Li (電視瑪琍, roughly "TV Mari", officially titled Big TV Mary Bar in English) is a 1989 Famicom game adapting the Taiwanese "Xiao Ma Li" slot-machine gambling machines to the home console. It carried a spurious "Namco Corporation" publisher credit and was likely built by a team connected to Bit Corporation, judging by its resemblance to that company\'s work. The game technically stayed exclusive to Taiwan, though stray copies reportedly reached Australia and Brazil through the informal channels that moved pirate cartridges around the world.\n\nThe gameplay is straightforward casino simulation: the player accumulates credits by betting on which of nine symbols a slot reel will land on, using a control scheme that demanded ten inputs across two controllers — one button per symbol plus a start/re-bet button. It is not an action game or a platformer; it is a video slot machine, made for a market where such gambling games had a ready audience and where the Famicom\'s low cost made a home version commercially attractive.\n\nDian Shi Ma Li\'s lasting significance is twofold. First, it was a template. It established a durable genre of Taiwanese Famicom gambling games — countless similar slot and card titles followed the same model — that formed a distinct and long-lived corner of the unlicensed software world. Second, it contributed a character to internet folklore. The game is fronted by a Mario lookalike with an "F" on his cap and the broken-English exhortation "Push Start To Rich," and unused tiles in the game contain the word "Fortran," assumed to be either the character\'s or the development team\'s name. Fans came to call this off-model Mario "Fortran" or, later, "Grand Dad."\n\nThat sprite outlived the game that introduced it. It was recycled across the Taiwanese pirate ecosystem and turned up years later in the notorious 7 Grand Dad hack, whose 2014 rediscovery made the figure internet-famous. Dian Shi Ma Li is therefore doubly a point of origin — for a genre of gambling bootlegs that ran for years, and for one of the most widely recognised mascot ripoffs in gaming, a knock-off Mario who began life advertising a Taiwanese slot machine and ended up a meme.',
+    keyFacts: [
+      'A 1989 Famicom adaptation of Taiwanese "Xiao Ma Li" slot-machine gambling; exclusive to Taiwan',
+      'Carried a fake "Namco" credit; likely built by a team linked to Bit Corporation',
+      'Betting used ten inputs across two controllers — one per symbol plus start/re-bet',
+      'Its off-model "F"-capped Mario ("Fortran"/"Grand Dad") later fuelled the 7 Grand Dad meme',
+    ],
+    notableFor: 'Seeding the genre of Taiwanese Famicom gambling bootlegs and originating the off-model "Grand Dad" Mario later made famous by the 7 Grand Dad meme.',
+    sections: [
+      {
+        title: 'A Slot Machine for the Living Room',
+        html: '<p>Dian Shi Ma Li is not the kind of game that usually gets remembered, because it is barely a game in the conventional sense — it is a video slot machine ported to a home console. But that is precisely what made it commercially sensible in Taiwan in 1989. There was an existing appetite for "Xiao Ma Li" gambling machines, and the Famicom was cheap and ubiquitous, so an unlicensed studio adapted one to the other. The ten-input betting scheme spread across two controllers is a reminder that this was a faithful gambling interface first and a console game second.</p>'
+      },
+      {
+        title: 'The Accidental Origin of Grand Dad',
+        html: '<p>The game\'s enduring fame rests on a detail its makers surely never weighed carefully: the off-model Mario with an "F" on his cap that fronts the title screen. Recycled endlessly through the Taiwanese pirate scene and eventually planted into the 7 Grand Dad hack, that sprite became, decades later, one of the internet\'s favourite bootleg mascots — "Fortran" to some, "Grand Dad" to most. It is a neat illustration of how bootleg history compounds: an unlicensed 1989 gambling game produced an unlicensed Mario, which a second bootleg reused, which a Twitch stream made famous, none of it planned and all of it traceable back to a slot machine on a Famicom.</p>'
+      },
+    ],
   }
 ];

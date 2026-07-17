@@ -505,4 +505,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'culex-super-mario-rpg',
+    title: 'Culex — The Final Fantasy Boss Hiding in a Mario Game',
+    game: 'Super Mario RPG: Legend of the Seven Stars',
+    platform: 'Super Nintendo',
+    year: 1996,
+    era: '1990s',
+    bossName: 'Culex, Dark Knight of Vanda',
+    type: 'Optional Superboss',
+    description: 'Behind a sealed door in a quiet town in a Mario game, Square hid a boss that was not a Mario boss at all — a 2D sprite from another franchise entirely, guarding four elemental crystals and set to a battle theme lifted from Final Fantasy IV.',
+    longDescription: 'Super Mario RPG: Legend of the Seven Stars was Square\'s one collaboration with Nintendo before the two companies parted ways over the Nintendo 64\'s cartridge format, and Culex is the moment the game quietly admits who made it. To reach him, the player must find a shiny stone in Moleville and use it to open a sealed door in Monstro Town — an entirely optional detour the main quest never mentions. Behind the door, in a void of purple-blue space, waits Culex: a self-described "Dark Knight of Vanda" who has nothing to do with Bowser, Smithy, or anything else in the game\'s plot.\n\nThe most striking thing about him is visual. The entire game is rendered in Square\'s pre-rendered, Donkey Kong Country-style 3D sprites. Culex is drawn as a flat, deliberately old-fashioned 2D sprite in the style of a Super Famicom-era Final Fantasy boss — a visitor from another kind of game who does not match the world he has appeared in. He is flanked by four crystals, each governing a single element, exactly as the elemental Fiends of the Final Fantasy series had been.\n\nMechanically he is the game\'s superboss, tougher than Smithy, the actual final antagonist. The crystals attack independently and must be managed while Culex himself deals heavy elemental damage, and the fight rewards preparation and knowledge of the game\'s systems rather than the level the main story leaves the player at. The music seals the tribute: the battle plays a reinterpreted version of a boss theme from Final Fantasy IV, and when Culex falls, the game plays the Final Fantasy victory fanfare, followed by the series\' gentle "Prelude" crystal theme as Culex and Mario share a few quiet words.\n\nCulex endures because he is a piece of authorship smuggled into a licensed crossover. A player who had never touched a Final Fantasy game could beat him and simply think he was a strange hidden boss; a player who knew Square\'s work recognised every element — the sprite style, the crystals, the fanfare — as a signature. He is one of the earliest and fondest examples of a developer signing its work through an optional secret, and the fondness only grew when Culex returned, decades later, in the 2023 Super Mario RPG remake.',
+    keyFacts: [
+      'Rendered as a flat 2D Final Fantasy-style sprite in a game built entirely from pre-rendered 3D sprites',
+      'Optional: reached only by opening a sealed door in Monstro Town with a shiny stone from Moleville',
+      'Tougher than Smithy, the game\'s actual final boss; flanked by four independently-acting elemental crystals',
+      'Uses a Final Fantasy IV battle theme and the Final Fantasy victory fanfare and "Prelude"',
+    ],
+    sections: [
+      {
+        title: 'A Signature Hidden Behind a Door',
+        html: '<p>Super Mario RPG was made by Square on Nintendo hardware, and Culex is where that authorship becomes visible. Nothing in the main quest points to him. The player has to notice a shiny stone in Moleville, carry it to a sealed door in Monstro Town, and choose to open it — a sequence the game never requires or rewards in the story. What waits behind the door belongs to no part of the plot: a boss who introduces himself as the Dark Knight of Vanda and admits he has been pulled into this world from another dimension, which is very nearly a literal description of what Square did by putting a Final Fantasy boss in a Mario game.</p>'
+      },
+      {
+        title: 'The Crossover Before the Crossover',
+        html: '<p>Culex predates the era when franchise crossovers became routine marketing events. In 1996 he was an in-joke — a reward for the player who both explored thoroughly and recognised the visual and musical language of Square\'s other series. The flat sprite among 3D models, the four elemental crystals echoing Final Fantasy\'s Fiends, and above all the FFIV battle music and victory fanfare, added up to a private message from the developers to the players who would understand it. When Square and Nintendo went their separate ways shortly afterward, Culex became a small monument to the one time they had worked together — which is why his return in the 2023 remake was treated as an event in itself.</p>'
+      },
+    ],
+  },
+  {
+    id: 'nemesis-resident-evil-3',
+    title: 'Nemesis — The Monster That Follows You Through Doors',
+    game: 'Resident Evil 3: Nemesis',
+    platform: 'PlayStation',
+    year: 1999,
+    era: '1990s',
+    bossName: 'Nemesis-T Type',
+    type: 'Recurring Pursuer',
+    description: 'Earlier Resident Evil monsters stayed in their rooms. Nemesis broke that rule — a rocket-launcher-wielding pursuer that chased Jill Valentine from one area to the next, turning the series\' safe-room grammar against the player.',
+    longDescription: 'Resident Evil had trained players in a specific spatial logic: danger lived in rooms, and a doorway — masked by the series\' famous door-opening loading animation — was a threshold monsters did not cross. Resident Evil 3: Nemesis (1999) built its central antagonist specifically to violate that contract. The Nemesis-T Type, called the Pursuer in Japan, was the first Resident Evil creature capable of following the player from one area into the next, walking through the doors that had always meant safety.\n\nIn the game\'s fiction, Nemesis is a Tyrant implanted with a parasitic "Nemesis" organism by the Umbrella Corporation and deployed to the ruins of Raccoon City with a single directive: hunt and kill the surviving members of the S.T.A.R.S. police team before they can expose Umbrella. That directive makes protagonist Jill Valentine, a S.T.A.R.S. member, its explicit target. Unlike the shambling zombies and mindless Tyrants of the earlier games, Nemesis could run, dodge, use a rocket launcher, and — most unsettlingly — reason well enough to pursue.\n\nThe fight is really a series of fights spread across the whole game, and its genius is unpredictability. Nemesis appears when the player least expects it, often lunging through a door into a supposedly cleared area, growling its single recognisable word — "S.T.A.R.S." Each encounter forces a snap decision: stand and fight to earn item drops, or flee and preserve resources. When damaged enough it sheds its overcoat and mutates, gaining long extendable tentacles, and its final forms abandon any human silhouette entirely.\n\nNemesis reframed what a boss could be in survival horror. Instead of a wall at the end of a level, it was an ambient, recurring threat that could interrupt the player almost anywhere, keeping tension high across the entire runtime rather than concentrating it in set pieces. That design — the relentless, intelligent stalker who breaks the game\'s own rules about safe space — became one of horror gaming\'s most copied ideas, echoing through the pursuers of later survival-horror titles and cited for years afterward as one of the medium\'s most memorable antagonists.',
+    keyFacts: [
+      'First Resident Evil enemy able to pursue the player from one area to the next, through doors',
+      'Deployed by Umbrella to hunt the S.T.A.R.S. team; growls "S.T.A.R.S." as its recognisable cry',
+      'Can run, dodge, and wield a rocket launcher; mutates and gains tentacles as it takes damage',
+      'Each encounter offers a fight-or-flee choice — standing ground earns item drops at high risk',
+    ],
+    sections: [
+      {
+        title: 'Breaking the Safe-Room Contract',
+        html: '<p>The earlier Resident Evil games taught players that a door was a boundary. The loading animation that played while a door swung open was also a psychological reset — whatever had been chasing you was on the other side now, and could not follow. Resident Evil 3 spent its entire design budget on breaking that single assumption. Nemesis could open the door behind you. The reset stopped being a reset. A room you had carefully cleared was no longer safe simply because you had cleared it, and the loading animation that had always signalled relief could now be the prelude to the Pursuer stepping through after you.</p>'
+      },
+      {
+        title: 'The Stalker as a Genre',
+        html: '<p>Nemesis turned the boss from an event into an atmosphere. Because it could appear almost anywhere, the player carried the threat of it through every corridor, and the game sustained a level of tension across its whole length that set-piece bosses cannot. The fight-or-flee decision it forced — burn resources to drive it off and earn a reward, or run and save ammunition for later — made every encounter a small crisis of judgement. That template, the intelligent recurring stalker who ignores the game\'s ordinary rules of safety, became a recognised pillar of survival horror, revived and refined in later pursuers that owe their existence to the rocket-launcher-toting creature that first learned to follow the player through a door.</p>'
+      },
+    ],
+  },
+  {
+    id: 'shao-kahn-mortal-kombat-ii',
+    title: 'Shao Kahn — The Final Boss Who Taunts You While He Wins',
+    game: 'Mortal Kombat II',
+    platform: 'Arcade',
+    year: 1993,
+    era: '1990s',
+    bossName: 'Shao Kahn, Emperor of Outworld',
+    type: 'Final Boss',
+    description: 'The arcade final boss as pure quarter-drain: a towering emperor who mocks the player between hits, punishes patience and aggression alike, and could take a full-health fighter apart in a handful of blows.',
+    longDescription: 'Shao Kahn, the Emperor of Outworld, is the final boss of Mortal Kombat II (1993), and he is the era\'s clearest example of an arcade boss engineered to end the player\'s run rather than to be a fair test of skill. Midway\'s business model in the arcade depended on difficulty that consumed quarters, and the final boss was where that pressure concentrated. Shao Kahn met the player with a moveset and an AI designed to feel overwhelming: magic spears thrown across the screen, a charging shoulder tackle, and high-damage kicks that could remove a large fraction of the player\'s health bar in a single connection.\n\nWhat set Shao Kahn apart from other cheap bosses of the period was the personality bolted onto the difficulty. Between exchanges he taunts — "You suck!", "It\'s official — you suck!" — and the mockery was not incidental. It was the emotional core of the encounter, framing every loss as humiliation and every attempt to strike back as an invitation to be punished. Players quickly learned that his taunt animations were also his one exploitable window: the reliable route to victory was to bait a taunt and land a sucker punch during it, then retreat before he recovered, chipping him down over many careful, nerve-wracking repetitions.\n\nHis attack patterns were relentless enough that a mistimed approach could see a full-health fighter fall in three to five hits, and his defence made straightforward aggression suicidal. The fight rewarded a particular kind of disciplined patience that ran against the game\'s otherwise fast, aggressive rhythm — the player had to stop playing Mortal Kombat the way the rest of the game had taught them and instead play a slow game of provocation and punishment.\n\nShao Kahn became the template for the taunting, unfair arcade emperor, and Midway leaned into it: his design, mannerisms, and mocking voice have been praised for decades even as the fairness of the fight is argued over. He returned as a recurring final boss across the series, but the 1993 arcade version — encountered by a player feeding quarters into a cabinet while a giant helmeted warlord told them they sucked — is the one that fixed his reputation.',
+    keyFacts: [
+      'Final boss of Mortal Kombat II; attacks with magic spears, a shoulder charge, and high-damage kicks',
+      'AI and damage tuned as an arcade quarter-drain — a full-health fighter can fall in three to five hits',
+      'Taunts the player mid-fight ("You suck!"); the taunt animation is also his main exploitable window',
+      'The reliable strategy is to bait a taunt, land a sucker punch, and retreat — repeatedly',
+    ],
+    sections: [
+      {
+        title: 'Difficulty as a Business Model',
+        html: '<p>Shao Kahn cannot be understood outside the arcade economics that produced him. A cabinet earned money in proportion to how often it ended a player\'s game, and the final boss was the last and heaviest gate before a run was over. Midway tuned Shao Kahn to be a wall: damage high enough that a few mistakes ended the attempt, defence solid enough that brute-force aggression failed, and an AI that read and punished the player\'s habits. The unfairness was not an oversight. It was the point, calibrated to convert frustration into one more quarter.</p>'
+      },
+      {
+        title: 'The Mockery as Design',
+        html: '<p>What made Shao Kahn memorable rather than merely hard was that Midway gave the difficulty a voice. His between-round taunts turned a numbers problem into a personal one — losing to Shao Kahn felt like being insulted, and the insult drove players to try again. His mannerisms and mocking lines have been praised for decades as some of the best boss characterisation of the era, and the design lesson stuck: a hard boss is forgotten, but a hard boss who laughs at you is remembered. Every taunting fighting-game emperor that followed owes something to the giant in the helmet telling a room full of teenagers that they suck.</p>'
+      },
+    ],
+  },
 ];
