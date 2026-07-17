@@ -496,4 +496,94 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'final-fantasy-name-origin',
+    title: 'Why Final Fantasy Is Called Final Fantasy',
+    subtitle: 'The famous story is that Square was going bankrupt and this was the last roll of the dice. Sakaguchi says that is not what happened',
+    category: 'history',
+    summary: 'Square really was facing possible bankruptcy in 1987, and Final Fantasy really did save it. But the naming story everyone repeats — that "Final" referred to the company\'s last chance — is not the account its creator gives.',
+    readTime: '11 min read',
+    sections: [
+      {
+        title: 'The story everyone tells',
+        html: `<p>The legend is irresistible and it is repeated everywhere: Square was months from collapse in 1987, Hironobu Sakaguchi had one shot left, and he named the game Final Fantasy because it would be the company's final anything if it flopped. Then it sold, the company survived, and the most successful role-playing franchise in history is named after the moment it nearly did not exist. It has the shape of a perfect anecdote — a title that means one thing at the time and something ironic in retrospect.</p>
+<p>Every element of the setting is true. Square was faced with the possibility of bankruptcy by 1987. Final Fantasy did succeed, and the company's survival is genuinely attributable to it. The problem is the causal link in the middle: Sakaguchi has said the name did not come from the company's finances. The story is not a fabrication so much as a correct set of facts wired together in the wrong order.</p>`
+      },
+      {
+        title: 'What Sakaguchi actually says',
+        html: `<p>By his account, the team wanted an abbreviation that worked in the Latin alphabet, in the manner of Dragon Quest, which was becoming known as DQ. They arrived at the letters first: FF. The name that originally filled those initials was Fighting Fantasy — which ran into trademark difficulty, the term already belonging to the British gamebook series by Steve Jackson and Ian Livingstone. So the team needed a different word beginning with F, and went with Final somewhat reluctantly, as a last resort to preserve the abbreviation they had already settled on.</p>
+<p>This is a considerably less romantic origin: a branding decision, a trademark conflict, and a compromise. But there is a residue of the legend that survives, and Sakaguchi has confirmed it — "Final" was chosen partly because he was planning to leave the games industry, and this was going to be his last game. The finality was real. It was personal rather than corporate.</p>`
+      },
+      {
+        title: 'Why the wrong version wins',
+        html: `<p>The bankruptcy version persists because it is a better story, and because it is assembled entirely from true parts. Square was nearly bankrupt. The game was called Final Fantasy. The game saved the company. A reader who knows those three facts will construct the causal link themselves without anyone having to assert it, which is how this kind of legend propagates — nobody has to lie, they simply have to place the facts adjacently and let the reader do the work.</p>
+<p>It also flatters everyone involved. A designer naming his game after his employer's imminent death is a more heroic figure than a team working backwards from a two-letter abbreviation after a trademark search went badly. And the actual story — that "Final" meant Sakaguchi's own retirement — is arguably stranger and more human than the legend, since it means the title was a private statement about one person's career that happened to get printed on ten million boxes.</p>`
+      },
+      {
+        title: 'The finality that did not happen',
+        html: `<p>The irony that survives the correction is the good one. Sakaguchi named the game Final because he intended to leave the industry afterwards; instead it succeeded, and he stayed for sixteen more years, shepherding a franchise whose name announces an ending that never came. Final Fantasy X-2 was his last credited project at Square, and he left in 2003 — the finality arriving a decade and a half late and by an entirely different route.</p>
+<p>The company's fortunes tracked him more closely than anyone expected. Nobuo Uematsu has said that Square "suddenly collapsed" after Sakaguchi's departure and that the situation there was awful once he had quit — a striking assessment of a man whose original plan was to leave before any of it started. The naming legend gets the drama right and the mechanism wrong, which is the usual failure mode of a good anecdote. What is true is that a game called Final Fantasy was named by someone who meant it about himself, was wrong about that, and spent the next sixteen years being wrong about it in public.</p>`
+      }
+    ]
+  },
+  {
+    id: 'ps1-texture-warping',
+    title: 'Why PlayStation Graphics Wobble',
+    subtitle: 'The warping textures and the jittering polygons are two separate defects with two separate causes, and both are consequences of arithmetic the console could not afford',
+    category: 'technology',
+    summary: 'PS1 games have a distinctive instability that people file under one heading. It is actually two failures: textures swim because the GPU could not do perspective correction, and vertices snap because it had no subpixel precision.',
+    readTime: '11 min read',
+    sections: [
+      {
+        title: 'The texture problem',
+        html: `<p>The PlayStation could not perform perspective-correct texture mapping. It used affine texture mapping instead, interpolating UV coordinates between vertices using only their two-dimensional screen positions and ignoring each vertex's depth. If a triangle's vertices sit at different distances from the camera — which, on any surface not exactly parallel to the screen, they do — the texture is stretched linearly across the flat triangle with no regard for perspective, and it visibly swims as the camera moves.</p>
+<p>The reason is arithmetic the console could not pay for. Perspective correction requires dividing each pixel by its depth value, and the PS1's GPU did not retain z-values after rasterisation, so the information was not there to divide by. Even if it had been, division is expensive and doing it per pixel would have been far too slow. This is not an oversight; it is a deliberate omission by a design team choosing what to spend transistors and cycles on, and texture perspective lost.</p>`
+      },
+      {
+        title: 'The vertex problem',
+        html: `<p>The wobble people describe is often not the textures at all but the geometry, and that has a different cause entirely. The PlayStation's rasteriser works only with integer coordinates — it does not accept vertex positions with subpixel precision. Every vertex is therefore rounded to the nearest whole pixel before being drawn, which means that as an object moves smoothly through space, its corners snap from pixel to pixel rather than sliding.</p>
+<p>The effect is most visible on large polygons at middle distance, and on anything moving slowly: edges shiver, and a character's face seems to ripple as vertices independently round up or down between frames. This is a fixed-point precision limitation, entirely separate from the texture issue. A game could in principle exhibit one without the other. That both appear together on nearly every PS1 title, producing a single compound impression of instability, is why they get discussed as one phenomenon.</p>`
+      },
+      {
+        title: 'Working around it',
+        html: `<p>Developers found the same mitigation for the texture problem that the mathematics suggests: subdivide. Affine mapping's error grows with the depth disparity across a triangle, so smaller triangles have less error. Later PS1 games use more, smaller polygons, which means the warping happens across each little triangle rather than across a whole wall, and becomes proportionally less noticeable. It does not fix anything — the error is still there — it just distributes it below the threshold where the eye reliably catches it.</p>
+<p>That trade has a cost, since more triangles is exactly what the hardware could least afford, and it explains a visible progression across the console's lifetime. Early PS1 games have large, cleanly-textured surfaces that swim alarmingly; later ones have busier geometry that holds together better. The improvement is not the developers getting better at 3D in general. It is them spending their polygon budget buying down a specific defect.</p>`
+      },
+      {
+        title: 'The defect as signature',
+        html: `<p>What makes this worth writing about is where it ended up. The PS1's wobble was, unambiguously, a failure — the console was doing 3D wrong in two independent ways, and every developer who noticed spent resources hiding it. Sony's competitors did it better; the Nintendo 64 had perspective-correct texture mapping and subpixel precision, and its geometry sits still.</p>
+<p>And yet the wobble is now a deliberate aesthetic. Modern games and shaders reproduce affine texture mapping and vertex snapping on purpose, in engines that would render correctly by default, because that specific instability reads as "PlayStation" to anyone who was there. Developers write code to reintroduce a division they are perfectly capable of performing, and to throw away precision their hardware has in abundance, in order to recreate the exact appearance of a machine failing at its job. The N64 got the mathematics right and has no comparable signature. Being wrong in a distinctive way turned out to be more memorable than being right.</p>`
+      }
+    ]
+  },
+  {
+    id: 'doom-modding-community',
+    title: 'Doom and the Invention of the Mod',
+    subtitle: 'id Software separated the game from the engine on purpose, and a thirty-year community formed in the gap',
+    category: 'culture',
+    summary: 'Doom shipped with its content in WAD files, deliberately kept apart from the engine. That one architectural decision made it possible to build new levels without touching code, and the modding community has not stopped since 1993.',
+    readTime: '11 min read',
+    sections: [
+      {
+        title: 'A decision made in advance',
+        html: `<p>The crucial thing about Doom's moddability is that it was not an accident, a leak, or a community achievement won against a hostile publisher. During development, id Software designed the game to be easier to modify by separating game content from the engine itself. Levels, textures, sounds, and other data went into WAD files, distinct from the executable, which meant new content could be created and shared without patching the game or writing a line of code. id also uploaded the source for its level editing and utility programs.</p>
+<p>That is a deliberate architecture, adopted before anyone knew whether it would matter. It reflects a specific understanding of what a game is — engine plus data, with a clean seam between them — and a willingness to expose the seam. Nearly every contemporary game was a single indivisible artefact where content and code were tangled together, and modifying one meant reverse-engineering the other. id built the door before there was anyone outside asking to be let in.</p>`
+      },
+      {
+        title: 'The community that arrived immediately',
+        html: `<p>They arrived at once. Doom released in December 1993 and immediately attracted a sizeable following creating and sharing WADs. The first third-party level editor, Doom Editing Utilities by Raphaël Quinet and Brendon Wyber, appeared on 26 January 1994 — roughly six weeks after the game. DEU's code was released as open source, so other authors published their own versions with new features, and the editing paradigm it established still underpins modern Doom editors including DETH, DeePsea, and Yadex.</p>
+<p>The distribution mechanics are a period piece. Around 1994 and 1995, mods moved through bulletin board systems and on CD collections sold in computer shops, sometimes bundled with printed instruction guides for making levels. FTP servers took over later. There was no storefront, no workshop, no integrated browser — just files moving between strangers over dial-up, with the community's infrastructure improvised out of whatever existed.</p>`
+      },
+      {
+        title: 'Then the source code',
+        html: `<p>id went further than the architecture required. It released the Doom engine source code in 1997 and re-licensed it under the GNU GPL in 1999, at which point the community stopped being limited to making content and started making engines. The modified versions — source ports — could fix the original's limits, add resolutions and features the 1993 code never contemplated, and carry Doom onto hardware that did not exist when it shipped.</p>
+<p>This is the decision that turned a long-lived mod scene into a permanent one. WAD files made new levels possible; open source made new Dooms possible. A game whose engine is public cannot be abandoned, cannot become unplayable when the hardware moves on, and cannot be taken away by the company that made it. The famous observation that Doom runs on everything is a direct consequence: it runs on everything because anyone who wants it to run somewhere can make it.</p>`
+      },
+      {
+        title: 'The seam is the legacy',
+        html: `<p>What Doom established was not modding as an activity — people had been altering games for as long as games existed — but modding as something a developer designs for. The engine/content split is now standard practice, and the assumption that a game ships with tools, or at least a documented data format, traces back through a lineage that runs directly to id's decision to keep levels out of the executable.</p>
+<p>The counter-example is instructive. Plenty of publishers have treated player modification as a threat, shipping games as sealed artefacts and litigating against people who opened them — the same instinct that drove Nintendo to sue over the Game Genie. id took the opposite position at essentially no cost to itself and got, in exchange, a community that has kept its 1993 game commercially and culturally alive for over thirty years, producing levels for it long after every original developer moved on. The WAD format is a technical detail that turned out to be a decision about who the game belongs to after it ships.</p>`
+      }
+    ]
+  },
 ];

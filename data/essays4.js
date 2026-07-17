@@ -530,4 +530,94 @@ module.exports = [
       }
     ]
   },
+  {
+    id: 'ed-logg',
+    title: 'Ed Logg and the Atari Coin-Op Method',
+    subtitle: 'A hardware engineer from Control Data ended up designing Asteroids, Centipede, and Gauntlet — three games with almost nothing in common except that they worked',
+    category: 'profile',
+    summary: 'Ed Logg has three landmark arcade games to his name in three different shapes. What connects them is not a signature style but a method: take an existing idea, find the thing in it that actually works, and build outward from there.',
+    readTime: '11 min read',
+    sections: [
+      {
+        title: 'The route in',
+        html: `<p>Ed Logg was born in Seattle in 1948, studied mathematics and computer science at Berkeley, went to Stanford for graduate school, and then spent five years as a hardware engineer at Control Data Corporation. None of that is a games career; it is the résumé of a competent computing professional in an era when games were not yet a profession. He joined Atari's coin-operated division in the mid-1970s, and his first project, Dirt Bike, was never released after an unsuccessful field test.</p>
+<p>That opening matters because it establishes the terms Logg worked under. Atari coin-op field-tested its games in actual arcades and killed the ones that did not earn. A designer there was not producing personal statements; he was producing machines that had to extract quarters from strangers who owed him nothing, and the feedback was numerical and merciless. Logg's second act was co-developing Super Breakout with Ed Rotberg, after word came down that Nolan Bushnell wanted an updated Breakout. Even that was a brief, not an inspiration.</p>`
+      },
+      {
+        title: 'Three games, three shapes',
+        html: `<p>Logg co-developed Asteroids with Lyle Rains — vector graphics, momentum physics, a game about inertia and panic. He designed Centipede with Dona Bailey doing about half the programming — a trackball shooter with a vertical playfield, mushrooms that persist between waves, and a colour palette nothing else in the arcade had. He designed the Gauntlet series, taking inspiration from John Palevich's Dandy — four players, cooperative, a dungeon crawl that ate quarters by draining your health continuously rather than killing you outright.</p>
+<p>These three games have essentially nothing in common. Different input devices, different genres, different visual technology, different reasons to keep playing. A designer with a signature — a Miyamoto, a Suzuki — leaves fingerprints across their catalogue. Logg's catalogue looks like it was made by three people. The consistency is not in the output; it is in how he got there.</p>`
+      },
+      {
+        title: 'Starting from someone else\'s idea',
+        html: `<p>The pattern in Logg's record is that he rarely began from nothing. Super Breakout was an assignment to update Breakout. Gauntlet was inspired by Dandy, an existing game. Asteroids came from a conversation with Lyle Rains. Centipede came from an internal brief. In each case the raw material was somebody else's, and what Logg supplied was the discipline to identify which part of it was actually load-bearing and to build the machine around that part.</p>
+<p>Gauntlet is the clearest demonstration. Dandy had the four-player dungeon crawl; what Gauntlet added was the health-as-timer economy, which converts a cooperative dungeon game into a coin-op proposition — your health drains constantly, food is finite, and the machine will take another quarter whenever you want to stay alive. That single change is the difference between a good idea and a device that earns in an arcade. Logg was not being unoriginal. He was doing the specific, unglamorous work of turning a concept into a thing that functions under real conditions, which is a rarer skill than having the concept.</p>`
+      },
+      {
+        title: 'The long tail',
+        html: `<p>Logg spent eighteen months at Electronic Arts across 1993 and 1994, then returned to Atari Games and moved to consumer titles, starting with the Nintendo 64 port of the coin-op Wayne Gretzky's 3D Hockey. He kept working on consumer games until Midway Games closed his division in 2004 — roughly three decades in the industry, ending when a corporate parent shut the office rather than when he ran out of ideas. In 2011 the Academy of Interactive Arts and Sciences gave him a Pioneer Award for helping lay the foundations of the industry.</p>
+<p>What makes Logg worth studying is precisely the absence of an authorial signature. The arcade business rewarded designers who could make a machine work in a hostile environment against a stopwatch, and it did not much care whether the machine expressed anything. Logg was extraordinarily good at that, three times over, in three unrelated registers. The games are remembered as classics; the person who made them is remembered mostly by people who look up who made them. That gap is the honest shape of what a coin-op designer's career actually was.</p>`
+      }
+    ]
+  },
+  {
+    id: 'sega-super-scaler',
+    title: 'Sega\'s Super Scaler and the 3D That Wasn\'t',
+    subtitle: 'Yu Suzuki\'s arcade boards did the arithmetic of 3D and drew the results as flat sprites — years before anyone could afford real polygons',
+    category: 'technology',
+    summary: 'Hang-On, Space Harrier, and OutRun looked like nothing else in 1985. The trick was that Sega\'s hardware calculated positions and scales in three dimensions, then converted the answers back into two-dimensional sprites — real 3D maths, fake 3D rendering.',
+    readTime: '10 min read',
+    sections: [
+      {
+        title: 'The problem with 1985',
+        html: `<p>Real-time polygonal 3D in 1985 was not a matter of ambition. The arithmetic required to transform, project, and fill textured polygons at sixty frames per second was well beyond what arcade hardware could do at any price a cabinet could bear. Games that wanted depth had two options: fake it with a scrolling road and a few sprite sizes, as most driving games did, or accept wireframes, as Atari's vector games did.</p>
+<p>Yu Suzuki and Sega's AM2 division found a third route. The Super Scaler boards, introduced with Hang-On in 1985, calculated positions, scales, and zoom rates in three dimensions — genuine 3D maths, running on dedicated hardware — and then converted the results back into two-dimensional display data. The machine knew where everything was in space. It simply drew the answer as a sprite at the correct size rather than as geometry.</p>`
+      },
+      {
+        title: 'Scaling as texture mapping',
+        html: `<p>The insight is sharper than it first appears. Scaling a sprite according to its computed distance is doing, in a restricted form, what texture mapping would later do on polygonal hardware: taking a two-dimensional image and presenting it at a size and position determined by three-dimensional position. Sega's boards handled scaled sprites and tiles in a manner directly analogous to how the texture-mapped 3D games of the 1990s handled textures. The technique was not a hack that happened to look 3D; it was an implementation of the same underlying idea, restricted to objects that always face the camera.</p>
+<p>That restriction is the entire cost. A scaled sprite cannot be viewed from another angle — it has no other angle — so Super Scaler games are built around forward motion, where everything you see is coming toward you and rotation is limited. Hang-On, Space Harrier, After Burner, and OutRun are all games about hurtling forward, and that is not a stylistic preference. It is the shape of the games you can build when your objects have exactly one face.</p>`
+      },
+      {
+        title: 'Sixty frames, no slowdown',
+        html: `<p>The performance is what actually made these machines famous. Space Harrier's hardware included an Intel 8751 microcontroller running at 8 MHz and displayed a claimed 32,000 colours; where Hang-On had suffered occasional framerate dips and sprite flicker, Space Harrier ran at a constant sixty frames per second with multiple enemies at different scales, obstacles, bullets, and a continuously scrolling background, without detectable slowdown.</p>
+<p>Sixty frames per second, in 1985, with dozens of objects scaling smoothly toward the player. Home hardware would not touch that for a decade, and the contemporary machines that were attempting genuine 3D — vector cabinets, early polygon experiments — were nowhere near it. A Super Scaler cabinet in an arcade was doing something visibly impossible, and the visible impossibility was the product. Sega was selling an experience the customer could not have anywhere else, which is exactly what a coin-op business needs to sell.</p>`
+      },
+      {
+        title: 'The bridge',
+        html: `<p>The Super Scaler era ended because Suzuki himself ended it. Having spent the late 1980s extracting the maximum from fake 3D, AM2 moved to the real thing with Virtua Racing in 1992 and Virtua Fighter in 1993, and the sprites went away. It is a strange career shape — the person who perfected the workaround was also the person who made it obsolete — and it suggests Suzuki had never been attached to the technique, only to the effect it produced.</p>
+<p>What the Super Scaler years demonstrate is that the gap between what hardware can compute and what it can draw is exploitable. Sega's boards were doing 3D mathematics years before they could render 3D geometry, and Suzuki noticed that the maths was the valuable part — knowing where things are in space is what makes a game feel three-dimensional, and the drawing is negotiable. That is the same insight that later underpins every rendering shortcut in the business, from billboarded particles to impostor sprites in modern engines. Super Scaler was not a stepping stone toward real 3D. It was the recognition that "real" was the wrong question.</p>`
+      }
+    ]
+  },
+  {
+    id: 'lan-party',
+    title: 'The LAN Party',
+    subtitle: 'For about a decade, playing games with your friends meant physically carrying a desktop computer to their house',
+    category: 'culture',
+    summary: 'The LAN party existed because graphics outran networks. Doom and Quake were too fast for a 28.8k modem, so players hauled towers, monitors, and cables across town to sit in a room together — and built a subculture out of a bandwidth problem.',
+    readTime: '10 min read',
+    sections: [
+      {
+        title: 'A gap in the technology',
+        html: `<p>The LAN party was born in a specific and temporary gap. Through the 1990s and early 2000s, three-dimensional graphics grew rapidly more complex while consumer network speeds did not keep pace. The result was a class of games — fast, twitch-based, latency-intolerant — that were essentially unplayable over the internet connections most people had, while slower strategy games did fine. Communications technology was being outpaced by graphical power, and the LAN party is what filled the hole.</p>
+<p>Doom's release in December 1993 is the usual starting gun. It supported up to four players over a local area network, and the emphasis is on local: to play Doom against your friends, you and your friends had to be on the same network, which in practice meant being in the same building. So people lugged their computers to a friend's house, wired into their network, and played. That is the whole origin. There was no cultural movement behind it, just an engineering constraint and a strong desire to shoot each other.</p>`
+      },
+      {
+        title: 'The hauling',
+        html: `<p>It is worth being concrete about what this involved, because the physical absurdity is the defining feature. A 1990s gaming PC was a full tower and a CRT monitor — the monitor alone being a heavy glass object roughly the size and weight of a small television. Participants disconnected their machines, carried the towers, monitors, keyboards, mice, and cables to a central location, and set everything up again on borrowed tables, connecting through a network switch. Then they did it in reverse at the end.</p>
+<p>The payoff was a local connection running at speeds far beyond anything available to an average internet user, which meant lag-free play. That is the transaction: hours of physical labour and a strained back in exchange for latency low enough that a rocket launcher felt responsive. People did this repeatedly, voluntarily, for years, which tells you exactly how bad the alternative was and exactly how much the games were worth to them.</p>`
+      },
+      {
+        title: 'The golden era',
+        html: `<p>The late 1990s and early 2000s are generally treated as the LAN party's peak, and the games did the defining: Doom and Quake first, then StarCraft and Counter-Strike, which gave the format a competitive spine and a reason to run all weekend. Events scaled from a friend's living room to rented halls to large conventions, and sessions stretched from hours into days.</p>
+<p>The imagery is consistent enough to be a genre: sweaty rooms, tangles of cable, empty bottles of Mountain Dew, glowing CRTs in the dark, people who have not slept. What was actually happening in those rooms was social. Players shared strategies, formed rivalries and alliances, and made friendships that outlasted the games — the LAN party was as much a gathering as a competition, and the fact that it required physical co-presence meant the community that formed was made of people who had been in a room together.</p>`
+      },
+      {
+        title: 'Why it ended, and what went with it',
+        html: `<p>Broadband killed the LAN party by solving the problem that created it. Once home connections could sustain a fast shooter at acceptable latency, the entire rationale for carrying a CRT across town evaporated. Online play delivered the same games with none of the labour, plus opponents at any hour rather than whoever could make it on Saturday. Nobody chose to end the era; it simply stopped having a reason.</p>
+<p>What is easy to miss is that the thing which disappeared was not the gaming but the co-presence — and the co-presence had been carrying weight nobody had asked it to carry. When your opponents are in the room, the social norms of being in a room apply: you can see the person you just beat, and you have to keep sitting next to them. The internet delivered the games and removed the room, and much of what online multiplayer culture has struggled with since is a consequence of that removal. The LAN party was a workaround for a bandwidth limitation, and it accidentally produced a set of social conditions that the technology's improvement quietly took away.</p>`
+      }
+    ]
+  },
 ];

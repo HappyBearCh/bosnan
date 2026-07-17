@@ -522,4 +522,94 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'dona-bailey',
+    title: 'Dona Bailey and Centipede',
+    subtitle: 'The only woman in Atari\'s coin-op division programmed half of the game that brought women into arcades',
+    category: 'profile',
+    summary: 'Dona Bailey joined Atari\'s coin-op department in 1980 as its first woman programmer. The game she worked on became Atari\'s second best-selling coin-op title and one of the first arcade machines with a substantial female audience.',
+    readTime: '11 min read',
+    sections: [
+      {
+        title: 'The only one',
+        html: `<p>Dona Bailey, born in 1955, joined Atari's coin-operated division in 1980 as the first woman programmer in that department. Not one of the first — the first, and for her time there, the only one. Whatever else is said about her career, that fact structures all of it: every design conversation, every technical disagreement, every lunch, in a division building the most culturally visible machines in America, with exactly one woman in the room.</p>
+<p>She was placed on a four-person team as software developer and engineer for what became Centipede. Ed Logg, then a supervisor, assigned her the programming; by his account, he worked on the game's design and Bailey did about half the programming. That division is worth stating precisely, because both halves of it get distorted in the retelling — Bailey is sometimes described as Centipede's sole creator and sometimes written out of it entirely, and neither is what happened. It was a collaboration in which she wrote roughly half the code of a landmark game.</p>`
+      },
+      {
+        title: 'What Centipede did differently',
+        html: `<p>Centipede went on to become Atari's second best-selling coin-op game, and demand was strong enough that Atari's production line ran two shifts to keep up. The more interesting statistic is the audience: Centipede was one of the first coin-op arcade machines to attract a significant female player base, in a business whose customer model had been almost entirely young men.</p>
+<p>The temptation is to draw a straight line — a woman worked on it, women played it — and that line is too neat to trust. What can be said is more specific and more interesting. Centipede does not look or behave like its contemporaries: the palette is soft and unusual for 1981, the trackball gives immediate intuitive control without a joystick's learning curve, and the threat is a garden rather than a war. The mushrooms persist between waves, so the playfield accumulates a history of your play. Whether or not any of that is traceable to who wrote it, the machine was legibly different from the row of shooters beside it, and a demographic the arcade had not been serving noticed.</p>`
+      },
+      {
+        title: 'The cost of being the only one',
+        html: `<p>Bailey did not stay. She left the games industry after a relatively short period, and the reasons she has given over the years centre on the isolation of the position rather than the work — being the only woman in the coin-op division was a condition that did not improve, and there was no second person arriving to make it easier. She went on to a career as an educator and later returned to speak about her time at Atari, which is how much of this record exists at all.</p>
+<p>That is the part of the story that resists a comfortable ending. The usual shape of a pioneer narrative is that the first one opens a door and others follow. Bailey was first into Atari's coin-op division and the door did not stay open behind her; the industry did not become notably more hospitable, and the pattern she was at the leading edge of took decades to change in any structural way. The achievement is real, and it came at a personal cost that the achievement did not offset.</p>`
+      },
+      {
+        title: 'What the record shows',
+        html: `<p>Centipede is now a fixture — reissued, ported, referenced, installed in museums. Its authorship is usually rendered as "Ed Logg and Dona Bailey," which is accurate and slightly flattening, since the two contributed different things and Logg has been consistent about the split. What survives in the record is a specific, verifiable claim: a woman wrote about half the code of one of the most successful arcade games ever made, at a company where she was the only woman doing that job.</p>
+<p>The reason to state it that plainly is that the alternative versions are both worse. Inflating her role invites correction and makes the true version look like a downgrade. Omitting her — as histories of the arcade did for a long time — removes the only woman from the room in an account of a business that was overwhelmingly male, which is precisely the fact worth preserving. Bailey's career at Atari was short, consequential, and difficult, and all three of those are the point.</p>`
+      }
+    ]
+  },
+  {
+    id: 'copper-raster-effects',
+    title: 'The Copper and the Raster Interrupt',
+    subtitle: 'How 1980s programmers made the display hardware do things it could not do, by changing its mind mid-scanline',
+    category: 'technology',
+    summary: 'A CRT draws one line at a time. If you can change the graphics chip\'s settings in the gap between lines, different parts of the screen can use different settings — more colours, more sprites, more display modes than the hardware officially has.',
+    readTime: '11 min read',
+    sections: [
+      {
+        title: 'The beam is the opportunity',
+        html: `<p>A cathode ray tube draws the picture one horizontal line at a time, sweeping left to right, then returning to start the next. That return trip takes time, and during it nothing is being drawn. The entire technique rests on noticing that this interval is an opportunity: whatever the graphics chip's registers say when a line is drawn is what that line looks like, and you can change them in the gap.</p>
+<p>Do this once and you get a split screen with two different configurations. Do it every scanline and the machine's advertised limits stop being limits. The Commodore 64's VIC-II could supply an interrupt when the raster reached a specific line: you write a value to the raster register, the chip latches it, and every time the raster register increments it compares against that value and fires an interrupt on a match. The CPU then has a narrow window to change something before the beam moves on.</p>`
+      },
+      {
+        title: 'What it bought on the C64',
+        html: `<p>The C64's official capabilities were modest and its actual output was not, and raster interrupts are much of the difference. The machine supports eight hardware sprites; with raster interrupts a programmer can reposition a sprite after it has been drawn and have it drawn again lower down the screen, producing far more than eight visible objects. This is sprite multiplexing, and it is why C64 games are full of more moving things than the datasheet permits.</p>
+<p>The same trick swaps display modes partway down a screen — a bitmap playfield above, a text status bar below — and expands the colour palette beyond what any single configuration allows. None of this is documented capability. It is all a consequence of the fact that the hardware's state is mutable and the beam is slow, and it requires code timed to the microsecond, because a raster interrupt that fires a few cycles late writes its change while the beam is already drawing and produces a visible tear.</p>`
+      },
+      {
+        title: 'The Amiga did it in hardware',
+        html: `<p>Commodore's Amiga took the technique and gave it a dedicated processor. The Copper is a coprocessor whose entire purpose is servicing raster effects: it runs a small program of simple instructions, synchronised to the video hardware, and its instruction set is essentially "wait for the beam to reach this position" and "write this value to this hardware register." It is a programmable state machine that spends its life either fetching an instruction, executing it, or waiting for a beam position.</p>
+<p>The efficiency is the point. On the Amiga, the Copper takes the equivalent of about 8 CPU cycles to change a colour register and about 12 to wait for a screen position — so a raster bar costs roughly 20 cycles, and crucially it costs the main CPU nothing, because the Copper is doing it. The copper bars scrolling behind every Amiga demo and title screen are not the processor straining; they are a dedicated chip doing its job while the CPU gets on with the game. The Copper can also reuse sprites by moving them after they are drawn, and set per-scanline horizontal scroll to produce wave effects.</p>`
+      },
+      {
+        title: 'Programming against the picture',
+        html: `<p>What these techniques have in common is a relationship to the display that modern programming has entirely lost. The programmer is not describing a scene to a rendering system and waiting for a frame; they are intervening in the physical act of drawing, dozens or hundreds of times per frame, with timing measured against the movement of an electron beam across phosphor. The code is coupled to the hardware's real-time behaviour so tightly that changing the television standard breaks it — which is a substantial part of why PAL and NTSC conversions of this era were so frequently broken.</p>
+<p>The Copper is the more elegant answer and the C64's raster interrupts are the more instructive one, because the C64 had no special hardware for this at all. Someone noticed a comparison register and an interrupt line and worked out that they added up to a way around the machine's limits, and then a decade of programmers built a body of technique on top of that observation. The Amiga's designers watched that happen and put a chip in the machine to do it properly. That sequence — a hack becomes standard practice, then standard practice becomes silicon — is one of the most reliable patterns in the history of hardware, and it is the same one that gave the Genesis its parallax planes.</p>`
+      }
+    ]
+  },
+  {
+    id: 'checkpoint-design',
+    title: 'The Checkpoint',
+    subtitle: 'Where a game puts you after it kills you is the single design decision that determines how much failure is worth',
+    category: 'design',
+    summary: 'Checkpoints started as a side effect of stage-based games with limited lives. They became the mechanism by which a designer sets the price of death — and the price of death is what a game\'s difficulty actually means.',
+    readTime: '10 min read',
+    sections: [
+      {
+        title: 'An accident of stages',
+        html: `<p>The checkpoint was not invented so much as inherited. Early arcade games were stage-based and gave the player multiple lives, and the obvious behaviour on death was to restart the current stage rather than the whole game — Galaxian returns you to the stage you were on. That is not a designed mercy; it is the least surprising thing to do given a structure of discrete stages and a life counter, and it produced the checkpoint as a by-product.</p>
+<p>In early games checkpoints were invisible. There was no marker, no flag, no sound — the only way a player learned where the checkpoints were was by dying and observing where they reappeared. The system was communicating its rules exclusively through failure, which is a strange thing to say about a mechanism whose entire job is managing failure, and it meant that understanding a game's checkpoint structure was itself something you had to die to learn.</p>`
+      },
+      {
+        title: 'Setting the price of death',
+        html: `<p>Once checkpoints become deliberate, they become the primary instrument for setting difficulty — more so than enemy health, damage numbers, or any of the things usually labelled as difficulty. The reason is that a game's difficulty, as experienced, is not the probability of failing a challenge. It is the expected cost of failing it. A brutally hard sequence with a checkpoint immediately before it is an enjoyable puzzle you retry instantly. The same sequence with a checkpoint ten minutes back is a different game entirely, and a considerably worse one, without a single enemy having changed.</p>
+<p>This is why checkpoint placement is where designers reveal what they actually think the game is about. Place them densely and you are saying the interesting part is the challenge itself, and you want the player attempting it repeatedly. Place them sparsely and you are saying the interesting part is the tension of a long run, and you want the player to feel the accumulated weight of progress they could lose. Both are legitimate. They produce almost unrelated experiences from identical content.</p>`
+      },
+      {
+        title: 'Mandatory, optional, invisible',
+        html: `<p>The mechanics are simple enough to enumerate. Checkpoints can be mandatory — activated automatically when passed — or optional, requiring the player to do something to claim them. The game stores which was last activated and restarts the player there rather than at the level's start. Modern games mostly auto-save at these points, and in many cases the checkpoint has merged with the save system entirely, becoming a fixed location where progress is written and death returns you.</p>
+<p>The optional checkpoint is the most interesting of these, because it hands the decision to the player and thereby turns a difficulty setting into a gameplay choice. Do you detour to activate the marker, spending time and possibly risk, or push on and gamble that you will not need it? Survival horror built substantial tension out of exactly this by making the save itself a scarce resource, which converts the question "should I save?" into a real decision with a cost. The moment a checkpoint is something you might not take, it stops being infrastructure and becomes part of the game.</p>`
+      },
+      {
+        title: 'What the invisible ones taught',
+        html: `<p>The early invisible checkpoint has a quality worth recovering. Because you learned its position only by dying, the geography of failure was something you built up over attempts — a mental map of the level marked not by where things were but by where you would resume. Players developed an intuition for it, and part of what mastering an arcade game meant was knowing the checkpoint structure well enough to reason about risk.</p>
+<p>Modern design has largely eliminated that, and mostly for good reason: a visible checkpoint that clearly announces itself lets the player reason about risk without paying for the information in deaths. But the trade is real. A game that tells you exactly where you will resume has converted an unknown into a known and removed a source of tension, and the ones that deliberately withhold it — or make you choose whether to claim it — are exploiting a mechanism the earliest games stumbled into by accident. Where the game puts you after it kills you was never a technical detail. It is the game telling you how much it thinks your time is worth.</p>`
+      }
+    ]
+  },
 ];

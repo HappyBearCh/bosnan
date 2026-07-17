@@ -458,4 +458,79 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'tim-sweeney',
+    title: 'Tim Sweeney and the Text Editor That Became a Game',
+    subtitle: 'How a Pascal text editor written in a Maryland farmhouse turned into ZZT, then into Epic MegaGames, then into the engine that half the industry licensed',
+    category: 'profile',
+    summary: 'Tim Sweeney set out to write a text editor. He ended up writing a game inside it, shipping it as shareware from his parents\' house, and building the company whose engine would later power a substantial share of the games industry.',
+    readTime: '10 min read',
+    sections: [
+      {
+        title: 'Potomac Computer Systems',
+        html: `<p>Tim Sweeney was born in 1970 and raised in Potomac, Maryland. In 1991 he founded a company called Potomac Computer Systems, operating out of his parents' house, with the intention of doing consulting work and selling utility software. The first product was not a game. It was a text editor written in Pascal — the kind of tool a programmer builds because the existing tools annoy him.</p>
+<p>What happened next is the part that gets retold, because it inverts the usual order of things. Sweeney kept extending the editor. He added the ability to move a character around the editing area. He added objects the character could interact with. At some point the extensions stopped being features of a text editor and started being a game, and the game was the thing worth shipping. ZZT was released in 1991: a top-down adventure rendered entirely in ASCII characters, distributed as shareware.</p>`,
+      },
+      {
+        title: 'A hundred dollars a day',
+        html: `<p>ZZT's significance is not aesthetic. It is an ASCII game in a year when Wolfenstein 3D was months away. Its significance is that it worked as a business. ZZT earned roughly $100 a day in shareware registrations — not a fortune, but enough, in 1991, to establish that making games could be a career rather than a hobby. Sweeney fulfilled the mail orders himself, with his father helping to handle the envelopes.</p>
+<p>The other thing ZZT shipped with was its editor — the ancestor it had grown out of. Players could build their own ZZT worlds and script object behaviour in a small built-in language, and they did, in volume. The pattern Sweeney established with his first product — ship the game, ship the tools that made it, let the players build — is the pattern Epic would still be following decades later, at a scale ZZT's author could not have projected from a farmhouse in Maryland.</p>`,
+      },
+      {
+        title: 'Epic MegaGames',
+        html: `<p>In early 1992 Sweeney renamed the company Epic MegaGames. The name was aspirational to the point of comedy — the company was one person — and Sweeney has been candid that the "Mega" was there to make a one-man shareware operation look like a real publisher to the retailers and developers he wanted to work with. It worked. Mark Rein, previously at id Software, joined shortly afterwards and has been Epic's vice president ever since.</p>
+<p>The company grew through the shareware era by publishing other people's games alongside its own, then moved its headquarters to Cary, North Carolina in 1999 and dropped the "MegaGames" to become Epic Games. By then Sweeney had built the thing that would define the company's second act: the Unreal Engine, written for Unreal (1998) and licensed to outside studios almost immediately. The engine business turned out to be larger and more durable than the game business that had produced it — which, for a company founded on a text editor that turned into a game, was an unusually consistent outcome.</p>`,
+      },
+    ],
+  },
+  {
+    id: 'brian-fargo',
+    title: 'Brian Fargo and the Interplay Years',
+    subtitle: 'The founder who presented Fallout without designing it, built Wasteland out of Ultima and Mad Max, and lost his company to a French publisher in 2002',
+    category: 'profile',
+    summary: 'Brian Fargo founded Interplay in 1983 and ran it through the golden age of the American computer RPG. He did not personally design Fallout — but the studio culture that produced it was his, and the "Brian Fargo presents" title card at its opening was not vanity.',
+    readTime: '11 min read',
+    sections: [
+      {
+        title: 'Interplay Productions',
+        html: `<p>Brian Fargo founded Interplay Productions in 1983. The company's first work was contract development: its initial deal was with Activision, producing Mindshadow for the Apple II and Commodore 64. This was the standard route into the business at the time — a small studio survived by building games another company's name went on, and hoped to accumulate enough capital and reputation to publish under its own.</p>
+<p>Interplay's route out of contract work ran through the RPG. Fargo hired a high-school friend, and the studio produced The Bard's Tale for Electronic Arts — a dungeon crawler that sold well enough to establish Interplay as a developer whose RPGs people would buy. The company's identity for the next fifteen years was set by that early success: Interplay was where you went for a computer role-playing game with more text and more systems than the competition thought players would tolerate.</p>`,
+      },
+      {
+        title: 'Wasteland',
+        html: `<p>Wasteland (1988) is the game Fargo co-designed and the one his later career kept circling back to. His own description of the pitch was a hybrid: the world simulation and open structure of Ultima, the party mechanics of The Bard's Tale, and a setting borrowed from Mad Max — post-nuclear American Southwest, gangs, radiation, a ranger party with skills that mattered outside combat.</p>
+<p>Wasteland's design ideas — meaningful non-combat skill use, consequences that persisted, a world that did not reset itself for the player's convenience — did not have an immediate successor, because Interplay could not obtain the rights to make one. The sequel it made instead, years later and under a different name, was Fallout.</p>`,
+      },
+      {
+        title: 'Presented by, and then not',
+        html: `<p>Fargo headed Interplay through Fallout (1997), Fallout 2 (1998), and Fallout Tactics (2001) without working directly on any of them. The intros read "Brian Fargo presents" — a credit that reads as ego until you consider what the alternative was. The design work belonged to the teams; what belonged to Fargo was the decision to greenlight a turn-based post-apocalyptic RPG in the years when the market was moving to 3D action, and the studio culture that made such a project survivable.</p>
+<p>He remained CEO until 2002, when Titus Interactive took majority control of the company and Fargo left. He founded InXile Entertainment in 2003. The Wasteland sequel he had wanted since 1988 eventually arrived as Wasteland 2 in 2014, funded by players directly rather than by a publisher, followed by Wasteland 3 in 2020 — twenty-six and thirty-two years, respectively, after the original.</p>`,
+      },
+    ],
+  },
+  {
+    id: 'netcode-prediction',
+    title: 'Client-Side Prediction and the Lag Problem',
+    subtitle: 'Why the original Quake felt terrible over a modem, and how QuakeWorld made the lag disappear by letting the client guess',
+    category: 'technology',
+    summary: 'Over a 28.8k modem, the original Quake put 100 to 200 milliseconds between pressing forward and moving forward. QuakeWorld fixed it by having the client predict the result of your input instead of waiting for the server to confirm it — the architecture nearly every multiplayer action game still uses.',
+    readTime: '10 min read',
+    sections: [
+      {
+        title: 'The authoritative server problem',
+        html: `<p>The straightforward way to build a multiplayer action game is to make the server the sole authority. The client sends input — "forward is held" — the server simulates the world, and sends back the result: here is where you are now. This is correct, it is cheat-resistant, and over a local network it is invisible.</p>
+<p>Over a 28.8k modem it is unusable. The original Quake (1996) shipped with this architecture and, on a dial-up connection, put roughly 100 to 200 milliseconds between the player pressing a key and the player's view responding. The game was not dropping frames or running slowly. It was waiting, correctly and by design, for permission to move. Quake was playable on a LAN and miserable on the internet, which in 1996 was where the players increasingly were.</p>`,
+      },
+      {
+        title: 'Letting the client guess',
+        html: `<p>QuakeWorld, released later in 1996, was John Carmack's response. He scrapped the netcode entirely and rewrote it for internet play rather than adapting the LAN design. The central change was client-side prediction: the client stops waiting. It runs the same movement simulation the server runs, applies the player's input immediately, and shows the result — then reconciles when the server's authoritative answer arrives.</p>
+<p>Carmack described the change in his .plan file at the time: <em>"I am now allowing the client to guess at the results of the users movement until the authoritative response from the server comes through. This is a biiiig architectural change."</em> It was. The server remained authoritative — the client's guess could be overruled, and when the guess was wrong the player got snapped to the correct position. But most of the time the guess was right, because the client was running the same physics code with the same inputs. The perceived lag on player movement went to approximately zero without giving up server authority.</p>`,
+      },
+      {
+        title: 'Who got there first',
+        html: `<p>QuakeWorld is the implementation that mattered — it was the one that spread, because id's engines were licensed and dissected across the industry, and because Carmack documented what he had done. But it was not the first. Duke Nukem 3D, whose shareware episode released on 29 January 1996, is the earliest known first-person shooter to ship client-side prediction, several months ahead of QuakeWorld.</p>
+<p>The reason the technique is associated with QuakeWorld rather than Duke Nukem 3D is that QuakeWorld's version was explained. Carmack's .plan updates, and the later engine source releases, turned client-side prediction from a trick one studio happened to use into a documented architecture every studio could implement. The prediction-and-reconciliation model in a modern shooter's netcode is recognisably the QuakeWorld design — the client guesses, the server rules, and the disagreements are resolved quietly enough that the player never notices they were part of a negotiation.</p>`,
+      },
+    ],
+  },
 ];
