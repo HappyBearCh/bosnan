@@ -508,4 +508,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'sega-hang-on-ride-on',
+    title: 'Hang-On — The Ride-On Motorbike Cabinet',
+    game: 'Hang-On',
+    manufacturer: 'Sega',
+    year: 1985,
+    artist: 'Sega AM2 (Yu Suzuki)',
+    era: '1980s',
+    description: 'Yu Suzuki\'s 1985 racing game came in a cabinet shaped like a full motorcycle that the player physically straddled and leaned to steer — the machine that launched Sega\'s "taikan" body-sensation arcade era.',
+    longDescription: 'Hang-On, released by Sega in 1985 under Yu Suzuki, was a landmark twice over: technically, as one of the first arcade games to use 16-bit graphics via Sega\'s Super Scaler board to simulate high-speed 3D, and physically, through its extraordinary deluxe cabinet. Rather than sit at a screen with a wheel, the player climbed onto a full-sized replica motorcycle and leaned their whole body to steer, so that banking the bike left and right in the real world banked the rider on screen. It was one of the first motion-controlled arcade cabinets, and it turned playing a video game into a physical, public performance.\n\nSuzuki\'s route to the design was characteristically engineering-minded: he has said he set out to build a motorcycle racing game specifically as a way to use a torsion bar in an arcade cabinet, and with market research pointing to the popularity of GP500 grand-prix racing, he modelled the game on that world, taking inspiration from world champion Freddie Spencer\'s riding style. The ride-on cabinet was the physical expression of that ambition — hardware that did not just show you a motorbike but put you on one.\n\nHang-On came in a range of cabinet forms: a conventional upright with only handlebars and brake levers in place of a joystick, an upright with an added seat, and the full ride-on motorcycle that became the game\'s signature. That deluxe version was not universally welcomed at first. Suzuki recalled that at the Japanese debut the ride-on cabinet drew criticism as culturally inappropriate — that the shyness of Japanese players would keep people from straddling a motorcycle in public, and that it was unsuitable for women in skirts. The objections evaporated once players queued up to ride it.\n\nHang-On\'s cabinet is historically pivotal because it began the "taikan" (body-sensation) movement that defined Sega\'s arcade output for the rest of the decade. It was followed by a run of hydraulic and motion cabinets — Space Harrier (1985), Out Run (1986), After Burner (1987) — that made physical immersion Sega\'s arcade signature. More than any single game, Hang-On established the idea that an arcade machine could be a piece of ride hardware, and that the cabinet itself, not just the screen, was where the experience lived.',
+    keyFacts: [
+      'Players straddled a full replica motorcycle and leaned their body to steer',
+      'One of the first motion-controlled arcade cabinets, from Yu Suzuki\'s Sega AM2',
+      'Built on Sega\'s Super Scaler 16-bit hardware for fast pseudo-3D graphics',
+      'Launched the "taikan" (body-sensation) cabinet era: Space Harrier, Out Run, After Burner',
+    ],
+    notableFor: 'Introducing the ride-on motion cabinet and starting Sega\'s "taikan" body-sensation arcade movement.',
+    sections: [
+      {
+        title: 'Design and Visual Identity',
+        html: '<p>The Hang-On deluxe cabinet\'s design thesis was that the machine should be the vehicle. Instead of representing a motorbike on screen and handing the player a wheel, Sega built a full-sized bike the player mounted and leaned, so the act of steering was the act of riding. That decision grew out of Yu Suzuki\'s engineering interest — he framed the whole project as an excuse to put a torsion bar in a cabinet — and it made the machine unmistakable on an arcade floor: a real motorcycle with a screen, ridden in full view of everyone waiting their turn. The cabinet turned a racing game into a spectacle performed by its player.</p>'
+      },
+      {
+        title: 'Legacy and Cultural Reach',
+        html: '<p>Hang-On\'s ride-on cabinet started a movement. By proving that players would line up to physically climb aboard a machine — even after early worries that it was too immodest for Japanese arcades — it established "taikan" body-sensation gaming as Sega\'s defining arcade identity, and set the studio on the path to the hydraulic motion cabinets of Space Harrier, Out Run, and After Burner. Its influence runs through every motion-based arcade experience that followed, from the sit-in racers of the 1990s to modern simulator rides. Hang-On is where the arcade cabinet stopped being furniture around a screen and became the ride itself.</p>'
+      },
+    ],
+  },
+  {
+    id: 'spy-hunter-cabinet',
+    title: 'Spy Hunter — Wheel, Shifter, and the Peter Gunn Theme',
+    game: 'Spy Hunter',
+    manufacturer: 'Bally Midway',
+    year: 1983,
+    artist: 'Bally Midway',
+    era: '1980s',
+    description: 'Bally Midway\'s 1983 vehicular-combat game gave players a yoke-style wheel, a two-speed shifter, and weapon buttons to drive its James Bond-inspired spy car — set to the Peter Gunn theme that arrived only because the Bond music was unaffordable.',
+    longDescription: 'Spy Hunter, released by Bally Midway in 1983, wrapped its vehicular-combat gameplay in one of the more elaborate control setups of the early arcade era. The cabinet — made in both a common upright and a sit-down version — put the player behind a futuristic aircraft-style steering yoke studded with special-purpose buttons, a two-position stick shift offering "low" and "high" gears, and a foot pedal for acceleration. The layout gave the game a rich, tactile feel: the player did not merely steer but shifted gears and juggled weapons, operating the technologically advanced "Interceptor" spy car as it destroyed enemy vehicles down an endless road.\n\nThe game was conceived as a James Bond product, and the influence is written all over it — the gadget-laden car, the oil slicks and smoke screens, the weapons-dealer van. It was originally intended to carry the official Bond brand, and its intended background music was the James Bond theme itself. Bally Midway could not secure the rights to that music, however, and on shipping cabinets substituted Henry Mancini\'s Peter Gunn theme — a driving, instantly recognisable spy-jazz riff that, as it turned out, became a huge part of the game\'s appeal and its enduring identity.\n\nThe combination of substantial physical controls and that propulsive soundtrack made Spy Hunter a standout. Its cabinet asked more of the player\'s hands and feet than most contemporaries, and the Peter Gunn theme looping through the arcade gave it an atmosphere of cinematic action that matched the on-screen fantasy of a super-spy in a weaponised car. The game was a major commercial success, ranking among the top five highest-grossing arcade games in the United States in both 1984 and 1985.\n\nSpy Hunter endures as a case study in how a cabinet\'s hardware and music can define a game as much as its code. The yoke-and-shifter controls gave it a physicality players remembered, and the Peter Gunn theme — adopted only because of a licensing shortfall — became so bound up with the game\'s identity that it followed Spy Hunter through decades of ports and revivals. It is one of the clearest examples of an arcade experience shaped decisively by the parts of the machine that were not the screen.',
+    keyFacts: [
+      'Controls: an aircraft-style steering yoke, a two-speed "low/high" shifter, and an accelerator pedal',
+      'Designed as a James Bond game and originally meant to use the official Bond brand and theme',
+      'The Peter Gunn theme was substituted after the Bond music rights fell through — and became iconic',
+      'A top-five highest-grossing US arcade game in both 1984 and 1985',
+    ],
+    notableFor: 'Pairing an unusually rich wheel-shifter-pedal control setup with the Peter Gunn theme adopted only after the James Bond music rights fell through.',
+    sections: [
+      {
+        title: 'Design and Visual Identity',
+        html: '<p>Spy Hunter\'s cabinet sold the fantasy of the super-spy through its controls. Where most driving games of 1983 offered a wheel and perhaps a button, Spy Hunter gave the player a yoke bristling with weapon buttons, a gearshift, and a pedal — a cockpit for a gadget car rather than a simple steering rig. That physical complexity matched the on-screen premise of the weapons-laden Interceptor, letting the player feel like they were operating an arsenal on wheels. The James Bond DNA ran through everything, from the gadgets to the intended branding, and the cabinet\'s hardware was built to make that spy-thriller power fantasy tactile.</p>'
+      },
+      {
+        title: 'Legacy and Cultural Reach',
+        html: '<p>The most enduring thing about Spy Hunter is an accident. Unable to license the James Bond theme it wanted, Bally Midway reached for Henry Mancini\'s Peter Gunn theme instead — and that substitution became inseparable from the game\'s identity, following it through decades of home ports and revivals. It is a perfect illustration of how much of an arcade game\'s character can come from outside its design proper: a licensing shortfall handed Spy Hunter the propulsive spy-jazz hook that players remember most, and that, alongside its distinctive controls, kept the game a recognisable brand long after its arcade heyday.</p>'
+      },
+    ],
+  },
+  {
+    id: 'daytona-usa-deluxe',
+    title: 'Daytona USA — Eight Cabinets, One Race',
+    game: 'Daytona USA',
+    manufacturer: 'Sega',
+    year: 1993,
+    artist: 'Sega AM2',
+    era: '1990s',
+    description: 'Sega AM2\'s 1993 racer debuted the Model 2 board and, in its deluxe cabinets, let up to eight machines be linked into a single eight-player race — subwoofer seats and all — one of the highest-grossing arcade games ever.',
+    longDescription: 'Daytona USA, developed by Sega AM2 and given a limited release in 1993 ahead of a full rollout in 1994, was the first game to run on Sega\'s Model 2 arcade board, and its texture-mapped polygon graphics were a generational leap over the flat-shaded 3D that came before. But its most striking feature as a cabinet was social scale: Daytona USA was the first arcade game to allow up to eight cabinets to be linked together so that eight players competed in the same race at once, turning a bank of machines into a single roaring multiplayer event.\n\nThe hardware that delivered this came in tiers. There was a twin cabinet seating two linked players, and a deluxe cabinet built around a detailed racing seat mounted on subwoofers, so the low-frequency rumble of the engines came up through the player\'s body. Operators could link four twin cabinets or eight deluxe cabinets to assemble the full eight-player race, and some linked deluxe setups even included a camera trained on the driver\'s seat, feeding a closed-circuit display so the arcade could see each competitor\'s face as they raced.\n\nThat combination of cutting-edge visuals, physical seating, and large-scale linked play made Daytona USA a phenomenon. A row of eight deluxe cabinets, each with a player strapped into a subwoofer seat and hauling on a force-feedback wheel, was a centrepiece attraction — the kind of installation that anchored an entire arcade and drew crowds to watch as much as to play. The game\'s bright, exuberant presentation, its famously catchy vocal soundtrack, and the immediacy of racing seven other real people gave it enormous, lasting appeal.\n\nDaytona USA became one of the highest-grossing arcade games of all time and a defining machine of the mid-1990s arcade. Its cabinet philosophy — premium seating, tactile feedback, and above all large-scale linked competition — represented the arcade\'s answer to the rise of capable home consoles: offer an experience of scale and physical presence that no living room could match. Eight players racing on eight linked machines was exactly the kind of thing you had to leave the house for, and Daytona USA made that case as powerfully as any game of its era.',
+    keyFacts: [
+      'The first game on Sega\'s Model 2 board, with texture-mapped polygon graphics',
+      'First arcade game to link up to eight cabinets into a single eight-player race',
+      'Deluxe cabinets seated players on subwoofers; some linked setups added a driver-facing camera',
+      'One of the highest-grossing arcade games of all time',
+    ],
+    notableFor: 'Being the first arcade game to link eight cabinets into a single race, with subwoofer deluxe seating that defined the mid-1990s arcade.',
+    sections: [
+      {
+        title: 'Design and Visual Identity',
+        html: '<p>Daytona USA\'s cabinet was built to be an event. The deluxe unit wrapped the player in a proper racing seat mounted on subwoofers, so the engine noise was felt as much as heard, and paired it with a force-feedback wheel and Sega\'s new Model 2 visuals. But the identity-defining choice was linkage: eight of these machines could be joined into one race, so the "cabinet" was really a bank of cabinets forming a single arena. A full Daytona USA installation — eight seats, eight wheels, eight players — was a physical spectacle, the arcade equivalent of a starting grid, and it looked and sounded like nothing a home setup could reproduce.</p>'
+      },
+      {
+        title: 'Legacy and Cultural Reach',
+        html: '<p>Daytona USA arrived as home consoles were beginning to threaten the arcade\'s reason to exist, and its answer was scale. Eight players racing on eight linked, subwoofer-seated machines offered exactly what a living room could not: physical presence, real human opponents in the same room, and an installation big enough to be a destination. That model — premium tactile cabinets built around large-scale linked competition — pointed the way for the arcade\'s survival strategy through the 1990s, and Daytona USA\'s enormous, enduring popularity made it the definitive example. It remains one of the most fondly remembered arcade machines precisely because of what its cabinet made possible together, not alone.</p>'
+      },
+    ],
+  },
 ];

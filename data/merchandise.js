@@ -508,4 +508,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'tiger-electronics-lcd-games',
+    title: 'Tiger Electronics LCD Handhelds',
+    franchise: 'Various (licensed)',
+    type: 'Handheld Toy',
+    year: 1988,
+    manufacturer: 'Tiger Electronics',
+    era: '1990s',
+    description: 'Cheap, single-game LCD handhelds that put famous franchises — Sonic, Mortal Kombat, Street Fighter, and dozens more — in kids\' pockets with fixed-segment displays, becoming a ubiquitous and fondly-remembered budget alternative to the Game Boy.',
+    longDescription: 'Tiger Electronics built a business out of licensing famous games and turning them into inexpensive single-game LCD handhelds. Unlike the Game Boy, which ran interchangeable cartridges on a dot-matrix screen, a Tiger handheld played exactly one game rendered on a fixed-segment LCD — the same technology as a digital watch, where predefined shapes simply switch on and off. The result could only ever approximate the game it was based on, but that was beside the point: Tiger\'s genius was in the licenses and the price.\n\nAnd the licenses were remarkable. Tiger secured handheld rights to a huge roster of top-shelf franchises — Sonic the Hedgehog, Mortal Kombat, Street Fighter, Castlevania, Double Dragon, Ninja Gaiden, Duke Nukem, Virtua Fighter, and many more — alongside a parallel catalogue of movie and TV tie-ins. For a child in the early-to-mid 1990s, a Tiger handheld was often the only way to own a version of an arcade or console game they loved, in a form they could carry to school and play anywhere. The games were cheap, ran for a long time on a couple of AA batteries, needed no cartridges, and traded on instantly recognisable brands.\n\nThose qualities made them ubiquitous. Tiger handhelds were a fixture of toy aisles, holiday gift lists, and childhood collections, and their crude but characterful blip-and-beep gameplay is a specific, shared memory for a generation. They were never mistaken for the real thing — the fixed-segment display meant characters lurched between preset positions rather than moving freely — but their affordability and the pull of their licenses made them enormously popular despite, and partly because of, their limitations.\n\nThe format\'s decline was inevitable as genuine portable gaming advanced. The Game Boy Color, Game Boy Advance, and later handhelds offered full-motion graphics, real gameplay depth, and interchangeable games — everything a single-game LCD toy could not match — and Tiger\'s LCD line faded into the late 1990s and early 2000s. But the nostalgia proved durable enough that in 2020 Hasbro (which had acquired Tiger) re-released several classic units, including a Sonic the Hedgehog 3 handheld, confirming the strange affection people retain for these humble, limited little machines.',
+    keyFacts: [
+      'Single-game handhelds using fixed-segment LCDs — the same tech as a digital watch',
+      'Licensed top franchises: Sonic, Mortal Kombat, Street Fighter, Castlevania, and many more',
+      'Cheap, cartridge-free, and long-lasting on AA batteries — a budget Game Boy alternative',
+      'Faded as real portables advanced; Hasbro reissued several classics in 2020',
+    ],
+    notableFor: 'Putting dozens of famous game franchises in kids\' pockets as cheap, single-game LCD handhelds throughout the 1990s.',
+    sections: [
+      {
+        title: 'Production and Content',
+        html: '<p>The whole Tiger model rested on two things: licenses and cost. The hardware was deliberately minimal — a fixed-segment LCD where predefined shapes blink on and off, incapable of the free movement of a Game Boy sprite — which kept the price low enough for a pocket-money purchase or a stocking filler. Onto that cheap foundation Tiger loaded the most desirable brands it could sign: Sonic, Mortal Kombat, Street Fighter, and a long list of games and films besides. The games could only ever be crude approximations of their sources, but for a child who could not afford a console version, owning a Tiger handheld of a favourite game was the next best thing, and often the only affordable one.</p>'
+      },
+      {
+        title: 'Cultural Impact and Legacy',
+        html: '<p>Tiger LCD handhelds are a defining texture of 1990s childhood — a shared memory of blippy, limited, license-driven games that were everywhere in toy aisles and gift lists. Nobody mistook them for the real thing, but their affordability and the magnetism of their brands made them a near-universal first taste of "portable" gaming for kids who did not have a Game Boy. Real handhelds eventually rendered the format obsolete, offering the depth and motion the LCD units never could, yet the affection endured: Hasbro\'s 2020 reissues of classic Tiger units were pitched squarely at the nostalgia of the people who grew up with them, proof that even the humblest gaming merchandise can leave a lasting mark.</p>'
+      },
+    ],
+  },
+  {
+    id: 'street-fighter-ii-hasbro-figures',
+    title: 'Street Fighter II G.I. Joe Action Figures',
+    franchise: 'Street Fighter',
+    type: 'Action Figures',
+    year: 1993,
+    manufacturer: 'Hasbro',
+    era: '1990s',
+    description: 'Hasbro\'s 1993 Street Fighter II action figures were built as a sub-line of G.I. Joe — the World Warriors rendered as 3.75-inch military figures using recycled G.I. Joe molds, complete with the G.I. Joe logo on the packaging.',
+    longDescription: 'When Hasbro turned Capcom\'s Street Fighter II into action figures in 1993, it did so in an unexpected way: as a sub-line of its long-running G.I. Joe: A Real American Hero toyline. The Street Fighter II figures were 3.75 inches tall, matching the G.I. Joe scale, and their packaging carried the G.I. Joe logo, folding the World Warriors into Hasbro\'s established military-figure brand rather than giving them a line of their own.\n\nThe construction reflected that lineage directly. Most of the figures were "redecos" — repaints and reworkings of existing G.I. Joe molds, many drawn from the Ninja Force sub-line — fitted with newly sculpted heads, though a few characters received entirely new molds. The parts-bin approach could be almost comically literal: Guile, for instance, combined a new head with Road Pig\'s chest, the arms of the 1991 Dusty figure, and the waist and legs of the 1986 Roadblock, while Blanka was a retooled Road Pig with a new head. Each figure came with a gimmick in the G.I. Joe tradition — spring-loaded weapons or spring-loaded fighting moves.\n\nThe 1993 lineup covered the game\'s roster fairly completely, with figures for Ryu, Ken, Guile, Blanka, Chun-Li, Dhalsim, E. Honda, Sagat, and Zangief, many offered in multiple colour variants. Turning a hand-to-hand fighting game into military-styled action figures produced some odd results — Street Fighter\'s martial artists reimagined as G.I. Joe-style commandos, armed with spring-loaded guns they never carried in the game — but it also placed Street Fighter II squarely within one of the most successful toy franchises of the era.\n\nThe line is a revealing artefact of how the Street Fighter II craze was monetised at its early-1990s peak, and of how toy companies leveraged existing infrastructure to ride a hot license. Rather than build a Street Fighter toy line from scratch, Hasbro poured the franchise into the mold library and brand identity of G.I. Joe, an efficient bit of corporate synergy that also, incidentally, tied one of gaming\'s defining franchises to one of action-figure history\'s defining ones. For collectors it endures as a curious footnote: the Street Fighter figures that were secretly G.I. Joes.',
+    keyFacts: [
+      'Released in 1993 as a sub-line of G.I. Joe: A Real American Hero, with the G.I. Joe logo on packs',
+      '3.75-inch figures built largely from recycled G.I. Joe molds (many from Ninja Force) with new heads',
+      'Guile mixed parts from Road Pig, Dusty, and Roadblock; Blanka was a retooled Road Pig',
+      'Covered the World Warriors — Ryu, Ken, Guile, Blanka, Chun-Li, Dhalsim, Honda, Sagat, Zangief',
+    ],
+    notableFor: 'Rendering Street Fighter II\'s cast as G.I. Joe figures built from recycled military-toy molds at the height of the franchise\'s early-1990s craze.',
+    sections: [
+      {
+        title: 'Production and Content',
+        html: '<p>Hasbro\'s approach was pure efficiency: rather than tool up a new toy line for a hot license, it poured Street Fighter II into the existing G.I. Joe machine. The figures matched the 3.75-inch G.I. Joe scale, wore the G.I. Joe logo, and were mostly assembled from recycled G.I. Joe molds — Guile stitched together from Road Pig, Dusty, and Roadblock parts, Blanka a retooled Road Pig — with new heads and the line\'s customary spring-loaded gimmicks. The result rendered Capcom\'s martial artists as military-styled commandos, an odd fit that nonetheless got a full World Warriors roster onto shelves quickly, riding the infrastructure of one of the era\'s biggest toy brands.</p>'
+      },
+      {
+        title: 'Cultural Impact and Legacy',
+        html: '<p>The G.I. Joe Street Fighter figures are a snapshot of the Street Fighter II gold rush, when the game was hot enough that every corner of the merchandising machine wanted a piece and companies reached for whatever infrastructure they had. Folding the World Warriors into G.I. Joe was a canny bit of synergy that also produced a genuine curiosity — a fighting-game cast reborn as spring-loaded soldiers. For collectors the line endures precisely because of that strangeness: it is remembered less as a faithful Street Fighter product than as the moment two icons of their respective mediums, video-game fighting and the action figure, were quietly built from the same plastic.</p>'
+      },
+    ],
+  },
+  {
+    id: 'pokemon-burger-king-recall',
+    title: 'The Burger King Pokémon Ball Recall',
+    franchise: 'Pokémon',
+    type: 'Fast-Food Promotion',
+    year: 1999,
+    manufacturer: 'Burger King',
+    era: '1990s',
+    description: 'Burger King\'s enormous 1999 Pokémon promotion, tied to the first film, ended in tragedy and one of the largest fast-food recalls ever after the Poké Ball toy containers were linked to infant suffocation deaths.',
+    longDescription: 'In late 1999, at the absolute peak of Pokémon\'s Western popularity, Burger King ran a massive promotion tied to the release of Pokémon: The First Movie. The giveaway offered a range of Pokémon toys, each packaged inside a plastic container shaped like a Poké Ball — the franchise\'s iconic sphere — measuring roughly 2.75 to 3 inches across. It was one of the largest fast-food tie-ins of the era, distributing tens of millions of the toys during the height of Pokémon mania.\n\nThe promotion turned into one of the most serious safety episodes in the history of gaming merchandise. When a Poké Ball container was pulled apart into its two halves, a half was large enough to fit over a small child\'s nose and mouth and, being smooth and rounded, could form an airtight seal that created a suffocating vacuum. On 11 December 1999, a 13-month-old girl in California died after one half of a ball sealed over her face while she was in her playpen. A separate incident saw an 18-month-old nearly suffocate before her father pulled the half free.\n\nThe U.S. Consumer Product Safety Commission moved to recall the containers. Burger King was initially reluctant, but after the second near-suffocation it launched a heavy recall effort covering more than 25 million of the Poké Ball halves, urging parents to destroy and discard them and offering a small food incentive for their return. Tragically, even after the recall was under way, a four-month-old boy in Indianapolis died of suffocation in January 2000, prompting the CPSC and Burger King to repeat their warnings with renewed urgency.\n\nThe episode is a sobering entry in the history of video-game merchandising — a stark reminder that the scale of a franchise\'s popularity can translate directly into the scale of a safety failure. Coming at the moment Pokémon was the most sought-after brand in children\'s entertainment, the recall of over 25 million toys stood as one of the largest fast-food recalls to that point, and a case study, still cited in product-safety discussions, of how a poorly-considered toy design mass-produced for a merchandising blitz can carry real and irreversible danger.',
+    keyFacts: [
+      'Tied to Pokémon: The First Movie during 1999–2000; toys came in Poké Ball-shaped containers',
+      'A pulled-apart ball half could seal over a small child\'s face and cause suffocation',
+      'Two infant deaths and a near-suffocation were linked to the containers',
+      'Burger King and the CPSC recalled more than 25 million ball halves — a very large fast-food recall',
+    ],
+    notableFor: 'Being one of the largest fast-food recalls in history after Poké Ball toy containers from a peak-Pokémon promotion were linked to infant deaths.',
+    sections: [
+      {
+        title: 'Production and Content',
+        html: '<p>The promotion was built to match the scale of Pokémon mania in 1999: a nationwide Burger King giveaway, timed to the first Pokémon film, distributing tens of millions of toys housed in containers shaped like the franchise\'s signature Poké Ball. The design flaw lay in that packaging. Each ball split into two smooth, rounded halves, and a half was just the wrong size and shape — large enough to cover a small child\'s nose and mouth, and smooth enough to form an airtight seal against the face. In a toy produced in the tens of millions and handed to families with young children, that flaw was mass-produced along with the toy itself.</p>'
+      },
+      {
+        title: 'Cultural Impact and Legacy',
+        html: '<p>The recall stands as one of the most serious cautionary tales in gaming merchandising. It showed that the reach of a phenomenon like Pokémon cuts both ways — the same popularity that put tens of millions of toys into homes also put a dangerous design into them at enormous scale, with tragic consequences. Recalling more than 25 million ball halves was among the largest fast-food recalls of its time, and the episode is still referenced in discussions of product safety and the responsibilities that come with mass promotional tie-ins. It is a stark counterpoint to the usual story of gaming merchandise: a reminder that when a franchise is big enough, the stakes of getting the physical products right are far higher than novelty and nostalgia.</p>'
+      },
+    ],
+  },
 ];
