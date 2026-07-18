@@ -508,4 +508,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'sin-and-punishment-import',
+    title: 'Sin and Punishment',
+    game: 'Sin and Punishment: Successor of the Earth',
+    originalRegion: 'Japan',
+    targetRegion: 'Import (Japan-only)',
+    platform: 'Nintendo 64',
+    year: 2000,
+    era: '2000s',
+    description: 'Treasure\'s acclaimed N64 rail shooter arrived in Japan in 2000, at the very end of the console\'s life, and was never officially released in the West — making it one of the most sought-after imports of its generation until the Wii Virtual Console finally set it free.',
+    longDescription: 'Sin and Punishment: Successor of the Earth was co-developed by Treasure and Nintendo and released exclusively in Japan on 21 November 2000. Treasure was already revered among enthusiasts for densely designed action games like Radiant Silvergun and Gunstar Heroes, and Sin and Punishment was the studio at the height of its ambition on Nintendo hardware: a 3D rail shooter directed by Hideyuki Suganami, built with an unusual control scheme that used the N64 controller\'s D-pad and analog stick together so the player could move a character and aim a targeting reticle simultaneously.\n\nIts timing worked against a Western release. Development had begun in 1997, a year into the N64\'s life, and the game arrived in 2000, when the console was already being eclipsed by the coming PlayStation 2 generation. A Western localisation was reportedly planned but cancelled, leaving Sin and Punishment a Japan-only title at the exact moment import interest in Treasure\'s work was peaking. Because the N64 was region-locked, playing it in the West meant not just importing the cartridge but working around the hardware\'s regional restrictions, which only heightened its reputation as forbidden fruit.\n\nAmong import players the game became legendary: a technically impressive, intensely designed shooter that most Western fans could read about but not easily play, from a studio whose catalogue was already a collector\'s obsession. Its cult status made it one of the most requested titles when Nintendo announced the Wii\'s Virtual Console, precisely because it represented the kind of great, region-locked game the service could finally make accessible.\n\nThat is exactly what happened. Sin and Punishment received an official Western release through the Wii Virtual Console in 2007 — seven years after its Japanese debut — to strong reviews, and it has since been widely regarded as one of the best games on the Nintendo 64. Its arc is a model import story: a brilliant game stranded in one region by bad timing and region-locking, kept alive by an enthusiast community, and finally vindicated when a new distribution channel let the rest of the world play what the importers had been championing all along.',
+    keyFacts: [
+      'Co-developed by Treasure and Nintendo; released only in Japan on 21 November 2000',
+      'Uses the N64 D-pad and analog stick together to move and aim simultaneously',
+      'A planned Western release was cancelled; the region-locked N64 made importing harder',
+      'Finally released in the West via Wii Virtual Console in 2007 to acclaim',
+    ],
+    sections: [
+      {
+        title: 'Stranded by Timing',
+        html: '<p>Sin and Punishment is a study in how good games get lost. There was nothing wrong with it — it was one of Treasure\'s finest, a technically dazzling shooter with a clever control scheme — but it arrived in 2000, at the very end of the N64\'s life, just as attention swung to the next console generation. A Western release was planned and then dropped, and region-locking meant even determined importers had hardware hurdles to clear. The game did not fail on merit; it was stranded by the calendar, released into a market that had already moved on, in a region players elsewhere could not easily reach.</p>'
+      },
+      {
+        title: 'Vindicated by the Virtual Console',
+        html: '<p>The story has a rare happy ending. Kept alive by an import community that treated it as a lost masterpiece, Sin and Punishment became one of the titles fans most wanted when Nintendo launched the Wii Virtual Console — and in 2007 they got it, an official Western release seven years late, warmly reviewed and now routinely ranked among the best N64 games. It is one of the clearest demonstrations of what digital re-release can do for import history: a game region-locked out of most of the world\'s reach was finally handed to everyone, confirming the enthusiasts who had championed it were right all along.</p>'
+      },
+    ],
+  },
+  {
+    id: 'moon-remix-rpg-import',
+    title: 'Moon: Remix RPG Adventure',
+    game: 'Moon: Remix RPG Adventure',
+    originalRegion: 'Japan',
+    targetRegion: 'Import (Japan-only)',
+    platform: 'PlayStation',
+    year: 1997,
+    era: '1990s',
+    description: 'A Japan-only 1997 "anti-RPG" from ex-Square staff at Love-de-Lic, Moon cast the player as the cleanup crew for a heroic adventurer\'s rampage — a cult import so obscure it went unlocalised for over two decades before inspiring Undertale.',
+    longDescription: 'Moon: Remix RPG Adventure was developed by Love-de-Lic and published by ASCII Entertainment for the PlayStation in Japan on 16 October 1997. Love-de-Lic was a small independent studio founded by Kenichi Nishi, a Squaresoft alumnus who had brought along many of his most talented former colleagues; the studio lasted only about five years and released just three Japan-exclusive games, all of which sold poorly at the time. Moon was its debut, and it is one of the earliest and sharpest deconstructions of the JRPG.\n\nThe game\'s premise inverts the genre it satirises. It is set inside a fictional role-playing game in which "the hero" has run rampant — slaughtering hundreds of creatures and looting people\'s homes in the name of adventure. The player does not control that hero; instead they play a supporting character trying to undo the damage the hero has done, catching the souls of the "monsters" the hero killed, helping the world\'s ordinary inhabitants, and experiencing the fantasy from the perspective of the people who live in it rather than the murder-hobo passing through. It is postmodern, satirical, and pointedly unheroic, questioning the casual violence and acquisitiveness that RPG protagonists take for granted.\n\nThat conceptual daring, combined with its commercial failure and Japan-only status, made Moon a deep-cut import legend. For most of its life it was untranslated and nearly unknown outside Japan, a game whispered about among enthusiasts as one of the most interesting and least accessible artefacts of the PlayStation era — the kind of title whose reputation vastly exceeded the number of Western players who had actually finished it.\n\nIts influence outlived its obscurity. Toby Fox has cited Moon as an inspiration for the design of Undertale (2015), a game whose entire ethos of sparing rather than killing monsters echoes Moon\'s central idea. After Fox spoke about it, original designer Yoshiro Kimura was inspired to finally localise the game: Onion Games released a Nintendo Switch port in 2019, localised for Western territories in 2020 and later brought to Windows, PlayStation 4, and macOS. Moon\'s arc — a Japan-only cult failure, kept alive by reputation, vindicated by its influence, and localised at last more than twenty years on — is one of the most satisfying in import history.',
+    keyFacts: [
+      'Released only in Japan on 16 October 1997; developed by ex-Square staff at Love-de-Lic',
+      'An "anti-RPG" where you clean up after a heroic adventurer\'s violent rampage',
+      'A cult import that went unlocalised and largely unknown in the West for over 20 years',
+      'Cited by Toby Fox as an inspiration for Undertale; finally localised from 2020 onward',
+    ],
+    sections: [
+      {
+        title: 'The Anti-RPG',
+        html: '<p>Moon takes the unexamined logic of the role-playing game — kill the monsters, take their stuff, save the world — and asks what it looks like from the other side. By casting the player as the one who follows behind the "hero," rescuing the souls of the creatures he killed and helping the townsfolk he ignored, it reframes the genre\'s casual violence as something closer to a tragedy the player is complicit in cleaning up. In 1997 this was a startlingly early critique of conventions the JRPG barely acknowledged as conventions, delivered by a studio of Square veterans turning their expertise against the very form that trained them.</p>'
+      },
+      {
+        title: 'Rescued by Its Own Influence',
+        html: '<p>For over two decades Moon was almost a rumour in the West — a Japan-only commercial flop with an outsized underground reputation. What ultimately rescued it was its own idea propagating forward: Undertale\'s spare-don\'t-kill philosophy drew on Moon, and Toby Fox\'s public admiration for it helped bring the older game back into view. That, in turn, moved designer Yoshiro Kimura to localise it at last, more than twenty years after release. Few imports demonstrate so clearly how influence can outrun availability — a game most Western players could not play still shaped one they could, and was eventually set free because of it.</p>'
+      },
+    ],
+  },
+  {
+    id: 'lsd-dream-emulator-import',
+    title: 'LSD: Dream Emulator',
+    game: 'LSD: Dream Emulator',
+    originalRegion: 'Japan',
+    targetRegion: 'Import (Japan-only)',
+    platform: 'PlayStation',
+    year: 1998,
+    era: '1990s',
+    description: 'Based on one employee\'s decade-long dream diary, LSD is a 1998 Japan-only PlayStation "game" with no goals — you wander surreal dreamscapes, and touching anything warps you elsewhere — conceived by artist Osamu Sato as interactive art rather than entertainment.',
+    longDescription: 'LSD: Dream Emulator is a 1998 exploration game released exclusively in Japan for the PlayStation by Asmik Ace Entertainment, and it is one of the strangest artefacts of the console\'s library. Its concept came from a real dream diary kept for over a decade by an Asmik employee, Hiroko Nishikawa; the game translates that diary\'s logic into an interactive form, and its limited Japanese release was accompanied by a soundtrack and a book of excerpts from the original diary.\n\nCalling it a game slightly misrepresents its creator\'s intent. LSD was conceived by Osamu Sato, a Japanese multimedia artist who came to the project from photography, music, and digital graphic design, and who was explicit that he was not trying to make a game. Sato saw the PlayStation as a medium for contemporary art — he had spent the 1990s making interactive 3D animation on CD-ROM — and LSD is that impulse taken to its conclusion: a piece of interactive art that happens to run on a games console.\n\nThe experience matches the concept. The player explores surreal, low-polygon dreamscapes with no objective, no score, and no fail state. The single rule is that touching almost anything — a wall, a creature, an object — instantly warps the player to a different, often wholly unrelated environment, so a "dream" becomes an unpredictable chain of associative jumps through spaces that shift in mood, colour, and coherence. Over repeated sessions the game tracks the character of each dream, but it never imposes structure or goals; it simply lets the player wander.\n\nLSD fell into obscurity almost immediately, a limited-run Japan-only oddity that few Western players had any way to encounter. Yet in later years it experienced a striking resurgence, becoming a favourite subject of gaming forums, Let\'s Play videos, and discussions of games as art precisely because of its eccentricity and its refusal to behave like a game. Its rediscovery made it one of the most talked-about imports of the PlayStation era — proof that a piece deliberately made as interactive art, stranded in one region and one small print run, could find its audience decades later as exactly the kind of uncategorisable experience a curious internet loves to share.',
+    keyFacts: [
+      'Released only in Japan in 1998; based on an Asmik employee\'s decade-long dream diary',
+      'Conceived by artist Osamu Sato, who intended it as interactive art, not a game',
+      'No goals or fail state — touching anything warps you to a different dreamscape',
+      'Fell into obscurity, then found a large cult audience via forums and Let\'s Plays',
+    ],
+    sections: [
+      {
+        title: 'A Game That Rejected Being a Game',
+        html: '<p>LSD is unusual even among cult imports because its creator did not consider it a game at all. Osamu Sato approached the PlayStation as an art medium, and built a piece with no objective, no scoring, and no way to win or lose — just surreal dreamscapes and a single rule that touching anything sends you somewhere new. Grounded in a real, decade-long dream diary, it uses the machinery of a video game to reproduce the associative, uncontrollable logic of dreaming. It is one of the purest examples of the console being used for something other than entertainment, which is exactly why it resists easy description.</p>'
+      },
+      {
+        title: 'Obscurity to Cult Object',
+        html: '<p>A limited-run, Japan-only art piece with no goals was never going to sell, and LSD vanished almost as soon as it appeared. Its second life came from the internet\'s appetite for the inexplicable: as forums, Let\'s Play videos, and games-as-art discussions rediscovered it, LSD went from forgotten curio to one of the most discussed imports of its era. Nothing about the game changed — it was always a wandering dream simulator — but a culture eager to share the strange and uncategorisable found it and made it famous, decades after a small print run had consigned it to obscurity in a single region.</p>'
+      },
+    ],
+  },
 ];

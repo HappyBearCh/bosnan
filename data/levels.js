@@ -609,5 +609,107 @@ module.exports = [
         html: '<p>Half-Life 2 is a science-fiction shooter about occupation and resistance. Ravenholm is, for about forty minutes, a horror game — and the seam is invisible because the chapter is motivated entirely from within the fiction. The Combine shelled the town with headcrab canisters; this is what a town looks like afterwards. Nothing is contrived for atmosphere that is not also a plausible consequence of the plot.</p><p>Grigori is what makes it work rather than merely work well. A silent, empty Ravenholm would be atmospheric; a Ravenholm containing one hysterical priest who has been alone with his congregation-turned-zombies for an unknown length of time, and who has spent that time building saw traps and singing to himself, is disturbing in a way the zombies alone could not manage. The chapter\'s title — spoken by Alyx, flatly, as a refusal to discuss the place — does more world-building in five words than most games manage in an hour.</p>'
       }
     ]
+  },
+  {
+    id: 'super-mario-64-bob-omb-battlefield',
+    title: 'Bob-omb Battlefield — Teaching a New Dimension',
+    game: 'Super Mario 64',
+    platform: 'Nintendo 64',
+    year: 1996,
+    era: '1990s',
+    levelName: 'Bob-omb Battlefield (Course 1)',
+    description: 'The first course in Super Mario 64 had to teach the world how to move in three dimensions. Its open mountain, gentle upward spiral, and staged introduction of mechanics made it the most influential 3D platforming level ever built.',
+    longDescription: 'When Super Mario 64 launched in 1996, it was not just a new Mario game but a working proposal for how 3D platforming should feel, and Bob-omb Battlefield is where that proposal is made. It is the first course the player enters, and it carries an enormous teaching burden: in 1996 almost nobody had ever controlled a character freely in a fully three-dimensional space with an analog stick and a movable camera, and this single level had to make that unfamiliar act feel natural within minutes.\n\nThe design solves the problem through structure. The course is a large, open mountain with a main path spiralling gently up to the summit, where the boss, Big Bob-omb, waits. That central path gives even a lost or nervous player an obvious direction — up — while the wide, forgiving spaces around it invite experimentation and exploration without punishing mistakes. The ascent is organised into rough zones that introduce ideas one at a time: first basic running and jumping on open ground, then obstacles like moving platforms and the wind-blown segments that demand more precise control, and finally the boss encounter that asks the player to apply what the climb has taught them.\n\nCrucially, Bob-omb Battlefield establishes a spatial grammar that the whole genre would inherit. It teaches the player to read a walkable plane extending into the distance along the z-axis, to use the horizon and the mountain\'s silhouette as navigational guides rather than mere backdrop, and to think about height and depth as part of the puzzle. The multiple stars hidden around the course — some on the main path, some requiring exploration of side areas, some tied to specific mechanics like cannons or the Chain Chomp — quietly demonstrate that a 3D level is a space to be investigated from many angles, not a corridor to be run through.\n\nThe level\'s influence is difficult to overstate because so much of it became invisible convention. The idea that a 3D game\'s opening area should be a safe, open sandbox that teaches movement through play rather than instruction; the use of terrain and landmarks to guide the eye; the staged escalation of mechanics toward a summit boss — these are now simply how 3D platformers are built, and they trace directly back to a green hill with a talking bomb on top. Bob-omb Battlefield remains a masterclass in teaching a genre that did not yet exist.',
+    designPrinciples: [
+      'A central spiralling path gives clear direction while open space invites exploration',
+      'Mechanics are introduced in staged zones, one idea at a time, up the mountain',
+      'Terrain, horizon, and landmarks guide the eye through three-dimensional space',
+      'A safe, forgiving sandbox teaches movement through play rather than instruction',
+      'Multiple hidden stars teach the player to investigate a 3D space from many angles',
+    ],
+    keyFacts: [
+      'The first course in Super Mario 64 (1996), tasked with teaching free 3D movement',
+      'An open mountain with a spiralling main path up to the boss, Big Bob-omb',
+      'Escalates from basic movement to precision platforming to a summit boss encounter',
+      'Its spatial grammar became the template nearly every later 3D platformer inherited',
+    ],
+    sections: [
+      {
+        title: 'The Language of the Level',
+        html: '<p>Bob-omb Battlefield had to invent a vocabulary and teach it simultaneously. In 1996 the free-roaming 3D character was so new that the level could assume nothing — not that the player understood the camera, not that they could judge distance along the z-axis, not that they knew a jump would land where it looked like it would. The course answers all of this through its shape. The spiralling path up the mountain is an unbroken tutorial disguised as terrain: it always offers an obvious way forward, it escalates its demands gradually, and it uses the horizon and the summit as constant reference points so the player learns to read three-dimensional space without ever being told they are being taught.</p>'
+      },
+      {
+        title: 'Legacy and Influence',
+        html: '<p>The most telling measure of Bob-omb Battlefield\'s influence is that its innovations no longer look like innovations. The open, forgiving opening sandbox; the summit-bound structure; the mechanics staged one per zone; the hidden collectibles that reward investigating a space from multiple angles — these became the default assumptions of the 3D platformer, copied so thoroughly that they read as common sense rather than design. Nearly every 3D platformer since has opened with some descendant of this green hill, because the level did not just launch Super Mario 64; it worked out, in public, how an entire genre should teach itself to its players.</p>'
+      },
+    ],
+  },
+  {
+    id: 'battletoads-turbo-tunnel',
+    title: 'Turbo Tunnel — The Wall a Generation Hit',
+    game: 'Battletoads',
+    platform: 'Nintendo Entertainment System',
+    year: 1991,
+    era: '1990s',
+    levelName: 'Turbo Tunnel (Stage 3)',
+    description: 'The third stage of Battletoads turns into a high-speed hoverbike gauntlet of memorized walls that spikes the difficulty so sharply it became the definitive example of the impossible NES level.',
+    longDescription: 'Battletoads, released by Rare in 1991, was a beat-\'em-up with a reputation for punishing difficulty, and its third stage, the Turbo Tunnel, is where that reputation was cemented. The level begins conventionally enough as a brawl, but partway through the player mounts a Speeder Bike and the game transforms into a side-scrolling high-speed obstacle course. From that point the Turbo Tunnel is about one thing: reacting to, and ultimately memorising, a relentless sequence of walls and barriers that the bike hurtles toward at ever-increasing speed.\n\nThe design escalates deliberately. The first stretch introduces the basic barriers in a readable, alternating zigzag pattern; the second adds ramps that leap chasms and floating obstacles; the third accelerates the whole thing and introduces Rat Rockets that drop fresh walls directly into the player\'s path. As the speed climbs, the window to react shrinks until pure reflex is no longer enough and success depends on knowing what is coming before it appears on screen. A single collision means instant death, and the level offers little margin for the trial-and-error learning it effectively demands.\n\nThe difficulty was recognised as extreme even at the time. The Winner\'s Guide to Nintendo, a strategy guide published alongside the game in 1991, called the Turbo Tunnel "one of the toughest challenges of any NES game," and in the decades since, Battletoads as a whole has repeatedly appeared on lists of the hardest games ever made — GameTrailers once placed it at number one. For a great many players, the Turbo Tunnel was simply where their Battletoads cartridge stopped: the wall, literal and figurative, that they never got past.\n\nThat shared experience of failure is exactly why the level endures. The Turbo Tunnel became cultural shorthand for the brutal, memorization-driven difficulty of the NES era — the stage everyone remembers dying on, the benchmark against which other "hard levels" are measured, and a recurring reference in retro-gaming conversation. It is one of the rare individual levels famous not for how it welcomed players in but for how completely, and how memorably, it shut them out.',
+    designPrinciples: [
+      'A mid-stage genre shift from brawler to high-speed obstacle course',
+      'Escalating speed shrinks reaction windows until memorization is required',
+      'Instant death on any collision with minimal margin for error',
+      'Staged introduction of barrier types before combining and accelerating them',
+      'Difficulty as spectacle — the level is designed to be a famous wall',
+    ],
+    keyFacts: [
+      'Stage 3 of Rare\'s Battletoads (1991); shifts into a Speeder Bike obstacle gauntlet',
+      'Escalating speed and instant-death barriers force memorization over reaction',
+      'A 1991 strategy guide called it "one of the toughest challenges of any NES game"',
+      'Became the definitive cultural example of the impossibly hard NES level',
+    ],
+    sections: [
+      {
+        title: 'The Language of the Level',
+        html: '<p>The Turbo Tunnel speaks in a dialect of pure escalation. It introduces its obstacle vocabulary honestly — a readable zigzag of walls first, then ramps and floating barriers, then accelerating hazards that spawn new walls in front of you — and then it simply keeps turning up the speed until reaction time runs out. The level\'s cruelty is that it demands a skill it cannot teach in the moment: at full pace the only way to survive is to already know the sequence, which means dying to learn it. It is a level built on the assumption that you will fail repeatedly, and it makes no apology for that assumption.</p>'
+      },
+      {
+        title: 'Legacy and Influence',
+        html: '<p>The Turbo Tunnel is famous the way few individual levels are: as a collective memory of defeat. It is the stage a generation of NES players cite when they talk about games that were simply too hard, the benchmark invoked whenever a modern game wants to claim brutal difficulty, and a fixture of retro-gaming lore. Its influence is less about design imitation than about cultural meaning — it fixed the idea of the memorization-gauntlet "wall" so firmly that "the Turbo Tunnel" functions as a unit of difficulty. Battletoads has many hard moments, but this is the one that made it a legend, precisely because so few players ever got past it.</p>'
+      },
+    ],
+  },
+  {
+    id: 'star-fox-64-corneria',
+    title: 'Corneria — The Branching First Mission',
+    game: 'Star Fox 64',
+    platform: 'Nintendo 64',
+    year: 1997,
+    era: '1990s',
+    levelName: 'Corneria (Sector Z path hub)',
+    description: 'Every playthrough of Star Fox 64 starts on Corneria, but how you play it decides where the whole game goes — a single opening level that hides the branches to twenty-five possible routes through hidden triggers rather than menu choices.',
+    longDescription: 'Star Fox 64, released in 1997, was Nintendo\'s polished realisation of the on-rails 3D shooter it had prototyped on the SNES, and its opening mission, Corneria, is a small masterpiece of front-loading a game\'s entire structure into its first level. Corneria is always the first mission: the Star Fox team responds to a distress call from General Pepper as the capital planet is invaded, and the player flies over seas, between city towers, and through valleys, shooting down starfighters and tanks before confronting a boss. On its surface it is a straightforward, thrilling introduction.\n\nBeneath the surface, Corneria is the hub from which the game\'s celebrated branching structure grows. Star Fox 64 contains roughly twenty-five possible paths across its campaign, and every one of them begins here. Which planet the player travels to next is not chosen from a menu but determined by how they perform on Corneria — hitting certain targets, taking certain routes, rescuing teammates, or triggering hidden events opens harder alternate paths, while a more ordinary run sends the player down the standard route. The branching is expressed through play, not selection, so the same opening level can send two players to entirely different corners of the Lylat system.\n\nThat design gives Corneria unusual replay density for a first level. A player who simply survives it experiences a good rail shooter; a player who learns its secrets — the alternate warp routes, the conditions that reroute the campaign — finds that the level is quietly a decision point disguised as an action set piece. The mission was praised specifically for tying its branching to player performance and in-level triggers rather than to a path-select screen, making mastery of the opening stage meaningful in a way few games attempted.\n\nCorneria\'s influence lies in how it demonstrated that a linear-feeling action level could carry non-linear consequence. By hiding the branch points inside the moment-to-moment play of a single mission, Star Fox 64 made replaying its first level an act of discovery rather than repetition, and gave its short campaign enormous longevity. It remains one of the best examples of a game teaching its structure not through explanation but through a first level that rewards you differently every time you understand it a little better.',
+    designPrinciples: [
+      'The opening level doubles as the hub for the entire branching campaign',
+      'Route changes are triggered by in-level performance, not a path-select menu',
+      'Hidden objectives and warps reward mastery of a seemingly linear mission',
+      'A single stage carries high replay density through discoverable consequences',
+      'Structure is taught through play rather than explained to the player',
+    ],
+    keyFacts: [
+      'Always the first mission of Star Fox 64 (1997), and the root of every route',
+      'The game has roughly 25 possible paths, all branching out of Corneria',
+      'Alternate routes open via in-level triggers and performance, not menu choices',
+      'Praised for tying branching to player skill rather than path selection',
+    ],
+    sections: [
+      {
+        title: 'The Language of the Level',
+        html: '<p>Corneria teaches the player two things at once, one obvious and one hidden. The obvious lesson is how to fly, shoot, barrel-roll, and read the on-rails space. The hidden lesson — which most first-time players never notice — is that the level is listening. Where they aim, what they destroy, whether they save a teammate, whether they find a warp: all of it is quietly deciding where the game goes next. The genius is that Corneria never announces this. It presents itself as a straightforward opening mission, and only on replay does the player realise the branch points were embedded in the action the whole time.</p>'
+      },
+      {
+        title: 'Legacy and Influence',
+        html: '<p>Corneria is a demonstration that non-linear structure can live inside a linear-feeling level. By hiding the routes to twenty-five different campaigns in the performance of one opening mission, Star Fox 64 turned replaying its first stage into exploration rather than repetition, and gave a short game remarkable staying power. The approach — branching driven by how you play rather than what you select — remained influential as an ideal of responsive design, and Corneria endures as the textbook case: a first level so densely wired to consequence that players kept returning to it for years, each run revealing a little more of the game hiding inside it.</p>'
+      },
+    ],
   }
 ];

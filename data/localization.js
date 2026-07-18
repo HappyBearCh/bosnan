@@ -650,4 +650,109 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'dragon-warrior-old-english',
+    title: 'Dragon Warrior\'s Elizabethan English',
+    game: 'Dragon Quest / Dragon Warrior',
+    originalRegion: 'Japan',
+    localizedRegion: 'North America',
+    platform: 'Nintendo Entertainment System',
+    year: 1989,
+    era: '1980s',
+    description: 'To bring Dragon Quest to America in 1989, Nintendo renamed it Dragon Warrior for trademark reasons and rewrote its script in mock-Elizabethan English — "thou hast" and "thy" — giving the console RPG a storybook voice that shaped how the genre sounded in the West.',
+    longDescription: 'When Nintendo of America decided in 1989 to bring Enix\'s hugely successful Dragon Quest to North America, it treated the localisation as a flagship effort. The Legend of Zelda had proven that a fantasy adventure could succeed with American players, and Nintendo wanted the first console RPG many of them would ever play to make a strong impression. That meant more than a translation: the North American release came with enhanced graphics, a battery-save option replacing the Japanese passwords, and a 64-page strategy guide bundled with every copy.\n\nTwo changes defined how the game was remembered. The first was the name. Enix\'s "Dragon Quest" could not be used in North America because an American company, TSR, already held the trademark "DragonQuest" for a tabletop role-playing game, so the title was changed to Dragon Warrior — a name the series carried in the West for years, until the trademark conflict lapsed and later entries reverted to Dragon Quest. The second, more distinctive change was the language of the script itself.\n\nRather than translate the Japanese dialogue into plain contemporary English, the localisers rewrote it in a deliberately archaic, mock-Elizabethan register — "Early Modern English" of the "thou hast," "thy," and "dost thou wish" variety, carried right through into the battle narration ("Thou hast killed the Slime!"). It was a stylistic choice, not a literal reflection of the Japanese, and it gave the game a formal, storybook, faux-medieval voice that matched its knightly fantasy setting.\n\nThat voice proved influential out of proportion to the game\'s modest role in the plot. For a generation of North American players, Dragon Warrior was a first encounter with the console RPG, and its pseudo-Shakespearean diction helped establish an association — high fantasy equals archaic English — that echoed through later localisations and original Western fantasy games alike. The choice is now looked back on as slightly quaint, but it gave the genre a recognisable literary texture in English at the very moment it was arriving, and it remains one of the most fondly remembered localisation decisions of the NES era.',
+    changes: [
+      'Title changed from Dragon Quest to Dragon Warrior to avoid TSR\'s "DragonQuest" tabletop trademark',
+      'The entire script was rewritten in mock-Elizabethan English ("Thou hast," "thy," "dost thou")',
+      'Battle narration used the same archaic register ("Thou hast killed the Slime!")',
+      'Japanese password saves were replaced with battery backup for the North American release',
+      'Every copy was bundled with a 64-page strategy guide as part of Nintendo\'s marketing push',
+    ],
+    keyFacts: [
+      'Released in North America in August 1989 as Nintendo pushed the console RPG to a new market',
+      '"Dragon Warrior" name used because TSR held the "DragonQuest" trademark',
+      'The mock-Elizabethan script was a stylistic choice, not a literal translation',
+      'Helped cement the "high fantasy = archaic English" convention in Western RPG localisation',
+    ],
+    sections: [
+      {
+        title: 'A Voice for a New Genre',
+        html: '<p>The decision to write Dragon Warrior in "thou hast" English was not forced by the Japanese text — it was an authored stylistic choice, an attempt to give a knightly fantasy world an appropriately old-fashioned, storybook voice in English. For many North American players this was their first console RPG, and the archaic diction became part of how the genre felt: formal, literary, faintly medieval. The choice shaped expectations far beyond this one game, feeding an enduring association between high fantasy and Elizabethan-flavoured language that later localisations and homegrown Western RPGs would echo for years.</p>'
+      },
+      {
+        title: 'The Name That Stuck',
+        html: '<p>The rename from Dragon Quest to Dragon Warrior was a pure trademark accident — TSR already owned "DragonQuest" for a tabletop game — but it defined the series\' Western identity for well over a decade. Generations of North American players knew the franchise only as Dragon Warrior, and the reversion to Dragon Quest came only much later, once the conflict no longer applied. It is a reminder that some of the most lasting facts about how a game is known in a region are not creative decisions at all, but the residue of legal circumstance at the moment it crossed the ocean.</p>'
+      },
+    ],
+  },
+  {
+    id: 'working-designs-localizations',
+    title: 'Working Designs and "Delays Are Temporary"',
+    game: 'Lunar and other Japanese RPGs',
+    originalRegion: 'Japan',
+    localizedRegion: 'North America',
+    platform: 'Sega CD / PlayStation / Saturn',
+    year: 1993,
+    era: '1990s',
+    description: 'Working Designs built its reputation localising Japanese RPGs — especially the Lunar series — with lavish packaging, heavy American humour, and famously long delays, under Victor Ireland\'s motto: "Delays are Temporary, Mediocrity is Forever."',
+    longDescription: 'Working Designs was an American publisher that specialised in localising Japanese role-playing games, strategy games, and shooters for Western release, and it became one of the most distinctive and divisive localisers of the 1990s. It is best remembered as the long-time North American publisher of the Lunar series, but its identity was shaped less by any single title than by a philosophy, embodied in company president Victor Ireland and his oft-quoted motto: "Delays are Temporary, Mediocrity is Forever" — a line Ireland liked enough to write into the PlayStation remake of Lunar itself.\n\nWorking Designs\' localisation style was unmistakable. Ireland maintained that the company stuck as closely to the original Japanese as it could while keeping the text understandable to American players, but it also freely injected quirky, distinctly American humour — pop-culture gags and jokes written to replace Japanese ones that would not land in English. Combined with elaborate, premium packaging (thick manuals, hardbound extras, pack-in items), this gave Working Designs releases a lavish, personality-heavy character that fans either loved for its craft and charm or criticised for straying from the source.\n\nThe company\'s platform choices were as idiosyncratic as its scripts. Drawn to the storage of the CD format, it published for the Sega CD and TurboGrafx-CD rather than the more popular cartridge systems, and later ran into a wall with Sony: when Working Designs approached SCEA under Bernie Stolar, it was told the PlayStation had no interest in non-action games, pushing the RPG-and-strategy publisher toward the Sega Saturn for a time. Its business was always a niche one, chasing genres the platform holders did not prioritise.\n\nThe flip side of Working Designs\' devotion to polish was its notorious unreliability on timing. Releases routinely slipped by a year or more; the Saturn\'s Magic Knight Rayearth was delayed unintentionally for over three years, arriving as effectively the platform\'s last US game. That combination of beloved craftsmanship and chronic delay defined the company until a run of delays, approval problems, and weak sales caught up with it, and on 12 December 2005 Working Designs laid off its staff and became defunct. Its legacy is a template argued over ever since: the localiser as author, willing to trade schedule — and fidelity — for personality and presentation.',
+    changes: [
+      'Injected American pop-culture humour to replace Japanese jokes that would not translate',
+      'Wrapped releases in premium packaging — thick manuals, hardbound extras, pack-in items',
+      'Focused on CD platforms (Sega CD, TurboGrafx-CD, later Saturn) for their storage capacity',
+      'Localisation choices prioritised personality and polish, sometimes over literal fidelity',
+      'Ireland wrote the motto "Delays are Temporary, Mediocrity is Forever" into Lunar\'s PS1 remake',
+    ],
+    keyFacts: [
+      'Best known as the North American publisher of the Lunar series',
+      'President Victor Ireland made "Delays are Temporary, Mediocrity is Forever" the company creed',
+      'SCEA rejected its non-action games, pushing it toward the Sega Saturn',
+      'Chronic delays (Magic Knight Rayearth slipped 3+ years); shut down 12 December 2005',
+    ],
+    sections: [
+      {
+        title: 'The Localiser as Author',
+        html: '<p>Working Designs treated localisation as authorship rather than transcription. Its scripts carried a recognisable voice — American, joke-heavy, willing to rewrite a gag rather than translate a joke that would fall flat — and its releases arrived as premium objects, thick with manuals and extras. To admirers this was craftsmanship: a company that cared enough to make each release feel special. To critics it was overreach, a localiser imposing its own personality on someone else\'s game. Either way it established a model of the localiser as a creative force in its own right, a debate about fidelity versus flavour that the industry still has.</p>'
+      },
+      {
+        title: 'The Cost of Perfectionism',
+        html: '<p>Ireland\'s motto cut both ways. "Delays are Temporary, Mediocrity is Forever" justified the polish fans prized, but it also described a company constitutionally unable to ship on time — releases slipping a year or more as routine, and Magic Knight Rayearth arriving over three years late, after the Saturn it was made for had effectively died in the US. That perfectionism, colliding with a niche business chasing genres the platform holders did not want, eventually proved unsustainable, and Working Designs closed at the end of 2005. Its history stands as a case study in the real trade-offs of caring about localisation quality more than the market rewarded.</p>'
+      },
+    ],
+  },
+  {
+    id: 'nintendo-content-guidelines',
+    title: 'Nintendo of America\'s Content Guidelines',
+    game: 'Numerous NES / SNES / Game Boy titles',
+    originalRegion: 'Japan',
+    localizedRegion: 'North America',
+    platform: 'NES / SNES / Game Boy',
+    year: 1990,
+    era: '1990s',
+    description: 'Through the late 1980s and early 1990s, Nintendo of America enforced strict "family-friendly" content rules that stripped crosses, blood, alcohol, and religious references out of games before they reached North America — a censorship regime that reshaped countless localisations.',
+    longDescription: 'For much of the NES and SNES era, Nintendo of America made "family-friendly" content a corporate priority and enforced it through a detailed set of content guidelines that every game published under its banner had to satisfy. The policy reflected Nintendo\'s determination, after the 1983 crash, to present games as wholesome family entertainment and to keep tight control over its platform\'s image — and it meant that a great many Japanese games were altered, sometimes substantially, before North American release.\n\nThe guidelines banned a wide range of content. Religious symbolism was a particular focus: crosses, pentagrams, and references to God, Satan, hell, Buddha, and real religious figures were prohibited (Nintendo\'s rules notably carved out an exception for Roman mythological gods), leading to the removal of churches\' crosses, altered "holy" imagery, and rewritten references across numerous titles. Alcohol and tobacco were scrubbed too — beer and wine became soda or coffee, bars became cafes or diners, and cigarettes were edited out of characters\' hands. Graphic blood and death were softened or removed, and content encouraging drug use was forbidden.\n\nThe effect on localisation was pervasive but uneven. Games like Castlevania had crosses and religious imagery quietly adjusted; RPGs had taverns turned into cafes and prayer references reworded; countless small edits accumulated into a distinct "Nintendo version" of the 8- and 16-bit libraries that differed from their Japanese originals in ways many Western players never knew about. Yet Nintendo\'s enforcement was famously inconsistent — some games slipped through with content far more provocative than the crosses that were scrubbed from others — which made the policy feel arbitrary as often as it felt principled.\n\nThe guidelines\' importance is twofold. They shaped the actual text and imagery of a huge swath of the games a generation grew up with, so that the Western memory of many classics is subtly different from the Japanese one. And they became a defining contrast in the console war: Nintendo\'s censorship regime was exactly the image Sega attacked with its edgier marketing, and it was precisely this family-friendly stance that Nintendo would be forced to reconsider — as with its bloodless Mortal Kombat — once the market made clear that older players wanted the content the guidelines removed.',
+    changes: [
+      'Religious symbols banned: crosses, pentagrams, references to God, Satan, hell, Buddha (Roman gods allowed)',
+      'Alcohol and tobacco removed — beer/wine became soda or coffee; bars became cafes or diners',
+      'Graphic blood and depictions of death were softened or removed',
+      'Content encouraging illegal drug use was prohibited',
+      'Enforcement was inconsistent — some games shipped with more provocative content untouched',
+    ],
+    keyFacts: [
+      'Nintendo of America enforced detailed "family-friendly" content rules through the NES/SNES era',
+      'Religious imagery was a major target; Roman mythological gods were explicitly exempted',
+      'Produced a distinct, quietly altered "Nintendo version" of much of the 8- and 16-bit library',
+      'The policy became a flashpoint Sega exploited, and one Nintendo later had to relax',
+    ],
+    sections: [
+      {
+        title: 'A Thousand Small Edits',
+        html: '<p>Nintendo\'s content policy rarely produced a single famous cut; it produced thousands of small ones. A cross removed from a church, a tavern relabelled a cafe, a glass of wine recoloured into juice, a line of dialogue reworded to avoid naming God — individually minor, collectively enormous. The result is that the North American versions of a large part of the NES and SNES catalogue quietly diverge from their Japanese originals, so that a generation\'s memory of these classics is, in countless tiny ways, a memory of the edited version. The censorship is invisible precisely because it was so thorough and so mundane.</p>'
+      },
+      {
+        title: 'The Image That Sega Attacked',
+        html: '<p>The content guidelines were not just an internal policy; they were a public identity, and a vulnerability. Nintendo\'s wholesome, sanitised image was exactly what Sega\'s aggressive "edgier" marketing targeted, and the two companies\' opposite approaches to the same Mortal Kombat port — Nintendo\'s bloodless "sweat," Sega\'s optional gore — turned the guidelines into a competitive liability. The inconsistency of enforcement only sharpened the criticism. Ultimately the market did what argument could not: as it became clear that older players wanted the content Nintendo removed, the company was forced to relax the very family-friendly stance these guidelines had been built to protect.</p>'
+      },
+    ],
+  },
 ];
