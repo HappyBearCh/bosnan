@@ -508,4 +508,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'ghosts-n-goblins-loop-ending',
+    title: 'Ghosts \'n Goblins — "This Room Is an Illusion"',
+    game: 'Ghosts \'n Goblins',
+    platform: 'Arcade',
+    year: 1985,
+    type: 'Cruel Twist',
+    era: '1980s',
+    spoilerWarning: true,
+    description: 'After grinding through one of the hardest games ever made and defeating the final boss, the player is told the victory was a trap devised by Satan — and must play the entire game a second time to reach the real ending.',
+    longDescription: 'Ghosts \'n Goblins, Capcom\'s 1985 arcade game, was already notorious for a brutal difficulty that stripped the knight Arthur to his boxer shorts with a single hit and sent him back across relentless, monster-filled stages. Players who fought their way through all of it, defeated what appeared to be the final boss, and expected the reward every game had trained them to expect instead received a message: the room they had reached was an illusion, a trap devised by Satan, and they had not actually finished the game at all.\n\nTo see the genuine ending, the player had to play the entire game a second time — every stage, every enemy, the whole gauntlet again — and defeat the final boss once more. Only on that second completion does the true conclusion appear: the princess rushes to Arthur, and the screen delivers its broken-English benediction, "Congratulation. This story is happy end. Thank you." For a game this punishing, being told at the moment of apparent triumph that the triumph was fake, and that the price of the real ending is doing all of it over again, is one of the cruelest design decisions of the arcade era.\n\nThe demand was not merely psychological. Being forced to replay the whole game meant surviving Ghosts \'n Goblins\' legendary difficulty twice in a row, an achievement far beyond most players, and one that in the arcade meant either extraordinary skill or a substantial pile of quarters. The trick fit the commercial logic of arcades perfectly — every additional loop was more play time and, for most, more money — but it landed as something closer to an insult, a designer laughing at the player who thought they had won.\n\nThe ending became one of Capcom\'s most infamous moments and a defining example of arcade-era cruelty toward the player. It is remembered less as a story beat than as an attitude — the game treating its own completion as a joke at the player\'s expense — and it established a template of the fake-out final victory that would recur throughout the series and beyond. To have "beaten" Ghosts \'n Goblins, players learned, was to have been told the fight was only half over.',
+    keyFacts: [
+      'Defeating the apparent final boss reveals the victory was "a trap devised by Satan"',
+      'The player must complete the entire game a second time to reach the true ending',
+      'The real ending is a terse "Congratulation. This story is happy end. Thank you."',
+      'Widely cited as one of the cruelest design tricks of the arcade era',
+    ],
+    sections: [
+      {
+        title: 'The Shock of the Permanent',
+        html: '<p>The cruelty of the Ghosts \'n Goblins ending is precisely timed. It arrives at the instant of maximum relief — the final boss down, the ordeal apparently over — and turns that relief into the setup for a punchline. "This room is an illusion" does not just deny the player their ending; it retroactively reframes everything they just accomplished as incomplete, and demands they do it all again. In a game already regarded as one of the hardest ever made, asking for a second flawless run was, for most players, asking for the impossible. The victory screen most players ever saw was the fake one.</p>'
+      },
+      {
+        title: 'Cultural Afterlife',
+        html: '<p>The fake-out ending became inseparable from the series\' identity and from Capcom\'s reputation for punishing its players. It is regularly invoked as the archetype of arcade-era hostility — the design that treated finishing the game as a joke and made the player the butt of it — and the "trap devised by Satan" line endures as shorthand for a game pulling the rug out at the worst possible moment. Later entries in the series played with the same loop-based cruelty, but the 1985 original set the standard: the moment a generation of players learned that beating the boss and beating the game were not necessarily the same thing.</p>'
+      },
+    ],
+  },
+  {
+    id: 'ocarina-of-time-ending',
+    title: 'Ocarina of Time — Navi\'s Farewell',
+    game: 'The Legend of Zelda: Ocarina of Time',
+    platform: 'Nintendo 64',
+    year: 1998,
+    type: 'Bittersweet',
+    era: '1990s',
+    spoilerWarning: true,
+    description: 'Ganondorf defeated, Zelda sends Link back to reclaim the childhood he lost — but the reunion is undercut by his fairy companion Navi silently flying away, leaving on a note of loss the series never fully resolved.',
+    longDescription: 'The Legend of Zelda: Ocarina of Time, released in November 1998, was a landmark in the transition of a beloved 2D series into 3D, and its ending is remembered as much for what it takes away as for what it resolves. After Link defeats Ganondorf and peace returns to Hyrule, Princess Zelda uses her power to send Link back in time to the Child Timeline, returning to him the seven years of childhood he had lost while sealed in stasis in the Sacred Realm. It is an act of friendship and restoration — Zelda choosing to let Link live the youth that his heroism had cost him, rather than keep him in her own timeline.\n\nBut the game refuses to make the restoration purely happy. In the final scene, at the Temple of Time, Link\'s fairy companion Navi — his constant guide and companion throughout the entire adventure — bids him a wordless farewell, flies toward a lit window, and disappears. Her reason is never explained. The camera lingers on Link alone, and the game ends on that image of departure rather than on the triumphant reunion of Link and the child Zelda in the castle courtyard.\n\nThat unexplained loss gives the ending its lasting emotional weight. Navi had been the player\'s companion as much as Link\'s — the voice that guided, hinted, and accompanied them across dozens of hours — and her silent exit reads as the cost of the adventure ending, the friend who cannot follow into the ordinary life the hero has won back. Thematically, commentators have read Navi\'s departure as the symbolic close of Link\'s childhood: she is so bound to that period of his life that she has to leave for him to move past it, even as he is physically returned to boyhood.\n\nThe ending\'s power was such that it seeded the entire premise of the next game. Majora\'s Mask (2000) opens with Link riding through a forest searching for a departed friend "with whom he parted ways" when his heroic destiny was fulfilled — widely understood to be Navi. Few series conclusions have turned a moment of victory so completely into a moment of quiet grief, and Navi\'s farewell endures as one of gaming\'s most affecting endings precisely because it withholds the explanation and simply lets her go.',
+    keyFacts: [
+      'Zelda sends Link back in time to reclaim the childhood his heroism cost him',
+      'His fairy companion Navi silently flies away at the Temple of Time — her reason never explained',
+      'The game ends on Link\'s solitude rather than the reunion in the castle courtyard',
+      'Navi\'s departure directly sets up the premise of Majora\'s Mask (2000)',
+    ],
+    sections: [
+      {
+        title: 'The Shock of the Permanent',
+        html: '<p>Ocarina of Time earns its ending by making the loss irreversible and unexplained. Navi had been with the player for the entire journey — a guide, a hint system, a companion — and the game gives her no death, no speech, no reason, only a wordless flight toward a window and out of Link\'s life. That refusal to explain is the point: the adventure is over, and one of the things that ends with it is the companionship that defined it. Returning Link to childhood should be a pure happy ending, and the game deliberately undercuts it, letting the fairy\'s departure hang over the restoration like a shadow.</p>'
+      },
+      {
+        title: 'Cultural Afterlife',
+        html: '<p>Navi\'s farewell is one of the most discussed moments in the series, partly because Nintendo built the sequel on it. Majora\'s Mask opens with Link searching a forest for a lost friend he parted from when his destiny was fulfilled, turning Ocarina\'s final image of loss into the emotional engine of an entire follow-up game. The scene endures because it treats the end of an adventure the way people actually experience the end of a formative chapter of life — as something bittersweet, incompletely explained, and marked by the friends who do not come along. For a generation, the memory of finishing Ocarina of Time is inseparable from watching Navi leave.</p>'
+      },
+    ],
+  },
+  {
+    id: 'xenogears-disc-2-ending',
+    title: 'Xenogears — The Narrated Second Disc',
+    game: 'Xenogears',
+    platform: 'PlayStation',
+    year: 1998,
+    type: 'Production Legend',
+    era: '1990s',
+    spoilerWarning: true,
+    description: 'Xenogears\' sprawling story ran out of production runway, so most of its second disc abandons playable scenes to have the characters narrate the plot from a chair while a slideshow plays — an infamous compromise that has become a fan legend.',
+    longDescription: 'Xenogears, released by Square in 1998, is celebrated for one of the most ambitious stories in the JRPG canon — a dense, philosophically heavy epic of religion, psychology, and giant mecha. It is equally famous for how that story is delivered in its back half. Where the first disc is a fully realised, playable RPG, much of the second disc changes format dramatically: the game repeatedly places its protagonists Fei and Elly in a dark space and has them narrate the plot\'s climactic events aloud — "and then this happened" — while a slideshow of images illustrates what is being described, with only occasional stretches of playable gameplay and boss fights between the monologues.\n\nThe long-standing fan explanation was simply that Square ran out of money and time and forced the team to gut the second half, with director Tetsuya Takahashi\'s grander plans left on the cutting-room floor. The reality Takahashi later described is more nuanced. His team was relatively inexperienced and could not build the entire proposed game within the roughly two-year schedule. Rather than end the story prematurely at the close of the first disc, Takahashi proposed the narrated second-disc format as a deliberate compromise: it let the staff finish telling the complete story he wanted to tell, within the time, budget, and manpower they actually had. He has since said he believes it was the right decision.\n\nSo the narrated disc is best understood not as a failure but as a triage. Faced with a choice between a complete but truncated game and a whole story told in a compromised form, Takahashi chose to preserve the story\'s ending at the cost of its playability. The result is jarring — a game that spends its finale telling rather than showing — but it does reach a genuine conclusion, and the ambition of the material shines through even in slideshow form. The full scope of the intended narrative was later documented in the Xenogears Perfect Works book, which laid out the wider universe the game was reaching for.\n\nThe narrated second disc has become one of the medium\'s enduring production legends, a reference point whenever a game\'s scope outruns its resources. It is cited both as a cautionary tale about ambition exceeding capacity and, increasingly, as a case study in graceful compromise — the reason Xenogears has a reputation as a masterpiece with an asterisk, a game whose reach so exceeded its grasp that finishing the story at all required inventing a new, stranger way to tell it.',
+    keyFacts: [
+      'Much of Xenogears\' second disc replaces playable scenes with seated narration over a slideshow',
+      'Popularly blamed on Square running out of money and rushing the team',
+      'Director Tetsuya Takahashi said it was a deliberate compromise to finish the full story on schedule',
+      'The intended wider narrative was documented in the Xenogears Perfect Works book',
+    ],
+    sections: [
+      {
+        title: 'The Shock of the Permanent',
+        html: '<p>The jolt of Xenogears\' second disc is structural rather than emotional: a game that has spent dozens of hours as a rich, playable RPG suddenly sits its heroes down and has them recount the ending out loud. The shift is impossible to miss, and it permanently changed how the game is remembered — no discussion of Xenogears omits the narrated disc. Yet the story it tells is complete, not abandoned; the compromise preserved the ending Takahashi wanted rather than cutting it. The shock, in other words, is not that the game breaks off, but that it finishes in a form no one expected a Square RPG to take.</p>'
+      },
+      {
+        title: 'Cultural Afterlife',
+        html: '<p>The narrated disc became shorthand across the medium for a project whose ambition outran its budget and schedule, invoked for decades whenever a game\'s scope threatens to exceed its resources. But its meaning has softened over time. As Takahashi\'s account spread — that this was a chosen compromise to tell the whole story rather than a simple failure — the second disc came to be seen as a study in triage, a designer protecting the ending at the cost of the playing. Xenogears endures as a beloved near-masterpiece precisely because of, not despite, that asterisk: proof that sometimes finishing the story at all means telling it in a way the medium had never quite seen before.</p>'
+      },
+    ],
+  },
 ];

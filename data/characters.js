@@ -624,5 +624,107 @@ module.exports = [
         html: '<p>Sub-Zero and Scorpion are, in commercial terms, Mortal Kombat. They appear on the boxes, the arcade marquees, the films and the merchandise, and they have anchored the roster of every entry in the series. What makes the pairing work is that it is genuinely legible without a word of exposition: one is blue and cold and disciplined, the other is yellow and burning and driven by revenge, and their signature moves — a freeze and a spear — are perfect mechanical expressions of those temperaments.</p><p>The rivalry also gave Mortal Kombat something Street Fighter conspicuously lacked in 1992: a story that mattered inside the fights themselves. Capcom\'s roster was a tournament bracket. Midway\'s was a blood feud, and its two most iconic combatants hated each other for reasons the player could grasp from their colours alone.</p>',
       },
     ],
+  },
+  {
+    id: 'guybrush-threepwood',
+    name: 'Guybrush Threepwood',
+    franchise: 'Monkey Island',
+    platform: 'MS-DOS / Amiga (The Secret of Monkey Island)',
+    debutYear: 1990,
+    creator: 'Ron Gilbert',
+    era: '1990s',
+    role: 'Protagonist',
+    description: 'A hapless would-be pirate whose weapon is his wit, Guybrush Threepwood is the face of LucasArts\' Monkey Island games — an everyman hero who solves absurd problems with dialogue and inventory instead of a sword.',
+    longDescription: 'Guybrush Threepwood was conceived by Ron Gilbert during the 1989–1990 development of The Secret of Monkey Island at Lucasfilm Games (soon renamed LucasArts). Where pirate fiction traded in dashing, competent swashbucklers, Gilbert built the opposite: a gangly, inexperienced outsider who announces, in the game\'s most-quoted line, that he wants to be a pirate, and then bumbles his way toward it through a series of ridiculous trials. The design lineage ran back to Gilbert\'s Maniac Mansion (1987), which had established that an adventure hero could be an ordinary problem-solver relying on ingenuity and humour rather than combat — a principle Monkey Island refined into one of the funniest games ever made.\n\nEven the character\'s name is an accident of process that became canon. When the artists first drew the sprite in the Deluxe Paint graphics program, the unnamed character\'s file was saved simply as "guy" — "guy.bbm." As artist Steve Purcell worked on it with the program\'s brush tool, the filename grew into something like "guybrush.bbm," and "Guybrush" stuck. The surname "Threepwood" was chosen later in a company contest, borrowed from the Threepwood family in the comic novels of P. G. Wodehouse, whose amiable-bungler energy suited the character perfectly.\n\nAs a hero, Guybrush is defined by what he cannot do. He cannot really fight — the games famously resolve swordfights through "insult swordfighting," where victory depends on witty comebacks rather than blade skill — and he survives by talking, thinking, and combining unlikely objects. That non-violent, comedic problem-solving made him the archetype of the LucasArts adventure protagonist and a deliberate contrast to the action heroes dominating games around him. His pursuit of the pirate Elaine Marley and his rivalry with the undead LeChuck gave the series a throughline of romance and slapstick menace across its installments.\n\nGuybrush endures as a mascot for an entire style of game. The point-and-click adventure\'s golden age is inseparable from him, and his creators — Gilbert, working with Tim Schafer and Dave Grossman on the first two games — went on to shape the genre for decades. Long after the adventure game\'s commercial decline, Guybrush remained beloved enough that Gilbert, who had left LucasArts in 1992 without the rights to the character he invented, spent years wanting to return to him, finally doing so in 2022\'s Return to Monkey Island.',
+    abilities: [
+      'Insult swordfighting — winning duels with wit rather than swordsmanship',
+      'Lateral-thinking puzzle solving with an absurd inventory',
+      'Holding his breath underwater for exactly ten minutes',
+      'Surviving encounters with the undead pirate LeChuck through luck and cleverness',
+    ],
+    keyFacts: [
+      'Created by Ron Gilbert for The Secret of Monkey Island (1990) at Lucasfilm Games / LucasArts',
+      'The name came from a Deluxe Paint file, "guy.bbm," that became "guybrush.bbm"',
+      '"Threepwood" was chosen in a company contest, from P. G. Wodehouse\'s novels',
+      'The archetypal non-violent LucasArts adventure hero, solving problems by wit and dialogue',
+    ],
+    sections: [
+      {
+        title: 'Origins and Design',
+        html: '<p>Guybrush was a deliberate inversion of the pirate hero. Ron Gilbert did not want a competent swashbuckler; he wanted an inexperienced everyman who wins through wit, humour, and stubbornness, extending the ingenuity-over-combat philosophy Gilbert had established in Maniac Mansion. That choice defined not just the character but the whole tone of Monkey Island — a comedy in which the joke is often that the hero has no business being a hero at all. The famous "insult swordfighting" is the design thesis in miniature: even the game\'s duels are won with clever words rather than the sword the genre would normally hand its protagonist.</p>'
+      },
+      {
+        title: 'Cultural Legacy',
+        html: '<p>Guybrush became the mascot of the point-and-click adventure at its creative peak, and the developers who built him — Gilbert, Tim Schafer, and Dave Grossman — went on to shape the genre for a generation. He also became a symbol of a bittersweet industry reality: Gilbert created the character but left LucasArts in 1992 without owning him, and spent decades wanting to tell another Guybrush story he did not have the rights to make. When he finally returned with Return to Monkey Island in 2022, it was treated as the reunion of a creator with a character he had never stopped thinking about — a rare second act for both the hero and the man who named him after a graphics file.</p>'
+      },
+    ],
+  },
+  {
+    id: 'crash-bandicoot',
+    name: 'Crash Bandicoot',
+    franchise: 'Crash Bandicoot',
+    platform: 'PlayStation',
+    debutYear: 1996,
+    creator: 'Andy Gavin & Jason Rubin (Naughty Dog)',
+    era: '1990s',
+    role: 'Protagonist',
+    description: 'The wild-eyed marsupial Naughty Dog built to be the PlayStation\'s mascot — a spin-attacking, crate-smashing platformer hero positioned to go head-to-head with Mario and Sonic in the 32-bit era.',
+    longDescription: 'Crash Bandicoot was created by Naughty Dog founders Andy Gavin and Jason Rubin, childhood friends who had started the studio as JAM Software back in 1984. After finishing Way of the Warrior (1994), they relocated from Boston to Los Angeles to work with publisher Universal Interactive and decided their next game would be a 3D platformer that took advantage of new console power, drawing visual inspiration from the pre-rendered look of Donkey Kong Country. They built it for Sony\'s PlayStation specifically because Sony, unlike Nintendo and Sega, did not yet have a signature mascot character — a gap Crash was designed to fill.\n\nThe character came together through outside cartoonists Charles Zembillas and Joe Pearson and went through a long gestation. The lead was tentatively called "Willy the Wombat" and imagined as a goofy, Zorro-like marsupial, before the team settled on a bandicoot for the animal\'s appeal and relative obscurity. The final name, "Crash Bandicoot," was chosen while preparing for the game\'s E3 1996 unveiling — credited to team members Kurosaki and Dave Baggett — and derived from both his species and his defining habit of smashing crates. Crash himself is a mutant bandicoot given intelligence and agility by the game\'s villain, Doctor Neo Cortex, who then turns against his creator.\n\nCrash launched on 9 September 1996 and was an immediate hit, selling over a million units worldwide by the end of the year. Sony embraced him as the PlayStation\'s face, and for a few years the console-war mascot battle was genuinely three-sided: Crash had the exaggerated attitude, the memorable silhouette, and the marketing push to stand alongside Mario and Sonic. Sony even ran advertisements in which a Crash mascot taunted Nintendo outside its offices — the kind of aggressive mascot marketing that defined the era.\n\nCrash\'s status is complicated by ownership. Because Naughty Dog created him under an arrangement tied to Universal rather than owning the character outright, Crash did not follow the studio to its later work, and the franchise passed through several other developers over the years. That makes Crash a distinctive case: one of the most recognisable mascots of the 32-bit generation, created by a studio that would go on to define later console eras with entirely different games, while Crash himself carried on without them.',
+    abilities: [
+      'Spin attack that knocks away enemies and breaks crates',
+      'Body slam and slide moves',
+      'High-speed platforming and running toward or away from the camera',
+      'Wumpa-fruit collecting and Aku Aku mask protection',
+    ],
+    keyFacts: [
+      'Created by Naughty Dog (Andy Gavin & Jason Rubin) as an unofficial PlayStation mascot',
+      'Originally named "Willy the Wombat" before becoming a bandicoot; renamed for E3 1996',
+      'Debuted 9 September 1996 and sold over a million units by year\'s end',
+      'A mutant created by the series villain Doctor Neo Cortex, who then turns on him',
+    ],
+    sections: [
+      {
+        title: 'Origins and Design',
+        html: '<p>Crash was engineered to fill a specific hole in the market: the PlayStation had no mascot, and Naughty Dog set out to build one that could stand against Mario and Sonic. The design brief shows in every choice — an exaggerated, attitude-heavy marsupial with a clear silhouette and a signature move (the spin) that read instantly on screen. The long path from "Willy the Wombat" to Crash Bandicoot, with cartoonists brought in to nail the look, reflects how deliberately he was built as a brand as much as a character. Even his name fused his species with his crate-smashing gameplay, so the character and the thing you did in the game were the same idea.</p>'
+      },
+      {
+        title: 'Cultural Legacy',
+        html: '<p>For a stretch of the late 1990s, Crash made the mascot war a three-way contest, and Sony\'s marketing leaned into it hard, including ads with a Crash mascot heckling Nintendo directly. But Crash\'s legacy is also a lesson in the business of characters: Naughty Dog created him without owning him, so when the studio moved on it moved on without Crash, and the franchise passed through other hands. The result is one of gaming\'s more unusual mascot stories — a character central to defining the PlayStation\'s identity, made by a studio that became legendary for completely different work, with the marsupial and his creators going their separate ways.</p>'
+      },
+    ],
+  },
+  {
+    id: 'rayman',
+    name: 'Rayman',
+    franchise: 'Rayman',
+    platform: 'PlayStation / Atari Jaguar / Saturn',
+    debutYear: 1995,
+    creator: 'Michel Ancel',
+    era: '1990s',
+    role: 'Protagonist',
+    description: 'A limbless hero whose floating hands and feet were born from a hardware limitation, Rayman anchored Ubisoft\'s first great mascot platformer and became one of the most distinctive character designs in games.',
+    longDescription: 'Rayman was created by designer Michel Ancel, who began developing the character around 1992 as his debut as a lead designer at Ubisoft. His most recognisable feature — a body with no arms or legs, its head, hands, and feet floating unconnected — is often assumed to be a pure stylistic choice, but it originated as a technical workaround. Early in development the game struggled to render a fully-limbed character: on the target hardware there was not enough processing power to animate connecting limbs, and when the team tried, the character appeared as a floating torso with detached parts. Rather than fight the limitation, Ancel embraced it, making limblessness the character\'s defining trait.\n\nThe name has a similarly practical origin: Ancel, interested in the rendering tools of the era, named the character after a ray-tracing software Ubisoft used during the original game\'s creation. Rayman (1995) released for the PlayStation, Atari Jaguar, and Sega Saturn as a 2D platformer with lush, hand-drawn-looking art that stood out sharply in a moment when the industry was rushing toward blocky early 3D. Its visual richness and difficulty made it a showcase title, particularly on the struggling Jaguar, where it was among the platform\'s few well-regarded games.\n\nThat detached-limb design turned out to be a long-term gift rather than a compromise. Because his hands and feet float free of his body, Rayman could be animated with an expressiveness and a set of abilities — winding up a punch by spinning a fist, using his hair as a helicopter to glide — that a conventionally jointed character could not match. The constraint became a signature, giving Ubisoft a mascot with an instantly identifiable silhouette and a flexible design that adapted across 2D and later 3D games.\n\nRayman\'s commercial success was foundational for Ubisoft, contributing to the company\'s first real growth and establishing it as a maker of major platformers. The character went on to anchor a long-running series and, much later, to spawn the Rabbids spin-off phenomenon. But his enduring interest as a design is that story of accident becoming identity: one of gaming\'s most beloved character silhouettes exists because a mid-1990s console could not draw his arms.',
+    abilities: [
+      'Winding, telescoping punches thrown with detached fists',
+      'Helicopter gliding by spinning his hair',
+      'Floating, disconnected limbs allowing exaggerated animation',
+      'Precise, expressive platforming built around his free-floating hands and feet',
+    ],
+    keyFacts: [
+      'Created by Michel Ancel; debuted in Rayman (1995) on PlayStation, Jaguar, and Saturn',
+      'His limbless design began as a workaround for hardware that could not animate connecting limbs',
+      'Named after a ray-tracing software Ubisoft used during development',
+      'His success helped drive Ubisoft\'s early growth as a platformer studio',
+    ],
+    sections: [
+      {
+        title: 'Origins and Design',
+        html: '<p>Rayman is the definitive example of a constraint becoming a character. The floating hands and feet were not an art-director\'s flourish but a response to hardware that could not render animated connecting limbs — the early builds produced a torso with detached parts, and Ancel turned that failure into the design. The decision paid off beyond solving the technical problem: free-floating limbs let Rayman wind up punches, throw his fists like projectiles, and glide on his spinning hair, an expressive vocabulary a jointed character could not have. Even his name is a artefact of the tools, borrowed from the ray-tracing software used to build the game.</p>'
+      },
+      {
+        title: 'Cultural Legacy',
+        html: '<p>Rayman gave Ubisoft its first mascot and a foundational commercial success, helping fuel the studio\'s growth into one of the industry\'s largest. His silhouette — unmistakable precisely because of the missing limbs — proved durable enough to carry a long-running series across 2D and 3D, and eventually to birth the Rabbids, which grew into a phenomenon of their own. More than the sales, though, Rayman endures as a favourite designer\'s tale: proof that some of the most memorable characters in games came not from a blank-cheque vision but from a team making the best of what the machine could actually do.</p>'
+      },
+    ],
   }
 ];
