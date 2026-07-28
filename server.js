@@ -13,9 +13,31 @@ const PORT = 3000;
 // SITE_URL when serving from a custom domain.
 const SITE_URL = (process.env.SITE_URL || 'https://bosnan.vercel.app').replace(/\/+$/, '');
 const SITE_NAME = 'Bosnan Retro Games Archive';
-// Bump when content meaningfully changes; a per-request "today" lastmod
-// teaches crawlers to ignore the field entirely.
-const SITE_LASTMOD = '2026-06-13';
+// Derived from the newest data file's mtime, so it moves only when content
+// actually changes — a per-request "today" lastmod teaches crawlers to ignore
+// the field entirely, and a hardcoded date goes stale the moment data lands.
+// Override with SITE_LASTMOD when the build environment flattens mtimes.
+const SITE_LASTMOD = (() => {
+  if (process.env.SITE_LASTMOD) return process.env.SITE_LASTMOD;
+  const dataDir = path.join(__dirname, 'data');
+  let newest = 0;
+  try {
+    for (const f of fs.readdirSync(dataDir)) {
+      const m = fs.statSync(path.join(dataDir, f)).mtimeMs;
+      if (m > newest) newest = m;
+    }
+  } catch { /* fall through to today */ }
+  return new Date(Math.min(newest || Date.now(), Date.now())).toISOString().slice(0, 10);
+})();
+
+// The publishing entity, reused as the `publisher` of every Article node and
+// emitted standalone on the homepage so the archive resolves to one identity.
+const ORG_SCHEMA = {
+  '@type': 'Organization',
+  name: SITE_NAME,
+  url: `${SITE_URL}/`,
+  logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.svg` },
+};
 
 // ── Retro news RSS fetcher ───────────────────────────────────────────────────
 
@@ -273,7 +295,9 @@ function relatedBlock(item) {
   ).join('');
   return `<div class="related-entries"><h2>Related across the archive</h2><div class="related-entries-grid">${links}</div></div>`;
 }
-function sourcesBlock(item) {
+// skipSchema: the caller emits its own richer Article node and folds the
+// citations into it, so we must not emit a second competing Article.
+function sourcesBlock(item, skipSchema) {
   const src = item && (item.sources || item.references);
   if (!Array.isArray(src) || !src.length) return '';
   const items = src.map(s => {
@@ -284,7 +308,18 @@ function sourcesBlock(item) {
       ? `<li><a href="${escapeHtml(s.url)}" target="_blank" rel="noopener nofollow">${title}</a>${pub}</li>`
       : `<li>${title}${pub}</li>`;
   }).join('');
-  return `<div class="entry-sources"><h2>Sources &amp; further reading</h2><ul class="entry-sources-list">${items}</ul></div>${sourcesSchema(item, src)}`;
+  return `<div class="entry-sources"><h2>Sources &amp; further reading</h2><ul class="entry-sources-list">${items}</ul></div>${skipSchema ? '' : sourcesSchema(item, src)}`;
+}
+
+// The citation array on its own, for callers building their own Article node.
+function citationList(item) {
+  const src = (item && (item.sources || item.references)) || [];
+  return src.map(s => {
+    if (typeof s === 'string' || !s.url) return null;
+    const c = { '@type': 'CreativeWork', name: s.title || s.url, url: s.url };
+    if (s.publisher) c.publisher = { '@type': 'Organization', name: s.publisher };
+    return c;
+  }).filter(Boolean);
 }
 // Emit schema.org citations for any entry that carries sources, so the
 // references render as machine-readable structured data. Injected alongside
@@ -308,6 +343,41 @@ function sourcesSchema(item, src) {
   return `<script type="application/ld+json">${json}</script>`;
 }
 
+// Breadcrumbs: one trail definition drives both the JSON-LD BreadcrumbList
+// (SERP breadcrumb display) and the visible nav. Trail entries are
+// { name, path }; the last one is the current page and is not linked.
+function breadcrumbSchema(trail) {
+  const json = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: trail.map((c, i) => ({
+      '@type': 'ListItem', position: i + 1, name: c.name, item: SITE_URL + c.path,
+    })),
+  }).replace(/</g, '\\u003c');
+  return `<script type="application/ld+json">${json}</script>`;
+}
+function crumbsNav(trail) {
+  const parts = trail.map((c, i) => i === trail.length - 1
+    ? `<span aria-current="page">${escapeHtml(c.name)}</span>`
+    : `<a href="${c.path}">${escapeHtml(c.name)}</a>`);
+  return `<nav class="crumbs" aria-label="Breadcrumb">${parts.join(' &rsaquo; ')}</nav>`;
+}
+
+// Trim to a meta-description length on a word boundary, so snippets don't end
+// mid-word (or mid-HTML-entity, which would render as literal "&amp" garbage).
+function metaDesc(s, max = 160) {
+  const text = String(s == null ? '' : s).replace(/\s+/g, ' ').trim();
+  if (text.length <= max) return escapeHtml(text);
+  const cut = text.slice(0, max - 1);
+  const sp = cut.lastIndexOf(' ');
+  return escapeHtml((sp > max * 0.6 ? cut.slice(0, sp) : cut).replace(/[\s,;:.\-]+$/, '')) + '&#8230;';
+}
+
+function hasSources(item) {
+  const src = item && (item.sources || item.references);
+  return Array.isArray(src) && src.length > 0;
+}
+
 // Shared renderer for the "platform-detail" entry family — pages that share an
 // identical skeleton and differ only in nav slug, back link, title suffix, the
 // header name, the meta line, and an optional extra paragraph. o.meta and
@@ -316,7 +386,28 @@ function detailPage(item, o) {
   const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
   const sections = (item.sections || []).map(s => `<h2>${escapeHtml(s.title)}</h2>${s.html}`).join('');
   const name = escapeHtml(o.name);
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${name} – ${o.suffix} – Bosnan</title><meta name="description" content="${escapeHtml(item.description.substring(0, 160))}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav(o.nav)}<div class="platform-detail-wrapper"><a href="/${o.slug}" class="back-link">&#8592; ${o.backLabel}</a><div class="platform-detail-header"><h1>${name}</h1><p class="platform-detail-era">${o.meta}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${o.extra || ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  const url = `${SITE_URL}/${o.slug}/${item.id}`;
+  const trail = [
+    { name: 'Home', path: '/' },
+    { name: o.suffix, path: `/${o.slug}` },
+    { name: o.name, path: `/${o.slug}/${item.id}` },
+  ];
+  // One Article node per page, carrying citations when the entry has sources
+  // (which is why sourcesBlock is told to suppress its own schema below).
+  const citations = citationList(item);
+  const article = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: o.name,
+    description: item.description,
+    url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    isPartOf: { '@type': 'CollectionPage', name: o.suffix, url: `${SITE_URL}/${o.slug}` },
+    publisher: ORG_SCHEMA,
+  };
+  if (citations.length) article.citation = citations;
+  const articleJson = JSON.stringify(article).replace(/</g, '\\u003c');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${name} – ${o.suffix} – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><meta property="og:type" content="article"><link rel="canonical" href="${url}"><script type="application/ld+json">${articleJson}</script>${breadcrumbSchema(trail)}<style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav(o.nav)}<div class="platform-detail-wrapper">${crumbsNav(trail)}<a href="/${o.slug}" class="back-link">&#8592; ${o.backLabel}</a><div class="platform-detail-header"><h1>${name}</h1><p class="platform-detail-era">${o.meta}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${o.extra || ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div><div class="platform-long-desc essay-body">${sections}</div>${sourcesBlock(item, true)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
 }
 
 const PLATFORMS = [
@@ -1580,7 +1671,19 @@ app.get('/sitemap.xml', (req, res) => {
 
 app.get('/robots.txt', (req, res) => {
   res.type('text/plain');
-  res.send(`User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+  // Keep crawl budget on the ~1,900 content URLs: /search and /compare are
+  // unbounded query-string spaces, /random is a redirect, /api returns JSON.
+  res.send([
+    'User-agent: *',
+    'Allow: /',
+    'Disallow: /search',
+    'Disallow: /compare?',
+    'Disallow: /random',
+    'Disallow: /api/',
+    '',
+    `Sitemap: ${SITE_URL}/sitemap.xml`,
+    '',
+  ].join('\n'));
 });
 
 app.get('/random', (req, res) => {
@@ -2791,7 +2894,9 @@ function homepagePage(gotd) {
       target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/search?q={search_term_string}` },
       'query-input': 'required name=search_term_string',
     },
+    publisher: ORG_SCHEMA,
   });
+  const orgSchema = JSON.stringify({ '@context': 'https://schema.org', ...ORG_SCHEMA });
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -2801,6 +2906,7 @@ function homepagePage(gotd) {
     <title>Bosnan – Retro Games Archive: ${games.length}+ Classic Games of the 1960s–80s</title>
     <meta name="description" content="Bosnan – explore legendary retro games from the 1960s, 1970s, and 1980s. Browse ${games.length}+ games across Arcade, NES, Atari, C64, and more, plus essays, soundtracks, hardware, and gaming history.">
     <script type="application/ld+json">${websiteSchema}</script>
+    <script type="application/ld+json">${orgSchema}</script>
     ${cssHead()}
 </head>
 <body>
@@ -4746,7 +4852,7 @@ function comparePage(a, b) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compare Platforms – Bosnan</title>
     <meta name="description" content="Compare any two retro gaming platforms side by side — specs, era, and games in the archive.">
-    ${cssHead()}
+    ${a || b ? '<meta name="robots" content="noindex, follow">\n    ' : ''}${cssHead()}
 </head>
 <body>
 ${bgLogo()}
@@ -4840,6 +4946,7 @@ function searchPage(q) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${q ? escapeHtml(q) + ' – ' : ''}Search – Bosnan</title>
     <meta name="description" content="Search the Bosnan retro games archive.">
+    <meta name="robots" content="noindex, follow">
     ${cssHead()}
 </head>
 <body>
