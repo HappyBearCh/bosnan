@@ -490,4 +490,88 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'the-messenger',
+    title: 'The Messenger',
+    platform: 'PC, Nintendo Switch, PlayStation 4, Xbox One',
+    year: 2018,
+    developer: 'Sabotage Studio',
+    inspiredBy: 'Ninja Gaiden, Castlevania, Super Metroid',
+    era: '2010s',
+    description: 'A Ninja Gaiden homage that switches from 8-bit to 16-bit graphics partway through — and uses the switch as a time-travel mechanic rather than a cosmetic upgrade.',
+    longDescription: 'Sabotage Studio\'s debut opens as an unusually faithful reconstruction of a specific game: the NES Ninja Gaiden trilogy, right down to the wall-clinging, the linear stage structure, the cliff-hanging cutscene rhythm and the punishing knockback. It is a competent version of that, and for its first half it appears to be nothing more — a well-made tribute in the mode the retro revival had already established.\n\nThen it stops being that. Roughly halfway through, the game transitions from an 8-bit presentation to a 16-bit one, and the transition is not a flourish: it is the story\'s central device. The visual eras correspond to two points in time five hundred years apart, and the player travels between them by passing through portals, with the graphics, music and level layouts changing accordingly. At the same moment the structure changes too — the linear stage-by-stage progression of the first half becomes a connected, backtracking Metroidvania map, and the levels the player has already completed are reopened as a single explorable world with the second timeline layered over it.\n\nThe result reframes everything preceding it. The first half is not an homage to Ninja Gaiden that the game grows out of; it is the setup for a joke about how console generations were actually experienced, in which the leap from 8-bit to 16-bit is treated as a literal historical event that characters lived through and can travel across. The Messenger won Best Debut Indie Game at The Game Awards 2018.',
+    keyFacts: [
+      'Debut title from Sabotage Studio, released in 2018',
+      'Begins as a linear 8-bit action platformer modelled closely on the NES Ninja Gaiden games',
+      'Shifts to 16-bit visuals partway through as a time-travel mechanic, not a cosmetic change',
+      'Converts from linear stages to a connected Metroidvania map at the same transition',
+      'Won Best Debut Indie Game at The Game Awards 2018',
+    ],
+    sections: [
+      {
+        title: 'The Generation Gap as a Game Mechanic',
+        html: '<p>Almost every retro revival picks an era and commits to it. Shovel Knight builds an elaborate ruleset around NES limitations; Sonic Mania reconstructs the Mega Drive. The choice is treated as a fixed property of the work, the way a film chooses to be black and white. The Messenger treats it as a variable, and once it is a variable it can carry meaning.</p><p>Making 8-bit and 16-bit into two ends of a time-travel mechanic works because it matches how the transition was actually lived. For anyone who was there, the arrival of 16-bit hardware genuinely was an event with a before and an after — the same franchises, the same genres, rendered suddenly in more colours and more sound, and the older versions still sitting on the shelf. The game literalises that. Passing through a portal does not upgrade the world; it moves you five centuries forward into a version of the same place, and the fidelity of the graphics is the evidence of when you are.</p>'
+      },
+      {
+        title: 'Withholding the Structure',
+        html: '<p>The genre switch is the riskier half of the design. Sabotage spends its entire first act training the player in a linear action platformer — commit to the route, clear the stage, never look back — and then removes that contract, reopens every completed area and asks for the opposite behaviour. A game that announced itself as a Metroidvania would have had the player mapping and hoarding from the first screen. By concealing it, the studio ensures the first half is played the way an actual Ninja Gaiden is played, which is what makes the reveal land.</p><p>This is a difficult trick to justify commercially, because it means the first several hours misrepresent the product, and a player who bounces off a linear action platformer never reaches the game they might have preferred. Sabotage accepted that cost, and the reception suggests it was the right call: the mid-game turn is the thing almost every account of The Messenger is organised around. It is also the clearest demonstration available that retro pastiche can be structural rather than decorative — that the recognisable surface of an old game can be set up in order to be broken, and that breaking it can say something the surface alone could not.</p>'
+      },
+    ],
+  },
+  {
+    id: 'owlboy',
+    title: 'Owlboy',
+    platform: 'PC, Nintendo Switch, PlayStation 4, Xbox One',
+    year: 2016,
+    developer: 'D-Pad Studio',
+    inspiredBy: 'Super Metroid, The Legend of Zelda: A Link to the Past, 16-bit sprite art',
+    era: '2010s',
+    description: 'Nine years in development for a small Norwegian team, producing pixel art detailed enough that the delay became the game\'s defining fact.',
+    longDescription: 'D-Pad Studio began Owlboy in 2007 and released it in November 2016. The nine-year gap is the first thing said about the game in nearly every account of it, and for good reason: it is an extreme case of what happens when a small team commits to hand-crafted pixel art at a level of detail the 16-bit era never actually achieved, and then refuses to lower the standard as the years pass.\n\nThe art is the argument. Owlboy\'s sprites carry more frames, more colours and more incidental animation than the hardware it evokes could have driven, and the backgrounds are painted with a depth of parallax that reads as a 16-bit game imagined rather than reproduced. This is a different proposition from Shovel Knight\'s disciplined adherence to NES constraints — Owlboy is not simulating a machine, it is rendering the way those machines are remembered, which is always more vivid than what they output.\n\nThe game underneath is a flight-based action adventure. Otus, a mute owl, cannot fight directly; he carries companions, each with a different weapon, and swaps between them, so combat is a matter of ferrying the right ally into position. The story is built around Otus\'s inability to speak and his standing as a disappointment to those around him, and it is unusually willing to sit with that rather than resolve it early.',
+    keyFacts: [
+      'Development ran from 2007 to its November 2016 release — roughly nine years',
+      'Made by D-Pad Studio, a small Norwegian team',
+      'Sprite work exceeds what 16-bit hardware could actually have rendered',
+      'Otus cannot attack; the player carries and swaps companions who fight on his behalf',
+      'The protagonist is mute, and the narrative is built around that rather than around a quest',
+    ],
+    sections: [
+      {
+        title: 'What Nine Years Buys',
+        html: '<p>The long development is usually reported as a hardship story, and it was one — D-Pad Studio spent most of a decade on a game with no guarantee of an audience, through a period in which the indie market went from barely existing to saturated. But the duration is also legible in the finished product in a way that most delayed games\' is not. Hand-animated pixel art scales linearly with time: there is no technique that makes a frame cheaper, and the only way to get more of them is for someone to draw more of them. Nine years of that is visible on screen.</p><p>The trap is that the art outpaced everything else. Owlboy is frequently described as a game whose visuals are ahead of its design, and the criticism has substance — the carry-and-swap combat is a good idea that the game does not push especially hard, and the pacing shows the seams of a project reworked repeatedly across a decade. That gap is itself instructive about the retro revival\'s economics. Sprite art is the most labour-intensive and most immediately impressive part of these games, which makes it the easiest thing for a small team to over-invest in relative to the systems it wraps.</p>'
+      },
+      {
+        title: 'Remembering Rather Than Reconstructing',
+        html: '<p>Owlboy belongs to a distinct strand of the revival. Mega Man 9 and Shovel Knight work under self-imposed hardware rules, and part of their pleasure is verifying that the rules held. Owlboy accepts no such constraint. Its colour counts, sprite sizes and animation budgets would have been impossible on a Super Nintendo, and the game is uninterested in pretending otherwise.</p><p>What it reproduces instead is the impression those games left. Nobody remembers a 16-bit adventure as a limited palette and a tight sprite budget; they remember it as expansive, painterly and full of movement, because memory fills in what the hardware could not draw. Owlboy renders the memory directly, and that is why it looks simultaneously period-accurate and impossible — it is faithful to an experience rather than to a specification. The approach has become common since, but Owlboy spent nine years arriving at it, and got there before most of the games that made it standard.</p>'
+      },
+    ],
+  },
+  {
+    id: 'fez',
+    title: 'Fez',
+    platform: 'Xbox 360, PC, PlayStation 3, PlayStation Vita, Nintendo Switch',
+    year: 2012,
+    developer: 'Polytron Corporation',
+    inspiredBy: 'NES-era platformers, Super Mario Bros., 8-bit tile art',
+    era: '2010s',
+    description: 'A flat 8-bit platformer set in a world that is secretly three-dimensional — the player rotates the camera ninety degrees at a time and the geometry rearranges to match.',
+    longDescription: 'Fez presents itself as a 2D platformer in a chunky, pixel-tiled world, and then gives the player a single unusual verb: rotate the entire world ninety degrees around a vertical axis. The environment is genuinely three-dimensional, but it is drawn and played from fixed orthographic angles, so each rotation produces a different flat arrangement of the same solid space. Ledges that were separated become adjacent; gaps close because two platforms line up when viewed from the side.\n\nThe conceit is that the protagonist, Gomez, lives in a world he believes is two-dimensional and discovers a third. This is a joke about the medium\'s own history — the 8-bit to 3D transition experienced from inside the sprite — and it is also a rigorous puzzle mechanic, since the player must reason about a solid structure while only ever seeing four flat projections of it.\n\nDevelopment ran roughly five years and was troubled and unusually public, documented in the film Indie Game: The Movie alongside Super Meat Boy. Fez won the Seumas McNally Grand Prize at the 2012 Independent Games Festival, having previously taken the festival\'s Excellence in Visual Art award as a work in progress.',
+    keyFacts: [
+      'Developed by Polytron over roughly five years, released on Xbox 360 in 2012',
+      'The world is fully 3D but is only ever viewed from four fixed orthographic angles',
+      'Rotating the world ninety degrees rearranges which platforms connect',
+      'Documented during development in the film Indie Game: The Movie',
+      'Won the Seumas McNally Grand Prize at the 2012 Independent Games Festival',
+    ],
+    sections: [
+      {
+        title: 'The Joke Is the Mechanic',
+        html: '<p>Fez\'s premise reads as a piece of criticism before it reads as a game. The medium\'s defining upheaval was the move from sprites to polygons, an event that made every existing game look suddenly historical, and Fez restages it as something that happens to a character. Gomez does not upgrade to 3D; he finds out that the flatness he has lived in was always a projection of something larger, which is precisely the relationship between a 2D platformer and the space it implies.</p><p>What keeps this from being merely clever is that the mechanic is load-bearing. Because the player only sees orthographic projections, two objects at different depths appear to touch, and the game lets them touch — a jump that should fail in solid space succeeds because from this angle the platforms are adjacent. The player therefore has to hold a mental model of a 3D structure while acting on 2D evidence, and the puzzles are built on the gap between those. The conceptual gag and the puzzle design are the same object.</p>'
+      },
+      {
+        title: 'Depth Underneath the Surface',
+        html: '<p>The platforming is deliberately undemanding — Gomez cannot die from enemies, and falls simply return him to a ledge — because execution is not what the game is testing. The difficulty lives in a second layer that the game never announces: a constructed writing system, a numeral system, and a set of puzzles encoded in glyphs, QR codes and environmental patterns that require the player to decipher rather than perform. Much of this was solved collectively rather than individually, by players pooling findings.</p><p>That structure has become one of Fez\'s more durable influences. A generation of games since have adopted the same shape — a gentle, welcoming surface concealing a cryptographic layer intended to be worked out by a community over weeks — and Fez established the template on which they operate. It is also why the game sits oddly within the retro revival. Its 8-bit surface is not nostalgia and not homage; it is a disguise, chosen because a world that looks simple and known is the most effective place to hide a world that is neither.</p>'
+      },
+    ],
+  },
 ];

@@ -1817,9 +1817,16 @@ app.get('/sitemap.xml', (req, res) => {
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>`).join('');
+    const salesFigureUrls = SALES_FIGURES.map(s => `
+  <url>
+    <loc>${base}/sales-figures/${s.id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`).join('');
     cachedSitemap = {
       xml: `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${designerUrls}${publisherUrls}${arcadeBoardUrls}${peripheralUrls}${lostGameUrls}${regionalUrls}${genreUrls}${essayUrls}${yearUrls}${decadeUrls}${magazineUrls}${boxArtUrls}${portUrls}${voiceActorUrls}${pixelArtistUrls}${producerUrls}${collectionUrls}${controversyUrls}${failedConsoleUrls}${gameEngineUrls}${soundChipUrls}${easterEggUrls}${cheatCodeUrls}${sequelUrls}${romHackUrls}${adCampaignUrls}${speedrunUrls}${criticUrls}${cancelledUrls}${localizationUrls}${prototypeUrls}${strategyGuideUrls}${cabinetArtUrls}${merchandiseUrls}${bootlegUrls}${competitiveUrls}${endingUrls}${bossfightUrls}${soundtrackUrls}${manualUrls}${difficultyUrls}${characterUrls}${coverStoryUrls}${controllerUrls}${disappointmentUrls}${levelUrls}${urbanLegendUrls}${glitchUrls}${packagingUrls}${multiplayerUrls}${comicUrls}${studioUrls}${importUrls}${speedrunTechUrls}${famousBugUrls}${retroRevivalUrls}${soundEffectUrls}${gameUrls}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${designerUrls}${publisherUrls}${arcadeBoardUrls}${peripheralUrls}${lostGameUrls}${regionalUrls}${genreUrls}${essayUrls}${yearUrls}${decadeUrls}${magazineUrls}${boxArtUrls}${portUrls}${voiceActorUrls}${pixelArtistUrls}${producerUrls}${collectionUrls}${controversyUrls}${failedConsoleUrls}${gameEngineUrls}${soundChipUrls}${easterEggUrls}${cheatCodeUrls}${sequelUrls}${romHackUrls}${adCampaignUrls}${speedrunUrls}${criticUrls}${cancelledUrls}${localizationUrls}${prototypeUrls}${strategyGuideUrls}${cabinetArtUrls}${merchandiseUrls}${bootlegUrls}${competitiveUrls}${endingUrls}${bossfightUrls}${soundtrackUrls}${manualUrls}${difficultyUrls}${characterUrls}${coverStoryUrls}${controllerUrls}${disappointmentUrls}${levelUrls}${urbanLegendUrls}${glitchUrls}${packagingUrls}${multiplayerUrls}${comicUrls}${studioUrls}${importUrls}${speedrunTechUrls}${famousBugUrls}${retroRevivalUrls}${soundEffectUrls}${salesFigureUrls}${gameUrls}
 </urlset>`,
     };
   }

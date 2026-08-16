@@ -425,4 +425,76 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'panel-de-pon-tetris-attack',
+    title: 'The Puzzle Game the West Knew as Tetris Attack Has Nothing To Do With Tetris',
+    subtitle: 'Nintendo replaced an entire original cast with Yoshi\'s Island characters and borrowed the name of an unrelated game — and the version that actually existed stayed unreleased in the West for twenty-seven years',
+    game: 'Panel de Pon / Tetris Attack',
+    region1: 'Japan',
+    region2: 'North America',
+    readTime: '6 min read',
+    summary: 'Intelligent Systems released Panel de Pon for the Super Famicom in 1995: a block-matching puzzle game starring a cast of fairies, with its own world and its own characters. When Nintendo brought it West in 1996 it removed every one of them, dropped in the cast of Yoshi\'s Island, and titled the result Tetris Attack — a name belonging to a completely different game, with completely different rules, made by completely different people.',
+    sections: [
+      {
+        title: 'A Cast Removed Wholesale',
+        html: '<p>Panel de Pon is not a Tetris variant. The player swaps adjacent blocks horizontally on a rising stack and clears them by forming lines of three or more, which is a different problem from fitting falling tetrominoes together — it rewards setting up chain reactions that resolve after the fact rather than planning a descent. Intelligent Systems built it as an original property with an original cast: fairies, each with a name and a home, presided over by Lip, a flower fairy who carried a wand and served as the game\'s lead.</p><p>None of them reached the West. For the 1996 Super NES release Nintendo removed the fairies entirely and substituted characters from Yoshi\'s Island — Yoshi, Baby Mario, Poochy, Lakitu, Bowser, Kamek and the rest — reskinning the versus mode\'s opponents and the story sequences around them. This is a more total intervention than the localisation changes the era is usually remembered for. Censorship removes content from a work; translation renegotiates it. Here the mechanical game was left intact and everything else about it was discarded, on the reasoning that a puzzle game arrives in a market on the strength of who is on the box.</p>'
+      },
+      {
+        title: 'Borrowing a Name That Did Not Fit',
+        html: '<p>The title compounded the substitution. Tetris was the most recognisable name in puzzle games, carrying the Game Boy pack-in that had sold the handheld to adults, and Nintendo held the console rights to it. Attaching it to Panel de Pon bought instant shelf recognition for a game nobody had heard of. It also told every purchaser something false about what they were buying, because the one thing Tetris Attack does not do is anything Tetris does. There are no tetrominoes, nothing falls, and the core verb is a sideways swap.</p><p>The pattern repeated rather than being corrected. The same engine returned as Pokémon Puzzle League on the Nintendo 64 in 1999 and Pokémon Puzzle Challenge on the Game Boy Color in 2000, each time wearing whichever licence was commercially useful at that moment. The West therefore met this game three times without ever being told it had a name of its own, and later entries settled on the generic Puzzle League branding — a title that identifies the genre and nothing else.</p>'
+      },
+      {
+        title: 'The Franchise Nobody Was Told About',
+        html: '<p>The consequence was a Nintendo property that was invisible in the territory where it sold best. Lip surfaced in the West as a curiosity rather than a character: Lip\'s Stick, her wand, appears as an item in Super Smash Bros. Melee, a flower-topped weapon that pokes an ever-growing flower onto an opponent\'s head. Western players encountered it as a joke item with no referent. It is a reference to a lead character in a game they had played, drawn from a version they had never been allowed to see.</p><p>Panel de Pon in its original form was finally released internationally in 2022, on the Super Nintendo library of Nintendo Switch Online — twenty-seven years after the Super Famicom release, and twenty-six after the West had first played the same software with different sprites on it. What this case demonstrates is a kind of regional divergence distinct from censorship or translation: not a work altered to pass local standards, but a work whose entire identity was treated as a marketing variable, swapped out per territory for whatever brand was expected to shift more units. The rules survived every crossing. Everything that made it a particular game did not.</p>'
+      },
+    ],
+  },
+  {
+    id: 'streets-of-rage-3-bare-knuckle-iii',
+    title: 'Streets of Rage 3 Is a Harder, Blanker Game Than Bare Knuckle III',
+    subtitle: 'Sega of America raised the difficulty, rewrote the plot, recoloured a lead and deleted a boss — turning the series\' most ambitious entry into its most poorly received',
+    game: 'Bare Knuckle III / Streets of Rage 3',
+    region1: 'Japan',
+    region2: 'North America',
+    readTime: '7 min read',
+    summary: 'Bare Knuckle III shipped in Japan in 1994 as the most mechanically ambitious beat-em-up Sega had made. The Western release later that year kept the engine and altered nearly everything around it: the difficulty was pushed up so far that the Japanese normal setting corresponds roughly to the Western easy, the story was rewritten, Blaze was recoloured, and a boss was removed outright. The Western version is the one that damaged the series\' reputation.',
+    sections: [
+      {
+        title: 'Difficulty as an Export Policy',
+        html: '<p>The most consequential change is the one least visible on a screenshot. Bare Knuckle III\'s difficulty curve was recalibrated upward for the Western release, to the extent that the settings no longer line up between versions — the Japanese normal setting corresponds to something closer to the Western easy. Worse, the Western release gates its own ending behind that curve: play on the lower difficulties and the game stops short rather than letting you reach its final stages.</p><p>The reasoning was economic and standard for the period. Console games in the West sold heavily into a rental market, and a game finishable in an evening was a rental rather than a purchase. Inflating difficulty was the cheapest available lever — it required no new content, only a change to enemy health, damage and continue allowances. The cost was borne by the design. Streets of Rage 3 is a beat-em-up with a genuinely deep move set, a dash, a rolling dodge and per-character special systems, and it punishes the player hard enough that most never get far enough to use them. A generous game about learning a fighting vocabulary was converted into an unforgiving one about surviving the next room.</p>'
+      },
+      {
+        title: 'Rewriting Around the Engine',
+        html: '<p>The presentation changes ran in the same direction. Bare Knuckle III\'s plot concerns a syndicate substituting doubles for public officials — a conspiracy premise that gives the escalating stages a reason to exist. The Western script reworks this into a broader terrorist-bomb framing, and in the process most of what made the narrative track coherent is flattened into stage-to-stage justification. Blaze Fielding\'s outfit was recoloured. Character portraits and box presentation were restyled for the Western market, giving the cast a harder, more generic look than the Japanese art.</p><p>One change was a deletion. Ash, a stereotypically camp biker mini-boss in the Japanese version, was removed from the Western releases entirely. He is not toned down or redrawn — the character is cut, which in a genre where every enemy is a fight means an encounter simply ceases to exist. This was consistent with the content standards Western publishers applied at the time, and it is a clean example of how those standards operated: not as negotiation over how a character should be depicted, but as removal.</p>'
+      },
+      {
+        title: 'The Version That Set the Verdict',
+        html: '<p>What survived every change was Yuzo Koshiro\'s score, which is the part of the game history has been kindest to. Working with Motohiro Kawashima, Koshiro pushed the Mega Drive\'s sound hardware toward harsh, fast, semi-randomised material well outside what the series had done before, and the result divided players at the time in a way the earlier soundtracks had not. It is now widely regarded as the most adventurous music on the platform.</p><p>The rest of the reputation is the Western build\'s. Streets of Rage 2 is remembered as the series\' peak and Streets of Rage 3 as the disappointing follow-up, and that judgement was formed by players outside Japan working with a version tuned to resist them, told a story that had been rewritten, and shown a cast that had been altered. Bare Knuckle III is the same engine with its calibration intact, and it plays as the natural extension of the second game rather than a decline from it. The series went dormant for twenty-six years on the strength of a verdict delivered on the modified version — and when Streets of Rage 4 arrived in 2020, part of the work of its reception was the retrospective rehabilitation of a game most of its audience had never actually played.</p>'
+      },
+    ],
+  },
+  {
+    id: 'kirby-box-art-eyebrows',
+    title: 'Kirby Has Been Angry in America and Cheerful in Japan for Thirty Years',
+    subtitle: 'It started with a monochrome handheld that could not show he was pink, and hardened into a deliberate, permanent split in how one character is sold in two territories',
+    game: 'Kirby\'s Dream Land and the Kirby series',
+    region1: 'Japan',
+    region2: 'North America',
+    readTime: '6 min read',
+    summary: 'The North American box for Kirby\'s Dream Land in 1992 depicted its hero as a pale, ghostly white blob, because the Game Boy screen was monochrome and nothing in the game said otherwise. The colour was corrected. The divergence it started was not: for three decades, Nintendo of America has systematically given Kirby a determined scowl on cover art where the Japanese release gives him a smile.',
+    sections: [
+      {
+        title: 'A Console That Could Not Show the Colour',
+        html: '<p>Kirby\'s Dream Land shipped on the Game Boy in 1992, and the Game Boy displayed four shades of grey-green. Kirby is a plain round shape with no texture and no detailing; on that screen he is a light grey circle, and there is no information anywhere in the running game to indicate what colour he is supposed to be. HAL Laboratory knew — Masahiro Sakurai has been consistent that Kirby was pink from the start — but the North American box art was produced without that knowledge reaching it, and it renders him a pale, faintly spectral white.</p><p>This is a mundane pipeline failure rather than a decision, and it is the kind of thing that only becomes visible in hindsight, once colour hardware exists to contradict it. Kirby\'s Adventure on the NES in 1993 made him pink on screen, and the packaging followed. The white Kirby survives now as a collector\'s footnote and as the first instance of a pattern that would not stay accidental.</p>'
+      },
+      {
+        title: 'The Deliberate Split',
+        html: '<p>From the 2000s onward the two territories\' cover art stops agreeing about what expression Kirby has. Japanese packaging keeps the default: mouth open, eyes wide, unambiguously delighted. North American packaging repeatedly gives him narrowed eyes and angled brows — a determined glare on a character with no brow ridge to put them on. It recurs across releases, and it is not an artist\'s drift, because it goes one direction only and it goes there every time.</p><p>Nintendo has addressed it directly. In interviews around 2014, series director Shinya Kumazaki and Nintendo of America localisation staff described the divergence as intentional and explained the reasoning on both sides: the Japanese art aims at the broadest possible family audience, for whom an approachable, cute Kirby is the draw, while the American art targets an older core player understood to respond to a character who looks like a fighter. Both are read as accurate assessments of their own market. The company simply concluded that the same image would not do both jobs.</p>'
+      },
+      {
+        title: 'What the Split Concedes',
+        html: '<p>The interesting part is the premise. Kirby games are not, mechanically, tough games — they are famously forgiving, generous with health, built to be finishable by young players, and their difficulty lives in optional content. The angry face is therefore not describing the product. It is a defensive measure against a market believed to reject cuteness on sight, applied to a game whose entire appeal is cuteness, in the hope of getting it past a buyer who would otherwise not pick the box up.</p><p>That makes this a different category of regional difference from the ones that usually get discussed. Nothing is censored and nothing is translated; the software is identical in both territories, and a player who buys either version gets the same game. What differs is only the claim the packaging makes about it — and the American claim is one the game then declines to honour. Three decades of scowling Kirby covers amount to a standing admission by Nintendo of America that it does not believe it can sell what it is actually selling.</p>'
+      },
+    ],
+  },
 ];
