@@ -425,6 +425,26 @@ function metaDesc(s, max = 160) {
   return escapeHtml((sp > max * 0.6 ? cut.slice(0, sp) : cut).replace(/[\s,;:.\-]+$/, '')) + '&#8230;';
 }
 
+// Meta description for a games listing page (a year, a decade). The old
+// template read "1 games from 1952 in the Bosnan retro archive." — wrong
+// plural, and thin enough that Google would rather invent its own snippet.
+// Naming the first few titles gives the snippet something specific to show
+// and lifts these pages clear of the boilerplate-description threshold.
+function listingDesc(games, phrase) {
+  const list = Array.isArray(games) ? games : [];
+  const n = list.length;
+  const site = 'the Bosnan retro gaming archive';
+  if (!n) return `Games ${phrase} in ${site} — browse the full archive by platform, genre, developer and year.`;
+  const titles = list.slice(0, 3).map(g => g.title).filter(Boolean);
+  const named = titles.length > 1
+    ? `${titles.slice(0, -1).join(', ')} and ${titles[titles.length - 1]}`
+    : titles[0];
+  const lead = `${n} ${n === 1 ? 'game' : 'games'} ${phrase}`;
+  return named
+    ? `${lead}, including ${named} — with platforms, developers and release history from ${site}.`
+    : `${lead}, with platforms, developers and release history from ${site}.`;
+}
+
 function hasSources(item) {
   const src = item && (item.sources || item.references);
   return Array.isArray(src) && src.length > 0;
@@ -1049,6 +1069,18 @@ app.use((req, res, next) => {
   next();
 });
 
+// Schema types that count as a page's *primary* node. Deliberately excludes
+// Organization and ImageObject: those appear inside the `publisher` of every
+// node on the site, so matching them would report every page as already
+// covered. CollectionPage/ItemList are included because a listing page that
+// already describes itself does not also need an Article.
+const PRIMARY_SCHEMA = /"@type":"(?:Article|NewsArticle|BlogPosting|VideoGame|VideoGameSeries|Person|Product|Book|Movie|SoftwareApplication|ItemList|CollectionPage)"/;
+
+// Sections whose entry pages are game listings rather than written entries —
+// /years/1984 and /decades/1980s are indexes of cards with no prose, so they
+// describe themselves as a CollectionPage instead of an Article.
+const LISTING_ENTRY_SECTIONS = new Set(['years', 'decades']);
+
 // Structured data for the ~900 pages whose templates predate the schema work:
 // a BreadcrumbList for anything under a known section, plus a CollectionPage
 // on section hubs. Pages that already emit their own are left alone.
@@ -1058,14 +1090,39 @@ function autoSchema(cleanPath, body) {
   const label = sectionLabel(slug);
   if (!label) return '';
   let out = '';
+  const h1Match = body.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
+  const h1Text = h1Match
+    ? unescapeHtml(h1Match[1].replace(/<[^>]*>/g, '')).replace(/\s+/g, ' ').trim()
+    : entry;
   if (!body.includes('BreadcrumbList')) {
     const trail = [{ name: 'Home', path: '/' }, { name: label, path: `/${slug}` }];
-    if (entry) {
-      const h1 = body.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
-      const name = h1 ? unescapeHtml(h1[1].replace(/<[^>]*>/g, '')).replace(/\s+/g, ' ').trim() : entry;
-      trail.push({ name, path: `/${slug}/${entry}` });
-    }
+    if (entry) trail.push({ name: h1Text, path: `/${slug}/${entry}` });
     out += `\n    ${breadcrumbSchema(trail)}`;
+  }
+  // Entry pages built by the bespoke per-section renderers never got a primary
+  // schema node — only the shared detailPage() family did. Give every written
+  // entry an Article so the whole archive is eligible for the same rich
+  // results, deriving each field from tags already present on the page.
+  if (entry && !PRIMARY_SCHEMA.test(body)) {
+    const url = `${SITE_URL}/${slug}/${entry}`;
+    const desc = body.match(/<meta name="description" content="([^"]*)"/);
+    const img = body.match(/property="og:image" content="([^"]*)"/);
+    const isListing = LISTING_ENTRY_SECTIONS.has(slug);
+    const node = {
+      '@context': 'https://schema.org',
+      '@type': isListing ? 'CollectionPage' : 'Article',
+      // Google ignores an Article headline over 110 characters, and a handful
+      // of editorial titles run past that.
+      [isListing ? 'name' : 'headline']: h1Text.length > 110 ? `${h1Text.slice(0, 109).trimEnd()}\u2026` : h1Text,
+      description: desc ? unescapeHtml(desc[1]) : undefined,
+      image: img ? unescapeHtml(img[1]) : DEFAULT_OG_IMAGE,
+      url,
+      inLanguage: 'en',
+      mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+      isPartOf: { '@type': 'CollectionPage', name: label, url: `${SITE_URL}/${slug}` },
+      publisher: ORG_SCHEMA,
+    };
+    out += `\n    <script type="application/ld+json">${JSON.stringify(node).replace(/</g, '\\u003c')}</script>`;
   }
   if (!entry && !body.includes('"ItemList"') && !body.includes('CollectionPage')) {
     const desc = body.match(/<meta name="description" content="([^"]*)"/);
@@ -3844,18 +3901,32 @@ const CATEGORY_LABELS = {
   technology: 'Technology',
   culture: 'Culture',
   design: 'Design',
+  business: 'Business',
+  hardware: 'Hardware',
 };
 
 function essaysListPage() {
+  // Group case-insensitively: the essay files disagree about whether the
+  // category is "history" or "History", and grouping on the raw value split
+  // one category into two keys, only one of which matched the order list.
   const byCategory = {};
   for (const e of ESSAYS) {
-    if (!byCategory[e.category]) byCategory[e.category] = [];
-    byCategory[e.category].push(e);
+    const key = String(e.category || 'other').trim().toLowerCase();
+    if (!byCategory[key]) byCategory[key] = [];
+    byCategory[key].push(e);
   }
 
-  const categoryOrder = ['history', 'profile', 'technology', 'culture', 'design'];
-  const sections = categoryOrder.filter(c => byCategory[c]).map(cat => {
-    const label = CATEGORY_LABELS[cat] || cat;
+  // Preferred order first, then anything else alphabetically. Listing the
+  // known categories must never be a filter — an essay in an unanticipated
+  // category previously vanished from this page while staying in the sitemap,
+  // leaving it with no inbound link anywhere on the site.
+  const preferred = ['history', 'profile', 'technology', 'culture', 'design'];
+  const categoryOrder = [
+    ...preferred.filter(c => byCategory[c]),
+    ...Object.keys(byCategory).filter(c => !preferred.includes(c)).sort(),
+  ];
+  const sections = categoryOrder.map(cat => {
+    const label = CATEGORY_LABELS[cat] || (cat.charAt(0).toUpperCase() + cat.slice(1));
     const cards = byCategory[cat].map(e => `
     <a href="/essays/${e.id}" class="essay-card">
       <div class="essay-card-category">${escapeHtml(label)}</div>
@@ -3907,7 +3978,7 @@ ${toggleScript()}
 }
 
 function essayDetailPage(essay) {
-  const categoryLabel = CATEGORY_LABELS[essay.category] || essay.category;
+  const categoryLabel = CATEGORY_LABELS[String(essay.category || '').trim().toLowerCase()] || essay.category;
   const articleSections = essay.sections.map((s, i) => `
 <div class="essay-section" id="section-${i}">
   <h2>${escapeHtml(s.title)}</h2>
@@ -4486,7 +4557,7 @@ function yearDetailPage(year, review) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${year} in Gaming – Bosnan</title>
-    <meta name="description" content="${review ? metaDesc(review.summary) : `${yGames.length} games from ${year} in the Bosnan retro archive.`}">
+    <meta name="description" content="${review ? metaDesc(review.summary) : metaDesc(listingDesc(yGames, `released in ${year}`))}">
     <style>h1,h2,h3{font-family:inherit}</style>
     ${cssHead()}
 </head>
@@ -4878,7 +4949,7 @@ function decadeDetailPage(decade) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${escapeHtml(decade)} Games – Bosnan</title>
-    <meta name="description" content="${dGames.length} games from the ${escapeHtml(decade)} in the Bosnan archive.">
+    <meta name="description" content="${metaDesc(listingDesc(dGames, `from the ${decade}`))}">
     ${cssHead()}
 </head>
 <body>
