@@ -103,7 +103,8 @@
       "Bash(taskkill //F //FI \"WINDOWTITLE eq *\" //IM node.exe)",
       "Bash(netstat -ano)",
       "Bash(taskkill *)",
-      "Bash(sed 's/\\\\$$//')"
+      "Bash(sed 's/\\\\$$//')",
+      "Bash(npm ls *)"
     ]
   }
 }
