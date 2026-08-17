@@ -460,6 +460,21 @@
     background: #111;
 }
 
+/* Game titles in these lists are linked to their archive page where one
+   exists. Without this they fall back to the UA's blue-and-underlined default,
+   which reads as broken against the dark theme. */
+.trivia-list a {
+    color: #e8e8e8;
+    text-decoration: none;
+    border-bottom: 1px dotted #663333;
+    transition: color 0.18s, border-color 0.18s;
+}
+
+.trivia-list a:hover {
+    color: #ff4444;
+    border-bottom-color: #cc0000;
+}
+
 .trivia-list li::before {
     content: counter(trivia);
     display: flex;
@@ -614,6 +629,14 @@
     margin: 40px auto 0;
     padding: 28px 0 0;
     border-top: 1px solid #1a1a1a;
+}
+/* When the SEO middleware injects this block it lands as a direct child of
+   body rather than inside a page wrapper, so it has no inherited side padding
+   to sit in and would run to the viewport edge on narrow screens. */
+body > .related-entries {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 40px;
 }
 .related-entries h2 {
     font-size: 20px;
@@ -1532,6 +1555,14 @@ button.menu-toggle {
     margin-bottom: 18px;
     position: relative;
     z-index: 1;
+}
+/* The SEO middleware falls back to injecting crumbs straight after the site
+   nav on templates with no back-link to anchor to, which leaves them outside
+   any page wrapper and so without the wrapper's width limit or side padding. */
+body > .crumbs {
+    max-width: 1200px;
+    margin: 18px auto 0;
+    padding: 0 1rem;
 }
 .crumbs a { color: #999; text-decoration: none; }
 .crumbs a:hover { color: white; }
