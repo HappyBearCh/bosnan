@@ -331,17 +331,84 @@ const CROSSLINK_REGISTRY = [
   // link to — every boss fight, cheat code, port and essay written about that
   // game. That is the only inbound link most essays were ever going to get.
   ['games', games, 'Game', ['title']],
+  // Sections that name their subject in prose rather than in a structured game
+  // field, and so had no registry row at all. Without one they were invisible
+  // to the cross-link engine in both directions: 260 of these pages had
+  // exactly one inbound internal link — their own hub — and offered no route
+  // sideways. `__gameMentions` runs the same prose miner the essays use.
+  ['ad-campaigns', AD_CAMPAIGNS, 'Ad Campaign', ['product', '__gameMentions']],
+  ['bootlegs', BOOTLEGS, 'Bootleg', ['baseGame', '__gameMentions']],
+  ['collections', COLLECTIONS, 'Curated List', ['__collectionTitles']],
+  ['controllers', CONTROLLERS, 'Controller', ['__gameMentions']],
+  ['critics', CRITICS, 'Critic', ['__gameMentions']],
+  ['franchises', FRANCHISES, 'Franchise', ['__gameMentions']],
+  ['hardware', HARDWARE, 'Hardware', ['__gameMentions']],
+  ['magazines', MAGAZINES, 'Magazine', ['__gameMentions']],
+  ['peripherals', PERIPHERALS, 'Peripheral', ['__gameMentions']],
+  ['retro-revival', RETRO_REVIVAL, 'Retro Revival', ['inspiredBy', '__gameMentions']],
+  ['sales-figures', SALES_FIGURES, 'Sales Figures', ['title', '__gameMentions']],
+  ['studios', STUDIOS, 'Studio', ['firstGame', '__gameMentions']],
+  ['urban-legends', URBAN_LEGENDS, 'Urban Legend', ['__gameMentions']],
 ];
 
-// ---- Essay prose mining ----------------------------------------------------
-// 208 essays are the archive's largest body of writing and had no cross-links
-// in either direction. Their game references live in sentences, so scan the
-// prose for titles the archive actually has a page for and cache the hits as
-// anchors. Only titles of two or more words are matched: a single-word title
-// like "Adventure" or "Defender" collides with ordinary English and would
-// relate essays that share nothing.
+// Curated lists name their picks as `items[].title` ("Pong (1972)"), one level
+// deeper than clAnchors() walks. Lift them to a flat field so each list joins
+// the index on the games it actually ranks rather than on prose.
+for (const c of COLLECTIONS) {
+  if (Array.isArray(c.items)) c.__collectionTitles = c.items.map(i => i && i.title).filter(Boolean);
+}
+
+// ---- Prose mining ----------------------------------------------------------
+// 205 essays are the archive's largest body of writing and had no cross-links
+// in either direction. Their references live in sentences, so scan the prose
+// for names the archive actually has a page for and cache the hits as anchors.
+// Only names of two or more words are matched: a single-word title like
+// "Adventure" or "Defender" collides with ordinary English, and "Sega" or
+// "Atari" appears in nearly every essay here, so either would relate pages that
+// share nothing.
+//
+// The dictionary is not just game titles. Half the archive's writing is about
+// people, studios, magazines and hardware rather than about a game, so those
+// sections' own names are mined too — an essay that says "Electronic Arts" or
+// "Nobuo Uematsu" should reach that profile. For the mention to resolve, the
+// named sections also anchor on their own name where the index is built below.
+const NAMED_ENTITY_SECTIONS = new Map([
+  ['developers', DEVELOPERS], ['publishers', PUBLISHERS], ['designers', DESIGNERS],
+  ['composers', COMPOSERS], ['studios', STUDIOS], ['franchises', FRANCHISES],
+  ['magazines', MAGAZINES], ['critics', CRITICS], ['producers', PRODUCERS],
+  ['pixel-artists', PIXEL_ARTISTS], ['voice-actors', VOICE_ACTORS],
+  ['arcade-boards', ARCADE_BOARDS], ['game-engines', GAME_ENGINES],
+  ['sound-chips', SOUND_CHIPS], ['peripherals', PERIPHERALS], ['hardware', HARDWARE],
+  ['characters', CHARACTERS], ['failed-consoles', FAILED_CONSOLES],
+  ['controllers', CONTROLLERS],
+  // PLATFORMS is deliberately absent: it is built further down the file, after
+  // this dictionary, and platform pages are already among the best-linked on
+  // the site — they do not need the help.
+]);
 const essayTitleByLen = new Map();
 let essayMaxTitleWords = 0;
+const addMinedName = (raw) => {
+  const k = clNorm(raw);
+  const n = k ? k.split(' ').length : 0;
+  if (n < 2) return;
+  if (!essayTitleByLen.has(n)) essayTitleByLen.set(n, new Map());
+  if (!essayTitleByLen.get(n).has(k)) essayTitleByLen.get(n).set(k, String(raw));
+  if (n > essayMaxTitleWords) essayMaxTitleWords = n;
+};
+for (const [, data] of NAMED_ENTITY_SECTIONS) {
+  if (Array.isArray(data)) for (const e of data) if (e) addMinedName(clTitle(e));
+}
+// The other half of that bargain: a named section's entries anchor on their own
+// name as well as on the games they list, so the mined mention has a node to
+// resolve to. Held in a field rather than read per-section from `name`/`title`
+// because clAnchors() is handed a flat list of keys and knows no slug. The
+// `__` prefix keeps it out of entryProse(), so an entry cannot mine itself.
+for (const row of CROSSLINK_REGISTRY) {
+  const [slug, data] = row;
+  if (!NAMED_ENTITY_SECTIONS.has(slug) || !Array.isArray(data)) continue;
+  for (const e of data) if (e) e.__selfName = clTitle(e);
+  row[3] = [...(row[3] || []), '__selfName'];
+}
 for (const g of games) {
   const k = clNorm(g.title);
   const n = k ? k.split(' ').length : 0;
@@ -364,9 +431,41 @@ function mineGameMentions(text) {
   }
   return [...hits];
 }
-for (const e of ESSAYS) {
-  const prose = (e.sections || []).map(s => String(s.html || '').replace(/<[^>]*>/g, ' ')).join(' ');
-  e.__gameMentions = mineGameMentions(`${e.title || ''} ${e.summary || ''} ${prose}`);
+// Every string an entry carries, flattened, so the miner reads the same prose a
+// visitor does: the text fields, the bullet arrays (`keyFacts`,
+// `notableIssues`, `context`, …) and the HTML of each body section. A few keys
+// are skipped — `sources` is a bibliography whose titles are books and
+// Wikipedia articles rather than the entry's subject, and `id`/`image` are
+// slugs and paths that can normalise onto a short game title by accident.
+const PROSE_SKIP_KEYS = new Set(['id', 'image', 'sources', 'playUrl', 'url', 'links']);
+function entryProse(e) {
+  const parts = [];
+  const walk = (v, depth) => {
+    if (depth > 3 || v == null) return;
+    if (typeof v === 'string') parts.push(v.replace(/<[^>]*>/g, ' '));
+    else if (Array.isArray(v)) v.forEach(x => walk(x, depth + 1));
+    else if (typeof v === 'object') {
+      for (const [k, x] of Object.entries(v)) if (!PROSE_SKIP_KEYS.has(k)) walk(x, depth + 1);
+    }
+  };
+  for (const [k, v] of Object.entries(e)) {
+    if (PROSE_SKIP_KEYS.has(k) || k.startsWith('__')) continue;
+    walk(v, 0);
+  }
+  return parts.join(' ');
+}
+
+// A page that mentions thirty games in passing is not *about* thirty games, and
+// letting it anchor on all of them makes it a candidate related link everywhere
+// without ever being the relevant one. Keep the leading few: the data files
+// open on the entry's actual subject and drift into context further down.
+const MAX_MINED_MENTIONS = 30;
+for (const [, data, , extraKeys] of CROSSLINK_REGISTRY) {
+  if (!Array.isArray(data) || !(extraKeys || []).includes('__gameMentions')) continue;
+  for (const e of data) {
+    if (!e || e.__gameMentions) continue;
+    e.__gameMentions = mineGameMentions(entryProse(e)).slice(0, MAX_MINED_MENTIONS);
+  }
 }
 const CL_ANCHOR_KEYS = ['game', 'games', 'franchise', 'series'];
 function clNorm(s) { return String(s == null ? '' : s).toLowerCase().replace(/&amp;/g, '&').replace(/[^a-z0-9]+/g, ' ').trim(); }
@@ -613,11 +712,6 @@ function listingDesc(games, phrase) {
   return named
     ? `${lead}, including ${named} — with platforms, developers and release history from ${site}.`
     : `${lead}, with platforms, developers and release history from ${site}.`;
-}
-
-function hasSources(item) {
-  const src = item && (item.sources || item.references);
-  return Array.isArray(src) && src.length > 0;
 }
 
 // Shared renderer for the "platform-detail" entry family — pages that share an
@@ -1175,12 +1269,114 @@ app.use((req, res, next) => {
   next();
 });
 
+// Same problem, same fix, for the trailing slash: Express matches `/games/` and
+// `/games/pac-man/` as readily as the bare form and serves a full 200. The
+// canonical tag below already points at the slashless URL, so Google would
+// consolidate them eventually — but only after spending crawl budget fetching
+// every page twice. A 301 settles it on the first request.
+app.use((req, res, next) => {
+  if (req.path.length > 1 && req.path.endsWith('/')) {
+    return res.redirect(301, req.path.replace(/\/+$/, '') + req.originalUrl.slice(req.path.length));
+  }
+  next();
+});
+
 // SEO/footer post-processing: every server-rendered HTML page gets a canonical
 // URL, Open Graph / Twitter fallbacks derived from its <title> and meta
 // description, and the shared site footer — without each of the ~80 page
 // templates having to repeat the boilerplate. Pages that define their own
 // tags (e.g. game detail pages) are left untouched.
+// ---- Image reality check ---------------------------------------------------
+// 230 of the 432 games name an `image` that is not on disk. The card grids hide
+// it — every <img> carries an onerror that swaps in a letter placeholder — so
+// nothing looks broken to a visitor, and the gap went unnoticed. Two things did
+// notice: the sitemap declares an <image:image> for all 432, so a third of the
+// image sitemap is 404s (a Search Console error), and og:image points at those
+// same paths, so the share card for those pages resolves to nothing.
+//
+// The images that do exist are all small — 168 of 195 are under 300px wide and
+// none reaches 600px. That matters only for the social card: every platform
+// wants 600x315 at minimum and renders anything smaller as a cramped thumbnail,
+// so a 250px screenshot is a *worse* card than the 1200x678 site default. It
+// does not matter for Google Images, which indexes small images happily. Hence
+// two gates rather than one — existence for the sitemap, existence plus width
+// for og:image.
+const OG_IMAGE_MIN_WIDTH = 600;
+const imageMetaCache = new Map();
+
+// Width and height from the file header alone, so this stays cheap enough to
+// run lazily per image rather than scanning the whole directory at boot.
+// Returns null for a file that is missing or in a format we do not parse.
+function imageMeta(relPath) {
+  const key = String(relPath).replace(/^\//, '');
+  if (imageMetaCache.has(key)) return imageMetaCache.get(key);
+  let meta = null;
+  try {
+    const buf = fs.readFileSync(path.join(__dirname, key));
+    if (buf.length > 24 && buf.readUInt32BE(0) === 0x89504e47) {
+      meta = { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) };
+    } else if (buf[0] === 0xff && buf[1] === 0xd8) {
+      // Walk the JPEG segment chain to the start-of-frame, which is the only
+      // marker carrying the dimensions.
+      for (let i = 2; i + 9 < buf.length;) {
+        if (buf[i] !== 0xff) { i++; continue; }
+        const marker = buf[i + 1];
+        if (marker >= 0xc0 && marker <= 0xcf && marker !== 0xc4 && marker !== 0xc8 && marker !== 0xcc) {
+          meta = { width: buf.readUInt16BE(i + 7), height: buf.readUInt16BE(i + 5) };
+          break;
+        }
+        i += 2 + buf.readUInt16BE(i + 2);
+      }
+    } else {
+      meta = { width: 0, height: 0 }; // on disk, but unmeasured
+    }
+  } catch (e) {
+    meta = null; // missing or unreadable
+  }
+  imageMetaCache.set(key, meta);
+  return meta;
+}
+
+// Good enough to declare in the image sitemap: the file is actually there.
+function imageExists(relPath) {
+  return !!relPath && !/^https?:/i.test(relPath) && imageMeta(relPath) !== null;
+}
+
+// Good enough to be a share card: on disk and wide enough that the large-image
+// card renders. Remote images are trusted, having no local file to measure.
+function imageUsableAsCard(relPath) {
+  if (!relPath) return false;
+  if (/^https?:/i.test(relPath)) return true;
+  const m = imageMeta(relPath);
+  return !!m && m.width >= OG_IMAGE_MIN_WIDTH;
+}
+
 const DEFAULT_OG_IMAGE = `${SITE_URL}/images/screenshot1.png`;
+
+// 1,509 of the 1,953 pages shared one og:image — the same generic screenshot —
+// because only game pages (and the genre hubs) carry first-party imagery. That
+// is the thumbnail every share, every Discover card and every social unfurl of
+// three quarters of the archive used, so none of them looked like a page about
+// their own subject.
+//
+// The archive does have a relevant picture for most of them; it just lives on
+// another page. The cross-link engine already resolves an entry to the games it
+// is about, so reuse that: a box-art entry for Sonic, a speedrun of Sonic and
+// an essay that opens on Sonic all borrow the Sonic screenshot. Structured
+// anchors are tried in the order clAnchors() returns them — the entry's own
+// `game`/`title` fields before any mined prose mention — so a page falls back
+// to an incidental mention only when it names no game outright.
+function entryOgImage(cleanPath) {
+  const e = clEntryByPath(cleanPath);
+  if (!e) return null;
+  const asUrl = img => `${SITE_URL}/${String(img).replace(/^\//, '')}`;
+  if (imageUsableAsCard(e.image)) return asUrl(e.image);
+  for (const a of clAnchors(e, clExtraKeys.get(clSlugByEntry.get(e)))) {
+    const g = gameTitleExact.get(a) || gameTitlePrefix.get(a);
+    if (g && imageUsableAsCard(g.image)) return asUrl(g.image);
+  }
+  return null;
+}
 const GA_MEASUREMENT_ID = 'G-7PKQSXLCD8';
 const GA_SNIPPET = `\n    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}"></script>
@@ -1207,6 +1403,330 @@ function sectionLabel(slug) {
 function unescapeHtml(s) {
   return String(s).replace(/&(amp|lt|gt|quot|#39|#8230);/g, (_, e) =>
     ({ amp: '&', lt: '<', gt: '>', quot: '"', '#39': "'", '#8230': '…' }[e]));
+}
+
+// ---- Same-section neighbours -----------------------------------------------
+// The cross-link engine relates two pages when they name the same game or the
+// same studio, which reaches nothing written about a *theme*: 395 pages — 44
+// essays among them — still had exactly one inbound internal link, their own
+// hub. Those pages are not unrelated to everything, they are unrelated to
+// anything *named*. So rank an entry's own section by shared distinctive
+// vocabulary and link the closest few.
+//
+// Scoring stays inside one section deliberately. It keeps the work to sum(n^2)
+// over ~70 sections of ~21 entries instead of 1,950 squared, and it keeps the
+// block honest: "More in Essays" promises a sibling, not a global best match.
+// Each section's index is built on the first request that needs it, so a cold
+// start pays nothing and only the first visitor to a section pays the few
+// milliseconds.
+const SIBLING_STOPWORDS = new Set((
+  'the a an and or but of to in on at for with from by as is was were be been being are am ' +
+  'it its this that these those they them their there here he she his her him you your yours ' +
+  'we our us i not no nor so if then than when what which who whom whose how why where all any ' +
+  'both each few more most other others some such only own same too very can will just should ' +
+  'now also would could had has have having do does did doing one two three first second next ' +
+  'new old more much many out up down over under after before while about into through during ' +
+  'game games gamer gamers player players play played playing video console consoles release ' +
+  'released releases version versions title titles system systems'
+).split(' '));
+
+// The distinctive words in one entry, counted once per word. Four characters is
+// the floor because the archive's prose is thick with two- and three-letter
+// abbreviations that carry no topic ("nes", "rom", "cpu" appear everywhere).
+function siblingTerms(e) {
+  const out = new Set();
+  for (const w of clNorm(entryProse(e)).split(' ')) {
+    if (w.length < 4 || SIBLING_STOPWORDS.has(w) || /^\d+$/.test(w)) continue;
+    out.add(w);
+  }
+  return out;
+}
+
+// Sibling ranking needs nothing more than a section's entry array, so it can
+// cover the two sections the cross-link registry cannot. PLATFORMS and GENRES
+// are assembled further down this file than CROSSLINK_REGISTRY is, which is why
+// they have no row there and why their pages were the last 8 in the archive
+// still holding a single inbound link. This map is built late enough to see
+// them.
+const clDataBySlug = new Map([
+  ...CROSSLINK_REGISTRY.map(([s, d]) => [s, d]),
+  ['platforms', PLATFORMS],
+  ['genres', GENRES],
+]);
+
+// "More in Genre Encyclopedia" is the nav label, and it reads as a place rather
+// than a group. Only the sections whose nav label is not a plain plural need an
+// override here.
+const SIBLING_SECTION_LABELS = new Map([['genres', 'Genres']]);
+const SIBLING_COUNT = 4;
+const siblingCache = new Map(); // slug -> Map(entry id -> [{ slug, id, title }])
+
+function buildSiblingIndex(slug) {
+  const data = clDataBySlug.get(slug);
+  const docs = Array.isArray(data) ? data.filter(e => e && e.id) : [];
+  const byId = new Map();
+  siblingCache.set(slug, byId);
+  if (docs.length < 2) return byId;
+
+  const terms = docs.map(siblingTerms);
+  // term -> the documents holding it, so scoring walks only the entries that
+  // actually share a word rather than the whole section per term.
+  const postings = new Map();
+  terms.forEach((t, i) => {
+    for (const w of t) {
+      if (!postings.has(w)) postings.set(w, []);
+      postings.get(w).push(i);
+    }
+  });
+  const n = docs.length;
+  // A word every entry uses separates nothing; a word only one entry uses
+  // matches nothing. Both ends are dropped before scoring.
+  const maxDf = Math.max(2, Math.floor(n * 0.4));
+  const ref = i => ({ slug, id: docs[i].id, title: clTitle(docs[i]) });
+
+  for (let i = 0; i < n; i++) {
+    const scores = new Map();
+    for (const w of terms[i]) {
+      const post = postings.get(w);
+      if (post.length < 2 || post.length > maxDf) continue;
+      const weight = Math.log(n / post.length);
+      for (const j of post) if (j !== i) scores.set(j, (scores.get(j) || 0) + weight);
+    }
+    const ranked = [...scores].sort((a, b) => b[1] - a[1]).map(([j]) => j);
+    const picked = ranked.slice(0, SIBLING_COUNT - 1);
+    // Always keep the next entry in the section as well, wrapping at the end.
+    // Similarity alone can leave an entry that resembles nothing with no
+    // inbound sibling links at all; the ring guarantees every entry is somebody
+    // else's neighbour, so no page in a section can be stranded again.
+    const ring = (i + 1) % n;
+    if (!picked.includes(ring)) picked.push(ring);
+    for (let k = 1; picked.length < SIBLING_COUNT && k < n; k++) {
+      const j = (i + k) % n;
+      if (j !== i && !picked.includes(j)) picked.push(j);
+    }
+    byId.set(docs[i].id, picked.slice(0, SIBLING_COUNT).map(ref));
+  }
+  return byId;
+}
+
+// "More in Essays" — the section's closest entries to this one. Reuses the
+// related-block markup so it needs no styling of its own, with an extra class
+// so the middleware can tell the two apart when deciding what to inject.
+function siblingsBlock(cleanPath) {
+  const [, slug, id] = cleanPath.split('/');
+  if (!slug || !id || !clDataBySlug.has(slug)) return '';
+  if (!siblingCache.has(slug)) buildSiblingIndex(slug);
+  const sibs = siblingCache.get(slug).get(id);
+  if (!sibs || !sibs.length) return '';
+  const label = SIBLING_SECTION_LABELS.get(slug) || sectionLabel(slug) || slug;
+  const links = sibs.map(r =>
+    `<a href="/${r.slug}/${r.id}" class="related-link"><span class="related-cat">${escapeHtml(label)}</span><span class="related-title">${escapeHtml(r.title)}</span></a>`
+  ).join('');
+  return `<div class="related-entries section-siblings"><h2>More in ${escapeHtml(label)}</h2><div class="related-entries-grid">${links}</div></div>`;
+}
+
+// ---- Heading disambiguation ------------------------------------------------
+// Which subject names are used by more than one page. Built lazily on the first
+// request rather than at load, because the sources include PLATFORMS and
+// GENRES, which are assembled further down this file than the cross-link
+// registry is.
+let ambiguousNames = null;
+function isAmbiguousName(text) {
+  if (!ambiguousNames) {
+    const count = new Map();
+    const bump = (raw) => {
+      const k = clNorm(raw);
+      if (k.length > 2) count.set(k, (count.get(k) || 0) + 1);
+    };
+    for (const [, data] of CROSSLINK_REGISTRY) {
+      if (Array.isArray(data)) for (const e of data) if (e) bump(clTitle(e));
+    }
+    for (const p of PLATFORMS) bump(p.name);
+    for (const g of GENRES) bump(g.name);
+    ambiguousNames = new Set([...count].filter(([, n]) => n > 1).map(([k]) => k));
+  }
+  return ambiguousNames.has(clNorm(text));
+}
+
+// The `/section/entry` slug of an entry page, or null for hubs and the home
+// page. A section is only recognised if the shared registry knows it, which is
+// the same test the breadcrumbs use.
+function entryPageSlug(cleanPath) {
+  const [, slug, entry] = cleanPath.split('/');
+  return entry && sectionLabel(slug) ? slug : null;
+}
+
+// A game's own page is the archive's primary page for that name, so it keeps
+// the bare heading; the box art, character, franchise and speedrun pages that
+// share the name are the ones that say which they are. Qualifying all four
+// would leave no page actually titled "Donkey Kong".
+//
+// The exception is two games that share a title — the 1981 arcade Donkey Kong
+// and the 1994 Game Boy one — where "Game" would separate nothing. Their
+// <title> tags already tell them apart by platform, so the heading does too.
+let duplicateGameTitles = null;
+let duplicateGameTitlePlatforms = null;
+function gameHeadingLabel(cleanPath, text) {
+  if (!duplicateGameTitles) {
+    const seenTitle = new Set();
+    const seenPair = new Set();
+    duplicateGameTitles = new Set();
+    duplicateGameTitlePlatforms = new Set();
+    for (const g of games) {
+      const k = clNorm(g.title);
+      if (seenTitle.has(k)) duplicateGameTitles.add(k);
+      else seenTitle.add(k);
+      const pk = `${k}|${clNorm(g.platform)}`;
+      if (seenPair.has(pk)) duplicateGameTitlePlatforms.add(pk);
+      else seenPair.add(pk);
+    }
+  }
+  const k = clNorm(text);
+  if (!duplicateGameTitles.has(k)) return null;
+  const g = clEntryByPath(cleanPath);
+  if (!g || !g.platform) return null;
+  // Two Amiga releases of Alien Breed, a year apart, need the year as well —
+  // the same thing the <title> falls back to.
+  return duplicateGameTitlePlatforms.has(`${k}|${clNorm(g.platform)}`) && g.year
+    ? `${g.platform}, ${g.year}`
+    : g.platform;
+}
+
+// Singular labels for the sections outside the cross-link registry, whose only
+// name is the plural hub label — "Nintendo Entertainment System — Platforms"
+// reads as a category, not as this page's subject.
+const EXTRA_SINGULAR_LABELS = new Map([['platforms', 'Platform'], ['genres', 'Genre']]);
+
+// Append " — Box Art" (etc.) to the visible <h1> when its text names something
+// another page also claims. The cross-link label is preferred over the nav
+// label because it is already singular: "Box Art", not "Box Art Gallery", and
+// "Sales Figures", not the plural hub name.
+function qualifyHeading(body, cleanPath, slug) {
+  const m = body.match(/<h1([^>]*)>([\s\S]*?)<\/h1>/);
+  if (!m) return body;
+  const text = unescapeHtml(m[2].replace(/<[^>]*>/g, '')).replace(/\s+/g, ' ').trim();
+  if (!text) return body;
+  let label;
+  if (slug === 'games') {
+    label = gameHeadingLabel(cleanPath, text);
+  } else if (isAmbiguousName(text)) {
+    label = EXTRA_SINGULAR_LABELS.get(slug) || clLabelBySlug.get(slug) || sectionLabel(slug);
+  }
+  if (!label) return body;
+  // Nothing to add if the heading already says it — "Doom (Box Art)".
+  if (clNorm(text).includes(clNorm(label))) return body;
+  return body.replace(m[0],
+    `<h1${m[1]}>${m[2]}<span class="h1-qualifier"> &mdash; ${escapeHtml(label)}</span></h1>`);
+}
+
+// ---- Hub page titles -------------------------------------------------------
+// The 76 section hubs are the archive's highest-authority pages — they collect
+// the most internal links and are the only pages with a shot at a head term —
+// but their titles were built as `${navLabel} – Bosnan` and averaged 25 of the
+// ~60 characters Google renders. "Box Art – Bosnan" describes the site's own
+// navigation, not the query anyone types: it contains neither "retro" nor
+// "game" nor any console name. These rewrite each hub's title around the terms
+// the page can actually rank for, in one map rather than 76 templates. `{n}` is
+// substituted with the hub's live entry count, read off the rendered page, so
+// the number cannot drift as content is added. Entry pages are left alone —
+// their titles are already unique and subject-led.
+const HUB_TITLES = new Map(Object.entries({
+  'ad-campaigns': 'Retro Video Game Ad Campaigns of the 80s and 90s',
+  'arcade-boards': 'Arcade System Boards — Neo Geo, CPS-1, Sega System 16',
+  'bootlegs': 'Bootleg & Pirate Games — Famiclones and Unlicensed Ports',
+  'bossfights': 'Iconic Retro Boss Fights — {n} Classic Encounters',
+  'box-art': 'Retro Game Box Art — Classic NES, SNES & Arcade Covers',
+  'cabinet-art': 'Arcade Cabinet Art — Classic Side Art and Marquees',
+  'cancelled': 'Cancelled Retro Games That Were Never Released',
+  'characters': 'Retro Video Game Characters — Origins and History',
+  'cheat-codes': 'Classic Cheat Codes — The Konami Code and {n} More',
+  'collections': 'Curated Retro Gaming Lists and Best-of Rankings',
+  'comics': 'Video Game Tie-in Comics — Nintendo Power and More',
+  'compare': 'Compare Retro Consoles — Specs, Library and Sales',
+  'competitive': 'Competitive Gaming History — Arcade Era to Esports',
+  'composers': 'Retro Game Composers — Chiptune and 16-bit Soundtracks',
+  'controllers': 'Retro Game Controllers — D-Pads, Sticks and Input History',
+  'controversies': 'Retro Gaming Controversies — Mortal Kombat to the ESRB',
+  'cover-stories': 'Magazine Cover Stories That Shaped Retro Gaming',
+  'critics': 'Retro Game Critics and Journalists Who Shaped Gaming',
+  'decades': 'Retro Games by Decade — the 1960s, 70s, 80s and 90s',
+  'designers': 'Legendary Game Designers — Miyamoto, Yokoi and More',
+  'developers': 'Retro Game Developers — Nintendo, Sega, Atari and More',
+  'difficulty': 'Nintendo Hard — Retro Game Difficulty and Hard Modes',
+  'disappointments': 'Sequels That Disappointed — Retro Gaming’s Worst Follow-ups',
+  'easter-eggs': 'Video Game Easter Eggs — Hidden Secrets in Retro Games',
+  'endings': 'Classic Game Endings — Retro Gaming’s Best Finales',
+  'essays': 'Retro Gaming Essays — {n} Long-Form Histories',
+  'failed-consoles': 'Failed Consoles — Virtual Boy, Jaguar, 3DO and More',
+  'family-tree': 'Game Developer Family Tree — Studio Splits and Spin-offs',
+  'famous-bugs': 'Famous Video Game Bugs — Glitches That Made History',
+  'franchises': 'Retro Game Franchises — Mario, Zelda, Sonic and More',
+  'game-engines': 'Classic Game Engines — Doom, Build, SCUMM and More',
+  'genres': 'Retro Game Genres — Shmups, Platformers, RPGs and More',
+  'glitches': 'Notable Video Game Glitches — Speedrun Skips and Bugs',
+  'glossary': 'Retro Gaming Glossary — Metroidvania, SHMUP, Mode 7',
+  'hardware': 'Retro Console Hardware — CPUs, Sound Chips and Specs',
+  'imports': 'Import Gaming Culture — Japanese Games and Region Locks',
+  'levels': 'Greatest Retro Game Levels — Level Design Hall of Fame',
+  'localization': 'Game Localization Differences — Japan vs the West',
+  'lost-games': 'Lost Video Games — Unreleased and Missing Retro Titles',
+  'magazines': 'Classic Gaming Magazines — EGM, Nintendo Power, CVG',
+  'manuals': 'Retro Game Instruction Manuals and Their Artwork',
+  'map': 'Retro Game Studio World Map — Where Classics Were Made',
+  'merchandise': 'Retro Gaming Merchandise — Toys, Cereal and Tie-ins',
+  'multiplayer': 'Co-op and Multiplayer Milestones in Retro Gaming',
+  'on-this-day': 'Retro Gaming On This Day — Video Game History Calendar',
+  'packaging': 'Retro Game Packaging — Boxes, Carts and Long Boxes',
+  'peripherals': 'Retro Console Peripherals — Zapper, Power Glove and More',
+  'pixel-artists': 'Pixel Artists Behind Retro Gaming’s Iconic Sprites',
+  'platforms': 'Retro Gaming Platforms — {n} Consoles and Home Computers',
+  'ports': 'Retro Game Port Comparisons — Arcade vs Home Console',
+  'producers': 'Game Producers and Executives Who Built the Industry',
+  'prototypes': 'Game Prototypes and Beta Versions — Cut Retro Content',
+  'publishers': 'Retro Game Publishers — Atari, EA, Activision, Taito',
+  'quiz': 'Retro Gaming Trivia Quiz — Test Your 80s Game Knowledge',
+  'recent': 'Recently Added to the Bosnan Retro Games Archive',
+  'regional': 'Regional Game Differences — Japan, US and PAL Versions',
+  'retro-revival': 'Retro Revival Games — Modern Throwbacks to 8-bit Classics',
+  'rom-hacks': 'ROM Hacks and Game Mods — Fan Translations and Remixes',
+  'sales-figures': 'Retro Game and Console Sales Figures — Units Sold',
+  'sequels': 'Sequels That Changed Everything in Retro Gaming',
+  'sound-chips': 'Retro Sound Chips — SID, YM2612, Ricoh 2A03 and More',
+  'sound-effects': 'Iconic Retro Game Sound Effects and Where They Came From',
+  'soundtracks': 'Best Retro Game Soundtracks — Chiptune and 16-bit Music',
+  'speedrun-techniques': 'Speedrun Techniques Explained — Wrong Warps and Skips',
+  'speedruns': 'Famous Speedruns — Super Mario Bros., Ocarina of Time',
+  'stats': 'Bosnan Archive Stats — What’s Inside the Retro Archive',
+  'strategy-guides': 'Classic Strategy Guides — Nintendo Player’s Guides',
+  'studios': 'Game Studio Origin Stories — id, Rare, Nintendo and More',
+  'timeline': 'Video Game History Timeline — 1958 to the PS2 Era',
+  'urban-legends': 'Gaming Urban Legends — Polybius, Lavender Town and More',
+  'voice-actors': 'Retro Game Voice Actors and Their Iconic Roles',
+  'wordsearch': 'Retro Gaming Word Search — Free Printable Puzzle',
+  'years': 'Retro Games by Year — Browse {n} Years of Game History',
+}));
+
+// Hub descriptions that left a third of the snippet unused. Only the hubs
+// under ~90 characters are overridden; the rest already read well.
+const HUB_DESCRIPTIONS = new Map(Object.entries({
+  'cancelled': 'Retro games announced, previewed and then killed before release — from Star Fox 2 to Sonic X-treme — and the reasons each one died.',
+  'controllers': 'How the game controller evolved: the NES d-pad, the analogue stick, shoulder buttons, rumble and the input ideas that stuck.',
+  'cover-stories': 'The magazine cover stories that set the agenda for retro gaming, from console launches and review scandals to previews that never shipped.',
+  'disappointments': 'Sequels that followed a classic and fell short — what each one changed, why it went wrong, and how players and the press reacted.',
+  'endings': 'How classic games said goodbye: the final screens, twists and credits sequences players spent whole cartridges working toward.',
+  'manuals': 'Retro instruction manuals as artefacts — the artwork, fiction, maps and hint pages that shipped in the box before in-game tutorials.',
+  'merchandise': 'The toys, cereals, cartoons and lunchboxes that turned retro game characters into 1980s and 1990s household brands.',
+  'years': 'Browse the archive one year at a time, from the earliest experiments of the 1960s to the end of the 16-bit era — releases and hardware.',
+}));
+
+// The hub's live entry count, for the `{n}` placeholder: the distinct
+// `/section/entry` links the rendered page lists. Read from the body rather
+// than a data array so a hub that paginates or filters cannot advertise a
+// number it does not actually show.
+function hubEntryCount(slug, body) {
+  const seen = new Set();
+  for (const m of body.matchAll(new RegExp(`<a[^>]+href="/${slug}/([^"#?/]+)"`, 'g'))) seen.add(m[1]);
+  return seen.size;
 }
 
 // Titles are built as `Subject – Section – Bosnan Retro Archive`, which
@@ -1243,6 +1763,15 @@ app.use((req, res, next) => {
       // Normalise title and description in place *before* the Open Graph
       // fallbacks are derived from them, so the social tags inherit the
       // trimmed values instead of the overlong originals.
+      // Section hubs take their search-facing title from HUB_TITLES, which
+      // runs first so trimTitle() measures the replacement rather than the
+      // nav label it supersedes.
+      const pathSegments = cleanPath.split('/').filter(Boolean);
+      const hubSlug = pathSegments.length === 1 ? pathSegments[0] : null;
+      if (hubSlug && HUB_TITLES.has(hubSlug)) {
+        const t = HUB_TITLES.get(hubSlug).replace('{n}', () => hubEntryCount(hubSlug, body));
+        body = body.replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(t)}</title>`);
+      }
       const titleMatch = body.match(/<title>([^<]*)<\/title>/);
       if (titleMatch) {
         const trimmed = trimTitle(titleMatch[1]);
@@ -1251,6 +1780,10 @@ app.use((req, res, next) => {
       // Most templates build descriptions with `.substring(0, 160)` on raw
       // text, which lands over the limit once entities are escaped and cuts
       // mid-word. Re-trim every one on a word boundary.
+      if (hubSlug && HUB_DESCRIPTIONS.has(hubSlug)) {
+        body = body.replace(/<meta name="description" content="[^"]*"/,
+          `<meta name="description" content="${escapeHtml(HUB_DESCRIPTIONS.get(hubSlug))}"`);
+      }
       const descMatch = body.match(/<meta name="description" content="([^"]*)"/);
       if (descMatch && unescapeHtml(descMatch[1]).length > 160) {
         body = body.replace(descMatch[0], `<meta name="description" content="${metaDesc(unescapeHtml(descMatch[1]))}"`);
@@ -1272,7 +1805,19 @@ app.use((req, res, next) => {
       }
       if (!body.includes('property="og:url"')) extra += `\n    <meta property="og:url" content="${canonical}">`;
       if (!body.includes('property="og:type"')) extra += `\n    <meta property="og:type" content="website">`;
-      if (!body.includes('property="og:image"')) extra += `\n    <meta property="og:image" content="${DEFAULT_OG_IMAGE}">`;
+      if (!body.includes('property="og:image"')) {
+        extra += `\n    <meta property="og:image" content="${escapeHtml(entryOgImage(cleanPath) || DEFAULT_OG_IMAGE)}">`;
+      } else {
+        // A template set its own og:image — the game pages do — but 230 of
+        // those files are not on disk and the rest are too small to render as a
+        // card. Hold every page to the same bar and fall back to the default
+        // rather than shipping a share card that resolves to nothing.
+        const own = body.match(/property="og:image" content="([^"]*)"/);
+        if (own && own[1].startsWith(SITE_URL)
+          && !imageUsableAsCard(unescapeHtml(own[1]).slice(SITE_URL.length))) {
+          body = body.replace(own[0], `property="og:image" content="${DEFAULT_OG_IMAGE}"`);
+        }
+      }
       if (!body.includes('property="og:site_name"')) extra += `\n    <meta property="og:site_name" content="${SITE_NAME}">`;
       // Every og:image on the site is a wide screenshot or box shot, so the
       // large card is always the right treatment.
@@ -1310,6 +1855,29 @@ app.use((req, res, next) => {
           const rel = relatedBlock(entry);
           if (rel) body = body.replace('</body>', `${rel}\n</body>`);
         }
+      }
+
+      // "More in <section>". The block above only fires when the page names a
+      // game or a studio some other page also names, so a page written about a
+      // theme got nothing from it. This one always has neighbours to offer.
+      if (!body.includes('section-siblings')) {
+        const sibs = siblingsBlock(cleanPath);
+        if (sibs) body = body.replace('</body>', `${sibs}\n</body>`);
+      }
+
+      // Disambiguate a heading whose subject name belongs to more than one page.
+      // 250 pages shared an <h1> with another: "Sonic the Hedgehog" heads a
+      // game, a franchise, a box-art entry and a speedrun, and "Nintendo
+      // Entertainment System" heads both the platform and its sales figures.
+      // Their <title>s are already distinct, so this is about the page itself
+      // saying which of the four it is, to a reader arriving from a result and
+      // to a crawler weighing the heading. Deliberately last: autoSchema() and
+      // the breadcrumbs above have already read the clean name out of the body,
+      // so a Person keeps `"name":"Shigeru Miyamoto"` rather than gaining an
+      // editorial suffix, and only the visible heading is qualified.
+      const entrySlug = entryPageSlug(cleanPath);
+      if (entrySlug && !body.includes('h1-qualifier')) {
+        body = qualifyHeading(body, cleanPath, entrySlug);
       }
 
       if (!body.includes('class="site-footer"')) body = body.replace('</body>', `${footerHtml()}\n</body>`);
@@ -1772,7 +2340,7 @@ app.get('/sitemap.xml', (req, res) => {
     <loc>${base}/games/${g.id}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>${g.image ? `
+    <priority>0.7</priority>${imageExists(g.image) ? `
     <image:image>
       <image:loc>${base}/${escapeXml(g.image)}</image:loc>
       <image:title>${escapeXml(`${g.title} (${g.year})`)}</image:title>
@@ -5866,20 +6434,31 @@ function cheatCodeDetailPage(item) {
 }
 
 function glossaryPage() {
-  const categories = [...new Set(GLOSSARY.map(g => g.category))].sort();
-  const sections = categories.map(cat => {
-    const terms = GLOSSARY.filter(g => g.category === cat).sort((a, b) => a.term.localeCompare(b.term));
-    const entries = terms.map(t => `<div style="margin-bottom:1.5rem" id="term-${escapeHtml(t.id)}"><div style="display:flex;align-items:baseline;gap:0.8rem;margin-bottom:0.4rem"><h3 style="margin:0;font-size:1.05em">${escapeHtml(t.term)}</h3><span style="font-size:0.75em;background:rgba(255,255,255,0.08);padding:0.15rem 0.5rem;border-radius:3px;color:#999">${escapeHtml(t.category)}</span></div><p style="color:#ccc;line-height:1.7;margin:0 0 0.4rem">${escapeHtml(t.definition)}</p>${(t.examples || []).length ? `<div style="font-size:0.85em;color:#888">e.g. ${t.examples.map(e => escapeHtml(e)).join(', ')}</div>` : ''}</div>`).join('');
-    return `<div class="essay-section"><h2>${escapeHtml(cat)}</h2>${entries}</div>`;
-  }).join('');
   const letters = [...new Set(GLOSSARY.map(g => g.term[0].toUpperCase()))].sort();
   const alphaLinks = letters.map(l => `<a href="#letter-${l}" style="padding:0.2rem 0.4rem;background:rgba(255,255,255,0.06);border-radius:3px;font-size:0.9em;color:var(--accent,#c8a44a)">${l}</a>`).join('');
   const alphaEntries = letters.map(l => {
     const terms = GLOSSARY.filter(g => g.term[0].toUpperCase() === l).sort((a, b) => a.term.localeCompare(b.term));
-    const entries = terms.map(t => `<div style="margin-bottom:1.5rem"><div style="display:flex;align-items:baseline;gap:0.8rem;margin-bottom:0.4rem"><h3 style="margin:0;font-size:1.05em">${escapeHtml(t.term)}</h3><span style="font-size:0.75em;background:rgba(255,255,255,0.08);padding:0.15rem 0.5rem;border-radius:3px;color:#999">${escapeHtml(t.category)}</span></div><p style="color:#ccc;line-height:1.7;margin:0 0 0.4rem">${escapeHtml(t.definition)}</p>${(t.examples || []).length ? `<div style="font-size:0.85em;color:#888">e.g. ${t.examples.map(e => escapeHtml(e)).join(', ')}</div>` : ''}</div>`).join('');
+    const entries = terms.map(t => `<div style="margin-bottom:1.5rem" id="term-${escapeHtml(t.id)}"><div style="display:flex;align-items:baseline;gap:0.8rem;margin-bottom:0.4rem"><h3 style="margin:0;font-size:1.05em">${escapeHtml(t.term)}</h3><span style="font-size:0.75em;background:rgba(255,255,255,0.08);padding:0.15rem 0.5rem;border-radius:3px;color:#999">${escapeHtml(t.category)}</span></div><p style="color:#ccc;line-height:1.7;margin:0 0 0.4rem">${escapeHtml(t.definition)}</p>${(t.examples || []).length ? `<div style="font-size:0.85em;color:#888">e.g. ${t.examples.map(e => escapeHtml(e)).join(', ')}</div>` : ''}</div>`).join('');
     return `<div id="letter-${l}" style="margin-bottom:2rem"><h2 style="font-size:2em;color:var(--accent,#c8a44a);margin-bottom:1rem">${l}</h2>${entries}</div>`;
   }).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Glossary – Bosnan</title><meta name="description" content="Retro gaming terminology explained: SHMUP, Metroidvania, roguelike, chiptune, blast processing, Mode 7 and more."><style>h1,h2,h3{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('glossary')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Glossary</h1><p class="essay-subtitle">${GLOSSARY.length} retro gaming terms defined</p></div><div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:2rem">${alphaLinks}</div>${alphaEntries}</div>${toggleScript()}</body></html>`;
+  // A glossary is not a CollectionPage of links, it is a set of definitions,
+  // and schema.org has the exact type for it. Each term is addressed by the
+  // `#term-<id>` anchor the list now carries, which is also what lets a search
+  // engine deep-link a single definition rather than the whole page.
+  const glossarySchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'DefinedTermSet',
+    name: 'Retro Gaming Glossary',
+    url: `${SITE_URL}/glossary`,
+    hasDefinedTerm: GLOSSARY.map(t => ({
+      '@type': 'DefinedTerm',
+      '@id': `${SITE_URL}/glossary#term-${t.id}`,
+      name: t.term,
+      description: t.definition,
+      inDefinedTermSet: `${SITE_URL}/glossary`,
+    })),
+  }).replace(/</g, '\\u003c');
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Glossary – Bosnan</title><meta name="description" content="Retro gaming terminology explained: SHMUP, Metroidvania, roguelike, chiptune, blast processing, Mode 7 and more."><script type="application/ld+json">${glossarySchema}</script><style>h1,h2,h3{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('glossary')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Glossary</h1><p class="essay-subtitle">${GLOSSARY.length} retro gaming terms defined</p></div><div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:2rem">${alphaLinks}</div>${alphaEntries}</div>${toggleScript()}</body></html>`;
 }
 
 function quizPage() {

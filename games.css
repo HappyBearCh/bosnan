@@ -1803,3 +1803,13 @@ body > .crumbs {
     display: inline-block;
     text-align: left;
 }
+
+/* Disambiguating suffix appended to headings whose subject name is shared by
+   another page in the archive ("Sonic the Hedgehog" is a game, a franchise, a
+   box art entry and a speedrun). Muted and lighter so the entity name still
+   reads as the heading. */
+.h1-qualifier {
+    color: #888;
+    font-weight: 400;
+    white-space: nowrap;
+}
