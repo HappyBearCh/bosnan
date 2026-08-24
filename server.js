@@ -9,14 +9,25 @@ const http = require('http');
 const app = express();
 const PORT = 3000;
 
-// Canonical origin for SEO tags (sitemap, canonical, og:url). Override with
-// SITE_URL when serving from a custom domain.
-const SITE_URL = (process.env.SITE_URL || 'https://bosnan.vercel.app').replace(/\/+$/, '');
+// Canonical origin for SEO tags (sitemap, canonical, og:url) and the host every
+// other spelling of the site 301s to. This MUST be the domain the site is meant
+// to rank as: it was left on the deployment URL while the site served from
+// bosnan.net, so every canonical on bosnan.net pointed at bosnan.vercel.app and
+// told Google the real site was somewhere else — which is why bosnan.net had no
+// entity to recognise. Override with SITE_URL only to move the whole site.
+const SITE_URL = (process.env.SITE_URL || 'https://bosnan.net').replace(/\/+$/, '');
+const SITE_HOST = SITE_URL.replace(/^https?:\/\//, '');
 const SITE_NAME = 'Bosnan Retro Games Archive';
 // Derived from the newest data file's mtime, so it moves only when content
 // actually changes — a per-request "today" lastmod teaches crawlers to ignore
 // the field entirely, and a hardcoded date goes stale the moment data lands.
 // Override with SITE_LASTMOD when the build environment flattens mtimes.
+//
+// Vercel's build output does flatten them, to 2018-10-20, so the live sitemap
+// was stamping all 1,953 URLs eight years stale. Anything before MTIME_FLOOR is
+// therefore not a real edit date; fall back to the cold-start date, which on a
+// deploy-per-change site is the deploy date.
+const MTIME_FLOOR = Date.parse('2020-01-01');
 const SITE_LASTMOD = (() => {
   if (process.env.SITE_LASTMOD) return process.env.SITE_LASTMOD;
   const dataDir = path.join(__dirname, 'data');
@@ -27,17 +38,57 @@ const SITE_LASTMOD = (() => {
       if (m > newest) newest = m;
     }
   } catch { /* fall through to today */ }
-  return new Date(Math.min(newest || Date.now(), Date.now())).toISOString().slice(0, 10);
+  if (!(newest > MTIME_FLOOR)) newest = Date.now();
+  return new Date(Math.min(newest, Date.now())).toISOString().slice(0, 10);
 })();
 
 // The publishing entity, reused as the `publisher` of every Article node and
 // emitted standalone on the homepage so the archive resolves to one identity.
+//
+// The `@id` is the load-bearing part for entity recognition: it is a stable URI
+// that every one of the ~1,950 pages repeats, so a crawler merges 1,950 separate
+// `publisher` objects into one node instead of treating each page as published
+// by a coincidentally identically-named stranger. `alternateName` teaches it the
+// short name people actually search for.
+const ORG_ID = `${SITE_URL}/#organization`;
+const WEBSITE_ID = `${SITE_URL}/#website`;
+const SITE_TAGLINE = 'An independent archive of pre-1990 video game history: games, hardware, ' +
+  'developers, music, magazines and long-form essays on the arcade and home-computer era.';
 const ORG_SCHEMA = {
   '@type': 'Organization',
+  '@id': ORG_ID,
   name: SITE_NAME,
+  alternateName: 'Bosnan',
   url: `${SITE_URL}/`,
-  logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.svg` },
+  description: SITE_TAGLINE,
+  logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.svg`, contentUrl: `${SITE_URL}/logo.svg` },
 };
+
+// The two nodes that identify the site, serialised once and injected verbatim
+// on every page by the SEO middleware. A constant, not a per-page build: it is
+// byte-identical on all ~1,950 pages, which is exactly the repetition that
+// makes an entity legible.
+const SITE_IDENTITY_JSON = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    ORG_SCHEMA,
+    {
+      '@type': 'WebSite',
+      '@id': WEBSITE_ID,
+      name: SITE_NAME,
+      alternateName: 'Bosnan',
+      url: `${SITE_URL}/`,
+      description: SITE_TAGLINE,
+      inLanguage: 'en',
+      publisher: { '@id': ORG_ID },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/search?q={search_term_string}` },
+        'query-input': 'required name=search_term_string',
+      },
+    },
+  ],
+}).replace(/</g, '\u003c');
 
 // ── Retro news RSS fetcher ───────────────────────────────────────────────────
 
@@ -1256,6 +1307,35 @@ let cachedHomepage = { html: null, day: -1 };
 
 app.use(compression());
 
+// Host canonicalisation, for the one host Vercel will not canonicalise itself.
+// The site answered on three hostnames at once — bosnan.net, www.bosnan.net and
+// the bosnan.vercel.app deployment URL — each serving a full 200 of the same
+// ~1,950 pages. Vercel 301s between the custom domains it owns once one is set
+// as the Primary Domain, but it never redirects its own deployment URL, so
+// bosnan.vercel.app stayed a complete crawlable duplicate of the archive.
+//
+// Deliberately scoped to `*.vercel.app` ONLY. Redirecting www→apex here as well
+// would be redundant with Vercel's edge redirect and, while the dashboard still
+// has www as Primary, would fight it: Vercel 301s apex→www at the edge, this
+// 301s www→apex, and the browser loops until it gives up. Leave the custom
+// domains to the dashboard, which is the only place that knows which way round
+// they are currently pointed.
+//
+// Production only: preview deployments (VERCEL_ENV === 'preview') must keep
+// serving themselves, and local dev must not bounce to the live site.
+const CANONICAL_HOST_REDIRECT = process.env.VERCEL_ENV === 'production'
+  || process.env.CANONICAL_HOST_REDIRECT === '1';
+app.use((req, res, next) => {
+  if (!CANONICAL_HOST_REDIRECT) return next();
+  const host = (req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0].toLowerCase();
+  if (!host || host === SITE_HOST) return next();
+  // Production deployment URLs only. `*-git-*.vercel.app` preview hosts are
+  // already excluded by VERCEL_ENV above; this is the belt to that braces.
+  if (!/^bosnan(-[a-z0-9-]+)?\.vercel\.app$/.test(host)) return next();
+  if (/-git-|-[a-z0-9]{9}\./.test(host)) return next();
+  return res.redirect(301, `${SITE_URL}${req.originalUrl}`);
+});
+
 // Express matches routes case-insensitively, so /GAMES returned the /games hub
 // as a full 200 carrying its own self-referencing canonical — a duplicate of
 // every hub page for whatever casing a crawler happened to find. Redirect to
@@ -1822,6 +1902,16 @@ app.use((req, res, next) => {
       // Every og:image on the site is a wide screenshot or box shot, so the
       // large card is always the right treatment.
       if (!body.includes('name="twitter:card"')) extra += `\n    <meta name="twitter:card" content="summary_large_image">`;
+      // Site identity. The Organization/WebSite pair was asserted only on the
+      // homepage, and the ~10 hand-written page templates each decided for
+      // themselves whether to name a publisher — so most of the archive said
+      // nothing about who published it. A crawler cannot recognise an entity
+      // it is told about once. Emitting the same two `@id`-bearing nodes on
+      // every page is what lets 1,954 pages resolve to one publisher instead
+      // of 1,954 anonymous documents. Guarded like every other injection here,
+      // so a template that already references the entity wins.
+      if (!body.includes(ORG_ID)) extra += `
+    <script type="application/ld+json">${SITE_IDENTITY_JSON}</script>`;
       extra += autoSchema(cleanPath, body);
       if (extra) body = body.replace('</head>', `${extra}\n</head>`);
 
@@ -1987,7 +2077,7 @@ function autoSchema(cleanPath, body) {
       url: `${SITE_URL}/${slug}`,
       description: desc ? unescapeHtml(desc[1]) : undefined,
       mainEntity: hubItemList(slug, body),
-      isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: `${SITE_URL}/` },
+      isPartOf: { '@type': 'WebSite', '@id': WEBSITE_ID, name: SITE_NAME, url: `${SITE_URL}/` },
       publisher: ORG_SCHEMA,
     }).replace(/</g, '\\u003c');
     out += `\n    <script type="application/ld+json">${json}</script>`;
@@ -2050,6 +2140,13 @@ app.get('/', (req, res) => {
   res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
   res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
   res.send(cachedHomepage.html);
+});
+
+let cachedAboutHtml = null;
+app.get('/about', (req, res) => {
+  if (!cachedAboutHtml) cachedAboutHtml = aboutPage();
+  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+  res.send(cachedAboutHtml);
 });
 
 app.get('/game.html', (req, res) => {
@@ -2270,7 +2367,7 @@ function footerHtml() {
     ${cols}
   </div>
   <div class="footer-bottom">
-    <a href="/">${SITE_NAME}</a> &middot; <a href="/browse">All sections</a> &middot; <a href="/game.html">The Bosnan Game</a> &middot; <a href="/sitemap.xml">Sitemap</a>
+    <a href="/">${SITE_NAME}</a> &middot; <a href="/about">About</a> &middot; <a href="/browse">All sections</a> &middot; <a href="/game.html">The Bosnan Game</a> &middot; <a href="/sitemap.xml">Sitemap</a>
   </div>
 </footer>`;
   }
@@ -2315,7 +2412,7 @@ function buildCardHtml(list, eagerCount = 0) {
 // Kept in step with the Disallow list in robots.txt below.
 const SITEMAP_EXCLUDE = new Set(['/search', '/bookmarks']);
 
-app.get('/sitemap.xml', (req, res) => {
+function buildSitemapCache() {
   if (!cachedSitemap) {
     const base = SITE_URL;
     const today = SITE_LASTMOD;
@@ -2323,7 +2420,7 @@ app.get('/sitemap.xml', (req, res) => {
     // forgotten — minus the pages robots.txt disallows or that render nothing
     // server-side. Submitting a URL that robots.txt blocks is a Search Console
     // error, and /bookmarks is an empty shell filled from localStorage.
-    const staticUrls = ['', '/browse', '/game.html', ...NAV_GROUPS.flatMap(g => g.items.map(([, p]) => p))]
+    const staticUrls = ['', '/about', '/browse', '/game.html', ...NAV_GROUPS.flatMap(g => g.items.map(([, p]) => p))]
       .filter(p => !SITEMAP_EXCLUDE.has(p)).map(p => `
   <url>
     <loc>${base}${p}</loc>
@@ -2788,15 +2885,74 @@ app.get('/sitemap.xml', (req, res) => {
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>`).join('');
-    cachedSitemap = {
-      xml: `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${designerUrls}${publisherUrls}${arcadeBoardUrls}${peripheralUrls}${lostGameUrls}${regionalUrls}${genreUrls}${essayUrls}${yearUrls}${decadeUrls}${magazineUrls}${boxArtUrls}${portUrls}${voiceActorUrls}${pixelArtistUrls}${producerUrls}${collectionUrls}${controversyUrls}${failedConsoleUrls}${gameEngineUrls}${soundChipUrls}${easterEggUrls}${cheatCodeUrls}${sequelUrls}${romHackUrls}${adCampaignUrls}${speedrunUrls}${criticUrls}${cancelledUrls}${localizationUrls}${prototypeUrls}${strategyGuideUrls}${cabinetArtUrls}${merchandiseUrls}${bootlegUrls}${competitiveUrls}${endingUrls}${bossfightUrls}${soundtrackUrls}${manualUrls}${difficultyUrls}${characterUrls}${coverStoryUrls}${controllerUrls}${disappointmentUrls}${levelUrls}${urbanLegendUrls}${glitchUrls}${packagingUrls}${multiplayerUrls}${comicUrls}${studioUrls}${importUrls}${speedrunTechUrls}${famousBugUrls}${retroRevivalUrls}${soundEffectUrls}${salesFigureUrls}${gameUrls}
-</urlset>`,
-    };
+    // One 1,953-URL sitemap is valid but tells you nothing: Search Console
+    // reports coverage per submitted sitemap, so a single file can only ever
+    // say "1,400 indexed, 553 not" with no clue which kind of page is failing.
+    // Split into a sitemap index of six themed children and the same report
+    // becomes per-section. /sitemap.xml stays the index, so a sitemap already
+    // submitted to Search Console keeps working without resubmission.
+    const GROUPS = [
+      ['core', [staticUrls]],
+      ['games', [gameUrls]],
+      ['hardware', [platformUrls, hardwareUrls, arcadeBoardUrls, peripheralUrls, controllerUrls,
+        soundChipUrls, gameEngineUrls, failedConsoleUrls, packagingUrls]],
+      ['people', [developerUrls, publisherUrls, studioUrls, composerUrls, designerUrls,
+        producerUrls, voiceActorUrls, pixelArtistUrls, criticUrls, characterUrls]],
+      ['writing', [essayUrls, yearUrls, decadeUrls, magazineUrls, coverStoryUrls,
+        strategyGuideUrls, manualUrls, comicUrls]],
+      ['catalogue', [franchiseUrls, lostGameUrls, regionalUrls, genreUrls, boxArtUrls, portUrls,
+        collectionUrls, controversyUrls, easterEggUrls, cheatCodeUrls, sequelUrls, romHackUrls,
+        adCampaignUrls, speedrunUrls, cancelledUrls, localizationUrls, prototypeUrls,
+        cabinetArtUrls, merchandiseUrls, bootlegUrls, competitiveUrls, endingUrls, bossfightUrls,
+        soundtrackUrls, difficultyUrls, disappointmentUrls, levelUrls, urbanLegendUrls,
+        glitchUrls, multiplayerUrls, importUrls, speedrunTechUrls, famousBugUrls,
+        retroRevivalUrls, soundEffectUrls, salesFigureUrls]],
+    ];
+    // The flat form is still the source of truth. A section added to the data
+    // but forgotten in GROUPS would silently vanish from the sitemap — the exact
+    // way sales-figures went unlisted before — so count both and fall back to
+    // the single-file sitemap rather than publish a lossy index.
+    const flat = `${staticUrls}${platformUrls}${developerUrls}${composerUrls}${franchiseUrls}${hardwareUrls}${designerUrls}${publisherUrls}${arcadeBoardUrls}${peripheralUrls}${lostGameUrls}${regionalUrls}${genreUrls}${essayUrls}${yearUrls}${decadeUrls}${magazineUrls}${boxArtUrls}${portUrls}${voiceActorUrls}${pixelArtistUrls}${producerUrls}${collectionUrls}${controversyUrls}${failedConsoleUrls}${gameEngineUrls}${soundChipUrls}${easterEggUrls}${cheatCodeUrls}${sequelUrls}${romHackUrls}${adCampaignUrls}${speedrunUrls}${criticUrls}${cancelledUrls}${localizationUrls}${prototypeUrls}${strategyGuideUrls}${cabinetArtUrls}${merchandiseUrls}${bootlegUrls}${competitiveUrls}${endingUrls}${bossfightUrls}${soundtrackUrls}${manualUrls}${difficultyUrls}${characterUrls}${coverStoryUrls}${controllerUrls}${disappointmentUrls}${levelUrls}${urbanLegendUrls}${glitchUrls}${packagingUrls}${multiplayerUrls}${comicUrls}${studioUrls}${importUrls}${speedrunTechUrls}${famousBugUrls}${retroRevivalUrls}${soundEffectUrls}${salesFigureUrls}${gameUrls}`;
+    const countLocs = str => (str.match(/<loc>/g) || []).length;
+    const grouped = GROUPS.map(([name, parts]) => [name, parts.join('')]);
+    const complete = grouped.reduce((n, [, xml]) => n + countLocs(xml), 0) === countLocs(flat);
+    if (!complete) console.warn('[sitemap] group split is lossy — serving the single-file sitemap');
+
+    const wrap = body => `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">${body}
+</urlset>`;
+
+    const children = new Map(grouped.map(([name, xml]) => [name, wrap(xml)]));
+    const index = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${grouped.map(([name]) => `
+  <sitemap>
+    <loc>${base}/sitemaps/${name}.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>`).join('')}
+</sitemapindex>`;
+
+    cachedSitemap = complete
+      ? { xml: index, type: 'index', children }
+      : { xml: wrap(flat), type: 'urlset', children: new Map() };
   }
+}
+
+app.get('/sitemap.xml', (req, res) => {
+  buildSitemapCache();
   res.header('Content-Type', 'application/xml');
   res.set('Cache-Control', 'public, max-age=86400');
   res.send(cachedSitemap.xml);
+});
+
+// Children of the sitemap index. Reuses the same cache, so hitting a child
+// cold builds the whole set once.
+app.get('/sitemaps/:name.xml', (req, res, next) => {
+  if (!cachedSitemap) buildSitemapCache();
+  const xml = cachedSitemap.children.get(req.params.name);
+  if (!xml) return next();
+  res.header('Content-Type', 'application/xml');
+  res.set('Cache-Control', 'public, max-age=86400');
+  res.send(xml);
 });
 
 app.get('/robots.txt', (req, res) => {
@@ -4000,7 +4156,7 @@ function browsePage() {
       '@type': 'CollectionPage',
       name: `Browse All ${total} Sections`,
       url: `${SITE_URL}/browse`,
-      isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: `${SITE_URL}/` },
+      isPartOf: { '@type': 'WebSite', '@id': WEBSITE_ID, name: SITE_NAME, url: `${SITE_URL}/` },
       publisher: ORG_SCHEMA,
       mainEntity: {
         '@type': 'ItemList',
@@ -4034,6 +4190,117 @@ ${toggleScript()}
 </html>`;
 }
 
+// The site had no page that said what it is or who publishes it. That is the
+// gap behind "no recognized entity for bosnan.net": an entity is recognised
+// from a page that states its scope, method and identity, corroborated by the
+// same `@id` on every other page. Everything stated here is checkable against
+// the archive itself — no claims about people or affiliations that the data
+// cannot back.
+function aboutPage() {
+  const sections = NAV_GROUPS.reduce((n, g) => n + g.items.length, 0);
+  const desc = `Bosnan is an independent, non-commercial archive of pre-1990 video game history — `
+    + `${games.length} game entries, ${ESSAYS.length} essays and ${sections} reference sections `
+    + `covering hardware, developers, music and the arcade era.`;
+  const schema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'AboutPage',
+        '@id': `${SITE_URL}/about#page`,
+        name: `About ${SITE_NAME}`,
+        url: `${SITE_URL}/about`,
+        description: desc,
+        inLanguage: 'en',
+        isPartOf: { '@id': WEBSITE_ID },
+        about: { '@id': ORG_ID },
+        mainEntity: { '@id': ORG_ID },
+        publisher: { '@id': ORG_ID },
+      },
+      {
+        ...ORG_SCHEMA,
+        description: desc,
+        knowsAbout: [
+          'Retro video games', 'Arcade games', 'Video game history',
+          'Home computer games', '8-bit consoles', 'Video game music',
+          'Video game preservation',
+        ],
+        mainEntityOfPage: { '@id': `${SITE_URL}/about#page` },
+      },
+    ],
+  }).replace(/</g, '\u003c');
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Bosnan — An Independent Retro Game History Archive</title>
+    <meta name="description" content="${escapeHtml(desc)}">
+    <script type="application/ld+json">${schema}</script>
+    ${breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }])}
+    ${cssHead()}
+</head>
+<body>
+${bgLogo()}
+${nav('about')}
+<section class="platforms-hero">
+    <h1>About Bosnan</h1>
+    <p>An independent archive of video game history before 1990</p>
+</section>
+<div class="essay-wrapper">
+  <p><strong>Bosnan</strong> is a free, independent, non-commercial reference archive for the
+  first three decades of video games — the mainframe experiments of the 1960s, the arcade boom,
+  the 8-bit home consoles and the home-computer scenes that grew up beside them.</p>
+
+  <h2>What is in the archive</h2>
+  <p>The archive currently holds <strong>${games.length} game entries</strong> and
+  <strong>${ESSAYS.length} long-form essays</strong>, organised into
+  <strong>${sections} reference sections</strong>. Alongside the games themselves it documents the
+  things around them that are usually lost first: the
+  <a href="/arcade-boards">arcade boards</a> and <a href="/sound-chips">sound chips</a> the games
+  ran on, the <a href="/developers">developers</a>, <a href="/composers">composers</a> and
+  <a href="/pixel-artists">pixel artists</a> who made them, the
+  <a href="/magazines">magazines</a> that reviewed them, and the
+  <a href="/cancelled">cancelled projects</a>, <a href="/prototypes">prototypes</a> and
+  <a href="/lost-games">lost games</a> that never reached anyone at all.</p>
+  <p><a href="/browse">Browse all ${sections} sections &#8594;</a></p>
+
+  <h2>Scope</h2>
+  <p>The cut-off is roughly 1990. A title qualifies if it was released, announced or credibly
+  documented before then; hardware, people and publications qualify if their significant work
+  falls in the same window. Later material appears only where it is directly about that era —
+  a <a href="/retro-revival">revival</a>, a re-release, or a <a href="/rom-hacks">ROM hack</a>
+  of a game the archive already covers.</p>
+
+  <h2>How entries are written</h2>
+  <p>Every entry is written for this site rather than syndicated. Entries are cross-referenced:
+  a game links to its developer, platform, genre and franchise, and those pages link back, so the
+  archive can be read as a network rather than a list. Where an entry draws on a specific
+  published source, that source is named on the entry itself.</p>
+  <p>Corrections are welcome and wanted. Retro gaming history is full of figures that get copied
+  between sites without anyone checking them, and this archive is not immune to that.</p>
+
+  <h2>Independence</h2>
+  <p>Bosnan is not affiliated with, endorsed by, or sponsored by any game publisher, hardware
+  manufacturer or rights holder mentioned in the archive. Company names, game titles and
+  trademarks belong to their respective owners and are used here for identification and
+  commentary. The archive does not host or distribute game ROMs.</p>
+  <p>There is no advertising, no paywall, no tracking beyond what the host records, and nothing
+  for sale.</p>
+
+  <h2>The Bosnan Game</h2>
+  <p>The site also hosts <a href="/game.html">The Bosnan Game</a>, an original game that gave the
+  project its name. It is not part of the historical archive.</p>
+
+  <h2>Start here</h2>
+  <p>New readers usually start with the <a href="/games">game index</a>, the
+  <a href="/platforms">platform histories</a>, or the <a href="/essays">essays</a>.
+  <a href="/random">A random game</a> works too.</p>
+</div>
+${toggleScript()}
+</body>
+</html>`;
+}
+
 function homepagePage(gotd) {
   const gotdHref = `/games/${gotd.id}`;
   const gotdImgSrc = `/${escapeHtml(gotd.image)}`;
@@ -4042,14 +4309,18 @@ function homepagePage(gotd) {
   const websiteSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': WEBSITE_ID,
     name: SITE_NAME,
+    alternateName: 'Bosnan',
     url: `${SITE_URL}/`,
+    description: SITE_TAGLINE,
+    inLanguage: 'en',
     potentialAction: {
       '@type': 'SearchAction',
       target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/search?q={search_term_string}` },
       'query-input': 'required name=search_term_string',
     },
-    publisher: ORG_SCHEMA,
+    publisher: { '@id': ORG_ID },
   });
   const orgSchema = JSON.stringify({ '@context': 'https://schema.org', ...ORG_SCHEMA });
 
@@ -4903,7 +5174,7 @@ function essayDetailPage(essay) {
     description: essay.summary,
     articleSection: categoryLabel,
     url: `${SITE_URL}/essays/${essay.id}`,
-    publisher: { '@type': 'Organization', name: SITE_NAME, url: `${SITE_URL}/` },
+    publisher: ORG_SCHEMA,
   });
 
   return `<!DOCTYPE html>
