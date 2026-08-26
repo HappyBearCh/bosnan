@@ -7,7 +7,7 @@ const https = require('https');
 const http = require('http');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Canonical origin for SEO tags (sitemap, canonical, og:url) and the host every
 // other spelling of the site 301s to. This MUST be the domain the site is meant
@@ -1187,7 +1187,6 @@ const cachedPeripheralPageHtml = {};
 const cachedLostGamePageHtml = {};
 const cachedDecadePageHtml = {};
 const cachedEssayPageHtml = {};
-let cachedGameLauncherHtml = null;
 const cachedPlatformPageHtml = {};
 const cachedGenrePageHtml = {};
 const cachedDeveloperPageHtml = {};
@@ -1340,8 +1339,8 @@ app.use((req, res, next) => {
 // as a full 200 carrying its own self-referencing canonical — a duplicate of
 // every hub page for whatever casing a crawler happened to find. Redirect to
 // the lowercase form, which is what every route, id and sitemap entry uses.
-// Paths with a file extension are left alone: /BosnanGame.jar is genuinely
-// mixed-case on disk, and /images/* is served by express.static.
+// Paths with a file extension are left alone: /images/* is served by
+// express.static, whose filenames are case-sensitive on disk.
 app.use((req, res, next) => {
   if (!req.path.includes('.') && req.path !== req.path.toLowerCase()) {
     return res.redirect(301, req.path.toLowerCase() + req.originalUrl.slice(req.path.length));
@@ -2149,14 +2148,11 @@ app.get('/about', (req, res) => {
   res.send(cachedAboutHtml);
 });
 
-app.get('/game.html', (req, res) => {
-  if (!cachedGameLauncherHtml) cachedGameLauncherHtml = gameLauncherPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedGameLauncherHtml);
-});
-
 // Legacy static URLs → canonical routes (avoid duplicate content)
 app.get('/games.html', (req, res) => res.redirect(301, '/games'));
+// /game.html hosted the Bosnan game launcher, since removed. The URL is
+// indexed, so it redirects rather than 404s.
+app.get('/game.html', (req, res) => res.redirect(301, '/'));
 
 // Only the assets the site actually uses are exposed. Serving __dirname
 // wholesale also exposed server.js, data/, scripts/, and node_modules.
@@ -2166,10 +2162,9 @@ app.use('/images', express.static(path.join(__dirname, 'images'), {
   },
 }));
 
-app.get(['/logo.svg', '/launcher.js', '/BosnanGame.jar'], (req, res) => {
-  const maxAge = req.path === '/launcher.js' ? 3600 : 2592000;
-  res.set('Cache-Control', `public, max-age=${maxAge}, stale-while-revalidate=86400`);
-  res.sendFile(path.join(__dirname, req.path.slice(1)));
+app.get('/logo.svg', (req, res) => {
+  res.set('Cache-Control', 'public, max-age=2592000, stale-while-revalidate=86400');
+  res.sendFile(path.join(__dirname, 'logo.svg'));
 });
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
@@ -2328,7 +2323,8 @@ function nav(active) {
             ${group.items.map(([id, href, label]) => link(href, label, id)).join('\n            ')}
           </div>`).join('\n          ');
   const inGroup = NAV_GROUPS.some(g => g.items.some(([id]) => id === active));
-  return `<nav>
+  return `<a class="skip-link" href="#main">Skip to content</a>
+<nav>
     <a href="/" class="nav-logo" aria-label="Bosnan home"><img src="/logo.svg" alt="Bosnan logo" width="50" height="50"></a>
     <button class="menu-toggle" onclick="toggleMenu()" id="menuToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -2346,13 +2342,13 @@ function nav(active) {
             <a href="/browse" class="nav-mega-all">All sections A&ndash;Z &#8594;</a>
           </div>
         </details>
-        ${link('/game.html', 'The Game', 'game')}
         <a href="/random" class="nav-random">&#127922; Random</a>
         <form class="nav-search" action="/search" method="GET" role="search">
             <input type="search" name="q" placeholder="Search&#8230;" aria-label="Search the archive">
         </form>
     </div>
-</nav>`;
+</nav>
+<span id="main" tabindex="-1"></span>`;
 }
 
 let cachedFooterHtml = null;
@@ -2367,7 +2363,7 @@ function footerHtml() {
     ${cols}
   </div>
   <div class="footer-bottom">
-    <a href="/">${SITE_NAME}</a> &middot; <a href="/about">About</a> &middot; <a href="/browse">All sections</a> &middot; <a href="/game.html">The Bosnan Game</a> &middot; <a href="/sitemap.xml">Sitemap</a>
+    <a href="/">${SITE_NAME}</a> &middot; <a href="/about">About</a> &middot; <a href="/browse">All sections</a> &middot; <a href="/sitemap.xml">Sitemap</a>
   </div>
 </footer>`;
   }
@@ -2420,7 +2416,7 @@ function buildSitemapCache() {
     // forgotten — minus the pages robots.txt disallows or that render nothing
     // server-side. Submitting a URL that robots.txt blocks is a Search Console
     // error, and /bookmarks is an empty shell filled from localStorage.
-    const staticUrls = ['', '/about', '/browse', '/game.html', ...NAV_GROUPS.flatMap(g => g.items.map(([, p]) => p))]
+    const staticUrls = ['', '/about', '/browse', ...NAV_GROUPS.flatMap(g => g.items.map(([, p]) => p))]
       .filter(p => !SITEMAP_EXCLUDE.has(p)).map(p => `
   <url>
     <loc>${base}${p}</loc>
@@ -4287,10 +4283,6 @@ ${nav('about')}
   <p>There is no advertising, no paywall, no tracking beyond what the host records, and nothing
   for sale.</p>
 
-  <h2>The Bosnan Game</h2>
-  <p>The site also hosts <a href="/game.html">The Bosnan Game</a>, an original game that gave the
-  project its name. It is not part of the historical archive.</p>
-
   <h2>Start here</h2>
   <p>New readers usually start with the <a href="/games">game index</a>, the
   <a href="/platforms">platform histories</a>, or the <a href="/essays">essays</a>.
@@ -4408,13 +4400,6 @@ ${nav('home')}
     <a href="/genres" class="enc-browse-btn">Browse all 10 genres &#8594;</a>
 </div>
 
-<div class="bosnan-game-promo">
-    <h2>The Bosnan Game</h2>
-    <p>Before empires, before kings, before history itself — there was Bosnan. Born of the ancient Dragon Zmaj and the mystical Fairy Vila Bosanska, the eternal dragon-blooded guardian walks through time once more.</p>
-    <p>Play the original Bosnan game — free, for Windows (Java 17+).</p>
-    <a href="/game.html" class="btn">Enter the Game</a>
-</div>
-
 <script>
 (function() {
   function timeAgo(iso) {
@@ -4451,83 +4436,6 @@ ${nav('home')}
 </script>
 
 ${toggleScript()}
-</body>
-</html>`;
-}
-
-function gameLauncherPage() {
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Bosnan Game – Free Action Game for Windows</title>
-    <meta name="description" content="Play Bosnan, the eternal dragon-blooded guardian — a free Java action game for Windows. Download the JAR and start playing.">
-    <script type="application/ld+json">${JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'VideoGame',
-      name: 'Bosnan',
-      alternateName: 'The Bosnan Game',
-      url: `${SITE_URL}/game.html`,
-      description: 'Bosnan, the eternal dragon-blooded guardian — a free Java action game for Windows.',
-      genre: 'Action',
-      gamePlatform: 'PC (Windows)',
-      applicationCategory: 'GameApplication',
-      operatingSystem: 'Windows, Java 17+',
-      softwareRequirements: 'Java Runtime Environment 17 or later',
-      installUrl: `${SITE_URL}/BosnanGame.jar`,
-      downloadUrl: `${SITE_URL}/BosnanGame.jar`,
-      screenshot: [1, 2, 3].map(n => `${SITE_URL}/images/screenshot${n}.png`),
-      publisher: ORG_SCHEMA,
-      // A free download still needs an Offer node for the price to be stated.
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock' },
-    }).replace(/</g, '\\u003c')}</script>
-    ${breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'The Bosnan Game', path: '/game.html' }])}
-    ${cssHead()}
-</head>
-<body>
-${bgLogo()}
-${nav('game')}
-
-<section class="hero">
-    <h1>BOSNAN</h1>
-    <p>The Eternal Dragon-Blooded Guardian</p>
-</section>
-
-<section class="section">
-    <h2>The Legend</h2>
-    <p>Before empires, before kings, before history itself - there was Bosnan.</p>
-    <p>Born of the ancient Dragon Zmaj and the mystical Fairy Vila Bosanska, Bosnan walks through time as an immortal guardian. His blood burns with fire, his spirit moves like the wind.</p>
-    <p>He fought Romans. He shattered invaders in the Middle Ages. He rose again against empires and darkness across centuries.</p>
-    <p>Now, a new evil walks the earth — degenerate human hunters who prey on the innocent. But they are no longer the hunters.</p>
-    <p style="color:red;">Bosnan has returned.</p>
-</section>
-
-<section class="section">
-    <h2>Gameplay</h2>
-    <div class="gallery">
-        <img src="/images/screenshot1.png" loading="lazy" alt="Bosnan gameplay screenshot: the guardian in battle">
-        <img src="/images/screenshot2.png" loading="lazy" alt="Bosnan gameplay screenshot: exploring the world">
-        <img src="/images/screenshot3.png" loading="lazy" alt="Bosnan gameplay screenshot: combat encounter">
-    </div>
-</section>
-
-<section class="section">
-    <h2>Launch Bosnan</h2>
-    <p>Download the <strong>JAR file</strong>, double-click it, and start playing!</p>
-    <p>The minimum Java version required is <strong>17</strong>.</p>
-    <p>If Java is not installed on your Windows system, you can download it <a href="https://api.adoptium.net/v3/binary/latest/21/ga/windows/x64/jre/hotspot/normal/eclipse" target="_blank" rel="noopener">here</a>.</p>
-    <div class="launcher">
-        <button class="btn" onclick="launch()">Launch Game</button>
-        <div class="progress">
-            <div class="bar" id="bar"></div>
-        </div>
-        <p id="status"></p>
-    </div>
-</section>
-
-${toggleScript()}
-<script src="/launcher.js" defer></script>
 </body>
 </html>`;
 }
@@ -4584,6 +4492,7 @@ ${nav('games')}
 
 <div class="games-count" id="gamesCount">${gamesSlim.length} games in archive</div>
 
+<h2 class="sr-only">All games</h2>
 <div class="games-grid" id="gamesGrid">${cardHtml}
 </div>
 <div id="loadMoreSentinel" style="height:1px"></div>
@@ -5115,7 +5024,7 @@ function essaysListPage() {
       </div>
     </a>`).join('');
     return `<div class="essays-category-section">
-  <h3 class="essays-category-heading">${escapeHtml(label)}</h3>
+  <h2 class="essays-category-heading">${escapeHtml(label)}</h2>
   <div class="essays-grid">${cards}
   </div>
 </div>`;
@@ -5722,12 +5631,12 @@ function yearDetailPage(year, review) {
     ({ id, title, year: y, decade, genre, platform, developer, image, playUrl: playUrl || null })
   ));
   const reviewHtml = review ? `
-  <div style="border-bottom:1px solid #333;padding-bottom:2rem;margin-bottom:2rem">
-    <h2 style="color:var(--accent,#c8a44a);font-size:1.4em;margin-bottom:0.5rem">${escapeHtml(review.headline)}</h2>
-    <p style="color:#ccc;line-height:1.7;margin-bottom:1.2rem">${escapeHtml(review.summary)}</p>
-    ${(review.topEvents || []).length ? `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0.8rem;margin-bottom:1.5rem">${review.topEvents.map(e => `<div style="background:rgba(255,255,255,0.04);border-radius:6px;padding:0.8rem 1rem"><div style="font-weight:700;margin-bottom:0.3rem;font-size:0.9em">${escapeHtml(e.title)}</div><div style="color:#bbb;font-size:0.85em;line-height:1.5">${escapeHtml(e.desc)}</div></div>`).join('')}</div>` : ''}
-    ${(review.sections || []).map(s => `<div style="margin-bottom:1.5rem"><h3 style="margin-bottom:0.6rem">${escapeHtml(s.title)}</h3><div style="color:#ccc;line-height:1.7">${s.html}</div></div>`).join('')}
-    ${review.quote ? `<blockquote style="border-left:3px solid var(--accent,#c8a44a);padding-left:1rem;margin:1rem 0;color:#aaa;font-style:italic">${escapeHtml(review.quote)}</blockquote>` : ''}
+  <div style="border-bottom:1px solid var(--border);padding-bottom:2rem;margin-bottom:2rem">
+    <h2 style="color:var(--accent);font-size:1.4em;margin-bottom:0.5rem">${escapeHtml(review.headline)}</h2>
+    <p style="color:var(--text-secondary);line-height:1.7;margin-bottom:1.2rem">${escapeHtml(review.summary)}</p>
+    ${(review.topEvents || []).length ? `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0.8rem;margin-bottom:1.5rem">${review.topEvents.map(e => `<div style="background:rgba(255,255,255,0.04);border-radius:6px;padding:0.8rem 1rem"><div style="font-weight:700;margin-bottom:0.3rem;font-size:0.9em">${escapeHtml(e.title)}</div><div style="color:var(--text-secondary);font-size:0.85em;line-height:1.5">${escapeHtml(e.desc)}</div></div>`).join('')}</div>` : ''}
+    ${(review.sections || []).map(s => `<div style="margin-bottom:1.5rem"><h3 style="margin-bottom:0.6rem">${escapeHtml(s.title)}</h3><div style="color:var(--text-secondary);line-height:1.7">${s.html}</div></div>`).join('')}
+    ${review.quote ? `<blockquote style="border-left:3px solid var(--accent);padding-left:1rem;margin:1rem 0;color:var(--text-muted);font-style:italic">${escapeHtml(review.quote)}</blockquote>` : ''}
   </div>` : '';
   return `<!DOCTYPE html>
 <html lang="en">
@@ -6137,6 +6046,7 @@ ${nav('decades')}
     <h1>${escapeHtml(decade)}</h1>
     <p>${dGames.length} game${dGames.length !== 1 ? 's' : ''} in the archive from this decade</p>
 </section>
+<h2 class="sr-only">Games from the ${escapeHtml(decade)}</h2>
 <div class="games-grid" id="gamesGrid">${cardHtml}</div>
 <div id="loadMoreSentinel" style="height:1px"></div>
 ${toggleScript()}
@@ -6227,14 +6137,14 @@ function familyTreePage() {
   const sectionsHtml = lineages.map(l => `
     <div class="essay-section">
       <h2>${escapeHtml(l.name)}</h2>
-      <p style="color:var(--text-muted,#aaa);margin-bottom:1.2rem">${escapeHtml(l.desc)}</p>
+      <p style="color:var(--text-muted);margin-bottom:1.2rem">${escapeHtml(l.desc)}</p>
       <div style="display:flex;flex-direction:column;gap:0.6rem">
         ${l.entries.map(e => `
         <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:0.8rem;align-items:center;background:rgba(255,255,255,0.04);border-radius:6px;padding:0.8rem 1rem">
-          <div style="font-weight:600;color:var(--accent,#c8a44a)">${escapeHtml(e.from)}</div>
-          <div style="font-size:1.4em;color:var(--text-muted,#888)">${escapeHtml(e.arrow)}</div>
+          <div style="font-weight:600;color:var(--accent)">${escapeHtml(e.from)}</div>
+          <div style="font-size:1.4em;color:var(--text-muted)">${escapeHtml(e.arrow)}</div>
           <div style="font-weight:600">${escapeHtml(e.to)}</div>
-          ${e.note ? `<div style="grid-column:1/-1;font-size:0.85em;color:var(--text-muted,#999);padding-top:0.3rem">${escapeHtml(e.note)}</div>` : ''}
+          ${e.note ? `<div style="grid-column:1/-1;font-size:0.85em;color:var(--text-muted);padding-top:0.3rem">${escapeHtml(e.note)}</div>` : ''}
         </div>`).join('')}
       </div>
     </div>`).join('');
@@ -6269,14 +6179,14 @@ function comparePage(a, b) {
   const opts2 = PLATFORMS.map(p => `<option value="${escapeHtml(p.id)}"${b && b.id === p.id ? ' selected' : ''}>${escapeHtml(p.name)}</option>`).join('');
   const formHtml = `<div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:2rem">
     <form method="GET" action="/compare" style="display:flex;gap:0.8rem;align-items:center;flex-wrap:wrap">
-      <select name="a" style="background:#1a1a1a;color:#fff;border:1px solid #444;padding:0.5rem 0.8rem;border-radius:4px;font-size:1rem">
+      <select name="a" style="background:var(--surface-2);color:var(--text);border:1px solid var(--border-strong);padding:0.5rem 0.8rem;border-radius:4px;font-size:1rem">
         <option value="">Select platform A…</option>${opts}
       </select>
-      <span style="color:#888;font-size:1.2em">vs</span>
-      <select name="b" style="background:#1a1a1a;color:#fff;border:1px solid #444;padding:0.5rem 0.8rem;border-radius:4px;font-size:1rem">
+      <span style="color:var(--text-muted);font-size:1.2em">vs</span>
+      <select name="b" style="background:var(--surface-2);color:var(--text);border:1px solid var(--border-strong);padding:0.5rem 0.8rem;border-radius:4px;font-size:1rem">
         <option value="">Select platform B…</option>${opts2}
       </select>
-      <button type="submit" style="background:var(--accent,#c8a44a);color:#000;border:none;padding:0.5rem 1.2rem;border-radius:4px;font-size:1rem;cursor:pointer;font-weight:700">Compare</button>
+      <button type="submit" style="background:var(--accent);color:#000;border:none;padding:0.5rem 1.2rem;border-radius:4px;font-size:1rem;cursor:pointer;font-weight:700">Compare</button>
     </form>
   </div>`;
 
@@ -6289,20 +6199,20 @@ function comparePage(a, b) {
     ];
     const aCount = (platformGamesIndex.get(a.id) || []).length;
     const bCount = (platformGamesIndex.get(b.id) || []).length;
-    tableHtml = `<div style="display:grid;grid-template-columns:200px 1fr 1fr;gap:0;border:1px solid #333;border-radius:8px;overflow:hidden">
-      <div style="background:#111;padding:0.8rem 1rem;font-weight:700;border-bottom:1px solid #333"></div>
-      <div style="background:#111;padding:0.8rem 1rem;font-weight:700;color:var(--accent,#c8a44a);border-bottom:1px solid #333;border-left:1px solid #333">${escapeHtml(a.name)}</div>
-      <div style="background:#111;padding:0.8rem 1rem;font-weight:700;color:var(--accent,#c8a44a);border-bottom:1px solid #333;border-left:1px solid #333">${escapeHtml(b.name)}</div>
+    tableHtml = `<div style="display:grid;grid-template-columns:200px 1fr 1fr;gap:0;border:1px solid var(--border);border-radius:8px;overflow:hidden">
+      <div style="background:var(--surface-1);padding:0.8rem 1rem;font-weight:700;border-bottom:1px solid var(--border)"></div>
+      <div style="background:var(--surface-1);padding:0.8rem 1rem;font-weight:700;color:var(--accent);border-bottom:1px solid var(--border);border-left:1px solid var(--border)">${escapeHtml(a.name)}</div>
+      <div style="background:var(--surface-1);padding:0.8rem 1rem;font-weight:700;color:var(--accent);border-bottom:1px solid var(--border);border-left:1px solid var(--border)">${escapeHtml(b.name)}</div>
       ${fields.map(([label, key]) => `
-      <div style="padding:0.8rem 1rem;border-bottom:1px solid #222;font-weight:600;font-size:0.9em;color:#999">${escapeHtml(label)}</div>
-      <div style="padding:0.8rem 1rem;border-bottom:1px solid #222;border-left:1px solid #222;font-size:0.9em">${escapeHtml((a[key] || '').substring(0, 200))}</div>
-      <div style="padding:0.8rem 1rem;border-bottom:1px solid #222;border-left:1px solid #222;font-size:0.9em">${escapeHtml((b[key] || '').substring(0, 200))}</div>`).join('')}
-      <div style="padding:0.8rem 1rem;font-weight:600;font-size:0.9em;color:#999">Games in Archive</div>
-      <div style="padding:0.8rem 1rem;border-left:1px solid #222;font-size:0.9em;font-weight:700">${aCount}</div>
-      <div style="padding:0.8rem 1rem;border-left:1px solid #222;font-size:0.9em;font-weight:700">${bCount}</div>
+      <div style="padding:0.8rem 1rem;border-bottom:1px solid var(--surface-3);font-weight:600;font-size:0.9em;color:var(--text-muted)">${escapeHtml(label)}</div>
+      <div style="padding:0.8rem 1rem;border-bottom:1px solid var(--surface-3);border-left:1px solid var(--surface-3);font-size:0.9em">${escapeHtml((a[key] || '').substring(0, 200))}</div>
+      <div style="padding:0.8rem 1rem;border-bottom:1px solid var(--surface-3);border-left:1px solid var(--surface-3);font-size:0.9em">${escapeHtml((b[key] || '').substring(0, 200))}</div>`).join('')}
+      <div style="padding:0.8rem 1rem;font-weight:600;font-size:0.9em;color:var(--text-muted)">Games in Archive</div>
+      <div style="padding:0.8rem 1rem;border-left:1px solid var(--surface-3);font-size:0.9em;font-weight:700">${aCount}</div>
+      <div style="padding:0.8rem 1rem;border-left:1px solid var(--surface-3);font-size:0.9em;font-weight:700">${bCount}</div>
     </div>
-    ${a.longDescription ? `<div style="margin-top:2rem"><h3 style="margin-bottom:0.5rem">${escapeHtml(a.name)}</h3><p style="color:#bbb;line-height:1.7">${escapeHtml(a.longDescription.substring(0, 600))}…</p></div>` : ''}
-    ${b.longDescription ? `<div style="margin-top:1.5rem"><h3 style="margin-bottom:0.5rem">${escapeHtml(b.name)}</h3><p style="color:#bbb;line-height:1.7">${escapeHtml(b.longDescription.substring(0, 600))}…</p></div>` : ''}`;
+    ${a.longDescription ? `<div style="margin-top:2rem"><h3 style="margin-bottom:0.5rem">${escapeHtml(a.name)}</h3><p style="color:var(--text-secondary);line-height:1.7">${escapeHtml(a.longDescription.substring(0, 600))}…</p></div>` : ''}
+    ${b.longDescription ? `<div style="margin-top:1.5rem"><h3 style="margin-bottom:0.5rem">${escapeHtml(b.name)}</h3><p style="color:var(--text-secondary);line-height:1.7">${escapeHtml(b.longDescription.substring(0, 600))}…</p></div>` : ''}`;
   }
 
   return `<!DOCTYPE html>
@@ -6375,9 +6285,9 @@ function searchPage(q) {
       matchedDevs.length + matchedDesigners.length + matchedComposers.length + matchedPublishers.length;
 
     if (total === 0) {
-      resultsHtml = `<p style="color:#888;margin-top:2rem">No results found for "<strong>${escapeHtml(q)}</strong>".</p>`;
+      resultsHtml = `<p style="color:var(--text-muted);margin-top:2rem">No results found for "<strong>${escapeHtml(q)}</strong>".</p>`;
     } else {
-      resultsHtml = `<p style="color:#888;margin-bottom:1.5rem">${total} result${total !== 1 ? 's' : ''} for "<strong>${escapeHtml(q)}</strong>"</p>`;
+      resultsHtml = `<p style="color:var(--text-muted);margin-bottom:1.5rem">${total} result${total !== 1 ? 's' : ''} for "<strong>${escapeHtml(q)}</strong>"</p>`;
 
       if (matchedGames.length) {
         resultsHtml += `<h2 style="margin-bottom:1rem">Games (${matchedGames.length})</h2>
@@ -6418,8 +6328,8 @@ ${nav('search')}
   </div>
   <form method="GET" action="/search" style="display:flex;gap:0.8rem;margin-bottom:2rem;max-width:600px">
     <input type="text" name="q" value="${escapeHtml(q)}" placeholder="Search games, essays, people, platforms…"
-      autofocus style="flex:1;background:#1a1a1a;color:#fff;border:1px solid #444;padding:0.6rem 1rem;border-radius:4px;font-size:1rem">
-    <button type="submit" style="background:var(--accent,#c8a44a);color:#000;border:none;padding:0.6rem 1.2rem;border-radius:4px;font-size:1rem;cursor:pointer;font-weight:700">Search</button>
+      autofocus style="flex:1;background:var(--surface-2);color:var(--text);border:1px solid var(--border-strong);padding:0.6rem 1rem;border-radius:4px;font-size:1rem">
+    <button type="submit" style="background:var(--accent);color:#000;border:none;padding:0.6rem 1.2rem;border-radius:4px;font-size:1rem;cursor:pointer;font-weight:700">Search</button>
   </form>
   ${resultsHtml}
 </div>
@@ -6429,14 +6339,14 @@ ${toggleScript()}
 }
 
 function bookmarkBtn(id, title, type) {
-  return `<button id="bm-${escapeHtml(id)}" onclick="toggleBM('${escapeHtml(id)}','${escapeHtml(title.replace(/'/g,"\\\'"))}','${escapeHtml(type)}')" style="background:rgba(255,255,255,0.06);border:1px solid #444;color:#fff;padding:0.4rem 0.9rem;border-radius:5px;cursor:pointer;font-size:0.85em;margin-top:0.8rem">&#9734; Save</button>
+  return `<button class="bm-btn" id="bm-${escapeHtml(id)}" onclick="toggleBM('${escapeHtml(id)}','${escapeHtml(title.replace(/'/g,"\\\'"))}','${escapeHtml(type)}')">&#9734; Save</button>
 <script>
 (function(){
   const k='bosnan_bm';
   function bms(){try{return JSON.parse(localStorage.getItem(k)||'[]');}catch(e){return[];}}
   const id='${escapeHtml(id)}';
   const btn=document.getElementById('bm-'+id);
-  function upd(){const has=bms().some(b=>b.id===id);btn.innerHTML=has?'&#9733; Saved':'&#9734; Save';btn.style.color=has?'var(--accent,#c8a44a)':'#fff';}
+  function upd(){const has=bms().some(b=>b.id===id);btn.innerHTML=has?'&#9733; Saved':'&#9734; Save';btn.classList.toggle('is-saved',has);}
   upd();
   window.toggleBM=function(id,title,type){const list=bms();const i=list.findIndex(b=>b.id===id);if(i>=0)list.splice(i,1);else list.push({id,title,type});localStorage.setItem(k,JSON.stringify(list));upd();};
 })();
@@ -6456,15 +6366,15 @@ function sequelDetailPage(item) {
   const changed = (item.changedWhat || []).map(c => `<li>${escapeHtml(c)}</li>`).join('');
   const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
   const sections = (item.sections || []).map(s => `<div class="essay-section"><h2>${escapeHtml(s.title)}</h2>${s.html}</div>`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Sequels – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('sequels')}<div class="essay-wrapper"><a href="/sequels" class="back-link">&#8592; All Sequels</a><div class="essay-header"><div class="essay-meta">${escapeHtml(item.series)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year}</div><h1 class="essay-title">${escapeHtml(item.title)}</h1><p class="essay-subtitle">${escapeHtml(item.description)}</p>${item.original ? `<p style="color:#888;font-size:0.9em">Follows: <em>${escapeHtml(item.original)}</em></p>` : ''}</div>${changed ? `<div class="essay-section"><h2>What Changed</h2><ul class="trivia-list">${changed}</ul></div>` : ''}${sections}${facts ? `<div class="essay-section"><h2>Key Facts</h2><ul class="trivia-list">${facts}</ul></div>` : ''}${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Sequels – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('sequels')}<div class="essay-wrapper"><a href="/sequels" class="back-link">&#8592; All Sequels</a><div class="essay-header"><div class="essay-meta">${escapeHtml(item.series)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year}</div><h1 class="essay-title">${escapeHtml(item.title)}</h1><p class="essay-subtitle">${escapeHtml(item.description)}</p>${item.original ? `<p style="color:var(--text-muted);font-size:0.9em">Follows: <em>${escapeHtml(item.original)}</em></p>` : ''}</div>${changed ? `<div class="essay-section"><h2>What Changed</h2><ul class="trivia-list">${changed}</ul></div>` : ''}${sections}${facts ? `<div class="essay-section"><h2>Key Facts</h2><ul class="trivia-list">${facts}</ul></div>` : ''}${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
 }
 
 function romHacksListPage() {
-  const typeColors = { 'Difficulty Hack': '#f44336', 'Translation': '#2196f3', 'Total Conversion': '#9c27b0', 'Restoration': '#4caf50', 'Randomiser': '#ff9800', 'Bug Fix': '#607d8b' };
+  const typeColors = { 'Difficulty Hack': '#ef9a9a', 'Translation': '#90caf9', 'Total Conversion': '#ce93d8', 'Restoration': '#a5d6a7', 'Randomiser': '#ffcc80', 'Bug Fix': '#b0bec5' };
   const cards = ROM_HACKS.map(r => `<a href="/rom-hacks/${r.id}" class="platform-card">
     <div class="platform-card-name">${escapeHtml(r.title)}</div>
     <div class="platform-card-era">${escapeHtml(r.baseGame)} &middot; ${r.year}</div>
-    <div class="platform-card-count" style="color:${typeColors[r.type]||'#888'}">${escapeHtml(r.type)}</div>
+    <div class="platform-card-count" style="color:${typeColors[r.type]||'var(--text-muted)'}">${escapeHtml(r.type)}</div>
     <p class="platform-card-desc">${escapeHtml(r.description)}</p>
   </a>`).join('');
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ROM Hacks &amp; Mods – Bosnan</title><meta name="description" content="Famous ROM hacks and fan modifications: Kaizo Mario, Doom WADs, Zelda randomiser, Mother fan translation and more."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('rom-hacks')}<section class="platforms-hero"><h1>ROM Hacks &amp; Mods</h1><p>Fan modifications, translations, and total conversions</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
@@ -6479,7 +6389,7 @@ function adCampaignsListPage() {
   const cards = AD_CAMPAIGNS.map(a => `<a href="/ad-campaigns/${a.id}" class="platform-card">
     <div class="platform-card-name">${escapeHtml(a.title)}</div>
     <div class="platform-card-era">${escapeHtml(a.company)} &middot; ${a.year}</div>
-    <div class="platform-card-count" style="font-style:italic;color:var(--accent,#c8a44a)">${escapeHtml(a.tagline || '')}</div>
+    <div class="platform-card-count" style="font-style:italic;color:var(--accent)">${escapeHtml(a.tagline || '')}</div>
     <p class="platform-card-desc">${escapeHtml(a.description)}</p>
   </a>`).join('');
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Advertising Campaigns – Bosnan</title><meta name="description" content="Iconic game advertising: Genesis Does What Nintendon't, PlayStation Double Life, Now You're Playing With Power and more."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('ad-campaigns')}<section class="platforms-hero"><h1>Advertising Campaigns</h1><p>The marketing that shaped the console wars</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
@@ -6487,14 +6397,14 @@ function adCampaignsListPage() {
 
 function adCampaignDetailPage(item) {
   const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Ad Campaigns – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('ad-campaigns')}<div class="platform-detail-wrapper"><a href="/ad-campaigns" class="back-link">&#8592; All Campaigns</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.company)} &middot; ${item.year} &middot; ${escapeHtml(item.product || '')}</p>${item.tagline ? `<blockquote style="border-left:3px solid var(--accent,#c8a44a);padding-left:1rem;margin:1rem 0;font-style:italic;font-size:1.2em;color:var(--accent,#c8a44a)">"${escapeHtml(item.tagline)}"</blockquote>` : ''}<p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${item.impact ? `<div class="dev-notable"><strong>Impact:</strong> ${escapeHtml(item.impact)}</div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Ad Campaigns – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('ad-campaigns')}<div class="platform-detail-wrapper"><a href="/ad-campaigns" class="back-link">&#8592; All Campaigns</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.company)} &middot; ${item.year} &middot; ${escapeHtml(item.product || '')}</p>${item.tagline ? `<blockquote style="border-left:3px solid var(--accent);padding-left:1rem;margin:1rem 0;font-style:italic;font-size:1.2em;color:var(--accent)">"${escapeHtml(item.tagline)}"</blockquote>` : ''}<p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${item.impact ? `<div class="dev-notable"><strong>Impact:</strong> ${escapeHtml(item.impact)}</div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
 }
 
 function salesFiguresPage() {
   const cards = SALES_FIGURES.map(s => `<a href="/sales-figures/${s.id}" class="platform-card">
     <div class="platform-card-name">${escapeHtml(s.title)}</div>
     <div class="platform-card-era">${escapeHtml(s.type)} &middot; ${escapeHtml(s.period)}</div>
-    <div class="platform-card-count" style="font-size:1.2em;font-weight:900;color:var(--accent,#c8a44a)">${escapeHtml(s.units)}</div>
+    <div class="platform-card-count" style="font-size:1.2em;font-weight:900;color:var(--accent)">${escapeHtml(s.units)}</div>
     <p class="platform-card-desc">${escapeHtml(s.description)}</p>
   </a>`).join('');
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sales Figures – Bosnan</title><meta name="description" content="Retro gaming by the numbers: NES, Game Boy, PlayStation, Tetris, Super Mario Bros. and the sales that defined the industry."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('sales-figures')}<section class="platforms-hero"><h1>Sales Figures</h1><p>Gaming history measured in units and dollars</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
@@ -6503,14 +6413,14 @@ function salesFiguresPage() {
 function salesFigureDetailPage(item) {
   const context = (item.context || []).map(c => `<li>${escapeHtml(c)}</li>`).join('');
   const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Sales Figures – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('sales-figures')}<div class="platform-detail-wrapper"><a href="/sales-figures" class="back-link">&#8592; All Sales Figures</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.type)} &middot; ${escapeHtml(item.period)}</p><div style="font-size:3em;font-weight:900;color:var(--accent,#c8a44a);margin:0.5rem 0">${escapeHtml(item.units)}</div><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${context ? `<div class="dev-notable"><strong>In Context:</strong><ul class="trivia-list">${context}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Sales Figures – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('sales-figures')}<div class="platform-detail-wrapper"><a href="/sales-figures" class="back-link">&#8592; All Sales Figures</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.type)} &middot; ${escapeHtml(item.period)}</p><div style="font-size:3em;font-weight:900;color:var(--accent);margin:0.5rem 0">${escapeHtml(item.units)}</div><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${context ? `<div class="dev-notable"><strong>In Context:</strong><ul class="trivia-list">${context}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
 }
 
 function speedrunsListPage() {
   const cards = SPEEDRUNS.map(s => `<a href="/speedruns/${s.id}" class="platform-card">
     <div class="platform-card-name">${escapeHtml(s.game)}</div>
     <div class="platform-card-era">${escapeHtml(s.platform)} &middot; ${escapeHtml(s.category)}</div>
-    <div class="platform-card-count" style="font-family:monospace;color:var(--accent,#c8a44a)">${escapeHtml(s.currentWR)}</div>
+    <div class="platform-card-count" style="font-family:monospace;color:var(--accent)">${escapeHtml(s.currentWR)}</div>
     <p class="platform-card-desc">${escapeHtml(s.description)}</p>
   </a>`).join('');
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Speedruns – Bosnan</title><meta name="description" content="Iconic speedrun histories: Super Mario Bros. sub-5, Ocarina of Time wrong warp, GoldenEye bond tricks and more."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('speedruns')}<section class="platforms-hero"><h1>Speedruns</h1><p>The races to the bottom of the clock</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
@@ -6520,7 +6430,7 @@ function speedrunDetailPage(item) {
   const techniques = (item.famousTechniques || []).map(t => `<li>${escapeHtml(t)}</li>`).join('');
   const runners = (item.notableRunners || []).map(r => `<li>${escapeHtml(r)}</li>`).join('');
   const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.game)} Speedrun – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('speedruns')}<div class="platform-detail-wrapper"><a href="/speedruns" class="back-link">&#8592; All Speedruns</a><div class="platform-detail-header"><h1>${escapeHtml(item.game)}</h1><p class="platform-detail-era">${escapeHtml(item.platform)} &middot; ${escapeHtml(item.category)} &middot; ${item.year}</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0">${item.currentWR ? `<div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:0.8em;color:#888;margin-bottom:0.3rem">Current WR</div><div style="font-size:1.6em;font-weight:900;font-family:monospace;color:var(--accent,#c8a44a)">${escapeHtml(item.currentWR)}</div></div>` : ''}${item.firstKnownRun ? `<div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:0.8em;color:#888;margin-bottom:0.3rem">First Known Run</div><div style="font-size:1.6em;font-weight:900;font-family:monospace;color:#888">${escapeHtml(item.firstKnownRun)}</div></div>` : ''}</div><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${techniques ? `<div class="dev-notable"><strong>Famous Techniques:</strong><ul class="trivia-list">${techniques}</ul></div>` : ''}${runners ? `<div class="dev-notable"><strong>Notable Runners:</strong><ul class="trivia-list">${runners}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.game)} Speedrun – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('speedruns')}<div class="platform-detail-wrapper"><a href="/speedruns" class="back-link">&#8592; All Speedruns</a><div class="platform-detail-header"><h1>${escapeHtml(item.game)}</h1><p class="platform-detail-era">${escapeHtml(item.platform)} &middot; ${escapeHtml(item.category)} &middot; ${item.year}</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0">${item.currentWR ? `<div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:0.8em;color:var(--text-muted);margin-bottom:0.3rem">Current WR</div><div style="font-size:1.6em;font-weight:900;font-family:monospace;color:var(--accent)">${escapeHtml(item.currentWR)}</div></div>` : ''}${item.firstKnownRun ? `<div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:0.8em;color:var(--text-muted);margin-bottom:0.3rem">First Known Run</div><div style="font-size:1.6em;font-weight:900;font-family:monospace;color:var(--text-muted)">${escapeHtml(item.firstKnownRun)}</div></div>` : ''}</div><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${techniques ? `<div class="dev-notable"><strong>Famous Techniques:</strong><ul class="trivia-list">${techniques}</ul></div>` : ''}${runners ? `<div class="dev-notable"><strong>Notable Runners:</strong><ul class="trivia-list">${runners}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
 }
 
 function criticsListPage() {
@@ -6565,11 +6475,11 @@ function wordSearchPage() {
   }
   const alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   for (let r = 0; r < SIZE; r++) for (let c = 0; c < SIZE; c++) if (!grid[r][c]) grid[r][c] = alpha[Math.floor(Math.random() * 26)];
-  const cells = grid.map((row, r) => row.map((ch, c) => `<td id="c${r}_${c}" onclick="sel(${r},${c})" style="width:2rem;height:2rem;text-align:center;cursor:pointer;user-select:none;border:1px solid #333;font-family:monospace;font-size:1em">${ch}</td>`).join('')).map(row => `<tr>${row}</tr>`).join('');
+  const cells = grid.map((row, r) => row.map((ch, c) => `<td id="c${r}_${c}" onclick="sel(${r},${c})" style="width:2rem;height:2rem;text-align:center;cursor:pointer;user-select:none;border:1px solid var(--border);font-family:monospace;font-size:1em">${ch}</td>`).join('')).map(row => `<tr>${row}</tr>`).join('');
   const wordItems = placed.map(w => `<li id="w-${w}" style="font-family:monospace;padding:0.3rem 0">${w}</li>`).join('');
   const gridData = JSON.stringify(grid);
   const wordsData = JSON.stringify(placed);
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Word Search – Bosnan</title><meta name="description" content="A retro gaming word search: find classic game titles from the Bosnan archive hidden in the grid. A new puzzle is generated on every server restart."><style>h1,h2{font-family:inherit}td.found{background:rgba(200,164,74,0.3);color:var(--accent,#c8a44a)}td.sel{background:rgba(200,164,74,0.15)}</style>${cssHead()}</head><body>${bgLogo()}${nav('wordsearch')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Word Search</h1><p class="essay-subtitle">Find ${placed.length} retro game titles — refreshes with new words each server restart</p></div><div style="display:grid;grid-template-columns:auto 200px;gap:2rem;align-items:start;flex-wrap:wrap"><div style="overflow-x:auto"><table style="border-collapse:collapse">${cells}</table></div><div><h3 style="margin-bottom:0.8rem">Find these words:</h3><ul style="list-style:none;padding:0;margin:0">${wordItems}</ul><p id="winMsg" style="display:none;color:var(--accent,#c8a44a);font-weight:700;margin-top:1rem">You found them all!</p></div></div></div>
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Word Search – Bosnan</title><meta name="description" content="A retro gaming word search: find classic game titles from the Bosnan archive hidden in the grid. A new puzzle is generated on every server restart."><style>h1,h2{font-family:inherit}td.found{background:var(--accent-soft);color:var(--accent);font-weight:700}td.sel{background:var(--surface-3)}</style>${cssHead()}</head><body>${bgLogo()}${nav('wordsearch')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Word Search</h1><p class="essay-subtitle">Find ${placed.length} retro game titles — refreshes with new words each server restart</p></div><div style="display:grid;grid-template-columns:auto 200px;gap:2rem;align-items:start;flex-wrap:wrap"><div style="overflow-x:auto"><table style="border-collapse:collapse">${cells}</table></div><div><h2 style="margin-bottom:0.8rem;font-size:1.1rem">Find these words:</h2><ul style="list-style:none;padding:0;margin:0">${wordItems}</ul><p id="winMsg" style="display:none;color:var(--accent);font-weight:700;margin-top:1rem">You found them all!</p></div></div></div>
 <script>
 const GRID=${gridData},WORDS=${wordsData};
 const SIZE=${SIZE};let sel1=null,found=new Set(),foundCells=new Set();
@@ -6596,14 +6506,14 @@ ${toggleScript()}</body></html>`;
 }
 
 function bookmarksPage() {
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Bookmarks – Bosnan</title><meta name="description" content="Your saved games, essays, and articles."><meta name="robots" content="noindex, follow"><style>h1,h2{font-family:inherit}.bm-card{display:block;background:rgba(255,255,255,0.04);border-radius:8px;padding:1rem 1.2rem;margin-bottom:0.8rem;text-decoration:none;color:inherit;border:1px solid #333}.bm-card:hover{border-color:var(--accent,#c8a44a)}.bm-type{font-size:0.75em;color:#888;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.3rem}.bm-title{font-weight:700}.bm-remove{float:right;background:none;border:none;color:#666;cursor:pointer;font-size:1.2em;padding:0}</style>${cssHead()}</head><body>${bgLogo()}${nav('bookmarks')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Bookmarks</h1><p class="essay-subtitle">Your saved items</p></div><div id="bmList"><p style="color:#888">No bookmarks yet — click the Save button on any game or article page.</p></div></div>
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Bookmarks – Bosnan</title><meta name="description" content="Your saved games, essays, and articles."><meta name="robots" content="noindex, follow"><style>h1,h2{font-family:inherit}.bm-card{display:block;background:rgba(255,255,255,0.04);border-radius:8px;padding:1rem 1.2rem;margin-bottom:0.8rem;text-decoration:none;color:inherit;border:1px solid var(--border)}.bm-card:hover{border-color:var(--accent)}.bm-type{font-size:var(--fs-xs);color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.3rem}.bm-title{font-weight:700}.bm-remove{float:right;background:none;border:none;color:var(--text-faint);cursor:pointer;font-size:1.2em;padding:0}</style>${cssHead()}</head><body>${bgLogo()}${nav('bookmarks')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Bookmarks</h1><p class="essay-subtitle">Your saved items</p></div><div id="bmList"><p style="color:var(--text-muted)">No bookmarks yet — click the Save button on any game or article page.</p></div></div>
 <script>
 const k='bosnan_bm';
 function bms(){try{return JSON.parse(localStorage.getItem(k)||'[]');}catch(e){return[];}}
 function remove(id){const list=bms().filter(b=>b.id!==id);localStorage.setItem(k,JSON.stringify(list));render();}
 function render(){
   const list=bms();const el=document.getElementById('bmList');
-  if(!list.length){el.innerHTML='<p style="color:#888">No bookmarks yet — click the Save button on any game or article page.</p>';return;}
+  if(!list.length){el.innerHTML='<p style="color:var(--text-muted)">No bookmarks yet — click the Save button on any game or article page.</p>';return;}
   el.innerHTML=list.map(b=>'<div class="bm-card"><div style="display:flex;justify-content:space-between;align-items:start"><div><div class="bm-type">'+b.type+'</div><a href="/'+b.type.toLowerCase().replace(/ /g,'-')+'s/'+b.id+'" class="bm-title">'+b.title+'</a></div><button class="bm-remove" onclick="remove(\''+b.id+'\')">&#10005;</button></div></div>').join('');
 }
 render();
@@ -6686,14 +6596,14 @@ function easterEggsListPage() {
 
 function easterEggDetailPage(item) {
   const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Easter Eggs – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('easter-eggs')}<div class="platform-detail-wrapper"><a href="/easter-eggs" class="back-link">&#8592; All Easter Eggs</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year}${item.discoveredYear && item.discoveredYear !== item.year ? ' &middot; discovered ' + item.discoveredYear : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${item.howToFind ? `<div class="dev-notable" style="border-left:3px solid var(--accent,#c8a44a);padding-left:1rem;margin-top:1rem"><strong>How to find it:</strong><p style="margin-top:0.4rem;color:#ccc">${escapeHtml(item.howToFind)}</p></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Easter Eggs – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('easter-eggs')}<div class="platform-detail-wrapper"><a href="/easter-eggs" class="back-link">&#8592; All Easter Eggs</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year}${item.discoveredYear && item.discoveredYear !== item.year ? ' &middot; discovered ' + item.discoveredYear : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${item.howToFind ? `<div class="dev-notable" style="border-left:3px solid var(--accent);padding-left:1rem;margin-top:1rem"><strong>How to find it:</strong><p style="margin-top:0.4rem;color:var(--text-secondary)">${escapeHtml(item.howToFind)}</p></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
 }
 
 function cheatCodesListPage() {
   const cards = CHEAT_CODES.map(c => `<a href="/cheat-codes/${c.id}" class="platform-card">
     <div class="platform-card-name">${escapeHtml(c.title)}</div>
     <div class="platform-card-era">${escapeHtml(c.game)} &middot; ${escapeHtml(c.platform)} &middot; ${c.year}</div>
-    <div class="platform-card-count" style="font-family:monospace;font-size:0.8em;color:var(--accent,#c8a44a)">${escapeHtml(c.code)}</div>
+    <div class="platform-card-count" style="font-family:monospace;font-size:0.8em;color:var(--accent)">${escapeHtml(c.code)}</div>
     <p class="platform-card-desc">${escapeHtml(c.effect)}</p>
   </a>`).join('');
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Cheat Codes – Bosnan</title><meta name="description" content="Classic cheat codes from retro gaming: Konami Code, IDDQD, ABACABB, Justin Bailey and more."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('cheat-codes')}<section class="platforms-hero"><h1>Cheat Codes</h1><p>The codes that became part of gaming folklore</p></section><div class="platforms-grid">${cards}</div>${toggleScript()}</body></html>`;
@@ -6701,16 +6611,16 @@ function cheatCodesListPage() {
 
 function cheatCodeDetailPage(item) {
   const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Cheat Codes – Bosnan</title><meta name="description" content="${metaDesc(`${item.effect} — the ${item.code} cheat for ${item.game} on ${item.platform} (${item.year}), with how it was found and what it does.`)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('cheat-codes')}<div class="platform-detail-wrapper"><a href="/cheat-codes" class="back-link">&#8592; All Cheat Codes</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.type)}</p><div style="background:#111;border:1px solid #333;border-radius:6px;padding:1rem 1.5rem;margin:1rem 0;font-family:monospace;font-size:1.1em;letter-spacing:0.04em;color:var(--accent,#c8a44a)">${escapeHtml(item.code)}</div><p class="platform-detail-desc"><strong>Effect:</strong> ${escapeHtml(item.effect)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Cheat Codes – Bosnan</title><meta name="description" content="${metaDesc(`${item.effect} — the ${item.code} cheat for ${item.game} on ${item.platform} (${item.year}), with how it was found and what it does.`)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('cheat-codes')}<div class="platform-detail-wrapper"><a href="/cheat-codes" class="back-link">&#8592; All Cheat Codes</a><div class="platform-detail-header"><h1>${escapeHtml(item.title)}</h1><p class="platform-detail-era">${escapeHtml(item.game)} &middot; ${escapeHtml(item.platform)} &middot; ${item.year} &middot; ${escapeHtml(item.type)}</p><div style="background:var(--surface-1);border:1px solid var(--border);border-radius:6px;padding:1rem 1.5rem;margin:1rem 0;font-family:monospace;font-size:1.1em;letter-spacing:0.04em;color:var(--accent)">${escapeHtml(item.code)}</div><p class="platform-detail-desc"><strong>Effect:</strong> ${escapeHtml(item.effect)}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
 }
 
 function glossaryPage() {
   const letters = [...new Set(GLOSSARY.map(g => g.term[0].toUpperCase()))].sort();
-  const alphaLinks = letters.map(l => `<a href="#letter-${l}" style="padding:0.2rem 0.4rem;background:rgba(255,255,255,0.06);border-radius:3px;font-size:0.9em;color:var(--accent,#c8a44a)">${l}</a>`).join('');
+  const alphaLinks = letters.map(l => `<a href="#letter-${l}" style="display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:40px;background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-sm);font-size:var(--fs-sm);font-weight:600;color:var(--accent);text-decoration:none">${l}</a>`).join('');
   const alphaEntries = letters.map(l => {
     const terms = GLOSSARY.filter(g => g.term[0].toUpperCase() === l).sort((a, b) => a.term.localeCompare(b.term));
-    const entries = terms.map(t => `<div style="margin-bottom:1.5rem" id="term-${escapeHtml(t.id)}"><div style="display:flex;align-items:baseline;gap:0.8rem;margin-bottom:0.4rem"><h3 style="margin:0;font-size:1.05em">${escapeHtml(t.term)}</h3><span style="font-size:0.75em;background:rgba(255,255,255,0.08);padding:0.15rem 0.5rem;border-radius:3px;color:#999">${escapeHtml(t.category)}</span></div><p style="color:#ccc;line-height:1.7;margin:0 0 0.4rem">${escapeHtml(t.definition)}</p>${(t.examples || []).length ? `<div style="font-size:0.85em;color:#888">e.g. ${t.examples.map(e => escapeHtml(e)).join(', ')}</div>` : ''}</div>`).join('');
-    return `<div id="letter-${l}" style="margin-bottom:2rem"><h2 style="font-size:2em;color:var(--accent,#c8a44a);margin-bottom:1rem">${l}</h2>${entries}</div>`;
+    const entries = terms.map(t => `<div style="margin-bottom:1.5rem" id="term-${escapeHtml(t.id)}"><div style="display:flex;align-items:baseline;gap:0.8rem;margin-bottom:0.4rem"><h3 style="margin:0;font-size:1.05em">${escapeHtml(t.term)}</h3><span style="font-size:var(--fs-xs);background:var(--surface-3);padding:0.15rem 0.5rem;border-radius:3px;color:var(--text-muted)">${escapeHtml(t.category)}</span></div><p style="color:var(--text-secondary);line-height:1.7;margin:0 0 0.4rem">${escapeHtml(t.definition)}</p>${(t.examples || []).length ? `<div style="font-size:0.85em;color:var(--text-muted)">e.g. ${t.examples.map(e => escapeHtml(e)).join(', ')}</div>` : ''}</div>`).join('');
+    return `<div id="letter-${l}" style="margin-bottom:2rem"><h2 style="font-size:2em;color:var(--accent);margin-bottom:1rem">${l}</h2>${entries}</div>`;
   }).join('');
   // A glossary is not a CollectionPage of links, it is a set of definitions,
   // and schema.org has the exact type for it. Each term is addressed by the
@@ -6741,10 +6651,10 @@ function quizPage() {
   }
   const questions = pool.sort(() => Math.random() - 0.5).slice(0, 10).map((item, i) => {
     const choices = [...item.distractors, item.a].sort(() => Math.random() - 0.5);
-    const btns = choices.map(c => `<button onclick="answer(this,'${escapeHtml(item.a.replace(/'/g, "\\'"))}','${escapeHtml(c.replace(/'/g, "\\'"))}')" style="display:block;width:100%;text-align:left;background:rgba(255,255,255,0.06);border:1px solid #444;color:#fff;padding:0.7rem 1rem;border-radius:5px;cursor:pointer;font-size:0.95em;margin-bottom:0.4rem">${escapeHtml(c)}</button>`).join('');
+    const btns = choices.map(c => `<button onclick="answer(this,'${escapeHtml(item.a.replace(/'/g, "\\'"))}','${escapeHtml(c.replace(/'/g, "\\'"))}')" style="display:block;width:100%;text-align:left;background:rgba(255,255,255,0.06);border:1px solid var(--border-strong);color:var(--text);padding:0.7rem 1rem;border-radius:5px;cursor:pointer;font-size:0.95em;margin-bottom:0.4rem">${escapeHtml(c)}</button>`).join('');
     return `<div class="quiz-question" id="q${i}" style="display:${i === 0 ? 'block' : 'none'};margin-bottom:1rem"><p style="font-size:1.1em;margin-bottom:1rem">${i + 1}/10 &mdash; ${item.q}</p>${btns}</div>`;
   }).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Trivia Quiz – Bosnan</title><meta name="description" content="Ten randomised trivia questions on classic games, consoles and the people who made them, drawn from the Bosnan retro archive. New questions every visit."><style>h1,h2{font-family:inherit}.quiz-btn-correct{background:rgba(76,175,80,0.3)!important;border-color:#4caf50!important}.quiz-btn-wrong{background:rgba(244,67,54,0.3)!important;border-color:#f44336!important}</style>${cssHead()}</head><body>${bgLogo()}${nav('quiz')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Trivia Quiz</h1><p class="essay-subtitle">10 random questions from the archive — refreshes each visit</p></div><div id="score" style="font-size:1.1em;margin-bottom:1.5rem;color:#888">Score: <span id="scoreVal">0</span> / <span id="total">0</span></div>${questions}<div id="result" style="display:none;margin-top:2rem;text-align:center"><h2 id="resultMsg"></h2><a href="/quiz" style="display:inline-block;margin-top:1rem;background:var(--accent,#c8a44a);color:#000;padding:0.6rem 1.5rem;border-radius:5px;font-weight:700;text-decoration:none">Play Again</a></div></div><script>let cur=0,score=0,answered=false;function answer(btn,correct,chosen){if(answered)return;answered=true;const btns=btn.parentElement.querySelectorAll('button');btns.forEach(b=>{b.disabled=true;if(b.textContent.trim()===correct)b.classList.add('quiz-btn-correct');});if(chosen===correct){score++;btn.classList.add('quiz-btn-correct');}else{btn.classList.add('quiz-btn-wrong');}document.getElementById('scoreVal').textContent=score;document.getElementById('total').textContent=cur+1;setTimeout(()=>nextQ(),900);}function nextQ(){const qs=document.querySelectorAll('.quiz-question');if(cur<qs.length-1){qs[cur].style.display='none';cur++;qs[cur].style.display='block';answered=false;}else{document.querySelectorAll('.quiz-question').forEach(q=>q.style.display='none');const r=document.getElementById('result');r.style.display='block';const pct=Math.round(score/qs.length*100);document.getElementById('resultMsg').textContent=score+'/'+qs.length+' — '+pct+'%';}}</script>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Trivia Quiz – Bosnan</title><meta name="description" content="Ten randomised trivia questions on classic games, consoles and the people who made them, drawn from the Bosnan retro archive. New questions every visit."><style>h1,h2{font-family:inherit}.quiz-btn-correct{background:rgba(76,175,80,0.3)!important;border-color:#4caf50!important}.quiz-btn-wrong{background:rgba(244,67,54,0.3)!important;border-color:#f44336!important}</style>${cssHead()}</head><body>${bgLogo()}${nav('quiz')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Trivia Quiz</h1><p class="essay-subtitle">10 random questions from the archive — refreshes each visit</p></div><div id="score" style="font-size:1.1em;margin-bottom:1.5rem;color:var(--text-muted)">Score: <span id="scoreVal">0</span> / <span id="total">0</span></div>${questions}<div id="result" style="display:none;margin-top:2rem;text-align:center"><h2 id="resultMsg"></h2><a href="/quiz" style="display:inline-block;margin-top:1rem;background:var(--accent);color:#000;padding:0.6rem 1.5rem;border-radius:5px;font-weight:700;text-decoration:none">Play Again</a></div></div><script>let cur=0,score=0,answered=false;function answer(btn,correct,chosen){if(answered)return;answered=true;const btns=btn.parentElement.querySelectorAll('button');btns.forEach(b=>{b.disabled=true;if(b.textContent.trim()===correct)b.classList.add('quiz-btn-correct');});if(chosen===correct){score++;btn.classList.add('quiz-btn-correct');}else{btn.classList.add('quiz-btn-wrong');}document.getElementById('scoreVal').textContent=score;document.getElementById('total').textContent=cur+1;setTimeout(()=>nextQ(),900);}function nextQ(){const qs=document.querySelectorAll('.quiz-question');if(cur<qs.length-1){qs[cur].style.display='none';cur++;qs[cur].style.display='block';answered=false;}else{document.querySelectorAll('.quiz-question').forEach(q=>q.style.display='none');const r=document.getElementById('result');r.style.display='block';const pct=Math.round(score/qs.length*100);document.getElementById('resultMsg').textContent=score+'/'+qs.length+' — '+pct+'%';}}</script>${toggleScript()}</body></html>`;
 }
 
 function onThisDayPage() {
@@ -6780,8 +6690,8 @@ function onThisDayPage() {
     const yearMod = (g.year % 10);
     return true;
   }).filter(g => g.year % 12 === (month % 12)).slice(0, 8);
-  const todayHtml = todayEvents.length ? `<div style="background:rgba(200,164,74,0.1);border:1px solid var(--accent,#c8a44a);border-radius:8px;padding:1.5rem;margin-bottom:2rem">${todayEvents.map(e => `<div><div style="font-size:1.2em;font-weight:700;margin-bottom:0.4rem">${e.title} (${e.year})</div><p style="color:#ccc;margin:0">${escapeHtml(e.desc)}</p></div>`).join('<hr style="border-color:#333;margin:1rem 0">')}</div>` : `<p style="color:#888;margin-bottom:2rem">No notable gaming events recorded for ${monthName} ${day} specifically — but here's what happened in ${monthName}:</p>`;
-  const monthHtml = monthEvents.map(e => `<div style="display:grid;grid-template-columns:2.5rem 1fr;gap:0.8rem;padding:0.8rem 0;border-bottom:1px solid #222"><div style="font-weight:700;color:var(--accent,#c8a44a);padding-top:0.1rem">${e.day}</div><div><div style="font-weight:600">${escapeHtml(e.title)} <span style="color:#888;font-weight:400">(${e.year})</span></div><div style="color:#bbb;font-size:0.9em;margin-top:0.2rem">${escapeHtml(e.desc)}</div></div></div>`).join('');
+  const todayHtml = todayEvents.length ? `<div style="background:var(--accent-soft);border:1px solid var(--accent);border-radius:8px;padding:1.5rem;margin-bottom:2rem">${todayEvents.map(e => `<div><div style="font-size:1.2em;font-weight:700;margin-bottom:0.4rem">${e.title} (${e.year})</div><p style="color:var(--text-secondary);margin:0">${escapeHtml(e.desc)}</p></div>`).join('<hr style="border-color:var(--border);margin:1rem 0">')}</div>` : `<p style="color:var(--text-muted);margin-bottom:2rem">No notable gaming events recorded for ${monthName} ${day} specifically — but here's what happened in ${monthName}:</p>`;
+  const monthHtml = monthEvents.map(e => `<div style="display:grid;grid-template-columns:2.5rem 1fr;gap:0.8rem;padding:0.8rem 0;border-bottom:1px solid var(--surface-3)"><div style="font-weight:700;color:var(--accent);padding-top:0.1rem">${e.day}</div><div><div style="font-weight:600">${escapeHtml(e.title)} <span style="color:var(--text-muted);font-weight:400">(${e.year})</span></div><div style="color:var(--text-secondary);font-size:0.9em;margin-top:0.2rem">${escapeHtml(e.desc)}</div></div></div>`).join('');
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>On This Day – Bosnan</title><meta name="description" content="Video game history that happened on ${monthName} ${day} — console launches, landmark releases and industry milestones from the Bosnan retro archive."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('on-this-day')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">On This Day</h1><p class="essay-subtitle">${monthName} ${day} in gaming history</p></div>${todayHtml}${monthEvents.length ? `<h2 style="margin-bottom:1rem">All of ${monthName}</h2>${monthHtml}` : ''}</div>${toggleScript()}</body></html>`;
 }
 
@@ -6810,13 +6720,13 @@ function studioMapPage() {
   ];
 
   const dots = studios.map((s, i) => `<g class="studio-dot" style="cursor:pointer" onclick="showStudio(${i})">
-    <circle cx="${s.x}%" cy="${s.y}%" r="6" fill="var(--accent,#c8a44a)" stroke="#000" stroke-width="1.5" opacity="0.9"/>
+    <circle cx="${s.x}%" cy="${s.y}%" r="6" fill="var(--accent)" stroke="#000" stroke-width="1.5" opacity="0.9"/>
     <title>${escapeHtml(s.name)}</title>
   </g>`).join('');
 
   const studioData = JSON.stringify(studios);
 
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Studio Map – Bosnan</title><meta name="description" content="World map of iconic retro game studios: Nintendo in Kyoto, id Software in Texas, Rare in the UK, DMA Design in Dundee."><style>h1,h2{font-family:inherit}.studio-dot circle:hover{r:9;opacity:1}</style>${cssHead()}</head><body>${bgLogo()}${nav('map')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Studio Map</h1><p class="essay-subtitle">Where the games were made — ${studios.length} iconic studios</p></div><div style="position:relative;background:#111;border:1px solid #333;border-radius:8px;overflow:hidden;margin-bottom:2rem"><svg viewBox="0 0 100 60" style="width:100%;display:block;background:linear-gradient(180deg,#0a1628 0%,#1a2a1a 100%)">
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Studio Map – Bosnan</title><meta name="description" content="World map of iconic retro game studios: Nintendo in Kyoto, id Software in Texas, Rare in the UK, DMA Design in Dundee."><style>h1,h2{font-family:inherit}.studio-dot circle:hover{r:9;opacity:1}</style>${cssHead()}</head><body>${bgLogo()}${nav('map')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Studio Map</h1><p class="essay-subtitle">Where the games were made — ${studios.length} iconic studios</p></div><div style="position:relative;background:var(--surface-1);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:2rem"><svg viewBox="0 0 100 60" style="width:100%;display:block;background:linear-gradient(180deg,#0a1628 0%,#1a2a1a 100%)">
   <!-- Simplified continent outlines -->
   <!-- North America -->
   <path d="M5,20 L25,18 L30,25 L28,40 L22,48 L15,50 L8,45 L5,35 Z" fill="#1e3a1e" stroke="#2a4a2a" stroke-width="0.3"/>
@@ -6832,10 +6742,10 @@ function studioMapPage() {
   <path d="M78,45 L90,43 L92,52 L84,55 L76,52 Z" fill="#1e3a1e" stroke="#2a4a2a" stroke-width="0.3"/>
   ${dots}
 </svg></div>
-<div id="studioInfo" style="display:none;background:rgba(200,164,74,0.1);border:1px solid var(--accent,#c8a44a);border-radius:8px;padding:1.2rem 1.5rem;margin-bottom:1.5rem"><h2 id="studioName" style="margin:0 0 0.3rem"></h2><div id="studioCity" style="color:#999;font-size:0.9em;margin-bottom:0.5rem"></div><p id="studioDesc" style="margin:0;color:#ccc"></p></div>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.8rem">${studios.map((s, i) => `<div onclick="showStudio(${i})" style="background:rgba(255,255,255,0.04);border-radius:6px;padding:0.7rem 1rem;cursor:pointer;border:1px solid transparent" id="scard${i}"><div style="font-weight:600;font-size:0.9em">${escapeHtml(s.name)}</div><div style="color:#888;font-size:0.8em">${escapeHtml(s.city)}</div></div>`).join('')}</div>
+<div id="studioInfo" style="display:none;background:var(--accent-soft);border:1px solid var(--accent);border-radius:8px;padding:1.2rem 1.5rem;margin-bottom:1.5rem"><h2 id="studioName" style="margin:0 0 0.3rem"></h2><div id="studioCity" style="color:var(--text-muted);font-size:0.9em;margin-bottom:0.5rem"></div><p id="studioDesc" style="margin:0;color:var(--text-secondary)"></p></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.8rem">${studios.map((s, i) => `<div onclick="showStudio(${i})" style="background:rgba(255,255,255,0.04);border-radius:6px;padding:0.7rem 1rem;cursor:pointer;border:1px solid transparent" id="scard${i}"><div style="font-weight:600;font-size:0.9em">${escapeHtml(s.name)}</div><div style="color:var(--text-muted);font-size:0.8em">${escapeHtml(s.city)}</div></div>`).join('')}</div>
 </div>
-<script>const studios=${studioData};function showStudio(i){const s=studios[i];document.getElementById('studioInfo').style.display='block';document.getElementById('studioName').textContent=s.name;document.getElementById('studioCity').textContent=s.city;document.getElementById('studioDesc').textContent=s.desc;document.querySelectorAll('[id^="scard"]').forEach(el=>el.style.borderColor='transparent');document.getElementById('scard'+i).style.borderColor='var(--accent,#c8a44a)';}</script>
+<script>const studios=${studioData};function showStudio(i){const s=studios[i];document.getElementById('studioInfo').style.display='block';document.getElementById('studioName').textContent=s.name;document.getElementById('studioCity').textContent=s.city;document.getElementById('studioDesc').textContent=s.desc;document.querySelectorAll('[id^="scard"]').forEach(el=>el.style.borderColor='transparent');document.getElementById('scard'+i).style.borderColor='var(--accent)';}</script>
 ${toggleScript()}</body></html>`;
 }
 
@@ -6879,8 +6789,8 @@ function portsListPage() {
 }
 
 function portDetailPage(port) {
-  const qualityColor = { 'Excellent': '#4caf50', 'Good': '#8bc34a', 'Acceptable': '#ffc107', 'Poor': '#ff5722', 'Infamous': '#f44336' };
-  const versionsHtml = (port.versions || []).map(v => `<div style="background:rgba(255,255,255,0.04);border-radius:6px;padding:1rem 1.2rem;margin-bottom:0.8rem"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem"><strong>${escapeHtml(v.platform)} (${v.year})</strong><span style="background:${qualityColor[v.quality] || '#888'};color:#000;padding:0.2rem 0.6rem;border-radius:3px;font-size:0.8em;font-weight:700">${escapeHtml(v.quality)}</span></div><p style="color:#bbb;font-size:0.9em;line-height:1.6;margin:0">${escapeHtml(v.notes)}</p></div>`).join('');
+  const qualityColor = { 'Excellent': '#a5d6a7', 'Good': '#c5e1a5', 'Acceptable': '#ffe082', 'Poor': '#ffab91', 'Infamous': '#ef9a9a' };
+  const versionsHtml = (port.versions || []).map(v => `<div style="background:rgba(255,255,255,0.04);border-radius:6px;padding:1rem 1.2rem;margin-bottom:0.8rem"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem"><strong>${escapeHtml(v.platform)} (${v.year})</strong><span style="background:${qualityColor[v.quality] || 'var(--text-muted)'};color:#000;padding:0.2rem 0.6rem;border-radius:3px;font-size:var(--fs-xs);font-weight:700">${escapeHtml(v.quality)}</span></div><p style="color:var(--text-secondary);font-size:0.9em;line-height:1.6;margin:0">${escapeHtml(v.notes)}</p></div>`).join('');
   const facts = (port.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(port.title)} – Port Comparisons – Bosnan</title><meta name="description" content="${metaDesc(port.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('ports')}<div class="platform-detail-wrapper"><a href="/ports" class="back-link">&#8592; All Port Comparisons</a><div class="platform-detail-header"><h1>${escapeHtml(port.title)}</h1><p class="platform-detail-era">Original: ${escapeHtml(port.originalPlatform)} &middot; ${port.year}</p><p class="platform-detail-desc">${escapeHtml(port.description)}</p><p class="platform-detail-desc">${escapeHtml(port.longDescription)}</p><h2 style="margin-top:1.5rem;margin-bottom:1rem">Version Breakdown</h2>${versionsHtml}${facts ? `<div class="dev-notable" style="margin-top:1rem"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
 }
@@ -6940,7 +6850,7 @@ function collectionsListPage() {
 }
 
 function collectionDetailPage(col) {
-  const itemsHtml = (col.items || []).map(item => `<div style="display:grid;grid-template-columns:2.5rem 1fr;gap:0.8rem;align-items:start;padding:0.9rem 0;border-bottom:1px solid #222"><div style="font-size:1.5em;font-weight:900;color:var(--accent,#c8a44a);text-align:center;padding-top:0.1rem">${item.rank}</div><div><div style="font-weight:700;margin-bottom:0.2rem">${escapeHtml(item.title)}</div><div style="color:#bbb;font-size:0.9em;line-height:1.5">${escapeHtml(item.note)}</div></div></div>`).join('');
+  const itemsHtml = (col.items || []).map(item => `<div style="display:grid;grid-template-columns:2.5rem 1fr;gap:0.8rem;align-items:start;padding:0.9rem 0;border-bottom:1px solid var(--surface-3)"><div style="font-size:1.5em;font-weight:900;color:var(--accent);text-align:center;padding-top:0.1rem">${item.rank}</div><div><div style="font-weight:700;margin-bottom:0.2rem">${escapeHtml(item.title)}</div><div style="color:var(--text-secondary);font-size:0.9em;line-height:1.5">${escapeHtml(item.note)}</div></div></div>`).join('');
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(col.title)} – Bosnan</title><meta name="description" content="${metaDesc(col.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('collections')}<div class="essay-wrapper"><a href="/collections" class="back-link">&#8592; All Lists</a><div class="essay-header"><div class="essay-meta">${escapeHtml(col.category)}</div><h1 class="essay-title">${escapeHtml(col.title)}</h1><p class="essay-subtitle">${escapeHtml(col.subtitle || col.description)}</p></div><div style="margin-top:1rem">${itemsHtml}</div></div>${toggleScript()}</body></html>`;
 }
 
@@ -6954,11 +6864,11 @@ function statsPage() {
   const byDecade = {};
   for (const g of games) { byDecade[g.decade] = (byDecade[g.decade] || 0) + 1; }
   const playable = games.filter(g => g.playUrl).length;
-  const statCard = (label, value, sub = '') => `<div style="background:rgba(255,255,255,0.05);border-radius:8px;padding:1.2rem 1.5rem;text-align:center"><div style="font-size:2.5em;font-weight:900;color:var(--accent,#c8a44a)">${value}</div><div style="font-weight:600;margin-top:0.3rem">${label}</div>${sub ? `<div style="font-size:0.85em;color:#888;margin-top:0.2rem">${sub}</div>` : ''}</div>`;
-  const barRow = (label, count, max) => `<div style="display:grid;grid-template-columns:160px 1fr 2.5rem;gap:0.8rem;align-items:center;margin-bottom:0.5rem"><span style="font-size:0.9em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${escapeHtml(label)}</span><div style="background:#222;border-radius:3px;height:8px;overflow:hidden"><div style="background:var(--accent,#c8a44a);height:100%;width:${Math.round(count / max * 100)}%"></div></div><span style="font-size:0.85em;color:#999;text-align:right">${count}</span></div>`;
+  const statCard = (label, value, sub = '') => `<div style="background:rgba(255,255,255,0.05);border-radius:8px;padding:1.2rem 1.5rem;text-align:center"><div style="font-size:2.5em;font-weight:900;color:var(--accent)">${value}</div><div style="font-weight:600;margin-top:0.3rem">${label}</div>${sub ? `<div style="font-size:0.85em;color:var(--text-muted);margin-top:0.2rem">${sub}</div>` : ''}</div>`;
+  const barRow = (label, count, max) => `<div style="display:grid;grid-template-columns:160px 1fr 2.5rem;gap:0.8rem;align-items:center;margin-bottom:0.5rem"><span style="font-size:0.9em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${escapeHtml(label)}</span><div style="background:var(--surface-3);border-radius:3px;height:8px;overflow:hidden"><div style="background:var(--accent);height:100%;width:${Math.round(count / max * 100)}%"></div></div><span style="font-size:0.85em;color:var(--text-muted);text-align:right">${count}</span></div>`;
   const totalEssays = ESSAYS.length;
   const totalSections = [PLATFORMS, DEVELOPERS, COMPOSERS, DESIGNERS, PUBLISHERS, ARCADE_BOARDS, PERIPHERALS, LOST_GAMES, MAGAZINES, BOX_ART, PORTS, VOICE_ACTORS, PIXEL_ARTISTS, PRODUCERS, COLLECTIONS, GENRES, FRANCHISES, HARDWARE, REGIONAL].reduce((s, a) => s + a.length, 0);
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Archive Stats – Bosnan</title><meta name="description" content="How the Bosnan retro archive breaks down: games per platform, genre and decade, plus totals for essays, playable titles and reference sections."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('stats')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Archive Stats</h1><p class="essay-subtitle">By the numbers</p></div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin-bottom:2.5rem">${statCard('Games', games.length)}${statCard('Platforms', PLATFORMS.length)}${statCard('Essays', totalEssays)}${statCard('Playable', playable, 'with play link')}${statCard('Sections', totalSections, 'profiles & articles')}</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;flex-wrap:wrap"><div><h2 style="margin-bottom:1rem">Top Platforms</h2>${topPlatforms.map(([p, c]) => barRow(p, c, topPlatforms[0][1])).join('')}</div><div><h2 style="margin-bottom:1rem">Top Genres</h2>${topGenres.map(([g, c]) => barRow(g, c, topGenres[0][1])).join('')}</div></div><div style="margin-top:2rem"><h2 style="margin-bottom:1rem">By Decade</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:0.8rem">${Object.entries(byDecade).sort().map(([d, c]) => `<div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:0.8rem 1rem;text-align:center"><div style="font-size:1.3em;font-weight:700;color:var(--accent,#c8a44a)">${c}</div><div style="font-size:0.85em">${escapeHtml(d)}</div></div>`).join('')}</div></div></div>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Archive Stats – Bosnan</title><meta name="description" content="How the Bosnan retro archive breaks down: games per platform, genre and decade, plus totals for essays, playable titles and reference sections."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('stats')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Archive Stats</h1><p class="essay-subtitle">By the numbers</p></div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin-bottom:2.5rem">${statCard('Games', games.length)}${statCard('Platforms', PLATFORMS.length)}${statCard('Essays', totalEssays)}${statCard('Playable', playable, 'with play link')}${statCard('Sections', totalSections, 'profiles & articles')}</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;flex-wrap:wrap"><div><h2 style="margin-bottom:1rem">Top Platforms</h2>${topPlatforms.map(([p, c]) => barRow(p, c, topPlatforms[0][1])).join('')}</div><div><h2 style="margin-bottom:1rem">Top Genres</h2>${topGenres.map(([g, c]) => barRow(g, c, topGenres[0][1])).join('')}</div></div><div style="margin-top:2rem"><h2 style="margin-bottom:1rem">By Decade</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:0.8rem">${Object.entries(byDecade).sort().map(([d, c]) => `<div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:0.8rem 1rem;text-align:center"><div style="font-size:1.3em;font-weight:700;color:var(--accent)">${c}</div><div style="font-size:0.85em">${escapeHtml(d)}</div></div>`).join('')}</div></div></div>${toggleScript()}</body></html>`;
 }
 
 function recentPage() {
@@ -6966,7 +6876,7 @@ function recentPage() {
   const recentEssays = ESSAYS.slice(-12).reverse();
   const cardHtml = buildCardHtml(recentGames, EAGER_IMAGES);
   const essayLinks = recentEssays.map(e => `<a href="/essays/${e.id}" class="platform-card"><div class="platform-card-name">${escapeHtml(e.title)}</div><p class="platform-card-desc">${escapeHtml((e.summary || '').substring(0, 100))}</p></a>`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Recently Added – Bosnan</title><meta name="description" content="The newest essays and games added to the Bosnan retro archive, listed newest first so you can see what has changed since your last visit."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('recent')}<section class="platforms-hero"><h1>Recently Added</h1><p>The newest content in the archive</p></section><h2 style="max-width:1200px;margin:1.5rem auto 1rem;padding:0 1rem">Latest Essays</h2><div class="platforms-grid" style="max-width:1200px">${essayLinks}</div><h2 style="max-width:1200px;margin:2rem auto 1rem;padding:0 1rem">Games by Year (Newest First)</h2><div class="games-grid">${cardHtml}</div>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Recently Added – Bosnan</title><meta name="description" content="The newest essays and games added to the Bosnan retro archive, listed newest first so you can see what has changed since your last visit."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('recent')}<section class="platforms-hero"><h1>Recently Added</h1><p>The newest content in the archive</p></section><h2 style="max-width:var(--content);margin:1.5rem auto 1rem;padding:0 var(--sp-5)">Latest Essays</h2><div class="platforms-grid">${essayLinks}</div><h2 style="max-width:var(--content);margin:2rem auto 1rem;padding:0 var(--sp-5)">Games by Year (Newest First)</h2><div class="games-grid">${cardHtml}</div>${toggleScript()}</body></html>`;
 }
 
 function timelinePage() {
@@ -7002,7 +6912,7 @@ function timelinePage() {
     { year: 2001, title: 'PS2 & GameCube & Xbox', desc: 'PlayStation 2 sells 150 million lifetime units. Nintendo releases GameCube. Microsoft enters gaming with Xbox.' },
   ];
 
-  const eventsHtml = events.map((e, i) => `<div style="display:grid;grid-template-columns:5rem 1px 1fr;gap:0 1.5rem;align-items:start;padding-bottom:1.5rem"><div style="text-align:right;font-size:1.1em;font-weight:900;color:var(--accent,#c8a44a);padding-top:0.15rem">${e.year}</div><div style="background:${i % 2 === 0 ? 'var(--accent,#c8a44a)' : '#444'};width:1px;min-height:100%;margin:0 auto"></div><div style="padding-bottom:0.5rem"><div style="font-weight:700;margin-bottom:0.3rem">${escapeHtml(e.title)}</div><div style="color:#bbb;font-size:0.9em;line-height:1.6">${escapeHtml(e.desc)}</div></div></div>`).join('');
+  const eventsHtml = events.map((e, i) => `<div style="display:grid;grid-template-columns:5rem 1px 1fr;gap:0 1.5rem;align-items:start;padding-bottom:1.5rem"><div style="text-align:right;font-size:1.1em;font-weight:900;color:var(--accent);padding-top:0.15rem">${e.year}</div><div style="background:${i % 2 === 0 ? 'var(--accent)' : 'var(--border-strong)'};width:1px;min-height:100%;margin:0 auto"></div><div style="padding-bottom:0.5rem"><div style="font-weight:700;margin-bottom:0.3rem">${escapeHtml(e.title)}</div><div style="color:var(--text-secondary);font-size:0.9em;line-height:1.6">${escapeHtml(e.desc)}</div></div></div>`).join('');
 
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Timeline – Bosnan</title><meta name="description" content="A year-by-year timeline of video game history from Tennis for Two in 1958 to the PlayStation 2 era, covering hardware launches and landmark releases."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('timeline')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Timeline</h1><p class="essay-subtitle">Gaming history from Spacewar! to the PS2 era — a chronological view</p></div><div style="margin-top:2rem">${eventsHtml}</div></div>${toggleScript()}</body></html>`;
 }
@@ -7517,7 +7427,7 @@ ${nav('')}
     <a href="/random" class="btn notfound-random">&#127922; Random Game</a>
   </div>
   <div class="notfound-suggest">
-    <p class="notfound-suggest-label">While you're here:</p>
+    <h2 class="notfound-suggest-label">While you're here:</h2>
     <a href="/games/${escapeHtml(rg.id)}" class="game-card notfound-card">
       <div class="game-card-img-wrap">
         <img src="/${escapeHtml(rg.image)}" alt="${escapeHtml(rg.title)}" loading="lazy"

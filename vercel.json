@@ -9,8 +9,6 @@
           "style.css",
           "games.css",
           "logo.svg",
-          "launcher.js",
-          "BosnanGame.jar",
           "data/**",
           "images/**"
         ]

@@ -1,3 +1,62 @@
+/* ================== DESIGN TOKENS ==================
+   One source of truth for colour, type and spacing. Every value below was
+   picked against the page background for a WCAG AA contrast ratio; the old
+   palette leaned on #555/#777 greys that measured 2.1:1 and 3.4:1, which is
+   why so much of the archive was hard to read. Ratios are noted per token.
+   ==================================================== */
+:root {
+    /* Surfaces: one deliberate elevation ramp, replacing a dozen ad-hoc
+       near-blacks (#050505, #0d0d0d, #111, #141414, #1c1c1c, #1f1f1f …). */
+    --bg:           #0b0b0c;
+    --surface-1:    #131315;  /* cards, panels                 */
+    --surface-2:    #1a1a1d;  /* raised: chips, table headers   */
+    --surface-3:    #232327;  /* inputs, hover fills            */
+    --border:       #2c2c32;
+    --border-strong:#3c3c44;
+
+    /* Text, measured on --bg */
+    --text:           #f2f2f3;  /* 17.9:1 */
+    --text-secondary: #c4c4c9;  /* 11.2:1 */
+    --text-muted:     #a3a3ab;  /*  7.5:1 */
+    --text-faint:     #8d8d96;  /*  5.6:1 — the floor; nothing dimmer */
+
+    /* Accent. #ff0000 on black is 5.2:1 but vibrates badly at text sizes;
+       #ff4d4d is both calmer and higher contrast. --accent-strong is the
+       only red used behind white text (5.2:1). */
+    --accent:        #ff4d4d;  /* 6.4:1 on --bg */
+    --accent-strong: #d12b2b;
+    --accent-soft:   rgba(255, 77, 77, 0.13);
+    --accent-border: rgba(255, 77, 77, 0.38);
+
+    /* Focus ring: deliberately not red, so it can never be confused with a
+       hover state and stays visible on top of red surfaces. */
+    --focus: #6ea8ff;
+
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    /* Type scale. Nothing below 13px: the old sheet had 30 rules at 10-12px. */
+    --fs-xs:   0.8125rem; /* 13px */
+    --fs-sm:   0.875rem;  /* 14px */
+    --fs-base: 1rem;      /* 16px */
+    --fs-md:   1.0625rem; /* 17px - long-form body */
+    --fs-lg:   1.25rem;
+    --fs-xl:   1.5rem;
+    --fs-2xl:  2rem;
+    --fs-3xl:  2.75rem;
+
+    /* 4px spacing scale */
+    --sp-1: 4px;   --sp-2: 8px;   --sp-3: 12px;  --sp-4: 16px;
+    --sp-5: 20px;  --sp-6: 24px;  --sp-8: 32px;  --sp-10: 40px;
+    --sp-12: 48px; --sp-16: 64px; --sp-20: 80px;
+
+    --r-sm: 6px;  --r-md: 10px;  --r-lg: 14px;  --r-pill: 999px;
+
+
+    --measure: 68ch;      /* readable line length for prose */
+    --content: 1120px;    /* standard page width            */
+    --reading: 860px;     /* long-form article column       */
+}
+
 /* ================== RESET ================== */
 * {
     margin: 0;
@@ -5,75 +64,168 @@
     box-sizing: border-box;
 }
 
-/* ================== BODY ================== */
-body {
-    font-family: Arial, sans-serif;
-    background: radial-gradient(circle at center, #0a0a0a 0%, #000000 100%);
-    color: white;
-    overflow-x: hidden;
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    /* The off-canvas mobile drawer sits at translateX(100%), which extends the
+       scrollable area by its own width. `clip` contains it without making the
+       root a scroll container, which `hidden` would -- and that breaks the
+       sticky nav. */
+    overflow-x: clip;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ================== BODY ================== */
+body {
+    font-family: var(--font-sans);
+    font-size: var(--fs-base);
+    line-height: 1.6;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; }
+
+/* Prose links. Anything without a component class -- the About page copy, the
+   essay bodies, injected cross-links -- was falling back to the UA's #0000EE,
+   which measures 2.1:1 on this background. Component classes set their own
+   colour and outrank this on specificity, so they are unaffected. */
+a {
+    color: var(--accent);
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: from-font;
+}
+a:hover { color: var(--text); }
+
+::selection {
+    background: var(--accent-strong);
+    color: var(--text);
+}
+
+/* Keyboard users had no visible focus anywhere on the site. */
+:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: var(--r-sm);
+}
+
+/* Names a region for screen readers without changing the visual design.
+   Used where a card grid would otherwise follow the page h1 with no h2. */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link {
+    position: absolute;
+    left: var(--sp-4);
+    top: calc(-1 * var(--sp-16));
+    z-index: 2000;
+    background: var(--accent-strong);
+    color: var(--text);
+    padding: var(--sp-3) var(--sp-5);
+    border-radius: var(--r-sm);
+    text-decoration: none;
+    font-weight: 600;
+    transition: top 0.15s ease;
+}
+.skip-link:focus {
+    top: var(--sp-4);
+}
+
+/* The background wordmark used to be a 90vw disc at 0.18 opacity sitting
+   behind every page, so text landed on black in some places and dark red in
+   others. It is now a small, near-invisible corner mark. */
 .bg-logo {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90vw;
-    height: 90vw;
-    opacity: 0.18;
+    right: -60px;
+    bottom: -60px;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 340px;
+    height: 340px;
+    opacity: 0.045;
     z-index: 0;
     pointer-events: none;
 }
 
-.bg-logo text {
-    fill: #ff0000;
-    filter: drop-shadow(0 0 12px red);
-}
+.bg-logo text { fill: var(--accent); }
+.bg-logo circle { stroke: var(--accent); }
 
-.bg-logo circle {
-    stroke: #ff0000;
-}
-
-/* ================== NAVBAR ================== */
-nav {
+/* ================== NAVBAR ==================
+   Scoped away from <nav class="crumbs">: the breadcrumb trail is also a
+   <nav>, so the bare element selector was giving it space-between and
+   spreading Home / Games / Pac-Man across the full page width. */
+nav:not(.crumbs) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    position: relative;
+    gap: var(--sp-6);
+    padding: var(--sp-3) var(--sp-8);
+    position: sticky;
+    top: 0;
     z-index: 1001;
+    background: rgba(11, 11, 12, 0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
 }
 
-nav img {
-    width: 50px;
+nav:not(.crumbs) img { width: 42px; display: block; }
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    border-radius: var(--r-sm);
+    flex-shrink: 0;
 }
 
 /* ================== NAV LINKS ================== */
 .nav-links {
     display: flex;
-    gap: 25px;
+    align-items: center;
+    gap: var(--sp-1);
 }
 
 .nav-links a {
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-    position: relative;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: var(--fs-sm);
+    padding: var(--sp-2) var(--sp-3);
+    border-radius: var(--r-sm);
+    white-space: nowrap;
+    transition: color 0.15s ease, background-color 0.15s ease;
 }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background: red;
-    left: 0;
-    bottom: -5px;
-    transition: 0.3s;
+.nav-links a:hover {
+    color: var(--text);
+    background: var(--surface-2);
 }
 
-.nav-links a:hover::after {
-    width: 100%;
+.nav-links a.active {
+    color: var(--accent);
+    background: var(--accent-soft);
+    font-weight: 600;
 }
 
 /* ================== HAMBURGER MENU ================== */
@@ -81,107 +233,51 @@ nav img {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 22px;
+    width: 44px;
+    height: 44px;
+    padding: 11px 7px;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
     cursor: pointer;
     z-index: 1001;
 }
 
 .menu-toggle span {
     display: block;
-    height: 4px;
+    height: 3px;
     width: 100%;
-    background: red;
+    background: var(--accent);
     border-radius: 2px;
-}
-
-/* ================== HERO ================== */
-.hero {
-    text-align: center;
-    padding: 120px 20px;
-    animation: fadeIn 1.5s ease;
-}
-
-.hero h1 {
-    font-size: 70px;
-    color: red;
-    text-shadow: 0 0 20px red;
-}
-
-.hero p {
-    font-size: 22px;
-    margin: 15px 0 25px;
-    opacity: 0.85;
 }
 
 /* ================== BUTTON ================== */
 .btn {
-    display: inline-block;
-    padding: 14px 30px;
-    background: red;
-    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-2);
+    min-height: 44px;
+    padding: var(--sp-3) var(--sp-6);
+    background: var(--accent-strong);
+    color: var(--text);
+    font-size: var(--fs-sm);
+    font-weight: 600;
     text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s;
-    box-shadow: 0 0 15px rgba(255,0,0,0.5);
+    border: 1px solid transparent;
+    border-radius: var(--r-sm);
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
 }
 
+/* The old hover scaled the button 5% and flared a 25px red glow, which made
+   toolbars twitch as the pointer crossed them. */
 .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(255,0,0,0.9);
+    background: var(--accent);
+    color: #14090a;
 }
 
-/* ================== SECTIONS ================== */
-.section {
-    padding: 80px 20px;
-    max-width: 1000px;
-    margin: auto;
-    animation: fadeInUp 1s ease;
-}
-
-.section h2 {
-    margin-bottom: 20px;
-    color: red;
-    text-shadow: 0 0 10px red;
-}
-
-/* ================== GALLERY ================== */
-.gallery {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.gallery img {
-    width: 30%;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px red;
-}
-
-/* ================== LAUNCHER ================== */
-.launcher {
-    text-align: center;
-}
-
-.progress {
-    width: 100%;
-    background: #222;
-    height: 10px;
-    margin-top: 20px;
-    border-radius: 5px;
-}
-
-.bar {
-    width: 0%;
-    height: 100%;
-    background: red;
-    border-radius: 5px;
-}
+.btn:active { transform: translateY(1px); }
 
 /* ================== ANIMATIONS ================== */
 @keyframes fadeIn {
@@ -189,21 +285,10 @@ nav img {
     to {opacity: 1;}
 }
 
-@keyframes fadeInUp {
-    from {opacity: 0; transform: translateY(30px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-
 /* ================== MOBILE RESPONSIVE ================== */
-@media (max-width: 768px) {
-
-    .bg-logo {
-        width: 300px;
-        opacity: 0.03;
-    }
-
-    nav {
-        padding: 15px 20px;
+@media (max-width: 900px) {
+    nav:not(.crumbs) {
+        padding: var(--sp-3) var(--sp-4);
     }
 
     /* Show hamburger menu */
@@ -215,18 +300,20 @@ nav img {
     .nav-links {
         display: flex;
         flex-direction: column;
+        align-items: stretch;
         position: fixed;
         top: 0;
         right: 0;
         height: 100vh;
-        width: 70%;
-        max-width: 300px;
-        background: #000;
-        padding-top: 80px;
-        gap: 20px;
-        text-align: center;
+        height: 100dvh;
+        width: min(84%, 340px);
+        background: var(--surface-1);
+        border-left: 1px solid var(--border);
+        padding: var(--sp-20) var(--sp-4) var(--sp-8);
+        gap: var(--sp-1);
+        overflow-y: auto;
         transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.25s ease-in-out;
         z-index: 1000;
     }
 
@@ -235,164 +322,150 @@ nav img {
     }
 
     .nav-links a {
-        font-size: 18px;
-        padding: 10px 0;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .gallery {
-        flex-direction: column;
-    }
-
-    .gallery img {
-        width: 100%;
+        font-size: var(--fs-base);
+        padding: var(--sp-3) var(--sp-4);
     }
 }
 
 /* ================== ENCYCLOPEDIA SECTION (index.html) ================== */
 .enc-section {
-    max-width: 1000px;
-    margin: 0 auto 70px;
-    padding: 0 20px;
+    max-width: var(--content);
+    margin: 0 auto var(--sp-16);
+    padding: 0 var(--sp-5);
     position: relative;
     z-index: 1;
 }
 .enc-header {
-    margin-bottom: 28px;
+    margin-bottom: var(--sp-6);
 }
 .enc-header h2 {
-    font-size: 22px;
-    color: #ccc;
-    font-weight: bold;
-    margin-bottom: 8px;
-    letter-spacing: 0.3px;
+    font-size: var(--fs-xl);
+    color: var(--text);
+    font-weight: 700;
+    margin-bottom: var(--sp-2);
+    letter-spacing: -0.01em;
 }
 .enc-header p {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.5;
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: var(--measure);
 }
 .enc-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    gap: 16px;
-    margin-bottom: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: var(--sp-4);
+    margin-bottom: var(--sp-6);
 }
 .enc-card {
-    background: #0d0d0d;
-    border: 1px solid #1a1a1a;
-    border-radius: 8px;
-    padding: 18px;
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    padding: var(--sp-5);
     text-decoration: none;
-    color: white;
+    color: var(--text);
     display: block;
-    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 .enc-card:hover {
-    border-color: red;
-    transform: translateY(-3px);
-    box-shadow: 0 0 16px rgba(255,0,0,0.2);
+    border-color: var(--accent-border);
+    background: var(--surface-2);
 }
 .enc-card-name {
-    font-size: 15px;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 4px;
+    font-size: var(--fs-base);
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: var(--sp-1);
 }
 .enc-card-era {
-    font-size: 11px;
-    color: red;
-    font-weight: bold;
-    letter-spacing: 0.4px;
-    margin-bottom: 10px;
+    font-size: var(--fs-xs);
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: var(--sp-3);
 }
 .enc-card-desc {
-    font-size: 12px;
-    color: #777;
-    line-height: 1.5;
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+    line-height: 1.6;
     margin: 0;
 }
 .enc-browse-btn {
-    display: inline-block;
-    color: #888;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--text-secondary);
     text-decoration: none;
-    font-size: 14px;
-    border: 1px solid #2a2a2a;
-    padding: 10px 20px;
-    border-radius: 6px;
-    transition: border-color 0.2s, color 0.2s;
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    border: 1px solid var(--border);
+    padding: var(--sp-3) var(--sp-5);
+    border-radius: var(--r-sm);
+    transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
 }
 .enc-browse-btn:hover {
-    border-color: red;
-    color: white;
+    border-color: var(--accent-border);
+    background: var(--surface-2);
+    color: var(--text);
 }
 
 /* ================== EXTRA SMALL DEVICES ================== */
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 28px;
-    }
-    .hero p {
-        font-size: 14px;
-    }
-    nav img {
-        width: 40px;
-    }
+    nav:not(.crumbs) img { width: 36px; }
+    .enc-section { padding: 0 var(--sp-4); }
 }
 
 /* ================== DEVELOPER PAGES ================== */
 .dev-figures-row {
-    margin-top: 16px;
-    font-size: 14px;
-    color: #ccc;
+    margin-top: var(--sp-4);
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
 }
 .dev-figure {
     display: inline-block;
-    background: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 4px;
-    padding: 3px 10px;
-    margin: 4px 4px 0 0;
-    font-size: 13px;
-    color: #e0e0e0;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    padding: var(--sp-1) var(--sp-3);
+    margin: var(--sp-1) var(--sp-1) 0 0;
+    font-size: var(--fs-xs);
+    color: var(--text-secondary);
 }
 .dev-notable {
-    margin-top: 16px;
-    font-size: 14px;
-    color: #ccc;
+    margin-top: var(--sp-4);
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
 }
 .dev-notable ul {
-    margin-top: 8px;
+    margin-top: var(--sp-2);
+    padding-left: var(--sp-5);
 }
+.dev-notable li { margin-bottom: var(--sp-1); }
 
 .trivia-table {
-    margin-top: 16px;
+    margin-top: var(--sp-4);
     border-collapse: collapse;
     width: 100%;
-    max-width: 480px;
-    font-size: 14px;
+    max-width: 520px;
+    font-size: var(--fs-sm);
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    overflow: hidden;
 }
 .trivia-table th,
 .trivia-table td {
-    padding: 7px 12px;
-    border: 1px solid #333;
+    padding: var(--sp-2) var(--sp-3);
+    border-bottom: 1px solid var(--border);
     text-align: left;
-    color: #e0e0e0;
+    color: var(--text-secondary);
 }
+.trivia-table tr:last-child th,
+.trivia-table tr:last-child td { border-bottom: none; }
 .trivia-table th {
-    background: #1a1a1a;
-    color: #aaa;
+    background: var(--surface-2);
+    color: var(--text-muted);
     font-weight: 600;
     width: 40%;
 }
 .trivia-table td {
-    background: #111;
+    background: var(--surface-1);
 }
-
