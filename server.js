@@ -95,10 +95,15 @@ const SITE_IDENTITY_JSON = JSON.stringify({
 
 // ── Retro news RSS fetcher ───────────────────────────────────────────────────
 
+// Verified live 2026-09-24. All three previous feeds had rotted: Hookshot moved
+// both of its feeds to /feeds/latest (the old paths 404), and retrogamer.net/feed
+// 302s to a GamesRadar HTML page, which parses to zero items. The homepage widget
+// had been rendering "No news available right now." on every visit as a result —
+// re-check these URLs if that string ever comes back.
 const NEWS_FEEDS = [
-  { url: 'https://www.timeextension.com/feeds/articles.rss',   source: 'Time Extension' },
-  { url: 'https://www.retrogamer.net/feed/',                    source: 'Retro Gamer' },
-  { url: 'https://www.nintendolife.com/feeds/news.rss',         source: 'Nintendo Life' },
+  { url: 'https://www.timeextension.com/feeds/latest',          source: 'Time Extension' },
+  { url: 'https://www.nintendolife.com/feeds/latest',           source: 'Nintendo Life' },
+  { url: 'https://retrododo.com/rss/',                           source: 'Retro Dodo' },
 ];
 const NEWS_TTL = 6 * 60 * 60 * 1000; // refresh every 6 hours
 
@@ -114,7 +119,7 @@ function httpGet(rawUrl, redirects = 4) {
     }, (res) => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
         res.resume();
-        return resolve(httpGet(res.headers.location, redirects - 1));
+        return resolve(httpGet(new URL(res.headers.location, rawUrl).href, redirects - 1));
       }
       let body = '';
       res.setEncoding('utf8');
