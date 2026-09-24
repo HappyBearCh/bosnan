@@ -1166,6 +1166,9 @@ function cssHead() {
 // ── Page caches ─────────────────────────────────────────────────────────────
 
 const PAGE_SIZE = 32;
+// Decade filter tabs on the /games hub, in chronological order. Hard-coding
+// them is what left the 203 1990s games with no tab to be filtered to.
+const DECADE_TABS = [...new Set(games.map(g => g.decade).filter(Boolean))].sort();
 const EAGER_IMAGES = 8;
 
 let cachedGamesListHtml = null;
@@ -2393,12 +2396,18 @@ document.addEventListener("keydown",function(e){if(e.key==="/"&&document.activeE
 }
 
 // eagerCount: first N images get fetchpriority=high (no lazy), rest get loading=lazy
-function buildCardHtml(list, eagerCount = 0) {
+function buildCardHtml(list, eagerCount = 0, withFilterData = false) {
   return list.map((g, i) => {
     const imgAttrs = i < eagerCount
       ? `fetchpriority="high" decoding="async"`
       : `loading="lazy" decoding="async"`;
-    return `<a href="/games/${g.id}" class="game-card">
+    // The /games hub filters these in place, so the haystack it matches on
+    // travels with the card. That is what lets all 427 ship as real anchors.
+    const filterData = withFilterData
+      ? ` data-decade="${escapeHtml(g.decade)}" data-s="${escapeHtml(
+          [g.title, g.genre, g.platform, g.developer, g.year].join(" ").toLowerCase())}"`
+      : '';
+    return `<a href="/games/${g.id}" class="game-card"${filterData}>
       <div class="game-card-img-wrap">
         <img src="/${escapeHtml(g.image)}" alt="${escapeHtml(g.title)}" ${imgAttrs}
              onerror="this.parentElement.innerHTML='<div class=\\'game-card-placeholder\\'>${escapeHtml(g.title[0])}</div>'">
@@ -4456,16 +4465,16 @@ ${toggleScript()}
 }
 
 function gamesListPage() {
-  const firstPage = gamesSlim.slice(0, PAGE_SIZE);
-  const cardHtml = buildCardHtml(firstPage, EAGER_IMAGES);
-  const inlineData = JSON.stringify(gamesSlim);
+  // Every game renders as a real anchor: the decade tabs and the search box
+  // below filter the cards already in the DOM, so nothing here is gated on JS.
+  const cardHtml = buildCardHtml(gamesSlim, EAGER_IMAGES, true);
 
   const itemListSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: `Retro Games Archive – ${games.length} classic games`,
     numberOfItems: games.length,
-    itemListElement: firstPage.map((g, i) => ({
+    itemListElement: gamesSlim.slice(0, HUB_ITEMLIST_MAX).map((g, i) => ({
       '@type': 'ListItem', position: i + 1, name: g.title, url: `${SITE_URL}/games/${g.id}`,
     })),
   });
@@ -4499,9 +4508,7 @@ ${nav('games')}
     </div>
     <div class="filter-tabs">
         <button class="filter-btn active" data-decade="all">All Eras</button>
-        <button class="filter-btn" data-decade="1960s">1960s</button>
-        <button class="filter-btn" data-decade="1970s">1970s</button>
-        <button class="filter-btn" data-decade="1980s">1980s</button>
+        ${DECADE_TABS.map(d => `<button class="filter-btn" data-decade="${escapeHtml(d)}">${escapeHtml(d)}</button>`).join('')}
     </div>
 </div>
 
@@ -4510,7 +4517,6 @@ ${nav('games')}
 <h2 class="sr-only">All games</h2>
 <div class="games-grid" id="gamesGrid">${cardHtml}
 </div>
-<div id="loadMoreSentinel" style="height:1px"></div>
 
 <div class="no-results" id="noResults" style="display:none">
     <p>No games found matching your search.</p>
@@ -4519,57 +4525,31 @@ ${nav('games')}
 
 ${toggleScript()}
 <script>
-const allGames = ${inlineData};
-const PAGE = ${PAGE_SIZE};
-let currentDecade = 'all', currentQuery = '', debounceTimer = null;
-let filtered = allGames.slice(), rendered = PAGE;
-
+// Filters the server-rendered cards in place. The previous version shipped
+// every game a second time as a JSON array and rebuilt the grid from it,
+// which cost 93.6 KB and left 395 of 427 games reachable only by running JS.
+const cards = Array.from(document.querySelectorAll('#gamesGrid .game-card'));
 const grid = document.getElementById('gamesGrid');
 const noResults = document.getElementById('noResults');
 const countEl = document.getElementById('gamesCount');
-const sentinel = document.getElementById('loadMoreSentinel');
+let currentDecade = 'all', currentQuery = '', debounceTimer = null;
 
-function esc(s) {
-    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-}
-function cardHtml(g) {
-    return '<a href="/games/'+g.id+'" class="game-card">'+
-        '<div class="game-card-img-wrap">'+
-        '<img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy"'+
-        ' onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'">'+
-        '<div class="game-card-decade">'+esc(g.decade)+'</div>'+
-        (g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : '')+
-        '</div>'+
-        '<div class="game-card-body">'+
-        '<h3 class="game-card-title">'+esc(g.title)+'</h3>'+
-        '<div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div>'+
-        '<p class="game-card-platform">'+esc(g.platform)+'</p>'+
-        '</div></a>';
-}
 function applyFilter() {
-    const q = currentQuery.toLowerCase();
-    filtered = allGames.filter(g => {
-        const matchDecade = currentDecade === 'all' || g.decade === currentDecade;
-        const matchQuery = !q || g.title.toLowerCase().includes(q) || g.genre.toLowerCase().includes(q) ||
-            g.platform.toLowerCase().includes(q) || g.developer.toLowerCase().includes(q) || String(g.year).includes(q);
-        return matchDecade && matchQuery;
-    });
-    countEl.textContent = filtered.length === allGames.length
-        ? allGames.length+' games in archive'
-        : filtered.length+' of '+allGames.length+' games';
-    if (filtered.length === 0) { grid.innerHTML=''; noResults.style.display='block'; rendered=0; return; }
-    noResults.style.display = 'none';
-    rendered = Math.min(PAGE, filtered.length);
-    grid.innerHTML = filtered.slice(0, rendered).map(cardHtml).join('');
+    const q = currentQuery.trim().toLowerCase();
+    let shown = 0;
+    for (const c of cards) {
+        const ok = (currentDecade === 'all' || c.dataset.decade === currentDecade)
+            && (!q || c.dataset.s.indexOf(q) !== -1);
+        c.style.display = ok ? '' : 'none';
+        if (ok) shown++;
+    }
+    countEl.textContent = shown === cards.length
+        ? cards.length + ' games in archive'
+        : shown + ' of ' + cards.length + ' games';
+    noResults.style.display = shown === 0 ? 'block' : 'none';
+    grid.style.display = shown === 0 ? 'none' : '';
 }
-function loadMore() {
-    if (rendered >= filtered.length) return;
-    const next = filtered.slice(rendered, rendered + PAGE);
-    grid.insertAdjacentHTML('beforeend', next.map(cardHtml).join(''));
-    rendered += next.length;
-}
-new IntersectionObserver(e => { if (e[0].isIntersecting) loadMore(); }, { rootMargin:'200px' }).observe(sentinel);
-function clearSearch() { document.getElementById('searchInput').value=''; currentQuery=''; applyFilter(); }
+function clearSearch() { document.getElementById('searchInput').value = ''; currentQuery = ''; applyFilter(); }
 document.getElementById('searchInput').addEventListener('input', e => {
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(() => { currentQuery = e.target.value; applyFilter(); }, 200);
