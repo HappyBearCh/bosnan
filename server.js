@@ -15,8 +15,11 @@ const PORT = process.env.PORT || 3000;
 // bosnan.net, so every canonical on bosnan.net pointed at bosnan.vercel.app and
 // told Google the real site was somewhere else — which is why bosnan.net had no
 // entity to recognise. Override with SITE_URL only to move the whole site.
-const SITE_URL = (process.env.SITE_URL || 'https://bosnan.net').replace(/\/+$/, '');
+const SITE_URL = (process.env.SITE_URL || 'https://www.bosnan.net').replace(/\/+$/, '');
 const SITE_HOST = SITE_URL.replace(/^https?:\/\//, '');
+// The registrable domain behind SITE_HOST, so the canonical-host guard below
+// can treat the apex and every subdomain of it as ours, whichever is canonical.
+const CANONICAL_APEX = SITE_HOST.split('.').slice(-2).join('.');
 const SITE_NAME = 'Bosnan Retro Games Archive';
 // Derived from the newest data file's mtime, so it moves only when content
 // actually changes — a per-request "today" lastmod teaches crawlers to ignore
@@ -1328,10 +1331,17 @@ app.use((req, res, next) => {
   if (!CANONICAL_HOST_REDIRECT) return next();
   const host = (req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0].toLowerCase();
   if (!host || host === SITE_HOST) return next();
-  // Production deployment URLs only. `*-git-*.vercel.app` preview hosts are
-  // already excluded by VERCEL_ENV above; this is the belt to that braces.
-  if (!/^bosnan(-[a-z0-9-]+)?\.vercel\.app$/.test(host)) return next();
+  // Preview deployments keep serving themselves; `*-git-*` and the hashed build
+  // hosts are already excluded by VERCEL_ENV above, and this is the belt to it.
   if (/-git-|-[a-z0-9]{9}\./.test(host)) return next();
+  // Only hosts we own get redirected. The apex is covered explicitly because it
+  // is the one that mattered: Vercel serves the site on www and 307s the apex
+  // onto it, while every canonical, og:url, JSON-LD url and sitemap <loc> named
+  // the apex — so the canonical each page declared was a URL that redirected
+  // away, on all ~1,950 of them. Whichever host SITE_URL names, the rest 301.
+  const ours = host === CANONICAL_APEX || host.endsWith('.' + CANONICAL_APEX)
+    || (host.startsWith('bosnan') && host.endsWith('.vercel.app'));
+  if (!ours) return next();
   return res.redirect(301, `${SITE_URL}${req.originalUrl}`);
 });
 
