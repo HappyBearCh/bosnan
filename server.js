@@ -55,8 +55,9 @@ const SITE_LASTMOD = (() => {
 // short name people actually search for.
 const ORG_ID = `${SITE_URL}/#organization`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
-const SITE_TAGLINE = 'An independent archive of pre-1990 video game history: games, hardware, ' +
-  'developers, music, magazines and long-form essays on the arcade and home-computer era.';
+const SITE_TAGLINE = 'An independent archive of video game history from 1952 to 1999: games, ' +
+  'hardware, developers, music, magazines and long-form essays on the arcade, ' +
+  'home-computer and console eras.';
 const ORG_SCHEMA = {
   '@type': 'Organization',
   '@id': ORG_ID,
@@ -1813,7 +1814,7 @@ const HUB_DESCRIPTIONS = new Map(Object.entries({
   'endings': 'How classic games said goodbye: the final screens, twists and credits sequences players spent whole cartridges working toward.',
   'manuals': 'Retro instruction manuals as artefacts — the artwork, fiction, maps and hint pages that shipped in the box before in-game tutorials.',
   'merchandise': 'The toys, cereals, cartoons and lunchboxes that turned retro game characters into 1980s and 1990s household brands.',
-  'years': 'Browse the archive one year at a time, from the earliest experiments of the 1960s to the end of the 16-bit era — releases and hardware.',
+  'years': 'Browse the archive one year at a time, from the earliest experiments of the 1950s to the end of the 1990s — releases and hardware.',
 }));
 
 // The hub's live entry count, for the `{n}` placeholder: the distinct
@@ -4218,9 +4219,9 @@ ${toggleScript()}
 // cannot back.
 function aboutPage() {
   const sections = NAV_GROUPS.reduce((n, g) => n + g.items.length, 0);
-  const desc = `Bosnan is an independent, non-commercial archive of pre-1990 video game history — `
-    + `${games.length} game entries, ${ESSAYS.length} essays and ${sections} reference sections `
-    + `covering hardware, developers, music and the arcade era.`;
+  const desc = `Bosnan is an independent archive of video game history, 1952–1999 — `
+    + `${games.length} game entries, ${ESSAYS.length} essays and ${sections} sections `
+    + `on hardware, developers and music.`;
   const schema = JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -4264,12 +4265,13 @@ ${bgLogo()}
 ${nav('about')}
 <section class="platforms-hero">
     <h1>About Bosnan</h1>
-    <p>An independent archive of video game history before 1990</p>
+    <p>An independent archive of video game history, 1952–1999</p>
 </section>
 <div class="essay-wrapper">
   <p><strong>Bosnan</strong> is a free, independent, non-commercial reference archive for the
-  first three decades of video games — the mainframe experiments of the 1960s, the arcade boom,
-  the 8-bit home consoles and the home-computer scenes that grew up beside them.</p>
+  first five decades of video games — the mainframe experiments of the 1950s and 60s, the arcade
+  boom, the 8-bit consoles and home-computer scenes that grew up beside them, and the 16- and
+  32-bit machines that closed out the century.</p>
 
   <h2>What is in the archive</h2>
   <p>The archive currently holds <strong>${games.length} game entries</strong> and
@@ -4285,7 +4287,7 @@ ${nav('about')}
   <p><a href="/browse">Browse all ${sections} sections &#8594;</a></p>
 
   <h2>Scope</h2>
-  <p>The cut-off is roughly 1990. A title qualifies if it was released, announced or credibly
+  <p>The cut-off is the end of 1999. A title qualifies if it was released, announced or credibly
   documented before then; hardware, people and publications qualify if their significant work
   falls in the same window. Later material appears only where it is directly about that era —
   a <a href="/retro-revival">revival</a>, a re-release, or a <a href="/rom-hacks">ROM hack</a>
@@ -4345,8 +4347,8 @@ function homepagePage(gotd) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosnan – Retro Games Archive: ${games.length}+ Classic Games of the 1960s–80s</title>
-    <meta name="description" content="Bosnan – explore legendary retro games from the 1960s, 1970s, and 1980s. Browse ${games.length}+ games across Arcade, NES, Atari, C64, and more, plus essays, soundtracks, hardware, and gaming history.">
+    <title>Bosnan – Retro Games Archive: ${games.length}+ Classic Games, 1952–1999</title>
+    <meta name="description" content="Bosnan – explore legendary retro games from 1952 to 1999. Browse ${games.length}+ games across Arcade, NES, C64, SNES, Genesis and PlayStation, plus essays and hardware.">
     <script type="application/ld+json">${websiteSchema}</script>
     <script type="application/ld+json">${orgSchema}</script>
     ${cssHead()}
@@ -4484,10 +4486,10 @@ function gamesListPage() {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All ${games.length} Retro Games of the 1960s–80s – Bosnan Archive</title>
-    <meta name="description" content="Browse ${games.length} legendary retro games from the 1960s, 1970s, and 1980s. Search by title, genre, platform, or decade.">
+    <title>All ${games.length} Retro Games, 1952–1999 – Bosnan Archive</title>
+    <meta name="description" content="Browse ${games.length} legendary retro games from 1952 to 1999. Search by title, genre, platform, or decade.">
     <meta property="og:title" content="Retro Games Archive – Bosnan">
-    <meta property="og:description" content="Browse ${games.length} legendary retro games from the 1960s, 1970s, and 1980s.">
+    <meta property="og:description" content="Browse ${games.length} legendary retro games from 1952 to 1999.">
     <meta property="og:type" content="website">
     <script type="application/ld+json">${itemListSchema}</script>
     ${cssHead()}
@@ -4498,7 +4500,7 @@ ${nav('games')}
 
 <section class="games-hero">
     <h1>Retro Games Archive</h1>
-    <p>A collection of legendary games from the 1960s, 1970s, and 1980s</p>
+    <p>A collection of legendary games from 1952 to 1999</p>
 </section>
 
 <div class="games-controls">
@@ -4721,7 +4723,7 @@ function platformsListPage() {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retro Gaming Platforms – Bosnan</title>
-    <meta name="description" content="Explore retro gaming platforms from the 1970s and 1980s: Arcade, NES, Atari 2600, Commodore 64, ZX Spectrum, and more.">
+    <meta name="description" content="Explore retro gaming platforms from the 1970s to the 1990s: Arcade, NES, Atari 2600, Commodore 64, ZX Spectrum, SNES, Genesis, PlayStation, and more.">
     <script type="application/ld+json">${JSON.stringify({
       '@context': 'https://schema.org', '@type': 'ItemList', name: 'Retro Gaming Platforms',
       numberOfItems: PLATFORMS.length,
