@@ -285,4 +285,26 @@ module.exports = [
     ],
     discoveredBy: 'Collectors — three prototypes circulate; one sold on eBay for $1,000 and a build leaked in ISO form',
   },
+  {
+    id: 'resident-evil-game-boy-color',
+    title: 'Resident Evil (Game Boy Color)',
+    developer: 'HotGen',
+    platform: 'Game Boy Color',
+    year: 1999,
+    status: 'Cancelled by Capcom — unfinished builds leaked in 2012 and 2025',
+    description: 'A British studio fitted every room of the 1996 PlayStation original onto a Game Boy Color cartridge. Capcom looked at the result and decided it would rather not release it at all.',
+    longDescription: 'Few ports have been asked to travel as far downhill as this one. Resident Evil had defined survival horror on the PlayStation in 1996 with pre-rendered backgrounds, fixed cinematic camera angles and polygonal characters moving through them — a presentation built on CD storage and 3D hardware. Capcom commissioned HotGen, a UK software house, to bring it to the Game Boy Color, an 8-bit handheld with a cartridge a fraction of the size of a single PlayStation disc.\n\nWhat is remarkable about the surviving builds is not how much was cut but how little. The Game Boy Color version contains every room, every cutscene and almost all the items of the PlayStation original. The mansion is all there, redrawn room by room as flat backgrounds with the fixed camera angles preserved, and the characters shrunk to sprites that walk through them. As an act of compression it is extraordinary.\n\nThe game was meant to ship in late 1999 or early 2000. Capcom cancelled it, citing poor quality caused by the Game Boy\'s limited hardware — a judgement that anyone who has played the leaked builds tends to understand. The layout survived the journey; the atmosphere, which in the original came from lighting, sound and the menace of a slow 3D figure turning toward the camera, largely did not.\n\nFor over a decade the port existed only as a rumour and a few preview screenshots. In January 2012 an anonymous individual claimed to own an EPROM cartridge of the game and asked for $2,000 before he would release the ROM. The money was raised in February and an unfinished build was leaked. A more complete build followed in 2025, so a cancelled port can now be studied in two states of completion — a rare record of how a studio attacked a problem that probably had no good answer.',
+    keyFacts: [
+      'Developed by the UK software house HotGen as a Game Boy Color conversion of the 1996 PlayStation original',
+      'Planned for release in late 1999 or early 2000',
+      'Capcom cancelled it, citing poor quality caused by the Game Boy\'s limited hardware',
+      'The surviving build contains every room, every cutscene and almost all the items of the PlayStation version',
+      'In January 2012 an anonymous owner of an EPROM cartridge asked for $2,000 before leaking the ROM; the target was met in February',
+      'A near-complete build leaked online in 2025',
+    ],
+    discoveredBy: 'An anonymous collector holding an EPROM cartridge, who crowdfunded its release in 2012',
+    sources: [
+      { title: 'Resident Evil (1996 video game)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Resident_Evil_(1996_video_game)' },
+    ],
+  },
 ];

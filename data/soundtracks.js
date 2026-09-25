@@ -508,4 +508,87 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'tetris-game-boy-ost',
+    title: 'Tetris (Game Boy) Soundtrack',
+    game: 'Tetris',
+    platform: 'Game Boy',
+    year: 1989,
+    composer: 'Hirokazu Tanaka',
+    era: '1980s',
+    description: 'Hirokazu Tanaka\'s Game Boy Tetris score turned a nineteenth-century Russian folk song into the most recognisable piece of music in video games — and hid Bach and Tchaikovsky alongside it.',
+    longDescription: 'The Game Boy Tetris let players choose one of three background tracks, or play with sound effects only, and that small menu made its music unusually personal: everybody had a favourite. The soundtrack was created by Hirokazu Tanaka, the Nintendo composer who had already scored Metroid and would go on to Mother. Music A is an arrangement of "Korobeiniki", a Russian folk song also known as "Korobushka", and through the Game Boy it became the melody that most of the world simply calls the Tetris theme. Music C is an arrangement of the Menuet from Johann Sebastian Bach\'s French Suite No. 3 in B minor, transposed to F-sharp minor. The celebratory music played when the player completes stages is Tchaikovsky\'s "Trepak" from The Nutcracker, in different arrangements. The famous line-up was not there from the very start. In an early version released only in Japan, estimated at around 25,000 copies, Music A was the Minuet rather than Korobeiniki. The version that shipped to the rest of the world — alongside the Game Boy itself in North America and Europe — made the folk song the default, and with tens of millions of copies behind it, the Game Boy Tetris did more than anything else to fix a nineteenth-century Russian song in the heads of people who had never heard of it.',
+    keyFacts: [
+      'Composed and arranged by Nintendo\'s Hirokazu Tanaka',
+      'Players could choose Music A, B or C, or sound effects only',
+      'Music A arranges the Russian folk song "Korobeiniki" (also "Korobushka")',
+      'Music C arranges the Menuet from Bach\'s French Suite No. 3 in B minor, transposed to F-sharp minor',
+      'Stage-clear fanfares use Tchaikovsky\'s "Trepak" from The Nutcracker',
+      'An early Japan-only version of around 25,000 copies used the Minuet as Music A instead of Korobeiniki',
+    ],
+    sections: [
+      {
+        title: 'Four Voices, Three Centuries',
+        html: '<p>The Game Boy had a four-channel sound chip — two pulse waves, a programmable wave channel and noise — and Tanaka arranged folk, Baroque and Romantic music for it with the same care he gave his original work. Korobeiniki in particular was reshaped for the game: its tempo pushed forward and its melody set against a busy, bouncing bass line that gives it the momentum of falling blocks.</p><p>The choice of music is also a small statement about the game\'s origin. A puzzle designed in Moscow shipped with a Russian folk song and a Russian ballet, on a Japanese handheld, arranged by a Japanese composer, alongside a German keyboard suite — and it was the folk song that the world remembered.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Tetris (Game Boy video game)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Tetris_(Game_Boy_video_game)' },
+    ],
+  },
+  {
+    id: 'ducktales-ost',
+    title: 'DuckTales Soundtrack',
+    game: 'DuckTales',
+    platform: 'NES',
+    year: 1989,
+    composer: 'Hiroshige Tonomura',
+    era: '1980s',
+    description: 'A licensed Disney platformer from Capcom\'s Mega Man team, with a soundtrack whose Moon stage theme is routinely named the finest piece of 8-bit music ever written.',
+    longDescription: 'DuckTales was a licensed game, and licensed games in 1989 were not expected to have memorable music. This one was built by staff from Capcom\'s Mega Man series, and it sounds like it. The score was composed by Hiroshige Tonomura, with Yoshihiro Sakaguchi as sound programmer, and it gives each of the game\'s destinations — the Amazon, Transylvania, the African Mines, the Himalayas and the Moon — a theme with a clear character of its own. The Moon theme is the one that escaped. Polygon identified it as the most famous piece of music from the game, and Geekparty went further, calling it "the most perfect piece of 8-bit music ever written". WayForward\'s creative director Matt Bozon, whose studio made DuckTales: Remastered in 2013, called the soundtrack some of the best 8-bit music he had ever heard, singling out the Transylvania and Himalayas stages too. The remaster updated the music along with the graphics. The Moon theme then crossed back into the franchise that inspired it: it appears in the 2017 DuckTales animated series in scenes set on the Moon, most prominently as the basis of a lullaby sung by Della Duck.',
+    keyFacts: [
+      'Composed by Hiroshige Tonomura, with Yoshihiro Sakaguchi as sound programmer',
+      'Developed by Capcom staff drawn from the Mega Man series',
+      'Polygon calls the Moon theme the most famous piece of music from the game',
+      'WayForward\'s Matt Bozon called it "some of the best 8-bit music" he had ever heard',
+      'The Moon theme returned in the 2017 DuckTales series as the basis of a lullaby sung by Della Duck',
+    ],
+    sections: [
+      {
+        title: 'The Theme That Left the Game',
+        html: '<p>Most NES music is remembered by people who played the game. The DuckTales Moon theme is remembered by people who did not: it circulated through remixes, covers and online lists of the best chiptune ever made until it had a life almost independent of the platformer it came from. Its structure helps — a long, yearning melody over a steady pulse, more song than loop, with a shape that survives any arrangement.</p><p>Its return in the 2017 cartoon completed an unusual journey. A tune written to accompany a licensed game about a cartoon became part of the cartoon itself, adopted by the franchise as though it had always belonged to it.</p>',
+      },
+    ],
+    sources: [
+      { title: 'DuckTales (video game)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/DuckTales_(video_game)' },
+    ],
+  },
+  {
+    id: 'ocarina-of-time-ost',
+    title: 'The Legend of Zelda: Ocarina of Time Original Soundtrack',
+    game: 'The Legend of Zelda: Ocarina of Time',
+    platform: 'Nintendo 64',
+    year: 1998,
+    composer: 'Koji Kondo',
+    era: '1990s',
+    trackCount: 82,
+    description: 'Koji Kondo wrote a soundtrack that the player also performs: twelve melodies played on the controller\'s buttons that open doors, change the weather and bend time.',
+    longDescription: 'Music in most games accompanies the play. In Ocarina of Time it is part of the play. Koji Kondo, the composer behind most of the Zelda series, scored the game\'s regions, towns and dungeons, but its signature is the set of twelve melodies Link learns on the ocarina, which are used to solve music-based puzzles and to teleport to places already visited. The player performs them on the Nintendo 64 controller, whose button layout resembles the holes of the instrument: five notes are available, and tilting the analog stick bends the pitch for more. Because each song is short, distinct and tied to an action, players learned them by ear and by hand, and many can still play Zelda\'s Lullaby or Epona\'s Song years later. Critics noted another inversion: areas of Hyrule have their own musical pieces, so a melody learned in a place summons that place back — a kind of leitmotif in reverse. The game was released in Japan and North America in November 1998, and Pony Canyon published the official soundtrack in Japan on 18 December 1998, on a single CD with 82 tracks. One piece changed after launch. The original Fire Temple theme contained a sample of the adhan, the Islamic call to prayer; because Nintendo\'s policy excluded real religious references, later revisions of the game replaced it with a version that simply removed the sample.',
+    keyFacts: [
+      'Composed by Koji Kondo, composer of most of the Zelda series',
+      'Link learns twelve melodies, used to solve music puzzles and to teleport to visited locations',
+      'Songs are played with five notes on the N64 controller, with the analog stick bending the pitch',
+      'The official soundtrack was released by Pony Canyon in Japan on 18 December 1998, on one CD with 82 tracks',
+      'The Fire Temple theme originally contained a sample of the adhan and was altered in later revisions to remove it',
+    ],
+    sections: [
+      {
+        title: 'The Player as Performer',
+        html: '<p>Kondo\'s problem was to write melodies that worked both as music and as input. They had to be short enough to play from memory, distinct enough that no two could be confused, and built from only five notes. The solution — a handful of compact, strongly shaped phrases — made each song function like a spell with a sound, and gave the game a musical vocabulary that players carried around in their heads.</p><p>It also changed how the rest of the score was heard. Once a player had learned the Song of Storms or the Prelude of Light on the controller, hearing it in the world meant something: a place, an ability, a memory of learning it. That tie between hearing and doing is why Ocarina of Time\'s songs are remembered better than almost any other music of the N64 era.</p>',
+      },
+    ],
+    sources: [
+      { title: 'The Legend of Zelda: Ocarina of Time', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Ocarina_of_Time' },
+    ],
+  },
 ];

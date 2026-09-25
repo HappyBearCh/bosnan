@@ -505,5 +505,60 @@
         html: '<p>The USA Network broadcast in 2006 is the moment the argument was settled, and it is worth remembering how strange the proposition was. Televising video games had been tried — Starcade in the 1980s, various one-off specials since — and had reliably failed, because a game designed to be played is not automatically a game that can be watched. Halo 2 on a split-screen feed, with commentary, running as a series on a mainstream cable network, was a genuine test of whether spectating was a thing an American audience would do.</p><p>The answer, in 2006, was a qualified yes, and the qualification mattered less than the precedent. Every subsequent attempt to build a spectator business around console competition in North America is working in a market that MLG demonstrated existed — and Activision Blizzard\'s $46 million valuation of the assets in 2015 is the industry\'s own assessment of what that demonstration turned out to be worth.</p>',
       },
     ]
-  }
+  },
+  {
+    id: 'battle-by-the-bay-1996',
+    title: 'Battle by the Bay — The Tournament That Became Evo',
+    year: 1996,
+    game: 'Super Street Fighter II Turbo / Street Fighter Alpha 2',
+    organizer: 'Tom Cannon, Tony Cannon, Joey Cuellar and Seth Killian',
+    location: 'Golfland, Sunnyvale, California, USA',
+    era: '1990s',
+    description: 'Forty players in a Sunnyvale arcade, organised by a handful of enthusiasts from the Street Fighter community. Six years later it changed its name to Evolution, and became the biggest fighting game event in the world.',
+    longDescription: 'In 1996 fighting game competition in America had no national circuit. It happened in arcades, among regulars who knew one another by initials on high-score tables and by reputation. B3: Battle by the Bay was an attempt to bring the best of those players together in one place. It was organised by Tom "inkblot" Cannon, his brother Tony "Ponder" Cannon, Joey "MrWizard" Cuellar and Seth "S-Kill" Killian, and held at the Golfland arcade in Sunnyvale, California. The competition featured Super Street Fighter II Turbo and Street Fighter Alpha 2, and drew 40 entrants — mostly from the United States, but with players from Canada and Kuwait as well. It was a small event by any later standard. What it established was the format and the community: an open tournament, run by players, where anyone could enter and the best player on the day won. The tournament was held again in the years that followed, and in 2002 it changed its name to the Evolution Championship Series — Evo — holding that year\'s tournament at UCLA in Los Angeles. Evo 2004 took place at California State Polytechnic University, Pomona, and in 2005 it moved to the Green Valley Ranch casino and hotel in Las Vegas, the city that has been its home since.',
+    winner: null,
+    keyFacts: [
+      'Organised by Tom Cannon, Tony Cannon, Joey Cuellar and Seth Killian',
+      'Held at the Golfland arcade in Sunnyvale, California, in 1996',
+      'Featured Super Street Fighter II Turbo and Street Fighter Alpha 2, with 40 entrants',
+      'Players came from the US, Canada and Kuwait',
+      'Renamed the Evolution Championship Series (Evo) in 2002; moved to Las Vegas in 2005',
+    ],
+    sections: [
+      {
+        title: 'Run by Players, for Players',
+        html: '<p>Most early video game competitions were promotional events, run by publishers or television producers to sell a game or a show. Battle by the Bay came from the community itself. Its organisers were players, and the event reflected that: the goal was not to showcase a product but to find out who was actually best.</p><p>That grassroots origin is the thread that runs through Evo\'s history. The event grew from an arcade in Sunnyvale to a university campus to a Las Vegas casino, but the open-entry format — anyone can sign up, and a stranger can knock out a champion — came straight from the arcades where it started.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Evolution Championship Series', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Evolution_Championship_Series' },
+    ],
+  },
+  {
+    id: 'us-national-video-game-team-1983',
+    title: 'The U.S. National Video Game Team',
+    year: 1983,
+    game: 'Various arcade games',
+    organizer: 'Walter Day / Twin Galaxies',
+    location: 'Touring the United States',
+    era: '1980s',
+    description: 'In the summer of 1983, at the height of the arcade boom, Twin Galaxies put America\'s best players on a 44-foot bus full of arcade machines and sent them on tour as a national team.',
+    longDescription: 'Twin Galaxies, the arcade and scorekeeping organisation founded by Walter Day in Ottumwa, Iowa, had spent the early 1980s recording and verifying high scores. In 1983 it went further and tried to turn top players into a team. In March of that year it assembled professional players for the Electronic Circus, a touring show scheduled for 40 cities. It did not get far — the Boston run closed after five days, on 19 July — but its players are believed to be the first professionally contracted video game players in history. On 25 July 1983, Twin Galaxies established the U.S. National Video Game Team. That summer the team toured the United States in a 44-foot GMC bus filled with arcade games, appearing at arcades around the country and running the 1983 Video Game Masters Tournament along the way. The results of that tournament were published in the 1984 US edition of the Guinness Book of World Records, giving competitive arcade play a kind of official recognition it had never had. The timing was unlucky. The North American video game market was already starting to collapse, and the arcade boom that had made a national team seem natural would soon be over. But the idea — that the best players could represent a country, travel and compete — anticipated much of what competitive gaming would become.',
+    winner: null,
+    keyFacts: [
+      'Established by Twin Galaxies on 25 July 1983',
+      'Toured the US in summer 1983 in a 44-foot GMC bus filled with arcade games',
+      'Ran the 1983 Video Game Masters Tournament, whose results appeared in the 1984 Guinness Book of World Records',
+      'Preceded by the Electronic Circus, whose players are believed to be the first professionally contracted video game players',
+    ],
+    sections: [
+      {
+        title: 'A Team Before There Was a League',
+        html: '<p>A national team implies international competition, leagues and a structure to compete within. In 1983 there was none of that. The U.S. National Video Game Team was a team before its sport existed — a demonstration that top arcade players could be presented as athletes and representatives rather than as teenagers who spent too much time in arcades.</p><p>The crash that followed swept most of this away, and competitive gaming spent the next decade rebuilding in other forms: Nintendo\'s promotional championships, then PC tournaments and fighting game events. When national teams and professional contracts came back, they were built on ground Twin Galaxies had marked out in 1983.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Twin Galaxies', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Twin_Galaxies' },
+    ],
+  },
 ];

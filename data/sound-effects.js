@@ -508,4 +508,86 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'pong-beep',
+    title: 'The Pong Beep',
+    game: 'Pong',
+    platform: 'Arcade',
+    year: 1972,
+    era: '1970s',
+    creator: 'Allan Alcorn',
+    sfxType: 'Collision',
+    description: 'Nolan Bushnell wanted a cheering crowd. Ted Dabney wanted boos and hisses. Allan Alcorn, with no room on the board and no idea how to make either, found a few tones already inside the circuit — and the first famous sound in video games was the one that cost nothing to add.',
+    longDescription: 'Pong\'s sound was an afterthought, and it became one of the best-known sounds in the medium. When Allan Alcorn was building the game at Atari in 1972, his bosses had ambitious ideas: Nolan Bushnell asked for realistic sound effects with the roar of a crowd, and Ted Dabney wanted the machine to boo and hiss when a player lost a point. Alcorn had neither the space on the board for extra circuitry nor, at the time, the knowledge of how to generate such sounds with digital logic. So he looked at what was already there. Inspecting the sync generator — the part of the circuit that kept the video signal timed — he found that it could produce different tones, and he used those for the game\'s sounds. The result was a small set of clean electronic blips for the ball striking a paddle, bouncing off a wall and a point being scored. It was the cheapest possible solution, and it turned out to be perfect: the sound was immediate, tied exactly to the on-screen event, and gave the game a rhythm that players could hear from across a room. The prototype went into Andy Capp\'s Tavern in Sunnyvale in August 1972 and was so popular that its coin mechanism overflowed with quarters.',
+    keyFacts: [
+      'Created by Allan Alcorn at Atari in 1972',
+      'Nolan Bushnell wanted crowd noise; Ted Dabney wanted boos and hisses when a player lost',
+      'With no room for new circuitry, Alcorn took tones already available from the sync generator',
+      'The prototype was installed at Andy Capp\'s Tavern in August 1972, where its coin box overflowed',
+    ],
+    sections: [
+      {
+        title: 'Found Sound',
+        html: '<p>The Pong beep is a found object. It was not composed or designed in any modern sense; it was a signal that already existed inside the machine for another purpose, routed to a speaker. That origin matters, because it established something every later game sound inherited: feedback that is exactly synchronised with the event that causes it. When the ball meets the paddle, the sound happens at that instant, and the player\'s ear confirms what the eye saw.</p><p>Bushnell\'s cheering crowd would have been atmosphere. Alcorn\'s beep was information — and it made the game feel responsive in a way that ambience alone never could.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Pong', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Pong' },
+    ],
+  },
+  {
+    id: 'asteroids-heartbeat',
+    title: 'The Asteroids Heartbeat',
+    game: 'Asteroids',
+    platform: 'Arcade',
+    year: 1979,
+    era: '1970s',
+    creator: 'Wendi Allen',
+    sfxType: 'Ambient Loop',
+    description: 'Two low notes, alternating, getting faster. Asteroids had no music and no sound chip, and its throbbing heartbeat still did more to raise a player\'s pulse than most soundtracks.',
+    longDescription: 'Atari\'s Asteroids, released in North America in November 1979, was conceived by Lyle Rains and programmed by Ed Logg on vector hardware developed by the engineer Wendi Allen. The machine had no sound chip. Instead Allen built a hardware circuit for its thirteen sound effects by hand and wired it onto the board — the ship\'s thrust, the shots, the explosions of rocks and the flying saucers. The most memorable of them is barely a sound effect at all. Under the action runs a "heartbeat": a pair of low, alternating tones, like a slow two-note bass line. As a wave goes on, the heartbeat quickens. It is the same principle that had made Space Invaders\' descending march so effective a year earlier — tempo tied to the state of the game — but in Asteroids it works almost subliminally. The player is concentrating on rocks, bullets and the inertia of the ship, and the rising tempo registers as tension rather than as music. When a new wave begins, it slows again, and the relief is audible.',
+    keyFacts: [
+      'Asteroids was released in North America in November 1979, conceived by Lyle Rains and programmed by Ed Logg',
+      'The game had no sound chip; Wendi Allen hand-built a circuit for its 13 sound effects',
+      'The background "heartbeat" is a pair of alternating low tones',
+      'The heartbeat quickens as a wave progresses',
+    ],
+    sections: [
+      {
+        title: 'Tempo as Tension',
+        html: '<p>The heartbeat does not tell the player anything they could not see. Its job is emotional: it turns the gradual pressure of a wave into something the body feels. Because it is so simple — two notes, no melody — it never competes with the sound effects for attention, and it never becomes a tune the player tunes out.</p><p>It is one of the earliest examples of a game adjusting its audio to its own state, a technique that would later grow into dynamic scores and adaptive music. In 1979 it was done with a few hand-wired components, and it still works.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Asteroids (video game)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Asteroids_(video_game)' },
+    ],
+  },
+  {
+    id: 'qbert-swearing',
+    title: 'Q*bert\'s Swearing',
+    game: 'Q*bert',
+    platform: 'Arcade',
+    year: 1982,
+    era: '1980s',
+    creator: 'David Thiel',
+    sfxType: 'Voice',
+    description: 'Gottlieb\'s sound engineer could not get a speech chip to say anything useful, so he fed it random numbers. The gibberish that came out, paired with a cartoon "@!#?@!", became the most famous swearing in arcade history.',
+    longDescription: 'Q*bert was released by Gottlieb on 18 October 1982, designed by Warren Davis and Jeff Lee, with audio by David Thiel. Speech was a selling point in arcades at the time, and Thiel worked with a Votrax speech synthesiser — a chip that built words from phonetic components and needed careful, laborious programming to produce intelligible English. Frustrated with the results, he tried something else: "What if I just stick random numbers in the chip instead of all this highly authored stuff, what happens?" What happened was gibberish — strings of garbled, vaguely vocal noise that sounded like someone muttering in a language nobody spoke. Paired with Q*bert\'s speech balloon, which shows a grawlix, "@!#?@!", when he is caught by an enemy — a string of symbols Jeff Lee originally presented as a joke — the effect is unmistakably a character swearing without ever saying a word. Gottlieb, a pinball manufacturer, added one more sound from its own trade. When Q*bert falls off the pyramid, a pinball "knocker" inside the cabinet strikes with a loud physical thump. The designers had planned to add foam padding to soften it, but that was too expensive, so the full knock stayed.',
+    keyFacts: [
+      'Q*bert was released by Gottlieb on 18 October 1982, designed by Warren Davis and Jeff Lee',
+      'David Thiel created the "swearing" by feeding random numbers into a Votrax speech synthesiser',
+      'The speech balloon\'s "@!#?@!" grawlix began as a joke by Jeff Lee',
+      'A pinball knocker in the cabinet thumps when Q*bert falls off the pyramid',
+      'Foam padding to soften the knocker was dropped as too expensive',
+    ],
+    sections: [
+      {
+        title: 'Swearing Without Words',
+        html: '<p>Q*bert\'s outburst works because it is never actually rude. The noise is not language, and the balloon is typographic punctuation, yet together they read instantly as cursing. It is the same trick cartoonists had used for decades, translated into sound — and it gave a small orange character without a mouth a personality players still remember.</p><p>The knocker adds the other half of the joke. It is a physical sound in the cabinet rather than a noise from the speaker, so a fall off the pyramid feels like something heavy has actually hit the floor. Between the gibberish and the thump, Q*bert\'s failures are funnier than most games\' successes.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Q*bert', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Q*bert' },
+    ],
+  },
 ];

@@ -486,5 +486,87 @@
         html: '<p>The concession Itagaki eventually made is the most revealing thing about him. He added an easier difficulty, as requested — and called it Ninja Dog. Selecting it dresses Ryu in a ribbon and has the game address the player with open condescension. The accommodation was real, and it was delivered as an insult.</p><p>That gesture, more than any individual boss or enemy encounter, is why Ninja Gaiden occupies the place it does in arguments about difficulty in games. It stakes out an uncompromising position — that a game is permitted to be exactly as hard as its author wants, that accessibility is a courtesy rather than an obligation, and that the courtesy may be extended with contempt. Two decades of subsequent argument about difficulty options, much of it conducted around the Souls games, is still working through the question Ninja Gaiden posed with a ribbon.</p>',
       },
     ]
-  }
+  },
+  {
+    id: 'super-mario-bros-lost-levels',
+    title: 'Super Mario Bros.: The Lost Levels',
+    game: 'Super Mario Bros.: The Lost Levels',
+    platform: 'Famicom Disk System',
+    year: 1986,
+    era: '1980s',
+    difficultyType: 'Brutal by Design',
+    description: 'Japan\'s Super Mario Bros. 2 was a sequel for people who had already mastered the first game, and it was built to punish exactly the habits they had learned. Nintendo of America decided Americans should not have to play it.',
+    longDescription: 'The Japanese Super Mario Bros. 2, released for the Famicom Disk System on 3 June 1986, was developed by Nintendo R&D4 under director Takashi Tezuka, with Shigeru Miyamoto producing. It looks almost exactly like its predecessor, and that is the trap. Every tool the first game taught the player has been turned against them. A Poison Mushroom resembles the ordinary power-up and hurts Mario instead of helping him. Gusts of wind push him in mid-air, lengthening or shortening jumps that the player had measured by instinct. Some warp zones send the player backwards to earlier worlds. Luigi, now a separate choice, jumps higher but has less friction on the ground, so he slides past the edges he was supposed to stop at. The game contains 52 levels in total, including a hidden World 9 that is only reachable by finishing without using any warp zones, and bonus Worlds A to D that open only after the game has been completed eight times. When the game reached Nintendo of America, Howard Phillips, who evaluated games for president Minoru Arakawa, judged it unfairly difficult. "Few games were more stymieing," he said. "Not having fun is bad when you\'re a company selling fun." North America got a reskinned Doki Doki Panic as its Super Mario Bros. 2 instead, and the original did not reach Western players until the 1993 Super NES compilation Super Mario All-Stars, where it was retitled The Lost Levels.',
+    keyFacts: [
+      'Released in Japan on 3 June 1986 for the Famicom Disk System as Super Mario Bros. 2',
+      'Directed by Takashi Tezuka at Nintendo R&D4, with Shigeru Miyamoto as producer',
+      'Introduced the Poison Mushroom, mid-air wind and backward warp zones',
+      'World 9 requires finishing without warps; Worlds A–D require eight completions',
+      'Nintendo of America\'s Howard Phillips judged it "unfairly difficult"',
+      'First released in the West in Super Mario All-Stars (1993) as The Lost Levels',
+    ],
+    sections: [
+      {
+        title: 'A Sequel That Assumes You Won',
+        html: '<p>Most sequels are designed for a new audience as well as the old one. The Lost Levels is designed only for the old one. It assumes the player has finished Super Mario Bros., knows where the hidden blocks tend to be and jumps on muscle memory — and every one of its new tricks exploits that knowledge. A mushroom is no longer a reward. A jump that would have landed yesterday falls short today. A warp pipe may take you back.</p><p>This is difficulty as a conversation with an expert, and it is why the game is still admired by exactly the players who found the original too easy. It is also why Nintendo of America was right in commercial terms: a game that punishes the lessons of its predecessor is hostile to anyone who has not learned them yet, and in 1986 most American players had not.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Super Mario Bros.: The Lost Levels', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Super_Mario_Bros.:_The_Lost_Levels' },
+    ],
+  },
+  {
+    id: 'dragons-lair-arcade',
+    title: 'Dragon\'s Lair',
+    game: 'Dragon\'s Lair',
+    platform: 'Arcade (LaserDisc)',
+    year: 1983,
+    era: '1980s',
+    difficultyType: 'Pure Memorisation',
+    description: 'Don Bluth\'s animation made it the most beautiful game in any arcade. A perfect run lasts under twelve minutes. Almost nobody saw one, because every correct move had to be learned by dying to the wrong one.',
+    longDescription: 'Dragon\'s Lair reached arcades on 1 July 1983, distributed by Cinematronics and developed by Advanced Microcomputer Systems, the company of its creator Rick Dyer. Its selling point was obvious from across the room: instead of sprites it played full animation from a LaserDisc, drawn by the former Disney animator Don Bluth and his studio, which looked far better than anything else in the arcade. The cost of that beauty was control. The player does not steer Dirk the Daring through the castle; the player watches pre-recorded scenes and must push the joystick or the sword button at precisely the right moment to branch to the next one. Any other input — or the correct input a fraction late — plays a death animation. Because the prompts are subtle and the timing windows tight, the game can only really be learned by trial and error, which in an arcade meant paying for each error. A perfect run with no deaths lasts no more than twelve minutes, and the distance between those twelve minutes and the amount of money most players spent failing to see them is what made Dragon\'s Lair famous. It became one of the most recognisable games of its era and is held by the Smithsonian Institution alongside Pong and Pac-Man.',
+    keyFacts: [
+      'Released in arcades on 1 July 1983 by Cinematronics, developed by Rick Dyer\'s Advanced Microcomputer Systems',
+      'Animated by former Disney animator Don Bluth and played from a LaserDisc',
+      'Played as a chain of timed inputs; any wrong or late move triggers a death animation',
+      'A perfect run with no deaths lasts no more than 12 minutes',
+      'Held in the Smithsonian Institution\'s collection alongside Pong and Pac-Man',
+    ],
+    sections: [
+      {
+        title: 'Learning by Dying',
+        html: '<p>A conventional arcade game is hard because it asks for skill: reflexes, positioning, reading enemy patterns. Dragon\'s Lair asks for knowledge. Each scene has a correct answer and the game rarely tells you what it is. You learn that the floor will collapse by watching it collapse under you, then pay again to try the other direction.</p><p>That makes it one of the purest memorisation games ever sold, and it explains both its appeal and its reputation. Crowds gathered to watch the animation; players who had memorised a route became attractions in their own right. For everyone else, the machine was a very expensive way to see Dirk die in several dozen beautifully drawn ways.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Dragon\'s Lair', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Dragon%27s_Lair' },
+    ],
+  },
+  {
+    id: 'kid-icarus-nes',
+    title: 'Kid Icarus',
+    game: 'Kid Icarus',
+    platform: 'NES / Famicom Disk System',
+    year: 1986,
+    era: '1980s',
+    difficultyType: 'Nintendo Hard',
+    description: 'Most games start easy and get harder. Kid Icarus puts its cruellest stretch at the very beginning, in a vertically scrolling Underworld where falling off the bottom of the screen means death.',
+    longDescription: 'Kid Icarus was released on the Famicom Disk System in Japan on 19 December 1986, then on the NES in Europe in February 1987 and in North America in July 1987. It was made by Nintendo R&D1 with Tose, directed by Satoru Okada, designed by Toru Osawa, produced by Gunpei Yokoi and scored by Hirokazu Tanaka — much of the team behind Metroid, released the same year. The player controls Pit, an angel who cannot fly, climbing out of the Underworld toward the sky. That climb is the game\'s problem. The first world scrolls vertically and the screen follows Pit upward but not back down: miss a jump and fall below the bottom edge, and he is dead. With a weak starting bow, low health and enemies that swoop from every side, the opening levels are often the hardest part of the game, and the player grows stronger — through upgrades such as the Protective Crystal, the Flaming Arrows and the Sacred Bow — only by surviving them. The cartridge version added a password system, then an almost unprecedented feature, which made a long, punishing game at least possible to finish in pieces. Contemporary critics were divided: some found it a lesser Metroid, and one complained that it drove players into extremely tense sequences without giving any pleasure for getting through them. It became a cult classic regardless, and IGN later ranked it the 20th best NES game.',
+    keyFacts: [
+      'Released for the Famicom Disk System on 19 December 1986; NES in Europe February 1987 and North America July 1987',
+      'Developed by Nintendo R&D1 and Tose; directed by Satoru Okada, designed by Toru Osawa, produced by Gunpei Yokoi',
+      'The opening Underworld scrolls vertically, and falling off the bottom of the screen is fatal',
+      'Upgrades include the Protective Crystal, Flaming Arrows and Sacred Bow',
+      'The cartridge release used a password system, then an almost unprecedented feature',
+    ],
+    sections: [
+      {
+        title: 'Front-Loaded Difficulty',
+        html: '<p>Difficulty curves usually rise. Kid Icarus starts near the top of its curve. Pit begins weak, the first world asks for precise vertical platforming with no second chances, and the rewards that would make the climb easier — health, stronger arrows, protective items — are earned only by climbing. A player who stalls early stays weak, which makes stalling more likely.</p><p>That shape is why so many people remember Kid Icarus as a game they never got far in. The later fortresses and the horizontal Overworld are, for a strengthened Pit, often more forgiving than the opening. The game\'s reputation was decided in its first fifteen minutes.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Kid Icarus (video game)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Kid_Icarus_(video_game)' },
+    ],
+  },
 ];

@@ -496,5 +496,77 @@ module.exports = [
         html: '<p>Rockstar spent years denying the Bigfoot, and the denials achieved nothing — the myth hunters were not persuadable, and the videos and mods kept coming. So in Grand Theft Auto V, returning to a reimagined San Andreas, Rockstar surrendered and built the thing: a genuine Sasquatch, complete with a dedicated questline, a peyote-hallucination system that lets you become one, and a knowing nod to the players who had spent a decade insisting he was already there.</p><p>Like Ermac before him, the San Andreas Bigfoot is a case of a myth being answered not with proof but with implementation. The players were wrong for ten years, and then, in the way that matters most to a player, they were retroactively right.</p>',
       },
     ],
-  }
+  },
+  {
+    id: 'pikablu',
+    sources: [
+      { title: 'Pikablu (Marill)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Pikablu' },
+    ],
+    title: 'Pikablu — The Blue Pikachu You Could Never Catch',
+    era: '1990s',
+    verdict: 'Busted (But Rooted in Truth)',
+    description: 'A round blue Pokémon appeared in the anime before it existed in any game. Playgrounds named it Pikablu and invented a dozen ways to catch it in Red and Blue. It was real — it just was not in those games, and it was not called that.',
+    longDescription: 'Pokémon Red and Blue promised 150 creatures and hinted at more, and the anime ran slightly ahead of the games. One of the creatures it showed early was a round, blue, mouse-like Pokémon with a ball-tipped tail. Because it resembled the series mascot, fans named it "Pikablu", and a rumour grew up that it could be obtained in Red and Blue — through elaborate and outlandish methods that spread by word of mouth and, increasingly, on early fan websites. None of them worked, because the creature was not in the games at all. It was Marill, one of the new Pokémon being prepared for the second generation, and it became obtainable only when Pokémon Gold and Silver were released in Japan on 21 November 1999. The name refused to die even then: it was widespread enough that "Pikablu" appeared on an official Topps trading card. The episode is the cleanest example of how the Pokémon franchise generated its own folklore. A game built around the promise of hidden creatures, supported by an anime that could show things before the games did, and played by children comparing notes before the web could settle anything, was almost designed to produce rumours like this one.',
+    keyFacts: [
+      'The creature appeared in the Pokémon anime before it appeared in any game',
+      'Fans named it "Pikablu" for its resemblance to Pikachu and claimed it could be caught in Red and Blue',
+      'It was actually Marill, a second-generation Pokémon',
+      'Marill became obtainable with Pokémon Gold and Silver, released in Japan on 21 November 1999',
+      'The rumour was so widespread that the name "Pikablu" appeared on an official Topps trading card',
+    ],
+    sections: [
+      {
+        title: 'The Anime Ran Ahead of the Cartridge',
+        html: '<p>Most game rumours start inside the game — an odd sprite, an unexplained room, a line of text. Pikablu started outside it. The animated series and its supporting material showed a Pokémon that no cartridge contained, and for a child holding a copy of Red or Blue the natural conclusion was not "this is from a future game" but "there is a secret I have not found yet".</p><p>That is why the capture methods were so elaborate. A creature that could not be found by ordinary play must require extraordinary play, so the rumours described long sequences of unlikely actions, each one unfalsifiable to anyone without the patience to try them all. The rumour was, in a sense, a correct reading of the franchise\'s promise applied to the wrong cartridge.</p>',
+      },
+    ],
+  },
+  {
+    id: 'aerith-revival',
+    sources: [
+      { title: 'Aerith Gainsborough', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Aerith_Gainsborough' },
+    ],
+    title: 'Reviving Aeris — The Resurrection Final Fantasy VII Never Offered',
+    era: '1990s',
+    verdict: 'Confirmed False',
+    description: 'Her death at the end of Final Fantasy VII\'s first disc was so unexpected that a generation of players refused to accept it, and passed around methods for bringing her back. There were none. The people who made the game said so, repeatedly.',
+    longDescription: 'Final Fantasy VII killed one of its main party members, Aerith — spelled "Aeris" in the original 1997 English release — at the end of its first disc, and it did so permanently. Players had spent years learning that fantasy RPG deaths were negotiable: a Phoenix Down, a Life spell, a plot twist. From the game\'s release onward, rumours circulated that she could be resurrected, or that she had originally been planned to come back and the ability had been cut. Both claims were passed around in schoolyards, magazines\' letters pages and early internet forums, each version with its own convoluted method. Tetsuya Nomura, the character designer, later said that the team had known the world expected her to be brought back to life, precisely because that was the genre\'s convention, and he has categorically stated that neither rumour was ever true. Director Yoshinori Kitase received a lengthy petition from Japanese players asking for her revival and dismissed it, saying there were many meanings in her death and that bringing her back could never happen. The persistence of the rumour is itself the best evidence of what the scene achieved: a death that felt so wrong in a video game that players assumed the game must have a hidden way to undo it.',
+    keyFacts: [
+      'Her name was transliterated "Aeris" in the original English Final Fantasy VII and "Aerith" in later products; official Japanese material uses "Aerith"',
+      'Rumours that she could be revived, or had originally been meant to return, circulated from the game\'s release',
+      'Tetsuya Nomura has categorically stated that neither rumour was ever true',
+      'Yoshinori Kitase received a lengthy petition from Japanese players asking for her revival and rejected it',
+      'Kitase said there were "many meanings in Aerith\'s death" and her revival "could never happen"',
+    ],
+    sections: [
+      {
+        title: 'Why Nobody Believed It',
+        html: '<p>Death in 1990s RPGs was a status effect. Characters fell in every battle and were revived with an item; story deaths were frequently reversed a few hours later. Final Fantasy VII spent its first disc teaching the player the same rules, then broke them in a cutscene the items could not touch.</p><p>Nomura\'s explanation is telling: the team knew players expected a resurrection, because that was the convention, and chose not to supply one. The rumours were the audience holding on to the old rule. Every elaborate method for reviving her was, in effect, a player insisting that the game must be playing fair by the genre\'s standards — and the game\'s refusal is exactly why the scene is still remembered.</p>',
+      },
+    ],
+  },
+  {
+    id: 'goldeneye-classic-bonds',
+    sources: [
+      { title: 'GoldenEye 007 (1997 video game)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/GoldenEye_007_(1997_video_game)' },
+    ],
+    title: 'The Classic Bonds — GoldenEye\'s Locked Character Screen',
+    era: '1990s',
+    verdict: 'Partially True',
+    description: 'Every GoldenEye player knew someone who knew someone who had unlocked the old James Bonds for multiplayer. Nobody had — but the Bonds really were in the cartridge.',
+    longDescription: 'GoldenEye 007, released on the Nintendo 64 in August 1997, came with a long list of real unlockable cheats, earned by beating levels under time limits. That made it fertile ground for invented ones, and the most persistent was the claim that the earlier film Bonds could be unlocked as multiplayer characters. Like many of the best rumours, it was wrong about the method and right about the substance. During development, actors who had played Bond in previous films were playable, and Rare removed them because it could not get Sean Connery\'s permission to use his likeness. But the removal was incomplete: the player-select screen featuring the actors\' likenesses was left inside the finished game, reachable only with cheat devices. There was no code, no time trial and no secret sequence that unlocked them in normal play. Players who owned a GameShark or similar device could reach the screen, which is part of why the rumour was so hard to kill — someone really had seen the classic Bonds on a real N64, and the story lost the detail about the cheat device as it travelled.',
+    keyFacts: [
+      'GoldenEye 007 was released in Japan on 23 August 1997 and in English-language markets on 25 August 1997',
+      'Actors from earlier Bond films were playable during development',
+      'Rare removed them because it could not obtain Sean Connery\'s permission to use his likeness',
+      'The player-select screen with their likenesses was left in the game, accessible only with cheat devices',
+      'No legitimate in-game method ever unlocked them',
+    ],
+    sections: [
+      {
+        title: 'A Rumour With Evidence Behind It',
+        html: '<p>Most playground rumours survive because they cannot be disproved. This one survived because it could, sort of, be proved. The classic Bonds existed in the code, and anyone with a cheat cartridge could see them. The distortion was in the retelling: "my cousin put a GameShark in and found them" became "my cousin unlocked them", and the unlocking method was then reinvented to fill the gap.</p><p>It also sat on top of a game that genuinely rewarded persistence with secrets — the cheat menu filled up as players beat levels against target times — so a hidden character screen was entirely in keeping with how GoldenEye already behaved. The rumour was plausible because the game\'s own design made it so.</p>',
+      },
+    ],
+  },
 ];

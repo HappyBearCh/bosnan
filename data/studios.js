@@ -508,4 +508,103 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'cinemaware',
+    name: 'Cinemaware',
+    foundedYear: 1986,
+    founders: [
+      'Bob Jacob',
+      'Phyllis Jacob',
+    ],
+    location: 'Westlake Village, California, USA',
+    firstGame: 'Defender of the Crown (1986)',
+    era: '1986 – 1991',
+    description: 'Cinemaware sold computer games as movies you could play — swashbucklers, gangster pictures, 1950s creature features — and built them for the Amiga, the one home machine that could make the pitch look true.',
+    longDescription: 'Bob Jacob was a film buff, and Cinemaware was his theory of what computer games were for. Founded with his wife Phyllis in January 1986, initially under the name Master Designer Software, the company set out to make games that borrowed the genres, pacing and visual ambition of Hollywood pictures, prioritising spectacle, strong graphics and ease of play over depth of simulation. Its first release, Defender of the Crown in 1986, was a medieval strategy game built around jousts, sieges and swordfights that looked unlike anything else on a home computer, and it launched first on the Commodore Amiga. That choice was the company\'s method: its games generally debuted on the most graphically powerful home computers of the era — the Amiga, Apple IIGS and Atari ST — before being scaled down for everything else. The catalogue that followed ran through the film genres one at a time: The King of Chicago (1987) was a gangster picture, Rocket Ranger (1988) a Saturday-morning serial, It Came from the Desert (1989) a 1950s giant-ant B-movie, and Wings (1990) a First World War flying drama, alongside a TV Sports line covering football, basketball, baseball, boxing and hockey. Cinemaware went bankrupt in 1991, hit by falling sales in an economic downturn and by piracy on the Amiga so pervasive that the company threatened more than once to stop publishing for it. The name was bought in 1999 and revived in 2000 to remaster the old catalogue.',
+    keyFacts: [
+      'Founded in January 1986 by Bob and Phyllis Jacob, originally as Master Designer Software',
+      'Defender of the Crown (1986), its first game, debuted on the Commodore Amiga',
+      'Deliberately launched titles on the Amiga, Apple IIGS and Atari ST, the most graphically capable computers of the time',
+      'Each major release borrowed a film genre: swashbuckler, gangster picture, serial, creature feature, war drama',
+      'Went bankrupt in 1991 after falling sales and heavy Amiga piracy; the trademark was bought in 1999 and revived in 2000',
+    ],
+    sections: [
+      {
+        title: 'The Interactive Movie Before CD-ROM',
+        html: '<p>"Interactive movie" later came to mean full-motion video on CD-ROM, and it mostly meant disappointment. Cinemaware got there first with floppy disks and pixel art, and its version worked better because it never tried to be a film. It took the <em>grammar</em> of cinema — the establishing shot, the close-up, the cut to the villain, a score that swelled at the right moment — and wrapped it around short, legible pieces of play: a joust, a sword duel, a dogfight, a fistfight in a speakeasy.</p><p>The weakness was the same thing seen from the other side. The individual scenes were often thin as games. What Cinemaware sold was presentation, and presentation depended on the Amiga\'s graphics and sound. When the ports arrived on weaker machines, what remained was a simple game with the spectacle removed.</p>',
+      },
+      {
+        title: 'The Amiga Problem',
+        html: '<p>Cinemaware\'s identity was tied to the Amiga more closely than almost any American publisher\'s, and that bond was both its making and part of its undoing. The machine gave its games a showcase no rival computer could match. It also had one of the most active software piracy scenes of the era, and the company repeatedly threatened to stop publishing Amiga games because of how easily they were copied. Combined with falling sales during the economic downturn at the turn of the decade, it was enough to push Cinemaware into bankruptcy in 1991.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Cinemaware', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Cinemaware' },
+      { title: 'The Replay Interviews: Bob Jacob', publisher: 'Game Developer', url: 'https://www.gamedeveloper.com/business/the-replay-interviews-bob-jacob' },
+    ],
+  },
+  {
+    id: 'toaplan',
+    name: 'Toaplan',
+    foundedYear: 1984,
+    founders: [
+      'Former staff of Orca and Crux, including Masahiro Yuge and Tatsuya Uemura',
+    ],
+    location: 'Tokyo, Japan',
+    firstGame: 'Jongō (1984)',
+    era: '1984 – 1994',
+    description: 'A decade of arcade shooters from a small Tokyo studio that taught the genre much of its modern vocabulary — and whose collapse in 1994 seeded the companies that carried it forward.',
+    longDescription: 'Toaplan\'s game division was formed in 1984 by a group of developers who had come from Orca and Crux, two small arcade makers, including the composers Masahiro Yuge and Tatsuya Uemura. Its first arcade game was Jongō in 1984, but the studio found its identity a year later with Tiger-Heli (1985), a vertically scrolling helicopter shooter and the company\'s first success in the genre it would come to define. Across the following decade Toaplan produced a run of shoot \'em ups that are still studied: Twin Cobra (1987), Truxton (1988), Zero Wing (1989) and Batsugun (1993), among others. The studio is widely regarded as one of the most influential Japanese developers of scrolling shooters, and Batsugun in particular pointed toward the dense, pattern-heavy style later called "bullet hell". Toaplan declared bankruptcy on 31 March 1994. Its end was also a dispersal: before and after the closure its staff went on to form or join Eighting, Tamsoft, Cave, Gazelle and Takumi, so that much of the late-1990s Japanese arcade shooter scene is Toaplan\'s alumni. Masahiro Yuge later formed Tatsujin, which holds the rights to nearly all of Toaplan\'s games and was acquired by Embracer Group in 2022.',
+    keyFacts: [
+      'The game division was formed in 1984 by former Orca and Crux staff, including composers Masahiro Yuge and Tatsuya Uemura',
+      'Tiger-Heli (1985) was its first shoot \'em up and first hit',
+      'Key titles include Twin Cobra (1987), Truxton (1988), Zero Wing (1989) and Batsugun (1993)',
+      'Declared bankruptcy on 31 March 1994',
+      'Staff went on to Eighting, Tamsoft, Cave, Gazelle and Takumi; the rights are now held by Tatsujin, acquired by Embracer Group in 2022',
+    ],
+    sections: [
+      {
+        title: 'Zero Wing, Twice Remembered',
+        html: '<p>Zero Wing is a competent 1989 horizontal shooter that would be a footnote if not for the opening of its European Mega Drive release, whose English translation produced the line "All your base are belong to us." A decade later that line became one of the internet\'s first great memes, and for millions of people it is the only thing they know about Toaplan.</p><p>That is a strange fate for a studio whose real legacy is craft. Toaplan\'s shooters were built around readable enemy patterns, a tight relationship between risk and scoring, and a steady escalation of pressure — the grammar every later arcade shooter inherited.</p>',
+      },
+      {
+        title: 'The Studio That Became a Scene',
+        html: '<p>Toaplan\'s bankruptcy in 1994 did not end its style of game; it distributed it. Cave, founded by former Toaplan staff, built on Batsugun\'s dense bullet patterns with DonPachi and became the defining bullet-hell developer of the next two decades. Other alumni formed or joined Eighting, Tamsoft, Gazelle and Takumi. Few studios so small have had so much of an entire genre traced back to them.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Toaplan', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Toaplan' },
+    ],
+  },
+  {
+    id: 'technos-japan',
+    name: 'Technōs Japan',
+    foundedYear: 1981,
+    founders: [
+      'Kunio Taki',
+      'Takashi Hanya',
+      'Takeo Hagiwara',
+    ],
+    location: 'Nakano, Tokyo, Japan',
+    firstGame: 'Minky Monkey (1982)',
+    era: '1981 – 1996',
+    description: 'Three Data East veterans started it in a one-room apartment. Within six years it had invented the modern beat \'em up with Renegade and perfected it with Double Dragon.',
+    longDescription: 'Technōs Japan was founded in 1981 by three staff members of Data East — Kunio Taki, Takashi Hanya and Takeo Hagiwara — and began operating out of a single-room apartment in Nakano, Tokyo. Its early arcade games, starting with Minky Monkey in 1982 and followed by titles including Zeroize, Eggs and Tag Team Wrestling in 1983, gave little hint of what was coming. The breakthrough was Renegade in 1986, released in Japan as Nekketsu Kōha Kunio-kun: a side-scrolling fight about a high-school student taking on gangs of thugs, which established the core of the beat \'em up — a walking brawler facing groups of enemies in street-level scenery. A year later Double Dragon took that idea and added what made the genre: two players fighting side by side, weapons picked up from the ground, and a scrolling street to fight along. It was a worldwide hit and the template for a decade of imitators. The Kunio-kun line became a franchise of its own, reaching Western players as River City Ransom and Super Dodge Ball, and the studio followed with games such as The Combatribes. Technōs\' final games were made for the Neo Geo, among them a Double Dragon fighting game based on the film, Voltage Fighter Gowcaizer, and a Neo Geo Super Dodge Ball. By 1996 the company had declared bankruptcy. Its properties passed to Million Co., Ltd, a licensing company formed to buy them, and in June 2015 Arc System Works acquired the whole Technōs catalogue.',
+    keyFacts: [
+      'Founded in 1981 by three former Data East staff: Kunio Taki, Takashi Hanya and Takeo Hagiwara',
+      'Started in a single-room apartment in Nakano, Tokyo',
+      'Renegade (1986), known in Japan as Nekketsu Kōha Kunio-kun, laid down the beat \'em up formula',
+      'Double Dragon (1987) was a worldwide success and defined the co-operative side-scrolling brawler',
+      'Declared bankruptcy by 1996; its IP went to Million Co., Ltd, and then to Arc System Works in June 2015',
+    ],
+    sections: [
+      {
+        title: 'From Kunio to Billy Lee',
+        html: '<p>Technōs\' two great games are one idea developed twice. Renegade put a single fighter against gangs in a confined street, and the pleasure lay in crowd control — keeping enemies from surrounding you. Double Dragon added a second player, a scrolling stage and weapons that could be taken from enemies and turned on them, and in doing so gave the genre its enduring shape. Final Fight, Streets of Rage and the licensed brawlers of the early 1990s all follow the layout it set.</p><p>The Kunio-kun side of the company went in a different direction, turning its schoolboy hero into a recurring character across sports games, brawlers and the open-ended River City Ransom, a beat \'em up with shops, stats and a town to explore that was years ahead of its genre.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Technōs Japan', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Techn%C5%8Ds_Japan' },
+    ],
+  },
 ];
