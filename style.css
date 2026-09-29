@@ -32,6 +32,12 @@
        hover state and stays visible on top of red surfaces. */
     --focus: #6ea8ff;
 
+    /* Text on an --accent fill (buttons), and the translucent sticky nav. */
+    --on-accent: #000;
+    --accent-on-dark: #ff4d4d; /* same in both themes: text on a fixed dark scrim */
+    --on-accent-strong: var(--text);
+    --nav-bg: rgba(11, 11, 12, 0.88);
+
     --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
     /* Type scale. Nothing below 13px: the old sheet had 30 rules at 10-12px. */
@@ -55,6 +61,35 @@
     --measure: 68ch;      /* readable line length for prose */
     --content: 1120px;    /* standard page width            */
     --reading: 860px;     /* long-form article column       */
+    color-scheme: dark;
+}
+
+/* Light theme — opt-in from the nav toggle (stored in localStorage), so the
+   dark look stays the default. Ratios are measured on --bg unless noted;
+   --text-faint is still the floor and still clears 4.5:1 on --surface-3. */
+:root[data-theme="light"] {
+    --bg:           #f6f5f2;
+    --surface-1:    #ffffff;
+    --surface-2:    #efeeea;
+    --surface-3:    #e7e6e2;
+    --border:       #d8d7d2;
+    --border-strong:#bcbbb5;
+
+    --text:           #17171b;  /* 16.4:1 */
+    --text-secondary: #3b3b42;  /* 10.2:1 */
+    --text-muted:     #55555d;  /*  6.8:1 */
+    --text-faint:     #64646d;  /*  5.5:1; 4.8:1 on --surface-3 */
+
+    --accent:        #c01d1d;   /*  5.6:1 */
+    --accent-strong: #b01919;   /* white on it: 7.0:1 */
+    --accent-soft:   rgba(192, 29, 29, 0.09);
+    --accent-border: rgba(192, 29, 29, 0.35);
+    --focus:         #1b5fd0;   /*  5.4:1 */
+
+    --on-accent: #fff;          /*  6.1:1 on --accent */
+    --on-accent-strong: #fff;   /*  7.0:1 */
+    --nav-bg: rgba(246, 245, 242, 0.9);
+    color-scheme: light;
 }
 
 /* ================== RESET ================== */
@@ -110,7 +145,7 @@ a:hover { color: var(--text); }
 
 ::selection {
     background: var(--accent-strong);
-    color: var(--text);
+    color: var(--on-accent-strong);
 }
 
 /* Keyboard users had no visible focus anywhere on the site. */
@@ -141,7 +176,7 @@ a:hover { color: var(--text); }
     top: calc(-1 * var(--sp-16));
     z-index: 2000;
     background: var(--accent-strong);
-    color: var(--text);
+    color: var(--on-accent-strong);
     padding: var(--sp-3) var(--sp-5);
     border-radius: var(--r-sm);
     text-decoration: none;
@@ -185,7 +220,7 @@ nav:not(.crumbs) {
     position: sticky;
     top: 0;
     z-index: 1001;
-    background: rgba(11, 11, 12, 0.88);
+    background: var(--nav-bg);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
 }
@@ -260,7 +295,7 @@ nav:not(.crumbs) img { width: 42px; display: block; }
     min-height: 44px;
     padding: var(--sp-3) var(--sp-6);
     background: var(--accent-strong);
-    color: var(--text);
+    color: var(--on-accent-strong);
     font-size: var(--fs-sm);
     font-weight: 600;
     text-decoration: none;
@@ -469,3 +504,22 @@ nav:not(.crumbs) img { width: 42px; display: block; }
 .trivia-table td {
     background: var(--surface-1);
 }
+
+/* ================== THEME TOGGLE ================== */
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    border-radius: var(--r-pill);
+    width: 34px;
+    height: 34px;
+    font-size: var(--fs-base);
+    line-height: 1;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.theme-toggle:hover { color: var(--text); border-color: var(--border-strong); }
+.theme-toggle:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.theme-toggle .ti-dark { display: none; }
+:root[data-theme="light"] .theme-toggle .ti-dark { display: inline; }
+:root[data-theme="light"] .theme-toggle .ti-light { display: none; }

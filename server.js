@@ -132,11 +132,18 @@ function httpGet(rawUrl, redirects = 4) {
   });
 }
 
+// One pass per call, run twice: several feeds double-encode ("&amp;#x1f91d;"),
+// which the old &amp;-first chain left on screen as a literal "&#x1f91d;".
+const NAMED_ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', hellip: '…', mdash: '—', ndash: '–', rsquo: '’', lsquo: '‘', rdquo: '”', ldquo: '“' };
 function decodeHtmlEntities(s) {
-  return s
-    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, ' ')
-    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)));
+  const once = t => t.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, e) => {
+    if (e[0] === '#') {
+      const cp = e[1] === 'x' || e[1] === 'X' ? parseInt(e.slice(2), 16) : Number(e.slice(1));
+      return cp > 0 && cp <= 0x10ffff ? String.fromCodePoint(cp) : m;
+    }
+    return NAMED_ENTITIES[e.toLowerCase()] ?? m;
+  });
+  return once(once(s));
 }
 
 function stripTags(s) { return s.replace(/<[^>]+>/g, ' ').replace(/\s{2,}/g, ' ').trim(); }
@@ -1161,162 +1168,73 @@ const CSS_PATH = `/app.${cssHash}.css`;
 function cssHead() {
   return `<link rel="preload" href="${CSS_PATH}" as="style"><link rel="stylesheet" href="${CSS_PATH}">
     <link rel="icon" href="/logo.svg" type="image/svg+xml">
-    <meta name="theme-color" content="#0a0a0a">`;
+    <meta name="theme-color" content="#0b0b0c">
+    <script>try{if(localStorage.getItem("bosnan_theme")==="light"){document.documentElement.dataset.theme="light";document.querySelector('meta[name="theme-color"]').content="#f6f5f2"}}catch(e){}</script>`;
 }
 
 // ── Page caches ─────────────────────────────────────────────────────────────
 
-const PAGE_SIZE = 32;
 // Decade filter tabs on the /games hub, in chronological order. Hard-coding
 // them is what left the 203 1990s games with no tab to be filtered to.
 const DECADE_TABS = [...new Set(games.map(g => g.decade).filter(Boolean))].sort();
 const EAGER_IMAGES = 8;
 
 let cachedGamesListHtml = null;
-let cachedPlatformsListHtml = null;
 let cachedGenresListHtml = null;
 let cachedEssaysListHtml = null;
-let cachedDevelopersListHtml = null;
-let cachedComposersListHtml = null;
-let cachedFranchisesListHtml = null;
-let cachedHardwareListHtml = null;
-let cachedDesignersListHtml = null;
 let cachedYearsListHtml = null;
-let cachedRegionalListHtml = null;
-let cachedPublishersListHtml = null;
-let cachedArcadeBoardsListHtml = null;
-let cachedPeripheralsListHtml = null;
-let cachedLostGamesListHtml = null;
 let cachedDecadesListHtml = null;
 let cachedFamilyTreeHtml = null;
 let cachedCompareHtml = null;
-const cachedDesignerPageHtml = {};
 const cachedYearPageHtml = {};
-const cachedRegionalPageHtml = {};
-const cachedPublisherPageHtml = {};
-const cachedArcadeBoardPageHtml = {};
-const cachedPeripheralPageHtml = {};
-const cachedLostGamePageHtml = {};
 const cachedDecadePageHtml = {};
 const cachedEssayPageHtml = {};
-const cachedPlatformPageHtml = {};
 const cachedGenrePageHtml = {};
-const cachedDeveloperPageHtml = {};
-const cachedComposerPageHtml = {};
-const cachedFranchisePageHtml = {};
-const cachedHardwarePageHtml = {};
 const cachedGamePageHtml = new Map();
-let cachedSequelsListHtml = null;
-let cachedRomHacksListHtml = null;
-let cachedAdCampaignsListHtml = null;
-let cachedSalesFiguresHtml = null;
-let cachedSpeedrunsListHtml = null;
-let cachedCriticsListHtml = null;
 let cachedWordSearchHtml = null;
 let cachedBookmarksHtml = null;
-const cachedSequelPageHtml = {};
-const cachedRomHackPageHtml = {};
-const cachedAdCampaignPageHtml = {};
-const cachedSalesFigurePageHtml = {};
-const cachedSpeedrunPageHtml = {};
-const cachedCriticPageHtml = {};
-let cachedCancelledListHtml = null;
-let cachedLocalizationListHtml = null;
-let cachedPrototypesListHtml = null;
-let cachedStrategyGuidesListHtml = null;
-let cachedCabinetArtListHtml = null;
-let cachedMerchandiseListHtml = null;
-let cachedBootlegsListHtml = null;
-let cachedCompetitiveListHtml = null;
-let cachedEndingsListHtml = null;
-const cachedCancelledPageHtml = {};
-const cachedLocalizationPageHtml = {};
-const cachedPrototypesPageHtml = {};
-const cachedStrategyGuidePageHtml = {};
-const cachedCabinetArtPageHtml = {};
-const cachedMerchandisePageHtml = {};
-const cachedBootlegPageHtml = {};
-const cachedCompetitivePageHtml = {};
-const cachedEndingPageHtml = {};
-let cachedBossfightsListHtml = null;
-let cachedSoundtracksListHtml = null;
-let cachedManualsListHtml = null;
-let cachedDifficultyListHtml = null;
-let cachedCharactersListHtml = null;
-let cachedCoverStoriesListHtml = null;
-let cachedControllersListHtml = null;
-let cachedDisappointmentsListHtml = null;
-let cachedLevelsListHtml = null;
-let cachedUrbanLegendsListHtml = null;
-const cachedBossfightPageHtml = {};
-const cachedSoundtrackPageHtml = {};
-const cachedManualPageHtml = {};
-const cachedDifficultyPageHtml = {};
-const cachedCharacterPageHtml = {};
-const cachedCoverStoryPageHtml = {};
-const cachedControllerPageHtml = {};
-const cachedDisappointmentPageHtml = {};
-const cachedLevelPageHtml = {};
-const cachedUrbanLegendPageHtml = {};
-let cachedGlitchesListHtml = null;
-let cachedPackagingListHtml = null;
-let cachedMultiplayerListHtml = null;
-let cachedComicsListHtml = null;
-let cachedStudiosListHtml = null;
-let cachedImportsListHtml = null;
-let cachedSpeedrunTechniquesListHtml = null;
-let cachedFamousBugsListHtml = null;
-let cachedRetroRevivalListHtml = null;
-let cachedSoundEffectsListHtml = null;
-const cachedGlitchPageHtml = {};
-const cachedPackagingPageHtml = {};
-const cachedMultiplayerPageHtml = {};
-const cachedComicPageHtml = {};
-const cachedStudioPageHtml = {};
-const cachedImportPageHtml = {};
-const cachedSpeedrunTechniquePageHtml = {};
-const cachedFamousBugPageHtml = {};
-const cachedRetroRevivalPageHtml = {};
-const cachedSoundEffectPageHtml = {};
-let cachedControversiesListHtml = null;
-let cachedFailedConsolesListHtml = null;
-let cachedGameEnginesListHtml = null;
-let cachedSoundChipsListHtml = null;
-let cachedEasterEggsListHtml = null;
 let cachedGlossaryHtml = null;
-let cachedCheatCodesListHtml = null;
 let cachedQuizHtml = null;
 let cachedOnThisDayHtml = null;
 let cachedStudioMapHtml = null;
-const cachedControversyPageHtml = {};
-const cachedFailedConsolePageHtml = {};
-const cachedGameEnginePageHtml = {};
-const cachedSoundChipPageHtml = {};
-const cachedEasterEggPageHtml = {};
-const cachedCheatCodePageHtml = {};
-let cachedMagazinesListHtml = null;
-let cachedBoxArtListHtml = null;
-let cachedPortsListHtml = null;
-let cachedVoiceActorsListHtml = null;
-let cachedPixelArtistsListHtml = null;
-let cachedProducersListHtml = null;
-let cachedCollectionsListHtml = null;
 let cachedStatsHtml = null;
 let cachedRecentHtml = null;
 let cachedTimelineHtml = null;
-const cachedMagazinePageHtml = {};
-const cachedBoxArtPageHtml = {};
-const cachedPortPageHtml = {};
-const cachedVoiceActorPageHtml = {};
-const cachedPixelArtistPageHtml = {};
-const cachedProducerPageHtml = {};
-const cachedCollectionPageHtml = {};
 let cachedSitemap = null;
 let cachedHomepage = { html: null, day: -1 };
 
 // ── Middleware ───────────────────────────────────────────────────────────────
 
 app.use(compression());
+
+// Security headers. HSTS is left to Vercel, which already sends it on every
+// custom domain. The CSP still has to allow inline script and style: the pages
+// carry per-page <script> blocks and onerror/onclick attributes, and moving
+// those out is a larger job. What it does fix is the source list — scripts can
+// only come from this origin and Google Tag Manager, nothing can frame the
+// site, and no <form>, <base> or plugin can point off-site.
+const CSP = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com",
+  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
+  "font-src 'self'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'none'",
+].join('; ');
+app.use((req, res, next) => {
+  res.set({
+    'Content-Security-Policy': CSP,
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+  });
+  next();
+});
 
 // Host canonicalisation, for the one host Vercel will not canonicalise itself.
 // The site answered on three hostnames at once — bosnan.net, www.bosnan.net and
@@ -2365,6 +2283,7 @@ function nav(active) {
         <form class="nav-search" action="/search" method="GET" role="search">
             <input type="search" name="q" placeholder="Search&#8230;" aria-label="Search the archive">
         </form>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Light theme" aria-pressed="false"><span class="ti-light" aria-hidden="true">&#9728;</span><span class="ti-dark" aria-hidden="true">&#9790;</span></button>
     </div>
 </nav>
 <span id="main" tabindex="-1"></span>`;
@@ -2390,10 +2309,22 @@ function footerHtml() {
 }
 
 function toggleScript() {
-  return `<script>function toggleMenu(){var n=document.getElementById("navLinks"),t=document.getElementById("menuToggle"),o=n.classList.toggle("active");if(t)t.setAttribute("aria-expanded",o?"true":"false")}
+  return `<script>(function(){var b=document.getElementById("themeToggle");if(!b)return;var r=document.documentElement;function sync(){var l=r.dataset.theme==="light";b.setAttribute("aria-pressed",l?"true":"false");var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=l?"#f6f5f2":"#0b0b0c"}sync();b.addEventListener("click",function(){if(r.dataset.theme==="light")delete r.dataset.theme;else r.dataset.theme="light";try{localStorage.setItem("bosnan_theme",r.dataset.theme||"dark")}catch(e){}sync()})})();
+function toggleMenu(){var n=document.getElementById("navLinks"),t=document.getElementById("menuToggle"),o=n.classList.toggle("active");if(t)t.setAttribute("aria-expanded",o?"true":"false")}
 document.addEventListener("click",function(e){document.querySelectorAll("details.nav-drop[open]").forEach(function(d){if(!d.contains(e.target))d.removeAttribute("open")})});
 document.addEventListener("keydown",function(e){if(e.key==="/"&&document.activeElement.tagName!=="INPUT"&&document.activeElement.tagName!=="TEXTAREA"&&!e.ctrlKey&&!e.metaKey){var s=document.querySelector(".nav-search input");if(s){e.preventDefault();s.focus();}}});
-(function(){var inp=document.querySelector(".nav-search input");if(!inp)return;var box=document.createElement("ul");box.className="nav-ac";inp.parentNode.style.position="relative";inp.parentNode.appendChild(box);var tmr;inp.addEventListener("input",function(){clearTimeout(tmr);var q=inp.value.trim();if(q.length<2){box.style.display="none";return;}tmr=setTimeout(function(){fetch("/api/search?q="+encodeURIComponent(q)).then(function(r){return r.json();}).then(function(items){box.innerHTML="";if(!items.length){box.style.display="none";return;}items.forEach(function(it){var li=document.createElement("li");li.innerHTML='<a href="'+it.href+'"><span class="ac-title">'+it.title+'</span><span class="ac-sub">'+it.sub+'</span></a>';box.appendChild(li);});box.style.display="block";}).catch(function(){box.style.display="none";});},220);});inp.addEventListener("blur",function(){setTimeout(function(){box.style.display="none";},160);});inp.addEventListener("keydown",function(e){if(e.key==="Escape"){box.style.display="none";inp.blur();}});})();</script>`;
+(function(){var inp=document.querySelector(".nav-search input");if(!inp)return;var box=document.createElement("ul");box.className="nav-ac";inp.parentNode.style.position="relative";inp.parentNode.appendChild(box);var tmr;inp.addEventListener("input",function(){clearTimeout(tmr);var q=inp.value.trim();if(q.length<2){box.style.display="none";return;}tmr=setTimeout(function(){fetch("/api/search?q="+encodeURIComponent(q)).then(function(r){return r.json();}).then(function(items){box.innerHTML="";if(!items.length){box.style.display="none";return;}items.forEach(function(it){var li=document.createElement("li"),a=document.createElement("a"),t=document.createElement("span"),u=document.createElement("span");a.href=it.href;t.className="ac-title";t.textContent=it.title;u.className="ac-sub";u.textContent=it.sub;a.appendChild(t);a.appendChild(u);li.appendChild(a);box.appendChild(li);});box.style.display="block";}).catch(function(){box.style.display="none";});},220);});inp.addEventListener("blur",function(){setTimeout(function(){box.style.display="none";},160);});inp.addEventListener("keydown",function(e){if(e.key==="Escape"){box.style.display="none";inp.blur();}});})();</script>`;
+}
+
+// 230 of the 432 games name an image file that is not on disk. Each card used
+// to request it anyway, take the 404, and swap in a placeholder from onerror —
+// a wasted request per missing image per page view. Deciding on the server
+// skips the request; onerror stays as the fallback for a file that fails later.
+function cardImage(g, imgAttrs) {
+  const placeholder = `<div class="game-card-placeholder" aria-hidden="true">${escapeHtml(g.title[0])}</div>`;
+  if (!imageExists(g.image)) return placeholder;
+  return `<img src="/${escapeHtml(g.image)}" alt="${escapeHtml(g.title)}" ${imgAttrs}
+             onerror="this.parentElement.innerHTML='<div class=\\'game-card-placeholder\\'>${escapeHtml(g.title[0])}</div>'">`;
 }
 
 // eagerCount: first N images get fetchpriority=high (no lazy), rest get loading=lazy
@@ -2410,8 +2341,7 @@ function buildCardHtml(list, eagerCount = 0, withFilterData = false) {
       : '';
     return `<a href="/games/${g.id}" class="game-card"${filterData}>
       <div class="game-card-img-wrap">
-        <img src="/${escapeHtml(g.image)}" alt="${escapeHtml(g.title)}" ${imgAttrs}
-             onerror="this.parentElement.innerHTML='<div class=\\'game-card-placeholder\\'>${escapeHtml(g.title[0])}</div>'">
+        ${cardImage(g, imgAttrs)}
         <div class="game-card-decade">${escapeHtml(g.decade)}</div>
         ${g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : ''}
       </div>
@@ -3039,35 +2969,10 @@ app.get('/api/retro-news', async (req, res) => {
 });
 
 app.get('/api/search', (req, res) => {
-  const q = (req.query.q || '').trim().toLowerCase();
-  if (q.length < 2) return res.json([]);
-  const results = [];
-  for (const g of games) {
-    if (results.length >= 8) break;
-    if (g.title.toLowerCase().includes(q)) {
-      results.push({ type: 'game', title: g.title, sub: `${g.year} · ${g.platform}`, href: `/games/${g.id}` });
-    }
-  }
-  for (const p of PLATFORMS) {
-    if (results.length >= 8) break;
-    if (p.name.toLowerCase().includes(q) || (p.shortName || '').toLowerCase().includes(q)) {
-      results.push({ type: 'platform', title: p.shortName || p.name, sub: p.era, href: `/platforms/${p.id}` });
-    }
-  }
-  for (const d of DEVELOPERS) {
-    if (results.length >= 8) break;
-    if (d.name.toLowerCase().includes(q)) {
-      results.push({ type: 'studio', title: d.name, sub: 'Developer', href: `/developers/${d.id}` });
-    }
-  }
-  for (const e of ESSAYS) {
-    if (results.length >= 8) break;
-    if (e.title.toLowerCase().includes(q)) {
-      results.push({ type: 'essay', title: e.title, sub: 'Essay', href: `/essays/${e.id}` });
-    }
-  }
-  res.set('Cache-Control', 'no-store');
-  res.json(results.slice(0, 8));
+  const q = String(req.query.q || '');
+  const { results } = runSearch(q, 8);
+  res.set('Cache-Control', 'public, max-age=300');
+  res.json(results.map(d => ({ title: d.title, sub: d.sub || d.label, href: d.href })));
 });
 
 app.get('/games', (req, res) => {
@@ -3092,23 +2997,36 @@ app.get('/games/:id', (req, res) => {
   res.send(cachedGamePageHtml.get(game.id));
 });
 
-app.get('/platforms', (req, res) => {
-  if (!cachedPlatformsListHtml) cachedPlatformsListHtml = platformsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedPlatformsListHtml);
-});
+// Hub + entry routes for a section whose entries live at /<slug>/<id>. 59
+// sections used to spell this out by hand, each with its own pair of cache
+// variables; both pages are rendered once per instance and kept. Sections that
+// 301 retired slugs (games, essays) keep their own routes.
+function sectionRoutes(slug, entries, listPage, detailPage) {
+  let listHtml = null;
+  let byId = null;
+  const pages = new Map();
+  app.get(`/${slug}`, (req, res) => {
+    if (!listHtml) listHtml = listPage();
+    res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+    res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+    res.send(listHtml);
+  });
+  app.get(`/${slug}/:id`, (req, res) => {
+    if (!byId) {
+      // First entry wins on a duplicate id, as Array#find did.
+      byId = new Map();
+      for (const e of entries) if (e && !byId.has(e.id)) byId.set(e.id, e);
+    }
+    const entry = byId.get(req.params.id);
+    if (!entry) return res.status(404).send(notFoundPage());
+    if (!pages.has(entry.id)) pages.set(entry.id, detailPage(entry));
+    res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+    res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
+    res.send(pages.get(entry.id));
+  });
+}
 
-app.get('/platforms/:id', (req, res) => {
-  const platform = PLATFORMS.find(p => p.id === req.params.id);
-  if (!platform) return res.status(404).send(notFoundPage());
-  if (!cachedPlatformPageHtml[platform.id]) {
-    cachedPlatformPageHtml[platform.id] = platformDetailPage(platform);
-  }
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedPlatformPageHtml[platform.id]);
-});
+sectionRoutes('platforms', PLATFORMS, platformsListPage, platformDetailPage);
 
 app.get('/genres', (req, res) => {
   if (!cachedGenresListHtml) cachedGenresListHtml = genresListPage();
@@ -3148,87 +3066,15 @@ app.get('/essays/:id', (req, res) => {
   res.send(cachedEssayPageHtml[essay.id]);
 });
 
-app.get('/developers', (req, res) => {
-  if (!cachedDevelopersListHtml) cachedDevelopersListHtml = developersListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedDevelopersListHtml);
-});
+sectionRoutes('developers', DEVELOPERS, developersListPage, developerDetailPage);
 
-app.get('/developers/:id', (req, res) => {
-  const dev = DEVELOPERS.find(d => d.id === req.params.id);
-  if (!dev) return res.status(404).send(notFoundPage());
-  if (!cachedDeveloperPageHtml[dev.id]) {
-    cachedDeveloperPageHtml[dev.id] = developerDetailPage(dev);
-  }
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedDeveloperPageHtml[dev.id]);
-});
+sectionRoutes('composers', COMPOSERS, composersListPage, composerDetailPage);
 
-app.get('/composers', (req, res) => {
-  if (!cachedComposersListHtml) cachedComposersListHtml = composersListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedComposersListHtml);
-});
+sectionRoutes('franchises', FRANCHISES, franchisesListPage, franchiseDetailPage);
 
-app.get('/composers/:id', (req, res) => {
-  const c = COMPOSERS.find(x => x.id === req.params.id);
-  if (!c) return res.status(404).send(notFoundPage());
-  if (!cachedComposerPageHtml[c.id]) cachedComposerPageHtml[c.id] = composerDetailPage(c);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedComposerPageHtml[c.id]);
-});
+sectionRoutes('hardware', HARDWARE, hardwareListPage, hardwareDetailPage);
 
-app.get('/franchises', (req, res) => {
-  if (!cachedFranchisesListHtml) cachedFranchisesListHtml = franchisesListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedFranchisesListHtml);
-});
-
-app.get('/franchises/:id', (req, res) => {
-  const f = FRANCHISES.find(x => x.id === req.params.id);
-  if (!f) return res.status(404).send(notFoundPage());
-  if (!cachedFranchisePageHtml[f.id]) cachedFranchisePageHtml[f.id] = franchiseDetailPage(f);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedFranchisePageHtml[f.id]);
-});
-
-app.get('/hardware', (req, res) => {
-  if (!cachedHardwareListHtml) cachedHardwareListHtml = hardwareListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedHardwareListHtml);
-});
-
-app.get('/hardware/:id', (req, res) => {
-  const hw = HARDWARE.find(x => x.id === req.params.id);
-  if (!hw) return res.status(404).send(notFoundPage());
-  if (!cachedHardwarePageHtml[hw.id]) cachedHardwarePageHtml[hw.id] = hardwareDetailPage(hw);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedHardwarePageHtml[hw.id]);
-});
-
-app.get('/designers', (req, res) => {
-  if (!cachedDesignersListHtml) cachedDesignersListHtml = designersListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedDesignersListHtml);
-});
-
-app.get('/designers/:id', (req, res) => {
-  const d = DESIGNERS.find(x => x.id === req.params.id);
-  if (!d) return res.status(404).send(notFoundPage());
-  if (!cachedDesignerPageHtml[d.id]) cachedDesignerPageHtml[d.id] = designerDetailPage(d);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedDesignerPageHtml[d.id]);
-});
+sectionRoutes('designers', DESIGNERS, designersListPage, designerDetailPage);
 
 app.get('/years', (req, res) => {
   if (!cachedYearsListHtml) cachedYearsListHtml = yearsListPage();
@@ -3246,85 +3092,15 @@ app.get('/years/:year', (req, res) => {
   res.send(cachedYearPageHtml[year]);
 });
 
-app.get('/regional', (req, res) => {
-  if (!cachedRegionalListHtml) cachedRegionalListHtml = regionalListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedRegionalListHtml);
-});
+sectionRoutes('regional', REGIONAL, regionalListPage, regionalDetailPage);
 
-app.get('/regional/:id', (req, res) => {
-  const article = REGIONAL.find(x => x.id === req.params.id);
-  if (!article) return res.status(404).send(notFoundPage());
-  if (!cachedRegionalPageHtml[article.id]) cachedRegionalPageHtml[article.id] = regionalDetailPage(article);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedRegionalPageHtml[article.id]);
-});
+sectionRoutes('publishers', PUBLISHERS, publishersListPage, publisherDetailPage);
 
-app.get('/publishers', (req, res) => {
-  if (!cachedPublishersListHtml) cachedPublishersListHtml = publishersListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedPublishersListHtml);
-});
+sectionRoutes('arcade-boards', ARCADE_BOARDS, arcadeBoardsListPage, arcadeBoardDetailPage);
 
-app.get('/publishers/:id', (req, res) => {
-  const pub = PUBLISHERS.find(x => x.id === req.params.id);
-  if (!pub) return res.status(404).send(notFoundPage());
-  if (!cachedPublisherPageHtml[pub.id]) cachedPublisherPageHtml[pub.id] = publisherDetailPage(pub);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedPublisherPageHtml[pub.id]);
-});
+sectionRoutes('peripherals', PERIPHERALS, peripheralsListPage, peripheralDetailPage);
 
-app.get('/arcade-boards', (req, res) => {
-  if (!cachedArcadeBoardsListHtml) cachedArcadeBoardsListHtml = arcadeBoardsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedArcadeBoardsListHtml);
-});
-
-app.get('/arcade-boards/:id', (req, res) => {
-  const board = ARCADE_BOARDS.find(x => x.id === req.params.id);
-  if (!board) return res.status(404).send(notFoundPage());
-  if (!cachedArcadeBoardPageHtml[board.id]) cachedArcadeBoardPageHtml[board.id] = arcadeBoardDetailPage(board);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedArcadeBoardPageHtml[board.id]);
-});
-
-app.get('/peripherals', (req, res) => {
-  if (!cachedPeripheralsListHtml) cachedPeripheralsListHtml = peripheralsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedPeripheralsListHtml);
-});
-
-app.get('/peripherals/:id', (req, res) => {
-  const periph = PERIPHERALS.find(x => x.id === req.params.id);
-  if (!periph) return res.status(404).send(notFoundPage());
-  if (!cachedPeripheralPageHtml[periph.id]) cachedPeripheralPageHtml[periph.id] = peripheralDetailPage(periph);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedPeripheralPageHtml[periph.id]);
-});
-
-app.get('/lost-games', (req, res) => {
-  if (!cachedLostGamesListHtml) cachedLostGamesListHtml = lostGamesListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedLostGamesListHtml);
-});
-
-app.get('/lost-games/:id', (req, res) => {
-  const lg = LOST_GAMES.find(x => x.id === req.params.id);
-  if (!lg) return res.status(404).send(notFoundPage());
-  if (!cachedLostGamePageHtml[lg.id]) cachedLostGamePageHtml[lg.id] = lostGameDetailPage(lg);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedLostGamePageHtml[lg.id]);
-});
+sectionRoutes('lost-games', LOST_GAMES, lostGamesListPage, lostGameDetailPage);
 
 app.get('/decades', (req, res) => {
   if (!cachedDecadesListHtml) cachedDecadesListHtml = decadesListPage();
@@ -3364,103 +3140,19 @@ app.get('/search', (req, res) => {
   res.send(searchPage(q));
 });
 
-app.get('/magazines', (req, res) => {
-  if (!cachedMagazinesListHtml) cachedMagazinesListHtml = magazinesListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedMagazinesListHtml);
-});
-app.get('/magazines/:id', (req, res) => {
-  const mag = MAGAZINES.find(m => m.id === req.params.id);
-  if (!mag) return res.status(404).send(notFoundPage());
-  if (!cachedMagazinePageHtml[mag.id]) cachedMagazinePageHtml[mag.id] = magazineDetailPage(mag);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedMagazinePageHtml[mag.id]);
-});
+sectionRoutes('magazines', MAGAZINES, magazinesListPage, magazineDetailPage);
 
-app.get('/box-art', (req, res) => {
-  if (!cachedBoxArtListHtml) cachedBoxArtListHtml = boxArtListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedBoxArtListHtml);
-});
-app.get('/box-art/:id', (req, res) => {
-  const entry = BOX_ART.find(b => b.id === req.params.id);
-  if (!entry) return res.status(404).send(notFoundPage());
-  if (!cachedBoxArtPageHtml[entry.id]) cachedBoxArtPageHtml[entry.id] = boxArtDetailPage(entry);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedBoxArtPageHtml[entry.id]);
-});
+sectionRoutes('box-art', BOX_ART, boxArtListPage, boxArtDetailPage);
 
-app.get('/ports', (req, res) => {
-  if (!cachedPortsListHtml) cachedPortsListHtml = portsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedPortsListHtml);
-});
-app.get('/ports/:id', (req, res) => {
-  const port = PORTS.find(p => p.id === req.params.id);
-  if (!port) return res.status(404).send(notFoundPage());
-  if (!cachedPortPageHtml[port.id]) cachedPortPageHtml[port.id] = portDetailPage(port);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedPortPageHtml[port.id]);
-});
+sectionRoutes('ports', PORTS, portsListPage, portDetailPage);
 
-app.get('/voice-actors', (req, res) => {
-  if (!cachedVoiceActorsListHtml) cachedVoiceActorsListHtml = voiceActorsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedVoiceActorsListHtml);
-});
-app.get('/voice-actors/:id', (req, res) => {
-  const va = VOICE_ACTORS.find(v => v.id === req.params.id);
-  if (!va) return res.status(404).send(notFoundPage());
-  if (!cachedVoiceActorPageHtml[va.id]) cachedVoiceActorPageHtml[va.id] = voiceActorDetailPage(va);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedVoiceActorPageHtml[va.id]);
-});
+sectionRoutes('voice-actors', VOICE_ACTORS, voiceActorsListPage, voiceActorDetailPage);
 
-app.get('/pixel-artists', (req, res) => {
-  if (!cachedPixelArtistsListHtml) cachedPixelArtistsListHtml = pixelArtistsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedPixelArtistsListHtml);
-});
-app.get('/pixel-artists/:id', (req, res) => {
-  const artist = PIXEL_ARTISTS.find(a => a.id === req.params.id);
-  if (!artist) return res.status(404).send(notFoundPage());
-  if (!cachedPixelArtistPageHtml[artist.id]) cachedPixelArtistPageHtml[artist.id] = pixelArtistDetailPage(artist);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedPixelArtistPageHtml[artist.id]);
-});
+sectionRoutes('pixel-artists', PIXEL_ARTISTS, pixelArtistsListPage, pixelArtistDetailPage);
 
-app.get('/producers', (req, res) => {
-  if (!cachedProducersListHtml) cachedProducersListHtml = producersListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedProducersListHtml);
-});
-app.get('/producers/:id', (req, res) => {
-  const prod = PRODUCERS.find(p => p.id === req.params.id);
-  if (!prod) return res.status(404).send(notFoundPage());
-  if (!cachedProducerPageHtml[prod.id]) cachedProducerPageHtml[prod.id] = producerDetailPage(prod);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedProducerPageHtml[prod.id]);
-});
+sectionRoutes('producers', PRODUCERS, producersListPage, producerDetailPage);
 
-app.get('/collections', (req, res) => {
-  if (!cachedCollectionsListHtml) cachedCollectionsListHtml = collectionsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedCollectionsListHtml);
-});
-app.get('/collections/:id', (req, res) => {
-  const col = COLLECTIONS.find(c => c.id === req.params.id);
-  if (!col) return res.status(404).send(notFoundPage());
-  if (!cachedCollectionPageHtml[col.id]) cachedCollectionPageHtml[col.id] = collectionDetailPage(col);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedCollectionPageHtml[col.id]);
-});
+sectionRoutes('collections', COLLECTIONS, collectionsListPage, collectionDetailPage);
 
 app.get('/stats', (req, res) => {
   if (!cachedStatsHtml) cachedStatsHtml = statsPage();
@@ -3483,89 +3175,17 @@ app.get('/timeline', (req, res) => {
   res.send(cachedTimelineHtml);
 });
 
-app.get('/sequels', (req, res) => {
-  if (!cachedSequelsListHtml) cachedSequelsListHtml = sequelsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedSequelsListHtml);
-});
-app.get('/sequels/:id', (req, res) => {
-  const item = SEQUELS.find(s => s.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedSequelPageHtml[item.id]) cachedSequelPageHtml[item.id] = sequelDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedSequelPageHtml[item.id]);
-});
+sectionRoutes('sequels', SEQUELS, sequelsListPage, sequelDetailPage);
 
-app.get('/rom-hacks', (req, res) => {
-  if (!cachedRomHacksListHtml) cachedRomHacksListHtml = romHacksListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedRomHacksListHtml);
-});
-app.get('/rom-hacks/:id', (req, res) => {
-  const item = ROM_HACKS.find(r => r.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedRomHackPageHtml[item.id]) cachedRomHackPageHtml[item.id] = romHackDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedRomHackPageHtml[item.id]);
-});
+sectionRoutes('rom-hacks', ROM_HACKS, romHacksListPage, romHackDetailPage);
 
-app.get('/ad-campaigns', (req, res) => {
-  if (!cachedAdCampaignsListHtml) cachedAdCampaignsListHtml = adCampaignsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedAdCampaignsListHtml);
-});
-app.get('/ad-campaigns/:id', (req, res) => {
-  const item = AD_CAMPAIGNS.find(a => a.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedAdCampaignPageHtml[item.id]) cachedAdCampaignPageHtml[item.id] = adCampaignDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedAdCampaignPageHtml[item.id]);
-});
+sectionRoutes('ad-campaigns', AD_CAMPAIGNS, adCampaignsListPage, adCampaignDetailPage);
 
-app.get('/sales-figures', (req, res) => {
-  if (!cachedSalesFiguresHtml) cachedSalesFiguresHtml = salesFiguresPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedSalesFiguresHtml);
-});
-app.get('/sales-figures/:id', (req, res) => {
-  const item = SALES_FIGURES.find(s => s.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedSalesFigurePageHtml[item.id]) cachedSalesFigurePageHtml[item.id] = salesFigureDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedSalesFigurePageHtml[item.id]);
-});
+sectionRoutes('sales-figures', SALES_FIGURES, salesFiguresPage, salesFigureDetailPage);
 
-app.get('/speedruns', (req, res) => {
-  if (!cachedSpeedrunsListHtml) cachedSpeedrunsListHtml = speedrunsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedSpeedrunsListHtml);
-});
-app.get('/speedruns/:id', (req, res) => {
-  const item = SPEEDRUNS.find(s => s.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedSpeedrunPageHtml[item.id]) cachedSpeedrunPageHtml[item.id] = speedrunDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedSpeedrunPageHtml[item.id]);
-});
+sectionRoutes('speedruns', SPEEDRUNS, speedrunsListPage, speedrunDetailPage);
 
-app.get('/critics', (req, res) => {
-  if (!cachedCriticsListHtml) cachedCriticsListHtml = criticsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedCriticsListHtml);
-});
-app.get('/critics/:id', (req, res) => {
-  const item = CRITICS.find(c => c.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedCriticPageHtml[item.id]) cachedCriticPageHtml[item.id] = criticDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedCriticPageHtml[item.id]);
-});
+sectionRoutes('critics', CRITICS, criticsListPage, criticDetailPage);
 
 app.get('/wordsearch', (req, res) => {
   if (!cachedWordSearchHtml) cachedWordSearchHtml = wordSearchPage();
@@ -3581,524 +3201,75 @@ app.get('/bookmarks', (req, res) => {
   res.send(cachedBookmarksHtml);
 });
 
-app.get('/cancelled', (req, res) => {
-  if (!cachedCancelledListHtml) cachedCancelledListHtml = cancelledListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedCancelledListHtml);
-});
-app.get('/cancelled/:id', (req, res) => {
-  const item = CANCELLED.find(c => c.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedCancelledPageHtml[item.id]) cachedCancelledPageHtml[item.id] = cancelledDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedCancelledPageHtml[item.id]);
-});
+sectionRoutes('cancelled', CANCELLED, cancelledListPage, cancelledDetailPage);
 
-app.get('/localization', (req, res) => {
-  if (!cachedLocalizationListHtml) cachedLocalizationListHtml = localizationListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedLocalizationListHtml);
-});
-app.get('/localization/:id', (req, res) => {
-  const item = LOCALIZATION.find(l => l.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedLocalizationPageHtml[item.id]) cachedLocalizationPageHtml[item.id] = localizationDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedLocalizationPageHtml[item.id]);
-});
+sectionRoutes('localization', LOCALIZATION, localizationListPage, localizationDetailPage);
 
-app.get('/prototypes', (req, res) => {
-  if (!cachedPrototypesListHtml) cachedPrototypesListHtml = prototypesListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedPrototypesListHtml);
-});
-app.get('/prototypes/:id', (req, res) => {
-  const item = PROTOTYPES.find(p => p.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedPrototypesPageHtml[item.id]) cachedPrototypesPageHtml[item.id] = prototypeDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedPrototypesPageHtml[item.id]);
-});
+sectionRoutes('prototypes', PROTOTYPES, prototypesListPage, prototypeDetailPage);
 
-app.get('/strategy-guides', (req, res) => {
-  if (!cachedStrategyGuidesListHtml) cachedStrategyGuidesListHtml = strategyGuidesListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedStrategyGuidesListHtml);
-});
-app.get('/strategy-guides/:id', (req, res) => {
-  const item = STRATEGY_GUIDES.find(g => g.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedStrategyGuidePageHtml[item.id]) cachedStrategyGuidePageHtml[item.id] = strategyGuideDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedStrategyGuidePageHtml[item.id]);
-});
+sectionRoutes('strategy-guides', STRATEGY_GUIDES, strategyGuidesListPage, strategyGuideDetailPage);
 
-app.get('/cabinet-art', (req, res) => {
-  if (!cachedCabinetArtListHtml) cachedCabinetArtListHtml = cabinetArtListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedCabinetArtListHtml);
-});
-app.get('/cabinet-art/:id', (req, res) => {
-  const item = CABINET_ART.find(c => c.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedCabinetArtPageHtml[item.id]) cachedCabinetArtPageHtml[item.id] = cabinetArtDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedCabinetArtPageHtml[item.id]);
-});
+sectionRoutes('cabinet-art', CABINET_ART, cabinetArtListPage, cabinetArtDetailPage);
 
-app.get('/merchandise', (req, res) => {
-  if (!cachedMerchandiseListHtml) cachedMerchandiseListHtml = merchandiseListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedMerchandiseListHtml);
-});
-app.get('/merchandise/:id', (req, res) => {
-  const item = MERCHANDISE.find(m => m.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedMerchandisePageHtml[item.id]) cachedMerchandisePageHtml[item.id] = merchandiseDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedMerchandisePageHtml[item.id]);
-});
+sectionRoutes('merchandise', MERCHANDISE, merchandiseListPage, merchandiseDetailPage);
 
-app.get('/bootlegs', (req, res) => {
-  if (!cachedBootlegsListHtml) cachedBootlegsListHtml = bootlegsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedBootlegsListHtml);
-});
-app.get('/bootlegs/:id', (req, res) => {
-  const item = BOOTLEGS.find(b => b.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedBootlegPageHtml[item.id]) cachedBootlegPageHtml[item.id] = bootlegDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedBootlegPageHtml[item.id]);
-});
+sectionRoutes('bootlegs', BOOTLEGS, bootlegsListPage, bootlegDetailPage);
 
-app.get('/competitive', (req, res) => {
-  if (!cachedCompetitiveListHtml) cachedCompetitiveListHtml = competitiveListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedCompetitiveListHtml);
-});
-app.get('/competitive/:id', (req, res) => {
-  const item = COMPETITIVE.find(c => c.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedCompetitivePageHtml[item.id]) cachedCompetitivePageHtml[item.id] = competitiveDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedCompetitivePageHtml[item.id]);
-});
+sectionRoutes('competitive', COMPETITIVE, competitiveListPage, competitiveDetailPage);
 
-app.get('/endings', (req, res) => {
-  if (!cachedEndingsListHtml) cachedEndingsListHtml = endingsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedEndingsListHtml);
-});
-app.get('/endings/:id', (req, res) => {
-  const item = ENDINGS.find(e => e.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedEndingPageHtml[item.id]) cachedEndingPageHtml[item.id] = endingDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedEndingPageHtml[item.id]);
-});
+sectionRoutes('endings', ENDINGS, endingsListPage, endingDetailPage);
 
-app.get('/bossfights', (req, res) => {
-  if (!cachedBossfightsListHtml) cachedBossfightsListHtml = bossfightsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedBossfightsListHtml);
-});
-app.get('/bossfights/:id', (req, res) => {
-  const item = BOSSFIGHTS.find(b => b.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedBossfightPageHtml[item.id]) cachedBossfightPageHtml[item.id] = bossfightDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedBossfightPageHtml[item.id]);
-});
+sectionRoutes('bossfights', BOSSFIGHTS, bossfightsListPage, bossfightDetailPage);
 
-app.get('/soundtracks', (req, res) => {
-  if (!cachedSoundtracksListHtml) cachedSoundtracksListHtml = soundtracksListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedSoundtracksListHtml);
-});
-app.get('/soundtracks/:id', (req, res) => {
-  const item = SOUNDTRACKS.find(s => s.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedSoundtrackPageHtml[item.id]) cachedSoundtrackPageHtml[item.id] = soundtrackDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedSoundtrackPageHtml[item.id]);
-});
+sectionRoutes('soundtracks', SOUNDTRACKS, soundtracksListPage, soundtrackDetailPage);
 
-app.get('/manuals', (req, res) => {
-  if (!cachedManualsListHtml) cachedManualsListHtml = manualsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedManualsListHtml);
-});
-app.get('/manuals/:id', (req, res) => {
-  const item = MANUALS.find(m => m.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedManualPageHtml[item.id]) cachedManualPageHtml[item.id] = manualDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedManualPageHtml[item.id]);
-});
+sectionRoutes('manuals', MANUALS, manualsListPage, manualDetailPage);
 
-app.get('/difficulty', (req, res) => {
-  if (!cachedDifficultyListHtml) cachedDifficultyListHtml = difficultyListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedDifficultyListHtml);
-});
-app.get('/difficulty/:id', (req, res) => {
-  const item = DIFFICULTY.find(d => d.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedDifficultyPageHtml[item.id]) cachedDifficultyPageHtml[item.id] = difficultyDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedDifficultyPageHtml[item.id]);
-});
+sectionRoutes('difficulty', DIFFICULTY, difficultyListPage, difficultyDetailPage);
 
-app.get('/characters', (req, res) => {
-  if (!cachedCharactersListHtml) cachedCharactersListHtml = charactersListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedCharactersListHtml);
-});
-app.get('/characters/:id', (req, res) => {
-  const item = CHARACTERS.find(c => c.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedCharacterPageHtml[item.id]) cachedCharacterPageHtml[item.id] = characterDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedCharacterPageHtml[item.id]);
-});
+sectionRoutes('characters', CHARACTERS, charactersListPage, characterDetailPage);
 
-app.get('/cover-stories', (req, res) => {
-  if (!cachedCoverStoriesListHtml) cachedCoverStoriesListHtml = coverStoriesListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedCoverStoriesListHtml);
-});
-app.get('/cover-stories/:id', (req, res) => {
-  const item = COVER_STORIES.find(c => c.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedCoverStoryPageHtml[item.id]) cachedCoverStoryPageHtml[item.id] = coverStoryDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedCoverStoryPageHtml[item.id]);
-});
+sectionRoutes('cover-stories', COVER_STORIES, coverStoriesListPage, coverStoryDetailPage);
 
-app.get('/controllers', (req, res) => {
-  if (!cachedControllersListHtml) cachedControllersListHtml = controllersListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedControllersListHtml);
-});
-app.get('/controllers/:id', (req, res) => {
-  const item = CONTROLLERS.find(c => c.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedControllerPageHtml[item.id]) cachedControllerPageHtml[item.id] = controllerDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedControllerPageHtml[item.id]);
-});
+sectionRoutes('controllers', CONTROLLERS, controllersListPage, controllerDetailPage);
 
-app.get('/disappointments', (req, res) => {
-  if (!cachedDisappointmentsListHtml) cachedDisappointmentsListHtml = disappointmentsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedDisappointmentsListHtml);
-});
-app.get('/disappointments/:id', (req, res) => {
-  const item = DISAPPOINTMENTS.find(d => d.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedDisappointmentPageHtml[item.id]) cachedDisappointmentPageHtml[item.id] = disappointmentDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedDisappointmentPageHtml[item.id]);
-});
+sectionRoutes('disappointments', DISAPPOINTMENTS, disappointmentsListPage, disappointmentDetailPage);
 
-app.get('/levels', (req, res) => {
-  if (!cachedLevelsListHtml) cachedLevelsListHtml = levelsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedLevelsListHtml);
-});
-app.get('/levels/:id', (req, res) => {
-  const item = LEVELS.find(l => l.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedLevelPageHtml[item.id]) cachedLevelPageHtml[item.id] = levelDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedLevelPageHtml[item.id]);
-});
+sectionRoutes('levels', LEVELS, levelsListPage, levelDetailPage);
 
-app.get('/urban-legends', (req, res) => {
-  if (!cachedUrbanLegendsListHtml) cachedUrbanLegendsListHtml = urbanLegendsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedUrbanLegendsListHtml);
-});
-app.get('/urban-legends/:id', (req, res) => {
-  const item = URBAN_LEGENDS.find(u => u.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedUrbanLegendPageHtml[item.id]) cachedUrbanLegendPageHtml[item.id] = urbanLegendDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedUrbanLegendPageHtml[item.id]);
-});
+sectionRoutes('urban-legends', URBAN_LEGENDS, urbanLegendsListPage, urbanLegendDetailPage);
 
-app.get('/glitches', (req, res) => {
-  if (!cachedGlitchesListHtml) cachedGlitchesListHtml = glitchesListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedGlitchesListHtml);
-});
-app.get('/glitches/:id', (req, res) => {
-  const item = GLITCHES.find(g => g.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedGlitchPageHtml[item.id]) cachedGlitchPageHtml[item.id] = glitchDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedGlitchPageHtml[item.id]);
-});
+sectionRoutes('glitches', GLITCHES, glitchesListPage, glitchDetailPage);
 
-app.get('/packaging', (req, res) => {
-  if (!cachedPackagingListHtml) cachedPackagingListHtml = packagingListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedPackagingListHtml);
-});
-app.get('/packaging/:id', (req, res) => {
-  const item = PACKAGING.find(p => p.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedPackagingPageHtml[item.id]) cachedPackagingPageHtml[item.id] = packagingDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedPackagingPageHtml[item.id]);
-});
+sectionRoutes('packaging', PACKAGING, packagingListPage, packagingDetailPage);
 
-app.get('/multiplayer', (req, res) => {
-  if (!cachedMultiplayerListHtml) cachedMultiplayerListHtml = multiplayerListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedMultiplayerListHtml);
-});
-app.get('/multiplayer/:id', (req, res) => {
-  const item = MULTIPLAYER.find(m => m.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedMultiplayerPageHtml[item.id]) cachedMultiplayerPageHtml[item.id] = multiplayerDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedMultiplayerPageHtml[item.id]);
-});
+sectionRoutes('multiplayer', MULTIPLAYER, multiplayerListPage, multiplayerDetailPage);
 
-app.get('/comics', (req, res) => {
-  if (!cachedComicsListHtml) cachedComicsListHtml = comicsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedComicsListHtml);
-});
-app.get('/comics/:id', (req, res) => {
-  const item = COMICS.find(c => c.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedComicPageHtml[item.id]) cachedComicPageHtml[item.id] = comicDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedComicPageHtml[item.id]);
-});
+sectionRoutes('comics', COMICS, comicsListPage, comicDetailPage);
 
-app.get('/studios', (req, res) => {
-  if (!cachedStudiosListHtml) cachedStudiosListHtml = studiosListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedStudiosListHtml);
-});
-app.get('/studios/:id', (req, res) => {
-  const item = STUDIOS.find(s => s.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedStudioPageHtml[item.id]) cachedStudioPageHtml[item.id] = studioDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedStudioPageHtml[item.id]);
-});
+sectionRoutes('studios', STUDIOS, studiosListPage, studioDetailPage);
 
-app.get('/imports', (req, res) => {
-  if (!cachedImportsListHtml) cachedImportsListHtml = importsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedImportsListHtml);
-});
-app.get('/imports/:id', (req, res) => {
-  const item = IMPORTS.find(i => i.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedImportPageHtml[item.id]) cachedImportPageHtml[item.id] = importDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedImportPageHtml[item.id]);
-});
+sectionRoutes('imports', IMPORTS, importsListPage, importDetailPage);
 
-app.get('/speedrun-techniques', (req, res) => {
-  if (!cachedSpeedrunTechniquesListHtml) cachedSpeedrunTechniquesListHtml = speedrunTechniquesListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedSpeedrunTechniquesListHtml);
-});
-app.get('/speedrun-techniques/:id', (req, res) => {
-  const item = SPEEDRUN_TECHNIQUES.find(s => s.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedSpeedrunTechniquePageHtml[item.id]) cachedSpeedrunTechniquePageHtml[item.id] = speedrunTechniqueDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedSpeedrunTechniquePageHtml[item.id]);
-});
+sectionRoutes('speedrun-techniques', SPEEDRUN_TECHNIQUES, speedrunTechniquesListPage, speedrunTechniqueDetailPage);
 
-app.get('/famous-bugs', (req, res) => {
-  if (!cachedFamousBugsListHtml) cachedFamousBugsListHtml = famousBugsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedFamousBugsListHtml);
-});
-app.get('/famous-bugs/:id', (req, res) => {
-  const item = FAMOUS_BUGS.find(b => b.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedFamousBugPageHtml[item.id]) cachedFamousBugPageHtml[item.id] = famousBugDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedFamousBugPageHtml[item.id]);
-});
+sectionRoutes('famous-bugs', FAMOUS_BUGS, famousBugsListPage, famousBugDetailPage);
 
-app.get('/retro-revival', (req, res) => {
-  if (!cachedRetroRevivalListHtml) cachedRetroRevivalListHtml = retroRevivalListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedRetroRevivalListHtml);
-});
-app.get('/retro-revival/:id', (req, res) => {
-  const item = RETRO_REVIVAL.find(r => r.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedRetroRevivalPageHtml[item.id]) cachedRetroRevivalPageHtml[item.id] = retroRevivalDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedRetroRevivalPageHtml[item.id]);
-});
+sectionRoutes('retro-revival', RETRO_REVIVAL, retroRevivalListPage, retroRevivalDetailPage);
 
-app.get('/sound-effects', (req, res) => {
-  if (!cachedSoundEffectsListHtml) cachedSoundEffectsListHtml = soundEffectsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedSoundEffectsListHtml);
-});
-app.get('/sound-effects/:id', (req, res) => {
-  const item = SOUND_EFFECTS.find(s => s.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedSoundEffectPageHtml[item.id]) cachedSoundEffectPageHtml[item.id] = soundEffectDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedSoundEffectPageHtml[item.id]);
-});
+sectionRoutes('sound-effects', SOUND_EFFECTS, soundEffectsListPage, soundEffectDetailPage);
 
-app.get('/controversies', (req, res) => {
-  if (!cachedControversiesListHtml) cachedControversiesListHtml = controversiesListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedControversiesListHtml);
-});
-app.get('/controversies/:id', (req, res) => {
-  const item = CONTROVERSIES.find(c => c.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedControversyPageHtml[item.id]) cachedControversyPageHtml[item.id] = controversyDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedControversyPageHtml[item.id]);
-});
+sectionRoutes('controversies', CONTROVERSIES, controversiesListPage, controversyDetailPage);
 
-app.get('/failed-consoles', (req, res) => {
-  if (!cachedFailedConsolesListHtml) cachedFailedConsolesListHtml = failedConsolesListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedFailedConsolesListHtml);
-});
-app.get('/failed-consoles/:id', (req, res) => {
-  const item = FAILED_CONSOLES.find(c => c.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedFailedConsolePageHtml[item.id]) cachedFailedConsolePageHtml[item.id] = failedConsoleDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedFailedConsolePageHtml[item.id]);
-});
+sectionRoutes('failed-consoles', FAILED_CONSOLES, failedConsolesListPage, failedConsoleDetailPage);
 
-app.get('/game-engines', (req, res) => {
-  if (!cachedGameEnginesListHtml) cachedGameEnginesListHtml = gameEnginesListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedGameEnginesListHtml);
-});
-app.get('/game-engines/:id', (req, res) => {
-  const item = GAME_ENGINES.find(e => e.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedGameEnginePageHtml[item.id]) cachedGameEnginePageHtml[item.id] = gameEngineDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedGameEnginePageHtml[item.id]);
-});
+sectionRoutes('game-engines', GAME_ENGINES, gameEnginesListPage, gameEngineDetailPage);
 
-app.get('/sound-chips', (req, res) => {
-  if (!cachedSoundChipsListHtml) cachedSoundChipsListHtml = soundChipsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedSoundChipsListHtml);
-});
-app.get('/sound-chips/:id', (req, res) => {
-  const item = SOUND_CHIPS.find(c => c.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedSoundChipPageHtml[item.id]) cachedSoundChipPageHtml[item.id] = soundChipDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedSoundChipPageHtml[item.id]);
-});
+sectionRoutes('sound-chips', SOUND_CHIPS, soundChipsListPage, soundChipDetailPage);
 
-app.get('/easter-eggs', (req, res) => {
-  if (!cachedEasterEggsListHtml) cachedEasterEggsListHtml = easterEggsListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedEasterEggsListHtml);
-});
-app.get('/easter-eggs/:id', (req, res) => {
-  const item = EASTER_EGGS.find(e => e.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedEasterEggPageHtml[item.id]) cachedEasterEggPageHtml[item.id] = easterEggDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedEasterEggPageHtml[item.id]);
-});
+sectionRoutes('easter-eggs', EASTER_EGGS, easterEggsListPage, easterEggDetailPage);
 
-app.get('/cheat-codes', (req, res) => {
-  if (!cachedCheatCodesListHtml) cachedCheatCodesListHtml = cheatCodesListPage();
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);
-  res.send(cachedCheatCodesListHtml);
-});
-app.get('/cheat-codes/:id', (req, res) => {
-  const item = CHEAT_CODES.find(c => c.id === req.params.id);
-  if (!item) return res.status(404).send(notFoundPage());
-  if (!cachedCheatCodePageHtml[item.id]) cachedCheatCodePageHtml[item.id] = cheatCodeDetailPage(item);
-  res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  res.send(cachedCheatCodePageHtml[item.id]);
-});
+sectionRoutes('cheat-codes', CHEAT_CODES, cheatCodesListPage, cheatCodeDetailPage);
 
 app.get('/glossary', (req, res) => {
   if (!cachedGlossaryHtml) cachedGlossaryHtml = glossaryPage();
@@ -4322,7 +3493,9 @@ ${toggleScript()}
 function homepagePage(gotd) {
   const gotdHref = `/games/${gotd.id}`;
   const gotdImgSrc = `/${escapeHtml(gotd.image)}`;
-  const gotdDesc = gotd.description ? gotd.description.substring(0, 180) + '…' : '';
+  const gotdDesc = !gotd.description ? ''
+    : gotd.description.length <= 180 ? gotd.description
+    : gotd.description.substring(0, 180).replace(/\s+\S*$/, '') + '…';
 
   const websiteSchema = JSON.stringify({
     '@context': 'https://schema.org',
@@ -4359,7 +3532,7 @@ ${nav('home')}
 
 <section class="home-hero">
     <h1>Retro Games Archive</h1>
-    <p class="home-tagline">The history of video games, 1962&ndash;1989 — games, hardware, people, and culture</p>
+    <p class="home-tagline">The history of video games, 1952&ndash;1999 — games, hardware, people, and culture</p>
     <form class="home-search" action="/search" method="GET" role="search">
         <input type="search" name="q" placeholder="Search ${games.length} games, essays, platforms, people&#8230;" aria-label="Search the archive">
         <button type="submit">Search</button>
@@ -4376,7 +3549,7 @@ ${nav('home')}
 <div class="gotd-section">
     <h2>&#127942; Game of the Day</h2>
     <a class="gotd-card" href="${escapeHtml(gotdHref)}">
-        <img class="gotd-img" src="${gotdImgSrc}" alt="${escapeHtml(gotd.title)}" fetchpriority="high" onerror="this.style.display='none'">
+        ${imageExists(gotd.image) ? `<img class="gotd-img" src="${gotdImgSrc}" alt="${escapeHtml(gotd.title)}" fetchpriority="high" onerror="this.style.display='none'">` : ''}
         <div class="gotd-body">
             <div class="gotd-badge">${escapeHtml(gotd.decade)}</div>
             <h3 class="gotd-title">${escapeHtml(gotd.title)}</h3>
@@ -4641,8 +3814,10 @@ ${nav('games')}
 
   <div class="game-detail-card">
     <div class="game-detail-image-col">
-      <img src="/${escapeHtml(game.image)}" alt="${escapeHtml(game.title)} (${game.year}) gameplay screenshot" class="game-detail-img"
-           fetchpriority="high" onerror="this.src='/images/games/placeholder.svg'">
+      ${imageExists(game.image)
+        ? `<img src="/${escapeHtml(game.image)}" alt="${escapeHtml(game.title)} (${game.year}) gameplay screenshot" class="game-detail-img"
+           fetchpriority="high" onerror="this.src='/images/games/placeholder.svg'">`
+        : `<div class="game-detail-img game-detail-noimg" role="img" aria-label="No image of ${escapeHtml(game.title)} yet"><span>${escapeHtml(game.title)}</span><small>${escapeHtml(game.platform)} &middot; ${escapeHtml(String(game.year))}</small></div>`}
       <div class="game-meta">
         <div class="meta-item"><span class="meta-label">Year</span><span class="meta-value">${metaValue(String(game.year), `/years/${game.year}`)}</span></div>
         <div class="meta-item"><span class="meta-label">Decade</span><span class="meta-value">${metaValue(game.decade, `/decades/${encodeURIComponent(game.decade)}`)}</span></div>
@@ -4751,10 +3926,7 @@ ${toggleScript()}
 
 function platformDetailPage(platform) {
   const platformGames = gamesForPlatform(platform);
-  const cardHtml = buildCardHtml(platformGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
-  const inlineData = JSON.stringify(platformGames.map(({ id, title, year, decade, genre, platform: pl, developer, image, playUrl }) =>
-    ({ id, title, year, decade, genre, platform: pl, developer, image, playUrl: playUrl || null })
-  ));
+  const cardHtml = buildCardHtml(platformGames, EAGER_IMAGES);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -4780,37 +3952,9 @@ ${nav('platforms')}
 
   <h2 class="platform-games-heading">${platformGames.length} Games in Archive</h2>
   <div class="games-grid" id="gamesGrid">${cardHtml}</div>
-  <div id="loadMoreSentinel" style="height:1px"></div>
 </div>
 
 ${toggleScript()}
-<script>
-const allGames = ${inlineData};
-const PAGE = ${PAGE_SIZE};
-let rendered = Math.min(PAGE, allGames.length);
-const grid = document.getElementById('gamesGrid');
-const sentinel = document.getElementById('loadMoreSentinel');
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function cardHtml(g){
-    return '<a href="/games/'+g.id+'" class="game-card">'+
-        '<div class="game-card-img-wrap">'+
-        '<img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy"'+
-        ' onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'">'+
-        '<div class="game-card-decade">'+esc(g.decade)+'</div>'+
-        (g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : '')+
-        '</div>'+
-        '<div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3>'+
-        '<div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div>'+
-        '<p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';
-}
-function loadMore(){
-    if(rendered>=allGames.length)return;
-    const next=allGames.slice(rendered,rendered+PAGE);
-    grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));
-    rendered+=next.length;
-}
-new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
-</script>
 </body>
 </html>`;
 }
@@ -4869,10 +4013,7 @@ ${toggleScript()}
 function genreDetailPage(genre) {
   const genreGames = genreGamesIndex.get(genre.id) || [];
   const count = genreGames.length;
-  const cardHtml = buildCardHtml(genreGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
-  const inlineData = JSON.stringify(genreGames.map(({ id, title, year, decade, genre: pl, platform, developer, image, playUrl }) =>
-    ({ id, title, year, decade, genre: pl, platform, developer, image, playUrl: playUrl || null })
-  ));
+  const cardHtml = buildCardHtml(genreGames, EAGER_IMAGES);
 
   const statsRows = genre.stats.map(s =>
     `<tr><td class="gi-label">${escapeHtml(s.label)}</td><td class="gi-value">${escapeHtml(s.value)}</td></tr>`
@@ -4942,39 +4083,11 @@ ${nav('genres')}
     <div class="genre-games-section" id="games-section">
       <h2 class="genre-games-heading">${count} Game${count !== 1 ? 's' : ''} in Archive</h2>
       <div class="games-grid" id="gamesGrid">${cardHtml}</div>
-      <div id="loadMoreSentinel" style="height:1px"></div>
     </div>
   </div>
 </div>
 
 ${toggleScript()}
-<script>
-const allGames = ${inlineData};
-const PAGE = ${PAGE_SIZE};
-let rendered = Math.min(PAGE, allGames.length);
-const grid = document.getElementById('gamesGrid');
-const sentinel = document.getElementById('loadMoreSentinel');
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function cardHtml(g){
-    return '<a href="/games/'+g.id+'" class="game-card">'+
-        '<div class="game-card-img-wrap">'+
-        '<img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy"'+
-        ' onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'">'+
-        '<div class="game-card-decade">'+esc(g.decade)+'</div>'+
-        (g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : '')+
-        '</div>'+
-        '<div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3>'+
-        '<div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div>'+
-        '<p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';
-}
-function loadMore(){
-    if(rendered>=allGames.length)return;
-    const next=allGames.slice(rendered,rendered+PAGE);
-    grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));
-    rendered+=next.length;
-}
-new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
-</script>
 </body>
 </html>`;
 }
@@ -5172,10 +4285,7 @@ ${toggleScript()}
 
 function developerDetailPage(dev) {
   const devGames = developerGamesIndex.get(dev.id) || [];
-  const cardHtml = buildCardHtml(devGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
-  const inlineData = JSON.stringify(devGames.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
-    ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
-  ));
+  const cardHtml = buildCardHtml(devGames, EAGER_IMAGES);
 
   const notableList = gameLinkList(dev.notableGames);
   const figureList = (dev.keyFigures || []).map(f => `<span class="dev-figure">${escapeHtml(f)}</span>`).join('');
@@ -5206,37 +4316,9 @@ ${nav('developers')}
 
   <h2 class="platform-games-heading">${devGames.length} Game${devGames.length !== 1 ? 's' : ''} in Archive</h2>
   <div class="games-grid" id="gamesGrid">${cardHtml}</div>
-  <div id="loadMoreSentinel" style="height:1px"></div>
 </div>
 
 ${toggleScript()}
-<script>
-const allGames = ${inlineData};
-const PAGE = ${PAGE_SIZE};
-let rendered = Math.min(PAGE, allGames.length);
-const grid = document.getElementById('gamesGrid');
-const sentinel = document.getElementById('loadMoreSentinel');
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function cardHtml(g){
-    return '<a href="/games/'+g.id+'" class="game-card">'+
-        '<div class="game-card-img-wrap">'+
-        '<img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy"'+
-        ' onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'">'+
-        '<div class="game-card-decade">'+esc(g.decade)+'</div>'+
-        (g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : '')+
-        '</div>'+
-        '<div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3>'+
-        '<div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div>'+
-        '<p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';
-}
-function loadMore(){
-    if(rendered>=allGames.length)return;
-    const next=allGames.slice(rendered,rendered+PAGE);
-    grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));
-    rendered+=next.length;
-}
-new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
-</script>
 </body>
 </html>`;
 }
@@ -5278,10 +4360,7 @@ ${toggleScript()}
 
 function composerDetailPage(c) {
   const cGames = composerGamesIndex.get(c.id) || [];
-  const cardHtml = buildCardHtml(cGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
-  const inlineData = JSON.stringify(cGames.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
-    ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
-  ));
+  const cardHtml = buildCardHtml(cGames, EAGER_IMAGES);
   const factList = (c.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
   const trackList = gameLinkList(c.notableSoundtracks);
 
@@ -5308,37 +4387,9 @@ ${nav('composers')}
     ${factList ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${factList}</ul></div>` : ''}
   </div>
   ${cGames.length > 0 ? `<h2 class="platform-games-heading">${cGames.length} Game${cGames.length !== 1 ? 's' : ''} in Archive</h2>
-  <div class="games-grid" id="gamesGrid">${cardHtml}</div>
-  <div id="loadMoreSentinel" style="height:1px"></div>` : ''}
+  <div class="games-grid" id="gamesGrid">${cardHtml}</div>` : ''}
 </div>
 ${toggleScript()}
-${cGames.length > 0 ? `<script>
-const allGames = ${inlineData};
-const PAGE = ${PAGE_SIZE};
-let rendered = Math.min(PAGE, allGames.length);
-const grid = document.getElementById('gamesGrid');
-const sentinel = document.getElementById('loadMoreSentinel');
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function cardHtml(g){
-    return '<a href="/games/'+g.id+'" class="game-card">'+
-        '<div class="game-card-img-wrap">'+
-        '<img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy"'+
-        ' onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'">'+
-        '<div class="game-card-decade">'+esc(g.decade)+'</div>'+
-        (g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : '')+
-        '</div>'+
-        '<div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3>'+
-        '<div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div>'+
-        '<p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';
-}
-function loadMore(){
-    if(rendered>=allGames.length)return;
-    const next=allGames.slice(rendered,rendered+PAGE);
-    grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));
-    rendered+=next.length;
-}
-new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
-</script>` : ''}
 </body>
 </html>`;
 }
@@ -5380,10 +4431,7 @@ ${toggleScript()}
 
 function franchiseDetailPage(f) {
   const fGames = franchiseGamesIndex.get(f.id) || [];
-  const cardHtml = buildCardHtml(fGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
-  const inlineData = JSON.stringify(fGames.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
-    ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
-  ));
+  const cardHtml = buildCardHtml(fGames, EAGER_IMAGES);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -5407,36 +4455,8 @@ ${nav('franchises')}
   </div>
   <h2 class="platform-games-heading">${fGames.length} Game${fGames.length !== 1 ? 's' : ''} in Archive</h2>
   <div class="games-grid" id="gamesGrid">${cardHtml}</div>
-  <div id="loadMoreSentinel" style="height:1px"></div>
 </div>
 ${toggleScript()}
-<script>
-const allGames = ${inlineData};
-const PAGE = ${PAGE_SIZE};
-let rendered = Math.min(PAGE, allGames.length);
-const grid = document.getElementById('gamesGrid');
-const sentinel = document.getElementById('loadMoreSentinel');
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function cardHtml(g){
-    return '<a href="/games/'+g.id+'" class="game-card">'+
-        '<div class="game-card-img-wrap">'+
-        '<img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy"'+
-        ' onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'">'+
-        '<div class="game-card-decade">'+esc(g.decade)+'</div>'+
-        (g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : '')+
-        '</div>'+
-        '<div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3>'+
-        '<div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div>'+
-        '<p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';
-}
-function loadMore(){
-    if(rendered>=allGames.length)return;
-    const next=allGames.slice(rendered,rendered+PAGE);
-    grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));
-    rendered+=next.length;
-}
-new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
-</script>
 </body>
 </html>`;
 }
@@ -5544,10 +4564,7 @@ ${toggleScript()}
 
 function designerDetailPage(d) {
   const dGames = designerGamesIndex.get(d.id) || [];
-  const cardHtml = buildCardHtml(dGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
-  const inlineData = JSON.stringify(dGames.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
-    ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
-  ));
+  const cardHtml = buildCardHtml(dGames, EAGER_IMAGES);
   const gamesList = gameLinkList(d.notableGames);
   const factList = (d.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
   return `<!DOCTYPE html>
@@ -5573,18 +4590,9 @@ ${nav('designers')}
     ${factList ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${factList}</ul></div>` : ''}
   </div>
   ${dGames.length > 0 ? `<h2 class="platform-games-heading">${dGames.length} Game${dGames.length !== 1 ? 's' : ''} in Archive</h2>
-  <div class="games-grid" id="gamesGrid">${cardHtml}</div>
-  <div id="loadMoreSentinel" style="height:1px"></div>` : ''}
+  <div class="games-grid" id="gamesGrid">${cardHtml}</div>` : ''}
 </div>
 ${toggleScript()}
-${dGames.length > 0 ? `<script>
-const allGames=${inlineData};const PAGE=${PAGE_SIZE};let rendered=Math.min(PAGE,allGames.length);
-const grid=document.getElementById('gamesGrid');const sentinel=document.getElementById('loadMoreSentinel');
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function cardHtml(g){return'<a href="/games/'+g.id+'" class="game-card"><div class="game-card-img-wrap"><img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'"><div class="game-card-decade">'+esc(g.decade)+'</div>'+(g.playUrl?'<div class="game-card-playable">&#9654; Play</div>':'')+'</div><div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3><div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div><p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';}
-function loadMore(){if(rendered>=allGames.length)return;const next=allGames.slice(rendered,rendered+PAGE);grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));rendered+=next.length;}
-new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
-</script>` : ''}
 </body>
 </html>`;
 }
@@ -5623,15 +4631,12 @@ ${toggleScript()}
 
 function yearDetailPage(year, review) {
   const yGames = (yearsIndex.get(year) || []).slice().sort((a, b) => a.title.localeCompare(b.title));
-  const cardHtml = buildCardHtml(yGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
-  const inlineData = JSON.stringify(yGames.map(({ id, title, year: y, decade, genre, platform, developer, image, playUrl }) =>
-    ({ id, title, year: y, decade, genre, platform, developer, image, playUrl: playUrl || null })
-  ));
+  const cardHtml = buildCardHtml(yGames, EAGER_IMAGES);
   const reviewHtml = review ? `
   <div style="border-bottom:1px solid var(--border);padding-bottom:2rem;margin-bottom:2rem">
     <h2 style="color:var(--accent);font-size:1.4em;margin-bottom:0.5rem">${escapeHtml(review.headline)}</h2>
     <p style="color:var(--text-secondary);line-height:1.7;margin-bottom:1.2rem">${escapeHtml(review.summary)}</p>
-    ${(review.topEvents || []).length ? `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0.8rem;margin-bottom:1.5rem">${review.topEvents.map(e => `<div style="background:rgba(255,255,255,0.04);border-radius:6px;padding:0.8rem 1rem"><div style="font-weight:700;margin-bottom:0.3rem;font-size:0.9em">${escapeHtml(e.title)}</div><div style="color:var(--text-secondary);font-size:0.85em;line-height:1.5">${escapeHtml(e.desc)}</div></div>`).join('')}</div>` : ''}
+    ${(review.topEvents || []).length ? `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0.8rem;margin-bottom:1.5rem">${review.topEvents.map(e => `<div style="background:var(--surface-1);border-radius:6px;padding:0.8rem 1rem"><div style="font-weight:700;margin-bottom:0.3rem;font-size:0.9em">${escapeHtml(e.title)}</div><div style="color:var(--text-secondary);font-size:0.85em;line-height:1.5">${escapeHtml(e.desc)}</div></div>`).join('')}</div>` : ''}
     ${(review.sections || []).map(s => `<div style="margin-bottom:1.5rem"><h3 style="margin-bottom:0.6rem">${escapeHtml(s.title)}</h3><div style="color:var(--text-secondary);line-height:1.7">${s.html}</div></div>`).join('')}
     ${review.quote ? `<blockquote style="border-left:3px solid var(--accent);padding-left:1rem;margin:1rem 0;color:var(--text-muted);font-style:italic">${escapeHtml(review.quote)}</blockquote>` : ''}
   </div>` : '';
@@ -5657,17 +4662,8 @@ ${nav('years')}
   ${reviewHtml}
   <h2 style="margin-bottom:1rem">Games from ${year}</h2>
   <div class="games-grid" id="gamesGrid">${cardHtml}</div>
-  <div id="loadMoreSentinel" style="height:1px"></div>
 </div>
 ${toggleScript()}
-<script>
-const allGames=${inlineData};const PAGE=${PAGE_SIZE};let rendered=Math.min(PAGE,allGames.length);
-const grid=document.getElementById('gamesGrid');const sentinel=document.getElementById('loadMoreSentinel');
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function cardHtml(g){return'<a href="/games/'+g.id+'" class="game-card"><div class="game-card-img-wrap"><img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'"><div class="game-card-decade">'+esc(g.decade)+'</div>'+(g.playUrl?'<div class="game-card-playable">&#9654; Play</div>':'')+'</div><div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3><div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div><p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';}
-function loadMore(){if(rendered>=allGames.length)return;const next=allGames.slice(rendered,rendered+PAGE);grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));rendered+=next.length;}
-new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
-</script>
 </body>
 </html>`;
 }
@@ -5766,10 +4762,7 @@ ${toggleScript()}
 
 function publisherDetailPage(pub) {
   const pGames = publisherGamesIndex.get(pub.id) || [];
-  const cardHtml = buildCardHtml(pGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
-  const inlineData = JSON.stringify(pGames.map(({ id, title, year, decade, genre, platform, developer, image, playUrl }) =>
-    ({ id, title, year, decade, genre, platform, developer, image, playUrl: playUrl || null })
-  ));
+  const cardHtml = buildCardHtml(pGames, EAGER_IMAGES);
   const titleList = gameLinkList(pub.notableTitles);
   const factList = (pub.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
   return `<!DOCTYPE html>
@@ -5795,18 +4788,9 @@ ${nav('publishers')}
     ${factList ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${factList}</ul></div>` : ''}
   </div>
   ${pGames.length > 0 ? `<h2 class="platform-games-heading">${pGames.length} Game${pGames.length !== 1 ? 's' : ''} in Archive</h2>
-  <div class="games-grid" id="gamesGrid">${cardHtml}</div>
-  <div id="loadMoreSentinel" style="height:1px"></div>` : ''}
+  <div class="games-grid" id="gamesGrid">${cardHtml}</div>` : ''}
 </div>
 ${toggleScript()}
-${pGames.length > 0 ? `<script>
-const allGames=${inlineData};const PAGE=${PAGE_SIZE};let rendered=Math.min(PAGE,allGames.length);
-const grid=document.getElementById('gamesGrid');const sentinel=document.getElementById('loadMoreSentinel');
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function cardHtml(g){return'<a href="/games/'+g.id+'" class="game-card"><div class="game-card-img-wrap"><img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'"><div class="game-card-decade">'+esc(g.decade)+'</div>'+(g.playUrl?'<div class="game-card-playable">&#9654; Play</div>':'')+'</div><div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3><div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div><p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';}
-function loadMore(){if(rendered>=allGames.length)return;const next=allGames.slice(rendered,rendered+PAGE);grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));rendered+=next.length;}
-new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
-</script>` : ''}
 </body>
 </html>`;
 }
@@ -6023,10 +5007,7 @@ ${toggleScript()}
 
 function decadeDetailPage(decade) {
   const dGames = (decadesIndex.get(decade) || []).sort((a, b) => a.year - b.year);
-  const cardHtml = buildCardHtml(dGames.slice(0, PAGE_SIZE), EAGER_IMAGES);
-  const inlineData = JSON.stringify(dGames.map(({ id, title, year, decade: dec, genre, platform, developer, image, playUrl }) =>
-    ({ id, title, year, decade: dec, genre, platform, developer, image, playUrl: playUrl || null })
-  ));
+  const cardHtml = buildCardHtml(dGames, EAGER_IMAGES);
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6045,16 +5026,7 @@ ${nav('decades')}
 </section>
 <h2 class="sr-only">Games from the ${escapeHtml(decade)}</h2>
 <div class="games-grid" id="gamesGrid">${cardHtml}</div>
-<div id="loadMoreSentinel" style="height:1px"></div>
 ${toggleScript()}
-<script>
-const allGames=${inlineData};const PAGE=${PAGE_SIZE};let rendered=Math.min(PAGE,allGames.length);
-const grid=document.getElementById('gamesGrid');const sentinel=document.getElementById('loadMoreSentinel');
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function cardHtml(g){return'<a href="/games/'+g.id+'" class="game-card"><div class="game-card-img-wrap"><img src="/'+esc(g.image)+'" alt="'+esc(g.title)+'" loading="lazy" onerror="this.parentElement.innerHTML=\'<div class=\\\'game-card-placeholder\\\'>'+esc(g.title[0])+'</div>\'"><div class="game-card-decade">'+esc(g.decade)+'</div>'+(g.playUrl?'<div class="game-card-playable">&#9654; Play</div>':'')+'</div><div class="game-card-body"><h3 class="game-card-title">'+esc(g.title)+'</h3><div class="game-card-meta"><span>'+esc(String(g.year))+'</span><span class="dot">·</span><span>'+esc(g.genre)+'</span></div><p class="game-card-platform">'+esc(g.platform)+'</p></div></a>';}
-function loadMore(){if(rendered>=allGames.length)return;const next=allGames.slice(rendered,rendered+PAGE);grid.insertAdjacentHTML('beforeend',next.map(cardHtml).join(''));rendered+=next.length;}
-new IntersectionObserver(e=>{if(e[0].isIntersecting)loadMore();},{rootMargin:'200px'}).observe(sentinel);
-</script>
 </body>
 </html>`;
 }
@@ -6137,7 +5109,7 @@ function familyTreePage() {
       <p style="color:var(--text-muted);margin-bottom:1.2rem">${escapeHtml(l.desc)}</p>
       <div style="display:flex;flex-direction:column;gap:0.6rem">
         ${l.entries.map(e => `
-        <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:0.8rem;align-items:center;background:rgba(255,255,255,0.04);border-radius:6px;padding:0.8rem 1rem">
+        <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:0.8rem;align-items:center;background:var(--surface-1);border-radius:6px;padding:0.8rem 1rem">
           <div style="font-weight:600;color:var(--accent)">${escapeHtml(e.from)}</div>
           <div style="font-size:1.4em;color:var(--text-muted)">${escapeHtml(e.arrow)}</div>
           <div style="font-weight:600">${escapeHtml(e.to)}</div>
@@ -6183,7 +5155,7 @@ function comparePage(a, b) {
       <select name="b" style="background:var(--surface-2);color:var(--text);border:1px solid var(--border-strong);padding:0.5rem 0.8rem;border-radius:4px;font-size:1rem">
         <option value="">Select platform B…</option>${opts2}
       </select>
-      <button type="submit" style="background:var(--accent);color:#000;border:none;padding:0.5rem 1.2rem;border-radius:4px;font-size:1rem;cursor:pointer;font-weight:700">Compare</button>
+      <button type="submit" style="background:var(--accent);color:var(--on-accent);border:none;padding:0.5rem 1.2rem;border-radius:4px;font-size:1rem;cursor:pointer;font-weight:700">Compare</button>
     </form>
   </div>`;
 
@@ -6237,72 +5209,215 @@ ${toggleScript()}
 </html>`;
 }
 
+// ---- Site search -------------------------------------------------------------
+// One index over every section that has entry pages, plus the section hubs.
+// Search used to look in 7 of the 74 sections (and the nav autocomplete in 4,
+// titles only), so a query like "Miyamoto" missed the characters, box art,
+// cancelled games and difficulty entries that name him. clDataBySlug already
+// lists every section's entries — the same source the sibling blocks use — so
+// the index cannot drift from what the site actually publishes. ~1,950 docs
+// fit comfortably in memory; a linear scan per query costs a few ms.
+//
+// Built lazily on the first query: cold start pays nothing for it.
+let searchIndex = null;
+function searchNorm(s) {
+  return String(s || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '')
+    .replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, ' ').trim();
+}
+function buildSearchIndex() {
+  const routed = entryRouteSlugs();
+  const docs = [];
+  const vocab = new Set();
+  const seen = new Set();
+  const add = (doc) => {
+    if (seen.has(doc.href)) return;
+    seen.add(doc.href);
+    doc.nTitle = searchNorm(doc.title);
+    // Short names ("C64", "SNES") count as title words too.
+    doc.nAlias = searchNorm(doc.alias);
+    doc.pTitle = ' ' + doc.nTitle + ' ' + (doc.nAlias ? doc.nAlias + ' ' : '');
+    doc.pProse = ' ' + searchNorm(doc.prose) + ' ';
+    doc.titleWords = new Set(doc.pTitle.trim().split(' '));
+    for (const w of doc.titleWords) if (w.length >= 4) vocab.add(w);
+    docs.push(doc);
+  };
+  for (const [slug, data] of clDataBySlug) {
+    if (!Array.isArray(data) || !routed.has(slug)) continue;
+    const label = SEARCH_SECTION_LABELS.get(slug) || clLabelBySlug.get(slug) || sectionLabel(slug) || slug;
+    for (const e of data) {
+      if (!e || !e.id) continue;
+      const title = clTitle(e);
+      if (!title) continue;
+      const blurb = e.description || e.summary || e.subtitle || e.significance || '';
+      add({
+        slug, label, title, href: `/${slug}/${e.id}`, alias: e.shortName && e.shortName !== title ? e.shortName : '',
+        sub: slug === 'games' ? [e.year, e.platform].filter(Boolean).join(' · ') : label,
+        blurb: String(blurb).replace(/<[^>]*>/g, ''),
+        prose: entryProse(e),
+      });
+    }
+  }
+  // Section hubs, so "glossary" or "sound chips" lands on the section itself.
+  for (const g of NAV_GROUPS) for (const [slug, href, label] of g.items) {
+    if (SITEMAP_EXCLUDE.has(href)) continue;
+    add({ slug: 'section', label: 'Section', title: label, href, sub: 'Section', blurb: HUB_DESCRIPTIONS.get(slug) || '', prose: '' });
+  }
+  return { docs, vocab: [...vocab] };
+}
+// Sections whose pages live at /<slug>/<id>, read from the registered routes
+// rather than assumed, so a registry row without detail pages is never indexed
+// into a 404. Read at first query, by which point every route is registered.
+function entryRouteSlugs() {
+  const out = new Set();
+  for (const layer of app._router.stack) {
+    const m = layer.route && /^\/([a-z0-9-]+)\/:id$/.exec(layer.route.path);
+    if (m) out.add(m[1]);
+  }
+  return out;
+}
+const SEARCH_SECTION_LABELS = new Map([['genres', 'Genre'], ['platforms', 'Platform']]);
+
+// Edit distance with an early exit once it exceeds `max`.
+function editDistance(a, b, max) {
+  if (Math.abs(a.length - b.length) > max) return max + 1;
+  let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i];
+    let best = i;
+    for (let j = 1; j <= b.length; j++) {
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      if (cur[j] < best) best = cur[j];
+    }
+    if (best > max) return max + 1;
+    prev = cur;
+  }
+  return prev[b.length];
+}
+
+// Words match from their start ("metr" finds Metroid, not "geometry"), so both
+// haystacks are held space-padded and each token is looked up as " token".
+// Tokens under 4 characters must be whole words, or "sid" would match every
+// "side" and "pac" every "package".
+function scoreDoc(d, nq, tokens) {
+  let score = 0;
+  tokens = tokens.map(t => t.length < 4 ? t + ' ' : t);
+  if (d.nTitle === nq || d.nAlias === nq) score += 100;
+  else if (d.nTitle.replace(/^(the|a|an) /, '').startsWith(nq)) score += 60;
+  else if (d.pTitle.includes(' ' + nq)) score += 40;
+  let inTitle = 0, inAny = 0;
+  for (const t of tokens) {
+    const titleHit = d.pTitle.includes(' ' + t);
+    if (titleHit) inTitle++;
+    if (titleHit || d.pProse.includes(' ' + t)) inAny++;
+    if (d.titleWords.has(t.trim())) score += 10; // a whole word, not just a prefix
+  }
+  if (inAny < tokens.length) return 0; // every word must appear somewhere
+  if (inTitle === tokens.length) score += 30;
+  else score += 10 * inTitle;
+  if (tokens.length > 1 && d.pProse.includes(' ' + nq)) score += 12;
+  if (!score) score = 4; // matched only in the body
+  if (d.slug === 'section' && inTitle === tokens.length) score += 8;
+  if (d.slug === 'games') score += 2;
+  return score;
+}
+
+// Replace each unknown query word by its nearest title word, for typos
+// ("zeldda", "castelvania"). Only used when the literal query finds nothing.
+function correctQuery(tokens, vocab) {
+  let changed = false;
+  const out = tokens.map(t => {
+    if (t.length < 4 || vocab.includes(t)) return t;
+    const max = t.length >= 7 ? 2 : 1;
+    let best = null, bestD = max + 1;
+    for (const w of vocab) {
+      const d = editDistance(t, w, max);
+      if (d < bestD) { bestD = d; best = w; if (d === 1 && max === 1) break; }
+    }
+    if (best) { changed = true; return best; }
+    return t;
+  });
+  return changed ? out : null;
+}
+
+function runSearch(q, limit = 200) {
+  if (!searchIndex) searchIndex = buildSearchIndex();
+  const nq = searchNorm(q);
+  if (nq.length < 2) return { results: [], corrected: null };
+  const rank = (tokens, nqs) => searchIndex.docs
+    .map(d => ({ d, s: scoreDoc(d, nqs, tokens) }))
+    .filter(x => x.s > 0)
+    .sort((a, b) => b.s - a.s || a.d.title.length - b.d.title.length || a.d.title.localeCompare(b.d.title))
+    .slice(0, limit)
+    .map(x => x.d);
+  const tokens = nq.split(' ');
+  let results = rank(tokens, nq);
+  let corrected = null;
+  if (!results.length) {
+    const fixed = correctQuery(tokens, searchIndex.vocab);
+    if (fixed) {
+      results = rank(fixed, fixed.join(' '));
+      if (results.length) corrected = fixed.join(' ');
+    }
+  }
+  return { results, corrected };
+}
+
+// The first place the query occurs in the entry's text, with the match marked.
+function searchSnippet(d, q) {
+  const text = (d.blurb || d.prose || '').replace(/\s+/g, ' ').trim();
+  if (!text) return '';
+  const words = searchNorm(q).split(' ').filter(w => w.length >= 2);
+  const lower = text.toLowerCase();
+  let at = -1;
+  for (const w of words) { const i = lower.indexOf(w); if (i >= 0 && (at < 0 || i < at)) at = i; }
+  let start = 0;
+  if (at > 60) { start = text.lastIndexOf(' ', at - 50); if (start < 0) start = 0; }
+  let snip = text.slice(start, start + 170);
+  if (start + 170 < text.length) snip = snip.replace(/\s+\S*$/, '') + '…';
+  if (start > 0) snip = '…' + snip;
+  let html = escapeHtml(snip);
+  const pattern = words.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+  if (pattern) html = html.replace(new RegExp(`(${pattern})`, 'gi'), '<mark>$1</mark>');
+  return html;
+}
+
 function searchPage(q) {
-  const ql = q.toLowerCase();
   let resultsHtml = '';
-
-  if (q.length >= 2) {
-    const matchedGames = games.filter(g =>
-      g.title.toLowerCase().includes(ql) ||
-      g.developer.toLowerCase().includes(ql) ||
-      (g.description || '').toLowerCase().includes(ql)
-    ).slice(0, 24);
-
-    const matchedEssays = ESSAYS.filter(e =>
-      e.title.toLowerCase().includes(ql) ||
-      (e.summary || '').toLowerCase().includes(ql)
-    ).slice(0, 6);
-
-    const matchedPlatforms = PLATFORMS.filter(p =>
-      p.name.toLowerCase().includes(ql) ||
-      (p.description || '').toLowerCase().includes(ql)
-    ).slice(0, 4);
-
-    const matchedDevs = DEVELOPERS.filter(d =>
-      d.name.toLowerCase().includes(ql) ||
-      (d.description || '').toLowerCase().includes(ql)
-    ).slice(0, 4);
-
-    const matchedDesigners = DESIGNERS.filter(d =>
-      d.name.toLowerCase().includes(ql) ||
-      (d.description || '').toLowerCase().includes(ql)
-    ).slice(0, 4);
-
-    const matchedComposers = COMPOSERS.filter(c =>
-      c.name.toLowerCase().includes(ql) ||
-      (c.description || '').toLowerCase().includes(ql)
-    ).slice(0, 4);
-
-    const matchedPublishers = PUBLISHERS.filter(p =>
-      p.name.toLowerCase().includes(ql) ||
-      (p.description || '').toLowerCase().includes(ql)
-    ).slice(0, 4);
-
-    const total = matchedGames.length + matchedEssays.length + matchedPlatforms.length +
-      matchedDevs.length + matchedDesigners.length + matchedComposers.length + matchedPublishers.length;
-
-    if (total === 0) {
-      resultsHtml = `<p style="color:var(--text-muted);margin-top:2rem">No results found for "<strong>${escapeHtml(q)}</strong>".</p>`;
+  if (q.trim().length >= 2) {
+    const { results, corrected } = runSearch(q);
+    const shownQ = corrected || q;
+    const note = corrected
+      ? `<p class="search-note">No results for “<strong>${escapeHtml(q)}</strong>”. Showing results for “<strong>${escapeHtml(corrected)}</strong>”.</p>`
+      : '';
+    if (!results.length) {
+      resultsHtml = `<p class="search-note">No results for “<strong>${escapeHtml(q)}</strong>”. Try fewer words, or start from the <a href="/">homepage</a>.</p>`;
     } else {
-      resultsHtml = `<p style="color:var(--text-muted);margin-bottom:1.5rem">${total} result${total !== 1 ? 's' : ''} for "<strong>${escapeHtml(q)}</strong>"</p>`;
-
-      if (matchedGames.length) {
-        resultsHtml += `<h2 style="margin-bottom:1rem">Games (${matchedGames.length})</h2>
-        <div class="games-grid">${buildCardHtml(matchedGames, 4)}</div>`;
-      }
-
-      const mkLinks = (items, href, label) => items.length ? `<h2 style="margin-top:2rem;margin-bottom:0.8rem">${label} (${items.length})</h2>
-        <div class="platforms-grid">${items.map(x => `<a href="${href(x)}" class="platform-card">
-          <div class="platform-card-name">${escapeHtml(x.name || x.title)}</div>
-          <p class="platform-card-desc">${escapeHtml((x.description || x.summary || '').substring(0, 120))}</p>
-        </a>`).join('')}</div>` : '';
-
-      resultsHtml += mkLinks(matchedPlatforms, p => `/platforms/${p.id}`, 'Platforms');
-      resultsHtml += mkLinks(matchedDevs, d => `/developers/${d.id}`, 'Developers');
-      resultsHtml += mkLinks(matchedDesigners, d => `/designers/${d.id}`, 'Designers');
-      resultsHtml += mkLinks(matchedComposers, c => `/composers/${c.id}`, 'Composers');
-      resultsHtml += mkLinks(matchedPublishers, p => `/publishers/${p.id}`, 'Publishers');
-      resultsHtml += mkLinks(matchedEssays, e => `/essays/${e.id}`, 'Essays');
+      // Section chips: counts per section, each filtering the list in place.
+      const bySection = new Map();
+      for (const d of results) bySection.set(d.label, (bySection.get(d.label) || 0) + 1);
+      // The eight biggest sections show; the long tail folds behind "More".
+      const chip = ([label, n]) =>
+        `<button type="button" class="search-chip" data-f="${escapeHtml(label)}">${escapeHtml(label)} <span>${n}</span></button>`;
+      const sorted = [...bySection].sort((a, b) => b[1] - a[1]);
+      const chips = sorted.slice(0, 8).map(chip).join('') + (sorted.length > 8
+        ? `<details class="search-more"><summary class="search-chip">+${sorted.length - 8} more</summary>${sorted.slice(8).map(chip).join('')}</details>`
+        : '');
+      const rows = results.map(d => { const snip = searchSnippet(d, shownQ); return `<li class="search-hit" data-f="${escapeHtml(d.label)}">
+        <a href="${d.href}" class="search-hit-title">${escapeHtml(d.title)}</a>
+        <span class="search-hit-sub">${escapeHtml(d.sub || d.label)}</span>
+        ${snip ? `<p class="search-hit-snip">${snip}</p>` : ''}
+      </li>`; }).join('');
+      resultsHtml = `${note}
+  <p class="search-count">${results.length}${results.length >= 200 ? '+' : ''} result${results.length !== 1 ? 's' : ''} for “<strong>${escapeHtml(shownQ)}</strong>”</p>
+  ${bySection.size > 1 ? `<div class="search-chips" role="group" aria-label="Filter by section"><button type="button" class="search-chip is-on" data-f="">All <span>${results.length}</span></button>${chips}</div>` : ''}
+  <ol class="search-hits">${rows}</ol>
+  <script>
+  document.querySelector('.search-chips')&&document.querySelector('.search-chips').addEventListener('click',function(e){
+    var b=e.target.closest('.search-chip');if(!b)return;var f=b.dataset.f;
+    document.querySelectorAll('.search-chip').forEach(function(c){c.classList.toggle('is-on',c===b);});
+    document.querySelectorAll('.search-hit').forEach(function(h){h.hidden=!!f&&h.dataset.f!==f;});
+  });
+  </script>`;
     }
   }
 
@@ -6319,14 +5434,14 @@ function searchPage(q) {
 <body>
 ${bgLogo()}
 ${nav('search')}
-<div class="essay-wrapper">
+<div class="essay-wrapper search-wrapper">
   <div class="essay-header">
     <h1 class="essay-title">Search</h1>
   </div>
-  <form method="GET" action="/search" style="display:flex;gap:0.8rem;margin-bottom:2rem;max-width:600px">
-    <input type="text" name="q" value="${escapeHtml(q)}" placeholder="Search games, essays, people, platforms…"
-      autofocus style="flex:1;background:var(--surface-2);color:var(--text);border:1px solid var(--border-strong);padding:0.6rem 1rem;border-radius:4px;font-size:1rem">
-    <button type="submit" style="background:var(--accent);color:#000;border:none;padding:0.6rem 1.2rem;border-radius:4px;font-size:1rem;cursor:pointer;font-weight:700">Search</button>
+  <form method="GET" action="/search" class="search-form" role="search">
+    <input type="search" name="q" value="${escapeHtml(q)}" placeholder="Search games, people, hardware, essays…"
+      aria-label="Search the archive" ${q ? '' : 'autofocus'}>
+    <button type="submit">Search</button>
   </form>
   ${resultsHtml}
 </div>
@@ -6427,7 +5542,7 @@ function speedrunDetailPage(item) {
   const techniques = (item.famousTechniques || []).map(t => `<li>${escapeHtml(t)}</li>`).join('');
   const runners = (item.notableRunners || []).map(r => `<li>${escapeHtml(r)}</li>`).join('');
   const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.game)} Speedrun – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('speedruns')}<div class="platform-detail-wrapper"><a href="/speedruns" class="back-link">&#8592; All Speedruns</a><div class="platform-detail-header"><h1>${escapeHtml(item.game)}</h1><p class="platform-detail-era">${escapeHtml(item.platform)} &middot; ${escapeHtml(item.category)} &middot; ${item.year}</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0">${item.currentWR ? `<div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:0.8em;color:var(--text-muted);margin-bottom:0.3rem">Current WR</div><div style="font-size:1.6em;font-weight:900;font-family:monospace;color:var(--accent)">${escapeHtml(item.currentWR)}</div></div>` : ''}${item.firstKnownRun ? `<div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:0.8em;color:var(--text-muted);margin-bottom:0.3rem">First Known Run</div><div style="font-size:1.6em;font-weight:900;font-family:monospace;color:var(--text-muted)">${escapeHtml(item.firstKnownRun)}</div></div>` : ''}</div><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${techniques ? `<div class="dev-notable"><strong>Famous Techniques:</strong><ul class="trivia-list">${techniques}</ul></div>` : ''}${runners ? `<div class="dev-notable"><strong>Notable Runners:</strong><ul class="trivia-list">${runners}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.game)} Speedrun – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('speedruns')}<div class="platform-detail-wrapper"><a href="/speedruns" class="back-link">&#8592; All Speedruns</a><div class="platform-detail-header"><h1>${escapeHtml(item.game)}</h1><p class="platform-detail-era">${escapeHtml(item.platform)} &middot; ${escapeHtml(item.category)} &middot; ${item.year}</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0">${item.currentWR ? `<div style="background:var(--surface-1);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:0.8em;color:var(--text-muted);margin-bottom:0.3rem">Current WR</div><div style="font-size:1.6em;font-weight:900;font-family:monospace;color:var(--accent)">${escapeHtml(item.currentWR)}</div></div>` : ''}${item.firstKnownRun ? `<div style="background:var(--surface-1);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:0.8em;color:var(--text-muted);margin-bottom:0.3rem">First Known Run</div><div style="font-size:1.6em;font-weight:900;font-family:monospace;color:var(--text-muted)">${escapeHtml(item.firstKnownRun)}</div></div>` : ''}</div><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${techniques ? `<div class="dev-notable"><strong>Famous Techniques:</strong><ul class="trivia-list">${techniques}</ul></div>` : ''}${runners ? `<div class="dev-notable"><strong>Notable Runners:</strong><ul class="trivia-list">${runners}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
 }
 
 function criticsListPage() {
@@ -6503,15 +5618,17 @@ ${toggleScript()}</body></html>`;
 }
 
 function bookmarksPage() {
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Bookmarks – Bosnan</title><meta name="description" content="Your saved games, essays, and articles."><meta name="robots" content="noindex, follow"><style>h1,h2{font-family:inherit}.bm-card{display:block;background:rgba(255,255,255,0.04);border-radius:8px;padding:1rem 1.2rem;margin-bottom:0.8rem;text-decoration:none;color:inherit;border:1px solid var(--border)}.bm-card:hover{border-color:var(--accent)}.bm-type{font-size:var(--fs-xs);color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.3rem}.bm-title{font-weight:700}.bm-remove{float:right;background:none;border:none;color:var(--text-faint);cursor:pointer;font-size:1.2em;padding:0}</style>${cssHead()}</head><body>${bgLogo()}${nav('bookmarks')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Bookmarks</h1><p class="essay-subtitle">Your saved items</p></div><div id="bmList"><p style="color:var(--text-muted)">No bookmarks yet — click the Save button on any game or article page.</p></div></div>
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Bookmarks – Bosnan</title><meta name="description" content="Your saved games, essays, and articles."><meta name="robots" content="noindex, follow"><style>h1,h2{font-family:inherit}.bm-card{display:block;background:var(--surface-1);border-radius:8px;padding:1rem 1.2rem;margin-bottom:0.8rem;text-decoration:none;color:inherit;border:1px solid var(--border)}.bm-card:hover{border-color:var(--accent)}.bm-type{font-size:var(--fs-xs);color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.3rem}.bm-title{font-weight:700}.bm-remove{float:right;background:none;border:none;color:var(--text-faint);cursor:pointer;font-size:1.2em;padding:0}</style>${cssHead()}</head><body>${bgLogo()}${nav('bookmarks')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Bookmarks</h1><p class="essay-subtitle">Your saved items</p></div><div id="bmList"><p style="color:var(--text-muted)">No bookmarks yet — click the Save button on any game or article page.</p></div></div>
 <script>
 const k='bosnan_bm';
 function bms(){try{return JSON.parse(localStorage.getItem(k)||'[]');}catch(e){return[];}}
-function remove(id){const list=bms().filter(b=>b.id!==id);localStorage.setItem(k,JSON.stringify(list));render();}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function remove(id){const list=bms().filter(b=>b.id!==id);try{localStorage.setItem(k,JSON.stringify(list));}catch(e){}render();}
+document.addEventListener('click',e=>{const b=e.target.closest('.bm-remove');if(b)remove(b.dataset.id);});
 function render(){
   const list=bms();const el=document.getElementById('bmList');
   if(!list.length){el.innerHTML='<p style="color:var(--text-muted)">No bookmarks yet — click the Save button on any game or article page.</p>';return;}
-  el.innerHTML=list.map(b=>'<div class="bm-card"><div style="display:flex;justify-content:space-between;align-items:start"><div><div class="bm-type">'+b.type+'</div><a href="/'+b.type.toLowerCase().replace(/ /g,'-')+'s/'+b.id+'" class="bm-title">'+b.title+'</a></div><button class="bm-remove" onclick="remove(\''+b.id+'\')">&#10005;</button></div></div>').join('');
+  el.innerHTML=list.map(b=>'<div class="bm-card"><div style="display:flex;justify-content:space-between;align-items:start"><div><div class="bm-type">'+esc(b.type)+'</div><a href="/'+encodeURIComponent(String(b.type).toLowerCase().replace(/ /g,'-'))+'s/'+encodeURIComponent(b.id)+'" class="bm-title">'+esc(b.title)+'</a></div><button class="bm-remove" data-id="'+esc(b.id)+'" aria-label="Remove '+esc(b.title)+'">&#10005;</button></div></div>').join('');
 }
 render();
 </script>
@@ -6528,7 +5645,7 @@ function controversiesListPage() {
 }
 
 function controversyDetailPage(item) {
-  const gamesHtml = (item.games || []).map(g => `<span style="background:rgba(255,255,255,0.08);border-radius:3px;padding:0.2rem 0.5rem;font-size:0.85em">${escapeHtml(g)}</span>`).join(' ');
+  const gamesHtml = (item.games || []).map(g => `<span style="background:var(--surface-2);border-radius:3px;padding:0.2rem 0.5rem;font-size:0.85em">${escapeHtml(g)}</span>`).join(' ');
   const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
   const sectionsHtml = (item.sections || []).map(s => `<div class="essay-section"><h2>${escapeHtml(s.title)}</h2>${s.html}</div>`).join('');
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.title)} – Controversies – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('controversies')}<div class="essay-wrapper"><a href="/controversies" class="back-link">&#8592; All Controversies</a><div class="essay-header"><div class="essay-meta">${item.year} &middot; ${escapeHtml(item.era)}</div><h1 class="essay-title">${escapeHtml(item.title)}</h1><p class="essay-subtitle">${escapeHtml(item.description)}</p>${gamesHtml ? `<div style="margin-top:0.8rem;display:flex;gap:0.4rem;flex-wrap:wrap">${gamesHtml}</div>` : ''}</div>${sectionsHtml}${item.outcome ? `<div class="essay-section"><h2>Outcome</h2><p>${escapeHtml(item.outcome)}</p></div>` : ''}${facts ? `<div class="essay-section"><h2>Key Facts</h2><ul class="trivia-list">${facts}</ul></div>` : ''}${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
@@ -6648,10 +5765,10 @@ function quizPage() {
   }
   const questions = pool.sort(() => Math.random() - 0.5).slice(0, 10).map((item, i) => {
     const choices = [...item.distractors, item.a].sort(() => Math.random() - 0.5);
-    const btns = choices.map(c => `<button onclick="answer(this,'${escapeHtml(item.a.replace(/'/g, "\\'"))}','${escapeHtml(c.replace(/'/g, "\\'"))}')" style="display:block;width:100%;text-align:left;background:rgba(255,255,255,0.06);border:1px solid var(--border-strong);color:var(--text);padding:0.7rem 1rem;border-radius:5px;cursor:pointer;font-size:0.95em;margin-bottom:0.4rem">${escapeHtml(c)}</button>`).join('');
+    const btns = choices.map(c => `<button onclick="answer(this,'${escapeHtml(item.a.replace(/'/g, "\\'"))}','${escapeHtml(c.replace(/'/g, "\\'"))}')" style="display:block;width:100%;text-align:left;background:var(--surface-2);border:1px solid var(--border-strong);color:var(--text);padding:0.7rem 1rem;border-radius:5px;cursor:pointer;font-size:0.95em;margin-bottom:0.4rem">${escapeHtml(c)}</button>`).join('');
     return `<div class="quiz-question" id="q${i}" style="display:${i === 0 ? 'block' : 'none'};margin-bottom:1rem"><p style="font-size:1.1em;margin-bottom:1rem">${i + 1}/10 &mdash; ${item.q}</p>${btns}</div>`;
   }).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Trivia Quiz – Bosnan</title><meta name="description" content="Ten randomised trivia questions on classic games, consoles and the people who made them, drawn from the Bosnan retro archive. New questions every visit."><style>h1,h2{font-family:inherit}.quiz-btn-correct{background:rgba(76,175,80,0.3)!important;border-color:#4caf50!important}.quiz-btn-wrong{background:rgba(244,67,54,0.3)!important;border-color:#f44336!important}</style>${cssHead()}</head><body>${bgLogo()}${nav('quiz')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Trivia Quiz</h1><p class="essay-subtitle">10 random questions from the archive — refreshes each visit</p></div><div id="score" style="font-size:1.1em;margin-bottom:1.5rem;color:var(--text-muted)">Score: <span id="scoreVal">0</span> / <span id="total">0</span></div>${questions}<div id="result" style="display:none;margin-top:2rem;text-align:center"><h2 id="resultMsg"></h2><a href="/quiz" style="display:inline-block;margin-top:1rem;background:var(--accent);color:#000;padding:0.6rem 1.5rem;border-radius:5px;font-weight:700;text-decoration:none">Play Again</a></div></div><script>let cur=0,score=0,answered=false;function answer(btn,correct,chosen){if(answered)return;answered=true;const btns=btn.parentElement.querySelectorAll('button');btns.forEach(b=>{b.disabled=true;if(b.textContent.trim()===correct)b.classList.add('quiz-btn-correct');});if(chosen===correct){score++;btn.classList.add('quiz-btn-correct');}else{btn.classList.add('quiz-btn-wrong');}document.getElementById('scoreVal').textContent=score;document.getElementById('total').textContent=cur+1;setTimeout(()=>nextQ(),900);}function nextQ(){const qs=document.querySelectorAll('.quiz-question');if(cur<qs.length-1){qs[cur].style.display='none';cur++;qs[cur].style.display='block';answered=false;}else{document.querySelectorAll('.quiz-question').forEach(q=>q.style.display='none');const r=document.getElementById('result');r.style.display='block';const pct=Math.round(score/qs.length*100);document.getElementById('resultMsg').textContent=score+'/'+qs.length+' — '+pct+'%';}}</script>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Trivia Quiz – Bosnan</title><meta name="description" content="Ten randomised trivia questions on classic games, consoles and the people who made them, drawn from the Bosnan retro archive. New questions every visit."><style>h1,h2{font-family:inherit}.quiz-btn-correct{background:rgba(76,175,80,0.3)!important;border-color:#4caf50!important}.quiz-btn-wrong{background:rgba(244,67,54,0.3)!important;border-color:#f44336!important}</style>${cssHead()}</head><body>${bgLogo()}${nav('quiz')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Trivia Quiz</h1><p class="essay-subtitle">10 random questions from the archive — refreshes each visit</p></div><div id="score" style="font-size:1.1em;margin-bottom:1.5rem;color:var(--text-muted)">Score: <span id="scoreVal">0</span> / <span id="total">0</span></div>${questions}<div id="result" style="display:none;margin-top:2rem;text-align:center"><h2 id="resultMsg"></h2><a href="/quiz" style="display:inline-block;margin-top:1rem;background:var(--accent);color:var(--on-accent);padding:0.6rem 1.5rem;border-radius:5px;font-weight:700;text-decoration:none">Play Again</a></div></div><script>let cur=0,score=0,answered=false;function answer(btn,correct,chosen){if(answered)return;answered=true;const btns=btn.parentElement.querySelectorAll('button');btns.forEach(b=>{b.disabled=true;if(b.textContent.trim()===correct)b.classList.add('quiz-btn-correct');});if(chosen===correct){score++;btn.classList.add('quiz-btn-correct');}else{btn.classList.add('quiz-btn-wrong');}document.getElementById('scoreVal').textContent=score;document.getElementById('total').textContent=cur+1;setTimeout(()=>nextQ(),900);}function nextQ(){const qs=document.querySelectorAll('.quiz-question');if(cur<qs.length-1){qs[cur].style.display='none';cur++;qs[cur].style.display='block';answered=false;}else{document.querySelectorAll('.quiz-question').forEach(q=>q.style.display='none');const r=document.getElementById('result');r.style.display='block';const pct=Math.round(score/qs.length*100);document.getElementById('resultMsg').textContent=score+'/'+qs.length+' — '+pct+'%';}}</script>${toggleScript()}</body></html>`;
 }
 
 function onThisDayPage() {
@@ -6740,7 +5857,7 @@ function studioMapPage() {
   ${dots}
 </svg></div>
 <div id="studioInfo" style="display:none;background:var(--accent-soft);border:1px solid var(--accent);border-radius:8px;padding:1.2rem 1.5rem;margin-bottom:1.5rem"><h2 id="studioName" style="margin:0 0 0.3rem"></h2><div id="studioCity" style="color:var(--text-muted);font-size:0.9em;margin-bottom:0.5rem"></div><p id="studioDesc" style="margin:0;color:var(--text-secondary)"></p></div>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.8rem">${studios.map((s, i) => `<div onclick="showStudio(${i})" style="background:rgba(255,255,255,0.04);border-radius:6px;padding:0.7rem 1rem;cursor:pointer;border:1px solid transparent" id="scard${i}"><div style="font-weight:600;font-size:0.9em">${escapeHtml(s.name)}</div><div style="color:var(--text-muted);font-size:0.8em">${escapeHtml(s.city)}</div></div>`).join('')}</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.8rem">${studios.map((s, i) => `<div onclick="showStudio(${i})" style="background:var(--surface-1);border-radius:6px;padding:0.7rem 1rem;cursor:pointer;border:1px solid transparent" id="scard${i}"><div style="font-weight:600;font-size:0.9em">${escapeHtml(s.name)}</div><div style="color:var(--text-muted);font-size:0.8em">${escapeHtml(s.city)}</div></div>`).join('')}</div>
 </div>
 <script>const studios=${studioData};function showStudio(i){const s=studios[i];document.getElementById('studioInfo').style.display='block';document.getElementById('studioName').textContent=s.name;document.getElementById('studioCity').textContent=s.city;document.getElementById('studioDesc').textContent=s.desc;document.querySelectorAll('[id^="scard"]').forEach(el=>el.style.borderColor='transparent');document.getElementById('scard'+i).style.borderColor='var(--accent)';}</script>
 ${toggleScript()}</body></html>`;
@@ -6787,7 +5904,7 @@ function portsListPage() {
 
 function portDetailPage(port) {
   const qualityColor = { 'Excellent': '#a5d6a7', 'Good': '#c5e1a5', 'Acceptable': '#ffe082', 'Poor': '#ffab91', 'Infamous': '#ef9a9a' };
-  const versionsHtml = (port.versions || []).map(v => `<div style="background:rgba(255,255,255,0.04);border-radius:6px;padding:1rem 1.2rem;margin-bottom:0.8rem"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem"><strong>${escapeHtml(v.platform)} (${v.year})</strong><span style="background:${qualityColor[v.quality] || 'var(--text-muted)'};color:#000;padding:0.2rem 0.6rem;border-radius:3px;font-size:var(--fs-xs);font-weight:700">${escapeHtml(v.quality)}</span></div><p style="color:var(--text-secondary);font-size:0.9em;line-height:1.6;margin:0">${escapeHtml(v.notes)}</p></div>`).join('');
+  const versionsHtml = (port.versions || []).map(v => `<div style="background:var(--surface-1);border-radius:6px;padding:1rem 1.2rem;margin-bottom:0.8rem"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem"><strong>${escapeHtml(v.platform)} (${v.year})</strong><span style="background:${qualityColor[v.quality] || 'var(--text-muted)'};color:var(--on-accent);padding:0.2rem 0.6rem;border-radius:3px;font-size:var(--fs-xs);font-weight:700">${escapeHtml(v.quality)}</span></div><p style="color:var(--text-secondary);font-size:0.9em;line-height:1.6;margin:0">${escapeHtml(v.notes)}</p></div>`).join('');
   const facts = (port.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(port.title)} – Port Comparisons – Bosnan</title><meta name="description" content="${metaDesc(port.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('ports')}<div class="platform-detail-wrapper"><a href="/ports" class="back-link">&#8592; All Port Comparisons</a><div class="platform-detail-header"><h1>${escapeHtml(port.title)}</h1><p class="platform-detail-era">Original: ${escapeHtml(port.originalPlatform)} &middot; ${port.year}</p><p class="platform-detail-desc">${escapeHtml(port.description)}</p><p class="platform-detail-desc">${escapeHtml(port.longDescription)}</p><h2 style="margin-top:1.5rem;margin-bottom:1rem">Version Breakdown</h2>${versionsHtml}${facts ? `<div class="dev-notable" style="margin-top:1rem"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
 }
@@ -6861,11 +5978,11 @@ function statsPage() {
   const byDecade = {};
   for (const g of games) { byDecade[g.decade] = (byDecade[g.decade] || 0) + 1; }
   const playable = games.filter(g => g.playUrl).length;
-  const statCard = (label, value, sub = '') => `<div style="background:rgba(255,255,255,0.05);border-radius:8px;padding:1.2rem 1.5rem;text-align:center"><div style="font-size:2.5em;font-weight:900;color:var(--accent)">${value}</div><div style="font-weight:600;margin-top:0.3rem">${label}</div>${sub ? `<div style="font-size:0.85em;color:var(--text-muted);margin-top:0.2rem">${sub}</div>` : ''}</div>`;
+  const statCard = (label, value, sub = '') => `<div style="background:var(--surface-1);border-radius:8px;padding:1.2rem 1.5rem;text-align:center"><div style="font-size:2.5em;font-weight:900;color:var(--accent)">${value}</div><div style="font-weight:600;margin-top:0.3rem">${label}</div>${sub ? `<div style="font-size:0.85em;color:var(--text-muted);margin-top:0.2rem">${sub}</div>` : ''}</div>`;
   const barRow = (label, count, max) => `<div style="display:grid;grid-template-columns:160px 1fr 2.5rem;gap:0.8rem;align-items:center;margin-bottom:0.5rem"><span style="font-size:0.9em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${escapeHtml(label)}</span><div style="background:var(--surface-3);border-radius:3px;height:8px;overflow:hidden"><div style="background:var(--accent);height:100%;width:${Math.round(count / max * 100)}%"></div></div><span style="font-size:0.85em;color:var(--text-muted);text-align:right">${count}</span></div>`;
   const totalEssays = ESSAYS.length;
   const totalSections = [PLATFORMS, DEVELOPERS, COMPOSERS, DESIGNERS, PUBLISHERS, ARCADE_BOARDS, PERIPHERALS, LOST_GAMES, MAGAZINES, BOX_ART, PORTS, VOICE_ACTORS, PIXEL_ARTISTS, PRODUCERS, COLLECTIONS, GENRES, FRANCHISES, HARDWARE, REGIONAL].reduce((s, a) => s + a.length, 0);
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Archive Stats – Bosnan</title><meta name="description" content="How the Bosnan retro archive breaks down: games per platform, genre and decade, plus totals for essays, playable titles and reference sections."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('stats')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Archive Stats</h1><p class="essay-subtitle">By the numbers</p></div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin-bottom:2.5rem">${statCard('Games', games.length)}${statCard('Platforms', PLATFORMS.length)}${statCard('Essays', totalEssays)}${statCard('Playable', playable, 'with play link')}${statCard('Sections', totalSections, 'profiles & articles')}</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;flex-wrap:wrap"><div><h2 style="margin-bottom:1rem">Top Platforms</h2>${topPlatforms.map(([p, c]) => barRow(p, c, topPlatforms[0][1])).join('')}</div><div><h2 style="margin-bottom:1rem">Top Genres</h2>${topGenres.map(([g, c]) => barRow(g, c, topGenres[0][1])).join('')}</div></div><div style="margin-top:2rem"><h2 style="margin-bottom:1rem">By Decade</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:0.8rem">${Object.entries(byDecade).sort().map(([d, c]) => `<div style="background:rgba(255,255,255,0.05);border-radius:6px;padding:0.8rem 1rem;text-align:center"><div style="font-size:1.3em;font-weight:700;color:var(--accent)">${c}</div><div style="font-size:0.85em">${escapeHtml(d)}</div></div>`).join('')}</div></div></div>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Archive Stats – Bosnan</title><meta name="description" content="How the Bosnan retro archive breaks down: games per platform, genre and decade, plus totals for essays, playable titles and reference sections."><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('stats')}<div class="essay-wrapper"><div class="essay-header"><h1 class="essay-title">Archive Stats</h1><p class="essay-subtitle">By the numbers</p></div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin-bottom:2.5rem">${statCard('Games', games.length)}${statCard('Platforms', PLATFORMS.length)}${statCard('Essays', totalEssays)}${statCard('Playable', playable, 'with play link')}${statCard('Sections', totalSections, 'profiles & articles')}</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;flex-wrap:wrap"><div><h2 style="margin-bottom:1rem">Top Platforms</h2>${topPlatforms.map(([p, c]) => barRow(p, c, topPlatforms[0][1])).join('')}</div><div><h2 style="margin-bottom:1rem">Top Genres</h2>${topGenres.map(([g, c]) => barRow(g, c, topGenres[0][1])).join('')}</div></div><div style="margin-top:2rem"><h2 style="margin-bottom:1rem">By Decade</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:0.8rem">${Object.entries(byDecade).sort().map(([d, c]) => `<div style="background:var(--surface-1);border-radius:6px;padding:0.8rem 1rem;text-align:center"><div style="font-size:1.3em;font-weight:700;color:var(--accent)">${c}</div><div style="font-size:0.85em">${escapeHtml(d)}</div></div>`).join('')}</div></div></div>${toggleScript()}</body></html>`;
 }
 
 function recentPage() {
@@ -7427,8 +6544,7 @@ ${nav('')}
     <h2 class="notfound-suggest-label">While you're here:</h2>
     <a href="/games/${escapeHtml(rg.id)}" class="game-card notfound-card">
       <div class="game-card-img-wrap">
-        <img src="/${escapeHtml(rg.image)}" alt="${escapeHtml(rg.title)}" loading="lazy"
-             onerror="this.parentElement.innerHTML='<div class=\\'game-card-placeholder\\'>${escapeHtml(rg.title[0])}</div>'">
+        ${cardImage(rg, 'loading="lazy"')}
         <div class="game-card-decade">${escapeHtml(rg.decade)}</div>
       </div>
       <div class="game-card-body">
