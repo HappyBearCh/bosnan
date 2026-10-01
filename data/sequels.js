@@ -20,7 +20,7 @@ module.exports = [
     ],
     keyFacts: [
       'SMB3 sold 17 million copies worldwide on the NES — extraordinary for the hardware generation',
-      'The game appeared in The Wizard (1989) before its Japanese release, creating enormous US anticipation',
+      'The game appeared in The Wizard (1989) before its North American release, creating enormous US anticipation',
       'Development took two years with a team substantially larger than the original game',
       'The P-Wing power-up allowed players to fly through entire levels — criticised as too easy by some',
     ],
@@ -47,7 +47,7 @@ module.exports = [
     longDescription: 'After Zelda II\'s divisive side-scrolling experiment, A Link to the Past returned to overhead exploration and defined the series\' template for the following two decades. The dual-world mechanic — a Light World and Dark World with mirrored geography — doubled the effective map size and created puzzles built on the contrast between states. The game also established the series\' tone: a fairy tale gravity that balanced wonder with genuine stakes.',
     changedWhat: [
       'Dual-world system (Light World / Dark World) that mirrors and contrasts geography',
-      'Seven dungeons per world — fourteen total — vastly expanding the scope',
+      'Three Light World and eight Dark World dungeons, plus Hyrule Castle and Agahnim\'s Tower, vastly expanding the scope',
       'Master Sword as a narrative centrepiece requiring a quest to obtain',
       'Third-person narrative structure following Zelda\'s kidnapping and Link\'s awakening',
       'Map showing explored and unexplored territory in real time',
@@ -74,19 +74,19 @@ module.exports = [
     id: 'castlevania-symphony-of-the-night',
     title: 'Castlevania: Symphony of the Night',
     series: 'Castlevania',
-    original: 'Super Castlevania IV',
+    original: 'Castlevania: Rondo of Blood',
     platform: 'PlayStation',
     year: 1997,
     era: '1990s',
     description: 'Symphony of the Night replaced Castlevania\'s linear whip-and-platformer structure with a non-linear RPG built around exploration, stats, and a sprawling interconnected castle that doubled in size mid-game.',
-    longDescription: 'Every Castlevania before Symphony followed a fixed left-to-right progression: stages, bosses, repeat. Symphony discarded this for a Metroid-style interconnected map where new abilities unlocked previously inaccessible areas. It added RPG statistics — level, experience, equipment — and a massive item system. Most dramatically, completing what appeared to be the final boss revealed an inverted castle: the entire map reflected vertically, providing a second half of equal size.',
+    longDescription: 'Almost every Castlevania before Symphony — Simon\'s Quest being the main exception — followed a fixed stage-by-stage progression: stages, bosses, repeat. Symphony discarded this for a Metroid-style interconnected map where new abilities unlocked previously inaccessible areas. It added RPG statistics — level, experience, equipment — and a massive item system. Most dramatically, completing what appeared to be the final boss revealed an inverted castle: the entire map reflected vertically, providing a second half of equal size.',
     changedWhat: [
       'Non-linear castle exploration replacing stage-by-stage progression',
       'RPG level and experience system affecting player stats and damage',
       'Equipment system with hundreds of weapons, armour, and accessories',
       'Inverted castle revealing a second complete map upon apparent completion',
       'Alucard\'s transformation abilities (bat, wolf, mist) gating new areas',
-      'Familiars and sub-weapons replaced with equipped relics',
+      'Familiars and abilities gained through collectible relics, alongside the traditional sub-weapons',
     ],
     keyFacts: [
       'SotN coined the term "Metroidvania" — or at least cemented the genre it names',
@@ -101,7 +101,7 @@ module.exports = [
       },
       {
         title: 'The Inverted Castle',
-        html: '<p>Defeating Richter Belmont — the apparent final boss — ends the game with a bad ending if you trigger it directly. The true path involves acquiring Marias\'s glasses and using them at the moment of confrontation, revealing Shaft\'s control over Richter. This leads to a confrontation with Dracula and then — if the player has certain relics equipped — an unlocking of the inverted castle. Every room in the castle is reflected vertically, creating a new layout with new enemies, new areas, and four additional bosses.</p><p>The inverted castle was a revelation in 1997. It effectively doubled the game\'s scope at the moment when most games would have ended. Players who had spent 15 hours exploring found themselves with another 10 hours of content. The sheer audacity of the reveal — a complete second map — set a precedent for hidden content that developers are still working in reference to.</p>',
+        html: '<p>Reaching Richter Belmont, the apparent final boss, without preparation leads to a bad ending. The true path requires Alucard to wear the Holy Glasses during the fight, revealing that Richter is being controlled by the dark priest Shaft. Freeing Richter causes an inverted copy of the castle to appear, and the real ending lies at its end, in a final battle with Dracula.</p><p>Every room of the original castle is reflected upside down, with tougher enemies and a new set of bosses guarding the scattered remains of Dracula. The inverted castle was a revelation in 1997: it effectively doubled the game\'s scope at the moment most games would have ended, and set a precedent for hidden content that developers still reference.</p>',
       },
     ],
   },
@@ -136,7 +136,7 @@ module.exports = [
       },
       {
         title: 'Movement and Mastery',
-        html: '<p>Samus\'s physics in Super Metroid reward mastery in ways that progressively reveal themselves. The wall-jump requires frame-perfect input timing. The speed-booster and shinespark allow crossing gaps and reaching areas that seem inaccessible. Space-jumping — chaining jumps indefinitely in the air — has a timing window that makes it feel like a skill rather than an ability you simply have.</p><p>This movement system is why Super Metroid\'s speedrunning community has remained active for thirty years. The gap between knowing the game and mastering it is substantial; the tools for mastery are present from the beginning, waiting to be understood rather than unlocked. Few games have built a movement system with this level of technical depth hidden within apparent simplicity.</p>',
+        html: '<p>Samus\'s physics in Super Metroid reward mastery in ways that progressively reveal themselves. The wall-jump requires precise input timing. The speed-booster and shinespark allow crossing gaps and reaching areas that seem inaccessible. Space-jumping — chaining jumps indefinitely in the air — has a timing window that makes it feel like a skill rather than an ability you simply have.</p><p>This movement system is why Super Metroid\'s speedrunning community has remained active for thirty years. The gap between knowing the game and mastering it is substantial; the tools for mastery are present from the beginning, waiting to be understood rather than unlocked. Few games have built a movement system with this level of technical depth hidden within apparent simplicity.</p>',
       },
     ],
   },
@@ -149,7 +149,7 @@ module.exports = [
     year: 1988,
     era: '1980s',
     description: 'Mega Man 2 refined the original\'s concept into a near-perfect action-platformer, setting the template for the series\' classic era with eight robot masters, balanced weapons, and iconic level design.',
-    longDescription: 'The original Mega Man was commercially underwhelming; Capcom only approved the sequel because director Keiji Inafune and his team developed it as a side project. Mega Man 2 doubled the robot master count to eight, improved the weapon balance (each boss\'s weakness felt fair and discoverable), and created level designs that became touchstones of the NES library. Quick Man\'s laser corridor, Wood Man\'s falling leaves, and Metal Man\'s conveyor belts remain discussed and referenced in game design education.',
+    longDescription: 'The original Mega Man was commercially underwhelming; Capcom only approved the sequel because director Akira Kitamura and his team, including artist Keiji Inafune, developed it as a side project. Mega Man 2 doubled the robot master count to eight, improved the weapon balance (each boss\'s weakness felt fair and discoverable), and created level designs that became touchstones of the NES library. Quick Man\'s laser corridor, Wood Man\'s falling leaves, and Metal Man\'s conveyor belts remain discussed and referenced in game design education.',
     changedWhat: [
       'Eight robot masters instead of six, expanding scope and variety',
       'Energy tanks — refillable health reserves the player could collect and deploy',
@@ -159,7 +159,7 @@ module.exports = [
       'Refined weapon balance making weaknesses discoverable without being trivial',
     ],
     keyFacts: [
-      'Mega Man 2 sold over 1.5 million copies in Japan alone — an order of magnitude more than the original',
+      'Mega Man 2 sold over 1.5 million copies worldwide, far more than the original',
       'The development team worked on the game without official approval, completing it as a passion project',
       'The game\'s music — by Takashi Tateishi — is among the most discussed NES soundtracks',
       'Metal Man\'s boomerang weapon is so powerful it can defeat Metal Man himself — an oversight left in the final game',
@@ -180,17 +180,17 @@ module.exports = [
     year: 1991,
     era: '1990s',
     description: 'Street Fighter II invented the competitive fighting game genre as it exists today: six attack buttons, a roster of distinct characters with unique move sets, frame data that rewards mastery, and a competitive ecosystem that has persisted for three decades.',
-    longDescription: 'The original Street Fighter had one playable character and two buttons. Street Fighter II introduced eight fully distinct fighters — each with different normals, specials, throws, and approach strategies — across a six-button layout that created a combinatorial space of inputs deep enough to support professional competition. The game\'s underlying frame data (how many frames each move occupied, advantageous and disadvantageous states, recovery frames) was intuitable from play and rewarded deep study.',
+    longDescription: 'The original Street Fighter let players control only Ryu (and Ken as the second player). Street Fighter II introduced eight fully distinct fighters — each with different normals, specials, throws, and approach strategies — across a six-button layout that created a combinatorial space of inputs deep enough to support professional competition. The game\'s underlying frame data (how many frames each move occupied, advantageous and disadvantageous states, recovery frames) was intuitable from play and rewarded deep study.',
     changedWhat: [
       'Eight distinct playable characters with unique move sets, normals, and approaches',
-      'Six-button layout (three punches, three kicks) creating input combinations',
+      'Refined the six-button layout (three punches, three kicks) introduced by the original',
       'Charge inputs and rotational special moves establishing the dominant input vocabulary',
       'Competitive metagame built on frame data, matchups, and character selection',
       'International stage variety giving each character a cultural identity',
       'Two-player simultaneous competitive play as the primary experience',
     ],
     keyFacts: [
-      'Street Fighter II grossed over $2 billion in quarters in US arcades by 1992',
+      'Street Fighter II grossed over $2 billion in arcades within its first few years',
       'The SNES port sold 6.3 million copies — the best-selling third-party SNES game',
       'The game spawned a genre: Mortal Kombat, Killer Instinct, King of Fighters, Tekken, and Soul Blade all follow its model',
       'The competitive community is still active: Evo and other events feature SF2 derivatives in 2024',
@@ -224,7 +224,7 @@ module.exports = [
       'Final Fantasy IV was the first Final Fantasy on SNES, released in Japan in 1991',
       'The US release (Final Fantasy II) removed difficulty features and some content for the Western market',
       'Rydia\'s character arc — child to adult — across the game was unprecedented in JRPGs',
-      'The ATB system, designed by Hiroyuki Ito, remained the series standard through Final Fantasy X',
+      'The ATB system, designed by Hiroyuki Ito, remained the series standard through Final Fantasy IX',
     ],
     sections: [
       {
@@ -280,7 +280,7 @@ module.exports = [
       'Revenant: skeletal demon firing homing missiles, requiring movement and positioning',
       'Pain Elemental: spawns Lost Souls on death, punishing prolonged combat',
       'Larger maps with more complex architecture and multiple routes',
-      'Single episode (30 maps) replacing the three-episode structure',
+      'A single continuous campaign of 32 maps (30 regular plus two secret levels) replacing the three-episode structure',
     ],
     keyFacts: [
       'Doom II sold as a retail product rather than shareware, reflecting Doom\'s commercial establishment',
@@ -291,7 +291,7 @@ module.exports = [
     sections: [
       {
         title: 'The Super Shotgun',
-        html: '<p>The Super Shotgun is a double-barrelled gun with a reload animation — two shells expended, a break-open reload, two new shells. Its damage output at close range is extraordinary; in the hands of a skilled player it becomes the primary clearing tool for most enemy types. The weapon rewards aggressive forward movement: getting close enough to use it effectively requires reading enemy attack patterns and exploiting the brief window before they fire.</p><p>id Software\'s Sandy Petersen, who designed many of Doom II\'s maps and enemy types, has said in interviews that the Super Shotgun changed how the entire game was designed. Rooms could be smaller, encounters could be more intense, and the weapon created a feedback loop that rewarded mastery rather than distance. It remains one of the most celebrated individual weapon designs in shooter history.</p>',
+        html: '<p>The Super Shotgun is a double-barrelled gun with a reload animation — two shells expended, a break-open reload, two new shells. Its damage output at close range is extraordinary; in the hands of a skilled player it becomes the primary clearing tool for most enemy types. The weapon rewards aggressive forward movement: getting close enough to use it effectively requires reading enemy attack patterns and exploiting the brief window before they fire.</p><p>Rooms could be smaller, encounters could be more intense, and the weapon created a feedback loop that rewarded mastery rather than distance. It remains one of the most celebrated individual weapon designs in shooter history.</p>',
       },
     ],
   },
@@ -308,16 +308,16 @@ module.exports = [
     changedWhat: [
       'Dixie Kong\'s helicopter spin providing aerial control and a genuine skill ceiling',
       'Wider level variety: roller coasters, brambles, haunted ships, stormy seas',
-      'Expanded animal buddy roster with Squawks (carrying a lantern), Rattly, Squitter',
+      'Expanded animal buddy roster with Squawks (now carrying the Kongs and spitting eggs), Rattly, Squitter',
       'Harder difficulty throughout with more precise platforming demands',
       'David Wise\'s soundtrack — a significant compositional leap from the original',
       'Kremkoin collectible system with a bonus world requiring all collectibles',
     ],
     keyFacts: [
-      'DKC2 sold 5.15 million copies, making it the fifth best-selling SNES game',
+      'DKC2 sold 5.15 million copies, making it one of the best-selling SNES games',
       'David Wise\'s soundtrack is frequently cited as among the greatest in platformer history',
       'Rare completed the game in approximately one year of development',
-      'The "Funky\'s Rentals" level gives access to Funky Kong who acts as a map screen assistant',
+      'Funky\'s Flights lets players fly between worlds they have already visited',
     ],
     sections: [
       {
@@ -377,7 +377,7 @@ module.exports = [
     ],
     keyFacts: [
       'Final Fantasy VII sold 9.8 million copies worldwide — more than the previous six games combined in the West',
-      'The game\'s reveal trailer at E3 1996 was a PlayStation marketing centrepiece',
+      'Its showing at E3 1996 was a PlayStation marketing centrepiece',
       'Aerith\'s death generated more discussion about JRPG storytelling than any previous moment in the genre',
       'Cloud Strife became the recognisable face of the Final Fantasy series and RPGs generally in Western popular culture',
     ],
@@ -467,10 +467,10 @@ module.exports = [
     year: 2001,
     era: '128-bit',
     description: 'By dragging the series from a top-down 2D view into a fully realised 3D city, GTA III didn\'t just transform Grand Theft Auto — it invented the modern open-world game and set a template the industry still follows.',
-    longDescription: 'The first two Grand Theft Auto games were played from a top-down perspective, looking at Liberty City from above like a map. Grand Theft Auto III, developed by DMA Design and published by Rockstar Games in 2001, rebuilt that concept in three dimensions, and the change was not merely cosmetic. As the game\'s art director put it, "suddenly you were in this world, not above it." Placing the camera behind the player\'s shoulder, at street level, transformed a clever crime game into an inhabited place.\n\nThat shift unlocked everything the series is now known for. A dense, continuous city could be walked, driven, and explored without loading screens dividing it into pieces. Any vehicle on the road could be stolen and driven. Radio stations played as the player drove, giving the city a soundscape and a voice. Pedestrians reacted, police escalated, and a story-driven mission structure existed alongside the freedom to simply ignore it and cause chaos. The combination of a serious narrative spine with genuinely unconstrained free-roaming play was, in 2001, revelatory — players had never been handed a world this complete and told they could do whatever they liked in it.\n\nThe commercial results matched the ambition: GTA III became the highest-selling game of 2001 and the second-highest of 2002, a sensation that also ignited an enormous cultural and political backlash over its violence and content — controversy that only amplified its visibility. But its deeper significance was structural. The game effectively defined the open-world genre and set the stage for virtually every 3D open-world title that followed, from Rockstar\'s own sequels to the vast lineage of imitators and descendants across the industry.\n\nMore than two decades on, the influence remains inescapable. The template GTA III established — a coherent 3D city, seamless traversal, emergent chaos, and a story the player can pursue at their own pace — became the default architecture for an entire category of blockbuster games. It is one of the clearest cases in the medium of a sequel not merely improving on its predecessors but redefining what games in general could be, and the industry has been building on its example ever since.',
+    longDescription: 'The first two Grand Theft Auto games were played from a top-down perspective, looking at Liberty City from above like a map. Grand Theft Auto III, developed by DMA Design and published by Rockstar Games in 2001, rebuilt that concept in three dimensions, and the change was not merely cosmetic. As the game\'s art director put it, "suddenly you were in this world, not above it." Placing the camera behind the player\'s shoulder, at street level, transformed a clever crime game into an inhabited place.\n\nThat shift unlocked everything the series is now known for. A dense, continuous city could be walked, driven, and explored, with only brief loads between its three islands. Any vehicle on the road could be stolen and driven. Radio stations played as the player drove, giving the city a soundscape and a voice. Pedestrians reacted, police escalated, and a story-driven mission structure existed alongside the freedom to simply ignore it and cause chaos. The combination of a serious narrative spine with genuinely unconstrained free-roaming play was, in 2001, revelatory — players had never been handed a world this complete and told they could do whatever they liked in it.\n\nThe commercial results matched the ambition: GTA III became the highest-selling game of 2001 and the second-highest of 2002, a sensation that also ignited an enormous cultural and political backlash over its violence and content — controversy that only amplified its visibility. But its deeper significance was structural. The game effectively defined the open-world genre and set the stage for virtually every 3D open-world title that followed, from Rockstar\'s own sequels to the vast lineage of imitators and descendants across the industry.\n\nMore than two decades on, the influence remains inescapable. The template GTA III established — a coherent 3D city, seamless traversal, emergent chaos, and a story the player can pursue at their own pace — became the default architecture for an entire category of blockbuster games. It is one of the clearest cases in the medium of a sequel not merely improving on its predecessors but redefining what games in general could be, and the industry has been building on its example ever since.',
     changedWhat: [
       'Moved the series from a top-down 2D view into a fully 3D, street-level world',
-      'A dense, continuous city explorable without loading screens breaking it apart',
+      'A dense 3D city, with only brief loads between its three islands',
       'Any vehicle could be stolen and driven, with in-car radio stations giving the city a voice',
       'A story-driven mission structure coexisting with total freedom to ignore it',
       'Emergent chaos from reactive pedestrians and escalating police response',
@@ -485,7 +485,7 @@ module.exports = [
     sections: [
       {
         title: 'From Above It to In It',
-        html: '<p>The leap from top-down 2D to street-level 3D was the whole game. Grand Theft Auto\'s first two entries let players look down on Liberty City like a map; GTA III put them inside it, and as art director Aaron Garbut framed it, the player was suddenly in the world rather than above it. That single change made the city a place rather than a diagram — a continuous space to be driven and walked without loading screens, populated by stealable vehicles, reactive pedestrians, escalating police, and radio stations that gave the streets a soundtrack and a personality. The freedom felt genuinely unprecedented, and it turned a well-liked crime series into a phenomenon.</p>',
+        html: '<p>The leap from top-down 2D to street-level 3D was the whole game. Grand Theft Auto\'s first two entries let players look down on Liberty City like a map; GTA III put them inside it, and as art director Aaron Garbut framed it, the player was suddenly in the world rather than above it. That single change made the city a place rather than a diagram — a space to be driven and walked, broken only by brief loads between islands, populated by stealable vehicles, reactive pedestrians, escalating police, and radio stations that gave the streets a soundtrack and a personality. The freedom felt genuinely unprecedented, and it turned a well-liked crime series into a phenomenon.</p>',
       },
       {
         title: 'Inventing the Modern Open World',
@@ -502,18 +502,18 @@ module.exports = [
     year: 2000,
     era: '2000s',
     description: 'Diablo II took a game about descending one dungeon and turned it into a genre: skill trees, sockets, runes, item rarities, and mercenaries were all bolted onto the original\'s click-to-kill loop and became permanent fixtures of the action RPG.',
-    longDescription: 'The original Diablo was a single grim descent beneath a single town — sixteen floors, three classes, and a loop so compulsive it did not need much else. Diablo II kept the loop and rebuilt everything around it. The claustrophobic dungeon became four sprawling acts across deserts, jungles, and hells; three classes became five; and, most consequentially, character progression stopped being a matter of picking spells off a list. David Brevik conceived the skill tree — an idea he has said arrived in the shower, modelled on the tech trees of Civilization II — and it transformed a Diablo character from a set of numbers into a build, a set of deliberate commitments that made two Sorceresses play like different games. Around that sat an entire economy of loot: item quality tiers, sockets, gems, and runes that could be combined into rune words with specific properties, giving players reasons to keep killing long after the story ended. Mercenaries added a companion who levelled alongside you. Almost every one of these systems has since been copied so widely that they read as genre conventions rather than inventions, which is the clearest possible measure of what the sequel accomplished.',
+    longDescription: 'The original Diablo was a single grim descent beneath a single town — sixteen floors, three classes, and a loop so compulsive it did not need much else. Diablo II kept the loop and rebuilt everything around it. The claustrophobic dungeon became four sprawling acts across deserts, jungles, and hells; three classes became five; and, most consequentially, character progression stopped being a matter of picking spells off a list. David Brevik conceived the skill tree — an idea he has said arrived in the shower, modelled on the tech trees of Civilization II — and it transformed a Diablo character from a set of numbers into a build, a set of deliberate commitments that made two Sorceresses play like different games. Around that sat an entire economy of loot: item quality tiers, sockets and gems — joined in the 2001 Lord of Destruction expansion by runes that could be combined into rune words with specific properties — giving players reasons to keep killing long after the story ended. Mercenaries added a companion who levelled alongside you. Almost every one of these systems has since been copied so widely that they read as genre conventions rather than inventions, which is the clearest possible measure of what the sequel accomplished.',
     changedWhat: [
       'Skill trees replacing the original\'s flat spell list, making character builds a long-term commitment',
       'Four themed acts across varied outdoor environments rather than one continuous dungeon descent',
       'Item quality tiers, sockets, and gems creating a deep loot economy',
-      'Runes and rune words — specific rune combinations granting defined properties',
+      'Runes and rune words (added by the 2001 Lord of Destruction expansion) — specific rune combinations granting defined properties',
       'Hireable mercenaries who levelled and equipped alongside the player',
       'Five character classes, each with three distinct skill trees',
     ],
     keyFacts: [
       'David Brevik has said the skill tree idea came to him in the shower, inspired by Civilization II\'s tech trees',
-      'Introduced skill trees, sockets, gems, runes, item rarities, and mercenaries — now standard action-RPG furniture',
+      'Introduced skill trees, sockets, gems, item rarities, and mercenaries, with runes following in the expansion — now standard action-RPG furniture',
       'Traded the first game\'s single dungeon descent for four acts of varied outdoor environments',
       'The endgame loot chase, not the story, became the reason players stayed — a template the genre still follows',
     ],

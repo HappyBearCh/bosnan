@@ -68,23 +68,23 @@ module.exports = [
     firstKnownRun: '~1:10:00',
     year: 1994,
     era: '1990s',
-    description: 'One of the most technically rich speedruns on the SNES, demanding mastery of mockball, the spacetime beam glitch, and wall-jumping to cut the game to under forty-one minutes.',
-    longDescription: 'Super Metroid\'s speedrun community is among the most technically sophisticated in retro gaming. The mockball technique — discovered by accident in the early 2000s — allows Samus to retain Speed Booster momentum while morphing into a ball, enabling access to areas designed to be reached only after acquiring the Hi-Jump Boots. Combined with the spacetime beam, which freezes certain enemies that can then be used as platforms, runners can sequence-break through significant portions of the game. The community is divided into Any% (which allows early credits warp), Low%, and 100% categories, each demanding a distinct skill set. Super Metroid\'s physics engine and the game\'s intricate map design make new skips a recurring discovery even decades after release.',
+    description: 'One of the most technically rich speedruns on the SNES, demanding mastery of mockball, wall-jumping and precise movement to finish the game in around forty-one minutes.',
+    longDescription: 'Super Metroid\'s speedrun community is among the most technically sophisticated in retro gaming. Mockball lets Samus keep her running speed when she morphs into a ball just before landing, letting runners collect items such as the early Super Missiles long before the game intends. Wall-jumping, the Speed Booster\'s shinespark and a host of precise movement techniques allow further sequence breaks. Memory-corrupting glitches such as the Spacetime Beam — an illegal Spazer and Plasma combination — are confined to separate glitched categories. The community runs Any%, Low% and 100% among other categories, each demanding a distinct skill set, and new skips continue to be found decades after release.',
     famousTechniques: [
-      'Mockball — maintaining Speed Booster velocity while morphing into Morph Ball, bypassing the need for Hi-Jump Boots in early rooms',
-      'Spacetime Beam — freezing specific enemies with the Ice Beam to create temporary platforms, enabling out-of-sequence area access',
+      'Mockball — morphing just before landing from a running jump to keep full running speed in ball form',
+      'Spacetime Beam — an illegal Spazer and Plasma beam combination that corrupts memory, used in glitched categories',
       'Crystal Flash — a recovery technique that restores energy by expending reserve missiles, used to survive low-health marathon segments',
       'Infinite Bomb Jump — repeatedly detonating Morph Ball bombs to gain unlimited vertical height, bypassing normal climbing mechanics',
     ],
     keyFacts: [
-      'Mockball was discovered accidentally by a player who noticed that morphing during a dash cancelled the speed loss',
-      'The Any% credits warp was contested for years before the community standardised it as the main category',
+      'Mockball lets Samus carry running speed into Morph Ball form, opening early sequence breaks',
+      'Glitched categories that rely on memory corruption are kept separate from the standard Any% category',
       'Super Metroid has one of the most active and technically focused speedrun communities of any 16-bit game',
       'Multiple major skips have been discovered after 2015, showing the game\'s routing is still not fully exhausted',
     ],
     notableRunners: [
-      'Behemoth87 — longtime world-record holder who pioneered the credits warp routing and held the record across multiple eras',
-      'Zoast — active world-record holder who refined execution of the credits warp and pushed the record into the 40-minute range',
+      'Behemoth87 — longtime world-record holder who helped develop modern Any% routing',
+      'Zoast — active world-record holder who pushed the Any% record toward the 40-minute mark',
       'Taco — top-level runner and community contributor who verified several major new skips',
     ],
   },
@@ -97,8 +97,8 @@ module.exports = [
     firstKnownRun: '~3:00',
     year: 1993,
     era: '1990s',
-    description: 'Doom speedrunning began with id Software\'s own developers competing on internal time trials — making it one of the oldest documented speedrunning communities in gaming.',
-    longDescription: 'Doom\'s built-in demo recording system, present from the December 1993 release, enabled players to share runs almost immediately, making it the earliest game with a documented competitive speedrunning culture. id Software employees Dario Casali and Sandy Petersen posted their own records on Usenet, and the Compet-N archive — established in 1994 — became the first dedicated speedrun database for any game, predating modern leaderboard sites by nearly two decades. The game\'s movement system, which retains momentum and allows players to strafe-run diagonally faster than moving forward, forms the foundation of competitive routing. Doom speedrunning uses the game\'s own demo format for verification, a standard that has held since the 1990s.',
+    description: 'Doom speedrunning began within weeks of the game\'s December 1993 release, when players started trading demo recordings — making it one of the oldest documented speedrunning communities in gaming.',
+    longDescription: 'Doom\'s built-in demo recording system, present from the December 1993 release, enabled players to share runs almost immediately, making it the earliest game with a documented competitive speedrunning culture. Players traded record demos on Usenet and FTP sites, and the Compet-N archive — established in 1994 — became the first dedicated speedrun database for any game, predating modern leaderboard sites by nearly two decades. The game\'s movement system, which retains momentum and allows players to strafe-run diagonally faster than moving forward, forms the foundation of competitive routing. Doom speedrunning uses the game\'s own demo format for verification, a standard that has held since the 1990s.',
     famousTechniques: [
       'Strafe-Running — moving diagonally by holding a strafe direction and forward simultaneously to exceed the normal movement speed cap',
       'Rocket Jump — using explosion knockback to reach elevated platforms ahead of schedule',
@@ -106,13 +106,13 @@ module.exports = [
       'SR50 — a precise diagonal movement technique that maintains maximum speed through tight corridors, named for its input timing',
     ],
     keyFacts: [
-      'id Software\'s own developers publicly competed on Doom maps in 1994, making it the earliest game with documented speedrun competition from the developer side',
+      'Players were trading speedrun demos online within months of release, making Doom one of the earliest games with a documented speedrun community',
       'The Compet-N archive, founded in 1994, is the oldest dedicated speedrun leaderboard database in existence',
       'Doom uses its own internal demo format for verification rather than video capture, preserving exact input sequences',
       'The game supports both single-map and full-episode runs across four difficulty levels, producing distinct leaderboards for each',
     ],
     notableRunners: [
-      'Dario Casali — id Software level designer who posted early Usenet records and helped seed the competitive community',
+      'Dario Casali — renowned early Doom player and map author (later a Valve level designer) active in the 1990s community',
       'Radek Pecka — Compet-N era champion who held records across multiple episodes and difficulties throughout the late 1990s',
       'Drew DeVore (stx-Vile) — modern UV Speed record holder who pushed single-episode times to their current near-theoretical minimum',
     ],
@@ -156,16 +156,16 @@ module.exports = [
     year: 1998,
     era: '1990s',
     description: 'Ocarina of Time Any% is the most technically complex N64 speedrun, using arbitrary code execution to skip to the credits from within the first dungeon in under seven minutes.',
-    longDescription: 'Ocarina of Time\'s speedrun history is a record of escalating glitch discovery. Early runs focused on sequence breaking through Bottle Adventure and wrong warps using the Prelude of Light song to teleport to the end credits. By 2012, runners had reduced the time from hours to roughly eighteen minutes. The watershed moment came with the discovery of arbitrary code execution via the bottle duplication glitch: by duplicating certain items into incorrect inventory slots, players can overwrite game memory and trigger the end credits without completing any dungeon. This pushed the world record below ten minutes and eventually into the six-minute range. Ocarina speedrunning defined the concept of "ACE" (arbitrary code execution) for a mainstream audience and spawned the practice of deep memory-manipulation analysis in the console speedrunning community.',
+    longDescription: 'Ocarina of Time\'s speedrun history is a record of escalating glitch discovery. Early runs focused on sequence breaking through Bottle Adventure and wrong warps. By 2012, runners had reduced the time from hours to roughly eighteen minutes. The watershed moment came with the discovery of arbitrary code execution via the bottle duplication glitch: by duplicating certain items into incorrect inventory slots, players can overwrite game memory and trigger the end credits without completing any dungeon. This pushed the world record below ten minutes and eventually into the six-minute range. Ocarina speedrunning defined the concept of "ACE" (arbitrary code execution) for a mainstream audience and spawned the practice of deep memory-manipulation analysis in the console speedrunning community.',
     famousTechniques: [
-      'Wrong Warp — using the Prelude of Light song to incorrectly load the end credits room instead of the Temple of Time, bypassing all major content',
+      'Wrong Warp — manipulating a warp so the game loads the wrong destination, sending Link far ahead in the game',
       'Bottle Adventure — overwriting an item slot with a bottle via inventory manipulation to access wrong warps and out-of-bounds areas',
       'Arbitrary Code Execution (ACE) — corrupting game memory through item duplication to directly execute credits-trigger code',
       'Superslide — storing a sidehop momentum state and then sliding across the ground at high speed to skip past trigger zones',
     ],
     keyFacts: [
       'The world record has been cut from over two hours to under seven minutes through successive glitch discoveries across two decades',
-      'ACE was first demonstrated in Ocarina of Time before spreading as a technique to dozens of other games\'s speedrun communities',
+      'OoT\'s ACE runs became one of the best-known demonstrations of arbitrary code execution on a home console',
       'The "No Major Glitches" category remains separately competitive and requires around twenty-three minutes of optimised play',
       'Version differences between the 1.0 and 1.2 cartridges affect which glitches are available, creating parallel version-specific categories',
     ],
@@ -243,7 +243,7 @@ module.exports = [
     year: 1988,
     era: '1980s',
     description: 'Mega Man 2 speedrunning optimises the boss weapon cycle, slide mechanics, and room-transition glitches across one of the most beloved action-platformer games on the NES.',
-    longDescription: 'Mega Man 2 Any% is structured around the boss order — the sequence in which the eight Robot Masters are defeated determines which weapons are available for subsequent bosses and for Wily Castle encounters. The optimal route was debated for years before the community settled on a Metal Blade-first approach, as the Metal Blade\'s low energy cost and wide firing arc make it the most useful weapon in the game. The slide mechanic — introduced in this entry — is used extensively to pass under projectiles and enemies without slowing down, and clips through wall edges are used to skip room segments. The final Wily fights involve precise weapon energy management to ensure the Crash Bomber supply holds through the last phase. The run requires strong platform-game fundamentals with layers of weapon-juggling optimisation.',
+    longDescription: 'Mega Man 2 Any% is structured around the boss order — the sequence in which the eight Robot Masters are defeated determines which weapons are available for subsequent bosses and for Wily Castle encounters. The optimal route was debated for years before the community settled on a Metal Blade-first approach, as the Metal Blade\'s low energy cost and wide firing arc make it the most useful weapon in the game. Precise jumps and clips through wall edges are used to skip room segments. The final Wily fights involve precise weapon energy management to ensure the Crash Bomber supply holds through the last phase. The run requires strong platform-game fundamentals with layers of weapon-juggling optimisation.',
     famousTechniques: [
       'Metal Blade Optimisation — acquiring Metal Man first to obtain the Metal Blade, the game\'s most versatile weapon, for use through the remainder of the run',
       'Slide Clipping — sliding into wall corners to briefly enter the wall geometry and reposition, skipping part of a room transition',
@@ -253,7 +253,7 @@ module.exports = [
     keyFacts: [
       'Mega Man 2 is the most popular game in the series for speedrunning, reflecting its reputation as the strongest entry',
       'The Metal Blade weapon fires in eight directions at near-zero energy cost, making it central to both damage and movement optimisation',
-      'The game was originally released with two difficulty modes in Japan (Normal/Difficult); most Western runs use the single available difficulty',
+      'The North American release added a Normal/Difficult choice; the Japanese original has a single difficulty matching Difficult',
       'Frame-perfect room transitions through wall edges were discovered relatively recently and are still being incorporated into optimal routes',
     ],
     notableRunners: [
@@ -301,9 +301,9 @@ module.exports = [
     year: 1991,
     era: '1990s',
     description: 'Battletoads is among the most notorious NES games for its difficulty, and its speedrun demands frame-perfect inputs through the Turbo Tunnel and Clinger Winger stages that eliminate even experienced runners.',
-    longDescription: 'Battletoads\' speedrun is as famous for its failure rate as for its times. The Turbo Tunnel — Stage 3, the game\'s most notorious obstacle — requires memorisation and frame-perfect reaction to a series of walls at escalating speed. Even top runners fail it regularly in live runs. The Clinger Winger stage in the game\'s second half and the final boss add further near-frame-perfect requirements. Speedrunners use a warp in Stage 1 discovered in the early 2010s that bypasses three stages, and the Battletoads run is unusually routing-stable — there are relatively few glitches, meaning improvement comes from tighter execution of a set route. The game\'s reputation for difficulty means completed runs are relatively rare even in competition.',
+    longDescription: 'Battletoads\' speedrun is as famous for its failure rate as for its times. The Turbo Tunnel — Stage 3, the game\'s most notorious obstacle — requires memorisation and frame-perfect reaction to a series of walls at escalating speed. Even top runners fail it regularly in live runs. The Clinger Winger stage in the game\'s second half and the final boss add further near-frame-perfect requirements. Speedrunners use the game\'s hidden warps — in Stages 1, 3 and 4, each skipping the following stage — and the Battletoads run is unusually routing-stable — there are relatively few glitches, meaning improvement comes from tighter execution of a set route. The game\'s reputation for difficulty means completed runs are relatively rare even in competition.',
     famousTechniques: [
-      'Stage 1 Warp — using a specific hit-stun on the first boss to trigger a warp that skips Stages 2 through 4',
+      'Stage 1 Warp — a hidden warp late in Stage 1 that skips Stage 2',
       'Turbo Tunnel Memorisation — all walls in the Turbo Tunnel follow a fixed pattern; top runners execute it from pure muscle memory at the run\'s required pace',
       'Enemy Phase Manipulation — hitting mid-level enemies in specific orders to advance to the next wave without completing the full wave',
       'Rat Race Boost — using enemy knockback in Stage 5 to gain speed through sections requiring precise platform landing',
@@ -311,13 +311,12 @@ module.exports = [
     keyFacts: [
       'The Turbo Tunnel has a near-100% run-kill rate among non-specialists; even dedicated runners fail it in a significant percentage of live attempts',
       'Battletoads has an unusual property in that it was never popularised at Awesome Games Done Quick until runners had near-complete consistency',
-      'The warp in Stage 1 was not discovered until over twenty years after the game\'s release, cutting the route significantly',
+      'The game\'s warps were documented in magazines soon after its 1991 release',
       'Two-player co-op runs are a separate category due to the game\'s notorious tendency to let one player accidentally kill the other with large attack animations',
     ],
     notableRunners: [
       'Psychomaniac14 — world-record holder whose execution of the Turbo Tunnel and Clinger Winger at near-frame-perfect consistency has defined the category',
       'Lord Tom — former record holder and routing pioneer who established the Stage 1 warp as the foundation of modern runs',
-      'aGameScout — prominent runner and content creator whose public runs introduced Battletoads speedrunning to a wider mainstream audience',
     ],
   },
   {
@@ -346,7 +345,7 @@ module.exports = [
     notableRunners: [
       'Sinister1 — dominant world-record holder for years whose live AGDQ run is one of the most-watched speedrun performances in the event\'s history',
       'Zallard1 — former world-record holder whose optimisation of mid-game opponents pushed the record into the sixteen-minute range',
-      'Summoning Salt — current record holder and documentary filmmaker whose "History of" video on Punch-Out!! is the definitive record of the run\'s progression',
+      'Summoning Salt — former top Punch-Out!! runner and documentary filmmaker whose "History of" video on Punch-Out!! is the definitive record of the run\'s progression',
     ],
   },
   {

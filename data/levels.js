@@ -22,7 +22,7 @@ module.exports = [
       'The level was designed so the first Goomba is impossible to miss without jumping',
       'Coins form arrow-like patterns that direct players toward important objects',
       'The underground bonus room teaches warp pipes exist before they matter',
-      'Nintendo\'s internal name for this design approach was "oshieru" (to teach)'
+      'Miyamoto has explained that the first mushroom is placed so that it is hard to avoid, ensuring players learn what power-ups do'
     ],
     sections: [
       {
@@ -31,7 +31,7 @@ module.exports = [
       },
       {
         title: 'Legacy and Influence',
-        html: '<p>Virtually every 2D platformer released in the decade following Super Mario Bros. bears the structural fingerprints of World 1-1. Developers internalized its rhythm — flat opener, escalating challenge, safe bonus detour, climactic goal — and applied it across dozens of genres and platforms.</p><p>Academic game design courses routinely use World 1-1 as a primary text. Mark Brown\'s influential "Boss Keys" video series dedicated an entire episode to its design, and it appears in most major game design textbooks published after 2000.</p>'
+        html: '<p>Virtually every 2D platformer released in the decade following Super Mario Bros. bears the structural fingerprints of World 1-1. Developers internalized its rhythm — flat opener, escalating challenge, safe bonus detour, climactic goal — and applied it across dozens of genres and platforms.</p><p>Academic game design courses routinely use World 1-1 as a primary text. It has been dissected in countless video essays and appears regularly in game design books and talks.</p>'
       }
     ]
   },
@@ -44,7 +44,7 @@ module.exports = [
     era: '1990s',
     levelName: 'Chemical Plant Zone',
     description: 'Chemical Plant Zone is widely regarded as Sonic 2\'s defining level — a neon-drenched industrial gauntlet that pushes the Genesis hardware to its visual limit while delivering the series\' most satisfying speed-platforming fusion.',
-    longDescription: 'Designed by the Sonic Team to showcase the Genesis\' blast processing mythology, Chemical Plant Zone pairs blistering horizontal speed sections with precision vertical platforming in a way that few Sonic stages before or since have matched. Act 1 functions almost as a pure speed showcase — wide loops, half-pipes, and launch ramps that reward momentum — while Act 2 introduces Mega Mack, the rising pink chemical fluid that adds urgency and forces players to master the level\'s vertical architecture under pressure. The zone\'s visual design, featuring deep blues and magentas against black piping, was startlingly vivid for 1992 console hardware. Its music, composed by Masato Nakamura, became one of the most recognizable themes in Sega\'s library — a frantic synth piece that perfectly mirrors the mechanical tension of navigating the plant.',
+    longDescription: 'Built by the Sonic 2 team at Sega Technical Institute in California, Chemical Plant Zone pairs blistering horizontal speed sections with precision vertical platforming in a way that few Sonic stages before or since have matched. Act 1 functions almost as a pure speed showcase — wide loops, half-pipes, and launch ramps that reward momentum — while Act 2 introduces Mega Mack, the rising pink chemical fluid that adds urgency and forces players to master the level\'s vertical architecture under pressure. The zone\'s visual design, featuring deep blues and magentas against black piping, was startlingly vivid for 1992 console hardware. Its music, composed by Masato Nakamura, became one of the most recognizable themes in Sega\'s library — a frantic synth piece that perfectly mirrors the mechanical tension of navigating the plant.',
     designPrinciples: [
       'Momentum conservation rewarded through loop and ramp placement',
       'Act structure used to shift gameplay emphasis within a single zone',
@@ -54,9 +54,9 @@ module.exports = [
     ],
     keyFacts: [
       'The rising Mega Mack fluid in Act 2 is one of the series\' most memorable hazard sequences',
-      'Chemical Plant Zone was cited by Yuji Naka as a personal favorite in the Sonic 2 design process',
+      'Chemical Plant returned as a playable zone in Sonic Generations (2011) and Sonic Mania (2017)',
       'Act 1 contains some of the longest uninterrupted speed runs available in the early Sonic library',
-      'The zone\'s color palette was deliberately saturated to stand out in screenshots and magazine previews'
+      'It is Sonic 2\'s second zone, following Emerald Hill'
     ],
     sections: [
       {
@@ -65,7 +65,7 @@ module.exports = [
       },
       {
         title: 'Nakamura\'s Score and Sensory Coherence',
-        html: '<p>Masato Nakamura, bassist for Japanese pop group Dreams Come True, composed Chemical Plant Zone\'s music during his brief collaboration with Sega for Sonic 1 and 2. The track is characterized by a driving synth bass line and rapid arpeggiated leads that communicate mechanical urgency without feeling oppressive.</p><p>The coherence between the zone\'s audio and visual design is often cited as one of the earliest examples of deliberate "sensory synchronization" in game levels — where music tempo, color palette, and movement speed are tuned together rather than independently. Players moving at optimal speed through the level find themselves naturally in rhythm with the soundtrack.</p>'
+        html: '<p>Masato Nakamura, bassist for Japanese pop group Dreams Come True, composed Chemical Plant Zone\'s music during his brief collaboration with Sega for Sonic 1 and 2. The track is characterized by a driving synth bass line and rapid arpeggiated leads that communicate mechanical urgency without feeling oppressive.</p><p>The coherence between the zone\'s audio and visual design — music tempo, colour palette, and movement speed all pulling in the same direction — is a large part of why it is so well remembered. Players moving at optimal speed through the level find themselves naturally in rhythm with the soundtrack.</p>'
       }
     ]
   },
@@ -78,28 +78,28 @@ module.exports = [
     era: '1990s',
     levelName: 'E1M1 — Hangar',
     description: 'Doom\'s E1M1 established the template for first-person shooter level design in 1993, introducing players to spatial navigation, combat pacing, and resource management in a single compact but richly layered map.',
-    longDescription: 'Designed by John Romero, E1M1 is deceptively simple in layout but extraordinarily sophisticated in its design intentions. The level begins with the player facing a clear exit door that is locked, immediately teaching the core loop: explore to find keys and switches, return to progress. The map is shaped so that multiple routes converge at central intersections, creating the sensation of a coherent space rather than a linear corridor. Enemy placement escalates from isolated Imps to clustered Zombiemen as the player pushes deeper, and resources are distributed to encourage aggressive play rather than cautious resource hoarding. Romero later described E1M1 as a "teaching map" — every design element was chosen to prepare players for the harder maps that followed rather than to challenge them directly.',
+    longDescription: 'Designed by John Romero, E1M1 is short and compact but carefully built. There are no keycards to find; instead the level introduces Doom\'s vocabulary in miniature — Zombiemen and Imps, a toxic nukage pool that hurts to cross, windows that let the player glimpse areas before reaching them, and secret areas hidden behind walls. Its layout loops back on itself, so that spaces seen early are reached later from new angles, giving a small map the feel of a coherent place rather than a corridor. Bobby Prince\'s driving theme, "At Doom\'s Gate", made it one of the most recognisable opening levels in games.',
     designPrinciples: [
-      'Non-linear key-and-lock structure teaches exploration as the core mechanic',
+      'A looping layout reveals spaces before the player can reach them',
       'Central hub areas create spatial coherence across multiple routes',
       'Enemy escalation calibrated to teach combat fundamentals before punishing failure',
       'Resource placement rewards aggression over passive play',
       'Secret areas introduce hidden-space vocabulary used throughout the campaign'
     ],
     keyFacts: [
-      'E1M1 was completed by John Romero in approximately two weeks',
-      'The level was deliberately designed to be completable without firing a single shot',
-      'Its non-linear structure was radical for 1993, when most shooters used strict corridor progression',
-      'id Software released the full Doom level editor (DEU) so players could study and modify E1M1 directly'
+      'Designed by John Romero, who built most of Doom\'s first episode',
+      'Unlike many later Doom levels, it has no keycards to find',
+      'It hides several secret areas, introducing the hidden-space vocabulary used throughout the game',
+      'Its music, Bobby Prince\'s "At Doom\'s Gate", became one of the best-known themes in PC gaming'
     ],
     sections: [
       {
         title: 'Spatial Design as Player Education',
-        html: '<p>E1M1\'s map layout is a masterpiece of implicit instruction. The level\'s starting room faces players toward a locked exit, which communicates the game\'s fundamental loop — explore, unlock, progress — without a single word of text. The first enemy encounter is an Imp visible through a window, its fireball easily dodged, teaching that enemies telegraph their attacks.</p><p>The level\'s hub-and-spoke geometry means players will inevitably revisit central corridors after finding keys and switches. This repetition is intentional: returning to a room you\'ve already cleared teaches spatial memory and map awareness, skills that become critical in Doom\'s later, more labyrinthine levels.</p><p>John Romero has said in interviews that he viewed level design as a form of storytelling through space — each room should have a "story" communicated by its architecture, enemy placement, and lighting rather than by exposition.</p>'
+        html: '<p>E1M1\'s map is a lesson in compact design. Windows show the player outdoor areas and walkways before they can be reached; the walkway over the nukage pool teaches that the floor itself can hurt; and Zombiemen and Imps introduce hitscan and projectile enemies in quick succession. Because the layout loops, players see areas before they reach them and pass back through spaces they have already crossed, building a mental map without being told to.</p><p>Secret areas tucked behind walls teach a habit the rest of Doom rewards: walls are not always walls. A great deal of the game\'s later design — larger loops, locked routes, hidden caches — grows from vocabulary that E1M1 introduces in a few minutes of play.</p>'
       },
       {
         title: 'Influence on the FPS Genre',
-        html: '<p>E1M1 was so widely played and studied that its design conventions became default assumptions for an entire generation of FPS developers. The key-and-lock progression structure, the central hub geometry, the escalating enemy density, the hidden secret rooms — all were replicated, refined, and eventually reacted against in games from Quake through Half-Life and beyond.</p><p>The level\'s modding accessibility also made it one of the most analyzed and recreated maps in gaming history. Thousands of WAD files (Doom\'s level format) were built by players who learned level design by reverse-engineering E1M1\'s geometry. Many professional game designers cite Doom modding as their entry point into the industry.</p>'
+        html: '<p>E1M1 was so widely played and studied that its design conventions became default assumptions for an entire generation of FPS developers. The looping, interconnected geometry, the escalating enemy density, the hidden secret rooms — all were replicated, refined, and eventually reacted against in games from Quake through Half-Life and beyond.</p><p>The level\'s modding accessibility also made it one of the most analyzed and recreated maps in gaming history. Thousands of WAD files (Doom\'s level format) were built by players who learned level design by reverse-engineering E1M1\'s geometry. Many professional game designers cite Doom modding as their entry point into the industry.</p>'
       }
     ]
   },
@@ -123,13 +123,13 @@ module.exports = [
     keyFacts: [
       'Brinstar\'s music, composed by Hirokazu "Hip" Tanaka, is considered one of the NES era\'s finest atmospheric scores',
       'The zone connects to every other major area of Zebes, functioning as the game\'s central hub',
-      'Enemy types in Brinstar were designed to teach specific combat techniques for later zones',
-      'The area\'s green-and-black color palette was chosen to suggest alien biology rather than constructed architecture'
+      'Samus finds the Morph Ball, Bombs and Long Beam in Brinstar',
+      'Super Metroid (1994) revisits Brinstar as one of its major areas'
     ],
     sections: [
       {
         title: 'Isolation as Core Mechanic',
-        html: '<p>Metroid was radical in 1986 for presenting a game world with no allies, no shops, no villages, and no friendly NPCs. Brinstar communicates this isolation structurally — the zone is vast relative to the player\'s initial abilities, dark at the edges of the screen, and populated by creatures that attack from unexpected angles.</p><p>Hirokazu Tanaka\'s Brinstar music is a significant contributor to the zone\'s effectiveness. The track uses dissonant arpeggios and an unconventionally slow tempo for an action game, creating unease rather than excitement. Players described feeling genuinely nervous exploring Brinstar in a way that was new to NES gaming in 1986.</p><p>This deliberate construction of loneliness and hostility through design rather than narrative set a template that survival horror, atmospheric adventure games, and the entire Metroidvania subgenre would follow for decades.</p>'
+        html: '<p>Metroid was radical in 1986 for presenting a game world with no allies, no shops, no villages, and no friendly NPCs. Brinstar communicates this isolation structurally — the zone is vast relative to the player\'s initial abilities, dark at the edges of the screen, and populated by creatures that attack from unexpected angles.</p><p>Hirokazu Tanaka\'s Brinstar music is a significant contributor to the zone\'s effectiveness. Tanaka\'s score as a whole favoured eerie, unconventional sounds that created unease rather than excitement. Players described feeling genuinely nervous exploring Brinstar in a way that was new to NES gaming in 1986.</p><p>This deliberate construction of loneliness and hostility through design rather than narrative set a template that survival horror, atmospheric adventure games, and the entire Metroidvania subgenre would follow for decades.</p>'
       },
       {
         title: 'Defining the Metroidvania Template',
@@ -146,7 +146,7 @@ module.exports = [
     era: '1980s',
     levelName: 'Clock Tower',
     description: 'The Clock Tower stage distills Castlevania\'s design philosophy to its purest form — demanding pixel-perfect platforming through a labyrinth of moving gears, timed platforms, and relentless enemies against one of the era\'s most celebrated game soundtracks.',
-    longDescription: 'Clock Tower stages appear across the Castlevania series but reach their NES peak in Castlevania III, where the zone combines mechanical enemy types, rotating gear platforms, and the game\'s famous knockback system into a sequence of consistently dangerous scenarios with almost no margin for error. The level\'s vertical emphasis is unusual for NES platformers — players must ascend through multiple floors of geared machinery while managing limited whip range, enemy projectiles, and the ever-present threat of knockback launching Trevor off narrow platforms to his death or to a much earlier floor. Konami\'s Kinuyo Yamashita composed the Clock Tower theme, a piece so structurally suited to the stage\'s mechanical aesthetic that it has been re-arranged and covered more than almost any other game music from the era.',
+    longDescription: 'Clock Tower stages appear across the Castlevania series but reach their NES peak in Castlevania III, where the zone combines mechanical enemy types, rotating gear platforms, and the game\'s famous knockback system into a sequence of consistently dangerous scenarios with almost no margin for error. The level\'s vertical emphasis is unusual for NES platformers — players must ascend through multiple floors of geared machinery while managing limited whip range, enemy projectiles, and the ever-present threat of knockback launching Trevor off narrow platforms to his death or to a much earlier floor. Konami\'s sound team composed the Clock Tower theme, a piece so structurally suited to the stage\'s mechanical aesthetic that it has been re-arranged and covered more than almost any other game music from the era.',
     designPrinciples: [
       'Vertical level design creates risk from both above and below simultaneously',
       'Knockback mechanic transforms every enemy encounter into a platforming puzzle',
@@ -155,10 +155,10 @@ module.exports = [
       'Music tempo calibrated to the pace of the most demanding platform sequences'
     ],
     keyFacts: [
-      'The Clock Tower\'s music has been officially re-arranged by Konami at least seven times across different Castlevania titles',
-      'The knockback system was intentionally heightened in clock tower sections to increase the cost of missed attacks',
-      'Castlevania III introduced branching paths that allow players to avoid the Clock Tower entirely — few do',
-      'The gear and pendulum aesthetics were inspired by Universal\'s 1931 Frankenstein film sets'
+      'The Japanese release\'s VRC6 chip gave its music extra channels the NES version lacked',
+      'Trevor\'s knockback can throw him off narrow platforms to his death',
+      'Castlevania III\'s branching paths let players bypass the Clock Tower altogether',
+      'Clock towers recur throughout the series, from Castlevania (1986) to Symphony of the Night (1997)'
     ],
     sections: [
       {
@@ -167,7 +167,7 @@ module.exports = [
       },
       {
         title: 'Yamashita\'s Mechanical Music',
-        html: '<p>Kinuyo Yamashita composed the Castlevania III soundtrack under significant hardware constraints, and the Clock Tower theme represents her finest work in the series. The track\'s repeating, gear-like bass figure combined with its urgent lead melody mirrors the visual aesthetic of the stage in audio form — mechanical, relentless, and precise.</p><p>The song\'s influence on video game music culture is disproportionate to the game\'s overall profile. It has been covered by metal bands, arranged for orchestras, and remixed by chiptune artists more than almost any other NES-era composition. It represents an early example of a game\'s music becoming inseparable from a specific level\'s identity.</p>'
+        html: '<p>Castlevania III\'s soundtrack was composed by Konami\'s in-house team — Hidenori Maezawa, Jun Funahashi and Yoshinori Sasaki — and the Clock Tower theme is one of its highlights. The track\'s repeating, gear-like bass figure combined with its urgent lead melody mirrors the visual aesthetic of the stage in audio form — mechanical, relentless, and precise.</p><p>The song\'s influence on video game music culture is disproportionate to the game\'s overall profile. It has been covered by metal bands, arranged for orchestras, and remixed by chiptune artists more than almost any other NES-era composition. It represents an early example of a game\'s music becoming inseparable from a specific level\'s identity.</p>'
       }
     ]
   },
@@ -180,7 +180,7 @@ module.exports = [
     era: '1990s',
     levelName: 'Hyrule Castle',
     description: 'A Link to the Past\'s opening sequence through Hyrule Castle is a benchmark for the carefully designed adventure-game opening — a rainy midnight infiltration that establishes tone, teaches mechanics, and delivers genuine emotional stakes before the game\'s first dungeon.',
-    longDescription: 'The game opens with Link awakening to a telepathic message from Princess Zelda in a driving rainstorm, and the Castle section that follows is a 15-minute prologue designed to do an extraordinary amount of work simultaneously. Players learn to push blocks, avoid guards, use the lamp, handle keys, and navigate the first boss encounter — all within an emotionally charged context that makes each discovery feel consequential rather than tutorial-like. Koji Kondo\'s score for the Castle sequence uses the series\' iconic Hyrule Castle theme to create a sense of grandeur even as Link sneaks through servant corridors and guardrooms. The zone\'s pacing is exceptional: it never feels rushed or padded, and the moment when Link emerges from the dungeon into the pouring rain and crosses the courtyard to find Zelda is a quietly devastating emotional beat for the 16-bit era.',
+    longDescription: 'The game opens with Link awakening to a telepathic message from Princess Zelda in a driving rainstorm, and the Castle section that follows is a 15-minute prologue designed to do an extraordinary amount of work simultaneously. Players learn to push blocks, avoid guards, use the lamp, handle keys, and navigate the first boss encounter — all within an emotionally charged context that makes each discovery feel consequential rather than tutorial-like. Koji Kondo\'s score for the Castle sequence uses the series\' iconic Hyrule Castle theme to create a sense of grandeur even as Link sneaks through servant corridors and guardrooms. The zone\'s pacing is exceptional: it never feels rushed or padded, and the moment early on when Link finds his wounded uncle in the secret passage beneath the castle is a quietly devastating emotional beat for the 16-bit era.',
     designPrinciples: [
       'Tutorial mechanics embedded in emotionally charged narrative context',
       'Pacing structured around escalating discovery rather than escalating difficulty',
@@ -191,8 +191,8 @@ module.exports = [
     keyFacts: [
       'The Castle section teaches every core mechanic Link will use throughout the entire game',
       'No enemy in the Castle opening can kill the player in a single hit, preserving the narrative flow',
-      'The rain sound effect was layered over all music in the Castle to create an unprecedented sense of weather',
-      'Director Yoshiaki Koizumi cited the Castle sequence as the design template for future Zelda openings'
+      'Link\'s uncle hands him his sword and shield in the passage beneath the castle',
+      'Takashi Tezuka directed the game, with Shigeru Miyamoto as producer'
     ],
     sections: [
       {
@@ -214,7 +214,7 @@ module.exports = [
     era: '1990s',
     levelName: 'Coral Capers',
     description: 'Donkey Kong Country\'s underwater Coral Capers stage stopped players in 1994 not just for its pre-rendered graphics but for David Wise\'s Aquatic Ambiance — a piece of music so advanced for its platform that it genuinely sounded like it shouldn\'t be possible on a SNES cartridge.',
-    longDescription: 'Coral Capers is a masterclass in using audio-visual coherence to create a sense of place. Rare\'s pre-rendered 3D graphics were a genuine technical shock in 1994, but it is David Wise\'s Aquatic Ambiance that elevates the level from impressive to iconic. Wise sampled and compressed real instruments — including acoustic piano, flute, and watery synthesizer textures — to create a score that sounded dramatically more sophisticated than anything players had heard from a SNES. The level\'s gameplay, centered on swimming mechanics and coral reef navigation with an animal buddy companion, is pleasantly unconventional for a platformer but secondary to the zone\'s sensory impact. The combination of blue-tinted pre-rendered graphics and Wise\'s shimmering score created a sense of peaceful underwater immersion that players in 1994 described as unlike anything they\'d previously experienced in a game.',
+    longDescription: 'Coral Capers is a masterclass in using audio-visual coherence to create a sense of place. Rare\'s pre-rendered 3D graphics were a genuine technical shock in 1994, but it is David Wise\'s Aquatic Ambiance that elevates the level from impressive to iconic. Wise built soft, slowly evolving synthesizer pads and a gentle bass line into a score that sounded dramatically more sophisticated than anything players had heard from a SNES. The level\'s gameplay, centered on swimming mechanics and coral reef navigation with an animal buddy companion, is pleasantly unconventional for a platformer but secondary to the zone\'s sensory impact. The combination of blue-tinted pre-rendered graphics and Wise\'s shimmering score created a sense of peaceful underwater immersion that players in 1994 described as unlike anything they\'d previously experienced in a game.',
     designPrinciples: [
       'Audio-visual coherence as primary design tool for establishing sense of place',
       'Music used to create emotional tone rather than signal urgency or danger',
@@ -223,15 +223,15 @@ module.exports = [
       'Difficulty calibrated low to allow players to absorb the sensory experience'
     ],
     keyFacts: [
-      'David Wise compressed Aquatic Ambiance into roughly 65 kilobytes of SNES ROM space',
-      'The track samples real acoustic instruments, which was extremely unusual for SNES game music',
-      'Coral Capers\' difficulty is deliberately lower than surrounding stages to showcase the audio-visual design',
-      'Aquatic Ambiance has been performed live at Video Games Live concerts and the Proms in London'
+      'Aquatic Ambiance plays in Coral Capers and Donkey Kong Country\'s other underwater stages',
+      'Wise built it from evolving synth pads and the SNES\'s hardware echo',
+      'Enguarde the swordfish, one of the game\'s animal buddies, appears in the level',
+      'Aquatic Ambiance is one of the most frequently covered and arranged pieces of SNES music'
     ],
     sections: [
       {
         title: 'David Wise and the SNES Sound Chip',
-        html: '<p>The SNES\'s Sony SPC700 sound chip gave composers 64 kilobytes of sample RAM to work with — a severe constraint that most developers worked around by using synthesized tones rather than sampled instruments. David Wise approached this constraint differently, meticulously compressing real instrument samples to fit within the chip\'s memory while preserving enough fidelity to sound organic.</p><p>Aquatic Ambiance uses layered piano, flute, and ambient water textures in a way that creates genuine musical depth rather than the tinny, synthetic sound common to SNES games of the period. Wise has described the process as "sculpting" — removing frequencies that the human ear would forgive losing while preserving the warmth that made acoustic instruments emotionally resonant.</p><p>The result was a piece of music that journalists and players in 1994 genuinely struggled to believe was running on cartridge hardware. Several magazine reviews of Donkey Kong Country specifically called out the Aquatic Ambiance as technological evidence that the SNES had not been surpassed by the emerging 32-bit consoles.</p>'
+        html: '<p>Every SNES instrument is a short compressed sample, and all of a game\'s samples and music data had to fit in 64 kilobytes of audio RAM. David Wise worked within that limit to build Aquatic Ambiance from lush, slowly evolving synthesizer pads, a gentle bass line and the sound chip\'s hardware echo.</p><p>The result was a sense of depth and space that players genuinely struggled to believe was coming from a SNES. Alongside the game\'s pre-rendered graphics, it helped make Donkey Kong Country feel like a machine being pushed beyond what anyone thought it could do.</p>'
       },
       {
         title: 'The Art of Peaceful Design',
@@ -248,7 +248,7 @@ module.exports = [
     era: '1990s',
     levelName: 'Ken\'s Stage (San Francisco Dockside)',
     description: 'Ken\'s San Francisco dockside stage is Street Fighter II\'s most visually iconic arena — a sun-drenched waterfront with cheering sailors and cargo ships that became the defining visual shorthand for American fighting game culture in the early 1990s.',
-    longDescription: 'Street Fighter II\'s stage design was revolutionary in its use of animated, culturally specific backgrounds to communicate character identity. Ken\'s stage — set at a San Francisco waterfront with a crowd of enthusiastic dock workers and the Golden Gate Bridge visible in the distance — was designed to establish Ken as a wealthy, confident, coastal American fighter whose identity was inseparable from his setting. The stage\'s animated elements were technically ambitious for 1991 arcade hardware: crowd members move individually, boats rock in the background, and the time of day shifts the lighting during longer fights. Yoko Shimomura composed Ken\'s theme as an upbeat rock-inflected piece that mirrors the stage\'s confident, sun-soaked energy. Together, the visual and audio design created a sense of character-through-place that influenced fighting game stage design for the entire decade.',
+    longDescription: 'Street Fighter II\'s stage design was revolutionary in its use of animated, culturally specific backgrounds to communicate character identity. Ken\'s stage — set at a San Francisco waterfront with a crowd of enthusiastic onlookers and a yacht at the pier — was designed to establish Ken as a wealthy, confident, coastal American fighter whose identity was inseparable from his setting. The stage\'s animated elements were technically ambitious for 1991 arcade hardware: crowd members move individually and the boat rocks in the background. Yoko Shimomura composed Ken\'s theme as an upbeat rock-inflected piece that mirrors the stage\'s confident, sun-soaked energy. Together, the visual and audio design created a sense of character-through-place that influenced fighting game stage design for the entire decade.',
     designPrinciples: [
       'Stage design used to communicate character identity and cultural context',
       'Animated background elements create sense of inhabited, living world',
@@ -259,7 +259,7 @@ module.exports = [
     keyFacts: [
       'Yoko Shimomura composed Ken\'s theme before leaving Capcom for Square, where she would compose Kingdom Hearts',
       'The stage\'s crowd members were individually animated, a significant technical achievement for 1991 arcade hardware',
-      'Ken\'s stage appeared on more Street Fighter II promotional materials than any other stage',
+      'The stage is set at an American harbour, with a yacht and onlookers in the background',
       'The dockside setting was chosen to contrast with Ryu\'s Japanese dojo and emphasize Ken\'s American identity'
     ],
     sections: [
@@ -282,7 +282,7 @@ module.exports = [
     era: '1990s',
     levelName: 'Midgar Opening Sequence',
     description: 'Final Fantasy VII\'s Midgar opening sequence is one of the most discussed openings in RPG history — a compressed, brilliantly paced introduction to the game\'s world, systems, and central themes that rewards completion while training players who will spend forty hours in very different environments.',
-    longDescription: 'The Midgar sequence spans approximately five to eight hours of play and functions simultaneously as tutorial, world-building, and narrative prologue. Players are introduced to combat, materia, limit breaks, character relationships, and the game\'s central moral complexity — the Mako Reactor bombings are ecological terrorism dressed as heroism — before the game\'s actual open world is revealed. Nobuo Uematsu\'s score for Midgar is deliberately oppressive, favoring industrial textures and minor-key fanfares over the heroic orchestral writing of earlier Final Fantasy games. The sequence culminates in Cloud\'s fall from the Sector 5 plate and arrival in Aerith\'s church, a transition from industrial dystopia to a single ray of natural light that is perhaps the most effective single environmental contrast in PlayStation-era gaming.',
+    longDescription: 'The Midgar sequence spans approximately five to eight hours of play and functions simultaneously as tutorial, world-building, and narrative prologue. Players are introduced to combat, materia, limit breaks, character relationships, and the game\'s central moral complexity — the Mako Reactor bombings are ecological terrorism dressed as heroism — before the game\'s actual open world is revealed. Nobuo Uematsu\'s score for Midgar is deliberately oppressive, favoring industrial textures and minor-key fanfares over the heroic orchestral writing of earlier Final Fantasy games. Early in the sequence, Cloud falls through the roof of Aerith\'s church in the Sector 5 slums, a transition from industrial dystopia to a single ray of natural light that is perhaps the most effective single environmental contrast in PlayStation-era gaming.',
     designPrinciples: [
       'Extended prologue used to establish world rules and moral complexity before player agency expands',
       'Tutorial mechanics delivered through narrative events to preserve immersion',
@@ -292,9 +292,9 @@ module.exports = [
     ],
     keyFacts: [
       'The Midgar sequence introduces all core battle mechanics before the wider world is accessible',
-      'Players cannot leave Midgar until after the Sector 5 collapse, a narrative gate that also functions as a pacing tool',
-      'The Aerith church scene was designed to be the player\'s first sight of natural plant life in the game',
-      'Nobuo Uematsu has said the Midgar theme was intended to feel "wrong" for a Final Fantasy game to reflect the city\'s wrongness'
+      'Players cannot leave Midgar until after the escape from Shinra headquarters',
+      'Aerith\'s church, with its flower bed, is one of the only places in Midgar where plants grow',
+      'The sequence was remade and greatly expanded as Final Fantasy VII Remake (2020)'
     ],
     sections: [
       {
@@ -328,7 +328,7 @@ module.exports = [
       'The End of Time is discovered by the player organically when four party members attempt time travel',
       'Spekkio, the god of war hidden in the End of Time, provides magic abilities and scales to the player\'s level',
       'Gaspar is one of three Gurus whose backstory connects major narrative threads across the game\'s timeline',
-      'Yasunori Mitsuda composed the End of Time theme while recovering from an ulcer caused by overwork on the soundtrack'
+      'A bucket at the End of Time lets the party challenge Lavos at any point'
     ],
     sections: [
       {
@@ -384,18 +384,18 @@ module.exports = [
     era: '1990s',
     levelName: 'The Undercaves / Big Blue',
     description: 'Ecco the Dolphin\'s opening ocean levels create an experience unlike anything else in the 16-bit library — a sensation of genuine aquatic freedom and profound environmental alienness that the game immediately, mercilessly weaponizes against the player.',
-    longDescription: 'Ecco the Dolphin opens with a deceptive serenity. The player controls a dolphin in a sunlit cove, performing jumps and communicating with other sea creatures, with no immediate threat visible. Then a waterspout appears and rips every other living creature from the ocean in seconds — and the player is utterly alone. The subsequent level, which sends Ecco into the open ocean to find survivors, is one of gaming\'s most effective tonal pivots: the same fluid movement physics and beautiful Genesis water effects that created the opening\'s wonder now create isolation and anxiety. Spencer Nilsen\'s ambient electronic score, layered with actual dolphin sonar recordings, creates a soundscape that is genuinely unsettling in a way unusual for a game marketed to young players.',
+    longDescription: 'Ecco the Dolphin opens with a deceptive serenity. The player controls a dolphin in a sunlit cove, performing jumps and communicating with other sea creatures, with no immediate threat visible. Then a waterspout appears and rips every other living creature from the ocean in seconds — and the player is utterly alone. The subsequent level, which sends Ecco into the open ocean to find survivors, is one of gaming\'s most effective tonal pivots: the same fluid movement physics and beautiful Genesis water effects that created the opening\'s wonder now create isolation and anxiety. The game\'s ambient electronic music creates a soundscape that is genuinely unsettling in a way unusual for a game marketed to young players.',
     designPrinciples: [
       'Tonal pivot uses established safe-space mechanics to amplify subsequent threat',
       'Freedom of movement weaponized — open ocean creates disorientation rather than liberation',
-      'Audio design uses real-world recordings to create unnerving naturalism',
+      'Ambient audio design creates an unnerving atmosphere',
       'Oxygen mechanic introduces existential pressure without enemy combat',
       'Environmental storytelling communicates catastrophe through absence rather than explicit event'
     ],
     keyFacts: [
       'Ecco the Dolphin was developed by Ed Annunziata and Novotrade with no precedent for dolphin-protagonist game design',
-      'Spencer Nilsen\'s score samples actual recordings of dolphin communication',
-      'The game\'s difficulty spike between the tutorial cove and the open ocean was intentional — Annunziata wanted to evoke real ocean danger',
+      'The Sega CD version replaced the Genesis music with a new ambient score by Spencer Nilsen',
+      'Ecco must surface regularly for air, turning the open ocean itself into a hazard',
       'Ecco the Dolphin was one of the few Genesis games to receive a dedicated Sega CD version with a dramatically expanded ambient soundtrack'
     ],
     sections: [
@@ -405,7 +405,7 @@ module.exports = [
       },
       {
         title: 'Nilsen\'s Alien Soundscape',
-        html: '<p>Spencer Nilsen\'s score for Ecco the Dolphin occupies a unique place in game music history. Where most early-1990s game composers were working in melodic structures borrowed from film or popular music, Nilsen created something genuinely ambient — layered synthesizer textures combined with processed natural recordings that function as atmosphere rather than accompaniment.</p><p>The inclusion of actual dolphin sonar recordings was a radical choice that grounds the game\'s alien quality in biological reality. Players are hearing real dolphin communication processed through synthesizers, which creates an uncanny effect: the sounds are natural, but the context is science fiction. The music communicates that Ecco\'s ocean is simultaneously familiar and profoundly strange, which is exactly the emotional register the game is trying to occupy throughout its strange, ambitious journey.</p>'
+        html: '<p>The music of Ecco the Dolphin — composed by Andy Armer for the Genesis and re-scored by Spencer Nilsen for the Sega CD — occupies a unique place in game music history. Where most early-1990s game music worked in melodic structures borrowed from film or popular music, Ecco\'s was genuinely ambient — layered synthesizer textures combined with processed natural recordings that function as atmosphere rather than accompaniment.</p><p>The music communicates that Ecco\'s ocean is simultaneously familiar and profoundly strange, which is exactly the emotional register the game is trying to occupy throughout its strange, ambitious journey.</p>'
       }
     ]
   },
@@ -451,15 +451,15 @@ module.exports = [
     era: '64-bit',
     levelName: 'Water Temple',
     description: 'The infamous Water Temple of Ocarina of Time is gaming\'s most notorious dungeon — an intricate puzzle of rising and falling water levels and cumbersome Iron Boots that became a byword for frustration, and prompted an apology from its own designer.',
-    longDescription: 'The Water Temple is a dungeon in the 1998 Nintendo 64 masterpiece The Legend of Zelda: Ocarina of Time, and it occupies a singular place in gaming lore as perhaps the most notorious level ever designed. Created by the game\'s director Eiji Aonuma, who drew on his personal love of diving, the temple is built around a central mechanic: the player must repeatedly raise and lower the water level throughout a multi-storey structure to open new paths, using a set of Iron Boots to sink to the bottom, a special tunic to breathe underwater, and the Hookshot to reach distant points.\n\nOn paper the design is elegant and thematically coherent — a genuine three-dimensional puzzle box in which the same physical space transforms as the water shifts. In practice it became the dungeon players loved to hate. The Iron Boots were the chief culprit: on the original N64 release they had to be equipped and unequipped through the pause menu, an interruption required constantly as the player alternated between walking on the floor and floating or swimming. This cumbersome, repetitive menu-diving turned what should have been fluid exploration into a tedious chore, and the temple\'s vertical complexity made it easy to get lost, unsure which water level was needed or where a missed switch or key might be.\n\nThe backlash was severe and lasting. Critics singled the Water Temple out as a blemish on an otherwise near-perfect game; GamesRadar went so far as to call it one of the worst levels in any video game and to argue that it alone kept Ocarina of Time from being the greatest game ever made. The reputation grew into a cultural shorthand for dungeon frustration, referenced for years whenever players discussed the low points of otherwise beloved titles. Remarkably, the criticism reached the developers directly: Aonuma publicly apologised for the temple\'s difficulty, and Shigeru Miyamoto acknowledged that the constant boot-swapping had been a mistake.\n\nNintendo took the unusual step of substantively redesigning the dungeon for the 2011 Nintendo 3DS remake, Ocarina of Time 3D. The most important change let players equip and remove the Iron Boots instantly from the touch-screen item menu without pausing, removing the single biggest source of tedium, while colour-coded markers made the water levels easier to track. The result was widely praised, with some critics arguing the improved version revealed the dungeon\'s underlying design to be clever and satisfying all along — a rare case of a studio directly answering years of player complaint by rebuilding one of its most infamous creations.',
+    longDescription: 'The Water Temple is a dungeon in the 1998 Nintendo 64 masterpiece The Legend of Zelda: Ocarina of Time, and it occupies a singular place in gaming lore as perhaps the most notorious level ever designed. Designed under Eiji Aonuma, one of the game\'s directors and the lead on its dungeons, the temple is built around a central mechanic: the player must repeatedly raise and lower the water level throughout a multi-storey structure to open new paths, using a set of Iron Boots to sink to the bottom, a special tunic to breathe underwater, and the Hookshot to reach distant points.\n\nOn paper the design is elegant and thematically coherent — a genuine three-dimensional puzzle box in which the same physical space transforms as the water shifts. In practice it became the dungeon players loved to hate. The Iron Boots were the chief culprit: on the original N64 release they had to be equipped and unequipped through the pause menu, an interruption required constantly as the player alternated between walking on the floor and floating or swimming. This cumbersome, repetitive menu-diving turned what should have been fluid exploration into a tedious chore, and the temple\'s vertical complexity made it easy to get lost, unsure which water level was needed or where a missed switch or key might be.\n\nThe backlash was severe and lasting. Critics singled the Water Temple out as a blemish on an otherwise near-perfect game; GamesRadar went so far as to call it one of the worst levels in any video game and to argue that it alone kept Ocarina of Time from being the greatest game ever made. The reputation grew into a cultural shorthand for dungeon frustration, referenced for years whenever players discussed the low points of otherwise beloved titles. Remarkably, the criticism reached the developers directly: Aonuma publicly apologised for the temple\'s difficulty, and Shigeru Miyamoto acknowledged that the constant boot-swapping had been a mistake.\n\nNintendo took the unusual step of substantively redesigning the dungeon for the 2011 Nintendo 3DS remake, Ocarina of Time 3D. The most important change let players equip and remove the Iron Boots instantly from the touch-screen item menu without pausing, removing the single biggest source of tedium, while colour-coded markers made the water levels easier to track. The result was widely praised, with some critics arguing the improved version revealed the dungeon\'s underlying design to be clever and satisfying all along — a rare case of a studio directly answering years of player complaint by rebuilding one of its most infamous creations.',
     designPrinciples: [
       'A single space transformed by a global variable — the water level — that the player manipulates',
-      'Vertical, three-dimensional puzzle structure inspired by the director\'s love of diving',
+      'Vertical, three-dimensional puzzle structure in which height is the key variable',
       'Interlocking tools (Iron Boots, underwater tunic, Hookshot) gate progress through the space',
       'The original\'s flaw — constant menu-based boot swapping — was fixed in the 3DS remake',
     ],
     keyFacts: [
-      'Designed by director Eiji Aonuma, inspired by his love of diving',
+      'Designed under Eiji Aonuma, who led the game\'s dungeon design',
       'Built around raising and lowering water levels and sinking with the Iron Boots',
       'The original required pausing to equip/unequip the Iron Boots constantly, a major source of frustration',
       'Aonuma apologised for its difficulty; the 3DS remake let players swap boots without pausing',
@@ -467,7 +467,7 @@ module.exports = [
     sections: [
       {
         title: 'The Language of the Level',
-        html: '<p>At its core the Water Temple is a study in transforming a single space through one manipulable variable: the water level. Raising and lowering the water opens and seals paths, turns walls into floors and rooms into pools, and forces the player to think about the dungeon in three dimensions rather than as a flat map — a design rooted in Aonuma\'s fascination with diving. The Iron Boots, underwater tunic, and Hookshot function as the keys that unlock movement through this shifting space. The concept is genuinely sophisticated; its failure on the N64 was one of execution, as the constant need to open the pause menu to change boots broke the flow that the puzzle design depended upon.</p>',
+        html: '<p>At its core the Water Temple is a study in transforming a single space through one manipulable variable: the water level. Raising and lowering the water opens and seals paths, turns walls into floors and rooms into pools, and forces the player to think about the dungeon in three dimensions rather than as a flat map. The Iron Boots, underwater tunic, and Hookshot function as the keys that unlock movement through this shifting space. The concept is genuinely sophisticated; its failure on the N64 was one of execution, as the constant need to open the pause menu to change boots broke the flow that the puzzle design depended upon.</p>',
       },
       {
         title: 'Legacy and Influence',
@@ -551,24 +551,24 @@ module.exports = [
     era: '1990s',
     levelName: 'The Opera House — "Maria and Draco"',
     description: 'Final Fantasy VI stops its own plot to perform an opera, hands the player a soprano aria rendered on an SNES sound chip, and then drops a giant octopus through the ceiling.',
-    longDescription: 'By the mid-1990s the Final Fantasy series had built a reputation for ambition, but the Opera House sequence is the moment it visibly reached past what its hardware was supposed to allow. The setup is pure caper: Celes, a defected Imperial general, happens to resemble the famed diva Maria, and the party substitutes her into a performance of "Maria and Draco" in order to reach the gambler Setzer, who plans to abduct the real singer from the stage. What follows is a four-part composition by Nobuo Uematsu — "Overture", "Aria di Mezzo Carattere", "Wedding Waltz – Duel" and "Grand Finale" — with a libretto written by Yoshinori Kitase, staged in-engine with scripted blocking, timed lyric cues the player must follow correctly, and a rendering of a soprano voice built entirely out of synthesised SNES instrumentation. The scene refuses to become solemn: the octopus Ultros crashes the performance from the rafters, and the operatic register collapses into a boss fight and a chase through the catwalks above the stage.',
+    longDescription: 'By the mid-1990s the Final Fantasy series had built a reputation for ambition, but the Opera House sequence is the moment it visibly reached past what its hardware was supposed to allow. The setup is pure caper: Celes, a defected Imperial general, happens to resemble the famed diva Maria, and the party substitutes her into a performance of "Maria and Draco" in order to reach the gambler Setzer, who plans to abduct the real singer from the stage. What follows is a four-part composition by Nobuo Uematsu — "Overture", "Aria di Mezzo Carattere", "Wedding Waltz – Duel" and "Grand Finale" — with a libretto written by Yoshinori Kitase, staged in-engine with scripted blocking, timed lyric cues the player must follow correctly, and a soprano line carried by a short, wordless vocal sample on the SNES sound chip. The scene refuses to become solemn: the octopus Ultros crashes the performance from the rafters, and the operatic register collapses into a boss fight and a chase through the catwalks above the stage.',
     designPrinciples: [
       'Diegetic music: the score is not accompaniment but the literal content of the scene',
       'Player participation inside a cutscene — the lyric-selection sequence makes the audience complicit in the performance',
-      'Hardware pushed past its intent: an operatic vocal line synthesised on a chip designed for sound effects',
+      'Hardware pushed past its limits: an operatic vocal line squeezed out of a few kilobytes of samples',
       'Tonal whiplash used deliberately — grandeur undercut by farce before it can curdle into pomposity',
       'Character work smuggled into spectacle: the aria is where Celes stops being a defector and becomes a protagonist'
     ],
     keyFacts: [
       'The sequence comprises four tracks by Nobuo Uematsu, with a libretto by Yoshinori Kitase',
       '"Aria di Mezzo Carattere" became one of the most performed pieces in the entire Final Fantasy catalogue',
-      'The SNES rendered the "vocal" line instrumentally — there is no recorded human voice in the original',
+      'The SNES carried the "vocal" line on a short wordless voice sample — no words are sung in the original',
       'The Pixel Remaster finally added genuine sung vocals, recorded in seven languages'
     ],
     sections: [
       {
         title: 'Making a Voice Out of a Sound Chip',
-        html: '<p>The SNES had eight audio channels and a small pool of sound memory. It had no capacity for a sung human voice, and Uematsu did not attempt one. Instead "Aria di Mezzo Carattere" hands the vocal line to a synthesised instrument and lets the player\'s own ear finish the job — the melody phrases like singing, breathes like singing, and is accompanied like singing, so the listener supplies a soprano the hardware never produced.</p><p>Simultaneously the game puts the lyrics on screen and requires the player to choose the correct lines in sequence. This is the mechanism that turns the scene from a cutscene into an experience: you are not watching Celes perform, you are performing as her, and a wrong lyric is a genuine failure in front of a genuine audience. It is one of the earliest examples in a mainstream game of interactivity being used to create stage fright.</p>'
+        html: '<p>The SNES had eight audio channels and a small pool of sound memory. It had no capacity for a sung human voice with words. Instead "Aria di Mezzo Carattere" carries the vocal line on a short, wordless voice sample and lets the player\'s own ear finish the job — the melody phrases like singing, breathes like singing, and is accompanied like singing, so the listener supplies a soprano the hardware never produced.</p><p>Simultaneously the game puts the lyrics on screen and requires the player to choose the correct lines in sequence. This is the mechanism that turns the scene from a cutscene into an experience: you are not watching Celes perform, you are performing as her, and a wrong lyric is a genuine failure in front of a genuine audience. It is one of the earliest examples in a mainstream game of interactivity being used to create stage fright.</p>'
       },
       {
         title: 'The Octopus in the Rafters',
@@ -619,7 +619,7 @@ module.exports = [
     era: '1990s',
     levelName: 'Bob-omb Battlefield (Course 1)',
     description: 'The first course in Super Mario 64 had to teach the world how to move in three dimensions. Its open mountain, gentle upward spiral, and staged introduction of mechanics made it the most influential 3D platforming level ever built.',
-    longDescription: 'When Super Mario 64 launched in 1996, it was not just a new Mario game but a working proposal for how 3D platforming should feel, and Bob-omb Battlefield is where that proposal is made. It is the first course the player enters, and it carries an enormous teaching burden: in 1996 almost nobody had ever controlled a character freely in a fully three-dimensional space with an analog stick and a movable camera, and this single level had to make that unfamiliar act feel natural within minutes.\n\nThe design solves the problem through structure. The course is a large, open mountain with a main path spiralling gently up to the summit, where the boss, Big Bob-omb, waits. That central path gives even a lost or nervous player an obvious direction — up — while the wide, forgiving spaces around it invite experimentation and exploration without punishing mistakes. The ascent is organised into rough zones that introduce ideas one at a time: first basic running and jumping on open ground, then obstacles like moving platforms and the wind-blown segments that demand more precise control, and finally the boss encounter that asks the player to apply what the climb has taught them.\n\nCrucially, Bob-omb Battlefield establishes a spatial grammar that the whole genre would inherit. It teaches the player to read a walkable plane extending into the distance along the z-axis, to use the horizon and the mountain\'s silhouette as navigational guides rather than mere backdrop, and to think about height and depth as part of the puzzle. The multiple stars hidden around the course — some on the main path, some requiring exploration of side areas, some tied to specific mechanics like cannons or the Chain Chomp — quietly demonstrate that a 3D level is a space to be investigated from many angles, not a corridor to be run through.\n\nThe level\'s influence is difficult to overstate because so much of it became invisible convention. The idea that a 3D game\'s opening area should be a safe, open sandbox that teaches movement through play rather than instruction; the use of terrain and landmarks to guide the eye; the staged escalation of mechanics toward a summit boss — these are now simply how 3D platformers are built, and they trace directly back to a green hill with a talking bomb on top. Bob-omb Battlefield remains a masterclass in teaching a genre that did not yet exist.',
+    longDescription: 'When Super Mario 64 launched in 1996, it was not just a new Mario game but a working proposal for how 3D platforming should feel, and Bob-omb Battlefield is where that proposal is made. It is the first course the player enters, and it carries an enormous teaching burden: in 1996 almost nobody had ever controlled a character freely in a fully three-dimensional space with an analog stick and a movable camera, and this single level had to make that unfamiliar act feel natural within minutes.\n\nThe design solves the problem through structure. The course is a large, open mountain with a main path spiralling gently up to the summit, where the boss, Big Bob-omb, waits. That central path gives even a lost or nervous player an obvious direction — up — while the wide, forgiving spaces around it invite experimentation and exploration without punishing mistakes. The ascent is organised into rough zones that introduce ideas one at a time: first basic running and jumping on open ground, then obstacles like the iron balls rolling down the mountain path and the narrow bridges that demand more precise control, and finally the boss encounter that asks the player to apply what the climb has taught them.\n\nCrucially, Bob-omb Battlefield establishes a spatial grammar that the whole genre would inherit. It teaches the player to read a walkable plane extending into the distance along the z-axis, to use the horizon and the mountain\'s silhouette as navigational guides rather than mere backdrop, and to think about height and depth as part of the puzzle. The multiple stars hidden around the course — some on the main path, some requiring exploration of side areas, some tied to specific mechanics like cannons or the Chain Chomp — quietly demonstrate that a 3D level is a space to be investigated from many angles, not a corridor to be run through.\n\nThe level\'s influence is difficult to overstate because so much of it became invisible convention. The idea that a 3D game\'s opening area should be a safe, open sandbox that teaches movement through play rather than instruction; the use of terrain and landmarks to guide the eye; the staged escalation of mechanics toward a summit boss — these are now simply how 3D platformers are built, and they trace directly back to a green hill with a talking bomb on top. Bob-omb Battlefield remains a masterclass in teaching a genre that did not yet exist.',
     designPrinciples: [
       'A central spiralling path gives clear direction while open space invites exploration',
       'Mechanics are introduced in staged zones, one idea at a time, up the mountain',

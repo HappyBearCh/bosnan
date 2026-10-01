@@ -11,20 +11,20 @@
     description: 'Nintendo\'s manual for the original Zelda did what the cartridge could not: it handed players a fully realized mythology, complete with Ganon\'s backstory, the Triforce\'s origin, and a map of Hyrule that made the world feel ancient before you pressed Start.',
     longDescription: 'At a time when most manuals confined themselves to button diagrams and copyright notices, the Legend of Zelda booklet read like an excerpt from a fantasy novel. It introduced the Triforce of Wisdom and Triforce of Power as cosmic artifacts, established Ganon as a fallen prince of darkness, and framed Zelda as a princess of destiny rather than a passive hostage. The included map gave players geographic context that the overhead view alone could not convey, turning nine dungeons into a coherent quest across a kingdom. Nintendo of America\'s localization team expanded on the Japanese text, adding prose that set the tone for decades of Zelda storytelling to come.',
     keyFacts: [
-      'Included a full-color fold-out map of Hyrule',
-      'Named every dungeon and explained its position in the overworld',
+      'Included map material and illustrations to help players find their way around Hyrule',
+      'Told the legend of the Triforce and Ganon\'s theft of the Triforce of Power',
       'Provided Ganon\'s complete origin story absent from the game itself',
-      'First Nintendo manual to feature illustrated character portraits with dialogue'
+      'Its opening pages set out the legend before any instructions'
     ],
     notableFor: 'Establishing the Zelda mythology through prose alone, before any in-game text could do the same.',
     sections: [
       {
         title: 'Lore That Lived Outside the Cartridge',
-        html: '<p>The NES hardware offered Nintendo no room for cutscenes, voice acting, or scrolling text crawls. What it could not show, the manual had to tell. The Zelda booklet devoted its first several pages entirely to the legend itself — Ganon\'s theft of the Triforce of Power, Zelda\'s desperate act of scattering its counterpart across Hyrule, and Link\'s call to adventure.</p><p>This was not boilerplate setup. The writing gave players emotional stakes before a single dungeon was entered. Readers who absorbed those pages approached the overworld with a sense of purpose that players who skipped straight to the controls never quite felt. The manual was, in effect, the game\'s opening cinematic.</p><p>Years later, series producer Shigeru Miyamoto acknowledged that the manual was considered part of the game experience. The physical object was designed to be read before play began, not consulted as a reference during it.</p>'
+        html: '<p>The NES hardware offered Nintendo no room for cutscenes, voice acting, or scrolling text crawls. What it could not show, the manual had to tell. The Zelda booklet devoted its first several pages entirely to the legend itself — Ganon\'s theft of the Triforce of Power, Zelda\'s desperate act of scattering its counterpart across Hyrule, and Link\'s call to adventure.</p><p>This was not boilerplate setup. The writing gave players emotional stakes before a single dungeon was entered. Readers who absorbed those pages approached the overworld with a sense of purpose that players who skipped straight to the controls never quite felt. The manual was, in effect, the game\'s opening cinematic.</p><p>The physical object was designed to be read before play began, not just consulted as a reference during it.</p>'
       },
       {
         title: 'The Map as a Design Tool',
-        html: '<p>The fold-out map of Hyrule bundled with the North American release was more than a navigational aid. It established scale. Players could see that Death Mountain loomed in the north, that the Lost Woods occupied a discrete corner of the world, and that the nine dungeons were spread across a landscape with internal logic.</p><p>Without the map, the overworld was a grid of disconnected screens. With it, the world cohered into something that felt geographically real. Players who studied the map before play had a mental model of Hyrule that guided exploration and made discovery feel like revelation rather than accident.</p><p>This bundled cartography became a Nintendo tradition carried through Metroid, Kid Icarus, and beyond — the physical artifact as a layer of the game design itself.</p>'
+        html: '<p>The manual\'s map material was more than a navigational aid. It established scale. Players could see that Death Mountain loomed in the north, that the Lost Woods occupied a discrete corner of the world, and that the nine dungeons were spread across a landscape with internal logic.</p><p>Without the map, the overworld was a grid of disconnected screens. With it, the world cohered into something that felt geographically real. Players who studied the map before play had a mental model of Hyrule that guided exploration and made discovery feel like revelation rather than accident.</p><p>The physical artifact had become a layer of the game design itself.</p>'
       }
     ]
   },
@@ -40,8 +40,8 @@
     description: 'EarthBound\'s North American release came packaged with a 128-page Players\' Guide masquerading as a manual, complete with scratch-and-sniff stickers, a full walkthrough, and a tone that matched the game\'s surreal humor perfectly.',
     longDescription: 'Recognizing that EarthBound\'s offbeat humor and unconventional structure needed an equally unconventional introduction, Nintendo of America produced what amounted to a full-length strategy guide and bundled it in the box at no extra cost. The document ran to 128 pages and included a complete walkthrough, enemy data, and item lists alongside scratch-and-sniff stickers meant to evoke the game\'s gross-out moments. The writing voice matched Ness\'s adventure precisely — self-aware, absurdist, and frequently addressed directly to the player. It was a landmark piece of game marketing that acknowledged the buyer\'s intelligence while embracing the product\'s weirdness without apology.',
     keyFacts: [
-      'Included eight scratch-and-sniff stickers corresponding to in-game locations',
-      'At 128 pages, it was the longest manual Nintendo had ever bundled with a game',
+      'Included scratch-and-sniff cards tied to the game\'s grosser moments',
+      'At 128 pages, one of the thickest guides Nintendo ever packed in with a game',
       'Contained a full walkthrough, making a separate strategy guide unnecessary',
       'Written in a comedic voice that directly parodied strategy guide conventions'
     ],
@@ -66,81 +66,81 @@
     publisher: 'Capcom USA',
     era: '1980s',
     pageCount: 22,
-    description: 'Capcom\'s manual for Mega Man 2 gave each of the eight Robot Masters a full-page profile complete with serial number, weakness notation, and a prose biography that transformed what were essentially level themes into characters with histories.',
-    longDescription: 'The Mega Man 2 manual arrived in North American homes before the internet made every Japanese source accessible, meaning Capcom USA\'s localization choices were the definitive characterization for an entire generation of players. Each Robot Master received a DWN serial number, a listed height and weight, a weapon description, and a short paragraph of backstory. Air Man was a product of aerial research. Flash Man manipulated time because Dr. Wily required a temporal advantage. The entries were brief but specific enough to feel canonical. Players who memorized these profiles — and many did — carried mental models of Wily\'s creations that no in-game dialogue could have conveyed.',
+    description: 'Capcom\'s manual for Mega Man 2 introduced each of the eight Robot Masters alongside their weapons, giving what were essentially level themes a sense of character for players who had no other source of information.',
+    longDescription: 'The Mega Man 2 manual arrived in North American homes long before the internet made Japanese source material accessible, so for an entire generation of players its descriptions were the definitive word on Dr. Wily\'s creations. Each Robot Master was introduced with a short description of its abilities and weapon, turning stage-select portraits into characters. The entries were brief, but in a game with almost no dialogue they carried most of the characterisation players would ever get.',
     keyFacts: [
-      'First Mega Man manual to assign official DWN serial numbers to all Robot Masters',
-      'Each entry included height, weight, and a unique weapon description',
-      'Prose biographies written by Capcom USA localization staff, not translated from Japanese sources',
+      'Introduced each of Wily\'s eight Robot Masters alongside their weapons',
+      'For most players, the manual was the only source of information about the bosses beyond their stages',
+      'Became a key reference for players in the years before online resources',
       'Established the template for all subsequent Mega Man character documentation'
     ],
     notableFor: 'Turning eight stage-select icons into named, numbered characters with individual histories, solely through manual copy.',
     sections: [
       {
         title: 'The Serial Number System',
-        html: '<p>The DWN numbering system introduced in the Mega Man 2 manual — DWN-009 through DWN-016 for Wily\'s eight creations — gave the fiction a bureaucratic solidity it had previously lacked. Numbers implied a production line. A production line implied a history. Suddenly Wily\'s robots were not just themed obstacles but entries in a catalog of manufactured rebellion.</p><p>Capcom would maintain and expand this numbering system across the entire classic series, and fan documentation has extrapolated it into the hundreds. The seed was planted in a 22-page NES manual by a localization team working under tight deadline and tighter word counts.</p><p>The numbers were small but the implication was large: somewhere, DWN-001 through DWN-008 existed, and they were the Robot Masters from the first game. The series had a continuity, and the manual was its registry.</p>'
+        html: '<p>The DWN numbering system — DWN-009 through DWN-016 for Mega Man 2\'s eight creations — gave the fiction a bureaucratic solidity it had previously lacked. Numbers implied a production line. A production line implied a history. Suddenly Wily\'s robots were not just themed obstacles but entries in a catalog of manufactured rebellion.</p><p>Capcom would maintain and expand this numbering system across the entire classic series, and fan documentation has extrapolated it into the hundreds.</p><p>The numbers were small but the implication was large: somewhere, DWN-001 through DWN-008 existed, and they were the Robot Masters from the first game. The series had a continuity, and the manual was its registry.</p>'
       },
       {
         title: 'Characterization Without Dialogue',
-        html: '<p>Mega Man 2 contains almost no in-game text beyond stage introductions and the ending sequence. The Robot Masters do not speak. They enter, they attack, they die. Everything the player knows about Metal Man\'s contempt for organic life or Bubble Man\'s aquatic design specifications came from the manual alone.</p><p>This was not unusual for NES games of the era, but Capcom\'s choice to invest the manual with specific, consistent characterization had lasting consequences. When the Mega Man cartoon series launched in 1994, its writers used the existing Robot Master profiles as source material. When fan communities began writing fiction in the 1990s, the serial numbers and biographies were treated as gospel.</p><p>A document produced to help players understand which boss was weak to which weapon had, inadvertently, become the foundational text of a franchise\'s extended universe.</p>'
+        html: '<p>Mega Man 2 contains almost no in-game text beyond stage introductions and the ending sequence. The Robot Masters do not speak. They enter, they attack, they die. Everything players knew about the Robot Masters beyond their stages came from printed material.</p><p>This was not unusual for NES games of the era, but Capcom\'s choice to invest the manual with specific, consistent characterization had lasting consequences. When fan communities began writing fiction in the 1990s, the serial numbers and biographies were treated as gospel.</p><p>A document produced to help players understand which boss was weak to which weapon had, inadvertently, become the foundational text of a franchise\'s extended universe.</p>'
       }
     ]
   },
   {
     id: 'metroid-nes-manual',
-    title: 'Metroid NES Manual — The Paragraph That Revealed Samus Was a Woman',
+    title: 'Metroid NES Manual — The Pronoun That Kept the Secret',
     game: 'Metroid',
     platform: 'NES',
     year: 1987,
     publisher: 'Nintendo of America',
     era: '1980s',
     pageCount: 24,
-    description: 'The Metroid manual was unremarkable in most respects, but buried in its lore section was an unambiguous statement that Samus Aran was female — information the game concealed behind an unlock condition that most players never reached.',
-    longDescription: 'Nintendo\'s design for Metroid included a reward for speed completion: finishing the game in under five hours revealed Samus Aran without her Power Suit, confirming a gender that the game otherwise left ambiguous through armor and androgynous name. Most players in 1987 did not finish the game in five hours. Most players who did were surprised. What fewer players noted was that the manual\'s lore section, in describing Samus\'s history with the Galactic Federation, used female pronouns explicitly. The reveal was never hidden in the text — only in the game\'s unlock gate. The manual was the honest document; the game was the one keeping secrets.',
+    description: 'The Metroid manual referred to Samus Aran as "he", keeping one of gaming\'s great twists intact: players who finished the game quickly enough discovered that the armoured bounty hunter was a woman.',
+    longDescription: 'Metroid rewarded fast completion with a surprise: finish the game in under five hours and Samus Aran removes the Power Suit, revealing that the bounty hunter players had controlled all along was a woman. Nintendo protected that twist on paper as well as in the game. The North American manual described Samus as a cyborg-like hunter with a mysterious past and referred to the character as "he", so readers had no reason to suspect the reveal. The rest of the booklet set the scene — the Space Pirates\' theft of the Metroid organism from the Galactic Federation, and their fortress on the planet Zebes ruled by Mother Brain — but it was the deliberate pronoun that made the manual part of the game\'s most famous surprise.',
     keyFacts: [
-      'Used female pronouns for Samus in the backstory section, the only pre-game confirmation of her gender',
-      'Most players in 1987 encountered the gender reveal through the speed-run ending, not the manual',
-      'Described the Space Pirates and Mother Brain in detail absent from in-game cutscenes',
-      'Included the only prose description of Samus\'s early life and Chozo adoption'
+      'Referred to Samus Aran as "he", protecting the ending\'s reveal',
+      'Completing the game in under five hours showed Samus without the Power Suit',
+      'Described the Space Pirates\' theft of the Metroids and their base on Zebes',
+      'Samus\'s later backstory, including the Chozo upbringing, came from later games and materials'
     ],
-    notableFor: 'Containing the earliest explicit textual confirmation that Samus Aran was female, predating widespread awareness of the in-game speed-run reveal.',
+    notableFor: 'Using a single pronoun to keep one of gaming\'s best-known twists hidden from players who read the instructions.',
     sections: [
       {
-        title: 'What the Manual Said Plainly',
-        html: '<p>The relevant passage in the Metroid manual is easy to miss because it sits among paragraphs of worldbuilding about the Space Pirates and the Galactic Federation. It describes Samus as having been raised by the Chozo after her parents were killed on K-2L, notes her enrollment in the Galactic Federation Police, and uses the pronoun "she" without fanfare or emphasis.</p><p>Nintendo was not hiding anything in the manual. The text assumed that players would read it and understand Samus\'s gender as background information. The game\'s reveal mechanic was a reward for skill, not a correction of ambiguity — the ambiguity was only experienced by players who skipped the manual, which in 1987 was most of them.</p><p>This gap between document and experience created one of gaming\'s most discussed "reveals," which was never really a reveal at all for readers who started with the box.</p>'
+        title: 'What the Manual Hid',
+        html: '<p>The Metroid manual spends its story pages on the Space Pirates, the Galactic Federation and the Metroid organism, and introduces Samus Aran as a lone hunter about whom little is known. Crucially, it calls Samus "he". For readers, the armoured figure on screen was simply a man in a suit.</p><p>That small choice turned the ending into a genuine shock. Players who finished quickly enough watched the helmet come off — and the manual, far from spoiling the moment, had helped set it up.</p>'
       },
       {
         title: 'The Armor as a Design Choice',
-        html: '<p>The Power Suit obscured Samus\'s gender as a gameplay decision, not a narrative deception. Miyamoto and Sakamoto wanted a figure that felt imposing and alien within the Metroid environments, and full armor accomplished that. The decision to reward speed completers with the unarmored Samus was added as a bonus — an Easter egg in modern terminology.</p><p>What the design team did not fully account for was the degree to which players would experience the armored figure as the default characterization, and the manual\'s lore section as supplementary material rather than primary text. In the pre-internet era, the box contents were the canon. Players who read carefully knew. Players who played quickly discovered. Players who did neither — the majority — remained uncertain for years.</p><p>The Metroid manual\'s treatment of Samus is now cited in game studies literature as an early example of the gap between authored identity and player-constructed identity, emerging entirely from the accident of what players chose to read before picking up the controller.</p>'
+        html: '<p>The Power Suit gave Samus an imposing, alien presence in Metroid\'s environments, and hid the character\'s identity as a matter of course. The decision to reward quick completions with the unarmoured Samus turned that into one of the medium\'s earliest twists.</p><p>In the pre-internet era, the box contents were the canon, and the canon said "he". Players who finished fast discovered the truth; players who did not often learned it only years later. The Metroid manual is a small, early example of game documentation being used to manage a surprise rather than explain a system.</p>'
       }
     ]
   },
   {
     id: 'metal-gear-solid-manual',
-    title: 'Metal Gear Solid Manual — When Reading the Instructions Was Part of the Boss Fight',
+    title: 'Metal Gear Solid — When the Box Was Part of the Puzzle',
     game: 'Metal Gear Solid',
     platform: 'PlayStation',
     year: 1998,
     publisher: 'Konami',
     era: '1990s',
     pageCount: 52,
-    description: 'Metal Gear Solid\'s manual doubled as a gameplay resource through intentional design — the boss Psycho Mantis famously instructed players to move their controller to the second port, information delivered only to those who had read the manual\'s controller section.',
-    longDescription: 'Hideo Kojima built the Psycho Mantis boss fight around a mechanic that required players to consult documentation: the antagonist\'s claimed ability to read the DualShock\'s vibration signals could only be defeated by switching the controller to port two, a solution that the game itself withheld and that the manual\'s controller diagram explained in passing. Players who had read the manual might remember it; those who had not faced either an extended frustrating fight or reliance on a friend who had. The manual also contained weapon statistics, codec frequency lists, and enemy behavior notes that rewarded careful reading with tactical advantages unavailable to players who skipped it. Kojima was designing an experience in which the physical artifact of documentation was itself a game mechanic.',
+    description: 'Metal Gear Solid made its packaging part of the game: Meryl\'s codec frequency was printed on the back of the CD case, and Psycho Mantis could only be beaten by moving the controller to the second port.',
+    longDescription: 'Hideo Kojima built several of Metal Gear Solid\'s most famous moments around the player\'s physical surroundings. When Snake needs to contact Meryl, the game tells the player that her codec frequency is on the back of the CD case — and it is, printed on the jewel case\'s rear artwork. Psycho Mantis reads the player\'s memory card and predicts every move until the controller is switched to the second port, a solution Colonel Campbell suggests over the codec. These moments made the game\'s packaging and hardware part of the experience, and they are a large part of why the game is remembered as one of the medium\'s great fourth-wall-breaking works.',
     keyFacts: [
-      'Contained the codec frequency for Master Miller, essential for a late-game puzzle',
-      'Psycho Mantis fight required knowledge of controller port switching, diagrammed in the manual',
-      'Weapon stats and ammo capacities were only fully documented in print, not in-game',
-      'The manual\'s existence was acknowledged by in-game characters breaking the fourth wall'
+      'Meryl\'s codec frequency was printed on the back of the CD case, and the game told players to look there',
+      'Psycho Mantis is beaten by moving the controller to the second port, a hint given in-game by Colonel Campbell',
+      'Mantis also reads the player\'s memory card and comments on other Konami saves',
+      'The packaging and hardware became part of the game\'s fourth-wall-breaking design'
     ],
-    notableFor: 'Being the first game manual to function as an explicit gameplay mechanic through Psycho Mantis\'s fourth-wall-breaking boss encounter.',
+    notableFor: 'Turning its packaging and the console itself into parts of the game, most famously with Meryl\'s codec frequency and Psycho Mantis.',
     sections: [
       {
-        title: 'The Boss Fight That Required Homework',
-        html: '<p>The Psycho Mantis encounter is the canonical example of a game manual serving as a required resource rather than optional background. Mantis announces his ability to read Snake\'s mind through the DualShock controller and claims to be unbeatable so long as the connection persists. The solution — switching the controller to port two — bypasses the supposed psychic link entirely.</p><p>Kojima knew that most players would not remember this from the manual when they reached the fight. The design counted on confusion, on extended failure, on players calling friends or consulting magazines. The eventual solution, whether discovered or shared, produced a moment of revelation that felt uniquely collaborative. You solved it, or someone helped you solve it, and the help came from reading.</p><p>No FAQ existed in 1998 for most players. The manual was the FAQ. This was the last generation in which that statement was fully true.</p>'
+        title: 'The Frequency on the Box',
+        html: '<p>Early in Metal Gear Solid, players are told that Meryl\'s codec frequency is "on the back of the CD case". Many players searched the game for it; the answer was literally in their hands, printed on the packaging. It is a small joke and a genuine puzzle at once, and it set the tone for a game that kept reaching past the screen.</p><p>Psycho Mantis took the idea further. He reads the player\'s memory card, makes the controller vibrate on command, and dodges every attack until the controller is moved to the second port — a fix Colonel Campbell suggests over the codec. The fight is remembered because it treats the player\'s own hardware as part of the arena.</p>'
       },
       {
-        title: 'A Catalog of Intentional Details',
-        html: '<p>Beyond the Mantis encounter, the Metal Gear Solid manual rewarded thorough readers at multiple points. The codec frequency for Meryl\'s radio contact appeared on the game\'s CD case — but other frequencies, including one used late in the game, appeared only in the manual. Kojima\'s team was constructing an experience that extended across multiple physical surfaces.</p><p>The weapon statistics pages gave players information that in-game descriptions abbreviated. The SOCOM versus FAMAS accuracy ratings, the stinger missile\'s lock-on parameters, the claymore\'s detection radius — these numbers mattered in a game where resource management and tactical choice defined survival.</p><p>The result was a manual that functioned as a second layer of the game. Players who read it completely were more capable players. The document was not merely documentation but instruction in the full sense: it taught you how to fight, and in one specific case, exactly what to do when a fictional psychic tried to stop you.</p>'
+        title: 'Beyond the Screen',
+        html: '<p>These moments only work because Kojima assumed players were sitting with a real box and a real console in front of them. The packaging, the controller ports and the memory card all became pieces of the game\'s design.</p><p>That approach has aged into one of Metal Gear Solid\'s signatures. Later releases on other platforms had to find new answers for the same moments — a reminder of how tightly the original was bound to its physical form.</p>'
       }
     ]
   },
@@ -156,20 +156,20 @@
     description: 'Capcom\'s manual for the SNES port of Street Fighter II gave each of the eight playable fighters a full biography, move list, and illustrated portrait, establishing character backstories that the arcade version\'s attract mode had only sketched.',
     longDescription: 'The arcade Street Fighter II communicated character identity through brief endings and illustrated win screens, but Capcom\'s SNES manual had 32 pages to fill and used them to develop each fighter in prose. Ryu and Ken became distinct rather than palette-swapped when their divergent philosophies were articulated. Chun-Li\'s motivation — avenging her father against Shadaloo — received a paragraph that elevated her from novelty female fighter to protagonist with stakes. Guile\'s military backstory and Blanka\'s origin in an Amazon crash were presented with the same weight, suggesting a world of varied histories colliding in a tournament. Players who read these profiles before choosing a main character approached the game with a sense of narrative investment the hardware could not provide.',
     keyFacts: [
-      'First official English-language documentation of M. Bison and Shadaloo\'s backstory',
-      'Chun-Li\'s father\'s death at Bison\'s hands was first established in this manual, not in the arcade',
+      'Gave each fighter a biography and illustrated portrait',
+      'Spelled out Chun-Li\'s quest to avenge her father',
       'Each fighter profile included a "special moves" section and a "fighting style" classification',
       'Illustrated portraits by Capcom\'s art staff became reference points for years of fan art'
     ],
     notableFor: 'Providing the first complete English-language canon for Street Fighter II\'s eight fighters, establishing lore that subsequent games would build upon.',
     sections: [
       {
-        title: 'Inventing Canon Under Time Pressure',
-        html: '<p>Capcom USA\'s localization team in the early 1990s operated with minimal guidance from the Japanese development staff and almost no translation resources dedicated to backstory documentation. The character biographies in the SNES Street Fighter II manual were written in English first, then occasionally reconciled with Japanese materials afterward — which meant that what American players read as official lore was sometimes invented wholesale by a localization writer on a deadline.</p><p>The consequences were significant. Blanka\'s origin as Jimmy, a boy who survived a plane crash in the Amazon and developed electrical powers through adaptation, appeared in this manual and was subsequently canonized in official Capcom materials. Guile\'s relationship with Charlie Nash, mentioned briefly in the manual\'s backstory, became the seed of a narrative thread that carried through Alpha 3 and Street Fighter V.</p><p>Localization as authorship is common in the history of Japanese gaming in North America, but the Street Fighter II manual is one of its most consequential examples.</p>'
+        title: 'Characters on Paper',
+        html: '<p>The arcade Street Fighter II told its stories mostly through brief win quotes and endings. The SNES manual had pages to fill, and used them to give each fighter a biography, a portrait and a sense of motivation — Chun-Li\'s search for her father\'s killer, Guile\'s vendetta over his friend Charlie, Blanka\'s mysterious jungle origins.</p><p>For home players, those profiles were often their first real introduction to the cast, and they shaped how a generation thought about characters who, in the arcade, had been little more than fighting styles.</p>'
       },
       {
         title: 'Move Lists as Pedagogy',
-        html: '<p>The special moves section of each character\'s manual entry served a practical function that the arcade version had left entirely undocumented: it told players how to perform the moves. Hadouken inputs, Sonic Boom charges, Yoga Flame motions — none of these were displayed in-game. Players discovered them through experimentation, accident, or the manual.</p><p>Capcom\'s decision to document the full move list in the SNES manual was a concession to the home market\'s different conditions. In arcades, move discovery happened socially — you watched the player next to you, asked a regular, or copied what you saw. At home, alone with a cartridge, the manual was the only teacher available.</p><p>This created a meaningful divide between players who had read the manual and players who had not. A Ryu player who knew the Shoryuken input had a dominant anti-air option. One who did not was limited to normals. The manual was not just story — it was access to the game\'s full mechanical vocabulary.</p>'
+        html: '<p>The special moves section of each character\'s manual entry served a practical function that the arcade version had barely documented: it told players how to perform the moves. Hadouken inputs, Sonic Boom charges, Yoga Flame motions — none of these were displayed in-game, and arcade cabinets offered only a small instruction card. Players discovered them through experimentation, accident, or the manual.</p><p>Capcom\'s decision to document the full move list in the SNES manual was a concession to the home market\'s different conditions. In arcades, move discovery happened socially — you watched the player next to you, asked a regular, or copied what you saw. At home, alone with a cartridge, the manual was the only teacher available.</p><p>This created a meaningful divide between players who had read the manual and players who had not. A Ryu player who knew the Shoryuken input had a dominant anti-air option. One who did not was limited to normals. The manual was not just story — it was access to the game\'s full mechanical vocabulary.</p>'
       }
     ]
   },
@@ -183,7 +183,7 @@
     era: '1980s',
     pageCount: 48,
     description: 'Nintendo\'s bundled manual for Dragon Warrior — included free with Nintendo Power subscriptions — constructed the kingdom of Alefgard with the thoroughness of a travel guide, covering history, monsters, items, and spells in a document that functioned as both lore primer and reference sheet.',
-    longDescription: 'Dragon Warrior arrived in North America under unusual circumstances: Nintendo of America acquired the localization rights and distributed the game free to Nintendo Power subscribers, pairing it with a manual that had to do double duty as introduction and walkthrough. The result was a 48-page document that presented Alefgard\'s history through in-fiction prose — the legend of Erdrick told as myth rather than instruction — while simultaneously providing monster stats, spell descriptions, and item effect tables. Players who kept the manual beside them during play had a resource that compressed what might otherwise require dozens of hours of trial-and-error exploration into accessible reference data. It was among the most complete game documents Nintendo had produced for an RPG.',
+    longDescription: 'Dragon Warrior arrived in North America under unusual circumstances: Nintendo of America published it at retail in 1989 and later gave copies away free to Nintendo Power subscribers, and it shipped with a manual that had to do double duty as introduction and walkthrough. The result was a 48-page document that presented Alefgard\'s history through in-fiction prose — the legend of Erdrick told as myth rather than instruction — while simultaneously providing monster stats, spell descriptions, and item effect tables. Players who kept the manual beside them during play had a resource that compressed what might otherwise require dozens of hours of trial-and-error exploration into accessible reference data. It was among the most complete game documents Nintendo had produced for an RPG.',
     keyFacts: [
       'Distributed free to Nintendo Power subscribers, reaching players who did not purchase the game retail',
       'Included a full monster compendium with experience and gold drop values',
@@ -212,18 +212,18 @@
     era: '1980s',
     pageCount: 16,
     description: 'The Super Mario Bros. manual established the Mushroom Kingdom\'s foundational mythology in sixteen pages, introducing the Koopa Tribe\'s transformation of citizens into bricks and stones — lore the game never referenced but that shaped how a generation of players understood what they were running through.',
-    longDescription: 'Nintendo\'s manual for the American release of Super Mario Bros. contained a piece of world-building that became notorious decades later when Miyamoto admitted it was news to him: the explanation that the brick blocks scattered across the Mushroom Kingdom were transformed citizens, converted by Bowser\'s dark magic. The manual\'s prose described the Mushroom People as having been turned into bricks, stones, and horsehair plants, giving Mario\'s block-smashing habit an accidental grimness that the cheerful visuals did nothing to suggest. Whether intentional dark comedy or earnest localization creativity, this lore defined the setting for a generation before the internet made cross-referencing Japanese source material commonplace.',
+    longDescription: 'Nintendo\'s manual for the American release of Super Mario Bros. contained a piece of world-building that became notorious decades later: the brick blocks scattered across the Mushroom Kingdom were transformed citizens, converted by Bowser\'s dark magic. The manual\'s prose described the Mushroom People as having been turned into bricks, stones, and horsehair plants, giving Mario\'s block-smashing habit an accidental grimness that the cheerful visuals did nothing to suggest. Carried over from the Japanese manual, this lore defined the setting for a generation of players.',
     keyFacts: [
       'Described Mushroom Kingdom citizens as having been transformed into the game\'s environmental blocks',
       'First official documentation of Bowser as the King of the Koopa Tribe with a specific origin',
       'Established Princess Toadstool as the only one with power to reverse the citizens\' transformation',
-      'Miyamoto later stated in interviews that the brick-as-transformed-citizens lore was invented by localization'
+      'The same story appears in the original Japanese manual'
     ],
-    notableFor: 'Introducing the accidental lore that Mario smashes transformed people when breaking bricks, a detail the game\'s creator was unaware of until years later.',
+    notableFor: 'Introducing the eerie lore that the Mushroom Kingdom\'s bricks are transformed citizens — a detail the game itself never mentions.',
     sections: [
       {
-        title: 'The Dark Subtext Nintendo Did Not Write',
-        html: '<p>The Super Mario Bros. manual\'s most quoted passage explains why the Mushroom Kingdom is in peril: "One day the Koopa tribe of turtles invaded the Mushroom Kingdom. Famous for their black magic, the Koopas easily took over the kingdom of the peace-loving Mushroom People. The Mushroom People were turned into mere stones, bricks, and even field horsehair plants." This was not in the Japanese documentation. It was written for American players by Nintendo of America\'s localization staff.</p><p>The consequence is that players who read this passage before their first session understood every brick block as a potential former citizen. Mario was not building-block-smashing his way to a flagpole; he was potentially re-smashing people. The manual installed this reading without apparent awareness of its implications.</p><p>Miyamoto\'s 2012 revelation that the brick lore was unknown to him sparked renewed interest in the document. A generation raised on the manual had been playing with a mythology their game\'s creator never intended.</p>'
+        title: 'The Dark Subtext in the Fine Print',
+        html: '<p>The Super Mario Bros. manual\'s most quoted passage explains why the Mushroom Kingdom is in peril: "One day the Koopa tribe of turtles invaded the Mushroom Kingdom. Famous for their black magic, the Koopas easily took over the kingdom of the peace-loving Mushroom People. The Mushroom People were turned into mere stones, bricks, and even field horsehair plants." The same story appears in the original Japanese booklet.</p><p>The consequence is that players who read this passage before their first session understood every brick block as a potential former citizen. Mario was not building-block-smashing his way to a flagpole; he was potentially re-smashing people. The manual installed this reading without dwelling on its implications.</p><p>The idea that every brick might be a former citizen has fascinated players ever since.</p>'
       },
       {
         title: 'Setting the Template for Nintendo Documentation',
@@ -252,7 +252,7 @@
     sections: [
       {
         title: 'Character Before Content',
-        html: '<p>The original Sonic game contains almost no story. There is no text crawl, no dialogue, no cutscene beyond a brief title card. What players knew about Sonic as a character — his impatience, his contempt for slowness, his relationship with the animals he rescues from Robotnik\'s machines — came from the manual entirely.</p><p>Sega\'s localization team made a deliberate choice to front-load personality. The character introduction described Sonic as someone who got bored if you did not play and would begin tapping his foot — a behavior that Sega then implemented in the game as the idle animation. The manual described a personality and the game code expressed it; the document preceded the behavior.</p><p>This was character design through documentation. Players who read the manual had a Sonic in mind before they pressed Start. The idle tap became confirmation of what they already knew about him.</p>'
+        html: '<p>The original Sonic game contains almost no story. There is no text crawl, no dialogue, no cutscene beyond a brief title card. What players knew about Sonic as a character — his impatience, his contempt for slowness, his relationship with the animals he rescues from Robotnik\'s machines — came from the manual entirely.</p><p>Sega\'s localization team made a deliberate choice to front-load personality. The manual described a hero who hated waiting, and the game backed it up: leave Sonic idle and he taps his foot impatiently.</p><p>Players who read the manual had a Sonic in mind before they pressed Start. The idle tap became confirmation of what they already knew about him.</p>'
       },
       {
         title: 'Robotnik\'s Industrial Logic',
@@ -339,11 +339,11 @@
     sections: [
       {
         title: 'The Action Hero Blueprint',
-        html: '<p>Konami\'s manual writers were working with a visual vocabulary that the NES hardware constrained severely. Bill Rizer and Lance Bean were distinguishable in the game only by the colors of their sprites — one blue, one orange at the character select screen. In the manual, they became people.</p><p>Bill\'s profile described a soldier shaped by extreme athletic conditioning, a competitor who approached every mission as a physical test. Lance\'s entry emphasized tactical precision and a colder emotional register. The distinction was subtle by the standards of the films they referenced, but in the context of an NES game where the two characters were mechanically identical, any differentiation had disproportionate impact on how players related to their avatar.</p><p>Players who read the manual before sitting down for a two-player session had a reason to choose one character over the other beyond preferred color. Bill was the brash one. Lance was the methodical one. The choice was meaningless to the game engine and meaningful to the imagination.</p>'
+        html: '<p>Konami\'s manual writers were working with a visual vocabulary that the NES hardware constrained severely. Bill Rizer and Lance Bean were distinguishable in the game only by the colors of their sprites — Bill in blue for player one, Lance in red for player two. In the manual, they became people.</p><p>Bill\'s profile described a soldier shaped by extreme athletic conditioning, a competitor who approached every mission as a physical test. Lance\'s entry emphasized tactical precision and a colder emotional register. The distinction was subtle by the standards of the films they referenced, but in the context of an NES game where the two characters were mechanically identical, any differentiation had disproportionate impact on how players related to their avatar.</p><p>Players who read the manual before sitting down for a two-player session had a reason to choose one character over the other beyond preferred color. Bill was the brash one. Lance was the methodical one. The choice was meaningless to the game engine and meaningful to the imagination.</p>'
       },
       {
         title: 'Building Stakes for a Difficult Game',
-        html: '<p>Contra is famous for its difficulty — three lives, limited continues, and enemy patterns that required memorization to survive. The manual\'s job was to make players want to endure this difficulty by establishing stakes worth suffering for. An alien terrorist organization threatening global security, two elite soldiers dispatched to stop them alone — the framing was engineered to make dying on stage three feel like the cost of genuine heroism rather than mere game failure.</p><p>This tonal alignment between manual and game is something Konami executed particularly well. The game felt like an action movie; the manual sounded like one. Players who absorbed both had a coherent experience in which the difficulty was not arbitrary cruelty but the realistic cost of fighting aliens with a handgun and a determination to never stop running forward.</p><p>The Konami Code — which granted ninety-nine lives and became one of gaming\'s most enduring cultural references — was not documented in the manual. It was discovered by players who needed it. This gap between what the manual gave and what the game secretly allowed is itself a small piece of gaming history.</p>'
+        html: '<p>Contra is famous for its difficulty — three lives, limited continues, and enemy patterns that required memorization to survive. The manual\'s job was to make players want to endure this difficulty by establishing stakes worth suffering for. An alien terrorist organization threatening global security, two elite soldiers dispatched to stop them alone — the framing was engineered to make dying on stage three feel like the cost of genuine heroism rather than mere game failure.</p><p>This tonal alignment between manual and game is something Konami executed particularly well. The game felt like an action movie; the manual sounded like one. Players who absorbed both had a coherent experience in which the difficulty was not arbitrary cruelty but the realistic cost of fighting aliens with a rifle and a determination to never stop running forward.</p><p>The Konami Code — which granted thirty lives and became one of gaming\'s most enduring cultural references — was not documented in the manual. It was discovered by players who needed it. This gap between what the manual gave and what the game secretly allowed is itself a small piece of gaming history.</p>'
       }
     ]
   },

@@ -14,7 +14,7 @@ module.exports = [
         platform: 'SNES',
         year: 1992,
         quality: 'Excellent',
-        notes: 'The SNES port by Capcom was technically impressive, reproducing all twelve characters and most of the CPS-1 arcade\'s gameplay faithfully on Mode 7 hardware. Audio quality was noticeably compressed compared to the arcade, and the smaller color palette slightly muted some backgrounds, but it was the gold standard for home conversions at the time.',
+        notes: 'The SNES port by Capcom was technically impressive, reproducing all twelve characters and most of the CPS-1 arcade\'s gameplay faithfully. Audio quality was noticeably compressed compared to the arcade, and the smaller color palette slightly muted some backgrounds, but it was the gold standard for home conversions at the time.',
       },
       {
         platform: 'Sega Genesis',
@@ -108,9 +108,9 @@ module.exports = [
       },
       {
         platform: 'Sega Saturn',
-        year: 1994,
+        year: 1997,
         quality: 'Acceptable',
-        notes: 'The Saturn version suffered from a compressed, low-resolution display and performance issues that reviewers noted even against the inferior 32X port in certain areas. It included all the levels from the PC version but used a modified engine that did not fully exploit the Saturn\'s architecture.',
+        notes: 'The Saturn version, released in 1997 and based on the PlayStation conversion, suffered from a choppy frame rate and lost the PlayStation version\'s coloured lighting effects, and was widely considered inferior to its PlayStation counterpart.',
       },
       {
         platform: 'PlayStation',
@@ -122,7 +122,7 @@ module.exports = [
     keyFacts: [
       'The PlayStation port added coloured lighting that was not present in the original PC release',
       'Aubrey Hodges composed entirely new ambient music for the PlayStation version, distinct from Bobby Prince\'s PC soundtrack',
-      'The SNES port required the Super FX 2 chip — the same chip used in Star Fox — to function at all',
+      'The SNES port required the Super FX 2 chip — a more powerful successor to the chip used in Star Fox — to function at all',
       'Doom was eventually ported to every major platform of the era, spawning the running joke that it runs on everything',
     ],
     keyword: 'doom console ports super fx',
@@ -134,13 +134,13 @@ module.exports = [
     year: 1991,
     era: '1990s',
     description: 'Sonic the Hedgehog\'s simultaneous 8-bit adaptations for the Game Gear and Master System were entirely new games designed around weaker hardware rather than direct ports, resulting in a distinctly different — and largely underappreciated — branch of Sonic\'s early history.',
-    longDescription: 'When Sega launched Sonic the Hedgehog for the Genesis in June 1991, they simultaneously released 8-bit versions for the Game Gear and Master System developed by Ancient (the studio of composer Yuzo Koshiro\'s mother, Tomoko Koshiro, acting as producer, with primary development by Aspect Co.). These were not ports of the Genesis game but wholly new titles built from scratch using the same characters and concept. The level layouts, boss encounters, and physics engine were all redesigned to suit the 8-bit hardware\'s limitations in processing and screen resolution. Green Hill Zone appears in both the 16-bit and 8-bit games but plays entirely differently due to reduced speed and altered platform geometry. The 8-bit versions introduced elements not in the Genesis original, including a map screen and a different final confrontation with Eggman, and are regarded by scholars of the series as overlooked works in their own right rather than inferior copies.',
+    longDescription: 'Sega launched Sonic the Hedgehog for the Genesis in June 1991 and followed it later that year with 8-bit versions for the Game Gear and Master System developed by Ancient, the studio of composer Yuzo Koshiro and his family. These were not ports of the Genesis game but wholly new titles built from scratch using the same characters and concept. The level layouts, boss encounters, and physics engine were all redesigned to suit the 8-bit hardware\'s limitations in processing and screen resolution. Green Hill Zone appears in both the 16-bit and 8-bit games but plays entirely differently due to reduced speed and altered platform geometry. The 8-bit versions introduced elements not in the Genesis original, including a map screen and a different final confrontation with Eggman, and are regarded by scholars of the series as overlooked works in their own right rather than inferior copies.',
     versions: [
       {
         platform: 'Game Gear',
         year: 1991,
         quality: 'Good',
-        notes: 'The Game Gear version was developed by Aspect Co. as an original game sharing the Genesis game\'s theme and characters but featuring entirely different level designs. It ran at a reduced screen resolution and speed, but was designed around those constraints and is considered one of the stronger Game Gear launch titles.',
+        notes: 'The Game Gear version was developed by Ancient as an original game sharing the Genesis game\'s theme and characters but featuring entirely different level designs. It ran at a reduced screen resolution and speed, but was designed around those constraints and is considered one of the stronger Game Gear launch titles.',
       },
       {
         platform: 'Master System',
@@ -156,7 +156,7 @@ module.exports = [
       },
     ],
     keyFacts: [
-      'The 8-bit Sonic games were developed by Aspect Co., not the internal Sonic Team that created the Genesis original',
+      'The first 8-bit Sonic game was developed by Ancient, not the internal Sonic Team that created the Genesis original; Aspect handled later 8-bit entries',
       'Level layouts and physics in the 8-bit versions were entirely redesigned, not scaled down from the Genesis game',
       'The Master System version was widely sold in Europe and Brazil, markets where the Genesis had less dominance',
       'Ancient, the development studio associated with the 8-bit versions, was also responsible for Streets of Rage 2\'s soundtrack',
@@ -170,7 +170,7 @@ module.exports = [
     year: 1989,
     era: '1990s',
     description: 'Final Fight\'s SNES port was the system\'s flagship launch-window title but arrived with one player character removed, two-player co-op absent, and significant content censored, making it a textbook case of the compromises demanded by both hardware limitations and Nintendo\'s content policies.',
-    longDescription: 'Capcom\'s Final Fight was a high-profile CPS-1 arcade brawler and its SNES conversion was heavily marketed by Nintendo as a showcase for the new console\'s power. However, the port shipped with Guy removed as a playable character (leaving only Haggar and Cody), the entire Industrial Area stage cut, two-player simultaneous mode absent despite the hardware supporting it, and several content changes made under Nintendo\'s content guidelines: the female enemies Poison and Roxy were replaced with male characters in both the Japanese and Western versions, and a stage where enemies drank from beer bottles was altered. The Sega CD version released in 1993 restored two-player co-op, all stages, and the original enemies, making it a significantly more complete game and demonstrating what the SNES version could have been. Subsequent Super NES releases — Final Fight Guy and Final Fight 2 — addressed some but not all of the original port\'s shortcomings.',
+    longDescription: 'Capcom\'s Final Fight was a high-profile CPS-1 arcade brawler and its SNES conversion was heavily marketed by Nintendo as a showcase for the new console\'s power. However, the port shipped with Guy removed as a playable character (leaving only Haggar and Cody), the entire Industrial Area stage cut, two-player simultaneous mode absent despite the hardware supporting it, and several content changes made under Nintendo\'s content guidelines: the female enemies Poison and Roxy were replaced with male characters in the Western versions, and a stage where enemies drank from beer bottles was altered. The Sega CD version released in 1993 restored two-player co-op, all stages, and the original enemies, making it a significantly more complete game and demonstrating what the SNES version could have been. Subsequent Super NES releases — Final Fight Guy and Final Fight 2 — addressed some but not all of the original port\'s shortcomings.',
     versions: [
       {
         platform: 'SNES',
@@ -188,7 +188,7 @@ module.exports = [
         platform: 'Sega CD',
         year: 1993,
         quality: 'Good',
-        notes: 'The Sega CD version by Capcom restored two-player simultaneous co-op, all six stages including the cut Industrial Area, and all three playable characters, making it the most complete home version of the game prior to modern re-releases. Load times from the CD medium were the primary complaint.',
+        notes: 'The Sega CD version, published by Sega under licence, restored two-player simultaneous co-op, all six stages including the cut Industrial Area, and all three playable characters, making it the most complete home version of the game prior to modern re-releases. Load times from the CD medium were the primary complaint.',
       },
       {
         platform: 'PC (DOS)',
@@ -200,7 +200,7 @@ module.exports = [
     keyFacts: [
       'The SNES version is missing an entire stage — the Industrial Area — not present in any other home version until the Sega CD release',
       'Two-player co-op was omitted from the SNES version, a decision Capcom staff later attributed to memory constraints',
-      'Female enemies Poison and Roxy were replaced with male characters in both the Japanese and Western SNES versions',
+      'Female enemies Poison and Roxy were replaced with male characters in the Western SNES versions',
       'The Sega CD port is considered the most faithful console version of the original arcade game',
     ],
     keyword: 'final fight snes censorship missing content',
@@ -212,7 +212,7 @@ module.exports = [
     year: 1989,
     era: '1980s',
     description: 'Konami\'s four-player TMNT arcade brawler was one of the most beloved coin-ops of its era, and its home ports — particularly the NES version — demonstrated the significant sacrifices required to bring a wide-screen, four-player arcade experience to single-screen home hardware.',
-    longDescription: 'Konami\'s TMNT arcade cabinet allowed up to four simultaneous players on a wide horizontal screen with large, colourful sprites and was hugely profitable. Translating that experience to the NES meant radical concessions: the NES version reduced the player count to two, compressed sprites considerably, altered level layouts, and cut or redesigned many enemies and bosses. Despite these compromises, the NES version sold over four million copies and was one of the best-selling games on the platform, demonstrating that a technically inferior port could still achieve massive commercial success when the underlying IP was powerful enough. The later SNES port — released as Teenage Mutant Ninja Turtles IV: Turtles in Time — was a different game entirely rather than a port of the original arcade, though it also began life as an arcade title before being ported.',
+    longDescription: 'Konami\'s TMNT arcade cabinet allowed up to four simultaneous players with large, colourful sprites and was hugely profitable. Translating that experience to the NES meant radical concessions: the NES version reduced the player count to two, compressed sprites considerably, altered level layouts, and cut or redesigned many enemies and bosses. Despite these compromises, the NES version sold over four million copies and was one of the best-selling games on the platform, demonstrating that a technically inferior port could still achieve massive commercial success when the underlying IP was powerful enough. The later SNES port — released as Teenage Mutant Ninja Turtles IV: Turtles in Time — was a different game entirely rather than a port of the original arcade, though it also began life as an arcade title before being ported.',
     versions: [
       {
         platform: 'NES',
@@ -224,7 +224,7 @@ module.exports = [
         platform: 'SNES (Turtles in Time)',
         year: 1992,
         quality: 'Excellent',
-        notes: 'Turtles in Time for the SNES was a port of the 1991 arcade sequel rather than the 1989 original, and was one of the most technically impressive brawler ports of the 16-bit era — preserving four-player capability (on supported hardware via multi-tap), large sprites, and smooth animation. It is considered one of the best games on the SNES.',
+        notes: 'Turtles in Time for the SNES was a port of the 1991 arcade sequel rather than the 1989 original, and was one of the most technically impressive brawler ports of the 16-bit era — preserving large sprites and smooth animation, though cutting the arcade\'s four players to two. It is considered one of the best games on the SNES.',
       },
       {
         platform: 'PC (DOS)',
@@ -234,8 +234,8 @@ module.exports = [
       },
     ],
     keyFacts: [
-      'The original arcade cabinet supported four simultaneous players on a wide-format cabinet with two screens side by side',
-      'The NES port sold over four million copies despite removing two-player co-op from the arcade\'s four-player format',
+      'The original arcade cabinet supported four simultaneous players around a single screen',
+      'The NES port sold over four million copies despite cutting the arcade\'s four players to two',
       'Turtles in Time (SNES) is a port of the 1991 arcade sequel, not the 1989 original',
       'Konami also developed a separate single-player NES game (1989) unrelated to the arcade — often confused with the arcade port',
     ],
@@ -290,7 +290,7 @@ module.exports = [
     year: 1986,
     era: '1980s',
     description: 'Sega\'s Out Run became one of the most widely ported arcade games of the late 1980s, appearing on nearly every home computer and console of the era with results ranging from impressive to barely recognisable.',
-    longDescription: 'Yu Suzuki\'s Out Run was a technological showpiece in the arcades, running on Sega\'s custom "Space Harrier" board with sprite-scaling hardware that produced a sense of speed and depth no home computer of 1986–1988 could directly replicate. The challenge for home conversions was to convey the game\'s feeling — open roads, Ferrari Testarossa, branching routes, and Hiroshi Kawaguchi\'s iconic soundtrack — using hardware a fraction as powerful. Sega\'s own Mega Drive (Genesis) conversion (1991) was the closest to the source and is widely considered the definitive home version, while the C64 version by US Gold (1987) was derided on release for its slow speed, though it has since been reassessed as a competent effort given extreme hardware constraints. The Amiga version sat between these extremes: faster than the 8-bit versions but still lacking the smooth scaling of the arcade.',
+    longDescription: 'Yu Suzuki\'s Out Run was a technological showpiece in the arcades, running on dedicated Sega hardware — a successor to the Space Harrier board — with sprite-scaling capability that produced a sense of speed and depth no home computer of 1986–1988 could directly replicate. The challenge for home conversions was to convey the game\'s feeling — open roads, Ferrari Testarossa, branching routes, and Hiroshi Kawaguchi\'s iconic soundtrack — using hardware a fraction as powerful. Sega\'s own Mega Drive (Genesis) conversion (1991) was the closest to the source and is widely considered the definitive home version, while the C64 version by US Gold (1987) was derided on release for its slow speed, though it has since been reassessed as a competent effort given extreme hardware constraints. The Amiga version sat between these extremes: faster than the 8-bit versions but still lacking the smooth scaling of the arcade.',
     versions: [
       {
         platform: 'Commodore 64',
@@ -300,7 +300,7 @@ module.exports = [
       },
       {
         platform: 'Amiga',
-        year: 1987,
+        year: 1988,
         quality: 'Acceptable',
         notes: 'The Amiga port ran faster than 8-bit versions and offered better colour reproduction, but still fell short of the arcade\'s smooth pseudo-3D scaling. It was well-received for its time as one of the better home computer ports and used the Amiga\'s custom audio chip to deliver a reasonable approximation of Kawaguchi\'s soundtrack.',
       },
@@ -324,7 +324,7 @@ module.exports = [
       },
     ],
     keyFacts: [
-      'The arcade original ran on Sega\'s custom 16-bit "Space Harrier" board with dedicated sprite-scaling hardware',
+      'The arcade original ran on dedicated Sega hardware, a successor to the Space Harrier board, with sprite-scaling capability',
       'Out Run\'s soundtrack by Hiroshi Kawaguchi — Magical Sound Shower, Passing Breeze, Splash Wave — is among the most recognised in arcade history',
       'The game featured a branching route system with five possible endings depending on which forks the player took',
       'The Mega Drive version arrived five years after the arcade, by which time hardware capabilities had advanced enough for a faithful port',
@@ -338,7 +338,7 @@ module.exports = [
     year: 1980,
     era: '1980s',
     description: 'Pac-Man\'s 1982 Atari 2600 port is one of the most notorious conversions in gaming history — a rushed, technically compromised release that contributed to the 1983 video game crash by failing to meet the expectations of consumers who paid full price expecting an arcade-quality experience.',
-    longDescription: 'Pac-Man was the best-selling arcade game of all time by 1981, and Atari paid Namco a substantial licensing fee for the home rights, marketing the 2600 version as "the arcade game for your home" in television advertising. The port, programmed by Tod Frye under a strict six-month deadline, made significant compromises due to the 2600\'s 128 bytes of RAM and the hardware\'s inability to display multiple sprites on the same horizontal line: the four ghosts flickered severely as the game rapidly cycled through their sprites, the maze was redesigned to be less faithful to the arcade layout, and the power pellets were reduced to two. The game sold approximately seven million copies — making it the best-selling Atari 2600 game by units — but was widely perceived as falling short of its marketing promises. Atari had manufactured twelve million cartridges in anticipation of demand, leaving five million unsold and contributing to the financial crisis that helped precipitate the 1983 industry crash.',
+    longDescription: 'Pac-Man was the best-selling arcade game of all time by 1981, and Atari paid Namco a substantial licensing fee for the home rights, marketing the 2600 version as "the arcade game for your home" in television advertising. The port, programmed by Tod Frye under a strict six-month deadline, made significant compromises due to the 2600\'s 128 bytes of RAM and the hardware\'s inability to display multiple sprites on the same horizontal line: the four ghosts flickered severely as the game rapidly cycled through their sprites, the maze was redesigned to be less faithful to the arcade layout. The game sold approximately seven million copies — making it the best-selling Atari 2600 game by units — but was widely perceived as falling short of its marketing promises. Atari had manufactured twelve million cartridges in anticipation of demand, leaving five million unsold and contributing to the financial crisis that helped precipitate the 1983 industry crash.',
     versions: [
       {
         platform: 'Atari 2600',
@@ -369,7 +369,7 @@ module.exports = [
       'Atari manufactured approximately twelve million 2600 Pac-Man cartridges but sold only around seven million',
       'The five million unsold cartridges contributed to Atari\'s financial collapse and the wider 1983 North American video game crash',
       'Programmer Tod Frye was given just six months to complete the port, a timeline widely cited as the cause of its compromises',
-      'The 2600\'s hardware limitation of one sprite per horizontal scan line caused the four ghosts to flicker visibly',
+      'The 2600 had only two hardware player sprites, so the four ghosts had to share them and flickered visibly',
     ],
     keyword: 'pac-man atari 2600 infamous port crash',
   },
@@ -386,13 +386,13 @@ module.exports = [
         platform: 'Game Boy',
         year: 1989,
         quality: 'Excellent',
-        notes: 'The Game Boy version developed by Nintendo R&D1 was bundled with the hardware in North America and Japan and became one of the best-selling games in history at over thirty-five million copies. The small screen and monochrome display were ideal for Tetris\'s simple visual design, and the two-player link cable mode was an early showcase for the Game Boy\'s connectivity.',
+        notes: 'The Game Boy version developed by Nintendo R&D1 was bundled with the hardware in North America and Europe and became one of the best-selling games in history at over thirty-five million copies. The small screen and monochrome display were ideal for Tetris\'s simple visual design, and the two-player link cable mode was an early showcase for the Game Boy\'s connectivity.',
       },
       {
         platform: 'NES (Nintendo)',
         year: 1989,
         quality: 'Good',
-        notes: 'Nintendo\'s NES version, developed by Bullet-Proof Software, was a faithful and well-received home version that benefited from the NES\'s colour output. It is remembered primarily in the context of competitive Tetris, as the NES version\'s mechanics became the basis for the Classic Tetris World Championship.',
+        notes: 'Nintendo\'s NES version, developed in-house by Nintendo, was a faithful and well-received home version that benefited from the NES\'s colour output. It is remembered primarily in the context of competitive Tetris, as the NES version\'s mechanics became the basis for the Classic Tetris World Championship.',
       },
       {
         platform: 'NES (Atari — withdrawn)',
@@ -428,7 +428,7 @@ module.exports = [
     year: 1997,
     era: '1990s',
     description: 'The Sega Saturn port of Symphony of the Night, released exclusively in Japan, added significant new content including a second playable character, new areas, and new enemies — making it a collector\'s curiosity that offered a more complete game than the original PlayStation release.',
-    longDescription: 'Konami\'s Castlevania: Symphony of the Night on PlayStation is widely regarded as one of the greatest action RPGs ever made, but the Saturn version released in Japan in 1998 by a different internal team contains content that was never included in any Western release until the 2007 PSP port. The Saturn version added the Reverse Colosseum and Reverse Caverns areas to the inverted castle, introduced a new playable character (Maria Renard, who had appeared in Rondo of Blood), added new enemies and boss encounters, and included new spells. However, the port was technically inferior: the Saturn\'s 2D hardware architecture handled the sprite work differently, causing transparency effects (such as the fog in certain areas and the magic spell effects) to be rendered incorrectly as solid polygons or dithering, noticeably degrading the visual quality of those scenes. Loading times were also longer. The result was a version with more content but a weaker presentation — a trade-off that made it a fascinating object for series scholars and import collectors.',
+    longDescription: 'Konami\'s Castlevania: Symphony of the Night on PlayStation is widely regarded as one of the greatest action RPGs ever made, but the Saturn version released in Japan in 1998 by a different internal team contains content that has never been included in any Western release; the 2007 PSP version borrowed only part of it. The Saturn version added two new areas, the Underground Garden and the Cursed Prison, introduced a new playable character (Maria Renard, who had appeared in Rondo of Blood), added new enemies and boss encounters, and included new spells. However, the port was technically inferior: the Saturn\'s 2D hardware architecture handled the sprite work differently, causing transparency effects (such as the fog in certain areas and the magic spell effects) to be rendered incorrectly as solid polygons or dithering, noticeably degrading the visual quality of those scenes. Loading times were also longer. The result was a version with more content but a weaker presentation — a trade-off that made it a fascinating object for series scholars and import collectors.',
     versions: [
       {
         platform: 'PlayStation',
@@ -440,20 +440,20 @@ module.exports = [
         platform: 'Sega Saturn (Japan only)',
         year: 1998,
         quality: 'Good',
-        notes: 'The Saturn port added new areas (Reverse Colosseum, Reverse Caverns), a playable Maria Renard, new enemies, and new bosses, making it content-richer than the PlayStation version. However, transparency effects were rendered as opaque dithering due to Saturn hardware limitations, visually degrading fog and magic effects throughout the game.',
+        notes: 'The Saturn port added new areas (the Underground Garden and the Cursed Prison), a playable Maria Renard, new enemies, and new bosses, making it content-richer than the PlayStation version. However, transparency effects were rendered as opaque dithering due to Saturn hardware limitations, visually degrading fog and magic effects throughout the game.',
       },
       {
         platform: 'PSP (Dracula X Chronicles)',
         year: 2007,
         quality: 'Excellent',
-        notes: 'The PSP re-release within the Dracula X Chronicles compilation incorporated the Saturn version\'s added content (including Maria) while restoring the correct transparency effects from the PlayStation original, and is considered the most complete version of the game. It received a new English localisation with improved voice acting.',
+        notes: 'The PSP re-release within the Dracula X Chronicles compilation added Maria as a playable character, as the Saturn version had, though not the Saturn-only areas, while keeping the correct transparency effects from the PlayStation original, and is considered the most complete version of the game. It received a new English localisation with improved voice acting.',
       },
     ],
     keyFacts: [
       'The Saturn version was released only in Japan and never received a Western localisation',
       'Maria Renard\'s playable inclusion in the Saturn version was not available in any Western release until the 2007 PSP port',
       'The Saturn\'s graphics hardware could not natively render alpha-transparency, causing fog and magic effects to render as visible dithering',
-      'New areas in the Saturn port — Reverse Colosseum and Reverse Caverns — extend the inverted castle section of the game',
+      'New areas in the Saturn port — the Underground Garden and the Cursed Prison — have never appeared in another version',
     ],
     keyword: 'symphony of the night saturn added content maria',
   },
@@ -464,7 +464,7 @@ module.exports = [
     year: 1997,
     era: '1990s',
     description: 'GoldenEye 007 was one of the most influential first-person shooters ever made and one of the best-selling N64 games, yet it went unported to any other platform for over two decades due to a uniquely complicated web of overlapping intellectual property rights.',
-    longDescription: 'Rare\'s GoldenEye 007, released in 1997, sold over eight million copies on the N64 and is credited with establishing the template for console first-person shooters. Despite this commercial and critical success, the game remained exclusive to the N64 for 26 years — an extraordinary situation explained by the tangled rights situation surrounding it. The game required simultaneous agreement from Nintendo (who published it and owned Rare at the time of any potential re-release), Microsoft (who acquired Rare in 2002), the current Bond film rights holders (MGM and Eon Productions), Danjaq LLC (which controls the Bond franchise for interactive media), and the individual estates or agents of the actors whose likenesses were used — including Pierce Brosnan. Multiple ports reached advanced development stages: a fully completed Xbox 360 version was developed and approved internally around 2007–2008 before the negotiations collapsed, and screenshots and a build of that version leaked online in 2021. When ports finally arrived in January 2023 — simultaneously on Nintendo Switch Online and Xbox Game Pass — they were based on that long-delayed conversion, arriving 26 years after the original.',
+    longDescription: 'Rare\'s GoldenEye 007, released in 1997, sold over eight million copies on the N64 and is credited with establishing the template for console first-person shooters. Despite this commercial and critical success, the game remained exclusive to the N64 for 26 years — an extraordinary situation explained by the tangled rights situation surrounding it. The game required simultaneous agreement from Nintendo (who published it and owned Rare at the time of any potential re-release), Microsoft (who acquired Rare in 2002), the current Bond film rights holders (MGM and Eon Productions), Danjaq LLC (which controls the Bond franchise for interactive media), and the individual estates or agents of the actors whose likenesses were used — including Pierce Brosnan. Multiple ports reached advanced development stages: a fully completed Xbox 360 version was developed and approved internally around 2007–2008 before the negotiations collapsed, and screenshots and a build of that version leaked online in 2021. When ports finally arrived in January 2023 — simultaneously on Nintendo Switch Online and Xbox Game Pass — they were emulation-based releases of the original game rather than the shelved remaster, arriving 26 years after the original.',
     versions: [
       {
         platform: 'Nintendo 64',
@@ -482,7 +482,7 @@ module.exports = [
         platform: 'Nintendo Switch / Xbox (Game Pass)',
         year: 2023,
         quality: 'Good',
-        notes: 'The eventual 2023 re-releases arrived simultaneously on Nintendo Switch Online (Expansion Pack) and Xbox Game Pass, based substantially on the long-delayed 2007–2008 conversion. The Switch version added optional gyroscope aiming; the Xbox version included online multiplayer. Both preserved the original game\'s content without major modifications.',
+        notes: 'The eventual 2023 re-releases arrived simultaneously on Nintendo Switch Online (Expansion Pack) and Xbox Game Pass, both emulating the original N64 game rather than using the shelved 2007–2008 remaster. The Switch version offered online multiplayer through Nintendo Switch Online; the Xbox version added achievements and widescreen but no online play. Both preserved the original game\'s content without major modifications.',
       },
     ],
     keyFacts: [

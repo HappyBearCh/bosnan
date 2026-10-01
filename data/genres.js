@@ -25,9 +25,9 @@ module.exports = [
       {
         title: 'History',
         html: `<p>The genre was born at MIT in 1962 when students Martin Graetz, Steve Russell, and Wayne Wiitanen wrote <strong>Spacewar!</strong> for the PDP-1 mainframe — two spaceships orbiting a gravity star, shooting at each other. The game spread across every university with a PDP computer, making it the first widely-played digital game. When Nolan Bushnell commercialised the concept as <em>Computer Space</em> (1971), the result was too complex for bar patrons. But the proof-of-concept led him to found Atari the following year.</p>
-<p>Taito's <strong>Space Invaders</strong> (1978) solved the complexity problem with a single joystick and one fire button. Ranks of aliens descended, accelerating as you shot them down — a terrifyingly simple feedback loop. Space Invaders was so successful in Japan that the government reportedly had to triple 100-yen coin production. Licensed to Midway in North America, it sold over one million arcade cabinets — the first game to do so. When Atari released it for the 2600 console in 1980, console sales quadrupled: Space Invaders was gaming's first killer app.</p>
+<p>Taito's <strong>Space Invaders</strong> (1978) solved the complexity problem with a single joystick and one fire button. Ranks of aliens descended, accelerating as you shot them down — a terrifyingly simple feedback loop. Space Invaders was so successful in Japan that it spawned the enduring — and since debunked — legend of a national 100-yen coin shortage. Licensed to Midway in North America, it sold some 360,000 arcade cabinets worldwide by 1980. When Atari released it for the 2600 console in 1980, console sales quadrupled: Space Invaders was gaming's first killer app.</p>
 <p>Namco's <strong>Galaga</strong> (1981) refined the formula with diving enemy formations and the tactical gamble of letting your ship be captured to fight as a twin. Atari's <strong>Asteroids</strong> (1979) explored a different design space — vector graphics, rotational physics, the terror of inertia in empty space. Williams' <strong>Defender</strong> (1981) pushed complexity to its limits with a scrolling planet, a minimap scanner, and five simultaneous controls, briefly becoming the highest-grossing arcade game ever made.</p>
-<p>The mid-1980s expanded the genre to home computers. On the Commodore 64 and ZX Spectrum, games like Uridium and R-Type ports thrived. The Japanese branch evolved toward "bullet hell" — screens dense with enemy projectiles demanding memorised patterns of movement — pioneered by Compile and later Cave through the 1990s.</p>`
+<p>The mid-1980s expanded the genre to home computers. On the Commodore 64 and ZX Spectrum, games like Uridium and R-Type ports thrived. The Japanese branch evolved toward "bullet hell" — screens dense with enemy projectiles demanding memorised patterns of movement — pioneered by Toaplan and later Cave through the 1990s.</p>`
       },
       {
         title: 'Mechanics',
@@ -66,15 +66,15 @@ module.exports = [
       },
       {
         title: 'History',
-        html: `<p>The jump was invented as a game mechanic in <strong>Donkey Kong</strong> (Nintendo, 1981), designed by a young Shigeru Miyamoto. Players controlled a carpenter named Jumpman — later renamed Mario — climbing construction girders and leaping over barrels hurled by an escaped gorilla. Donkey Kong was the highest-earning arcade cabinet in North America in 1981 and introduced both Miyamoto and Mario to the world.</p>
+        html: `<p>The jump was invented as a game mechanic in <strong>Donkey Kong</strong> (Nintendo, 1981), designed by a young Shigeru Miyamoto. Players controlled a carpenter named Jumpman — later renamed Mario — climbing construction girders and leaping over barrels hurled by an escaped gorilla. Donkey Kong was one of the biggest arcade hits of 1981–82 and introduced both Miyamoto and Mario to the world.</p>
 <p>Activision's <strong>Pitfall!</strong> (Atari 2600, 1982), designed by David Crane in an extraordinarily short development cycle, brought platform mechanics to home consoles. Players swung on vines, leapt over alligators, and descended into underground passages across a jungle adventure. Pitfall! sold over four million copies — one of the best-selling Atari 2600 titles ever made.</p>
-<p><strong>Super Mario Bros.</strong> (Nintendo, 1985) perfected the genre. Bundled with every NES sold in North America, it became the best-selling video game in history for nearly two decades. Miyamoto and Tezuka's design remains a masterclass: World 1-1 functions as a complete interactive tutorial using only level geometry and enemy placement — no text, no tooltips, no instructions. Players learned entirely by doing.</p>
+<p><strong>Super Mario Bros.</strong> (Nintendo, 1985) perfected the genre. Bundled with most NES consoles sold in North America, it remained the best-selling video game in history for more than two decades. Miyamoto and Tezuka's design remains a masterclass: World 1-1 functions as a complete interactive tutorial using only level geometry and enemy placement — no text, no tooltips, no instructions. Players learned entirely by doing.</p>
 <p>In Europe, the ZX Spectrum and Commodore 64 produced their own platformer traditions. <em>Manic Miner</em> (1983) and <em>Jet Set Willy</em> (1984) by Matthew Smith were celebrated for fiendish level design. Ultimate Play the Game (later Rare) invented the isometric 3D platformer with <em>Knight Lore</em> (1984). Sega's Alex Kidd series offered Nintendo direct competition on the Master System.</p>`
       },
       {
         title: 'Mechanics',
         html: `<p>The jump mechanic's feel — the height of the arc, the moment of mid-air directional control, the weight on landing — is the soul of every platformer. Designers invest enormous effort tuning the physics. Super Mario Bros. allows directional correction mid-jump; holding the button extends the arc; running builds momentum that changes jump distance. These subtleties reward mastery without being explicitly taught.</p>
-<p>Level design in platformers communicates entirely through visual language. Coins mark the correct path; a gap's width signals whether to run or walk; red mushrooms signal danger. Secrets reward curiosity. The difficulty curve introduces each new mechanic in a safe context before testing it under pressure — a design principle Miyamoto called "teaching through failure."</p>`
+<p>Level design in platformers communicates entirely through visual language. Coins mark the correct path; a gap's width signals whether to run or walk; spikes and enemies signal danger. Secrets reward curiosity. The difficulty curve introduces each new mechanic in a safe context before testing it under pressure — a principle often summed up as teaching through play.</p>`
       },
       {
         title: 'Cultural Impact',
@@ -111,7 +111,7 @@ module.exports = [
         html: `<p><strong>Colossal Cave Adventure</strong> was created in 1975–76 by Will Crowther, a programmer and passionate caver at BBN Technologies, as a gift for his daughters after a difficult divorce. Players typed two-word commands — "GO NORTH", "TAKE LAMP", "KILL DRAGON" — and received text descriptions of cave rooms modelled on Mammoth Cave in Kentucky. Don Woods expanded the game in 1977, adding fantasy elements and puzzles. It spread across university ARPANET accounts and became the common ancestor of every adventure game ever made.</p>
 <p>MIT students Marc Blank, Dave Lebling, Bruce Daniels, and Tim Anderson created <strong>Zork</strong> in 1977, introducing a sophisticated natural language parser and atmospheric writing. Commercialised by Infocom in 1980, it became a bestseller. Infocom went on to produce some of the finest literary games ever made: <em>The Hitchhiker's Guide to the Galaxy</em> (co-written with Douglas Adams), <em>Planetfall</em>, and <em>A Mind Forever Voyaging</em>.</p>
 <p>Sierra On-Line's <strong>Mystery House</strong> (1980), designed by Ken and Roberta Williams on an Apple II, was the first graphical adventure game sold commercially. Roberta drew the pictures; Ken wrote the code. Sierra followed with <em>King's Quest</em> (1984), featuring animated characters in a fairy-tale world, establishing the template for graphic adventure games for a decade.</p>
-<p>LucasFilm Games' <strong>Maniac Mansion</strong> (1987) introduced the SCUMM engine and a radical philosophy: no dead ends, no unwinnable states. A player could never permanently fail — only make progress slower. This humane approach culminated in <em>The Secret of Monkey Island</em> (1990) and the golden age of LucasArts point-and-click comedy adventures.</p>`
+<p>Lucasfilm Games' <strong>Maniac Mansion</strong> (1987) introduced the SCUMM engine. Ron Gilbert then set out a radical philosophy in 1989 — no deaths, no dead ends, no unwinnable states — so that a player could never permanently fail, only make progress slower. This humane approach shaped <em>The Secret of Monkey Island</em> (1990) and the golden age of LucasArts point-and-click comedy adventures.</p>`
       },
       {
         title: 'Mechanics',
@@ -162,7 +162,7 @@ module.exports = [
       },
       {
         title: 'Cultural Impact',
-        html: `<p>The RPG is gaming's most culturally ambitious genre. Richard Garriott called Ultima IV "the first RPG with a message," and the series' engagement with virtue, ethics, and consequence raised the philosophical bar for what a game could attempt. Japanese RPGs on the NES and Super NES introduced story-driven role-playing to tens of millions of players worldwide, making Final Fantasy and Dragon Quest some of the most beloved franchises in entertainment. The genre's tradition of vast worlds, memorable characters, and hundreds of hours of content continues to define gaming's most dedicated and passionate player communities.</p>`
+        html: `<p>The RPG is gaming's most culturally ambitious genre. Ultima IV is often described as one of the first RPGs with a message, and the series' engagement with virtue, ethics, and consequence raised the philosophical bar for what a game could attempt. Japanese RPGs on the NES and Super NES introduced story-driven role-playing to tens of millions of players worldwide, making Final Fantasy and Dragon Quest some of the most beloved franchises in entertainment. The genre's tradition of vast worlds, memorable characters, and hundreds of hours of content continues to define gaming's most dedicated and passionate player communities.</p>`
       }
     ]
   },
@@ -193,7 +193,7 @@ module.exports = [
       {
         title: 'History',
         html: `<p>Data East's <strong>Karate Champ</strong> (1984) was the first dedicated one-on-one fighting game, using two joysticks to control a karateka through a tournament. Konami's <em>Yie Ar Kung-Fu</em> (1985) added multiple opponents with distinct fighting styles, enriching the challenge.</p>
-<p>Simultaneously, Irem's <strong>Kung-Fu Master</strong> (1984) — adapted from a Bruce Lee film — defined the side-scrolling brawler. A hero fights through five floors of a building, kicking and punching waves of goons. Technos Japan's <strong>Double Dragon</strong> (1987) added two-player cooperation, creating the couch co-op brawling tradition that made arcades genuinely social spaces.</p>
+<p>Simultaneously, Irem's <strong>Kung-Fu Master</strong> (1984) — released in Japan as a tie-in to the Jackie Chan film Wheels on Meals, with a floor-by-floor structure borrowed from Bruce Lee's Game of Death — defined the side-scrolling brawler. A hero fights through five floors of a building, kicking and punching waves of goons. Technos Japan's <strong>Double Dragon</strong> (1987) added two-player cooperation, creating the couch co-op brawling tradition that made arcades genuinely social spaces.</p>
 <p>Capcom's <strong>Street Fighter</strong> (1987) introduced six attack buttons and special moves executed by joystick motions — the quarter-circle fireball that defined fighting game controls forever. <strong>Street Fighter II: The World Warrior</strong> (1991) is one of the most significant games ever made: eight selectable world warriors each with unique move sets, combo systems discovered by the player community rather than formally designed, and a versus mode that turned arcades into battlegrounds. Street Fighter II earned over $1.5 billion in arcade revenue and sparked a fighting game golden age through the early 1990s.</p>`
       },
       {
@@ -243,7 +243,7 @@ module.exports = [
       },
       {
         title: 'Cultural Impact',
-        html: `<p>Pac-Man's cultural reach extended far beyond gaming. Merchandise, an animated TV series, a number-one pop song ("Pac-Man Fever," 1982), and decades of appearances made the yellow circle one of the 20th century's most recognised images worldwide. Tetris has been estimated to have been played by over a billion people across all platforms and adaptations. Its influence reaches into cognitive science: "the Tetris effect" — game imagery persisting in the mind after extended play — has been studied by researchers investigating memory consolidation, PTSD treatment, and spatial reasoning. Few games can claim to have contributed to clinical psychology.</p>`
+        html: `<p>Pac-Man's cultural reach extended far beyond gaming. Merchandise, an animated TV series, a top-ten pop song ("Pac-Man Fever," 1982), and decades of appearances made the yellow circle one of the 20th century's most recognised images worldwide. Tetris has been estimated to have been played by over a billion people across all platforms and adaptations. Its influence reaches into cognitive science: "the Tetris effect" — game imagery persisting in the mind after extended play — has been studied by researchers investigating memory consolidation, PTSD treatment, and spatial reasoning. Few games can claim to have contributed to clinical psychology.</p>`
       }
     ]
   },
@@ -254,7 +254,7 @@ module.exports = [
     shortName: 'Racing',
     era: '1974 – present',
     subtitle: "Speed, skill, and hardware innovation — the arcade's most spectacular genre",
-    description: "Racing games simulate vehicular competition. From Gran Trak 10's first digital circuit in 1974 to Pole Position's photorealistic Fuji Speedway in 1982, the genre drove some of the most spectacular hardware innovations in arcade history and created the most immersive cabinet experiences of their era.",
+    description: "Racing games simulate vehicular competition. From Gran Trak 10's first digital circuit in 1974 to Pole Position's recreation of Japan's Fuji Speedway in 1982, the genre drove some of the most spectacular hardware innovations in arcade history and created the most immersive cabinet experiences of their era.",
     genres: ['Racing', 'Racing / Maze', 'Racing / Shooter'],
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Pole_Position_in_Computerspielemuseum%2C_Berlin.jpg/250px-Pole_Position_in_Computerspielemuseum%2C_Berlin.jpg',
     imageCaption: "Pole Position (1982) cabinet at Berlin's Computerspielemuseum — the highest-grossing arcade game in North America in 1983.",
@@ -304,7 +304,7 @@ module.exports = [
       { label: 'First electronic sports game', value: 'Tennis for Two (1958)' },
       { label: 'First commercial success', value: 'Pong (Atari, 1972)' },
       { label: 'Pong cabinets sold in 1974', value: '19,000+' },
-      { label: 'Annual franchise pioneer', value: 'EA Sports (from 1983)' },
+      { label: 'Annual franchise pioneer', value: 'EA Sports (from the early 1990s)' },
     ],
     sections: [
       {
@@ -364,7 +364,7 @@ module.exports = [
       },
       {
         title: 'Cultural Impact',
-        html: `<p>Civilization is regularly cited as a game that genuinely changed how players think about history, geography, and political systems. Academics have assigned it in courses on international relations. The "Civilization Paradox" — a game designed to be educational about history that is simultaneously deeply inaccurate in its simplifications — sparked productive debate about games as historical models and metaphors. SimCity influenced real urban planners and became a standard in urban design education. Will Wright's design philosophy — games as systems to understand rather than stories to consume — remains the most intellectually ambitious tradition in the medium.</p>`
+        html: `<p>Civilization is regularly cited as a game that genuinely changed how players think about history, geography, and political systems. Academics have assigned it in courses on international relations. The tension in a game that teaches history while being deeply inaccurate in its simplifications sparked productive debate about games as historical models and metaphors. SimCity influenced real urban planners and became a standard in urban design education. Will Wright's design philosophy — games as systems to understand rather than stories to consume — remains the most intellectually ambitious tradition in the medium.</p>`
       }
     ]
   },
@@ -394,7 +394,7 @@ module.exports = [
       },
       {
         title: 'History',
-        html: `<p>The action game crystallised with <strong>Space Invaders</strong> (Taito, 1978) — the archetype of the core action loop: fast responsive input, escalating enemy pressure, lives as resilience measure, score as mastery measure. When Taito struggled to press enough 100-yen coins to meet demand in Japan, the scale of the phenomenon became clear. In North America, licensed to Midway, it fundamentally changed how businesses thought about interactive entertainment.</p>
+        html: `<p>The action game crystallised with <strong>Space Invaders</strong> (Taito, 1978) — the archetype of the core action loop: fast responsive input, escalating enemy pressure, lives as resilience measure, score as mastery measure. The enduring — and since debunked — legend that it caused a 100-yen coin shortage in Japan shows how enormous the phenomenon seemed. In North America, licensed to Midway, it fundamentally changed how businesses thought about interactive entertainment.</p>
 <p>Atari's <strong>Centipede</strong> (1980) and <strong>Missile Command</strong> (1980) refined the formula. Dave Theurer designed Missile Command — defending cities against nuclear warheads — while reportedly suffering recurring nightmares about nuclear war during development. The game's impossible-to-win design (the missiles always eventually overwhelm the defences) built genuine dread into a score-attack structure.</p>
 <p>Williams' <strong>Defender</strong> (1981) represented action game design at peak complexity: a scrolling planet, humanoids to protect, five simultaneous controls, and wave after wave of escalating enemies. Briefly the highest-grossing arcade game ever made, it attracted players who found simpler games insufficiently demanding. Its difficulty was part of the appeal.</p>
 <p>The isometric perspective opened new dimensions. Sega's <strong>Zaxxon</strong> (1982) used forced perspective to create convincing 3D space. Q*bert (1982) combined isometric movement with colour-changing puzzle logic. Donkey Kong Jr. (1982) introduced climbing and swinging that diversified action movement beyond running and jumping.</p>`
@@ -424,7 +424,7 @@ module.exports = [
     stats: [
       { label: 'Foundational title', value: 'Flight Simulator (subLOGIC, 1980)' },
       { label: 'Defining title', value: 'SimCity (Maxis, 1989)' },
-      { label: 'Best-selling PC game', value: 'The Sims (Maxis, 2000)' },
+      { label: 'Long the best-selling PC game', value: 'The Sims (Maxis, 2000)' },
       { label: 'Key developers', value: 'Maxis, MicroProse, subLOGIC, Bullfrog' },
     ],
     sections: [
@@ -434,7 +434,7 @@ module.exports = [
       },
       {
         title: 'History',
-        html: '<p>The genre began in the air. subLOGIC\'s Flight Simulator (1980) brought genuine aviation modelling to home computers, and when Microsoft licensed and published it the series became one of the longest-running in software history, prized by hobbyists who studied real aircraft manuals to fly it properly. MicroProse, founded by "Wild Bill" Stealey and Sid Meier, built a business on military vehicle simulation through the 1980s.</p><p>Then Will Wright changed what a simulation could be. SimCity (1989) had no combat, no protagonist, and no ending — a proposition publishers found so baffling that it struggled to find a home — yet it became a phenomenon and spawned an entire lineage of Sim titles at Maxis. Peter Molyneux\'s Populous (1989) meanwhile invented the god game, casting the player as an unseen deity shaping terrain. Wright would go on to produce The Sims (2000), a simulation of ordinary domestic life that became the best-selling PC game ever made and drew an audience of players who had never considered themselves gamers.</p>',
+        html: '<p>The genre began in the air. subLOGIC\'s Flight Simulator (1980) brought genuine aviation modelling to home computers, and when Microsoft licensed and published it the series became one of the longest-running in software history, prized by hobbyists who studied real aircraft manuals to fly it properly. MicroProse, founded by "Wild Bill" Stealey and Sid Meier, built a business on military vehicle simulation through the 1980s.</p><p>Then Will Wright changed what a simulation could be. SimCity (1989) had no combat, no protagonist, and no ending — a proposition publishers found so baffling that it struggled to find a home — yet it became a phenomenon and spawned an entire lineage of Sim titles at Maxis. Peter Molyneux\'s Populous (1989) meanwhile invented the god game, casting the player as an unseen deity shaping terrain. Wright would go on to produce The Sims (2000), a simulation of ordinary domestic life that became, for years, the best-selling PC game ever made and drew an audience of players who had never considered themselves gamers.</p>',
       },
       {
         title: 'Mechanics',
@@ -582,7 +582,7 @@ module.exports = [
       },
       {
         title: 'Doom and the Shareware Bomb',
-        html: '<p>Wolfenstein 3D established the form in 1992, but Doom in 1993 is where the genre acquired its identity — and, crucially, its distribution. id Software gave the first episode away, free, and let it propagate across bulletin boards, university networks and floppy disks passed between friends, charging only for the remaining episodes. The game did not need a publisher, a retail chain or a marketing budget. It needed a modem.</p><p>The consequences ran far beyond sales. Doom shipped with its data separated from its engine, which meant players could build their own levels; it shipped with deathmatch, which meant they could shoot each other; and it was, for a period, installed on more PCs than Microsoft Windows. The genre and the modding scene and the culture of networked competitive play all arrived at once, in the same package.</p>',
+        html: '<p>Wolfenstein 3D established the form in 1992, but Doom in 1993 is where the genre acquired its identity — and, crucially, its distribution. id Software gave the first episode away, free, and let it propagate across bulletin boards, university networks and floppy disks passed between friends, charging only for the remaining episodes. The game did not need a publisher, a retail chain or a marketing budget. It needed a modem.</p><p>The consequences ran far beyond sales. Doom shipped with its data separated from its engine, which meant players could build their own levels; it shipped with deathmatch, which meant they could shoot each other; and, by one widely repeated estimate, it was for a time installed on more PCs than Windows 95. The genre and the modding scene and the culture of networked competitive play all arrived at once, in the same package.</p>',
       },
       {
         title: 'From Corridors to Worlds',
@@ -645,7 +645,7 @@ module.exports = [
     imageLicense: 'CC BY-SA 2.0',
     stats: [
       { label: 'Foundational title', value: 'Ultima Online (Origin Systems, 1997)' },
-      { label: 'Defining title', value: 'EverQuest (989 Studios, 1999)' },
+      { label: 'Defining title', value: 'EverQuest (Verant Interactive / Sony, 1999)' },
       { label: 'Core principles', value: 'Persistence, simultaneous players, character progression, social interdependence' },
       { label: 'Key influence', value: 'MUDs — text-based multi-user dungeons running on university networks' },
     ],
