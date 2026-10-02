@@ -479,4 +479,34 @@ module.exports = [
       { title: 'PlayStation technical specifications', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/PlayStation_technical_specifications' },
     ],
   },
+  {
+    id: 'yamaha-ym2610',
+    name: 'Yamaha YM2610 (OPNB)',
+    manufacturer: 'Yamaha',
+    year: 1987,
+    foundIn: [
+      'SNK Neo Geo MVS, AES and CD',
+      'Taito arcade boards (from 1987)',
+    ],
+    voices: 14,
+    era: '1980s',
+    description: 'The sound chip of the Neo Geo: four FM channels, three square-wave channels and seven sample channels, which is why SNK\'s fighting games could pair synth music with sampled voices and drums.',
+    longDescription: 'The YM2610, also known as the OPNB, is a member of Yamaha\'s OPN family of FM synthesis chips and is closely related to the YM2608 (OPNA) used in NEC\'s Japanese computers. It combines three different kinds of sound generation on one chip.\n\nThe first is FM synthesis: four channels, each with four operators, for melodic instruments. The second is three SSG channels producing square waves or noise, inherited from the simpler chips of the early 1980s. The third, and the most important for its best-known games, is sample playback: six ADPCM-A channels for fixed-rate samples such as drums and sound effects, and one ADPCM-B channel that can play samples at variable pitch, from 2 to 55.5 kHz.\n\nThe YM2610 appeared in Taito arcade boards from 1987, but it is most strongly associated with SNK\'s Neo Geo, which used it in the MVS arcade system, the AES home console and the Neo Geo CD from 1990. The sample channels are why Neo Geo games are full of announcer voices, character shouts and realistic drum kits layered over FM music — the familiar sound of King of Fighters, Fatal Fury and Metal Slug. A variant, the YM2610B, was identical except for two extra FM channels, for six in total.',
+    notableTracks: [
+      'SNK — The King of Fighters series (Neo Geo)',
+      'SNK — Fatal Fury and Samurai Shodown series (Neo Geo)',
+      'Nazca / SNK — Metal Slug (1996)',
+    ],
+    keyFacts: [
+      'A member of Yamaha\'s OPN family, related to the YM2608 (OPNA)',
+      'Four 4-operator FM channels and three SSG square-wave/noise channels',
+      'Six ADPCM-A sample channels plus one variable-pitch ADPCM-B channel',
+      'Used in Taito arcade boards from 1987 and in the Neo Geo MVS, AES and CD from 1990',
+      'The YM2610B variant adds two FM channels',
+    ],
+    keyword: 'YM2610 OPNB Neo Geo ADPCM',
+    sources: [
+      { title: 'Yamaha YM2610', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Yamaha_YM2610' },
+    ],
+  },
 ];

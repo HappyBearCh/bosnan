@@ -490,4 +490,25 @@ module.exports = [
       { title: 'Famicom 3D System', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Famicom_3D_System' },
     ],
   },
+  {
+    id: 'sega-netlink',
+    name: 'Sega NetLink',
+    manufacturer: 'Sega',
+    year: 1996,
+    platform: 'Sega Saturn',
+    era: '1990s',
+    description: 'A $199 28.8k modem that put a web browser and online play on the Saturn in 1996. There were no game servers — players dialled each other directly — and only six games supported it.',
+    longDescription: 'Sega released the NetLink in North America in October 1996. It plugged into the Saturn\'s cartridge slot and contained a 28.8 kbit/s modem, and it came with a web browser developed by Planetweb, letting Saturn owners browse the internet on their televisions. It cost $199 on its own, or about $400 bundled with a Saturn.\n\nOnline play worked very differently from later console networks. There was no central game service: to play, the Saturn\'s modem simply called the other player\'s phone line directly, so opponents had to arrange a match and pay whatever the call cost. Six games supported this: Daytona USA CCE NetLink Edition, Duke Nukem 3D, Saturn Bomberman, Sega Rally Championship Plus, Virtual On: Cyber Troopers NetLink Edition and Space Hulk.\n\nThe NetLink sold an estimated 50,000 units in North America, half of Sega\'s original target, and Sega of America donated another 1,100 units to schools. It was small commercially, but it was an early step in the console online play that Sega pursued much further with the Dreamcast\'s built-in modem.',
+    keyFacts: [
+      'Released in North America in October 1996 for $199',
+      'A 28.8 kbit/s modem with a Planetweb web browser, plugged into the Saturn\'s cartridge slot',
+      'Online play connected players\' consoles directly by phone, with no central server',
+      'Supported by six games, including Duke Nukem 3D and Saturn Bomberman',
+      'Sold about 50,000 units in North America — half of Sega\'s goal',
+    ],
+    verdict: 'Console online play years early, limited by phone bills, six games and a small audience — but a direct line to the Dreamcast\'s ambitions.',
+    sources: [
+      { title: 'Sega NetLink', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Sega_NetLink' },
+    ],
+  },
 ];

@@ -825,4 +825,103 @@ module.exports = [
       { title: 'Earthworm Jim (character)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Earthworm_Jim_(character)' },
     ],
   },
+  {
+    id: 'fox-mccloud',
+    name: 'Fox McCloud',
+    franchise: 'Star Fox',
+    platform: 'Super NES',
+    debutYear: 1993,
+    creator: 'Shigeru Miyamoto (designed by Takaya Imamura)',
+    era: '1990s',
+    role: 'Protagonist',
+    description: 'The leader of Team Star Fox was inspired by the fox statues of Kyoto\'s Fushimi Inari Shrine. He debuted in the polygon shooter Star Fox in 1993 and has been in every Super Smash Bros. game since 1999.',
+    longDescription: 'Fox McCloud was created by Shigeru Miyamoto and designed by Takaya Imamura for Star Fox, released on the Super NES in 1993. Miyamoto conceived the character after visiting the Fushimi Inari Shrine in Kyoto, a short distance from Nintendo\'s headquarters, which is famous for its many fox statues. The idea of an animal pilot gave the polygon-based shooter a simple, readable cast at a time when 3D graphics could show very little detail.\n\nFox leads Team Star Fox, a squadron of mercenary pilots completed by Falco Lombardi, Slippy Toad and Peppy Hare. His father, James McCloud, was also a mercenary pilot, now dead, and Fox has followed him into the profession. The characters\' personalities came through mainly in radio chatter between missions and during combat, an approach that became much more prominent in Star Fox 64 (1997), the first fully voiced entry, in which Mike West voiced Fox in English.\n\nFox reached an even wider audience through Super Smash Bros. He has been playable in every game in the series, starting with the first in 1999. In Super Smash Bros. Melee his speed made him so dominant in competitive play that "No items, Fox only, Final Destination" became a widely repeated internet joke about hyper-competitive players.',
+    abilities: [
+      'Pilots the Arwing starfighter',
+      'Leads Team Star Fox through radio commands to wingmen',
+      'Fast, combo-driven fighting style in Super Smash Bros.',
+    ],
+    keyFacts: [
+      'Created by Shigeru Miyamoto and designed by Takaya Imamura',
+      'Inspired by the fox statues at the Fushimi Inari Shrine in Kyoto',
+      'Debuted in Star Fox (Super NES, 1993)',
+      'Voiced in English by Mike West in Star Fox 64 (1997)',
+      'Playable in every Super Smash Bros. game since 1999',
+    ],
+    sections: [
+      {
+        title: 'A Character Built for Low-Polygon Graphics',
+        html: '<p>Star Fox\'s Super FX graphics could draw only simple shapes, so the cast had to communicate through silhouettes, portraits and voices rather than detailed models. A team of animal pilots solved that neatly, and the radio chatter between Fox and his wingmen became one of the series\' defining features.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Fox McCloud', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Fox_McCloud' },
+    ],
+  },
+  {
+    id: 'ryu-hayabusa',
+    name: 'Ryu Hayabusa',
+    franchise: 'Ninja Gaiden / Dead or Alive',
+    platform: 'Arcade / NES',
+    debutYear: 1988,
+    creator: 'Hideo Yoshizawa (designed by Masato Kato)',
+    era: '1980s',
+    role: 'Protagonist',
+    description: 'Tecmo\'s dragon-lineage ninja debuted in Ninja Gaiden in 1988, joined Dead or Alive in 1996, and was reinvented in Team Ninja\'s 3D Ninja Gaiden of 2004.',
+    longDescription: 'Ryu Hayabusa first appeared in 1988 in Tecmo\'s Ninja Gaiden, which was released in different forms in arcades and on the NES. He was created by Hideo Yoshizawa, who has said he was influenced by several Castlevania games, and designed by Masato Kato. Ryu is a descendant of a dragon lineage, the leader of the Hayabusa ninja clan, and wields the clan\'s ancestral Dragon Sword.\n\nThe NES game made him famous. Its story begins with Ryu setting out after receiving a letter from his father, Ken Hayabusa, and was told through extensive cinematic cut-scenes between stages — unusual for an action game of the time. Combined with the game\'s fast, demanding wall-jumping action, it made Ryu one of the defining action heroes of the 8-bit era.\n\nRyu later crossed into Tecmo\'s fighting series, appearing in the original Dead or Alive in 1996 — a role that had initially been planned for a different character named Kamui. In 2004 Tomonobu Itagaki and Team Ninja relaunched Ninja Gaiden as a 3D action game, reimagining Ryu\'s appearance for a modern audience while keeping his core character, and the new game became known as one of the most demanding action games of its generation.',
+    abilities: [
+      'Wields the ancestral Dragon Sword',
+      'Wall-clinging and wall-jumping',
+      'Ninpo (ninja magic) and sub-weapons such as throwing stars',
+    ],
+    keyFacts: [
+      'Debuted in Ninja Gaiden (arcade and NES, 1988)',
+      'Created by Hideo Yoshizawa and designed by Masato Kato',
+      'A dragon-lineage ninja and leader of the Hayabusa clan',
+      'Joined Dead or Alive in 1996, replacing a planned character called Kamui',
+      'Reimagined by Team Ninja in the 2004 Ninja Gaiden',
+    ],
+    sections: [
+      {
+        title: 'Cut-Scenes in an Action Game',
+        html: '<p>Ninja Gaiden on the NES framed its stages with cinematic scenes that told a full revenge story. It was an early demonstration that an action game could carry a plot, and much of Ryu\'s identity as a character came from those scenes rather than from the action itself.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Ryu Hayabusa', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Ryu_Hayabusa' },
+    ],
+  },
+  {
+    id: 'sir-arthur',
+    name: 'Sir Arthur',
+    franchise: 'Ghosts \'n Goblins',
+    platform: 'Arcade',
+    debutYear: 1985,
+    creator: 'Tokuro Fujiwara (Capcom)',
+    era: '1980s',
+    role: 'Protagonist',
+    description: 'The knight of Ghosts \'n Goblins loses his armour at the first hit and fights on in his boxer shorts — one of gaming\'s most recognisable images of how little stands between a hero and death.',
+    longDescription: 'Arthur debuted in Ghosts \'n Goblins, created by Tokuro Fujiwara and released in arcades by Capcom on 7 July 1985. He is a knight on a quest to rescue Princess Prin-Prin from the demon king Astaroth, fighting through graveyards, forests and castles filled with zombies, demons and the notorious Red Arremer.\n\nArthur\'s defining trait is his fragility. One hit strips him of his armour, leaving him in his boxer shorts; a second hit kills him. The image of the half-naked knight became the series\' emblem, and it captures the games\' reputation for difficulty — few heroes look so obviously unprepared for what they face.\n\nThe series continued with Ghouls \'n Ghosts (1988), Super Ghouls \'n Ghosts (1991), Ultimate Ghosts \'n Goblins (2006) and Ghosts \'n Goblins Resurrection (2021), and had sold more than 4.7 million units by the end of 2025. Arthur has also appeared outside his own games, including as a playable fighter in Marvel vs. Capcom 3: Fate of Two Worlds.',
+    abilities: [
+      'Throws lances, daggers, torches and other weapons',
+      'Armour absorbs one hit before he is reduced to his boxer shorts',
+      'Can find magic armour in later games for powered-up attacks',
+    ],
+    keyFacts: [
+      'Debuted in Ghosts \'n Goblins, released in arcades on 7 July 1985',
+      'Created by Tokuro Fujiwara at Capcom',
+      'Loses his armour to one hit and his life to the next',
+      'Quests to rescue Princess Prin-Prin from the demon king Astaroth',
+      'Playable in Marvel vs. Capcom 3: Fate of Two Worlds',
+    ],
+    sections: [
+      {
+        title: 'Difficulty Made Visible',
+        html: '<p>Most games show health as a bar. Ghosts \'n Goblins shows it as clothing: armoured Arthur is safe, Arthur in his boxers is one mistake from death. It is a clear, slightly comic way to communicate a punishing design, and it made Arthur instantly recognisable.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Ghosts \'n Goblins', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Ghosts_%27n_Goblins' },
+    ],
+  },
 ];

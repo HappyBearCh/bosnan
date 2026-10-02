@@ -728,4 +728,29 @@ module.exports = [
     ],
     verdict: 'A computer with its keyboard removed, sold as a console to players who had just bought a Mega Drive — the clearest misreading of the 1990 market.',
   },
+  {
+    id: 'konix-multisystem',
+    sources: [
+      { title: 'Konix Multisystem', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Konix_Multisystem' },
+    ],
+    name: 'Konix Multisystem',
+    manufacturer: 'Konix (hardware by Flare Technology)',
+    year: 1989,
+    discontinued: 1990,
+    era: '1980s',
+    unitsSold: 'None — never released',
+    description: 'A British console with a controller that turned into a steering wheel, flight yoke or motorbike handlebars, and an optional motorised seat. It was shown in 1989 and never shipped — but its designers\' next chip became the Atari Jaguar.',
+    longDescription: 'Konix, a British maker of joysticks led by its founder Wyn Holloway, began work in 1988 on a controller called Slipstream that could be configured as a steering wheel, a flight yoke or a set of motorbike handlebars. The project grew into a full games console, with the hardware designed by Flare Technology, a British team that had previously worked on Sinclair\'s unreleased Loki computer.\n\nThe Multisystem was revealed at a toy fair in February 1989. It used a 16-bit 8086 processor with a custom blitter, a 4,096-colour palette, eight-channel stereo sound and 3.5-inch floppy disks for software. Its most eye-catching accessory was the Power Chair, a motorised seat designed to recreate the motion of arcade cabinets such as After Burner and Out Run in the living room.\n\nThe console was meant to launch in August 1989, but the date slipped repeatedly through late 1989 and into 1990. Konix ran into serious financial trouble — cheques bounced and payments to developers stopped by mid-October 1989 — and the company ran out of money before a finished system was ever released. The hardware work was not wasted: Flare\'s next design, Flare Two, was bought by Atari and became the foundation of the Atari Jaguar.',
+    goodGames: [
+      'None released — software was in development for the planned launch',
+    ],
+    keyFacts: [
+      'Grew out of Konix\'s 1988 Slipstream controller, configurable as a wheel, yoke or handlebars',
+      'Hardware by Flare Technology: 8086 CPU, custom blitter, 4,096-colour palette, 8-channel stereo sound',
+      'The optional Power Chair was a motorised seat for arcade-style motion',
+      'Revealed in February 1989; the August 1989 launch slipped repeatedly',
+      'Konix ran out of money; Flare\'s next design became the Atari Jaguar',
+    ],
+    verdict: 'The most ambitious British console never made — its controller and chair were years ahead, its finances were not.',
+  },
 ];
