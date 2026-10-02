@@ -367,4 +367,53 @@ module.exports = [
       { title: 'Data East', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Data_East' },
     ],
   },
+  {
+    id: 'quintet',
+    name: 'Quintet',
+    founded: 1989,
+    country: 'Japan',
+    era: '1989 – 2002',
+    role: 'Developer',
+    description: 'Founded by the writer of the first Ys games, Quintet made ActRaiser, Soul Blazer, Illusion of Gaia and Terranigma for Enix — action RPGs remembered for their philosophical, often dark themes.',
+    longDescription: 'Quintet was founded in April 1989 and led by Tomoyoshi Miyazaki, who had been the scenario writer for the first three Ys games at Nihon Falcom. Throughout the 1990s it worked closely with Enix, which published nearly all of its games.\n\nIts first release, ActRaiser (1990), was one of the most inventive early Super Famicom games, alternating side-scrolling action stages with a god-game simulation in which the player guided the growth of human towns. Quintet followed it with a loose trilogy of action RPGs — Soul Blazer (1992), Illusion of Gaia (1993) and Terranigma (1995) — sharing themes of creation, death and rebirth. The games were praised for their broad philosophical and sometimes dark subject matter, unusual in console action games of the time. Quintet also made ActRaiser 2 and the robot-building RPG Robotrek.\n\nThe studio was much less visible after the 16-bit era. Its last game was Magical Houshin for the Game Boy Advance in 2002; it has been inactive since and is presumed defunct, and its website went offline in March 2008. Square Enix, which gained access to Quintet\'s intellectual property, released ActRaiser Renaissance in 2021.',
+    keyFigures: [
+      'Tomoyoshi Miyazaki',
+    ],
+    notableGames: [
+      'ActRaiser',
+      'Soul Blazer',
+      'Illusion of Gaia',
+      'Terranigma',
+      'Robotrek',
+    ],
+    keyword: 'Quintet',
+    sources: [
+      { title: 'Quintet (company)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Quintet_(company)' },
+    ],
+  },
+  {
+    id: 'chunsoft',
+    name: 'Chunsoft',
+    founded: 1984,
+    country: 'Japan',
+    era: '1984 – 2012',
+    role: 'Developer / Publisher',
+    description: 'Koichi Nakamura\'s studio programmed the first five Dragon Quest games, invented the "sound novel" with Otogirisō, and started the Mystery Dungeon roguelike series.',
+    longDescription: 'Koichi Nakamura founded Chunsoft in 1984. The name comes from his surname: the first character of Nakamura, 中, is read "chun" in Japanese mahjong. Nakamura had first come to attention through Enix\'s programming contest with the puzzle game Door Door, and Chunsoft began its life working with Enix.\n\nIts most consequential work was Dragon Quest. Chunsoft developed the first five games in the series between 1986 and 1992, programming the template of the Japanese console RPG alongside designer Yuji Horii. In the 1990s the company also created two genres of its own. Otogirisō (1992) began its "sound novel" series — text-driven interactive mysteries that combined prose with music, sound and atmospheric images — and Kamaitachi no Yoru (1994) became the best-known example. Torneko no Daibōken (1993), starring the merchant Torneko from Dragon Quest IV, adapted the roguelike for console players and began the Mystery Dungeon series, continued with Shiren the Wanderer (1995) and later licensed spin-offs.\n\nIn 2012 Chunsoft merged with its sister company Spike to form Spike Chunsoft, which continues to develop and publish games.',
+    keyFigures: [
+      'Koichi Nakamura',
+      'Yuji Horii (Dragon Quest collaborator)',
+    ],
+    notableGames: [
+      'Dragon Quest I–V',
+      'Otogirisō',
+      'Kamaitachi no Yoru',
+      'Torneko no Daibōken',
+      'Shiren the Wanderer',
+    ],
+    keyword: 'Chunsoft',
+    sources: [
+      { title: 'Spike Chunsoft', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Spike_Chunsoft' },
+    ],
+  },
 ];

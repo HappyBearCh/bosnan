@@ -684,4 +684,58 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'battlecruiser-3000ad-release',
+    sources: [
+      { title: 'Battlecruiser 3000AD', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Battlecruiser_3000AD' },
+    ],
+    title: 'Battlecruiser 3000AD — "The Last Thing You\'ll Ever Desire"',
+    game: 'Battlecruiser 3000AD',
+    platform: 'PC',
+    year: 1996,
+    era: '1990s',
+    impact: 'Sparked one of the largest flame wars in Usenet history',
+    description: 'Seven years in development, released unfinished by its publisher over the designer\'s objections, and reviewed as one of the most bug-ridden games ever shipped. The arguments about it filled Usenet for years.',
+    longDescription: 'Derek Smart began work on Battlecruiser 3000AD around 1989. It was conceived as an enormously ambitious space simulation, combining trading, combat, crew management and planetary exploration in a single game, and it was promoted for years before release under the slogan "The last thing you\'ll ever desire."\n\nTake-Two Interactive released it for MS-DOS and Windows in October 1996, against Smart\'s wishes, while the game was still incomplete. The result was a release riddled with bugs and stability problems. GameSpot scored it 2.6 out of 10 and predicted it would go down in legend as one of the most bug-ridden, unstable and unplayable pieces of software ever released. The game shipped about 80,000 units.\n\nThe launch became notorious as much for what surrounded it as for the game itself. Arguments between Smart, players and critics produced one of the longest and largest flame wars in Usenet\'s history, running to more than 70,000 posts over several years. Smart sued Take-Two for breach of contract, and the case was settled out of court in late 1998 with Smart regaining the rights. He had already released a much-improved version 2.0 free online in February 1998, and continued developing the series with Battlecruiser Millennium in 2001.',
+    keyFacts: [
+      'Developed by Derek Smart from around 1989',
+      'Released by Take-Two Interactive in October 1996 while still incomplete, against Smart\'s wishes',
+      'GameSpot gave it 2.6/10, calling it one of the most bug-ridden games ever released',
+      'The surrounding Usenet flame war ran to more than 70,000 posts',
+      'Smart released a free version 2.0 in February 1998 and settled with Take-Two later that year',
+    ],
+    sections: [
+      {
+        title: 'Shipped Before It Was Finished',
+        html: '<p>Battlecruiser 3000AD is a clear case of a publisher\'s deadline overriding a developer\'s schedule. The game\'s scope — a whole simulated universe — made it unusually hard to finish and to test, and releasing it early exposed every unfinished system at once. The free 2.0 release was much closer to the game its designer had intended to ship.</p>',
+      },
+    ],
+  },
+  {
+    id: 'daggerfall-patches',
+    sources: [
+      { title: 'The Elder Scrolls II: Daggerfall', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/The_Elder_Scrolls_II:_Daggerfall' },
+    ],
+    title: 'Daggerfall and "All the Stupid Patches"',
+    game: 'The Elder Scrolls II: Daggerfall',
+    platform: 'PC (MS-DOS)',
+    year: 1996,
+    era: '1990s',
+    impact: 'A commercial hit remembered for its instability',
+    description: 'Bethesda built a world the size of Great Britain with 15,000 towns — and shipped it with so many bugs that it needed patch after patch. Players bought it anyway: 100,000 copies in two days.',
+    longDescription: 'Work on Daggerfall began immediately after Arena was released in March 1994. Bethesda set out to build something on a scale no role-playing game had attempted: a procedurally generated game world described as the size of Great Britain, roughly 209,000 square kilometres, containing 15,000 towns and a population of 750,000. The game was completed on 31 August 1996 and released in North America on 20 September.\n\nThat scale came at a price. Like Arena before it, Daggerfall shipped with buggy code. Players encountered crashes and problems that could interrupt progress, and although Bethesda patched the game multiple times, many remained unhappy with its stability. Designer Julian LeFay later spoke of wanting to avoid "all the stupid patches we had for Daggerfall" on future projects.\n\nThe bugs did not stop the game from succeeding. It sold more than 100,000 copies within two days of release and around 700,000 copies by mid-2000, and it was still selling four years after launch. Its freedom and scale set the template for the open-world Elder Scrolls games that followed, and in 2009, for the series\' 15th anniversary, Bethesda made Daggerfall free to download.',
+    keyFacts: [
+      'Released in North America on 20 September 1996',
+      'Its world was described as the size of Great Britain, with 15,000 towns and 750,000 inhabitants',
+      'Patched multiple times, but players remained unhappy with its stability',
+      'Sold over 100,000 copies in two days and about 700,000 by mid-2000',
+      'Made free to download by Bethesda in 2009',
+    ],
+    sections: [
+      {
+        title: 'Scale Versus Stability',
+        html: '<p>Daggerfall is an early example of a trade-off that would follow open-world games for decades: the larger and more systemic the world, the harder it is to test every situation a player can create. Its success showed that many players would accept rough edges in return for that freedom — and its patches showed the cost.</p>',
+      },
+    ],
+  },
 ];

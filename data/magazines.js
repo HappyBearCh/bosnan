@@ -600,4 +600,31 @@ module.exports = [
       { title: 'Retro Gamer', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Retro_Gamer' },
     ],
   },
+  {
+    id: 'sega-power',
+    name: 'Sega Power',
+    country: 'United Kingdom',
+    founded: 1989,
+    closed: 1997,
+    era: '1989–1998',
+    description: 'Future Publishing\'s Sega magazine began as S: The Sega Magazine in 1989, covered every Sega console from the Master System to the Saturn as Sega Power, and ended as Saturn Power in 1998.',
+    longDescription: 'Future Publishing, based in Bath, launched S: The Sega Magazine in December 1989 under editor Steve Jarratt. Its first twelve issues concentrated on the Master System, with relatively small page counts. After issue 12 it was relaunched as Sega Power, in anticipation of the console boom Future expected the Mega Drive to bring.\n\nAs Sega Power, the magazine ran from issue 13 to issue 91, following Sega through its most commercially successful period in Britain. It covered the Mega Drive, Master System and Game Gear, and then the Mega-CD, 32X and Saturn as each arrived. It also produced novellas based on popular games — Golden Axe, Road Rash, Super Monaco GP and Desert Strike among them — combining short fiction with cheats and hints.\n\nThe final issue of Sega Power was dated April 1997. With Sega\'s other consoles discontinued, Future replaced it with Saturn Power, which launched with a cover-mounted demo disc in June 1997 and ran for ten issues until February 1998.',
+    notableIssues: [
+      'December 1989 — launches as S: The Sega Magazine',
+      'Issue 13 — relaunched as Sega Power',
+      'April 1997 — final issue of Sega Power (issue 91)',
+      'June 1997 – February 1998 — continued as Saturn Power for ten issues',
+    ],
+    keyFacts: [
+      'Launched by Future Publishing in December 1989 as S: The Sega Magazine, edited by Steve Jarratt',
+      'Renamed Sega Power after 12 issues',
+      'Covered the Master System, Mega Drive, Game Gear, Mega-CD, 32X and Saturn',
+      'Published game-based novellas, including Golden Axe and Road Rash',
+      'Replaced by Saturn Power in June 1997',
+    ],
+    keyword: 'Sega Power',
+    sources: [
+      { title: 'Sega Power', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Sega_Power' },
+    ],
+  },
 ];

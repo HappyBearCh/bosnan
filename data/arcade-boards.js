@@ -677,4 +677,32 @@ module.exports = [
     ],
     keyword: 'Bubble System',
   },
+  {
+    id: 'hyper-neo-geo-64',
+    sources: [
+      { title: 'Hyper Neo Geo 64', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Hyper_Neo_Geo_64' },
+    ],
+    name: 'Hyper Neo Geo 64',
+    manufacturer: 'SNK',
+    year: 1997,
+    era: '1997 – 1999',
+    cpu: 'Custom 64-bit RISC processor',
+    description: 'SNK\'s only 3D arcade board was meant to succeed the Neo Geo MVS. It received seven games in two years, none of them hits, and SNK went back to its old 2D hardware.',
+    longDescription: 'By the mid-1990s SNK\'s Neo Geo MVS was one of the most successful 2D arcade platforms, but arcades were moving to 3D, led by Sega\'s Model 2 and Namco\'s System 11 and System 22. SNK\'s response was the Hyper Neo Geo 64, launched in September 1997. Built around a custom 64-bit RISC processor, it was the only SNK arcade board capable of real-time 3D rendering.\n\nThe launch game was the racer Road\'s Edge (September 1997), followed in December by Samurai Shodown 64, which moved SNK\'s weapons-based fighting series into 3D. Xtreme Rally, Samurai Shodown 64: Warriors Rage and the gun game Beast Busters: Second Nightmare arrived in 1998, and Fatal Fury: Wild Ambition and the grappling fighter Buriki One in 1999. That was the entire library: seven games.\n\nNone of them proved particularly popular. SNK\'s strength had always been in finely drawn 2D fighters, and its early 3D efforts could not compete with the established 3D series of Sega and Namco. The board never came close to matching the MVS\'s success, it was discontinued by 1999, and SNK returned to releasing new games on the ageing Neo Geo hardware instead.',
+    notableGames: [
+      'Road\'s Edge (1997)',
+      'Samurai Shodown 64 (1997)',
+      'Samurai Shodown 64: Warriors Rage (1998)',
+      'Fatal Fury: Wild Ambition (1999)',
+      'Buriki One (1999)',
+    ],
+    keyFacts: [
+      'Launched in September 1997 as SNK\'s first and only 3D arcade board',
+      'Built around a custom 64-bit RISC processor',
+      'Only seven games were released, from Road\'s Edge (1997) to Buriki One (1999)',
+      'Brought Samurai Shodown and Fatal Fury into 3D',
+      'Discontinued by 1999; SNK went back to releasing games on the Neo Geo MVS',
+    ],
+    keyword: 'Hyper Neo Geo 64',
+  },
 ];
