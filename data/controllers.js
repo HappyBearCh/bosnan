@@ -571,4 +571,58 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'atari-5200-controller',
+    title: 'The Atari 5200 Controller — Analogue Ambition, Rubber-Boot Reality',
+    platform: 'Atari 5200',
+    manufacturer: 'Atari',
+    year: 1982,
+    era: '1980s',
+    description: 'Atari gave its 1982 console an analogue joystick, a twelve-key keypad and a pause button — all good ideas — on a stick that did not re-centre and a cheap flex circuit that wore out. It is routinely named among the worst controllers ever made.',
+    longDescription: 'The Atari 5200, launched in 1982, was Atari\'s attempt at a more advanced successor to the 2600, and its controller was correspondingly ambitious. It combined an analogue joystick, a numeric keypad, Start, Pause and Reset buttons, and two fire buttons on each side. A pause button on the controller itself was unusual for the time, and an analogue stick offered, in principle, finer control than the simple on/off switches of the 2600\'s CX40 joystick.\n\nThe execution failed. Instead of springs, the joystick relied on a weak rubber boot to pull it back towards the centre, so in practice it did not reliably re-centre at all. Its response was not linear across the stick\'s travel, which made precise movement difficult, and inside the controller a very low-cost flex circuit was prone to failure. The combination of a complex mechanical design and cheap internals became, in the words often used about it, the console\'s Achilles\' heel.\n\nCritics have been consistently harsh. An editor for Next Generation wrote that the joysticks rendered many games nearly unplayable, and IGN ranked the controller among the ten worst ever made. Atari offered the Pro-Line Trak-Ball for games such as Centipede and Missile Command, third parties including Wico sold replacements, and a self-centring revision and a paddle controller were developed but never released.',
+    keyFacts: [
+      'Combined an analogue joystick, 12-key keypad, Start/Pause/Reset and two fire buttons on each side',
+      'The stick used a weak rubber boot rather than springs, so it did not reliably re-centre',
+      'A low-cost internal flex circuit made the controllers unreliable',
+      'IGN ranked it among the ten worst video game controllers ever',
+      'Atari\'s Trak-Ball and third-party Wico sticks offered alternatives; a self-centring revision was never released',
+    ],
+    notableFor: 'Showing that the right features — analogue input, an on-controller pause — are worth little without reliable hardware',
+    sections: [
+      {
+        title: 'Ahead of Its Time, Behind on Engineering',
+        html: '<p>Analogue sticks and controller pause buttons later became standard. The 5200 had both in 1982 and is remembered as a failure anyway, because the stick could not do the basic job of returning to neutral and the controllers broke. It is a clear case of a design being judged on its build quality rather than its ideas.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Atari 5200', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Atari_5200' },
+    ],
+  },
+  {
+    id: 'famicom-controllers',
+    title: 'The Famicom Controllers — Hardwired, with a Microphone',
+    platform: 'Nintendo Family Computer (Famicom)',
+    manufacturer: 'Nintendo',
+    year: 1983,
+    era: '1980s',
+    description: 'The Japanese Famicom\'s two pads were wired permanently into the console, and the second traded Start and Select for a built-in microphone. The first units\' square buttons stuck, prompting a recall and the switch to round ones.',
+    longDescription: 'The original Famicom, launched in Japan in 1983, came with two controllers that were hardwired to the back of the console — they could not be unplugged or replaced individually. They shared the D-pad and A and B buttons that Nintendo carried into the NES, but they were not identical. Controller I had Start and Select buttons; Controller II did not, and instead contained a small built-in microphone that could feed sound to the console.\n\nFew games used the microphone, but those that did have become trivia favourites. In the Japanese version of The Legend of Zelda, shouting or blowing into it defeats the rabbit-eared Pols Voice enemies — the reason the Western manual mysteriously claims they dislike loud noise, though NES players had no microphone to use. Takeshi no Chōsenjō asked players to sing into it.\n\nThe controllers also changed early in the console\'s life. The first Famicom units had square A and B buttons, which tended to stick when pressed. After a recall, Nintendo switched to round buttons in subsequent units. The console\'s red, white and gold colours were chosen by Nintendo president Hiroshi Yamauchi after he saw them on a billboard for the antenna maker DX Antenna. Other controllers, such as the light gun and R.O.B., connected through an expansion port on the front of the machine.',
+    keyFacts: [
+      'Both controllers were hardwired to the back of the original Famicom',
+      'Controller II replaced Start and Select with a built-in microphone',
+      'The Japanese Legend of Zelda let players defeat Pols Voice by making noise into the microphone',
+      'Early units had square A and B buttons that stuck; round buttons replaced them after a recall',
+      'Extra controllers plugged into a 15-pin expansion port on the front of the console',
+    ],
+    notableFor: 'The microphone on Controller II, and the hardwired design that the NES replaced with detachable controllers',
+    sections: [
+      {
+        title: 'The Pols Voice Mystery',
+        html: '<p>For years Western players wondered why the Zelda manual said Pols Voice hated loud noise. The answer was the Famicom\'s second controller: in Japan the hint was literal. The NES dropped the microphone, and the clue became a puzzle with no solution — a small example of how hardware differences between regions can leave traces in a game\'s text.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Family Computer', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Family_Computer' },
+    ],
+  },
 ];

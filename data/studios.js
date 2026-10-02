@@ -607,4 +607,156 @@ module.exports = [
       { title: 'Technōs Japan', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Techn%C5%8Ds_Japan' },
     ],
   },
+  {
+    id: 'hal-laboratory',
+    name: 'HAL Laboratory',
+    foundedYear: 1980,
+    founders: [
+      'Mitsuhiro Ikeda',
+    ],
+    location: 'Tokyo, Japan',
+    firstGame: 'Computer software and peripherals (early 1980s)',
+    era: '1980 – present',
+    description: 'A Tokyo studio that began by making computer peripherals, nearly went bankrupt in the early 1990s, and was saved by Nintendo on condition that a young programmer named Satoru Iwata ran it. Its next game was Kirby\'s Dream Land.',
+    longDescription: 'HAL Laboratory was founded on 21 February 1980 in Kanda, Tokyo, with Mitsuhiro Ikeda as its first president. Its early business was hardware and utilities — the company made peripherals including a universal remote and cables for electronic organisers — before it turned increasingly to games. The origin of its name is told two ways: Satoru Iwata said in 2005 that it came from the computer in 2001: A Space Odyssey, and in 2012 that each letter put the company "one step ahead of IBM".\n\nIwata, a gifted programmer, became central to HAL\'s game work on Nintendo\'s systems. By the early 1990s, however, the company was in serious trouble. The protracted development of the Famicom adventure game Metal Slader Glory contributed to debts of about ¥1.5 billion, and HAL was on the verge of bankruptcy. Nintendo agreed to rescue it on the condition that Iwata be appointed president.\n\nHis first release in that role, in 1992, was Kirby\'s Dream Land for the Game Boy, designed by Masahiro Sakurai. Kirby became HAL\'s signature series, and the studio went on to co-develop the Mother games and to create Super Smash Bros., first released in 1999. Iwata himself joined Nintendo in 2000 and became its president in 2002. HAL remains an independent company closely tied to Nintendo, with offices in Tokyo and Yamanashi.',
+    keyFacts: [
+      'Founded on 21 February 1980 in Kanda, Tokyo; Mitsuhiro Ikeda was its first president',
+      'Began with hardware peripherals before concentrating on games',
+      'Fell about ¥1.5 billion into debt after the long development of Metal Slader Glory',
+      'Nintendo\'s rescue required Satoru Iwata to become president',
+      'Created Kirby (1992) and Super Smash Bros. (1999); co-developed the Mother series',
+    ],
+    sections: [
+      {
+        title: 'Two Explanations for a Name',
+        html: '<p>Iwata gave different accounts of the company name in different interviews — the menacing computer of 2001: A Space Odyssey, or a play on staying one letter ahead of IBM. Both are good stories, and HAL has never needed to choose between them.</p>',
+      },
+    ],
+    sources: [
+      { title: 'HAL Laboratory', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/HAL_Laboratory' },
+    ],
+  },
+  {
+    id: 'intelligent-systems',
+    name: 'Intelligent Systems',
+    foundedYear: 1986,
+    founders: [
+      'Toru Narihiro',
+    ],
+    location: 'Kyoto, Japan',
+    firstGame: 'Ports and support work for Nintendo (1980s)',
+    era: '1986 – present',
+    description: 'Nintendo\'s behind-the-scenes programming unit that became a creator in its own right with Famicom Wars and Fire Emblem, then added Paper Mario, WarioWare and Panel de Pon.',
+    longDescription: 'Intelligent Systems began in 1983 as Iwasaki Giken, a division of another company, and was established as a separate company by Toru Narihiro in December 1986. For its first years it served as an auxiliary programming team for Nintendo, porting software and building development tools. Its early credits include work on Mario Bros., Wild Gunman, Duck Hunt, Hogan\'s Alley, Donkey Kong 3, Devil World, Wrecking Crew and Metroid.\n\nThe studio moved into designing its own games at the end of the decade. Famicom Wars (1988) began the turn-based strategy series later known in the West as Advance Wars. Fire Emblem: Shadow Dragon and the Blade of Light (1990) was the first game for which Intelligent Systems led both design and graphics; it founded a tactical RPG series known for permanent character death. The company also made the competitive puzzle game Panel de Pon, Paper Mario for the Nintendo 64 in 2000, and later the WarioWare games.\n\nIntelligent Systems is independent but works almost exclusively with Nintendo. It moved into Nintendo\'s Kyoto Research Center in 2003 and in 2013 relocated near Nintendo\'s new headquarters in Kyoto.',
+    keyFacts: [
+      'Originated in 1983 as Iwasaki Giken; established as Intelligent Systems by Toru Narihiro in December 1986',
+      'Began as a porting and tools team for Nintendo, working on games including Duck Hunt and Metroid',
+      'Created the Famicom Wars / Advance Wars series in 1988',
+      'Fire Emblem (1990) was the first game it led in both design and graphics',
+      'Also developed Panel de Pon, Paper Mario and WarioWare',
+    ],
+    sections: [
+      {
+        title: 'From Support Team to Series Creator',
+        html: '<p>Many Nintendo games of the mid-1980s passed through Intelligent Systems\' hands without its name being widely known. Its shift into original design produced two strategy series — Wars and Fire Emblem — that defined Nintendo\'s presence in a genre it otherwise rarely touched.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Intelligent Systems', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Intelligent_Systems' },
+    ],
+  },
+  {
+    id: 'sensible-software',
+    name: 'Sensible Software',
+    foundedYear: 1986,
+    founders: [
+      'Jon Hare',
+      'Chris Yates',
+    ],
+    location: 'Chelmsford, England',
+    firstGame: 'Parallax (1986)',
+    era: '1986 – 1999',
+    description: 'Jon Hare and Chris Yates made Wizball, Mega-Lo-Mania, Sensible Soccer and Cannon Fodder — seven British number-one hits — before selling the company to Codemasters in 1999.',
+    longDescription: 'Jon Hare and Chris Yates founded Sensible Software in March 1986, after a short spell working at LT Software in Basildon, and based it in Chelmsford. Their first games were for 8-bit machines: Parallax (1986) on the Commodore 64 and then Wizball (1987), an inventive shooter about restoring colour to a grey world that Zzap!64 later voted Game of the Decade. They also produced the Shoot-\'Em-Up Construction Kit (1987), which let players build their own shooters.\n\nOn the 16-bit computers Sensible became one of Britain\'s most popular developers. Mega-Lo-Mania (1991) was a compact real-time strategy game spanning eras of technology. Sensible Soccer (1992) presented football from a high, zoomed-out view with tiny players, fast passing and aftertouch on the ball, and became a fixture of the Amiga. Cannon Fodder (1993) applied a similar small-sprite style to a military strategy-action game with a satirical anti-war tone. Sensible World of Soccer (1994) expanded the football game with a vast database of real clubs and players and was later entered into Stanford University\'s Game Canon in 2006.\n\nThe studio spent heavily on an ambitious adventure, Sex \'n\' Drugs \'n\' Rock \'n\' Roll, which was abandoned after its publisher, GT Interactive, dropped it. Sensible Software was sold to Codemasters in 1999, ending its run in June that year, having produced seven number-one hit games.',
+    keyFacts: [
+      'Founded in March 1986 by Jon Hare and Chris Yates; based in Chelmsford',
+      'Wizball (1987) was later voted Game of the Decade by Zzap!64',
+      'Created Mega-Lo-Mania, Sensible Soccer and Cannon Fodder',
+      'Sensible World of Soccer entered Stanford University\'s Game Canon in 2006',
+      'Sold to Codemasters in 1999 after seven number-one hit games',
+    ],
+    sections: [
+      {
+        title: 'Small Sprites, Big Games',
+        html: '<p>Sensible\'s best-known games share a look: tiny characters seen from far above, readable at a glance and quick to control. It let Sensible Soccer show much of the pitch at once and let Cannon Fodder move squads across wide maps — design decisions driven as much by playability as by the limits of the hardware.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Sensible Software', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Sensible_Software' },
+    ],
+  },
+  {
+    id: 'team17',
+    name: 'Team17',
+    foundedYear: 1990,
+    founders: [
+      'Michael Robinson',
+      'Martyn Brown',
+      'Debbie Bestwick',
+      'Andreas Tadic',
+      'Rico Holmes',
+      'Peter Tuleby',
+    ],
+    location: 'Wakefield, England',
+    firstGame: 'Full Contact (1991)',
+    era: '1990 – present',
+    description: 'Formed in 1990 by merging a British Amiga publisher with a Swedish development team, Team17 dominated the Amiga charts and then found a decades-long franchise in Worms.',
+    longDescription: 'Team17 was created on 7 December 1990 by merging 17-Bit Software, a British publisher, with Team 7, a Swedish developer. Its co-founders included Michael Robinson, Martyn Brown and Debbie Bestwick, alongside Andreas Tadic, Rico Holmes and Peter Tuleby, and the company was based in Wakefield in West Yorkshire.\n\nIts first game, the fighting game Full Contact (1991), went straight to number one in the British charts, and the studio quickly became the leading name on the Amiga. Alien Breed, Project-X, Superfrog and Body Blows followed. By 1993, by Team17\'s own account, 90 percent of its games had reached the top of the charts and its products together accounted for half of all Amiga game sales.\n\nThe Amiga\'s decline might have ended the company, but Team17 had one more idea to sign. Programmer Andy Davidson had built an artillery game prototype in 1994 and showed it at a trade show; Team17 picked it up, retitled it Worms, and released it in 1995. Projected to sell around 60,000 copies, it shipped millions within its first year and became one of the longest-running series in British games. Team17 later became a publisher of independent games, floated on the Alternative Investment Market in May 2018 at a valuation of about £230 million, and in January 2025 rebranded its group as Everplay.',
+    keyFacts: [
+      'Formed on 7 December 1990 by merging 17-Bit Software with the Swedish developer Team 7',
+      'Debut game Full Contact (1991) reached number one in the UK charts',
+      'By 1993 its games accounted for half of all Amiga game sales',
+      'Worms, created by Andy Davidson, was projected to sell 60,000 copies and shipped millions in its first year',
+      'Listed on AIM in May 2018; the group rebranded as Everplay in January 2025',
+    ],
+    sections: [
+      {
+        title: 'The Amiga\'s House Studio',
+        html: '<p>Few developers have been as closely tied to one machine as Team17 was to the Amiga in the early 1990s. Its run of chart-topping action games defined the platform\'s late commercial period — and Worms, a modest artillery game from an outside programmer, carried the company past the Amiga\'s collapse.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Team17', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Team17' },
+    ],
+  },
+  {
+    id: 'factor-5',
+    name: 'Factor 5',
+    foundedYear: 1987,
+    founders: [
+      'Julian Eggebrecht',
+      'Four other former Rainbow Arts staff',
+    ],
+    location: 'Cologne, Germany; later San Rafael, California',
+    firstGame: 'Katakis (1988)',
+    era: '1987 – 2009',
+    description: 'Five former Rainbow Arts staff founded it in Cologne; it made Turrican II on the Amiga, moved to California to work with LucasArts, and pushed Nintendo hardware further than almost anyone with Rogue Squadron.',
+    longDescription: 'Factor 5 was founded in Cologne in 1987 by five former employees of the German publisher Rainbow Arts, among them Julian Eggebrecht. Its early work was on the Amiga: Katakis (1988), the Amiga version of R-Type (1989), the Amiga Turrican (1990), Masterblazer (1990) and Turrican II: The Final Fight (1991), which became one of the best-regarded action games on the machine. The studio developed a reputation for technical skill, particularly in sound and graphics programming.\n\nTo work more closely with American partners such as LucasArts, Factor 5 set up a US company in San Rafael, California, in May 1996, and the core German team moved there later that year. The partnership produced Star Wars: Rogue Squadron (1998) for the Nintendo 64 and Star Wars Rogue Squadron II: Rogue Leader (2001), a GameCube launch title widely praised as one of the most technically impressive games of its generation. Factor 5 also built MusyX, an audio toolset and compression technology used on Nintendo platforms.\n\nIts later PlayStation 3 game, Lair (2007), was poorly received. The US company closed in May 2009 after the collapse of Brash Entertainment, the publisher behind its next project, and the original German company was liquidated in January 2011.',
+    keyFacts: [
+      'Founded in Cologne in 1987 by five former Rainbow Arts employees, including Julian Eggebrecht',
+      'Made Amiga games including Katakis, R-Type and Turrican II: The Final Fight',
+      'Opened a US company in San Rafael, California, in May 1996 to work with LucasArts',
+      'Developed Star Wars: Rogue Squadron (1998) and Rogue Leader (2001)',
+      'Created the MusyX audio tools for Nintendo platforms; closed its US company in May 2009',
+    ],
+    sections: [
+      {
+        title: 'Technical Showcase Studio',
+        html: '<p>Factor 5\'s reputation rested on getting more from hardware than other developers did, from Amiga shooters to Rogue Leader on the GameCube. That strength made it a natural partner for Nintendo and LucasArts — and its fate shows how quickly even a skilled studio could be undone when a publisher failed.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Factor 5', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Factor_5' },
+    ],
+  },
 ];

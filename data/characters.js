@@ -725,5 +725,104 @@ module.exports = [
         html: '<p>Rayman gave Ubisoft its first mascot and a foundational commercial success, helping fuel the studio\'s growth into one of the industry\'s largest. His silhouette — unmistakable precisely because of the missing limbs — proved durable enough to carry a long-running series across 2D and 3D, and eventually to birth the Rabbids, which grew into a phenomenon of their own. More than the sales, though, Rayman endures as a favourite designer\'s tale: proof that some of the most memorable characters in games came not from a blank-cheque vision but from a team making the best of what the machine could actually do.</p>'
       },
     ],
-  }
+  },
+  {
+    id: 'bomberman',
+    name: 'Bomberman',
+    franchise: 'Bomberman',
+    platform: 'Sharp X1 / PC-8801 / NES',
+    debutYear: 1983,
+    creator: 'Yuji Tanaka, Toshiyuki Sasagawa and Shinichi Nakamoto (Hudson Soft)',
+    era: '1980s',
+    role: 'Protagonist',
+    description: 'Hudson Soft\'s maze-running bomb-layer began as a 1983 computer game and became the face of multiplayer party gaming — up to five players on the PC Engine, ten on the Saturn.',
+    longDescription: 'Bomber Man was released in Japan in July 1983 for the Sharp X1 and then ported to the PC-8801 and other computers. Created at Hudson Soft by Yuji Tanaka, Toshiyuki Sasagawa and Shinichi Nakamoto, it asked the player to navigate a maze and defeat balloon-shaped enemies with time bombs whose blasts extend in straight lines. Outside Japan it was released in 1984 under the title Eric and the Floaters, sidestepping the word "bomb".\n\nThe character reached a much larger audience with the 1985 NES version, but the series\' real identity arrived with multiplayer. The 1990 PC Engine (TurboGrafx-16) game supported up to five players at once, turning the simple rules of the single-player maze into a frantic battle game in which players trap and blow each other up. That battle mode became the heart of the franchise through the Super Bomberman games on the Super Famicom and Saturn Bomberman, which supported ten local players.\n\nBomberman served as Hudson Soft\'s mascot for decades. When Konami acquired Hudson in 2011, the character and series passed to Konami, which has continued to release new games and collections.',
+    abilities: [
+      'Places time bombs whose explosions extend in straight lines along the maze',
+      'Collects power-ups that increase bomb count and blast range',
+      'In battle mode, traps and eliminates rival players',
+    ],
+    keyFacts: [
+      'Debuted in Bomber Man (July 1983) for the Sharp X1, created at Hudson Soft',
+      'Released abroad in 1984 as Eric and the Floaters',
+      'The 1990 PC Engine game introduced multiplayer for up to five players',
+      'Saturn Bomberman supported ten local players',
+      'Konami took over the series after acquiring Hudson Soft in 2011',
+    ],
+    sections: [
+      {
+        title: 'The Party Game Hiding in a Maze Game',
+        html: '<p>Bomberman\'s single-player rules were modest. What made the series endure was the discovery that the same mechanics — a grid, bombs, blast lines — produced a perfect competitive game for several people on one screen, and Hudson built the series around that discovery for the next thirty years.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Bomberman', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Bomberman' },
+    ],
+  },
+  {
+    id: 'alex-kidd',
+    name: 'Alex Kidd',
+    franchise: 'Alex Kidd',
+    platform: 'Sega Master System',
+    debutYear: 1986,
+    creator: 'Sega',
+    era: '1980s',
+    role: 'Protagonist / Former Sega Mascot',
+    description: 'Sega\'s big-eared, rock-paper-scissors-playing hero was its mascot before Sonic — so central to the Master System that his first game was built into later consoles.',
+    longDescription: 'Alex Kidd first appeared in Alex Kidd in Miracle World, released for the Sega Master System in 1986. The game was a colourful platformer in which Alex punched blocks and enemies, rode vehicles such as a motorcycle and a helicopter, and settled several boss encounters with games of rock-paper-scissors. It became one of the Master System\'s best-known games, and Sega later built it into the console itself: later versions of the Master System and the Master System II included Miracle World in place of earlier built-in games such as Snail Maze, Safari Hunt and Hang-On.\n\nAlex served as Sega\'s mascot in the years before Sonic the Hedgehog. His series was unusually varied — most entries played very differently from one another — and included Alex Kidd in the Enchanted Castle (1989) on the Mega Drive and Alex Kidd in Shinobi World (1990), a parody of Sega\'s own Shinobi.\n\nAfter Shinobi World, Sega shifted its focus to Sonic, who debuted in 1991 and gave the company the faster, more attitude-driven mascot it wanted for its 16-bit campaign. Alex returned decades later in Alex Kidd in Miracle World DX, a remake released on 22 June 2021 for modern platforms.',
+    abilities: [
+      'Punches through blocks and enemies with an oversized fist',
+      'Rides vehicles including a motorcycle and a pedal-powered helicopter',
+      'Plays rock-paper-scissors (Janken) against bosses',
+    ],
+    keyFacts: [
+      'Debuted in Alex Kidd in Miracle World (1986) on the Master System',
+      'Sega\'s mascot before Sonic the Hedgehog',
+      'Miracle World was built into later Master System and Master System II consoles',
+      'Sega shifted focus to Sonic after Alex Kidd in Shinobi World (1990)',
+      'Alex Kidd in Miracle World DX was released on 22 June 2021',
+    ],
+    sections: [
+      {
+        title: 'The Mascot Before the Mascot',
+        html: '<p>Alex Kidd is often remembered as the character Sonic replaced, but on the Master System — especially in Europe and Brazil, where the console thrived — he was the face of Sega for a generation of players, many of whom first met him because his game was already inside their console.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Alex Kidd', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Alex_Kidd' },
+    ],
+  },
+  {
+    id: 'earthworm-jim',
+    name: 'Earthworm Jim',
+    franchise: 'Earthworm Jim',
+    platform: 'Sega Genesis / Super NES',
+    debutYear: 1994,
+    creator: 'Doug TenNapel',
+    era: '1990s',
+    role: 'Protagonist',
+    description: 'An ordinary earthworm in a robotic super-suit, created by Doug TenNapel for Shiny Entertainment in 1994 — a hit platformer, a cartoon series and a toy line within a year.',
+    longDescription: 'Earthworm Jim was created by Doug TenNapel and developed into a game by Shiny Entertainment, the studio led by David Perry. The premise is simple and absurd: Jim is an ordinary earthworm until a robotic super-suit falls on him, giving him a humanoid body, a plasma blaster and superhuman abilities — though without the suit he remains a vulnerable worm. TenNapel described him as foolish but good-hearted, with just enough ability to be a hero despite his limited intelligence.\n\nThe first game launched in October 1994 on the Genesis and Super NES. Its hand-drawn animation was exceptionally fluid for 16-bit consoles, and its humour — surreal enemies, odd set pieces and jokes built into the levels — set it apart from the many mascot platformers of the time. TenNapel also voiced Jim in the game, including his catchphrase "Groovy!"\n\nJim quickly became a multimedia property. Earthworm Jim 2 followed in 1995; an animated series ran for 23 episodes over two seasons on Kids\' WB in 1995–1996, with Dan Castellaneta voicing Jim; and Playmates Toys released action figures in late 1995. The later games, Earthworm Jim 3D and Menace 2 the Galaxy (both 1999), were made without the original team, and an HD remake appeared in 2010.',
+    abilities: [
+      'Robotic super-suit providing strength and a humanoid body',
+      'Plasma blaster',
+      'Uses his own worm body as a whip and to swing from hooks',
+    ],
+    keyFacts: [
+      'Created by Doug TenNapel; the first game was developed by Shiny Entertainment under David Perry',
+      'Debuted in October 1994 on the Genesis and Super NES',
+      'An ordinary earthworm made heroic by a robotic super-suit',
+      'TenNapel voiced Jim in the game; Dan Castellaneta voiced him in the 1995–1996 cartoon',
+      'Earthworm Jim 2 followed in 1995; a Playmates toy line launched the same year',
+    ],
+    sections: [
+      {
+        title: 'Animation as the Selling Point',
+        html: '<p>Earthworm Jim arrived in a crowded field of "mascot with attitude" platformers. What made it stand out was craft — fluid, cartoon-quality animation and an odd, specific sense of humour — at a moment when 16-bit hardware was being pushed to its limits by studios trying to look like the cartoons they competed with on Saturday mornings.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Earthworm Jim (character)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Earthworm_Jim_(character)' },
+    ],
+  },
 ];
