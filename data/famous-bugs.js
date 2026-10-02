@@ -629,4 +629,59 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'pac-man-ghost-targeting-overflow',
+    sources: [
+      { title: 'The Pac-Man Dossier', publisher: 'Game Developer (Jamey Pittman)', url: 'https://www.gamedeveloper.com/design/the-pac-man-dossier' },
+      { title: 'Pac-Man', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Pac-Man' },
+    ],
+    title: 'The Upward Glance — Pac-Man\'s Ghost Targeting Bug',
+    game: 'Pac-Man',
+    platform: 'Arcade',
+    year: 1980,
+    era: '1980s',
+    impact: 'Hidden for decades; now part of expert strategy',
+    description: 'When Pac-Man faces up, two of the ghosts aim at the wrong tile: an overflow in the targeting code shifts their target to the left as well as ahead. Players had been playing around the bug for decades before anyone documented it.',
+    longDescription: 'Each of Pac-Man\'s four ghosts chases him differently. Blinky, the red ghost, targets Pac-Man\'s own tile. Pinky, the pink ghost, tries to get ahead of him by aiming at a point four tiles in front of the direction he is facing. Inky, the cyan ghost, uses a more complicated calculation that starts from a point two tiles in front of Pac-Man. Clyde alternates between chasing and wandering off depending on how close he is.\n\nThe "in front of" calculation contains an error. As Jamey Pittman documented in his detailed analysis of the game\'s code, The Pac-Man Dossier, when Pac-Man is moving upwards an overflow in the logic that computes the offset adds a leftward offset equal to the upward one. Pinky therefore targets four tiles up and four tiles to the left of Pac-Man rather than four tiles straight up, and Inky\'s starting point becomes two tiles up and two tiles to the left.\n\nThe result is subtle. Ghosts in Pac-Man choose their direction only at intersections, steering towards whichever neighbouring tile is closest to their target, so a shifted target changes their route only some of the time. But it is consistent, and it means that facing upward makes Pinky noticeably less effective at cutting Pac-Man off. Patterns and strategies developed by top players already accounted for the ghosts\' real behaviour; the code analysis explained why the ghosts behaved that way.',
+    keyFacts: [
+      'Pinky normally targets four tiles ahead of Pac-Man; Inky\'s calculation starts two tiles ahead',
+      'When Pac-Man faces up, an overflow adds an equal leftward offset to both',
+      'Pinky then targets four tiles up and four tiles left; Inky uses two up and two left',
+      'Ghosts only choose directions at intersections, so the error changes routes only some of the time',
+      'Documented in Jamey Pittman\'s The Pac-Man Dossier',
+    ],
+    sections: [
+      {
+        title: 'A Bug You Cannot See',
+        html: '<p>Most famous bugs announce themselves — a corrupted screen, a crash, an impossible item. This one is invisible. A ghost steering slightly off-target looks exactly like a ghost making a choice, and Pac-Man\'s ghosts were designed to look as though they had personalities. The flaw was absorbed into that illusion for years.</p><p>It is also a small illustration of how much behaviour the original 1980 hardware compressed into very little code: a single offset calculation, shared by two ghosts, carrying one error that only appears in one of four directions.</p>',
+      },
+    ],
+  },
+  {
+    id: 'lord-british-assassination',
+    sources: [
+      { title: 'Ultima Online', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Ultima_Online' },
+    ],
+    title: 'The Assassination of Lord British',
+    game: 'Ultima Online',
+    platform: 'PC',
+    year: 1997,
+    era: '1990s',
+    impact: 'Became one of online gaming\'s founding legends',
+    description: 'During a 1997 beta stress test of Ultima Online, a player killed Richard Garriott\'s supposedly invulnerable avatar with a fire field spell. A server crash had reset the protection, and nobody had switched it back on.',
+    longDescription: 'Richard Garriott had appeared in his own games as Lord British, the ruler of Britannia, since the early Ultima titles, and in the single-player games he was nearly impossible to kill. Ultima Online, Origin Systems\' massively multiplayer game, put that character into a world shared with thousands of players.\n\nOn 9 August 1997, during a stress test of the beta servers, Garriott\'s Lord British was appearing before a gathering of players when a player character named Rainz cast a fire field spell and killed him. The death should not have been possible. As producer Starr Long later explained, Lord British, like other staff characters, had been made invulnerable to that kind of attack, but by design the protection did not persist across game sessions. The server had crashed shortly before the event, and Garriott had not reset his invulnerability when he logged back in.\n\nOrigin banned Rainz from the beta, stating that the ban was for repeatedly exploiting rather than reporting bugs, not for the killing itself. Many beta testers protested regardless. Ultima Online launched on 24 September 1997 and went on to become the first MMORPG to reach 100,000 subscribers. The assassination, though, is what many players remember: the moment a game\'s creator discovered that, in a persistent online world, the players could do things the designers had never intended.',
+    keyFacts: [
+      'Happened on 9 August 1997 during an Ultima Online beta stress test',
+      'The player character Rainz killed Lord British with a fire field spell',
+      'Staff invulnerability did not persist between sessions, and Garriott had not reset it after a server crash',
+      'Origin banned Rainz for repeatedly exploiting rather than reporting bugs',
+      'Ultima Online launched weeks later, on 24 September 1997',
+    ],
+    sections: [
+      {
+        title: 'A Lesson About Shared Worlds',
+        html: '<p>In a single-player game, a designer controls every outcome that matters. In an online world, a single overlooked flag in front of an audience of players becomes a public event. The death of Lord British was a bug in the narrow sense — a protection that should have been on was off — but it became a story about something larger: players treating a developer\'s world as genuinely theirs to act in.</p>',
+      },
+    ],
+  },
 ];

@@ -307,4 +307,25 @@ module.exports = [
       { title: 'Resident Evil (1996 video game)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Resident_Evil_(1996_video_game)' },
     ],
   },
+  {
+    id: 'glover-2',
+    title: 'Glover 2',
+    developer: 'Interactive Studios (Blitz Games)',
+    platform: 'Nintendo 64',
+    year: 1999,
+    status: 'Cancelled at about 80–85% complete — prototype released in 2011',
+    description: 'The sequel to the N64\'s ball-guiding glove platformer was most of the way finished when it was cancelled — reportedly because too many cartridges of the first game had been made.',
+    longDescription: 'Glover, released in November 1998 for the Nintendo 64 and Windows and in 1999 for the PlayStation, was a 3D puzzle-platformer from the British developer Interactive Studios, later known as Blitz Games, and published by Hasbro Interactive. Players controlled a magic glove that had to bounce, roll, throw and carry a ball through each level — an unusual premise that earned the game a modest but loyal following.\n\nA sequel, Glover 2, was announced in July 1999. Development progressed to an estimated 80 to 85 percent of completion before it stopped. The explanation that has been reported for the cancellation has little to do with the sequel itself: an employee at Hasbro is said to have doubled the production order for the original game\'s cartridges, leaving the company with roughly half a million dollars of stock it could not sell. With that loss on the books, the sequel was dropped. Hasbro Interactive itself was sold off shortly afterwards.\n\nFor a decade Glover 2 existed only in previews. In October 2011 the collector site NESWorld obtained a prototype cartridge and released a ROM image of it, allowing players to explore the unfinished game for the first time.',
+    keyFacts: [
+      'Sequel to Glover (1998), a puzzle-platformer about a glove guiding a ball',
+      'Announced in July 1999 by Interactive Studios and Hasbro Interactive',
+      'Estimated to have been 80–85% complete when development stopped',
+      'Reportedly cancelled after an overproduction of the first game\'s cartridges left about $500,000 of unsold stock',
+      'A prototype was acquired and released online by NESWorld in October 2011',
+    ],
+    discoveredBy: 'NESWorld, which acquired a prototype cartridge and released its ROM in October 2011',
+    sources: [
+      { title: 'Glover (video game)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Glover_(video_game)' },
+    ],
+  },
 ];

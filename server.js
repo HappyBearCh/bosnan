@@ -4316,7 +4316,7 @@ ${nav('developers')}
 
   <h2 class="platform-games-heading">${devGames.length} Game${devGames.length !== 1 ? 's' : ''} in Archive</h2>
   <div class="games-grid" id="gamesGrid">${cardHtml}</div>
-</div>
+${sourcesBlock(dev)}</div>
 
 ${toggleScript()}
 </body>
@@ -4388,7 +4388,7 @@ ${nav('composers')}
   </div>
   ${cGames.length > 0 ? `<h2 class="platform-games-heading">${cGames.length} Game${cGames.length !== 1 ? 's' : ''} in Archive</h2>
   <div class="games-grid" id="gamesGrid">${cardHtml}</div>` : ''}
-</div>
+${sourcesBlock(c)}</div>
 ${toggleScript()}
 </body>
 </html>`;
@@ -4524,7 +4524,7 @@ ${nav('hardware')}
       <tbody>${specRows}</tbody>
     </table>` : ''}
   </div>
-</div>
+${sourcesBlock(hw)}</div>
 ${toggleScript()}
 </body>
 </html>`;
@@ -4969,7 +4969,7 @@ ${nav('lost-games')}
     ${g.discoveredBy ? `<div class="dev-notable"><strong>Prototype discovered by:</strong> ${escapeHtml(g.discoveredBy)}</div>` : ''}
     ${factList ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${factList}</ul></div>` : ''}
   </div>
-</div>
+${sourcesBlock(g)}</div>
 ${toggleScript()}
 </body>
 </html>`;
@@ -5557,7 +5557,7 @@ function criticsListPage() {
 function criticDetailPage(item) {
   const work = gameLinkList(item.notableWork);
   const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.name)} – Critics – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('critics')}<div class="platform-detail-wrapper"><a href="/critics" class="back-link">&#8592; All Critics</a><div class="platform-detail-header"><h1>${escapeHtml(item.name)}</h1><p class="platform-detail-era">${escapeHtml(item.role)} &middot; ${escapeHtml(item.outlet)} &middot; ${escapeHtml(item.era)}${item.nationality ? ' &middot; ' + escapeHtml(item.nationality) : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${work ? `<div class="dev-notable"><strong>Notable Work:</strong><ul class="trivia-list">${work}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.name)} – Critics – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('critics')}<div class="platform-detail-wrapper"><a href="/critics" class="back-link">&#8592; All Critics</a><div class="platform-detail-header"><h1>${escapeHtml(item.name)}</h1><p class="platform-detail-era">${escapeHtml(item.role)} &middot; ${escapeHtml(item.outlet)} &middot; ${escapeHtml(item.era)}${item.nationality ? ' &middot; ' + escapeHtml(item.nationality) : ''}</p><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${work ? `<div class="dev-notable"><strong>Notable Work:</strong><ul class="trivia-list">${work}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div>${sourcesBlock(item)}</div>${toggleScript()}</body></html>`;
 }
 
 function wordSearchPage() {

@@ -507,4 +507,33 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'howard-and-nester',
+    title: 'Howard & Nester',
+    franchise: 'Nintendo Power (various NES games)',
+    publisher: 'Nintendo of America (Nintendo Power)',
+    startYear: 1988,
+    issues: 55,
+    era: '1980s–1990s',
+    description: 'Nintendo Power\'s house comic starred a real Nintendo employee, bow-tied Howard Phillips, and his brash young sidekick Nester, who dreamed his way into each month\'s new games. It ran from the magazine\'s first issue until 1993.',
+    longDescription: 'Nintendo Power\'s first issue, dated July/August 1988, carried a two-page comic strip called Howard & Nester. Howard was Howard Phillips, Nintendo of America\'s real "game master" and the public face of its early game-counselling and promotional work, drawn with his trademark bow tie. Nester was a fictional, spiky-haired teenager who was always sure he was better at games than he was. The characters were designed with support from the Japanese studio Work House.\n\nThe strip was, unashamedly, advertising. A typical episode had Nester fall asleep or be pulled into a dream in which he found himself inside a newly released NES game, where Howard would appear to rescue him or show him the right way to play — introducing the game\'s premise and mechanics to readers along the way. For many young NES owners it was their first look at upcoming titles, and the strip became part of the magazine\'s identity.\n\nReality eventually caught up with it. Phillips left Nintendo to work for LucasArts, and in the June 1991 issue (Volume 25) he was written out of the strip. From the next issue it continued as Nester\'s Adventures, later shrinking from two pages to one, until Volume 55 in December 1993. Nester made one last appearance in Nintendo Power\'s final issue, Volume 285 in December 2012, in a comic titled "Nester & Max".',
+    keyFacts: [
+      'Debuted in Nintendo Power\'s first issue, dated July/August 1988',
+      'Howard was based on the real Nintendo of America employee Howard Phillips',
+      'Episodes usually placed Nester inside a newly released NES game, often through a dream',
+      'Phillips was written out in June 1991 (Volume 25) after he left Nintendo for LucasArts',
+      'Continued as Nester\'s Adventures until December 1993 (Volume 55)',
+      'Nester returned in Nintendo Power\'s final issue in December 2012',
+    ],
+    notableFor: 'Turning a real company employee into a comic-strip mascot and teaching a generation of NES owners about new games through a story',
+    sections: [
+      {
+        title: 'Advertising as Storytelling',
+        html: '<p>Nintendo Power was owned by Nintendo, and Howard & Nester never pretended otherwise. What made the strip memorable was the double act: Howard, calm and expert, and Nester, impatient and boastful, standing in for the reader who wanted to be good at the game right now. The format let each episode explain how a new game worked while keeping it a story rather than a list of features.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Nintendo Power — Howard & Nester', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Howard_%26_Nester' },
+    ],
+  },
 ];

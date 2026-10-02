@@ -561,4 +561,61 @@
       { title: 'Twin Galaxies', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Twin_Galaxies' },
     ],
   },
+  {
+    id: 'classic-tetris-world-championship-2010',
+    title: 'The First Classic Tetris World Championship',
+    year: 2010,
+    game: 'Tetris (NES, 1989)',
+    organizer: 'Classic Tetris World Championship',
+    location: 'Downtown Independent theater, Los Angeles',
+    era: '2010s',
+    description: 'In August 2010 a handful of the best players of a twenty-year-old NES game met in a Los Angeles cinema, filmed for a documentary. It was the start of the most unlikely revival in competitive gaming.',
+    longDescription: 'By 2010 NES Tetris, released by Nintendo in 1989, had a small community of devoted high-score players who had kept improving at a game most people had long since put away. The first Classic Tetris World Championship brought them together on 8 August 2010 at the Downtown Independent theater in Los Angeles. In the audience were Henk Rogers — the businessman who had secured Tetris\'s console rights for Nintendo in 1989 — and a film crew making the documentary Ecstasy of Order: The Tetris Masters, released in 2011.\n\nThe format deliberately echoed the 1990 Nintendo World Championships, where Tetris had been one of the three competition games. Five semi-final places were reserved for distinguished players — Jonas Neubauer, Harry Hong, Ben Mullen, Jesse Kelkar and Thor Aackerlund, the 1990 Nintendo World Champion — and eight players then completed three Tetris challenges to decide two finalists. Jonas Neubauer beat Harry Hong in the final and took home $1,000.\n\nThe event was small, but it was enough to establish an annual tradition. From 2012 the championship moved to Portland, Oregon, and as players adopted faster input techniques and the matches began to be streamed, Classic Tetris grew into one of the most watched retro competitions in the world. Neubauer went on to win the title seven times before his death in 2021.',
+    winner: 'Jonas Neubauer',
+    keyFacts: [
+      'Held on 8 August 2010 at the Downtown Independent theater in Los Angeles',
+      'Filmed for the 2011 documentary Ecstasy of Order: The Tetris Masters, with Henk Rogers attending',
+      'Format modelled on the 1990 Nintendo World Championships',
+      'Seeded players included 1990 Nintendo World Champion Thor Aackerlund',
+      'Jonas Neubauer defeated Harry Hong in the final and won $1,000',
+      'The championship moved to Portland, Oregon, from 2012',
+    ],
+    sections: [
+      {
+        title: 'A Tournament for a Finished Game',
+        html: '<p>Most competitive scenes grow up around games that are still being updated and sold. Classic Tetris grew up around a cartridge that had not changed since 1989. Everything that improved after 2010 — the scores, the techniques, the speed at which the game could be played — came from the players alone, which is a large part of why the scene became so compelling to watch.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Classic Tetris World Championship', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Classic_Tetris_World_Championship' },
+    ],
+  },
+  {
+    id: 'electronic-sports-world-cup-2003',
+    title: 'Electronic Sports World Cup 2003',
+    year: 2003,
+    game: 'Counter-Strike, Warcraft III, Unreal Tournament 2003, Quake III Arena',
+    organizer: 'Ligarena',
+    location: 'Futuroscope, near Poitiers, France',
+    era: '2000s',
+    description: 'A French company staged a multi-game PC tournament at a theme park in 2003 with 358 players from 37 countries — the start of one of the major international esports events of the decade.',
+    longDescription: 'The Electronic Sports World Cup was created by the French company Ligarena, and its first edition was held in 2003 at the Futuroscope theme park near Poitiers. It brought together 358 players from 37 countries to compete for prizes totalling €156,000.\n\nThe programme reflected the PC competitive scene of the moment. Counter-Strike was the centrepiece team game, alongside Warcraft III: Reign of Chaos, Unreal Tournament 2003 and Quake III Arena. The event also included a separate women\'s Counter-Strike competition, an early example of a major tournament giving female players a dedicated stage.\n\nThe ESWC grew quickly. By 2006 it hosted 547 qualified participants from 53 countries, with a prize purse of $400,000. In 2008 it travelled to San Jose, California, as part of NVIDIA\'s NVISION 08 event. The organisation changed hands several times — becoming Games-Services in 2005 and later passing to Games-Solution and Oxent — and the event, later renamed the Esports World Convention, ran until 2018. Alongside the World Cyber Games and the Cyberathlete Professional League, it was one of the circuits that turned national LAN scenes into an international one.',
+    winner: null,
+    keyFacts: [
+      'Created by the French company Ligarena; first held in 2003',
+      'Staged at the Futuroscope theme park near Poitiers',
+      '358 players from 37 countries competed for €156,000 in 2003',
+      'Games included Counter-Strike, Warcraft III, Unreal Tournament 2003 and Quake III Arena, plus a women\'s Counter-Strike event',
+      'Grew to 547 participants from 53 countries by 2006; ran until 2018',
+    ],
+    sections: [
+      {
+        title: 'Europe\'s Answer to the World Cyber Games',
+        html: '<p>The World Cyber Games had launched from South Korea in 2000. The ESWC gave Europe an international event of comparable scale, built on the strength of the French and wider European PC gaming scenes. Its mixture of team shooters and real-time strategy defined the mid-2000s idea of what an esports world championship looked like.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Esports World Convention', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Electronic_Sports_World_Cup' },
+    ],
+  },
 ];
