@@ -614,4 +614,107 @@ module.exports = [
       'Dragon\'s Lair (1983)',
     ],
   },
+  {
+    id: 'sprite',
+    term: 'Sprite',
+    category: 'Hardware',
+    definition: 'A small two-dimensional image that can be moved independently over a background — a character, enemy, bullet or item. Many consoles and computers of the 1980s and 1990s had hardware dedicated to drawing sprites, so the processor only had to update their positions rather than redraw them. Hardware limits on how many sprites could appear at once, or on one line, shaped how games of the era looked.',
+    examples: [
+      'Space Invaders (1978)',
+      'Super Mario Bros. (1985)',
+      'Street Fighter II (1991)',
+    ],
+  },
+  {
+    id: 'scanline',
+    term: 'Scanline',
+    category: 'Technical',
+    definition: 'One horizontal line of a television picture. A CRT draws the image line by line, top to bottom, and older game hardware generated its picture in step with that beam. Many graphical tricks — changing colours, scroll positions or sprites partway down the screen — work by altering settings between scanlines, and many hardware limits, such as sprites per line, are counted per scanline.',
+    examples: [
+      'Atari 2600 "racing the beam"',
+      'NES eight-sprites-per-line limit',
+      'SNES H-blank effects',
+    ],
+  },
+  {
+    id: 'frame-rate',
+    term: 'Frame rate',
+    category: 'Technical',
+    definition: 'How many times per second a game updates the image, measured in frames per second (fps). Most 8- and 16-bit games ran at 60 fps on NTSC televisions (50 on PAL) because their logic was tied to the display; many early 3D games ran at 30 fps or less because each frame took more work. Smooth, consistent frame rates matter most in fast action and fighting games.',
+    examples: [
+      'Virtua Racing (1992) — 60 fps polygons',
+      'Super Mario 64 (1996) — 30 fps',
+      'PAL conversions running at 50 Hz',
+    ],
+  },
+  {
+    id: 'clipping',
+    term: 'Clipping',
+    category: 'Technical',
+    definition: 'In graphics, removing parts of objects that fall outside the visible area. In everyday use the word usually means an error in collision: a character or camera passing through a wall or floor that should be solid. "No-clip" cheats deliberately switch collision off so the player can fly through the level.',
+    examples: [
+      'Doom (1993) — IDCLIP cheat',
+      'Early 3D cameras passing through walls',
+    ],
+  },
+  {
+    id: 'collision-detection',
+    term: 'Collision detection',
+    category: 'Technical',
+    definition: 'The code that decides when two objects touch — a bullet hitting an enemy, a player landing on a platform. Games usually check simplified shapes such as boxes rather than exact pixels, which is why a hit can feel generous or unfair. Many famous glitches, from clipping through walls to wall jumps, come from edge cases in collision code.',
+    examples: [
+      'Hitboxes in fighting games',
+      'Super Mario 64 (1996) — collision-based glitches',
+    ],
+  },
+  {
+    id: 'voxel',
+    term: 'Voxel',
+    category: 'Technical',
+    definition: 'A "volume pixel": a value on a regular three-dimensional grid. In 1990s games, voxel-style techniques were used mostly to draw detailed landscapes from height maps, producing rolling terrain that polygon hardware of the time could not match.',
+    examples: [
+      'Comanche: Maximum Overkill (1992)',
+      'Delta Force (1998)',
+      'Outcast (1999)',
+    ],
+  },
+  {
+    id: 'z-fighting',
+    term: 'Z-fighting',
+    category: 'Technical',
+    definition: 'A flickering artefact in 3D graphics when two surfaces sit at almost exactly the same depth, so the renderer cannot decide which one is in front and alternates between them from frame to frame. It is common where a decal or texture is laid very close over another surface.',
+    examples: [
+      'Coplanar surfaces in early 3D games',
+    ],
+  },
+  {
+    id: 'new-game-plus',
+    term: 'New Game Plus',
+    category: 'Design',
+    definition: 'Starting a game again after finishing it while keeping some progress — levels, items or abilities — from the completed playthrough. Chrono Trigger popularised the name, and its New Game Plus also opened the way to many of its alternative endings.',
+    examples: [
+      'Chrono Trigger (1995)',
+      'The Legend of Zelda (1986) — Second Quest (a related idea)',
+    ],
+  },
+  {
+    id: 'level-design-gating',
+    term: 'Gating',
+    category: 'Design',
+    definition: 'Blocking access to an area until the player has a particular ability, item or story event — a locked door, a gap too wide to jump, a ledge too high to reach. Gating lets designers control the order of exploration in open structures and is central to Metroid-style games, where new abilities open paths that were visible all along.',
+    examples: [
+      'Metroid (1986)',
+      'The Legend of Zelda: A Link to the Past (1991)',
+      'Super Metroid (1994)',
+    ],
+  },
+  {
+    id: 'sound-test',
+    term: 'Sound test',
+    category: 'Culture',
+    definition: 'A menu, often hidden, that lets players play a game\'s music and sound effects individually. Sound tests were common on 16-bit consoles and frequently doubled as the place to enter cheat codes — Sonic the Hedgehog 2\'s level select is unlocked by playing particular sounds in the sound test.',
+    examples: [
+      'Sonic the Hedgehog 2 (1992)',
+    ],
+  },
 ];

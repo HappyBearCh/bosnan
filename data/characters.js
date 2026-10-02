@@ -924,4 +924,37 @@ module.exports = [
       { title: 'Ghosts \'n Goblins', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Ghosts_%27n_Goblins' },
     ],
   },
+  {
+    id: 'ness',
+    name: 'Ness',
+    franchise: 'Mother / EarthBound',
+    platform: 'Super Famicom / SNES',
+    debutYear: 1994,
+    creator: 'Shigesato Itoi',
+    era: '1990s',
+    role: 'Protagonist',
+    description: 'A thirteen-year-old with a baseball cap, a bat and psychic powers — EarthBound\'s ordinary suburban hero, who found his widest audience through Super Smash Bros.',
+    longDescription: 'Ness is the protagonist of EarthBound, released for the Super NES in 1994 and known in Japan as Mother 2. The game was created by Shigesato Itoi, a writer and copywriter rather than a career game designer, who wanted the game to have real characters that players would recognise in the people around them.\n\nNess is a thirteen-year-old boy from Onett, a small town in the country of Eagleland. Instead of a sword, he fights mainly with baseball bats, and he has powerful psychic abilities, known in the game as PSI. His look — a baseball cap, striped shirt and simple features — has been compared to both Charlie Brown and anime styles. The world around him is a parody of small-town America seen from Japan, full of drugstores, hotels, hippies and cults, and the threat he ultimately faces, the cosmic entity Giygas, is one of the most unsettling final enemies in a Nintendo game.\n\nEarthBound sold poorly in North America on release, but Ness became widely known through Super Smash Bros., in which he has been playable in every game in the series. Critics have praised him as an "everyboy" hero who defied the usual role-playing game archetypes, and the game\'s themes of growing up, home and family have given him a lasting following.',
+    abilities: [
+      'Fights with baseball bats',
+      'PSI (psychic) powers, including healing and offensive attacks',
+      'Can call home to talk to his mother and save the game with his father',
+    ],
+    keyFacts: [
+      'Debuted in EarthBound (Mother 2) on the SNES in 1994',
+      'Created by writer Shigesato Itoi',
+      'A thirteen-year-old from Onett, Eagleland, who fights with baseball bats and PSI powers',
+      'EarthBound sold poorly in North America at first',
+      'Playable in every Super Smash Bros. game',
+    ],
+    sections: [
+      {
+        title: 'An Ordinary Hero',
+        html: '<p>Most RPG heroes of the early 1990s were knights, chosen ones or soldiers. Ness is a kid with a bat and a cap who phones his mum and gets homesick. That ordinariness — the sense of a real childhood set inside a strange adventure — is what made EarthBound unlike other games of its era, and why its audience has grown long after its commercial failure.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Ness (EarthBound)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Ness_(EarthBound)' },
+    ],
+  },
 ];

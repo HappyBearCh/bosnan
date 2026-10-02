@@ -704,4 +704,32 @@ module.exports = [
       { title: 'Gremlin Interactive', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Gremlin_Interactive' },
     ],
   },
+  {
+    id: 'thq',
+    name: 'THQ',
+    country: 'United States',
+    founded: 1990,
+    dissolved: 2013,
+    era: '1990 – 2013',
+    description: '"Toy Headquarters" began as a toy company in 1990, grew into one of the biggest licensed-game publishers of the 1990s and 2000s, and went bankrupt in 2012 with its franchises auctioned off.',
+    longDescription: 'Jack Friedman founded THQ in April 1990 in Calabasas, California. The name is an initialism for "Toy Headquarters", and the company began in the toy business before moving into video games through acquisitions. It became a public company in 1991 through a reverse merger.\n\nLicences were THQ\'s foundation. Through the 1990s and 2000s it built a large business publishing games based on television, film and sport, including properties from Disney and Pixar, DreamWorks, Nickelodeon and professional wrestling — its wrestling games became among the best known of the genre. Over time it also developed original series of its own, including Red Faction, Destroy All Humans!, MX vs. ATV, Saints Row, Darksiders and de Blob.\n\nTHQ reported more than $1 billion in revenue and record profits in 2007, but its fortunes then turned sharply. By 2009 falling sales had forced a plan to cut $220 million in annual costs, and on 19 December 2012 the company filed for Chapter 11 bankruptcy after being unable to repay a $50 million loan. Its properties were auctioned individually in January 2013 to buyers including Sega, Take-Two, Ubisoft and Koch Media. The THQ trademark was bought in 2014 by Nordic Games, which renamed itself THQ Nordic in 2016.',
+    notableTitles: [
+      'WWF / WWE licensed wrestling games',
+      'Red Faction (2001)',
+      'Destroy All Humans! (2005)',
+      'Saints Row (2006)',
+      'Darksiders (2010)',
+    ],
+    keyFacts: [
+      'Founded by Jack Friedman in April 1990; the name stands for "Toy Headquarters"',
+      'Started in toys before moving into video games',
+      'Built its business on licences from Disney/Pixar, DreamWorks, Nickelodeon and wrestling',
+      'Passed $1 billion in revenue in 2007',
+      'Filed for bankruptcy on 19 December 2012; its franchises were auctioned in January 2013',
+    ],
+    keyword: 'THQ',
+    sources: [
+      { title: 'THQ', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/THQ' },
+    ],
+  },
 ];

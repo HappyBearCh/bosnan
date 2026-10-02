@@ -759,4 +759,34 @@ module.exports = [
       { title: 'Factor 5', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Factor_5' },
     ],
   },
+  {
+    id: 'game-arts',
+    name: 'Game Arts',
+    foundedYear: 1985,
+    founders: [
+      'Yoichi Miyaji',
+      'Takeshi Miyaji',
+    ],
+    location: 'Tokyo, Japan',
+    firstGame: 'Thexder (1985)',
+    era: '1985 – present',
+    description: 'Two brothers founded it in 1985; it made the computer hits Thexder and Silpheed, then the Lunar and Grandia RPGs that gave Sega\'s CD and Saturn hardware some of their best-loved games.',
+    longDescription: 'Brothers Yoichi and Takeshi Miyaji founded Game Arts on 2 March 1985 as a computer software company. Its first game, Thexder, released that year for the MSX and PC-88, was a fast side-scrolling action game starring a robot that could transform into a jet, and it became a major hit on Japanese computers. Silpheed (1986), a polygon-styled space shooter, followed.\n\nIn the West, Game Arts is best known for role-playing games. Lunar: The Silver Star (1992) on Sega\'s Mega-CD used the CD format for animated cut-scenes and vocal songs and became one of the add-on\'s defining titles, followed by Lunar: Eternal Blue. Grandia (1997), which debuted on the Sega Saturn, was praised for its lively battle system and sense of adventure and began another long-running series. The company also developed the Gungriffon series of mech combat games.\n\nGungHo Online Entertainment acquired Game Arts in 2005. Some of its staff later helped with the early development of Nintendo\'s Super Smash Bros. Brawl.',
+    keyFacts: [
+      'Founded on 2 March 1985 by brothers Yoichi and Takeshi Miyaji',
+      'First game: Thexder (1985), for the MSX and PC-88',
+      'Created the Lunar series, beginning with Lunar: The Silver Star (1992) on the Mega-CD',
+      'Grandia debuted on the Sega Saturn in 1997',
+      'Acquired by GungHo Online Entertainment in 2005',
+    ],
+    sections: [
+      {
+        title: 'Making the Most of the CD',
+        html: '<p>Lunar arrived when CD-ROM consoles were often used for little more than video clips and CD audio. Game Arts used the space to add animated scenes and songs to a traditional RPG, showing how the format could enrich a game rather than replace it.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Game Arts', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Game_Arts' },
+    ],
+  },
 ];
