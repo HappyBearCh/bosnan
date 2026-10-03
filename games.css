@@ -1905,3 +1905,10 @@ body > .crumbs {
 @media (max-width: 480px) {
     .search-hit-sub { display: block; margin: var(--sp-1) 0 0; }
 }
+
+/* Generated 1200x630 title cards (images/cards): show the whole card - cropping
+   it like box art would cut off the title - on the same surface as the frame. */
+.game-card-img-wrap img.is-titlecard { object-fit: contain; object-position: center; background: var(--bg); }
+.game-detail-img.is-titlecard { aspect-ratio: 1200 / 630; height: auto; background: var(--bg); }
+.gotd-img.is-titlecard { width: 300px; min-height: 0; height: auto; align-self: center; object-fit: contain; background: var(--bg); }
+@media (max-width: 768px) { .gotd-img.is-titlecard { width: 100%; } }

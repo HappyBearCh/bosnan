@@ -1377,6 +1377,29 @@ function imageUsableAsCard(relPath) {
   return !!m && m.width >= OG_IMAGE_MIN_WIDTH;
 }
 
+// Every game has an original 1200×630 title card (scripts/generate-game-cards.js).
+// 230 games named a picture that was never on disk and the rest are ~200–400px
+// Wikipedia box art, so the card is what fills the gaps on the page and what
+// every game-related share preview uses unless the game's own picture is big
+// enough to render as a large card itself.
+function gameCardPath(g) {
+  return g && g.id ? `images/cards/${g.id}.png` : null;
+}
+// What to show on the page: the game's own picture if it exists, else its card.
+function gameImagePath(g) {
+  if (g && imageExists(g.image)) return g.image;
+  const card = gameCardPath(g);
+  return imageExists(card) ? card : null;
+}
+const isTitleCard = p => typeof p === 'string' && p.startsWith('images/cards/');
+// What to use as og:image / schema image: own picture only if it is wide
+// enough to render as a large card, else the title card.
+function gameShareImage(g) {
+  if (g && imageUsableAsCard(g.image)) return g.image;
+  const card = gameCardPath(g);
+  return imageUsableAsCard(card) ? card : null;
+}
+
 const DEFAULT_OG_IMAGE = `${SITE_URL}/images/screenshot1.png`;
 
 // 1,509 of the 1,953 pages shared one og:image — the same generic screenshot —
@@ -1399,7 +1422,8 @@ function entryOgImage(cleanPath) {
   if (imageUsableAsCard(e.image)) return asUrl(e.image);
   for (const a of clAnchors(e, clExtraKeys.get(clSlugByEntry.get(e)))) {
     const g = gameTitleExact.get(a) || gameTitlePrefix.get(a);
-    if (g && imageUsableAsCard(g.image)) return asUrl(g.image);
+    const img = g && gameShareImage(g);
+    if (img) return asUrl(img);
   }
   return null;
 }
@@ -1857,7 +1881,8 @@ app.use((req, res, next) => {
         const own = body.match(/property="og:image" content="([^"]*)"/);
         if (own && own[1].startsWith(SITE_URL)
           && !imageUsableAsCard(unescapeHtml(own[1]).slice(SITE_URL.length))) {
-          body = body.replace(own[0], `property="og:image" content="${DEFAULT_OG_IMAGE}"`);
+          const better = entryOgImage(cleanPath) || DEFAULT_OG_IMAGE;
+          body = body.replace(own[0], `property="og:image" content="${escapeHtml(better)}"`);
         }
       }
       if (!body.includes('property="og:site_name"')) extra += `\n    <meta property="og:site_name" content="${SITE_NAME}">`;
@@ -2387,8 +2412,9 @@ document.addEventListener("keydown",function(e){if(e.key==="/"&&document.activeE
 // skips the request; onerror stays as the fallback for a file that fails later.
 function cardImage(g, imgAttrs) {
   const placeholder = `<div class="game-card-placeholder" aria-hidden="true">${escapeHtml(g.title[0])}</div>`;
-  if (!imageExists(g.image)) return placeholder;
-  return `<img src="/${escapeHtml(g.image)}" alt="${escapeHtml(g.title)}" ${imgAttrs}
+  const src = gameImagePath(g);
+  if (!src) return placeholder;
+  return `<img src="/${escapeHtml(src)}" alt="${escapeHtml(g.title)}" ${imgAttrs}${isTitleCard(src) ? ' class="is-titlecard"' : ''}
              onerror="this.parentElement.innerHTML='<div class=\\'game-card-placeholder\\'>${escapeHtml(g.title[0])}</div>'">`;
 }
 
@@ -2477,9 +2503,9 @@ function buildSitemapCache() {
     <loc>${base}/games/${g.id}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>${imageExists(g.image) ? `
+    <priority>0.7</priority>${gameImagePath(g) ? `
     <image:image>
-      <image:loc>${base}/${escapeXml(g.image)}</image:loc>
+      <image:loc>${base}/${escapeXml(gameImagePath(g))}</image:loc>
       <image:title>${escapeXml(`${g.title} (${g.year})`)}</image:title>
       <image:caption>${escapeXml(`${g.title} — ${g.genre} for ${g.platform}, released ${g.year} by ${g.developer}.`)}</image:caption>
     </image:image>` : ''}
@@ -3587,7 +3613,8 @@ ${toggleScript()}
 
 function homepagePage(gotd) {
   const gotdHref = `/games/${gotd.id}`;
-  const gotdImgSrc = `/${escapeHtml(gotd.image)}`;
+  const gotdImgPath = gameImagePath(gotd);
+  const gotdImgSrc = `/${escapeHtml(gotdImgPath || '')}`;
   const gotdDesc = !gotd.description ? ''
     : gotd.description.length <= 180 ? gotd.description
     : gotd.description.substring(0, 180).replace(/\s+\S*$/, '') + '…';
@@ -3644,7 +3671,7 @@ ${nav('home')}
 <div class="gotd-section">
     <h2>&#127942; Game of the Day</h2>
     <a class="gotd-card" href="${escapeHtml(gotdHref)}">
-        ${imageExists(gotd.image) ? `<img class="gotd-img" src="${gotdImgSrc}" alt="${escapeHtml(gotd.title)}" fetchpriority="high" onerror="this.style.display='none'">` : ''}
+        ${gotdImgPath ? `<img class="gotd-img${isTitleCard(gotdImgPath) ? ' is-titlecard' : ''}" src="${gotdImgSrc}" alt="${escapeHtml(gotd.title)}" fetchpriority="high" onerror="this.style.display='none'">` : ''}
         <div class="gotd-body">
             <div class="gotd-badge">${escapeHtml(gotd.decade)}</div>
             <h3 class="gotd-title">${escapeHtml(gotd.title)}</h3>
@@ -3847,7 +3874,9 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 
 function gameDetailPage(game, base) {
   const url = `${base}/games/${game.id}`;
-  const imgUrl = `${base}/${game.image}`;
+  const shareImg = gameShareImage(game);
+  const imgUrl = shareImg ? `${base}/${shareImg}` : DEFAULT_OG_IMAGE;
+  const pageImg = gameImagePath(game);
   const desc = metaDesc((game.description || ''));
 
   const related = relatedGamesIndex.get(game.id) || [];
@@ -3917,8 +3946,8 @@ ${nav('games')}
 
   <div class="game-detail-card">
     <div class="game-detail-image-col">
-      ${imageExists(game.image)
-        ? `<img src="/${escapeHtml(game.image)}" alt="${escapeHtml(game.title)} (${game.year}) gameplay screenshot" class="game-detail-img"
+      ${pageImg
+        ? `<img src="/${escapeHtml(pageImg)}" alt="${escapeHtml(game.title)} (${game.year}) ${isTitleCard(pageImg) ? `title card — ${escapeHtml(game.platform)}, ${escapeHtml(game.genre)}` : 'gameplay screenshot'}" class="game-detail-img${isTitleCard(pageImg) ? ' is-titlecard' : ''}"${isTitleCard(pageImg) ? ' width="1200" height="630"' : ''}
            fetchpriority="high" onerror="this.src='/images/games/placeholder.svg'">`
         : `<div class="game-detail-img game-detail-noimg" role="img" aria-label="No image of ${escapeHtml(game.title)} yet"><span>${escapeHtml(game.title)}</span><small>${escapeHtml(game.platform)} &middot; ${escapeHtml(String(game.year))}</small></div>`}
       <div class="game-meta">
