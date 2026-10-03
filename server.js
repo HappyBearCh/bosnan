@@ -31,8 +31,18 @@ const SITE_NAME = 'Bosnan Retro Games Archive';
 // therefore not a real edit date; fall back to the cold-start date, which on a
 // deploy-per-change site is the deploy date.
 const MTIME_FLOOR = Date.parse('2020-01-01');
+// Per-entry last-changed dates, kept in data/lastmod.json by
+// scripts/update-lastmod.js (content-hash based, so a date moves only when that
+// entry's text does). The newest of them is the site-wide date, which keeps the
+// homepage and hubs stable across cold starts instead of reading "today".
+const LASTMOD = (() => {
+  try { return JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'lastmod.json'), 'utf8')); }
+  catch { return {}; }
+})();
+const LASTMOD_MAX = Object.values(LASTMOD).reduce((m, v) => (v && v.date > m ? v.date : m), '');
 const SITE_LASTMOD = (() => {
   if (process.env.SITE_LASTMOD) return process.env.SITE_LASTMOD;
+  if (LASTMOD_MAX) return LASTMOD_MAX;
   const dataDir = path.join(__dirname, 'data');
   let newest = 0;
   try {
@@ -1754,6 +1764,20 @@ function hubEntryCount(slug, body) {
 // (`Castle of Illusion Starring Mickey…`) would collide into one duplicate
 // title. A long unique title beats a short ambiguous one.
 const TITLE_BOILERPLATE = /^(Bosnan|Bosnan Retro Archive|Bosnan Retro Games Archive)$/;
+function shortenSubtitle(raw, max = 65) {
+  const text = unescapeHtml(raw).replace(/\s+/g, ' ').trim();
+  if (text.length <= max || !text.includes(' — ')) return null;
+  const [subject, ...rest] = text.split(' — ');
+  if (subject.length >= 20) return escapeHtml(subject);
+  let out = subject + ' —';
+  for (const word of rest.join(' — ').split(' ')) {
+    if ((out + ' ' + word).length > max) break;
+    out += ' ' + word;
+  }
+  out = out.replace(/[\s—,:;]+$/, '');
+  return out.length > subject.length ? escapeHtml(out) : escapeHtml(subject);
+}
+
 function trimTitle(raw, max = 60) {
   const text = unescapeHtml(raw).replace(/\s+/g, ' ').trim();
   if (text.length <= max) return null;
@@ -1791,7 +1815,9 @@ app.use((req, res, next) => {
       const titleMatch = body.match(/<title>([^<]*)<\/title>/);
       if (titleMatch) {
         const trimmed = trimTitle(titleMatch[1]);
-        if (trimmed) body = body.replace(titleMatch[0], `<title>${trimmed}</title>`);
+        const fitted = trimmed || titleMatch[1];
+        const shortened = shortenSubtitle(fitted);
+        if (shortened || trimmed) body = body.replace(titleMatch[0], `<title>${shortened || trimmed}</title>`);
       }
       // Most templates build descriptions with `.substring(0, 160)` on raw
       // text, which lands over the limit once entities are escaped and cuts
@@ -1850,6 +1876,7 @@ app.use((req, res, next) => {
     <script type="application/ld+json">${SITE_IDENTITY_JSON}</script>`;
       extra += autoSchema(cleanPath, body);
       if (extra) body = body.replace('</head>', `${extra}\n</head>`);
+      body = enrichEntrySchema(body, cleanPath);
 
       // Visible breadcrumbs. The BreadcrumbList JSON-LD above already covered
       // every sectioned page, but 877 of them rendered no crumbs a reader (or
@@ -1908,6 +1935,17 @@ app.use((req, res, next) => {
 
       if (!body.includes('class="site-footer"')) body = body.replace('</body>', `${footerHtml()}\n</body>`);
     }
+    // Vercel's CDN only caches a function response that carries s-maxage; a
+    // plain max-age is passed to the browser and every page view still runs
+    // the function cold (X-Vercel-Cache: MISS on every URL). Mirror each
+    // route's own max-age into s-maxage so the edge keeps the same freshness
+    // the route already chose. Vercel scopes its cache to a deployment, so a
+    // deploy still publishes new content immediately.
+    const cc = res.getHeader('Cache-Control');
+    if (typeof cc === 'string' && /\bpublic\b/.test(cc) && !/s-maxage/.test(cc) && res.statusCode === 200) {
+      const maxAge = (cc.match(/max-age=(\d+)/) || [])[1];
+      if (maxAge && !/immutable/.test(cc)) res.setHeader('Cache-Control', `${cc}, s-maxage=${maxAge}`);
+    }
     return origSend(body);
   };
   next();
@@ -1964,6 +2002,27 @@ function pageTrail(cleanPath, body) {
   return trail;
 }
 
+// Give every entry page's primary schema node the two fields Google's Article
+// guidelines ask for and the templates never set: an author, and the real
+// last-changed date from data/lastmod.json. Runs over template-built nodes as
+// well as autoSchema()'s, and only adds what is missing. dateModified is set
+// only when the entry has a tracked date — never invented.
+const DATED_SCHEMA_TYPES = new Set(['Article', 'NewsArticle', 'BlogPost', 'BlogPosting', 'VideoGame']);
+function enrichEntrySchema(body, cleanPath) {
+  const [slug, id, more] = cleanPath.split('/').filter(Boolean);
+  if (!slug || !id || more) return body;
+  const date = entryLastmod(slug, { id });
+  return body.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g, (whole, json) => {
+    let node;
+    try { node = JSON.parse(json); } catch { return whole; }
+    if (!node || Array.isArray(node) || node['@graph'] || !DATED_SCHEMA_TYPES.has(node['@type'])) return whole;
+    let changed = false;
+    if (date && !node.dateModified) { node.dateModified = date; changed = true; }
+    if (node['@type'] !== 'VideoGame' && !node.author) { node.author = ORG_SCHEMA; changed = true; }
+    return changed ? `<script type="application/ld+json">${JSON.stringify(node).replace(/</g, '\\u003c')}</script>` : whole;
+  });
+}
+
 function autoSchema(cleanPath, body) {
   if (cleanPath === '/') return '';
   const [, slug, entry] = cleanPath.split('/');
@@ -2001,6 +2060,12 @@ function autoSchema(cleanPath, body) {
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       isPartOf: { '@type': 'CollectionPage', name: label, url: `${SITE_URL}/${slug}` },
       publisher: isArticle ? ORG_SCHEMA : undefined,
+      // Google recommends an author on Article; the archive is written as one
+      // publication, so the author is the same organisation as the publisher.
+      author: isArticle ? ORG_SCHEMA : undefined,
+      // A real last-changed date from data/lastmod.json — never invented. Pages
+      // without a tracked entry (platforms, genres) simply omit it.
+      dateModified: isArticle ? (entryLastmod(slug, { id: entry }) || undefined) : undefined,
     };
     out += `\n    <script type="application/ld+json">${JSON.stringify(node).replace(/</g, '\\u003c')}</script>`;
   }
@@ -2363,6 +2428,30 @@ function buildCardHtml(list, eagerCount = 0, withFilterData = false) {
 // Kept in step with the Disallow list in robots.txt below.
 const SITEMAP_EXCLUDE = new Set(['/search', '/bookmarks']);
 
+// The real last-changed date of the page at a site path. Entry pages use their
+// own entry's date; year and decade pages the newest of the games they list;
+// section hubs the newest of their entries; everything else the site date.
+function entryLastmod(slug, entry) {
+  const rec = LASTMOD[slug === 'games' ? `games:${entry.id}` : entry.id];
+  return rec ? rec.date : '';
+}
+const newestOf = (slug, list) => (list || []).reduce((m, e) => {
+  const d = entryLastmod(slug, e);
+  return d > m ? d : m;
+}, '');
+function urlLastmod(p) {
+  const [slug, id] = p.split('/').filter(Boolean);
+  let date = '';
+  if (slug && id) {
+    if (slug === 'years') date = newestOf('games', yearsIndex.get(Number(id)));
+    else if (slug === 'decades') date = newestOf('games', decadesIndex.get(id));
+    else date = entryLastmod(slug, { id });
+  } else if (slug) {
+    date = slug === 'games' ? newestOf('games', games) : newestOf(slug, clDataBySlug.get(slug));
+  }
+  return date || SITE_LASTMOD;
+}
+
 function buildSitemapCache() {
   if (!cachedSitemap) {
     const base = SITE_URL;
@@ -2451,7 +2540,7 @@ function buildSitemapCache() {
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`).join('');
-    const yearUrls = YEARS.map(y => `
+    const yearUrls = YEARS.filter(y => !isThinYear(y)).map(y => `
   <url>
     <loc>${base}/years/${y}</loc>
     <lastmod>${today}</lastmod>
@@ -2873,18 +2962,24 @@ function buildSitemapCache() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">${body}
 </urlset>`;
 
+    // Swap the uniform date for each URL's own last-changed date.
+    const stamp = xml => xml.replace(/<loc>([^<]*)<\/loc>(\s*)<lastmod>[^<]*<\/lastmod>/g,
+      (m, loc, ws) => `<loc>${loc}</loc>${ws}<lastmod>${urlLastmod(loc.slice(base.length) || '/')}</lastmod>`);
+    const newestLastmod = xml => (xml.match(/<lastmod>[^<]*/g) || [])
+      .map(t => t.slice(9)).reduce((m, d) => (d > m ? d : m), '') || today;
+    for (const g of grouped) g[1] = stamp(g[1]);
     const children = new Map(grouped.map(([name, xml]) => [name, wrap(xml)]));
     const index = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${grouped.map(([name]) => `
   <sitemap>
     <loc>${base}/sitemaps/${name}.xml</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${newestLastmod(children.get(name))}</lastmod>
   </sitemap>`).join('')}
 </sitemapindex>`;
 
     cachedSitemap = complete
       ? { xml: index, type: 'index', children }
-      : { xml: wrap(flat), type: 'urlset', children: new Map() };
+      : { xml: wrap(stamp(flat)), type: 'urlset', children: new Map() };
   }
 }
 
@@ -3596,7 +3691,15 @@ ${nav('home')}
             <p class="enc-card-desc">Colossal Cave, Zork, Monkey Island — the birth of interactive storytelling</p>
         </a>
     </div>
-    <a href="/genres" class="enc-browse-btn">Browse all 10 genres &#8594;</a>
+    <a href="/genres" class="enc-browse-btn">Browse all ${GENRES.length} genres &#8594;</a>
+</div>
+
+<div class="enc-section home-about">
+    <div class="enc-header">
+        <h2>About the Archive</h2>
+        <p>Bosnan is an independent archive of video game history from 1952 to 1999. It covers ${games.length} games on ${PLATFORMS.length} platforms, together with the hardware, sound chips, designers, composers, studios, magazines, controversies and cancelled projects behind them, and ${ESSAYS.length} long-form essays. Entries are written from documented sources, many of which are cited on the page, and every entry links to the related games, people and machines elsewhere in the archive.</p>
+        <p><a href="/about">How the archive is made</a> &middot; <a href="/browse">Browse every section</a> &middot; <a href="/timeline">Timeline</a></p>
+    </div>
 </div>
 
 <script>
@@ -3924,6 +4027,66 @@ ${toggleScript()}
 </html>`;
 }
 
+// Everything else the archive says about a platform. A platform hub used to
+// hold two paragraphs and a handful of game cards, while the hardware chips,
+// peripherals, controllers, sales figures and essays about the same machine
+// sat unlinked elsewhere. Entries are matched on the platform's own names as
+// whole words, case-sensitively, and ranked so an entry *about* the machine
+// (named in its title or platform field) outranks one that mentions it.
+// Platforms whose name is an ordinary word ("Arcade") or too generic to match
+// safely ("PC") are skipped rather than linked to everything.
+const PLATFORM_COVERAGE_SKIP = new Set(['arcade', 'pc-dos']);
+const PLATFORM_COVERAGE_LIMIT = 36;
+const platformCoverageCache = new Map();
+const escapeRegExp = str => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+function platformCoverage(platform) {
+  if (platformCoverageCache.has(platform.id)) return platformCoverageCache.get(platform.id);
+  let groups = [];
+  if (!PLATFORM_COVERAGE_SKIP.has(platform.id)) {
+    const aliases = [...new Set([platform.name, platform.shortName, platform.keyword])]
+      .filter(a => a && a.length >= 3);
+    const re = new RegExp(`(?<![A-Za-z0-9])(?:${aliases.map(escapeRegExp).join('|')})(?![A-Za-z0-9])`);
+    const routable = entryRouteSlugs();
+    // The game grid above already shows this platform's own games.
+    const shown = new Set(gamesForPlatform(platform).map(g => g.id));
+    const hits = [];
+    for (const [slug, data] of clDataBySlug) {
+      if (slug === 'platforms' || !routable.has(slug) || !Array.isArray(data)) continue;
+      for (const e of data) {
+        const title = e && (e.title || e.name);
+        if (!title || !e.id || (slug === 'games' && shown.has(e.id))) continue;
+        const field = [e.platform, e.usedIn, e.foundIn].flat().filter(Boolean).join(' ');
+        const score = (re.test(title) ? 4 : 0) + (re.test(field) ? 3 : 0)
+          + (re.test(e.description || '') ? 2 : 0) + (re.test(e.longDescription || '') ? 1 : 0);
+        if (score) hits.push({ slug, id: e.id, title, score });
+      }
+    }
+    hits.sort((a, b) => b.score - a.score || a.title.localeCompare(b.title));
+    const bySection = new Map();
+    for (const h of hits.slice(0, PLATFORM_COVERAGE_LIMIT)) {
+      if (!bySection.has(h.slug)) bySection.set(h.slug, []);
+      bySection.get(h.slug).push(h);
+    }
+    groups = [...bySection].map(([slug, items]) => ({ slug, label: clLabelBySlug.get(slug) || SEARCH_SECTION_LABELS.get(slug) || slug, items }));
+  }
+  platformCoverageCache.set(platform.id, groups);
+  return groups;
+}
+
+function platformCoverageHtml(platform) {
+  const groups = platformCoverage(platform);
+  if (!groups.length) return '';
+  const name = escapeHtml(platform.shortName || platform.name);
+  const blocks = groups.map(g => `<div class="platform-coverage-group"><h3>${escapeHtml(g.label)}</h3><ul class="trivia-list">${
+    g.items.map(i => `<li><a href="/${i.slug}/${i.id}">${escapeHtml(i.title)}</a></li>`).join('')}</ul></div>`).join('');
+  return `
+  <section class="platform-coverage">
+    <h2 class="platform-games-heading">The ${name} Across the Archive</h2>
+    <p class="platform-detail-desc">Hardware, people, controversies and stories connected to the ${name}, gathered from every section of the archive.</p>
+    <div class="platform-coverage-grid">${blocks}</div>
+  </section>`;
+}
+
 function platformDetailPage(platform) {
   const platformGames = gamesForPlatform(platform);
   const cardHtml = buildCardHtml(platformGames, EAGER_IMAGES);
@@ -3952,6 +4115,7 @@ ${nav('platforms')}
 
   <h2 class="platform-games-heading">${platformGames.length} Games in Archive</h2>
   <div class="games-grid" id="gamesGrid">${cardHtml}</div>
+${platformCoverageHtml(platform)}
 </div>
 
 ${toggleScript()}
@@ -4495,6 +4659,12 @@ ${toggleScript()}
 </html>`;
 }
 
+// "TIA" or "SA-1" alone tells a searcher nothing; short names take the full one.
+function hardwareTitleName(hw) {
+  if (hw.name.length >= 6 || !hw.fullName) return hw.name;
+  return hw.fullName.includes(hw.name) ? hw.fullName : `${hw.name} (${hw.fullName})`;
+}
+
 function hardwareDetailPage(hw) {
   const specRows = (hw.specs || []).map(s =>
     `<tr><th>${escapeHtml(s.label)}</th><td>${escapeHtml(s.value)}</td></tr>`
@@ -4505,7 +4675,7 @@ function hardwareDetailPage(hw) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${escapeHtml(hw.name)} – Hardware – Bosnan</title>
+    <title>${escapeHtml(hardwareTitleName(hw))} – Hardware – Bosnan</title>
     <meta name="description" content="${metaDesc(hw.description)}">
     ${cssHead()}
 </head>
@@ -4629,8 +4799,16 @@ ${toggleScript()}
 </html>`;
 }
 
+// A year page with one or two game cards and no written review is a thinner
+// copy of those games' own pages. Keep it for visitors browsing by year, but
+// keep it out of the index and the sitemap.
+function isThinYear(year) {
+  return (yearsIndex.get(year) || []).length < 3 && !YEAR_REVIEWS_MAP.has(String(year));
+}
+
 function yearDetailPage(year, review) {
   const yGames = (yearsIndex.get(year) || []).slice().sort((a, b) => a.title.localeCompare(b.title));
+  const releases = `${yGames.length} Classic Release${yGames.length === 1 ? '' : 's'}`;
   const cardHtml = buildCardHtml(yGames, EAGER_IMAGES);
   const reviewHtml = review ? `
   <div style="border-bottom:1px solid var(--border);padding-bottom:2rem;margin-bottom:2rem">
@@ -4645,7 +4823,7 @@ function yearDetailPage(year, review) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${year} in Gaming – Bosnan</title>
+    <title>${year} in Video Games — ${releases} – Bosnan</title>${isThinYear(year) ? '\n    <meta name="robots" content="noindex, follow">' : ''}
     <meta name="description" content="${review ? metaDesc(review.summary) : metaDesc(listingDesc(yGames, `released in ${year}`))}">
     <style>h1,h2,h3{font-family:inherit}</style>
     ${cssHead()}
@@ -5013,7 +5191,7 @@ function decadeDetailPage(decade) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${escapeHtml(decade)} Games – Bosnan</title>
+    <title>${escapeHtml(decade)} Video Games — ${dGames.length} Classics, Year by Year – Bosnan</title>
     <meta name="description" content="${metaDesc(listingDesc(dGames, `from the ${decade}`))}">
     ${cssHead()}
 </head>
@@ -5542,7 +5720,7 @@ function speedrunDetailPage(item) {
   const techniques = (item.famousTechniques || []).map(t => `<li>${escapeHtml(t)}</li>`).join('');
   const runners = (item.notableRunners || []).map(r => `<li>${escapeHtml(r)}</li>`).join('');
   const facts = (item.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(item.game)} Speedrun – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('speedruns')}<div class="platform-detail-wrapper"><a href="/speedruns" class="back-link">&#8592; All Speedruns</a><div class="platform-detail-header"><h1>${escapeHtml(item.game)}</h1><p class="platform-detail-era">${escapeHtml(item.platform)} &middot; ${escapeHtml(item.category)} &middot; ${item.year}</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0">${item.currentWR ? `<div style="background:var(--surface-1);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:0.8em;color:var(--text-muted);margin-bottom:0.3rem">Current WR</div><div style="font-size:1.6em;font-weight:900;font-family:monospace;color:var(--accent)">${escapeHtml(item.currentWR)}</div></div>` : ''}${item.firstKnownRun ? `<div style="background:var(--surface-1);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:0.8em;color:var(--text-muted);margin-bottom:0.3rem">First Known Run</div><div style="font-size:1.6em;font-weight:900;font-family:monospace;color:var(--text-muted)">${escapeHtml(item.firstKnownRun)}</div></div>` : ''}</div><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${techniques ? `<div class="dev-notable"><strong>Famous Techniques:</strong><ul class="trivia-list">${techniques}</ul></div>` : ''}${runners ? `<div class="dev-notable"><strong>Notable Runners:</strong><ul class="trivia-list">${runners}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(`${item.game} Speedrun: ${item.category}`.length <= 50 ? `${item.game} Speedrun: ${item.category} History` : `${item.game} Speedrun History`)} – Bosnan</title><meta name="description" content="${metaDesc(item.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('speedruns')}<div class="platform-detail-wrapper"><a href="/speedruns" class="back-link">&#8592; All Speedruns</a><div class="platform-detail-header"><h1>${escapeHtml(item.game)}</h1><p class="platform-detail-era">${escapeHtml(item.platform)} &middot; ${escapeHtml(item.category)} &middot; ${item.year}</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0">${item.currentWR ? `<div style="background:var(--surface-1);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:0.8em;color:var(--text-muted);margin-bottom:0.3rem">Current WR</div><div style="font-size:1.6em;font-weight:900;font-family:monospace;color:var(--accent)">${escapeHtml(item.currentWR)}</div></div>` : ''}${item.firstKnownRun ? `<div style="background:var(--surface-1);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:0.8em;color:var(--text-muted);margin-bottom:0.3rem">First Known Run</div><div style="font-size:1.6em;font-weight:900;font-family:monospace;color:var(--text-muted)">${escapeHtml(item.firstKnownRun)}</div></div>` : ''}</div><p class="platform-detail-desc">${escapeHtml(item.description)}</p><p class="platform-detail-desc">${escapeHtml(item.longDescription)}</p>${techniques ? `<div class="dev-notable"><strong>Famous Techniques:</strong><ul class="trivia-list">${techniques}</ul></div>` : ''}${runners ? `<div class="dev-notable"><strong>Notable Runners:</strong><ul class="trivia-list">${runners}</ul></div>` : ''}${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div>${sourcesBlock(item)}${relatedBlock(item)}</div>${toggleScript()}</body></html>`;
 }
 
 function criticsListPage() {
@@ -5889,7 +6067,7 @@ function boxArtListPage() {
 
 function boxArtDetailPage(entry) {
   const facts = (entry.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(entry.title)} Box Art – Bosnan</title><meta name="description" content="${metaDesc(entry.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('box-art')}<div class="platform-detail-wrapper"><a href="/box-art" class="back-link">&#8592; All Box Art</a><div class="platform-detail-header"><h1>${escapeHtml(entry.title)}</h1><p class="platform-detail-era">${escapeHtml(entry.platform)} &middot; ${entry.year} &middot; ${escapeHtml(entry.region)}${entry.artist ? ' &middot; Art: ' + escapeHtml(entry.artist) : ''}</p><p class="platform-detail-desc">${escapeHtml(entry.description)}</p><p class="platform-detail-desc">${escapeHtml(entry.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(entry.title)} Box Art (${escapeHtml([entry.platform, entry.region, entry.year].filter(Boolean).join(', '))}) – Bosnan</title><meta name="description" content="${metaDesc(entry.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${bgLogo()}${nav('box-art')}<div class="platform-detail-wrapper"><a href="/box-art" class="back-link">&#8592; All Box Art</a><div class="platform-detail-header"><h1>${escapeHtml(entry.title)}</h1><p class="platform-detail-era">${escapeHtml(entry.platform)} &middot; ${entry.year} &middot; ${escapeHtml(entry.region)}${entry.artist ? ' &middot; Art: ' + escapeHtml(entry.artist) : ''}</p><p class="platform-detail-desc">${escapeHtml(entry.description)}</p><p class="platform-detail-desc">${escapeHtml(entry.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
 }
 
 function portsListPage() {

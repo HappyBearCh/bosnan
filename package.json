@@ -4,7 +4,9 @@
   "description": "Bosnan game website with retro games repository",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "lastmod": "node scripts/update-lastmod.js",
+    "validate": "node scripts/validate-data.js"
   },
   "dependencies": {
     "compression": "^1.8.1",

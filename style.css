@@ -523,3 +523,9 @@ nav:not(.crumbs) img { width: 42px; display: block; }
 .theme-toggle .ti-dark { display: none; }
 :root[data-theme="light"] .theme-toggle .ti-dark { display: inline; }
 :root[data-theme="light"] .theme-toggle .ti-light { display: none; }
+
+/* Platform hubs: everything else the archive says about the machine */
+.platform-coverage { margin-top: var(--sp-6); }
+.platform-coverage-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--sp-3) var(--sp-5); margin-top: var(--sp-3); }
+.platform-coverage-group h3 { font-size: 0.85em; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--sp-1); }
+.platform-coverage-group .trivia-list { margin: 0; }

@@ -119,6 +119,14 @@ for (const [id, fileList] of globalIds) {
   }
 }
 
+// The sitemap's per-URL <lastmod> comes from data/lastmod.json; a data edit
+// committed without refreshing it leaves the sitemap claiming the old date.
+try {
+  require('child_process').execFileSync(process.execPath, [path.join(__dirname, 'update-lastmod.js'), '--check'], { stdio: 'pipe' });
+} catch (e) {
+  warnings.push(String(e.stdout || 'data/lastmod.json is out of date').trim());
+}
+
 console.log(`Validated ${files.length} files, ${totalEntries} entries.`);
 if (warnings.length) {
   console.log(`\n${warnings.length} warning(s):`);
