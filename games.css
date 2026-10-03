@@ -126,14 +126,6 @@
     z-index: 1;
 }
 
-.loading-msg {
-    grid-column: 1 / -1;
-    text-align: center;
-    color: var(--text-faint);
-    padding: 60px 0;
-    font-size: 18px;
-}
-
 /* ================== GAME CARD ================== */
 .game-card {
     background: var(--surface-1);
@@ -249,13 +241,6 @@
     font-size: 14px;
     color: var(--text-faint);
     margin: 0;
-}
-
-.game-card-desc {
-    font-size: 13px;
-    color: var(--text-faint);
-    margin: 6px 0 0;
-    line-height: 1.5;
 }
 
 /* ================== NO RESULTS ================== */

@@ -69,7 +69,7 @@ function settle(key, { hashes, rel }) {
   else next[key] = old;
 }
 
-const files = fs.readdirSync(DATA).filter((f) => f.endsWith('.js') && f !== 'games-new-platforms.js').sort();
+const files = fs.readdirSync(DATA).filter((f) => f.endsWith('.js')).sort();
 for (const f of files) {
   const arr = require(path.join(DATA, f));
   if (!Array.isArray(arr)) continue;
