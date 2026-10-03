@@ -789,4 +789,96 @@ module.exports = [
       { title: 'Game Arts', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Game_Arts' },
     ],
   },
+  {
+    id: 'nazca',
+    name: 'Nazca Corporation',
+    foundedYear: 1994,
+    founders: [
+      'Takashi Nishiyama',
+      'Kazuma Kujo',
+      'Yoshihiko Kodo',
+    ],
+    location: 'Japan',
+    firstGame: 'Neo Turf Masters (1996)',
+    era: '1994 – 2001',
+    description: 'A small team of former Irem staff that made just two games for SNK\'s Neo Geo — a golf game and Metal Slug — and was bought by SNK on the strength of them.',
+    longDescription: 'Nazca was founded in May 1994 by a group of employees who left the arcade manufacturer Irem. Among them were Takashi Nishiyama, Kazuma Kujo and Yoshihiko Kodo, a former Irem executive who became Nazca\'s president. At Irem the team had worked on arcade action games including In the Hunt, GunForce II, Undercover Cops and Armed Police Unit Gallop, and that experience with detailed, hand-drawn sprite work carried directly into their new studio.\n\nNazca developed for SNK\'s Neo Geo and released two games in 1996. Neo Turf Masters was a polished arcade golf game. Metal Slug was the one that made the studio\'s name: a run-and-gun shooter built from enormously detailed pixel animation, with soldiers, tanks and explosions animated in a cartoon-like style and full of small jokes, it became one of the most celebrated 2D action games ever made.\n\nImpressed by the success of both titles, SNK formally acquired Nazca in October 1996, and the team continued working on the Metal Slug series within SNK. It disbanded after SNK filed for bankruptcy in 2001, but Metal Slug outlived it and remains one of the Neo Geo\'s signature series.',
+    keyFacts: [
+      'Founded in May 1994 by former Irem staff',
+      'The team had previously worked on In the Hunt and GunForce II at Irem',
+      'Released Neo Turf Masters and Metal Slug for the Neo Geo in 1996',
+      'Acquired by SNK in October 1996',
+      'Disbanded after SNK\'s 2001 bankruptcy',
+    ],
+    sections: [
+      {
+        title: 'Two Games, One Legacy',
+        html: '<p>Few studios are remembered for so short a list of releases. Nazca\'s reputation rests almost entirely on Metal Slug, whose animation set a standard for 2D sprite work at the very moment the industry was abandoning 2D for polygons.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Nazca Corporation', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Nazca_Corporation' },
+    ],
+  },
+  {
+    id: 'sonic-team',
+    name: 'Sonic Team',
+    foundedYear: 1990,
+    founders: [
+      'Yuji Naka',
+      'Naoto Ohshima',
+      'Hirokazu Yasuhara',
+    ],
+    location: 'Tokyo, Japan',
+    firstGame: 'Sonic the Hedgehog (1991)',
+    era: '1990 – present',
+    description: 'The Sega team that created Sonic the Hedgehog, took the character\'s name as its own in 1991, and went on to make NiGHTS into Dreams, Sonic Adventure and Phantasy Star Online.',
+    longDescription: 'Sonic Team began in 1990 as a group inside Sega built around three people: programmer Yuji Naka, artist Naoto Ohshima and level designer Hirokazu Yasuhara. Their first game was Sonic the Hedgehog, released in 1991, and the team took the name Sonic Team with its release. The game gave Sega the fast, modern mascot it needed for the Mega Drive and turned the company into a serious rival to Nintendo.\n\nThrough the 1990s the team moved beyond Sonic. NiGHTS into Dreams (1996) was an original Saturn game built around flight and dream imagery. Sonic Adventure (1998) moved the series into 3D on the Dreamcast, and Phantasy Star Online (2000) brought online role-playing to consoles, letting Dreamcast players team up over the internet.\n\nIn 2000 Sega reorganised its development divisions into separate companies, and the team became Sonic Team Ltd., with Yuji Naka as chief executive. After Sammy Corporation acquired Sega in 2004, the studio was folded back into the company as an internal division, and it continues to develop the Sonic series.',
+    keyFacts: [
+      'Formed in 1990 around Yuji Naka, Naoto Ohshima and Hirokazu Yasuhara',
+      'Took the name Sonic Team with the release of Sonic the Hedgehog in 1991',
+      'Created NiGHTS into Dreams (1996) and Sonic Adventure (1998)',
+      'Brought online console RPGs to the Dreamcast with Phantasy Star Online (2000)',
+      'Became Sonic Team Ltd. in 2000 and was reintegrated into Sega after the 2004 Sammy merger',
+    ],
+    sections: [
+      {
+        title: 'Named After Its First Hit',
+        html: '<p>Most studios name their games; Sonic Team was named by one. The team\'s identity has been tied to the character ever since, even as it built very different games — a flying dream adventure, an online RPG — around the same core of Sega designers.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Sonic Team', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Sonic_Team' },
+    ],
+  },
+  {
+    id: 'westone',
+    name: 'Westone',
+    foundedYear: 1986,
+    founders: [
+      'Ryuichi Nishizawa',
+      'Michishito Ishizuka',
+    ],
+    location: 'Japan',
+    firstGame: 'Wonder Boy (1986)',
+    era: '1986 – 2014',
+    description: 'The studio behind Wonder Boy and Monster World, named after its two founders — "Nishi" (west) and "Ishi" (stone) — and closely tied to Sega throughout its life.',
+    longDescription: 'Ryuichi Nishizawa and Michishito Ishizuka founded the company in May 1986 under the name Escape. Worried that the name made them sound unreliable, they renamed it Westone, combining the meanings of their surnames: "nishi" (west) and "ishi" (stone). It became Westone Bit Entertainment in April 2000.\n\nWestone is best known for the Wonder Boy and Monster World series, which began with the arcade platformer Wonder Boy in 1986. The series grew from straightforward platforming into action role-playing, with equipment, shops and open exploration. Wonder Boy III: The Dragon\'s Trap (1989) for the Master System, in which a curse transforms the hero into different animals with different abilities, is the best-regarded entry, and Monster World IV (1994) brought the series to a colourful 16-bit close.\n\nWestone worked closely with Sega, which published most of its games. The company went bankrupt and entered liquidation on 1 October 2014, and the rights to its games passed to LAT Corporation. The Dragon\'s Trap returned in 2017 as a remake by the French studio Lizardcube.',
+    keyFacts: [
+      'Founded in May 1986 as Escape by Ryuichi Nishizawa and Michishito Ishizuka',
+      'Renamed Westone after "nishi" (west) and "ishi" (stone) from the founders\' names',
+      'Created the Wonder Boy and Monster World series, starting with Wonder Boy (1986)',
+      'Most of its games were published by Sega',
+      'Went bankrupt and entered liquidation on 1 October 2014',
+    ],
+    sections: [
+      {
+        title: 'From Platformer to Adventure',
+        html: '<p>Westone\'s series evolved unusually far from where it started. Wonder Boy was a simple run-and-jump arcade game; within a few years its sequels had become open action-adventures with shops, equipment and transformations — an early example of a platformer growing into what would later be called a Metroidvania.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Westone Bit Entertainment', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Westone_Bit_Entertainment' },
+    ],
+  },
 ];

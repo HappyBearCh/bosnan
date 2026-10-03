@@ -957,4 +957,37 @@ module.exports = [
       { title: 'Ness (EarthBound)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Ness_(EarthBound)' },
     ],
   },
+  {
+    id: 'pit-kid-icarus',
+    name: 'Pit',
+    franchise: 'Kid Icarus',
+    platform: 'Famicom Disk System / NES',
+    debutYear: 1986,
+    creator: 'Toru Osawa (Nintendo R&D1)',
+    era: '1980s',
+    role: 'Protagonist',
+    description: 'The angel who cannot fly: the weakest soldier in the goddess Palutena\'s army, who climbed out of the Underworld in 1986 — and returned after more than fifteen years away in Super Smash Bros. Brawl.',
+    longDescription: 'Pit first appeared in Kid Icarus, released for the Famicom Disk System on 19 December 1986 and for the NES in 1987. The game was created by Toru Osawa under producer Gunpei Yokoi at Nintendo\'s Research and Development 1 department, the same team behind Metroid.\n\nPit is an angel in the service of Palutena, the Goddess of Light — but he begins as the weakest member of her army, because he cannot fly. When the goddess Medusa seizes power, Pit must fight his way out of the Underworld and up through the Overworld and the Sky World with a bow, upgrading his abilities along the way to rescue Palutena. The game\'s vertical climbing stages, shop and upgrade systems and notoriously high difficulty made it a memorable companion to Metroid, and enemies such as the Eggplant Wizard — which turns Pit into a walking eggplant — became part of the series\' identity.\n\nPit returned in Kid Icarus: Of Myths and Monsters for the Game Boy in 1991 and then disappeared for years. Super Smash Bros. Brawl revived him in 2008 with a modern redesign, and its director Masahiro Sakurai went on to direct Kid Icarus: Uprising (2012) for the Nintendo 3DS, which gave Pit a voice, a personality and a much larger mythology.',
+    abilities: [
+      'Fires arrows from a bow and can upgrade it with sacred treasures',
+      'Cannot fly on his own — Palutena grants him flight only briefly',
+      'Buys items and upgrades in shops hidden throughout his journey',
+    ],
+    keyFacts: [
+      'Debuted in Kid Icarus on the Famicom Disk System on 19 December 1986; NES release 1987',
+      'Created by Toru Osawa under producer Gunpei Yokoi at Nintendo R&D1',
+      'Begins as the weakest soldier in Palutena\'s army because he cannot fly',
+      'Returned in Super Smash Bros. Brawl (2008) after years of absence',
+      'Starred in Kid Icarus: Uprising (2012), directed by Masahiro Sakurai',
+    ],
+    sections: [
+      {
+        title: 'A Hero Defined by a Weakness',
+        html: '<p>Pit\'s defining trait is something he lacks: an angel who cannot fly. It gives the original game its upward journey and its sense of struggle, and when the character was revived decades later, that limitation — flight granted only briefly by Palutena — remained at the heart of how he plays.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Kid Icarus', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Kid_Icarus' },
+    ],
+  },
 ];
