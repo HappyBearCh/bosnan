@@ -680,4 +680,30 @@ module.exports = [
       { title: 'GamesMaster (magazine)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/GamesMaster_(magazine)' },
     ],
   },
+  {
+    id: 'commodore-format',
+    name: 'Commodore Format',
+    country: 'United Kingdom',
+    founded: 1990,
+    closed: 1995,
+    era: '1990–1995',
+    description: 'Future Publishing\'s Commodore 64 magazine arrived late in the machine\'s life, outsold Zzap!64 within two years, and was the last commercial magazine for any of Britain\'s big three 8-bit computers.',
+    longDescription: 'Future Publishing launched Commodore Format in October 1990, when the Commodore 64 was already eight years old and the 16-bit Amiga and Atari ST were taking over. Its founding editor was Steve Jarratt, and the launch team included journalists who had worked on Zzap!64, with Sean Masterson as deputy editor. Each issue came with a cassette, the "Power Pack", carrying full games and demos.\n\nThe magazine found a large audience among the many C64 owners who had not moved on. At its peak in early 1992 it sold more than 60,000 copies a month, overtaking its long-established rival Zzap!64.\n\nAs the 8-bit market shrank, so did the magazine. By the end it had dropped to 24 pages, with editor Simon Forrester as its only full-time staff member, and its price had risen from £1.95 to £3.25. The final issue, the 61st, appeared in October 1995. Commodore Format was the last commercial magazine in the UK for any of the three main 8-bit machines — the C64, the ZX Spectrum and the Amstrad CPC.',
+    notableIssues: [
+      'Issue 1, October 1990 — edited by Steve Jarratt',
+      'Early 1992 — circulation passes 60,000, overtaking Zzap!64',
+      'Issue 61, October 1995 — final issue',
+    ],
+    keyFacts: [
+      'Published by Future from October 1990 to October 1995 — 61 issues',
+      'Each issue carried a "Power Pack" cassette of games and demos',
+      'Sold more than 60,000 copies a month at its peak in early 1992',
+      'Ended with a single full-time staff member and 24 pages',
+      'The last UK commercial magazine for the C64, Spectrum or Amstrad CPC',
+    ],
+    keyword: 'Commodore Format',
+    sources: [
+      { title: 'Commodore Format', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Commodore_Format' },
+    ],
+  },
 ];

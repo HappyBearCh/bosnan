@@ -509,4 +509,38 @@ module.exports = [
       { title: 'Yamaha YM2610', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Yamaha_YM2610' },
     ],
   },
+  {
+    id: 'ti-lpc-speech-chips',
+    name: 'Texas Instruments LPC Speech Chips (TMS5100 / TMS5220)',
+    manufacturer: 'Texas Instruments',
+    year: 1978,
+    foundIn: [
+      'Speak & Spell (TMC0280 / TMS5100)',
+      'TI-99/4A Speech Synthesizer (TMS5200)',
+      'Atari arcade games, including Star Wars, Gauntlet and Paperboy (TMS5220)',
+      'BBC Micro speech system (TMS5220)',
+      'Apple II Echo II cards (TMS5220)',
+    ],
+    voices: 1,
+    era: '1980s',
+    description: 'The chips that made machines talk: Texas Instruments\' linear-predictive-coding speech synthesisers began in the Speak & Spell and went on to give Atari\'s arcade games their voices — "Use the Force, Luke" in Star Wars and the narrator of Gauntlet.',
+    longDescription: 'Texas Instruments began its series of speech synthesiser chips in 1978. Rather than playing back recorded audio, which would have needed far more memory than was affordable, the chips used linear predictive coding (LPC): speech was stored as a compact set of parameters describing how a voice\'s pitch and the shape of the vocal tract change over time, and the chip rebuilt the sound from them. The TMC0280, also known as the TMS5100, was the first self-contained LPC speech synthesiser chip ever made, designed for TI\'s Speak & Spell educational toy.\n\nThe family spread quickly. The TMS5200 was designed for the speech module of TI\'s own TI-99/4A home computer. The TMS5220 became the most widely used member: it was fitted to the BBC Micro\'s speech system and to Echo II speech cards for the Apple II, and above all to a run of Atari arcade machines.\n\nIn the arcades the chip gave games something they had rarely had: recognisable spoken words. Atari used the TMS5220 in Star Wars, Indiana Jones and the Temple of Doom, Road Runner, Gauntlet, Gauntlet II and Paperboy. Gauntlet\'s announcer — warning that a player\'s warrior "needs food badly" or is "about to die" — became one of the most quoted voices of the 1980s arcade. In October 2001 Texas Instruments sold the rights to its speech-specific chip line to Sensory, Inc.',
+    notableTracks: [
+      'Atari — Star Wars (arcade)',
+      'Atari — Gauntlet and Gauntlet II (arcade)',
+      'Atari — Paperboy (arcade)',
+      'Texas Instruments — Speak & Spell (1978)',
+    ],
+    keyFacts: [
+      'Used linear predictive coding to rebuild speech from compact parameters',
+      'The TMC0280 / TMS5100 in the Speak & Spell was the first self-contained LPC speech chip',
+      'The TMS5200 powered the TI-99/4A speech module',
+      'The TMS5220 voiced Atari\'s Star Wars, Gauntlet, Gauntlet II and Paperboy',
+      'TI sold its speech chip line to Sensory, Inc. in October 2001',
+    ],
+    keyword: 'TMS5220 TMS5100 LPC speech Speak & Spell',
+    sources: [
+      { title: 'Texas Instruments LPC Speech Chips', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/TMS5220' },
+    ],
+  },
 ];

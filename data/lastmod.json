@@ -459,6 +459,10 @@
   "hash": "b8038a64d06ea3d9",
   "date": "2026-10-01"
  },
+ "bonk": {
+  "hash": "42936388d59c4f00",
+  "date": "2026-10-04"
+ },
  "boss-fight-history": {
   "hash": "27a22ac963148f69",
   "date": "2026-10-01"
@@ -795,6 +799,10 @@
   "hash": "e74dcda66a27ccf7",
   "date": "2026-10-02"
  },
+ "commodore-format": {
+  "hash": "ee44aa0c7ccb1bf0",
+  "date": "2026-10-04"
+ },
  "compile": {
   "hash": "e77efc31688194dd",
   "date": "2026-10-02"
@@ -1054,6 +1062,10 @@
  "dithering": {
   "hash": "703926be23794a7c",
   "date": "2026-10-02"
+ },
+ "dizzy": {
+  "hash": "cf5aa14c28b8a8b8",
+  "date": "2026-10-04"
  },
  "dkc-aquatic-ambiance": {
   "hash": "4213f65655439aa3",
@@ -4047,6 +4059,10 @@
   "hash": "8cf601629087f7a8",
   "date": "2026-10-02"
  },
+ "hudson-huc6270": {
+  "hash": "bf22f5a94867d4ae",
+  "date": "2026-10-04"
+ },
  "hudson-soft": {
   "hash": "b846f1919eb2d76a",
   "date": "2026-10-02"
@@ -4646,6 +4662,10 @@
  "mascot-marketing-wars": {
   "hash": "05cc85d980cab39a",
   "date": "2026-10-01"
+ },
+ "mastertronic": {
+  "hash": "1c4f3b3f64311ca5",
+  "date": "2026-10-04"
  },
  "mattel-aquarius": {
   "hash": "8be6b10bcf494b92",
@@ -7331,6 +7351,10 @@
   "hash": "6eb0b92c321893ba",
   "date": "2026-10-02"
  },
+ "ti-lpc-speech-chips": {
+  "hash": "7acbfa5891f2ebf5",
+  "date": "2026-10-04"
+ },
  "ti-sn76489": {
   "hash": "4bb7760174eae040",
   "date": "2026-10-02"
@@ -7543,6 +7567,10 @@
   "hash": "6f8bece68fd9d482",
   "date": "2026-10-01"
  },
+ "us-gold": {
+  "hash": "783983b5ebe78bf0",
+  "date": "2026-10-04"
+ },
  "us-national-video-game-team-1983": {
   "hash": "c7616b61185ef454",
   "date": "2026-10-02"
@@ -7722,6 +7750,10 @@
  "yamaha-opl2-opl3": {
   "hash": "85a608e0dd38e54f",
   "date": "2026-10-02"
+ },
+ "yamaha-v9938": {
+  "hash": "ccffd7ef3d017b6c",
+  "date": "2026-10-04"
  },
  "yamaha-ym2151": {
   "hash": "55495bcb09ac0b46",

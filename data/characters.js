@@ -990,4 +990,70 @@ module.exports = [
       { title: 'Kid Icarus', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Kid_Icarus' },
     ],
   },
+  {
+    id: 'dizzy',
+    name: 'Dizzy',
+    franchise: 'Dizzy',
+    platform: 'ZX Spectrum / Amstrad CPC / Commodore 64',
+    debutYear: 1987,
+    creator: 'The Oliver Twins (Philip and Andrew Oliver)',
+    era: '1980s',
+    role: 'Protagonist',
+    description: 'An egg with boxing gloves, created by the teenage Oliver Twins for Codemasters in 1987, who became the star of one of Britain\'s most successful game series of the 8-bit era.',
+    longDescription: 'Dizzy first appeared in Dizzy – The Ultimate Cartoon Adventure, published by Codemasters in 1987. He was created by the Oliver Twins, Philip and Andrew Oliver, and he is about as simple as a character can be: an egg with big eyes, a smiling face and boxing gloves. The design suited the limited graphics of the 8-bit home computers, and his round body gave the games their distinctive tumbling, rolling movement.\n\nThe Dizzy games were puzzle-adventures: players explored a connected world, collected objects and worked out where to use them, while avoiding the many hazards that could break an egg. Treasure Island Dizzy (1988), Fantasy World Dizzy (1989) and Magicland Dizzy (1990) followed, and most of the series reached the top of the British charts. The series became one of the most successful British franchises of the late 1980s and early 1990s, sold at Codemasters\' budget prices to a huge audience.\n\nDizzy also reached consoles with Fantastic Dizzy (1991) on the NES. Further development effectively stopped because ownership of the character was split — the Olivers held the copyright and Codemasters the trademark — but a lost NES game was rediscovered and released in 2015 as Wonderland Dizzy.',
+    abilities: [
+      'Rolls and somersaults when he jumps',
+      'Carries a small inventory of objects to solve puzzles',
+      'Fragile — falls, water and creatures can break him',
+    ],
+    keyFacts: [
+      'Created by the Oliver Twins and published by Codemasters',
+      'Debuted in Dizzy – The Ultimate Cartoon Adventure (1987)',
+      'An egg with boxing gloves, designed to suit 8-bit graphics',
+      'Most games in the series topped the British charts',
+      'A lost NES game was released as Wonderland Dizzy in 2015',
+    ],
+    sections: [
+      {
+        title: 'A Budget-Game Superstar',
+        html: '<p>Dizzy was a phenomenon of the British budget market, where full games sold for a few pounds on cassette. His adventures showed that a cheap game could still be a carefully designed one, and they made the Oliver Twins two of the best-known developers in Britain while still in their teens.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Dizzy (series)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Dizzy_(series)' },
+    ],
+  },
+  {
+    id: 'bonk',
+    name: 'Bonk',
+    franchise: 'Bonk / PC Genjin',
+    platform: 'PC Engine / TurboGrafx-16',
+    debutYear: 1989,
+    creator: 'Red Company (published by Hudson Soft)',
+    era: '1980s',
+    role: 'Protagonist / Former Console Mascot',
+    description: 'A bald caveman who fights with his oversized head — the face of NEC\'s PC Engine and TurboGrafx-16 from his 1989 debut.',
+    longDescription: 'Bonk first appeared in Bonk\'s Adventure, known in Japan as PC Genjin, released on 15 December 1989 for the PC Engine and TurboGrafx-16. The series was developed by Red Company and published by Hudson Soft. Bonk is a bald caveman whose weapon is his comically large head: he headbutts enemies, bounces off them and uses his teeth to climb walls.\n\nAt a time when every console needed a mascot, Bonk became the face of NEC\'s PC Engine and, in North America, the TurboGrafx-16, appearing in the console\'s marketing against Mario and Sonic. His games were bright, humorous platformers with power-ups that turned him into a rampaging, fire-breathing version of himself after eating meat.\n\nThe series continued with Bonk\'s Revenge (1991) and Bonk 3: Bonk\'s Big Adventure (1993), and spun off into the Air Zonk shooters, which reimagined the character as a futuristic flying hero. A new game, Bonk: Brink of Extinction, was announced for download platforms and the Nintendo 3DS but was cancelled.',
+    abilities: [
+      'Headbutts enemies with his oversized head',
+      'Climbs walls with his teeth',
+      'Powers up by eating meat',
+    ],
+    keyFacts: [
+      'Debuted in Bonk\'s Adventure (PC Genjin) on 15 December 1989',
+      'Developed by Red Company and published by Hudson Soft',
+      'The mascot of NEC\'s PC Engine / TurboGrafx-16',
+      'Sequels: Bonk\'s Revenge (1991) and Bonk 3 (1993)',
+      'Spun off into the Air Zonk shooters; Bonk: Brink of Extinction was cancelled',
+    ],
+    sections: [
+      {
+        title: 'The Mascot Wars\' Third Contender',
+        html: '<p>In the early 1990s console makers sold their machines through characters. Bonk was NEC\'s answer to Mario and Sonic — a deliberately comic, primitive hero — and his fortunes in the West rose and fell with the TurboGrafx-16 itself.</p>',
+      },
+    ],
+    sources: [
+      { title: 'Bonk (series)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Bonk_(character)' },
+    ],
+  },
 ];
