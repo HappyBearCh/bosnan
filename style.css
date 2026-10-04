@@ -187,26 +187,6 @@ a:hover { color: var(--text); }
     top: var(--sp-4);
 }
 
-/* The background wordmark used to be a 90vw disc at 0.18 opacity sitting
-   behind every page, so text landed on black in some places and dark red in
-   others. It is now a small, near-invisible corner mark. */
-.bg-logo {
-    position: fixed;
-    right: -60px;
-    bottom: -60px;
-    top: auto;
-    left: auto;
-    transform: none;
-    width: 340px;
-    height: 340px;
-    opacity: 0.045;
-    z-index: 0;
-    pointer-events: none;
-}
-
-.bg-logo text { fill: var(--accent); }
-.bg-logo circle { stroke: var(--accent); }
-
 /* ================== NAVBAR ==================
    Scoped away from <nav class="crumbs">: the breadcrumb trail is also a
    <nav>, so the bare element selector was giving it space-between and
@@ -315,10 +295,6 @@ nav:not(.crumbs) img { width: 42px; display: block; }
 .btn:active { transform: translateY(1px); }
 
 /* ================== ANIMATIONS ================== */
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
 
 /* ================== MOBILE RESPONSIVE ================== */
 @media (max-width: 900px) {

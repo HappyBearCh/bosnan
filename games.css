@@ -2,7 +2,6 @@
 .games-hero {
     text-align: center;
     padding: 80px 20px 30px;
-    animation: fadeIn 1.2s ease;
     position: relative;
     z-index: 1;
 }
@@ -144,7 +143,6 @@
 .game-card:hover {
     transform: translateY(-4px);
     border-color: var(--accent);
-    box-shadow: 0 0 20px var(--accent-soft);
 }
 
 .game-card-img-wrap {
@@ -180,19 +178,6 @@
     font-weight: bold;
     color: var(--text-faint);
     background: var(--surface-1);
-}
-
-.game-card-decade {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: var(--accent-strong);
-    color: var(--on-accent-strong);
-    font-size: 13px;
-    font-weight: bold;
-    padding: 3px 8px;
-    border-radius: 4px;
-    letter-spacing: 0.5px;
 }
 
 .game-card-playable {
@@ -303,7 +288,6 @@
     background: var(--surface-1);
     border-radius: 10px;
     border: 1px solid var(--surface-3);
-    box-shadow: 0 0 30px var(--accent-soft);
 }
 
 /* No image on file yet: a titled panel instead of a broken request. */
@@ -363,19 +347,6 @@
     min-width: 0;
 }
 
-.game-decade-badge {
-    display: inline-block;
-    background: var(--accent-strong);
-    color: var(--on-accent-strong);
-    font-size: 14px;
-    font-weight: bold;
-    padding: 4px 12px;
-    border-radius: 4px;
-    margin-bottom: 12px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 0 10px var(--accent-border);
-}
-
 .game-detail-title {
     font-size: 44px;
     color: var(--text);
@@ -384,7 +355,7 @@
 }
 
 .game-detail-year {
-    color: var(--accent);
+    color: var(--text-muted);
     font-size: 15px;
     margin: 0 0 30px;
 }
@@ -395,7 +366,7 @@
 
 .game-detail-desc h2 {
     font-size: 18px;
-    color: var(--accent);
+    color: var(--text);
     margin-bottom: 10px;
     border-bottom: 1px solid var(--surface-2);
     padding-bottom: 8px;
@@ -430,30 +401,24 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0;
     counter-reset: trivia;
 }
 
 .trivia-list li {
     counter-increment: trivia;
     display: grid;
-    grid-template-columns: 26px 1fr;
-    gap: 13px;
-    align-items: start;
-    font-size: 14px;
+    grid-template-columns: 22px 1fr;
+    gap: 10px;
+    align-items: baseline;
+    font-size: 15px;
     color: var(--text-secondary);
-    line-height: 1.7;
-    padding: 12px 14px 12px 12px;
-    background: var(--surface-1);
-    border: 1px solid var(--surface-2);
-    border-radius: 6px;
-    transition: border-color 0.18s, background 0.18s;
+    line-height: 1.65;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--surface-2);
 }
+.trivia-list li:last-child { border-bottom: none; }
 
-.trivia-list li:hover {
-    border-color: var(--accent-border);
-    background: var(--surface-1);
-}
 
 /* Game titles in these lists are linked to their archive page where one
    exists. Without this they fall back to the UA's blue-and-underlined default,
@@ -472,19 +437,9 @@
 
 .trivia-list li::before {
     content: counter(trivia);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 26px;
-    height: 26px;
-    background: var(--accent-strong);
-    color: var(--on-accent-strong);
+    color: var(--text-faint);
     font-size: 13px;
-    font-weight: bold;
-    border-radius: 50%;
-    flex-shrink: 0;
-    margin-top: 1px;
-    box-shadow: 0 0 6px var(--accent-border);
+    font-variant-numeric: tabular-nums;
 }
 
 /* ================== MOBILE ================== */
@@ -527,14 +482,6 @@
     .game-meta { width: 100%; }
 }
 
-/* ================== NAV EXTRAS ================== */
-.nav-random {
-    color: var(--text-muted);
-    font-size: 14px;
-    letter-spacing: 0.3px;
-}
-.nav-random:hover { color: var(--accent) !important; }
-
 /* ================== PLAY / DOWNLOAD ACTIONS ================== */
 .game-play-actions {
     display: flex;
@@ -572,7 +519,6 @@
 .btn-download:hover {
     border-color: var(--accent);
     color: var(--text);
-    box-shadow: 0 0 10px var(--accent-soft);
 }
 
 /* ================== SHARE BUTTON ================== */
@@ -594,7 +540,6 @@
 .share-btn:hover {
     border-color: var(--accent);
     color: var(--text);
-    box-shadow: 0 0 10px var(--accent-soft);
 }
 
 /* ================== RELATED GAMES ================== */
@@ -607,14 +552,15 @@
 }
 .related-section h2 {
     font-size: 22px;
-    color: var(--accent);
+    color: var(--text);
     margin-bottom: 20px;
     border-bottom: 1px solid var(--surface-2);
     padding-bottom: 10px;
 }
 .related-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* six related games fit one row at desktop width instead of 5 + 1 */
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 18px;
 }
 
@@ -635,7 +581,7 @@ body > .related-entries {
 }
 .related-entries h2 {
     font-size: 20px;
-    color: var(--accent);
+    color: var(--text);
     margin-bottom: 18px;
 }
 .related-entries-grid {
@@ -680,7 +626,7 @@ body > .related-entries {
 }
 .entry-sources h2 {
     font-size: 20px;
-    color: var(--accent);
+    color: var(--text);
     margin-bottom: 14px;
 }
 .entry-sources-list {
@@ -735,12 +681,11 @@ body > .related-entries {
     display: flex;
     gap: 28px;
     background: var(--surface-1);
-    border: 1px solid var(--accent-strong);
+    border: 1px solid var(--border);
     border-radius: 12px;
     overflow: hidden;
     text-decoration: none;
     color: var(--text);
-    box-shadow: 0 0 30px var(--accent-soft);
     transition: box-shadow 0.3s, border-color 0.3s;
 }
 .gotd-card:hover {
@@ -763,17 +708,6 @@ body > .related-entries {
     flex-direction: column;
     justify-content: center;
     gap: 8px;
-}
-.gotd-badge {
-    display: inline-block;
-    background: var(--accent-strong);
-    color: var(--on-accent-strong);
-    font-size: 13px;
-    font-weight: bold;
-    padding: 3px 10px;
-    border-radius: 4px;
-    letter-spacing: 0.5px;
-    width: fit-content;
 }
 .gotd-title {
     font-size: 26px;
@@ -838,7 +772,6 @@ body > .related-entries {
 }
 .platform-card:hover {
     border-color: var(--accent);
-    box-shadow: 0 0 20px var(--accent-soft);
     transform: translateY(-3px);
 }
 .platform-card-name {
@@ -883,10 +816,10 @@ body > .related-entries {
     margin: 0 0 6px;
 }
 .platform-detail-era {
-    color: var(--accent);
+    color: var(--text-muted);
     font-size: 14px;
     margin: 0 0 24px;
-    font-weight: bold;
+    font-weight: 500;
     letter-spacing: 0.5px;
 }
 .platform-detail-desc {
@@ -935,7 +868,6 @@ body > .related-entries {
 .genre-card:hover {
     transform: translateY(-4px);
     border-color: var(--accent);
-    box-shadow: 0 0 20px var(--accent-soft);
 }
 .genre-card-img-wrap {
     width: 100%;
@@ -1132,7 +1064,7 @@ body > .related-entries {
 /* ================== PLATFORM GAMES HEADING ================== */
 .platform-games-heading {
     font-size: 22px;
-    color: var(--accent);
+    color: var(--text);
     margin: 40px 0 20px;
     border-bottom: 1px solid var(--surface-2);
     padding-bottom: 10px;
@@ -1193,14 +1125,6 @@ body > .related-entries {
 .essay-card:hover {
     border-color: var(--accent-strong);
     transform: translateY(-3px);
-    box-shadow: 0 0 20px var(--accent-soft);
-}
-.essay-card-category {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--accent);
-    font-weight: bold;
 }
 .essay-card-title {
     font-size: 18px;
@@ -1580,7 +1504,6 @@ body > .crumbs {
     padding: 90px 20px 50px;
     position: relative;
     z-index: 1;
-    animation: fadeIn 1.5s ease;
 }
 .home-hero h1 {
     font-size: 54px;
@@ -1686,7 +1609,6 @@ body > .crumbs {
 .news-card:hover {
     border-color: var(--accent);
     transform: translateY(-2px);
-    box-shadow: 0 0 14px var(--accent-soft);
 }
 .news-card-source {
     font-size: 13px;
