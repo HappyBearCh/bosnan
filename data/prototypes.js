@@ -217,42 +217,6 @@ module.exports = [
     ],
   },
   {
-    id: 'street-fighter-ii-beta-1991',
-    title: 'Street Fighter II — 1991 Beta Character and Moveset Differences',
-    game: 'Street Fighter II: The World Warrior',
-    platform: 'Arcade (CPS-1)',
-    buildDate: 'late 1990',
-    discoveredYear: 2017,
-    source: 'Leaked Online',
-    era: '1990s',
-    description: "Capcom's Street Fighter II beta builds, partially reconstructed from a location test ROM that leaked in 2017, showed a game with unbalanced character movesets, missing special moves, and significantly different frame data from the version that reached arcades.",
-    longDescription: "A location test ROM of Street Fighter II that predated the official 1991 arcade release leaked to researchers in 2017 and confirmed what Capcom veterans had described in interviews: the game went through substantial balance and design changes between internal playtesting and the version that reached arcades worldwide. Several characters' signature special moves were not fully implemented in the location test build, and the frame data governing attack priority and recovery was significantly different — favouring certain character archetypes in ways that Capcom's team adjusted during the location test period based on player feedback. The leak also revealed that at least two character concepts that did not survive to the final game had been partially developed in the early build. The location test ROM represents the only direct documentary evidence of the game in an intermediate state between internal development and its historic public release.",
-    differences: [
-      'Several characters\' signature special moves were absent or placeholder — Dhalsim\'s yoga moves were not yet fully implemented',
-      'Frame data was substantially different, creating different priority hierarchies that the team adjusted based on location test feedback',
-      'Character balance heavily favoured certain archetypes in ways that the final release corrected through weeks of data revision',
-      'At least two character concepts had partial assets in the build that were cut before the final cabinet went into production',
-      'The bonus stages (car breaking, barrel smashing) were absent from the location test version',
-      'Sound effects for several hit states and special moves were placeholder audio rather than the final mixed sounds',
-    ],
-    keyFacts: [
-      'A location test ROM predating the 1991 arcade release leaked to researchers in 2017',
-      'Capcom ran the location test in a small number of Japanese arcades to collect player feedback before finalising the build',
-      'The balance changes between the location test and final release were substantial enough that they altered competitive viability of several characters',
-      'Street Fighter II went on to become the highest-grossing arcade game of the early 1990s, earning Capcom approximately $2.3 billion in revenue',
-    ],
-    sections: [
-      {
-        title: 'The Location Test Method',
-        html: '<p>Capcom\'s use of location tests to refine Street Fighter II\'s design was an established Japanese arcade development practice. Placing early builds in real arcades allowed the team to observe how actual players engaged with the game, which strategies emerged organically, and which characters were selected or avoided. The location test period for Street Fighter II was intensive — the team was reportedly present to observe play and gather data that would inform the final build\'s balance adjustments.</p><p>The 2017 ROM leak allowed researchers to quantify precisely which changes Capcom made between the location test and the final release. The frame data differences were the most significant: attack startup frames, hit advantage windows, and recovery periods were systematically adjusted across the roster. These changes, invisible to players who simply experience them as "this character feels better," represent weeks of iterative tuning work that the location test revealed was necessary.</p>',
-      },
-      {
-        title: 'The Missing Movesets',
-        html: '<p>Dhalsim\'s yoga fire and yoga flame attacks — which became central to his identity as a zoning character — were not fully implemented in the location test build. This absence had design implications beyond simple incompleteness: a Dhalsim without his stretching projectiles plays as a fundamentally different character with a fundamentally different role in the meta. The location test build\'s Dhalsim was not a prototypical version of the final character but a different character concept using the same model.</p><p>The character concepts that were cut entirely before the final release are harder to assess from the leaked data, since their assets are fragmentary. Researchers have identified what appear to be sprite sheets and collision box data for at least one character who does not appear in the shipped game. Whether this represents a cut character or assets for an unreleased sequel concept cannot be determined from the available evidence.</p>',
-      },
-    ],
-  },
-  {
     id: 'star-fox-snes-super-scope-origin',
     title: 'Star Fox (SNES) — Argonaut\'s 3D Origins',
     game: 'Star Fox',

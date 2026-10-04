@@ -2,39 +2,6 @@
 
 module.exports = [
   {
-    id: 'alttp-wrong-warp',
-    sources: [
-      { title: 'Exploration Glitch', publisher: 'ALttP Speedrunning Wiki', url: 'https://alttp-wiki.net/index.php/Exploration_Glitch' },
-      { title: 'Glitches in A Link to the Past', publisher: 'Zelda Wiki', url: 'https://zelda.fandom.com/wiki/Glitches_in_A_Link_to_the_Past' },
-    ],
-    title: 'Wrong Warp — Dark World Skip',
-    game: 'The Legend of Zelda: A Link to the Past',
-    platform: 'SNES',
-    year: 1991,
-    era: '1990s',
-    discoveredYear: 2002,
-    technique: 'Wrong Warp',
-    timeSaved: 'Entire Dark World (roughly 30+ minutes)',
-    description: 'A wrong warp in Hera\'s Tower that sends Link directly to Agahnim\'s Throne Room, bypassing the entire Dark World and all seven Dark World dungeons.',
-    longDescription: 'The A Link to the Past wrong warp is one of the most consequential single discoveries in speedrunning history. By entering a staircase in the Tower of Hera at a precise sub-pixel position while transitioning between floors, the game reads an incorrect memory pointer for the destination room and places Link in Agahnim\'s Throne Room — the final room of the Light World. Completing the fight there then warps Link to Ganon\'s Tower in the Dark World, bypassing every Dark World dungeon, every Crystal rescue, and the entire Dark World map. The trick halved competitive finishing times overnight and remains the defining technique in the Any% category. The exact mechanism relies on how the SNES handles two-story transitions: the game briefly frees a staircase pointer, and if movement inputs are correct, a wrong pointer is latched. Precise sub-pixel position must be established before the staircase, making the setup highly consistent at the cost of demanding pixel-perfect positioning in the preceding room.',
-    keyFacts: [
-      'Bypasses all seven Dark World dungeons, the full Crystal collection, and the Dark World overworld',
-      'Relies on a freed staircase destination pointer being overwritten by an adjacent memory address during floor transition',
-      'Execution requires sub-pixel positioning established one screen before the staircase — the trick itself appears deceptively simple',
-      'Reduced world-record times by over thirty minutes, transforming what was a 90-minute game into a sub-30-minute run',
-    ],
-    sections: [
-      {
-        title: 'How the Wrong Warp Works',
-        html: '<p>The Tower of Hera occupies two floors connected by staircases. When Link steps onto a staircase tile, the game queues a room destination address for the floor transition animation. The wrong warp exploits a brief window during which this destination pointer is in a state the engine was not designed to protect against lateral overwriting.</p><p>By establishing a specific sub-pixel X-position before entering the staircase room and walking into the tile at frame-perfect timing, the queued destination resolves to a memory address that corresponds to Agahnim\'s Throne Room rather than the intended upper floor. The game processes the transition normally, plays the staircase animation, and deposits Link in the wrong location without any visual glitch to warn the player that something unusual has occurred.</p><p>The setup is highly consistent once the sub-pixel position is understood: runners establish it by using a wall-collision alignment technique in the preceding corridor, making what sounds like a frame-perfect trick executable on demand at the highest competitive level.</p>',
-      },
-      {
-        title: 'Impact on the Community',
-        html: '<p>When the wrong warp was first documented and shared in early speedrunning communities around 2002, it was not immediately clear that it was possible to execute consistently rather than once in thousands of attempts. Early demonstrations were treated with scepticism until multiple runners reproduced it in relatively short practice sessions. Within a year it had been integrated into the main Any% route and all competitive records were reset against the new standard.</p><p>The discovery also permanently bifurcated the A Link to the Past community. Any% with the wrong warp became the marquee category for maximum-skip competition. Any% No Major Glitches and 100% categories grew in parallel for players who wanted to see the full game. This pattern — a major skip technique splitting a community into glitch-embracing and glitch-avoiding branches — became a template repeated across dozens of subsequent games.</p>',
-      },
-    ],
-  },
-  {
     id: 'sm64-blj',
     sources: [
       { title: 'Backwards Long Jump', publisher: 'SM64 Speedrun Wiki', url: 'https://sm64-speedrun.fandom.com/wiki/Backwards_Long_Jump' },
@@ -70,33 +37,30 @@ module.exports = [
   {
     id: 'oot-wrong-warp',
     sources: [
-      { title: 'Glitches in Ocarina of Time', publisher: 'Zelda Wiki', url: 'https://zelda.fandom.com/wiki/Glitches_in_Ocarina_of_Time' },
-      { title: 'Speedrunners Shatter Ocarina of Time World Record By Warping Into The Credits', publisher: 'Kotaku', url: 'https://kotaku.com/speedrunners-shatter-ocarina-of-time-world-record-by-wa-1841045682' },
+      { title: 'New Ocarina of Time Speedrun World Record', publisher: 'Zelda Dungeon', url: 'https://www.zeldadungeon.net/?p=10890' },
+      { title: 'Zelda Runners Sequence Break – Ocarina of Time', publisher: 'Zelda Dungeon', url: 'https://www.zeldadungeon.net/?p=139935' },
     ],
-    title: 'Wrong Warp — Child Link to Credits',
+    title: 'Wrong Warp — From the Deku Tree to Ganon\'s Castle',
     game: 'The Legend of Zelda: Ocarina of Time',
     platform: 'Nintendo 64',
     year: 1998,
     era: '1990s',
-    discoveredYear: 2012,
+    discoveredYear: null,
     technique: 'Wrong Warp',
-    timeSaved: 'Entire adult timeline (roughly 45–60 minutes)',
-    description: 'A wrong warp using the Prelude of Light cutscene that sends child Link directly to the game\'s ending credits, bypassing all adult temples and the final Ganon confrontation.',
-    longDescription: 'Ocarina of Time\'s wrong warp exploits a loading zone conflict between the Prelude of Light warp song and the door transition out of the Temple of Time. After pulling the Master Sword from the Pedestal of Time as young Link, the game briefly holds both the Temple of Time\'s entrance loading zone and the Prelude\'s destination pointer in memory simultaneously. By activating the Prelude of Light at the precise moment that the door loading zone is triggered, the game attempts to execute both transitions in the same frame and resolves the conflict by sending the player to an incorrect destination — the credits sequence rather than the Temple of Time interior. The technique requires establishing a specific item configuration, a bomb drop, and the song trigger within a roughly four-frame window. When it works, the game cuts to the Ganon defeat credits as child Link, without ever visiting the Shadow Temple, the Spirit Temple, or the Gerudo Fortress, and without the adult age transformation that normal progression requires. The discovery of this wrong warp in 2012 reshaped the Any% category entirely and touched off years of refinement in the surrounding route.',
+    timeSaved: 'Almost the entire game — the adult timeline, its dungeons and most required items',
+    description: 'A setup in Gohma\'s boss room, using a bottle and precise timing, that confuses the game\'s location loading so the blue warp out of the Deku Tree sends child Link to the end of the game at Ganon\'s Castle.',
+    longDescription: 'Every time Link moves to a new area, Ocarina of Time decides what to load by looking up a table of possible destinations, chosen by combinations of location, time of day, Link\'s age and cutscene state. The wrong warp exploits that system.\n\nThe technique is performed at the end of the first dungeon, inside the Great Deku Tree. Runners defeat the boss, Gohma, in a specific spot so that the blue warp it leaves behind appears as close as possible to the room\'s door, then use a bottle and careful timing so that the game briefly treats Link as being in two places at once — taking the warp and going through the door. In resolving the conflict, the game loads the wrong destination and sends Link into the final areas of Ganon\'s Castle.\n\nThe effect on the Any% speedrun is enormous. The wrong warp skips the adult half of the game, the Master Sword, the medallions, magic and almost every item and song the game normally requires, reducing the category to a short run from the start of the game through the Deku Tree to the final escape and fight. This particular form of the trick, which leads to the castle\'s doors to Ganon, is known among runners as "Ganondoor".',
     keyFacts: [
-      'Triggers a loading zone conflict between the Prelude of Light and the Temple of Time entrance during a four-frame window',
-      'Sends young Link to the game\'s ending credits, bypassing all adult temples and Ganon entirely',
-      'Requires a specific bomb placement, item configuration, and frame-precise song input to execute',
-      'Current Any% world record is under seven minutes from file select, down from over twenty minutes before the technique was discovered',
+      'Performed in Gohma\'s boss room at the end of the Deku Tree, the first dungeon',
+      'Uses a bottle and precise timing so the game treats Link as entering two places at once',
+      'Gohma is killed in a specific spot so the blue warp appears close to the door',
+      'Exploits the table the game uses to choose locations by age, time of day and cutscene state',
+      'Skips the entire adult timeline; the variant used in Any% is known as "Ganondoor"',
     ],
     sections: [
       {
-        title: 'The Loading Zone Conflict',
-        html: '<p>Ocarina of Time handles warp songs by first registering a destination pointer when the song animation begins, then executing the teleport once the animation completes. Simultaneously, the game\'s room management watches for physical overlap with loading zone triggers — areas of geometry that initiate room transitions. When both systems try to fire in the same processing window, the engine must decide which destination to use, and the outcome depends on the exact order of operations in that frame.</p><p>In front of the Temple of Time, the Prelude of Light\'s destination and the door\'s loading zone overlap. A precisely timed Prelude activation while crossing the door threshold at specific sub-pixel coordinates forces the engine to resolve this conflict. The resolution — sending the player to a memory address adjacent to the Prelude\'s normal destination rather than the Prelude\'s actual destination — places them at the credits trigger. The game proceeds as if the defeat of Ganon has occurred, playing the full ending sequence without the player having visited a single adult dungeon.</p>',
-      },
-      {
-        title: 'Route Evolution After Discovery',
-        html: '<p>Before the credits warp was found, OoT any% required completing the Forest Temple, the Fire Temple, the Water Temple, and often the Shadow Temple before the route could be optimised toward Ganon. Competitive times clustered around twenty to twenty-two minutes. The credits warp allowed runners to completely bypass all of this, reducing the effective game to its first thirty minutes of content before the wrong warp fires.</p><p>The years after 2012 saw intensive sub-optimisation of the early-game route: every chest, every cutscene, every room transition between file select and the Prelude activation was scrutinised for time saves. New skips — including the forest escape skip and the Deku Tree door skip — were layered in. The resulting route bears almost no resemblance to normal gameplay and is now one of the most technically demanding sequences in any N64 speedrun, demanding precise movement, sub-pixel positioning, and frame-accurate inputs across a sustained seven-minute window.</p>',
+        title: 'Why One Room Can Skip a Whole Game',
+        html: '<p>Most sequence breaks skip a dungeon or an item. The wrong warp works at a different level: instead of finding a gap in the world, it confuses the code that decides which world to load next. Because the game\'s destinations are looked up from a table rather than wired to each door, a single malformed transition can send Link almost anywhere — in this case, to the last place he is meant to reach.</p>',
       },
     ],
   },
@@ -130,104 +94,6 @@ module.exports = [
       {
         title: 'Wall-Jump in Competitive Play',
         html: '<p>Super Metroid\'s wall-jump system is technically a designed mechanic — the instruction manual briefly mentions it — but the designers clearly did not anticipate how far skilled players would extend it. By repeatedly jumping and kicking against vertical walls with frame-precise timing, Samus can ascend vertical shafts of arbitrary height without the Spring Ball or Hi-Jump Boots, rendering large sections of the game\'s vertical exploration freely accessible far earlier than intended.</p><p>In current competitive routes the wall-jump is used to access Crateria and Norfair areas from the top that the game expects the player to reach from below after collecting multiple items. The combination of mockball for horizontal access and wall-jumping for vertical access means the early-game route can visit parts of the map the designers intended to be among the final areas, collecting late-game beams and suits while still holding the basic Morph Ball and Power Bomb as the primary toolkit.</p>',
-      },
-    ],
-  },
-  {
-    id: 'sotn-save-corruption',
-    sources: [
-      { title: 'Symphony of the Night: Glitches', publisher: 'Castlevania Speedrunning Wiki', url: 'https://castlevaniaspeedruns.com/Castlevania:_Symphony_of_the_Night:Glitches' },
-      { title: 'SOTN/Techniques', publisher: 'Castlevania Speedrunning Wiki', url: 'https://castlevaniaspeedruns.com/SOTN/Techniques' },
-    ],
-    title: 'Save Corruption Wrong Warp',
-    game: 'Castlevania: Symphony of the Night',
-    platform: 'PlayStation',
-    year: 1997,
-    era: '1990s',
-    discoveredYear: 2009,
-    technique: 'Wrong Warp',
-    timeSaved: 'Entire inverted castle (roughly 1.5–2 hours)',
-    description: 'A save data manipulation technique that corrupts Alucard\'s room pointer on the title screen, causing the game to load him into the final boss room on new-game start.',
-    longDescription: 'Symphony of the Night\'s save corruption wrong warp relies on how the game handles its title screen demo and save file selection in sequence. The PlayStation version stores room destination data in a specific memory region that overlaps, under certain conditions, with the title screen\'s demo playback buffer. By manipulating inputs during the demo and immediately entering a new game or loaded save at specific frame timings, it is possible to write an incorrect room pointer into the slot that the game consults when loading a save file. When the save loads, Alucard is placed in the room whose ID was written by the corruption — which, with optimal inputs, resolves to the chamber containing the final boss, Dracula. Completing the fight there triggers the game\'s ending. The technique bypasses the entire inverted castle, all of its bosses, the Shaft fight, and the multi-stage Dracula encounter that normal progression leads to. Because the game\'s internal logic has not flagged the prerequisites for the true ending, this route lands on the bad ending — but for Any% purposes, any ending completion counts. The setup requires memorising specific input timings during the demo sequence and executing them across a window of approximately three frames.',
-    keyFacts: [
-      'Corrupts the room destination pointer through a memory overlap between the title demo buffer and the save data region',
-      'Places Alucard in the final boss room on game load, bypassing the inverted castle and all late-game bosses',
-      'Results in the bad ending, which is accepted in Any% but not in true-ending categories',
-      'Requires frame-precise inputs during the title screen demo sequence and is not executable on all versions of the game',
-    ],
-    sections: [
-      {
-        title: 'Memory Overlap and Pointer Corruption',
-        html: '<p>The PlayStation\'s memory layout for Symphony of the Night places the title screen demo\'s playback buffer adjacent to the region used to hold the active room destination pointer during save loading. In normal operation these regions serve their respective purposes at different times and never interfere. The wrong warp exploits the transition moment when the title demo is still active in memory but the save selection input has been accepted, creating a brief window when both systems are simultaneously writing to nearby addresses.</p><p>Specific button inputs during the demo direct the demo playback buffer to write values that, when the save loads, are read as a room ID. The room ID that results from the optimal corruption sequence corresponds to the Dracula chamber, though the exact ID written is sensitive to the timing of inputs and varies slightly between game versions. Runners targeting this technique must verify it works on their specific disc version and adjust inputs accordingly.</p>',
-      },
-      {
-        title: 'Any% Route Context',
-        html: '<p>Without the save corruption, Any% Symphony of the Night routes still use substantial glitches — notably the Wing Smash movement technique and clock room skips — but require completing the normal castle and most of the inverted castle. The world record without major glitches sits around forty-five minutes. With the save corruption, current Any% world records are under three minutes from the title screen to the ending credits, making it one of the most dramatic ratio differences between glitched and non-glitched categories in any major game.</p><p>The community distinguishes clearly between these routes: Any% (with corruption), Any% No Wrong Warp, and Richter Mode each attract dedicated runner bases. Symphony of the Night\'s baroque item system and large castle make the non-glitched categories highly replayable competitive formats in their own right, and many runners who mastered the corruption skip maintain separate personal bests across multiple categories.</p>',
-      },
-    ],
-  },
-  {
-    id: 'mega-man-2-pause-glitch',
-    sources: [
-      { title: 'Glitches', publisher: 'Mega Man Knowledge Base', url: 'https://megaman.fandom.com/wiki/Glitches' },
-      { title: 'Mega Man 2', publisher: 'Video Game Glitches Wiki', url: 'https://glitches.fandom.com/wiki/Mega_Man_2' },
-    ],
-    title: 'Pause Glitch (Damage Cancellation)',
-    game: 'Mega Man 2',
-    platform: 'NES',
-    year: 1988,
-    era: '1980s',
-    discoveredYear: 1990,
-    technique: 'Manipulation',
-    timeSaved: '~3–5 minutes across a full run',
-    description: 'Rapidly pausing and unpausing during boss fights causes Mega Man to enter the invincibility frames of a hit repeatedly without taking damage, allowing bosses to be defeated without losing health.',
-    longDescription: 'The Mega Man 2 pause glitch exploits the game\'s invincibility frame system — a standard NES mechanic designed to prevent the player from taking damage on consecutive frames immediately after being hit. When the game is paused during the brief window when an enemy projectile overlaps Mega Man\'s hitbox, the collision is registered and invincibility frames begin, but the actual health deduction is deferred to the next unpaused frame. By returning to the paused state before that frame resolves, the health deduction is cancelled — the invincibility timer resets, and the damage event is discarded. Repeating this across boss fights allows Mega Man to absorb hits indefinitely without losing energy, effectively granting invulnerability through rapid pause manipulation. The technique works across most of the game\'s robot master encounters and is particularly valuable in fights like Wily Stage 4, where precise reflex-based dodging is otherwise required. At top competitive level, pause glitch execution is performed dozens of times per run, demanding sustained rhythmic timing across the pause button for the full duration of boss encounters.',
-    keyFacts: [
-      'Exploits a one-frame window between collision registration and health deduction, which pausing can interrupt',
-      'Works consistently against most boss projectiles; some fast-moving attacks have too narrow a window to reliably catch',
-      'Requires sustained rapid-pause inputs across entire boss fights — typically three to five pauses per second',
-      'Is considered a fundamental technique in Mega Man 2 Any% and is accepted in all major categories',
-    ],
-    sections: [
-      {
-        title: 'Invincibility Frame Exploitation',
-        html: '<p>The NES Mega Man engine processes collision in two distinct phases each frame: a detection pass that checks for hitbox overlap and flags a hit, and a resolution pass that modifies health values and begins the invincibility timer. The pause glitch interrupts the space between these two passes. When a hit is flagged in detection but the game is paused before resolution executes, the resolution pass never fires. When the game is unpaused briefly to allow the next detection pass, the invincibility timer has not yet begun, so the engine is in a state where it can register another hit normally.</p><p>This creates a loop: detect hit, pause, cancel resolution, unpause, detect hit, pause. Each cycle registers a damage event and discards it. From Mega Man\'s perspective — and from the health bar\'s perspective — no damage ever occurred. The boss\'s projectile passes through without consequence, and Mega Man can continue attacking without interruption.</p>',
-      },
-      {
-        title: 'Competitive Significance',
-        html: '<p>Mega Man 2\'s pause glitch is one of the earliest NES-era exploit techniques to become embedded in competitive speedrunning as a baseline requirement rather than an optional optimisation. Any% routes assume pause glitch execution as a given: routing decisions — weapon choices, boss orders, movement paths — are all planned around the assumption that boss fights will be survivable without health management. Removing the glitch from the route would require significant rerouting to accommodate health refills and Energy Tank usage.</p><p>The technique is also one of the few speedrunning exploits that requires real-time physical skill rather than setup: it cannot be prepared in advance, only executed under pressure during boss encounters. This gives Mega Man 2 Any% a kinetic quality absent from many heavily glitched runs — the runner is visibly doing something demanding throughout every fight, which contributes to the run\'s appeal as a spectator event.</p>',
-      },
-    ],
-  },
-  {
-    id: 'goldeneye-flag-body',
-    sources: [
-      { title: 'GoldenEye speedrunning', publisher: 'James Bond Wiki', url: 'https://jamesbond.fandom.com/wiki/GoldenEye_speedrunning' },
-    ],
-    title: 'Body Flagging Skip',
-    game: 'GoldenEye 007',
-    platform: 'Nintendo 64',
-    year: 1997,
-    era: '1990s',
-    discoveredYear: 2001,
-    technique: 'Skip',
-    timeSaved: '~30–90 seconds per level depending on application',
-    description: 'Manipulating enemy patrol AI by leaving bodies in specific positions causes guards to investigate rather than raise the alert, allowing Bond to pass through restricted areas without triggering mission-fail alarm states.',
-    longDescription: 'GoldenEye 007\'s AI uses a flagging system to manage enemy states: a guard who discovers a body transitions to an investigation state, causing him to walk to the body\'s location rather than patrol normally or sound an alarm. Speedrunners discovered that bodies positioned strategically in door thresholds or near patrol waypoints intercept guard sight lines and redirect them in ways that open temporary corridors through otherwise alarm-triggering areas. By killing a guard silently with a single PP7 shot and positioning the body in the AI\'s patrol path before the alerted state propagates, runners can redirect guards who would otherwise close off movement corridors. This is distinct from the general "kill guards quickly" strategy: body flagging is a deliberate manipulation of the investigation AI to create controlled openings. The technique is most prominent on levels like Facility, Archives, and Train, where multiple guard paths converge on choke points. At high-skill level, runners combine body flagging with door manipulation and boost-strafing to create movement lines through guard-heavy areas that appear to defy the level\'s security logic.',
-    keyFacts: [
-      'Exploits the enemy investigation AI state: a guard who finds a body stops patrolling and walks to inspect it',
-      'Most effective when bodies are placed in doorways or on patrol waypoints that intersect with the runner\'s intended path',
-      'Works across most indoor levels; outdoor levels with different AI configurations show less consistent results',
-      'Requires understanding individual guard patrol schedules and sight-cone directions for each level',
-    ],
-    sections: [
-      {
-        title: 'The Investigation AI System',
-        html: '<p>GoldenEye\'s guards operate on a simple three-state AI: patrol, investigate, and alarm. In patrol state a guard follows a fixed waypoint path. In investigate state a guard navigates toward the last position of detected danger — including corpses. In alarm state guards converge on Bond\'s position and the mission\'s alarm tolerance begins depleting.</p><p>The body flagging technique exploits the transition between patrol and investigate. A guard who spots a corpse transitions to investigate state rather than alarm state, and the investigation behaviour overrides patrol routing entirely. By choosing when and where to leave bodies, runners effectively hijack individual guards\' movement decisions, redirecting them away from the runner\'s path or toward positions that create openings in guard coverage.</p><p>The precise mechanics depend on sight-cone geometry: a body must enter a guard\'s visible range but not Bond\'s visible range simultaneously, which requires careful positioning that varies level by level.</p>',
-      },
-      {
-        title: 'Route Integration',
-        html: '<p>Body flagging in GoldenEye is rarely the headline technique — it is typically described as one component of a broader movement strategy involving boost-strafing (maintaining top speed through strafe angle manipulation) and precise door timing. Its value is in eliminating the need to wait for guard patrol cycles at choke points: instead of waiting for a guard to face away, the runner creates the safe window actively by baiting the guard into investigation state.</p><p>The Facility level is the most frequently cited application: the central research area has guard coverage that normally requires either waiting out a patrol cycle or accepting an alarm deduction. Body flagging the entry guard creates a predictable fifteen-second window that runners can move through at full speed, removing a variance source that otherwise makes runs inconsistent at the top competitive level. At Agent difficulty versus 00 Agent difficulty the guard configurations differ, and body flagging setups must be recalculated for each difficulty category.</p>',
       },
     ],
   },

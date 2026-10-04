@@ -3111,6 +3111,25 @@ app.get('/games/:id', (req, res) => {
 // sections used to spell this out by hand, each with its own pair of cache
 // variables; both pages are rendered once per instance and kept. Sections that
 // 301 retired slugs (games, essays) keep their own routes.
+// Entries deliberately removed after fact-checking found them unverifiable or
+// false. Their URLs answer 410 Gone rather than 404, which tells search
+// engines the page was withdrawn on purpose and can be dropped promptly.
+const RETIRED_ENTRIES = new Set([
+  'lost-games/the-9-nes',
+  'glitches/soul-reaver-teleport',
+  'merchandise/mario-kart-happy-meal',
+  'pixel-artists/susan-lee-merritt',
+  'voice-actors/barry-stigler',
+  'speedrun-techniques/alttp-wrong-warp',
+  'speedrun-techniques/sotn-save-corruption',
+  'speedrun-techniques/mega-man-2-pause-glitch',
+  'speedrun-techniques/goldeneye-flag-body',
+  'prototypes/street-fighter-ii-beta-1991',
+  'strategy-guides/sonic-the-hedgehog-first-guide-sega',
+  'strategy-guides/chrono-trigger-japanese-guide-square',
+  'strategy-guides/mortal-kombat-arcade-move-cards',
+]);
+
 function sectionRoutes(slug, entries, listPage, detailPage) {
   let listHtml = null;
   let byId = null;
@@ -3128,7 +3147,7 @@ function sectionRoutes(slug, entries, listPage, detailPage) {
       for (const e of entries) if (e && !byId.has(e.id)) byId.set(e.id, e);
     }
     const entry = byId.get(req.params.id);
-    if (!entry) return res.status(404).send(notFoundPage());
+    if (!entry) return res.status(RETIRED_ENTRIES.has(`${slug}/${req.params.id}`) ? 410 : 404).send(notFoundPage());
     if (!pages.has(entry.id)) pages.set(entry.id, detailPage(entry));
     res.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
     res.set('Link', `<${CSS_PATH}>; rel=preload; as=style`);

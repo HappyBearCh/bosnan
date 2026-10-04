@@ -111,10 +111,6 @@
   "hash": "ed44cce99e74d45f",
   "date": "2026-10-02"
  },
- "alttp-wrong-warp": {
-  "hash": "9ec9257d10f9a2ec",
-  "date": "2026-10-01"
- },
  "amiga-mod-music": {
   "hash": "3e9cf639eb01fdf9",
   "date": "2026-10-01"
@@ -317,10 +313,6 @@
  },
  "banjo-kazooie-stop-n-swop": {
   "hash": "16796d73286c2ae1",
-  "date": "2026-10-01"
- },
- "barry-stigler": {
-  "hash": "b3047491000344b9",
   "date": "2026-10-01"
  },
  "battery-backup": {
@@ -691,10 +683,6 @@
   "hash": "cd36ba7d66035366",
   "date": "2026-10-01"
  },
- "chrono-trigger-japanese-guide-square": {
-  "hash": "71eb13f9d236edda",
-  "date": "2026-10-01"
- },
  "chrono-trigger-manual": {
   "hash": "3f4118832e1c7c8b",
   "date": "2026-10-01"
@@ -792,8 +780,8 @@
   "date": "2026-10-01"
  },
  "commodore-64-user": {
-  "hash": "c61289cbfcf1f830",
-  "date": "2026-10-02"
+  "hash": "355fb6ae26e902f2",
+  "date": "2026-10-04"
  },
  "commodore-cdtv": {
   "hash": "e74dcda66a27ccf7",
@@ -1176,8 +1164,8 @@
   "date": "2026-10-01"
  },
  "doom-official-strategy-guide-prima": {
-  "hash": "bf515fc27d1aa35e",
-  "date": "2026-10-01"
+  "hash": "5927e909ca833bdc",
+  "date": "2026-10-04"
  },
  "doom-ost": {
   "hash": "07050b93b9f0461f",
@@ -3791,10 +3779,6 @@
   "hash": "1cfcc845758042cd",
   "date": "2026-10-01"
  },
- "goldeneye-flag-body": {
-  "hash": "96aef3894182db6b",
-  "date": "2026-10-01"
- },
  "goldeneye-invincibility-glitch": {
   "hash": "45c06347fed52fa9",
   "date": "2026-10-02"
@@ -4607,10 +4591,6 @@
   "hash": "553a9a26fce1bac8",
   "date": "2026-10-01"
  },
- "mario-kart-happy-meal": {
-  "hash": "ad8b7f4f7cd30f11",
-  "date": "2026-10-01"
- },
  "mario-manga-sawada": {
   "hash": "1ecb7d9b3486ee91",
   "date": "2026-10-02"
@@ -4705,10 +4685,6 @@
  },
  "mega-man-2-ost": {
   "hash": "fe354aa244746a91",
-  "date": "2026-10-01"
- },
- "mega-man-2-pause-glitch": {
-  "hash": "4c67c102cef988e0",
   "date": "2026-10-01"
  },
  "mega-man-6": {
@@ -4937,10 +4913,6 @@
  },
  "mortal-kombat": {
   "hash": "187ead1932c81e50",
-  "date": "2026-10-01"
- },
- "mortal-kombat-arcade-move-cards": {
-  "hash": "43f4248b13ccd611",
   "date": "2026-10-01"
  },
  "mortal-kombat-blood-code": {
@@ -5444,8 +5416,8 @@
   "date": "2026-10-01"
  },
  "oot-wrong-warp": {
-  "hash": "b3bdddbb62b04b3a",
-  "date": "2026-10-01"
+  "hash": "5b724b45447fa70e",
+  "date": "2026-10-04"
  },
  "open-world-history": {
   "hash": "e087b0a4229c5ea9",
@@ -6667,10 +6639,6 @@
   "hash": "773df061ca9dd965",
   "date": "2026-10-01"
  },
- "sonic-the-hedgehog-first-guide-sega": {
-  "hash": "1a4606fb1998dcab",
-  "date": "2026-10-01"
- },
  "sonic-the-hedgehog-genesis": {
   "hash": "45b534065743bdac",
   "date": "2026-10-01"
@@ -6694,14 +6662,6 @@
  "sony-spc700": {
   "hash": "be6fbb55caf8df6b",
   "date": "2026-10-02"
- },
- "sotn-save-corruption": {
-  "hash": "aa7ed449d43d3b71",
-  "date": "2026-10-01"
- },
- "soul-reaver-teleport": {
-  "hash": "36f2b2d3edd348a2",
-  "date": "2026-10-01"
  },
  "soulslike": {
   "hash": "62e013eacb97cb0b",
@@ -6910,10 +6870,6 @@
  "street-fighter-ii-arcade-championships": {
   "hash": "db42026ca2ab0123",
   "date": "2026-10-02"
- },
- "street-fighter-ii-beta-1991": {
-  "hash": "5b9a109cbf8f0ecd",
-  "date": "2026-10-01"
  },
  "street-fighter-ii-capcom-logo-code": {
   "hash": "9751fbcc4afb659a",
@@ -7199,10 +7155,6 @@
   "hash": "fe467b736ff4504a",
   "date": "2026-10-02"
  },
- "susan-lee-merritt": {
-  "hash": "86f3ebb9a6914114",
-  "date": "2026-10-02"
- },
  "swordquest-airworld": {
   "hash": "9e7ce8b07bfe2f41",
   "date": "2026-10-02"
@@ -7313,10 +7265,6 @@
  },
  "texture-warping": {
   "hash": "262d30148ef7ece7",
-  "date": "2026-10-02"
- },
- "the-9-nes": {
-  "hash": "8e93f0e1df82cd6e",
   "date": "2026-10-02"
  },
  "the-end-metal-gear-solid-3": {

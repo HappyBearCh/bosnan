@@ -161,27 +161,6 @@ module.exports = [
     keyword: 'Treasure',
   },
   {
-    id: 'susan-lee-merritt',
-    name: 'Susan Lee Merritt',
-    born: null,
-    nationality: 'American',
-    era: '1970s – 1980s',
-    description: 'Susan Lee Merritt was one of the earliest professional female artists in the game industry, producing box art and visual materials for Atari during the 2600 era when the gap between hardware capability and artistic imagination was at its widest.',
-    longDescription: 'The Atari 2600 era (1977–1984) produced a distinctive genre of game illustration: box art and manual artwork that depicted the game\'s concept in vivid, dramatic painted form because the hardware itself could produce nothing approaching what was advertised. These illustrations, painted by commercial artists under contract, were the primary vehicle through which players imagined the games before playing them and the primary medium through which game publishers communicated ambition. Susan Lee Merritt worked at Atari during this period as part of a small art team producing the illustrated materials that defined how the 2600 library presented itself visually. Her work contributed to the distinctive painted cover art style that characterised Atari\'s retail presence — bold, action-oriented, and deliberately evocative rather than representational — during the years when the 2600 was the dominant home gaming platform. Women were rare in game development\'s technical roles during this period, and Merritt\'s presence as a professional artist represents an important early chapter in the industry\'s demographic history.',
-    notableWork: [
-      'Box art and promotional materials (Atari 2600 era, 1977–1984)',
-      'Game manual illustration (Atari, various titles)',
-      'Visual design work (Atari consumer division)',
-    ],
-    keyFacts: [
-      'One of the first professional female artists employed in the video game industry',
-      'Worked during the Atari 2600 era when cover art was the primary medium for communicating a game\'s concept',
-      'Atari 2600 box art was deliberately aspirational — illustrating the imagination rather than the hardware',
-      'Her work represents an important and often overlooked chapter in the history of women in game development',
-    ],
-    keyword: 'Atari',
-  },
-  {
     id: 'paul-reiche-iii',
     name: 'Paul Reiche III',
     born: 1956,

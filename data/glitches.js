@@ -364,38 +364,6 @@ module.exports = [
     ],
   },
   {
-    id: 'soul-reaver-teleport',
-    sources: [
-      { title: 'Shifting', publisher: 'Legacy of Kain Wiki', url: 'https://legacyofkain.fandom.com/wiki/Shifting' },
-      { title: 'Planar portals', publisher: 'Legacy of Kain Wiki', url: 'https://legacyofkain.fandom.com/wiki/Planar_portals' },
-    ],
-    title: 'Spectral Realm Teleport Glitch',
-    game: 'Legacy of Kain: Soul Reaver',
-    platform: 'PlayStation',
-    year: 1999,
-    era: 'Late 1990s',
-    discoveredBy: 'Community',
-    type: 'Speedrun Staple',
-    description: 'Shifting between the material and spectral realms while positioned in specific geometry causes Raziel to respawn at unintended coordinates — allowing large sections of the game\'s linear progression to be bypassed entirely.',
-    longDescription: 'Soul Reaver\'s dual-realm mechanic — the ability to shift between the material world and the spectral plane — was designed as a puzzle and traversal tool, allowing Raziel to pass through barriers and doors that blocked material-world movement. The game\'s realm-shift code repositions the character at a valid location in the destination realm when the shift completes; in specific geometric positions, the "valid location" calculation produces coordinates in areas that the game\'s designed progression has not yet unlocked.\n\nSpeed-runners catalogued realm-shift positions that teleport Raziel past locked doors, arena barriers, and even into late-game areas accessible normally only after completing intermediate objectives. The most dramatic applications skip several hours of intended play, placing Raziel in boss arenas before the narrative has contextualised their encounters. Crystal Dynamics did not patch the glitch for the PlayStation release, and the PC version retained the same realm-shift behaviour, making the technique available across all retail versions of the game. Soul Reaver speed runs using spectral teleports complete the game in under thirty minutes against a designed play time of eight to twelve hours.',
-    keyFacts: [
-      'Exploits the realm-shift positioning code, which calculates a "valid location" that may be in unintended areas',
-      'Allows Raziel to bypass locked doors and progress gates by teleporting across level boundaries',
-      'Present in both PlayStation and PC releases — Crystal Dynamics did not patch it',
-      'Enables completion of an 8–12 hour game in under 30 minutes in optimised speed runs',
-    ],
-    sections: [
-      {
-        title: 'How the Realm Shift Misfires',
-        html: '<p>Soul Reaver\'s realm-shift system needed to place Raziel at a valid position in the destination realm after each shift, since the same physical space often has different geometry between realms — doors that are closed in the material world may be open debris in the spectral plane, and vice versa. The positioning code finds the nearest valid location in the destination realm from Raziel\'s current coordinates. In specific positions — typically near walls, doorframes, or the edges of geometric structures — the "nearest valid location" calculation chooses a point that is across a game boundary rather than through it.</p><p>The glitch is geometry-dependent, meaning each teleport position must be identified and memorised individually. Speed-runners produced detailed documentation of each useful teleport position, including the precise standing spot, camera angle, and shift timing required to reproduce the teleport reliably. The consistency of the glitch — it produces the same result at the same position every time — made it trustworthy enough for speed-run route integration despite its technical complexity.</p>',
-      },
-      {
-        title: 'Narrative Incoherence as a Feature',
-        html: '<p>Soul Reaver speed runs that use spectral teleports arrive in boss arenas before the game\'s narrative has established who the boss is, what their significance to Raziel is, or why the encounter is dramatically meaningful. The game continues to play its scripted cutscenes regardless of how the player arrived, producing dialogue exchanges whose references to prior events make no sense in the run\'s context. Speed-running commentary often frames this narrative incoherence as a secondary entertainment layer — the absurdity of Raziel confronting characters he has "never met" adds an unintended comedy to otherwise technical runs.</p><p>The Soul Reaver teleport glitch is an example of how speed-running reframes a game\'s narrative design as an obstacle rather than a feature. A game built around a specific emotional journey through carefully ordered encounters becomes, in the speed-run context, a collection of spatial positions connected by the most efficient movement paths available — including paths the developers never intended to exist. The teleport glitch makes explicit a tension present in all story-driven games: that the game\'s physical world and its narrative world are separate systems, and exploits can separate them entirely.</p>',
-      },
-    ],
-  },
-  {
     id: 'credits-warp-smw',
     sources: [
       { title: 'SethBling', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/SethBling' },

@@ -243,28 +243,6 @@ module.exports = [
     keyword: 'TMNT',
   },
   {
-    id: 'barry-stigler',
-    name: 'Barry Stigler',
-    born: null,
-    nationality: 'American',
-    era: '1990s',
-    description: 'Barry Stigler provided the iconic booming announcer voice for the Mortal Kombat arcade series — his "FIGHT!", "FINISH HIM!", and "FATALITY!" calls became cultural shorthand for the fighting game genre across the 1990s.',
-    longDescription: 'Barry Stigler was a voice-over professional hired by Midway Games to provide announcer calls for the original Mortal Kombat (1992) arcade cabinet. The design brief was simple — short, authoritative commands to punctuate game states — but Stigler\'s delivery transformed utilitarian cues into cultural artefacts. The deep, reverb-drenched "FINISH HIM!" and the elongated "FATALITY!" that punctuated every gruesome finishing move were delivered with theatrical gravity that amplified the game\'s already extreme content into something simultaneously menacing and absurd. Those calls entered popular culture almost immediately, referenced in films, television, and casual conversation as shorthand for dramatic confrontation well beyond the game\'s actual audience. Stigler reprised the role across Mortal Kombat II (1993), Mortal Kombat 3 (1995), and subsequent arcade entries, and later recordings retained his voice as the template even when new sessions were needed. The Mortal Kombat announcer voice is one of the clearest examples in game history of a voice performance achieving cultural reach entirely disproportionate to the textual content it was asked to deliver.',
-    notableRoles: [
-      'Announcer (Mortal Kombat, 1992)',
-      'Announcer (Mortal Kombat II, 1993)',
-      'Announcer (Mortal Kombat 3, 1995)',
-      'Announcer (Mortal Kombat Trilogy, 1996)',
-    ],
-    keyFacts: [
-      '"FINISH HIM!" and "FATALITY!" entered popular culture as references to dramatic confrontation far beyond gaming',
-      'His announcer calls were recorded with heavy reverb processing to match Mortal Kombat\'s gothic arcade aesthetic',
-      'Reprised the role across multiple Mortal Kombat arcade sequels through the mid-1990s',
-      'The Mortal Kombat announcer voice is one of the most culturally recognised non-character game vocalisations ever recorded',
-    ],
-    keyword: 'Mortal Kombat',
-  },
-  {
     id: 'akio-otsuka',
     name: 'Akio Ōtsuka',
     born: 1959,

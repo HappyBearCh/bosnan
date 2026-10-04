@@ -226,34 +226,6 @@ module.exports = [
     ],
   },
   {
-    id: 'mario-kart-happy-meal',
-    title: 'Mario Kart Happy Meal Toys',
-    franchise: 'Mario Kart',
-    type: 'Toy',
-    year: 1994,
-    manufacturer: "McDonald's / Nintendo",
-    era: '1990s',
-    description: "McDonald's Happy Meal partnership with Nintendo in 1994 produced a set of Mario Kart-themed wind-up and pull-back toy vehicles that brought the game's characters and kart designs to a fast food audience well beyond the SNES-owning demographic. The promotion was one of the most successful fast food gaming tie-ins of the early 1990s.",
-    longDescription: "The McDonald's and Nintendo partnership for Mario Kart toys arrived at the peak of both companies' commercial influence: Super Mario Kart had released in 1992 and was one of the SNES's best-selling games, while McDonald's Happy Meal toys had been established as the dominant children's fast food collectible since the early 1980s. The promotion produced wind-up and pull-back kart vehicles featuring Mario, Luigi, Princess Peach, Yoshi, and Bowser, each with mechanical action appropriate to the fast food toy format. The toys were designed with bright primary colours and character-recognisable proportions that worked equally well as promotional items and as stand-alone play objects.",
-    keyFacts: [
-      'The promotion coincided with Super Mario Kart\'s continued commercial success on SNES',
-      'Wind-up and pull-back mechanisms made the toys interactive rather than merely decorative',
-      'Characters featured included Mario, Luigi, Peach, Yoshi, and Bowser',
-      'The McDonald\'s tie-in was repeated for Mario Kart 64 with updated character designs',
-    ],
-    notableFor: "Bringing Mario Kart character toys to a fast food context that reached children outside the game-buying demographic, extending the franchise's brand awareness through food retail rather than software channels.",
-    sections: [
-      {
-        title: "The Happy Meal as Brand Extension",
-        html: '<p>Nintendo\'s decision to partner with McDonald\'s for Happy Meal promotions reflected the company\'s understanding that its brand reach in the early 1990s extended well beyond the game-buying demographic. A child who did not own a SNES would still encounter Mario characters at McDonald\'s, and the Happy Meal toy provided a physical object associated with the franchise that existed independently of any hardware purchase. This brand exposure function — using food retail to maintain character awareness in households that were not yet game purchasers — was a deliberate strategy rather than a purely commercial deal, and it contributed to the Nintendo brand saturation of the mid-1990s.</p><p>The Mario Kart franchise was a particularly suitable property for the Happy Meal toy format: vehicle toys were a standard and proven Happy Meal category, and the kart racing premise provided natural toy mechanics in the form of pull-back and wind-up motion systems. The toys were designed to work on flat surfaces — tables, countertops — which matched the typical Happy Meal consumption environment of a McDonald\'s booth. This contextual thinking about how the toys would actually be played with was not always present in licensed toy design of the period.</p>',
-      },
-      {
-        title: 'Fast Food Toys and Collecting Culture',
-        html: '<p>The McDonald\'s Happy Meal toy market in the 1990s operated as a structured collecting system that drove repeat restaurant visits: a complete set of toys required multiple purchases over the promotion\'s duration, incentivising families to return within the promotional window. The Mario Kart promotion used this mechanic effectively, with each of the five character vehicles available in different purchases, creating a complete set incentive that worked both for collecting parents and for children who wanted specific characters. The promotion\'s completion rate — the percentage of customers who purchased enough Happy Meals to complete the set — was a key performance metric that Nintendo and McDonald\'s both tracked.</p><p>Original McDonald\'s Happy Meal toys from the Nintendo promotions of the early and mid-1990s are collected today as gaming memorabilia, with complete sets in original packaging fetching multiples of the original promotional value. The toys are valued both as physical artefacts of the period and as documents of Nintendo\'s marketing strategy at its commercial peak. Their condition varies widely in the secondary market — many were played with extensively before being preserved — and mint-condition examples with original packaging have become the most sought-after items in the broader category of Nintendo promotional merchandise.</p>',
-      },
-    ],
-  },
-  {
     id: 'donkey-kong-saturday-supercade',
     title: 'Donkey Kong on Saturday Supercade',
     franchise: 'Donkey Kong',

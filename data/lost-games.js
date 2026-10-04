@@ -104,23 +104,6 @@ module.exports = [
     discoveredBy: null,
   },
   {
-    id: 'the-9-nes',
-    title: 'The 9',
-    developer: 'Sunsoft',
-    platform: 'Nintendo Entertainment System',
-    year: 1993,
-    status: 'Cancelled — Prototype Recovered',
-    description: 'The 9 was a near-complete NES action game by Sunsoft — developer of Batman and Blaster Master — that was cancelled as the NES market collapsed in 1993, rediscovered decades later through prototype archaeology, and found to be a polished and playable finished product.',
-    longDescription: 'Sunsoft was one of the NES era\'s most respected third-party developers, responsible for Blaster Master (1988), Batman (1989), Gremlins 2 (1990), and Journey to Silius (1990) — a run of technically accomplished and well-reviewed action games that established the company\'s reputation for quality. By 1992-1993, Sunsoft was still developing for the NES despite the platform\'s declining commercial prospects, completing projects that had been in development before the SNES had fully claimed the market\'s attention. The 9 was among these late-period projects: an action game with a post-apocalyptic aesthetic, featuring combat mechanics and level design consistent with Sunsoft\'s established style.\n\nDetails about The 9\'s development circumstances and the exact reasons for its cancellation are sparse. Sunsoft, like most developers of the period, was transitioning its primary development resources to the SNES and Genesis by 1993, and the NES market\'s contraction made releasing new titles commercially questionable. Nintendo was already signalling that first-party NES development was winding down, which reduced the visibility and marketing support available for new third-party releases. A completed NES game in late 1993 faced a retail environment where shelf space was being reallocated to 16-bit titles and new 8-bit releases were increasingly difficult to sell to distributors at profitable volumes.\n\nA prototype cartridge for The 9 surfaced in the gaming collector community in the 2010s, passed through several collectors, and was eventually acquired by preservationists who dumped the ROM and assessed its completion state. The game was found to be in an advanced, largely complete state — navigable from the opening stages through what appeared to be a significant portion of the game\'s length, with functional enemy AI, complete level designs, and working audio. The gap between the game\'s apparent completion and its non-release became characteristic of the late NES era, in which development pipelines continued operating after the market had effectively decided the platform\'s commercial future.\n\nThe 9\'s recovery is representative of a broader pattern in NES-era game archaeology: Sunsoft and other quality developers completed games that were never shipped not because the games were inadequate but because the market timing made release economically irrational. The Video Game History Foundation and independent collectors have recovered multiple comparable titles from the same period, building a picture of the NES\'s final years as a period of creative activity whose products were systematically withheld from consumers. The 9 lacks the narrative drama of some high-profile cancellations, but it represents an honest accounting of what the market did to competent, finished work.',
-    keyFacts: [
-      'Developed by Sunsoft, whose NES catalogue included Blaster Master, Batman, and Journey to Silius',
-      'Cancelled as the NES market collapsed in 1993 despite reaching an apparently complete development state',
-      'A prototype surfaced in the collector community in the 2010s and was found to be playable through most of the game',
-      'Representative of dozens of late-NES titles cancelled not for quality reasons but for commercial timing',
-    ],
-    discoveredBy: 'Gaming prototype collectors (2010s)',
-  },
-  {
     id: 'earthbound-64-mother-3-n64',
     title: 'EarthBound 64 / Mother 3 (N64)',
     developer: 'HAL Laboratory / Ape Inc. / Nintendo',
