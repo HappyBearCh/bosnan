@@ -1425,13 +1425,26 @@ function entryOgImage(cleanPath) {
   return null;
 }
 const GA_MEASUREMENT_ID = 'G-7PKQSXLCD8';
-const GA_SNIPPET = `\n    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}"></script>
+// The 174 KB gtag.js used to load from <head> with the page, and Lighthouse
+// measured it as the largest third-party cost on every page (up to ~440 ms of
+// main-thread blocking on mobile), competing with the first render. Commands are
+// queued in dataLayer immediately, so the pageview is still recorded; only the
+// library download waits until the page has loaded and the browser is idle.
+const GA_SNIPPET = `\n    <!-- Google tag (gtag.js), loaded after the page -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', '${GA_MEASUREMENT_ID}');
+      window.addEventListener('load', function () {
+        var go = function () {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}';
+          document.head.appendChild(s);
+        };
+        if ('requestIdleCallback' in window) requestIdleCallback(go, { timeout: 3000 }); else setTimeout(go, 1500);
+      });
     </script>`;
 // Section registry lookups, built once from NAV_GROUPS, so the breadcrumb and
 // CollectionPage injection below knows the human label for any `/section` or
@@ -3892,6 +3905,12 @@ function gameDetailPage(game, base) {
   </div>
 </div>`;
 
+  const devHref = developerHub(game), pubHref = publisherHub(game);
+  const devPage = devHref ? DEVELOPERS.find(d => `/developers/${d.id}` === devHref) : null;
+  const pubPage = pubHref ? PUBLISHERS.find(p => `/publishers/${p.id}` === pubHref) : null;
+  // Nintendo, Sega and other first parties have their page under Developers.
+  const pubAsDev = pubPage ? null : DEVELOPERS.find(d => (game.publisher || '').toLowerCase().includes(d.keyword.toLowerCase()));
+  const pubUrl = pubPage ? `${base}/publishers/${pubPage.id}` : pubAsDev ? `${base}/developers/${pubAsDev.id}` : undefined;
   const schemaJson = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'VideoGame',
@@ -3900,10 +3919,16 @@ function gameDetailPage(game, base) {
     datePublished: String(game.year),
     genre: game.genre,
     gamePlatform: game.platform,
-    publisher: { '@type': 'Organization', name: game.publisher },
+    // Tie the game to the archive's own company pages where one exists, so the
+    // developer and publisher resolve to entities rather than bare strings. The
+    // developer field sometimes names people, so it only becomes an
+    // Organization when it matches a developer page.
+    author: devPage ? { '@type': 'Organization', name: devPage.name, url: `${base}/developers/${devPage.id}` } : undefined,
+    publisher: { '@type': 'Organization', name: game.publisher, url: pubUrl },
     applicationCategory: 'Game',
     image: imgUrl,
     url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
   });
 
   const breadcrumbJson = JSON.stringify({
