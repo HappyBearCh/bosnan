@@ -2047,13 +2047,20 @@ function enrichEntrySchema(body, cleanPath) {
   const [slug, id, more] = cleanPath.split('/').filter(Boolean);
   if (!slug || !id || more) return body;
   const date = entryLastmod(slug, { id });
+  // Google requires an image on Article rich results; 1,030 template-built
+  // Article nodes had none. Use the page's own og:image, which the middleware
+  // has already resolved to the best available picture for this entry.
+  const ogImage = (body.match(/property="og:image" content="([^"]*)"/) || [])[1];
   return body.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g, (whole, json) => {
     let node;
     try { node = JSON.parse(json); } catch { return whole; }
     if (!node || Array.isArray(node) || node['@graph'] || !DATED_SCHEMA_TYPES.has(node['@type'])) return whole;
     let changed = false;
+    const isGame = node['@type'] === 'VideoGame';
     if (date && !node.dateModified) { node.dateModified = date; changed = true; }
-    if (node['@type'] !== 'VideoGame' && !node.author) { node.author = ORG_SCHEMA; changed = true; }
+    if (!isGame && !node.author) { node.author = ORG_SCHEMA; changed = true; }
+    if (!isGame && !node.publisher) { node.publisher = ORG_SCHEMA; changed = true; }
+    if (!node.image && ogImage) { node.image = unescapeHtml(ogImage); changed = true; }
     return changed ? `<script type="application/ld+json">${JSON.stringify(node).replace(/</g, '\\u003c')}</script>` : whole;
   });
 }
@@ -2417,8 +2424,9 @@ function cardImage(g, imgAttrs) {
   const placeholder = `<div class="game-card-placeholder" aria-hidden="true">${escapeHtml(g.title[0])}</div>`;
   const src = gameImagePath(g);
   if (!src) return placeholder;
-  return `<img src="/${escapeHtml(src)}" alt="${escapeHtml(g.title)}" ${imgAttrs}${isTitleCard(src) ? ' class="is-titlecard"' : ''}
-             onerror="this.parentElement.innerHTML='<div class=\\'game-card-placeholder\\'>${escapeHtml(g.title[0])}</div>'">`;
+  // gameImagePath() only returns files that are on disk, so no onerror fallback
+  // is needed — it was ~100 bytes repeated on every card of every grid.
+  return `<img src="/${escapeHtml(src)}" alt="${escapeHtml(g.title)}" ${imgAttrs}${isTitleCard(src) ? ' class="is-titlecard"' : ''}>`;
 }
 
 // eagerCount: first N images get fetchpriority=high (no lazy), rest get loading=lazy
@@ -2433,21 +2441,9 @@ function buildCardHtml(list, eagerCount = 0, withFilterData = false) {
       ? ` data-decade="${escapeHtml(g.decade)}" data-s="${escapeHtml(
           [g.title, g.genre, g.platform, g.developer, g.year].join(" ").toLowerCase())}"`
       : '';
-    return `<a href="/games/${g.id}" class="game-card"${filterData}>
-      <div class="game-card-img-wrap">
-        ${cardImage(g, imgAttrs)}
-        ${g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : ''}
-      </div>
-      <div class="game-card-body">
-        <h3 class="game-card-title">${escapeHtml(g.title)}</h3>
-        <div class="game-card-meta">
-          <span>${escapeHtml(String(g.year))}</span>
-          <span class="dot">·</span>
-          <span>${escapeHtml(g.genre)}</span>
-        </div>
-        <p class="game-card-platform">${escapeHtml(g.platform)}</p>
-      </div>
-    </a>`;
+    // Kept compact: the /games hub renders all 425 of these on one page, where
+    // per-card markup decides the page's DOM size and weight.
+    return `<a href="/games/${g.id}" class="game-card"${filterData}><div class="game-card-img-wrap">${cardImage(g, imgAttrs)}${g.playUrl ? '<div class="game-card-playable">&#9654; Play</div>' : ''}</div><div class="game-card-body"><h3 class="game-card-title">${escapeHtml(g.title)}</h3><div class="game-card-meta">${escapeHtml(String(g.year))} · ${escapeHtml(g.genre)}</div><p class="game-card-platform">${escapeHtml(g.platform)}</p></div></a>`;
   }).join('');
 }
 
@@ -6746,7 +6742,7 @@ ${nav('')}
       </div>
       <div class="game-card-body">
         <h3 class="game-card-title">${escapeHtml(rg.title)}</h3>
-        <div class="game-card-meta"><span>${rg.year}</span><span class="dot">·</span><span>${escapeHtml(rg.genre)}</span></div>
+        <div class="game-card-meta">${rg.year} · ${escapeHtml(rg.genre)}</div>
         <p class="game-card-platform">${escapeHtml(rg.platform)}</p>
       </div>
     </a>
