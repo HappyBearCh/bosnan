@@ -1832,7 +1832,7 @@ app.use((req, res, next) => {
   res.send = (body) => {
     if (typeof body === 'string' && body.startsWith('<!DOCTYPE html') && body.includes('</head>')) {
       const cleanPath = req.path === '/index.html' ? '/' : req.path.replace(/\/+$/, '') || '/';
-      const canonical = SITE_URL + cleanPath;
+      const canonical = SITE_URL + (CANONICAL_OVERRIDES.get(cleanPath) || cleanPath);
 
       // Normalise title and description in place *before* the Open Graph
       // fallbacks are derived from them, so the social tags inherit the
@@ -2599,7 +2599,7 @@ function buildSitemapCache() {
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`).join('');
-    const lostGameUrls = LOST_GAMES.map(g => `
+    const lostGameUrls = LOST_GAMES.filter(g => !CANONICAL_OVERRIDES.has(`/lost-games/${g.id}`)).map(g => `
   <url>
     <loc>${base}/lost-games/${g.id}</loc>
     <lastmod>${today}</lastmod>
@@ -3137,6 +3137,20 @@ const RETIRED_ENTRIES = new Set([
   'strategy-guides/sonic-the-hedgehog-first-guide-sega',
   'strategy-guides/chrono-trigger-japanese-guide-square',
   'strategy-guides/mortal-kombat-arcade-move-cards',
+]);
+
+// The same cancelled game written up twice — once under Lost Games, once under
+// Cancelled — with 67–94% of the same vocabulary. Both pages stay for readers,
+// but the shorter lost-games copy names the fuller cancelled-games page as its
+// canonical and is left out of the sitemap, so the two stop competing.
+const CANONICAL_OVERRIDES = new Map([
+  ['/lost-games/starfox-2-snes', '/cancelled/starfox-2-snes'],
+  ['/lost-games/thrill-kill', '/cancelled/thrill-kill-ps1'],
+  ['/lost-games/dinosaur-planet-n64', '/cancelled/dinosaur-planet-n64'],
+  ['/lost-games/sonic-xtreme', '/cancelled/sonic-xtreme-saturn'],
+  ['/lost-games/castlevania-resurrection', '/cancelled/castlevania-resurrection-dreamcast'],
+  ['/lost-games/earthbound-64-mother-3-n64', '/cancelled/earthbound-64-mother-3-n64'],
+  ['/lost-games/duke-nukem-forever-1997-era', '/cancelled/duke-nukem-forever-development-hell'],
 ]);
 
 function sectionRoutes(slug, entries, listPage, detailPage) {
@@ -3738,7 +3752,7 @@ ${nav('home')}
     <div class="enc-header">
         <h2>About the Archive</h2>
         <p>Bosnan is an independent archive of video game history from 1952 to 1999. It covers ${games.length} games on ${PLATFORMS.length} platforms, together with the hardware, sound chips, designers, composers, studios, magazines, controversies and cancelled projects behind them, and ${ESSAYS.length} long-form essays. Entries are written from documented sources, many of which are cited on the page, and every entry links to the related games, people and machines elsewhere in the archive.</p>
-        <p><a href="/about">How the archive is made</a> &middot; <a href="/browse">Browse every section</a> &middot; <a href="/timeline">Timeline</a></p>
+        <p><a href="/about">How the archive is made</a> &middot; <a href="/browse">Browse every section</a> &middot; <a href="/timeline">Timeline</a> &middot; <a href="/glossary">Glossary of gaming terms</a></p>
     </div>
 </div>
 
