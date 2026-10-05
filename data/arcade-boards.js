@@ -176,7 +176,6 @@ module.exports = [
   {
     id: 'konami-gx',
     sources: [
-      { title: 'Konami GX', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Konami_GX' },
       { title: 'Konami GX Hardware', publisher: 'System 16 — The Arcade Museum', url: 'https://www.system16.com/hardware.php?id=574' },
     ],
     name: 'Konami GX (System GX)',
@@ -505,7 +504,6 @@ module.exports = [
   {
     id: 'midway-t-unit',
     sources: [
-      { title: 'Midway T Unit', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Midway_T_Unit' },
       { title: 'A trip down NBA Jam\'s graphics pipeline', publisher: 'Fabien Sanglard', url: 'https://fabiensanglard.net/nbajamte/' },
     ],
     name: 'Midway T Unit',
@@ -564,11 +562,7 @@ module.exports = [
   {
     id: 'atari-system-1',
     sources: [
-      {
-        title: 'Atari System',
-        publisher: 'Wikipedia',
-        url: 'https://en.wikipedia.org/wiki/Atari_System',
-      },
+      { title: 'Atari System 1', publisher: 'System 16 — The Arcade Museum', url: 'https://system16.com/hardware.php?id=768' },
     ],
     name: 'Atari System 1',
     manufacturer: 'Atari Games',

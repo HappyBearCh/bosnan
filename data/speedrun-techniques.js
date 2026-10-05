@@ -133,7 +133,6 @@ module.exports = [
   {
     id: 'pokemon-rby-trainer-fly',
     sources: [
-      { title: 'Pokémon Red/Blue/151 Pokémon (speedrun route)', publisher: 'Pokemon Speedruns Wiki', url: 'http://wiki.pokemonspeedruns.com/index.php/Pok%C3%A9mon_Red/Blue/151_Pok%C3%A9mon' },
       { title: 'Mew glitch', publisher: 'StrategyWiki', url: 'https://strategywiki.org/wiki/Pok%C3%A9mon_Red_and_Blue/Mew_glitch' },
     ],
     title: 'Trainer-Fly Glitch (Catch Any Pokémon)',
