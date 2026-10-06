@@ -723,6 +723,11 @@ function citationList(item) {
 // references render as machine-readable structured data. Injected alongside
 // sourcesBlock, so it covers every sourced category entry automatically.
 function sourcesSchema(item, src) {
+  // Entity sections (people, companies, products, magazines) get a typed
+  // Person/Organization/Product node from autoSchema(). Emitting this Article
+  // first made autoSchema() see the page as covered, so a composer's page was
+  // typed as a generic Article. Leave those pages to the typed node.
+  if (ENTRY_SCHEMA_TYPE.has(clSlugByEntry.get(item))) return '';
   const citations = src.map(s => {
     if (typeof s === 'string') return null;
     if (!s.url) return null;
@@ -2000,16 +2005,18 @@ const LISTING_ENTRY_SECTIONS = new Set(['years', 'decades']);
 
 // What an entry page's subject actually *is*. Everything outside this map is a
 // written piece about a topic and stays an Article, but a profile of Nobuo
-// Uematsu is a Person and an NES page is a Product, and typing them as Article
-// tells a search engine the page is journalism rather than an entity. These
-// types take `name` rather than `headline`, and no `publisher` — a person does
-// not have one.
+// Uematsu is a Person, and typing them as Article tells a search engine the
+// page is journalism rather than an entity. These types take `name` rather than
+// `headline`, and no `publisher` — a person does not have one. Historical
+// hardware is a Thing, not a Product: Google validates every Product as a
+// shopping item and reports one without offers, review or aggregateRating as
+// an error, and a 1985 console has none of those.
 const ENTRY_SCHEMA_TYPE = new Map([
   ...['composers', 'designers', 'critics', 'voice-actors', 'pixel-artists', 'producers']
     .map(s => [s, 'Person']),
   ...['developers', 'publishers', 'studios'].map(s => [s, 'Organization']),
   ...['platforms', 'hardware', 'peripherals', 'controllers', 'failed-consoles',
-    'arcade-boards', 'sound-chips'].map(s => [s, 'Product']),
+    'arcade-boards', 'sound-chips'].map(s => [s, 'Thing']),
   ['magazines', 'Periodical'],
   ['game-engines', 'SoftwareApplication'],
 ]);
@@ -2043,10 +2050,19 @@ function pageTrail(cleanPath, body) {
 // well as autoSchema()'s, and only adds what is missing. dateModified is set
 // only when the entry has a tracked date — never invented.
 const DATED_SCHEMA_TYPES = new Set(['Article', 'NewsArticle', 'BlogPost', 'BlogPosting', 'VideoGame']);
+// Node types that stand for the page's subject itself (a person, company,
+// product, magazine, game). Only these take sameAs: an Article about Doom is
+// not "the same as" Wikipedia's Doom page, but the VideoGame node for Doom is.
+const ENTITY_SCHEMA_TYPES = new Set(['VideoGame', 'Person', 'Organization', 'Thing', 'Periodical', 'SoftwareApplication']);
 function enrichEntrySchema(body, cleanPath) {
   const [slug, id, more] = cleanPath.split('/').filter(Boolean);
   if (!slug || !id || more) return body;
   const date = entryLastmod(slug, { id });
+  // The entry's cited Wikipedia article(s), linked as sameAs on entity nodes so
+  // search engines can tie the page to the right real-world entity.
+  const entry = slug === 'games' ? gamesById.get(id) : clEntryByPath(cleanPath);
+  const wiki = ((entry && entry.sources) || [])
+    .map(s => s && s.url).filter(u => typeof u === 'string' && /^https:\/\/en\.wikipedia\.org\/wiki\//.test(u));
   // Google requires an image on Article rich results; 1,030 template-built
   // Article nodes had none. Use the page's own og:image, which the middleware
   // has already resolved to the best available picture for this entry.
@@ -2054,9 +2070,14 @@ function enrichEntrySchema(body, cleanPath) {
   return body.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g, (whole, json) => {
     let node;
     try { node = JSON.parse(json); } catch { return whole; }
-    if (!node || Array.isArray(node) || node['@graph'] || !DATED_SCHEMA_TYPES.has(node['@type'])) return whole;
+    if (!node || Array.isArray(node) || node['@graph']) return whole;
+    const type = node['@type'];
+    const dated = DATED_SCHEMA_TYPES.has(type), entity = ENTITY_SCHEMA_TYPES.has(type);
+    if (!dated && !entity) return whole;
     let changed = false;
-    const isGame = node['@type'] === 'VideoGame';
+    if (entity && wiki.length && !node.sameAs) { node.sameAs = wiki.length === 1 ? wiki[0] : wiki; changed = true; }
+    if (!dated) return changed ? `<script type="application/ld+json">${JSON.stringify(node).replace(/</g, '\\u003c')}</script>` : whole;
+    const isGame = type === 'VideoGame';
     if (date && !node.dateModified) { node.dateModified = date; changed = true; }
     if (!isGame && !node.author) { node.author = ORG_SCHEMA; changed = true; }
     if (!isGame && !node.publisher) { node.publisher = ORG_SCHEMA; changed = true; }
@@ -3939,6 +3960,7 @@ function gameDetailPage(game, base) {
     image: imgUrl,
     url,
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    citation: citationList(game).length ? citationList(game) : undefined,
   });
 
   const breadcrumbJson = JSON.stringify({
@@ -4025,6 +4047,7 @@ ${nav('games')}
       <button class="share-btn" id="shareBtn" onclick="shareGame()">Share this game</button>
     </div>
   </div>
+  ${sourcesBlock(game, true)}
 </div>
 
 ${relatedHtml}
