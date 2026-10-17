@@ -12989,5 +12989,1354 @@
         "url": "https://en.wikipedia.org/wiki/Alone_in_the_Dark_(1992_video_game)"
       }
     ]
+  },
+  {
+    "id": "grim-fandango",
+    "title": "Grim Fandango",
+    "year": 1998,
+    "decade": "1990s",
+    "developer": "LucasArts",
+    "publisher": "LucasArts",
+    "genre": "Point-and-Click Adventure",
+    "platform": "PC",
+    "image": "images/games/grim-fandango.png",
+    "description": "Grim Fandango (1998) is Tim Schafer's film-noir adventure set in the Land of the Dead, where Manny Calavera sells travel packages to departed souls. Critics loved it, but its weak sales helped end LucasArts' adventure games.",
+    "longDescription": "Manny Calavera works as a travel agent for the Department of Death in the Land of the Dead, a retro-futuristic world styled on the 1950s. The story borrows from the Day of the Dead and from film noir, and was planned as a four-year journey, each year built from branches of puzzles. Its 3D characters move over pre-rendered backgrounds, and the original used tank controls. Players solve puzzles by collecting objects and talking to characters. Peter McConnell's score mixes jazz, big band and Mexican folk music.",
+    "trivia": [
+      "Its GrimE engine was scripted in Lua, one of the first notable uses of the language in games.",
+      "The working title was Deeds of the Dead; The Long Siesta and Dirt Nap were also considered.",
+      "Adventure Gamers ranked it first in its 2011 list of the top 100 adventure games."
+    ],
+    "devStory": "Tim Schafer directed and wrote the game on a budget of about $3 million, with Bret Mogilefsky programming and Peter Tsacle on art. It was released for Windows on 30 October 1998 and won several Adventure Game of the Year awards, but sold only 58,617 copies in the US by the end of the year. Double Fine released a remastered version in 2015.",
+    "sources": [
+      {
+        "title": "Grim Fandango",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Grim_Fandango"
+      }
+    ]
+  },
+  {
+    "id": "full-throttle",
+    "title": "Full Throttle",
+    "year": 1995,
+    "decade": "1990s",
+    "developer": "LucasArts",
+    "publisher": "LucasArts",
+    "genre": "Point-and-Click Adventure",
+    "platform": "PC/DOS",
+    "image": "images/games/full-throttle.png",
+    "description": "Full Throttle (1995) is Tim Schafer's biker adventure, in which gang leader Ben is framed for murder — the first LucasArts adventure to sell more than a million copies.",
+    "longDescription": "Ben, leader of a biker gang, is framed for the murder of Malcolm Corley, founder of Corley Motors. The real killer is the company's vice president, Adrian Ripburger, who plans to switch Corley to making minivans. Ben teams up with the mechanic Maureen, Corley's illegitimate daughter, to expose him at a shareholders' meeting. The game introduced LucasArts' contextual pie menu, and failed action sequences simply reset rather than ending the game.",
+    "trivia": [
+      "Mark Hamill voiced the villain Ripburger, and Roy Conrad voiced Ben.",
+      "Its soundtrack licensed songs by the rock band The Gone Jackals.",
+      "Two sequels were started, in 2000 and 2002, and both were cancelled."
+    ],
+    "devStory": "It was Tim Schafer's first project as lead designer, with art by Peter Chan and music by Peter McConnell. Built on SCUMM with the INSANE engine for its video sequences, on a budget of $1.5 million, it was released on 19 May 1995. Double Fine released a remaster in 2017.",
+    "sources": [
+      {
+        "title": "Full Throttle (1995 video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Full_Throttle_(1995_video_game)"
+      }
+    ]
+  },
+  {
+    "id": "sam-and-max-hit-the-road",
+    "title": "Sam & Max Hit the Road",
+    "year": 1993,
+    "decade": "1990s",
+    "developer": "LucasArts",
+    "publisher": "LucasArts",
+    "genre": "Point-and-Click Adventure",
+    "platform": "PC/DOS",
+    "image": "images/games/sam-and-max-hit-the-road.png",
+    "description": "Sam & Max Hit the Road (1993) is LucasArts' adventure based on Steve Purcell's comics, in which the duo chase a stolen frozen Bigfoot across America's tourist traps.",
+    "longDescription": "Sam and Max investigate the theft of Bruno, a frozen Bigfoot, from a carnival. The case takes them across the United States from one roadside tourist attraction to the next, and up against the villain Conroy Bumpus. The game adapts Purcell's 1989 comic On The Road, and its jazz-style score was written by Clint Bajakian, Peter McConnell and Michael Land.",
+    "trivia": [
+      "PC Gamer called it \"still the best graphic adventure for the PC, hands down\" in 1998.",
+      "Snuckey's parodies the Stuckey's roadside chain, and Frog Rock was based on a real attraction.",
+      "It was the first LucasArts game to use storyboarding."
+    ],
+    "devStory": "Sean Clark and Mike Stemmle directed the game, with Steve Purcell and Collette Michaud among the designers. It was the ninth game on the SCUMM engine and used iMUSE for its music. It was released for MS-DOS in November 1993, with Bill Farmer voicing Sam and Nick Jameson voicing Max. Two planned sequels were cancelled before the series moved to Telltale Games.",
+    "sources": [
+      {
+        "title": "Sam & Max Hit the Road",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sam_%26_Max_Hit_the_Road"
+      }
+    ]
+  },
+  {
+    "id": "the-7th-guest",
+    "title": "The 7th Guest",
+    "year": 1993,
+    "decade": "1990s",
+    "developer": "Trilobyte",
+    "publisher": "Virgin Interactive Entertainment",
+    "genre": "Adventure / Puzzle",
+    "platform": "PC/DOS",
+    "image": "images/games/the-7th-guest.png",
+    "description": "The 7th Guest (1993) is Trilobyte's puzzle game set in the haunted Stauf mansion, with pre-rendered 3D rooms and live-action video. It shipped only on CD-ROM and is credited, with Myst, with selling CD-ROM drives.",
+    "longDescription": "The player, an amnesiac called Ego, explores the Stauf mansion and solves 21 puzzles, each unlocking live-action video clips that move the story along. Over time it emerges that the player is the spirit of Tad, a boy trapped in the house. A hint book helps with puzzles, and on the third use it solves the puzzle outright. The pre-rendered 3D graphics ran at 640×320 in 256 colours.",
+    "trivia": [
+      "Bill Gates called it \"the new standard in interactive entertainment\".",
+      "It won Electronic Entertainment's 1993 Breakthrough Game award.",
+      "Its sequel, The 11th Hour, followed in 1995."
+    ],
+    "devStory": "Rob Landeros and Graeme Devine designed it at Trilobyte, Matthew Costello wrote it and George Sanger composed the music. Virgin published it for DOS on 28 April 1993. The game was too large for floppy disks, so it shipped only on CD-ROM, and it sold more than two million copies.",
+    "sources": [
+      {
+        "title": "The 7th Guest",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_7th_Guest"
+      }
+    ]
+  },
+  {
+    "id": "syndicate-1993",
+    "title": "Syndicate",
+    "year": 1993,
+    "decade": "1990s",
+    "developer": "Bullfrog Productions",
+    "publisher": "Electronic Arts",
+    "genre": "Strategy",
+    "platform": "Amiga / DOS",
+    "image": "images/games/syndicate-1993.png",
+    "description": "Syndicate (1993) is Bullfrog's isometric real-time tactics game, in which a squad of four cyborg agents carries out assassination, rescue and persuasion missions for a megacorporation in a cyberpunk 2096.",
+    "longDescription": "In 2096 megacorporations have replaced governments, and the player sends teams of up to four cyborg agents on missions of assassination, rescue and \"persuasion\". The Persuadertron recruits targets and civilians to follow the squad. Taxes from conquered territories pay for research into better weapons, from pistols and Uzis to miniguns and the Gauss gun, but taxing too heavily can provoke a revolt that forces the mission to be replayed.",
+    "trivia": [
+      "PC Gamer UK ranked it the 11th best computer game of all time in 1994.",
+      "Computer Gaming World criticised its lack of multiplayer and its repetitive missions."
+    ],
+    "devStory": "Sean Cooper designed and programmed the game, with Peter Molyneux producing and Russell Shaw composing. EA released it for the Amiga and MS-DOS in the UK on 2 July 1993, followed by an expansion, American Revolt, the same year. Syndicate Wars followed in 1996.",
+    "sources": [
+      {
+        "title": "Syndicate (1993 video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Syndicate_(1993_video_game)"
+      }
+    ]
+  },
+  {
+    "id": "eye-of-the-beholder",
+    "title": "Eye of the Beholder",
+    "year": 1991,
+    "decade": "1990s",
+    "developer": "Westwood Associates",
+    "publisher": "Strategic Simulations, Inc.",
+    "genre": "Dungeon Crawler",
+    "platform": "Amiga / DOS",
+    "image": "images/games/eye-of-the-beholder.png",
+    "description": "Eye of the Beholder (1991) is Westwood's first-person Advanced Dungeons & Dragons dungeon crawler for SSI, in which a party descends beneath Waterdeep to face the beholder Xanathar.",
+    "longDescription": "Adventurers descend beneath the city of Waterdeep, past clans of dwarves and drow, to reach the lair of Xanathar, a beholder. The party starts with four characters and can grow to six by recruiting non-player characters or resurrecting skeletons found in the dungeon. Exploration and combat are seen in pseudo-3D first person and controlled by pointing and clicking.",
+    "trivia": [
+      "The original DOS version ended with a small text window; the Amiga version added an animated ending.",
+      "In 1991 SSI ran a \"Beholder Bonus\" contest in which players hunted for 12 hidden easter eggs."
+    ],
+    "devStory": "Westwood Associates developed the game for SSI under the Advanced Dungeons & Dragons licence, and it was released for MS-DOS and the Amiga in 1991. Computer Gaming World scored the DOS version 96%. Westwood made the sequel, The Legend of Darkmoon, the same year, while SSI developed the third game itself in 1993.",
+    "sources": [
+      {
+        "title": "Eye of the Beholder (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Eye_of_the_Beholder_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "the-bards-tale",
+    "title": "The Bard's Tale",
+    "year": 1985,
+    "decade": "1980s",
+    "developer": "Interplay Productions",
+    "publisher": "Electronic Arts",
+    "genre": "RPG",
+    "platform": "Apple II / Multiple",
+    "image": "images/games/the-bards-tale.png",
+    "description": "The Bard's Tale (1985) is Interplay's dungeon-crawling RPG set in Skara Brae, frozen under Mangar the Dark's Eternal Winter, and reportedly the best-selling computer RPG of the 1980s.",
+    "longDescription": "The town of Skara Brae lies under Mangar the Dark's spell of Eternal Winter, overrun by monsters. The player builds a party of up to six characters from several classes and explores in first person, while fights are turn-based and described in text. Bards play songs that act as long-lasting spells, and most versions have the player cast spells by typing four-letter codes from the manual. Some versions let players import characters from Wizardry and Ultima III.",
+    "trivia": [
+      "It was originally going to be called Shadow Snare.",
+      "Zzap!64 gave the Commodore 64 version 94% and a Sizzler award."
+    ],
+    "devStory": "Michael Cranford designed the game at Interplay, and Electronic Arts released it for the Apple II and Commodore 64 in December 1985. It sold a reported 407,000 copies, and sequels followed in 1986 and 1988.",
+    "sources": [
+      {
+        "title": "The Bard's Tale (1985 video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_Bard%27s_Tale_(1985_video_game)"
+      }
+    ]
+  },
+  {
+    "id": "wasteland-1988",
+    "title": "Wasteland",
+    "year": 1988,
+    "decade": "1980s",
+    "developer": "Interplay Productions",
+    "publisher": "Electronic Arts",
+    "genre": "RPG",
+    "platform": "Apple II / DOS",
+    "image": "images/games/wasteland-1988.png",
+    "description": "Wasteland (1988) is Interplay's post-nuclear role-playing game, in which a squad of Desert Rangers explores the ruined American Southwest. Fallout (1997) is widely seen as its spiritual successor.",
+    "longDescription": "In 2087, survivors of a 1998 nuclear war live in the south-western United States, and a team of Desert Rangers investigates an artificial intelligence at Base Cochise that is building killer machines. The rules come from tabletop role-playing games: characters have seven attributes, and the party can grow from four members to seven. The world is persistent and the game is known for its harshness. Story text is printed in a separate paragraph book, which also served as copy protection.",
+    "trivia": [
+      "Computer Gaming World named it Adventure Game of the Year for 1988.",
+      "inXile acquired the rights in 2003 and made Wasteland 2 (2014) and Wasteland 3 (2020)."
+    ],
+    "devStory": "Brian Fargo directed and Alan Pavlish led programming, while Ken St. Andre and Michael A. Stackpole wrote and designed it with Liz Danforth. EA released it for the Apple II in March 1988, and it sold about 250,000 copies.",
+    "sources": [
+      {
+        "title": "Wasteland (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Wasteland_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "raid-on-bungeling-bay",
+    "title": "Raid on Bungeling Bay",
+    "year": 1984,
+    "decade": "1980s",
+    "developer": "Will Wright",
+    "publisher": "Broderbund",
+    "genre": "Shooter",
+    "platform": "Commodore 64 / Multiple",
+    "image": "images/games/raid-on-bungeling-bay.png",
+    "description": "Raid on Bungeling Bay (1984) is Will Wright's helicopter shooter whose map editor became the start of SimCity.",
+    "longDescription": "A helicopter launched from an aircraft carrier must bomb six factories spread across a group of islands, fighting off gun turrets, fighter jets, guided missiles and a battleship, and reloading at a hidden island. The factories grow stronger as time passes, so the player has to strike quickly.",
+    "trivia": [
+      "Wright built a map editor for the game as a personal project, and it grew into City Planner and then SimCity (1989).",
+      "The Commodore 64 version sold 20,000 to 30,000 copies in America, while Hudson's Famicom version sold about a million in Japan."
+    ],
+    "devStory": "Will Wright designed the game and programmed the Commodore 64 version, which Broderbund released in December 1984. Hudson Soft made the Famicom version (1985), Nintendo released an arcade version in Japan, and Broderbund published the NES version in North America in 1987.",
+    "sources": [
+      {
+        "title": "Raid on Bungeling Bay",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Raid_on_Bungeling_Bay"
+      }
+    ]
+  },
+  {
+    "id": "mappy",
+    "title": "Mappy",
+    "year": 1983,
+    "decade": "1980s",
+    "developer": "Namco",
+    "publisher": "Namco",
+    "genre": "Platform",
+    "platform": "Arcade",
+    "image": "images/games/mappy.png",
+    "description": "Mappy (1983) is Namco's arcade game in which a police mouse bounces on trampolines through a mansion of cats to recover stolen goods.",
+    "longDescription": "Mappy, a police mouse, must recover ten stolen items, in five pairs, from a mansion where a gang of cats led by Goro is hiding out. He moves between floors on trampolines, which break after four bounces in a row, and can open doors to release microwaves that sweep them away. Collecting matching pairs in a row multiplies the points, up to six times, and a bonus balloon round appears from time to time.",
+    "trivia": [
+      "Its name probably comes from mappo, mildly derogatory Japanese slang for a policeman.",
+      "Its board was a revision of the Super Pac-Man hardware with added horizontal scrolling."
+    ],
+    "devStory": "Namco released Mappy in Japan in March 1983, and Bally Midway distributed it in North America the following month. Hiroshi Ono drew the graphics and Nobuyuki Ohnogi composed the music. Sequels included Hopping Mappy (1986) and Mappy-Land on the Famicom.",
+    "sources": [
+      {
+        "title": "Mappy",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mappy"
+      }
+    ]
+  },
+  {
+    "id": "river-city-ransom",
+    "title": "River City Ransom",
+    "year": 1989,
+    "decade": "1980s",
+    "developer": "Technos Japan",
+    "publisher": "Technos Japan",
+    "genre": "Beat 'em up / RPG",
+    "platform": "NES",
+    "image": "images/games/river-city-ransom.png",
+    "description": "River City Ransom (1989) is Technos Japan's open-world beat 'em up, in which Alex and Ryan fight through River City's gangs, buying fighting techniques in shops along the way.",
+    "longDescription": "Alex and Ryan cross River City to rescue Ryan's girlfriend Cyndi from a villain called Slick. The city is non-linear, and the fighting resembles Double Dragon, with weapons such as steel pipes to pick up. Nine gangs, from \"The Generic Dudes\" onwards, each have a boss. Fighting techniques such as Grand Slam, Stone Hands and Dragon Feet are bought as books in shops, and progress is saved with a password.",
+    "trivia": [
+      "In Japan it is Downtown Nekketsu Monogatari, the third Kunio-kun game on the NES.",
+      "A Kickstarter-funded follow-up, River City Ransom: Underground, was released in 2017."
+    ],
+    "devStory": "Directed by Mitsuhiro Yoshida and Hiroyuki Sekimoto, with music by Kazuo Sawa, it was released in Japan on 25 April 1989 and in North America in January 1990. It was the first Kunio-kun game made specifically for the NES, and a remake, River City Ransom EX, came to the Game Boy Advance in 2004.",
+    "sources": [
+      {
+        "title": "River City Ransom",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/River_City_Ransom"
+      }
+    ]
+  },
+  {
+    "id": "kaboom-2600",
+    "title": "Kaboom!",
+    "year": 1981,
+    "decade": "1980s",
+    "developer": "Activision",
+    "publisher": "Activision",
+    "genre": "Action",
+    "platform": "Atari 2600",
+    "image": "images/games/kaboom-2600.png",
+    "description": "Kaboom! (1981) is Larry Kaplan's Activision paddle game, in which the player catches the Mad Bomber's bombs in water buckets. It sold more than a million cartridges.",
+    "longDescription": "The Mad Bomber drops bombs, and the player uses the paddle controller to catch them in a stack of three water buckets. Bombs fall faster as more are caught. Missing one sets off every bomb on screen and costs a bucket, and reaching 1,000 points restores a lost bucket.",
+    "trivia": [
+      "Kaplan based it on Atari's 1978 arcade game Avalanche: \"I just ripped off Avalanche.\"",
+      "David Crane drew the Mad Bomber and the buckets, and the bomber's striped shirt came from an unreleased Crane project.",
+      "Critics praised the Mad Bomber's changing expressions."
+    ],
+    "devStory": "Larry Kaplan designed the game, and Activision released it for the Atari 2600 in July 1981. Kaplan left Activision shortly after finishing it. Paul Wilson converted it to the Atari 5200 and Atari 8-bit computers in 1983.",
+    "sources": [
+      {
+        "title": "Kaboom! (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Kaboom!_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "little-big-adventure",
+    "title": "Little Big Adventure",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "Adeline Software International",
+    "publisher": "Electronic Arts",
+    "genre": "Action-Adventure",
+    "platform": "PC/DOS",
+    "image": "images/games/little-big-adventure.png",
+    "description": "Little Big Adventure (1994) is Frédérick Raynal's isometric action-adventure, in which Twinsen stands up to the tyrant Dr FunFrock on the planet Twinsun, switching between four behaviour modes.",
+    "longDescription": "Twinsen, a young Quetch, sets out to stop the tyrant Dr FunFrock, who rules the planet Twinsun, guided by visions from the goddess Sendell and trying to rescue his girlfriend Zoe. 3D characters move through pre-rendered isometric environments. Twinsen switches between four behaviour modes, Normal, Athletic, Aggressive and Discreet, and he fights mainly with the Magic Ball.",
+    "trivia": [
+      "In North America Activision released it as Relentless: Twinsen's Adventure, and it sold only 30,000 copies there.",
+      "Its source code was released under the GPL in October 2021."
+    ],
+    "devStory": "Frédérick Raynal, who had directed Alone in the Dark at Infogrames, led the game at Adeline Software International. Electronic Arts published it in Europe in 1994, and it had sold more than 500,000 copies by 1999. Little Big Adventure 2 followed in 1997.",
+    "sources": [
+      {
+        "title": "Little Big Adventure",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Little_Big_Adventure"
+      }
+    ]
+  },
+  {
+    "id": "ultima-underworld",
+    "title": "Ultima Underworld: The Stygian Abyss",
+    "year": 1992,
+    "decade": "1990s",
+    "developer": "Blue Sky Productions",
+    "publisher": "Origin Systems",
+    "genre": "Action RPG",
+    "platform": "PC/DOS",
+    "image": "images/games/ultima-underworld.png",
+    "description": "Ultima Underworld (1992) is the first-person role-playing game from the studio that became Looking Glass, set in a texture-mapped 3D dungeon. It is considered the first immersive sim.",
+    "longDescription": "The Avatar is sent into the Great Stygian Abyss, a dungeon beneath Britannia that holds the remains of a failed utopian colony, to rescue Baron Almric's daughter Arial from her kidnapper, Tyball. The dungeon is a real-time 3D space with texture-mapped walls, floors and ceilings, sloped surfaces and varied heights, and the player can look up and down, jump and swim. Combat is in real time, an automap records the explored levels, and over forty spells are cast by combining runestones.",
+    "trivia": [
+      "Its engine became the basis for System Shock.",
+      "It is cited as an influence on Deus Ex, Half-Life, BioShock, The Elder Scrolls: Arena and Tomb Raider.",
+      "It won the 1992 Origins Award for Best Fantasy or Science Fiction Computer Game."
+    ],
+    "devStory": "Paul Neurath conceived the game in 1989, and Blue Sky Productions began work in May 1990 with Doug Church as programmer and later project leader and Chris Green writing the texture-mapping code. The budget grew from a $30,000 advance to $400,000. Origin Systems released it on 21 March 1992, and it sold nearly 500,000 copies.",
+    "sources": [
+      {
+        "title": "Ultima Underworld: The Stygian Abyss",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ultima_Underworld:_The_Stygian_Abyss"
+      }
+    ]
+  },
+  {
+    "id": "star-wars-x-wing",
+    "title": "Star Wars: X-Wing",
+    "year": 1993,
+    "decade": "1990s",
+    "developer": "Totally Games",
+    "publisher": "LucasArts",
+    "genre": "Space Combat",
+    "platform": "PC/DOS",
+    "image": "images/games/star-wars-x-wing.png",
+    "description": "Star Wars: X-Wing (1993) is Totally Games' space combat simulator, in which the player flies Rebel starfighters from the cockpit in polygonal 3D. Its launch shipment of 100,000 copies sold out in a weekend.",
+    "longDescription": "The player flies the Rebel Alliance's A-wing, X-wing and Y-wing in three tours of duty of 12 to 14 operations each, set before and during A New Hope. Missions range from dogfights and escorts to convoy attacks and strikes on capital ships. Energy is divided between lasers, shields and engines, so charging weapons or shields slows the ship down. The ships were drawn as 3D polygons rather than bitmap sprites, among the first games to do so.",
+    "trivia": [
+      "It was the first game other than an adventure to use LucasArts' iMUSE music system.",
+      "A sixth tour, set at Echo Base, was planned but never made.",
+      "Computer Gaming World named it Simulation of the Year for 1993."
+    ],
+    "devStory": "Lawrence Holland, who had made World War II flight simulations, designed it with Edward Kilham at Totally Games, and Peter McConnell's score used John Williams' Star Wars themes. It shipped in early 1993, and retailers had ordered nearly 500,000 copies by December. Two expansions, Imperial Pursuit and B-Wing, followed the same year.",
+    "sources": [
+      {
+        "title": "Star Wars: X-Wing (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Star_Wars:_X-Wing_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "star-wars-tie-fighter",
+    "title": "Star Wars: TIE Fighter",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "Totally Games",
+    "publisher": "LucasArts",
+    "genre": "Space Combat",
+    "platform": "PC/DOS",
+    "image": "images/games/star-wars-tie-fighter.png",
+    "description": "Star Wars: TIE Fighter (1994) is Totally Games' follow-up to X-Wing that puts the player in an Imperial cockpit. PC Gamer ranked it the best game of all time in 1997.",
+    "longDescription": "The player is an Imperial starfighter pilot in the period between The Empire Strikes Back and Return of the Jedi, and the original campaign ends with the pilot stopping a coup against Emperor Palpatine. A mysterious figure from the Emperor's Inner Circle hands out secret objectives that earn extra medals and promotions. The engine added Gouraud shading, a 3D target view, an in-flight message log and the ability to target parts of capital ships, such as shield generators and weapons.",
+    "trivia": [
+      "Pirated copies leaked in early July 1994, before its release on 20 July.",
+      "The novella and strategy guide name the pilot Maarek Stele.",
+      "The TIE Defender and TIE Avenger it introduced later became part of Star Wars canon."
+    ],
+    "devStory": "Lawrence Holland and Edward Kilham designed it at Totally Games, and LucasArts released it for MS-DOS on 20 July 1994. The expansion Defender of the Empire followed, and the 1995 Collector's CD-ROM added SVGA graphics, voiceovers and a second expansion, Enemies of the Empire.",
+    "sources": [
+      {
+        "title": "Star Wars: TIE Fighter",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Star_Wars:_TIE_Fighter"
+      }
+    ]
+  },
+  {
+    "id": "star-wars-dark-forces",
+    "title": "Star Wars: Dark Forces",
+    "year": 1995,
+    "decade": "1990s",
+    "developer": "LucasArts",
+    "publisher": "LucasArts",
+    "genre": "First-Person Shooter",
+    "platform": "PC/DOS",
+    "image": "images/games/star-wars-dark-forces.png",
+    "description": "Star Wars: Dark Forces (1995) is LucasArts' first-person shooter starring mercenary Kyle Katarn. Its Jedi engine added looking up and down, jumping and multi-floor levels.",
+    "longDescription": "Kyle Katarn, a mercenary working for the Rebel Alliance, first recovers the Death Star plans and then uncovers the Empire's Dark Trooper Project, led by General Rom Mohc. The campaign ends with Katarn destroying Mohc's flagship, the Arc Hammer. The Jedi engine, built from scratch for the game, let the player look up and down, duck, jump and swim through levels with several floors.",
+    "trivia": [
+      "Luke Skywalker was first planned as the hero; Kyle Katarn was created to give the team more freedom.",
+      "The Dark Troopers later appeared in The Mandalorian.",
+      "It shipped more than 300,000 copies before launch and debuted at number one on PC Data's chart."
+    ],
+    "devStory": "Daron Stinnett directed the game, Ray Gresko led programming, Justin Chin wrote the story and worked on the art, and Clint Bajakian composed the music. Production began in September 1993, and it was released for MS-DOS on 8 March 1995. Jedi Knight: Dark Forces II followed in 1997.",
+    "sources": [
+      {
+        "title": "Star Wars: Dark Forces",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Star_Wars:_Dark_Forces"
+      }
+    ]
+  },
+  {
+    "id": "dungeon-keeper",
+    "title": "Dungeon Keeper",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Bullfrog Productions",
+    "publisher": "Electronic Arts",
+    "genre": "Strategy",
+    "platform": "PC",
+    "image": "images/games/dungeon-keeper.png",
+    "description": "Dungeon Keeper (1997) is Bullfrog's dungeon-management game, in which the player plays the villain, building a lair, recruiting monsters and fending off invading heroes. It was Peter Molyneux's last project at Bullfrog.",
+    "longDescription": "The player builds and runs an underground dungeon, recruiting creatures and defending the lair against invading heroes, the last of whom is the Avatar. Imps dig the tunnels and mine the gold, and the player's Hand picks up, slaps and drops creatures, or possesses one. Up to four players can compete by modem or LAN.",
+    "trivia": [
+      "Computer Gaming World called it \"the most unique game in years\".",
+      "The fan project KeeperFX, begun in 2010, fixes bugs and adds features."
+    ],
+    "devStory": "Work began in November 1994 and took about two and a half years, with Peter Molyneux as designer and producer. Molyneux left Bullfrog in July 1997 to found Lionhead Studios, and the game was released at the end of June. It sold 700,000 copies worldwide by 2003, and Dungeon Keeper 2 followed in 1999.",
+    "sources": [
+      {
+        "title": "Dungeon Keeper",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dungeon_Keeper"
+      }
+    ]
+  },
+  {
+    "id": "theme-hospital",
+    "title": "Theme Hospital",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Bullfrog Productions",
+    "publisher": "Electronic Arts",
+    "genre": "Simulation",
+    "platform": "PC",
+    "image": "images/games/theme-hospital.png",
+    "description": "Theme Hospital (1997) is Bullfrog's comic hospital-management game, in which the player treats patients with diseases such as Bloaty Head and King Complex. It sold more than 4 million copies.",
+    "longDescription": "The player builds a hospital, hires doctors, nurses, handymen and receptionists, and researches new rooms and cures for a stream of patients suffering from invented diseases such as Bloaty Head, King Complex and Alien DNA. Critics praised the graphics and the humour, and a later patch added multiplayer for up to four players.",
+    "trivia": [
+      "The original cover art was recalled because it used a green cross the developers had no right to use.",
+      "A Sega Saturn version, Sim Hospital, was cancelled.",
+      "Producer Mark Webley and artist Gary Carr later founded Two Point Studios, whose Two Point Hospital came out in 2018."
+    ],
+    "devStory": "Mark Webley produced and designed the game, with art by Gary Carr and music by Russell Shaw and Adrian Moore. EA released it for MS-DOS and Windows on 28 March 1997, and Krisalis converted it to the PlayStation in 1998. CorsixTH is an open-source remake.",
+    "sources": [
+      {
+        "title": "Theme Hospital",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Theme_Hospital"
+      }
+    ]
+  },
+  {
+    "id": "duke-nukem-3d",
+    "title": "Duke Nukem 3D",
+    "year": 1996,
+    "decade": "1990s",
+    "developer": "3D Realms",
+    "publisher": "FormGen",
+    "genre": "First-Person Shooter",
+    "platform": "PC/DOS",
+    "image": "images/games/duke-nukem-3d.png",
+    "description": "Duke Nukem 3D (1996) is 3D Realms' first-person shooter set in an alien-invaded Los Angeles, known for its interactive levels, unusual weapons and Duke's one-liners. Its Build engine was written by Ken Silverman.",
+    "longDescription": "Aliens have invaded an early 21st-century Earth, mostly Los Angeles, and turned the LAPD into \"Pig Cops\". The play resembles Doom, but much of the environment can be destroyed or used, and the non-linear levels hide air ducts and back routes. The arsenal includes a shrink ray and a freezethrower, and Duke can fly with a jet pack. Jon St. John voiced Duke's one-liners and pop-culture references.",
+    "trivia": [
+      "Next Generation wrote that \"Duke Nukem 3D has everything Doom doesn't.\"",
+      "Its sexual content and portrayal of women drew criticism, and it was restricted in Germany and banned in Brazil in 1999.",
+      "The source code was released under the GPL on 1 April 2003."
+    ],
+    "devStory": "3D Realms built the game on Ken Silverman's Build engine, with Greg Malone producing, Allen H. Blum III and Richard Gray designing, and Lee Jackson and Robert Prince composing. The shareware episode came out on 29 January 1996 and the full game on 19 April. It sold about 3.5 million copies.",
+    "sources": [
+      {
+        "title": "Duke Nukem 3D",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D"
+      }
+    ]
+  },
+  {
+    "id": "suikoden",
+    "title": "Suikoden",
+    "year": 1995,
+    "decade": "1990s",
+    "developer": "Konami",
+    "publisher": "Konami",
+    "genre": "RPG",
+    "platform": "PlayStation",
+    "image": "images/games/suikoden.png",
+    "description": "Suikoden (1995) is Konami's PlayStation RPG, loosely based on the novel Water Margin, in which a general's son gathers the 108 Stars of Destiny to rebel against the Scarlet Moon Empire.",
+    "longDescription": "The hero, son of a general of the Scarlet Moon Empire, joins a revolt against the corrupt state and sets out to gather the 108 Stars of Destiny. Up to 107 characters can be recruited, and more than 90 of them can fight. An abandoned castle becomes the Liberation Army's headquarters, and the player names it. Ordinary battles are turn-based with six-character parties, while one-on-one duels and large army battles use rock-paper-scissors systems.",
+    "trivia": [
+      "Warren Spector cited it as an influence on Deus Ex.",
+      "GameFan named it RPG of the Year in its 1996 Megawards."
+    ],
+    "devStory": "Yoshitaka Murayama directed the game and wrote the scenario, with Junko Kawano as designer and artist. Konami Computer Entertainment Tokyo developed it over roughly two years, and it was released in Japan on 15 December 1995 and North America a year later. Suikoden II followed in 1998.",
+    "sources": [
+      {
+        "title": "Suikoden (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Suikoden_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "chrono-cross",
+    "title": "Chrono Cross",
+    "year": 1999,
+    "decade": "1990s",
+    "developer": "Square",
+    "publisher": "Square",
+    "genre": "RPG",
+    "platform": "PlayStation",
+    "image": "images/games/chrono-cross.png",
+    "description": "Chrono Cross (1999) is Square's PlayStation RPG set in the world of Chrono Trigger, in which Serge moves between two parallel worlds — one where he drowned ten years before.",
+    "longDescription": "Serge, a teenager in the El Nido archipelago, slips into a parallel dimension in which he drowned ten years earlier. With the thief Kid at his side and the shadowy Lynx against him, he looks for the cause of the split between the two worlds, a story centred on the Frozen Flame. There are no random encounters, and the player can flee from any fight. Battles use a stamina bar and an Element system of six opposing colours, 45 characters can be recruited, and New Game+ opens up twelve endings.",
+    "trivia": [
+      "It is an indirect sequel to Chrono Trigger and draws on Radical Dreamers, a text adventure for the Satellaview.",
+      "Yasunori Mitsuda's \"Scars of Time\" topped Hardcore Gaming 101's 2009 poll of the best video game music.",
+      "It was never released in Europe."
+    ],
+    "devStory": "Masato Kato directed and wrote the game, with Hiromichi Tanaka producing and Yasunori Mitsuda composing. It was released in Japan on 18 November 1999 and North America in August 2000, and it had sold about 1.5 million copies by 2003. The Radical Dreamers Edition remaster followed in 2022.",
+    "sources": [
+      {
+        "title": "Chrono Cross",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Chrono_Cross"
+      }
+    ]
+  },
+  {
+    "id": "tactics-ogre",
+    "title": "Tactics Ogre: Let Us Cling Together",
+    "year": 1995,
+    "decade": "1990s",
+    "developer": "Quest",
+    "publisher": "Quest",
+    "genre": "Strategy RPG",
+    "platform": "SNES",
+    "image": "images/games/tactics-ogre.png",
+    "description": "Tactics Ogre (1995) is Yasumi Matsuno's Super Famicom tactical RPG, a dark political fantasy of ethnic conflict and civil war in the kingdom of Valeria, with branching paths and up to eight endings.",
+    "longDescription": "Denim Powell is drawn into the ethnic conflicts of a civil war in the kingdom of Valeria, in what Matsuno called a \"complex dark fantasy political tale\". Battles are turn-based on a grid seen from a diagonal overhead view. The story splits into Law, Neutral and Chaos branches, and up to eight endings can be reached.",
+    "trivia": [
+      "Denim's endings as king depend on a hidden algorithm, a version of Ogre Battle's Chaos Frame, which fans found by data mining in 2014.",
+      "Matsuno left Quest after finishing it and went on to make Final Fantasy Tactics (1997)."
+    ],
+    "devStory": "Yasumi Matsuno directed, wrote and designed the game, with character designs by Akihiko Yoshida and music by Hitoshi Sakimoto and Masaharu Iwata. A team of 15 to 16 people worked on it for two and a half years, and Quest released it in Japan on 6 October 1995. It sold more than 500,000 copies on the Super Famicom, and the PlayStation version reached North America in 1998.",
+    "sources": [
+      {
+        "title": "Tactics Ogre: Let Us Cling Together",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tactics_Ogre:_Let_Us_Cling_Together"
+      }
+    ]
+  },
+  {
+    "id": "darkstalkers",
+    "title": "Darkstalkers: The Night Warriors",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "Capcom",
+    "publisher": "Capcom",
+    "genre": "Fighting",
+    "platform": "Arcade",
+    "image": "images/games/darkstalkers.png",
+    "description": "Darkstalkers (1994) is Capcom's CPS II fighting game with a cast of classic monsters, which added air blocking and chain combos to the Street Fighter II system.",
+    "longDescription": "Ten playable monsters, among them Demitri Maximoff, Morrigan Aensland, Felicia, Anakaris and Sasquatch, fight their way to the bosses Huitzil and Pyron. The game is built on the Street Fighter II system but adds air blocking, crouch walking and chain combos. Its Special meter drains over time unless the player spends it on a super move, and EX and ES moves are powered-up versions of special moves.",
+    "trivia": [
+      "In Japan it is Vampire: The Night Warriors.",
+      "VideoGames named it the Best Arcade Game of 1994.",
+      "A 32X version was planned but never released."
+    ],
+    "devStory": "Yoshiki Okamoto produced it, with Junichi Ohno designing and Akira Yasuda drawing. Capcom released it in Japanese arcades on 12 July 1994, and it sold about 24,000 arcade units. Psygnosis converted it to the PlayStation in 1996, and Night Warriors: Darkstalkers' Revenge followed in 1995.",
+    "sources": [
+      {
+        "title": "Darkstalkers: The Night Warriors",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Darkstalkers:_The_Night_Warriors"
+      }
+    ]
+  },
+  {
+    "id": "herzog-zwei",
+    "title": "Herzog Zwei",
+    "year": 1989,
+    "decade": "1980s",
+    "developer": "Technosoft",
+    "publisher": "Sega",
+    "genre": "Strategy",
+    "platform": "Genesis",
+    "image": "images/games/herzog-zwei.png",
+    "description": "Herzog Zwei (1989) is Technosoft's Mega Drive strategy game, in which the player pilots a transforming mech that buys and airlifts units into battle. The makers of Dune II and Warcraft cite it as an influence.",
+    "longDescription": "Each player pilots a transforming mech that buys ground units, airlifts them onto the battlefield and gives them orders such as patrolling or capturing a base. Nine permanent outposts are the only places that produce units. The game can be played against the computer or by two players.",
+    "trivia": [
+      "Sega-16 called it \"very probably the finest video game you've never played\".",
+      "Game Informer gave it 9.75 out of 10 in 1999, its highest score for a Genesis game.",
+      "It is also considered a precursor of the MOBA genre."
+    ],
+    "devStory": "Technosoft made it as the sequel to Herzog for the MSX and PC-8801, and Sega released it in Japan on 15 December 1989 and North America in March 1990. It sold poorly, partly because of weak marketing and its release early in the console's life.",
+    "sources": [
+      {
+        "title": "Herzog Zwei",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Herzog_Zwei"
+      }
+    ]
+  },
+  {
+    "id": "desert-strike",
+    "title": "Desert Strike: Return to the Gulf",
+    "year": 1992,
+    "decade": "1990s",
+    "developer": "Electronic Arts",
+    "publisher": "Electronic Arts",
+    "genre": "Shooter",
+    "platform": "Genesis",
+    "image": "images/games/desert-strike.png",
+    "description": "Desert Strike (1992) is Mike Posehn's isometric helicopter shooter for the Mega Drive, in which a lone Apache flies four missions against an invading general. It was EA's best-selling game at the time.",
+    "longDescription": "General Kilbaba invades a Persian Gulf emirate, and a single modified AH-64 Apache is sent to stop him across four missions. The isometric, scrolling levels ask the player to destroy weapons and installations, rescue hostages and capture personnel, while managing armour, fuel and ammunition. Its weapons trade quantity for power.",
+    "trivia": [
+      "It began as Beirut Breakout, set in the Lebanese Civil War.",
+      "Critics called its Gulf War subject matter in poor taste.",
+      "Its sequels were Jungle Strike, Urban Strike, Soviet Strike and Nuclear Strike."
+    ],
+    "devStory": "Mike Posehn led design and programming, with John Manley helping write it and Brian Schmidt and Rob Hubbard composing. Posehn built a momentum-based camera, and the vehicle sprites began as 3D models. EA released it in March 1992 and later converted it to the SNES, Amiga, Atari Lynx, MS-DOS and other systems.",
+    "sources": [
+      {
+        "title": "Desert Strike: Return to the Gulf",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Desert_Strike:_Return_to_the_Gulf"
+      }
+    ]
+  },
+  {
+    "id": "rayman-1995",
+    "title": "Rayman",
+    "year": 1995,
+    "decade": "1990s",
+    "developer": "Ubi Pictures",
+    "publisher": "Ubi Soft",
+    "genre": "Platform",
+    "platform": "PlayStation",
+    "image": "images/games/rayman-1995.png",
+    "description": "Rayman (1995) is Michel Ancel's platform game, in which a limbless hero throws his fist to free the Electoons from Mr Dark. It became the best-selling PlayStation game of all time in the UK.",
+    "longDescription": "Mr Dark steals the Great Protoon and defeats its guardian, Betilla the Fairy, and captures the Electoons. Rayman, whose hands float free of his body, crosses six worlds to free them, punching enemies with a \"telescopic fist\". Every level hides six Electoon cages, each world ends with a boss, and 100 Tings earn an extra life. Critics praised its animation, atmosphere and music, but often noted how hard it was, and GameSpot faulted its scarce save points.",
+    "trivia": [
+      "Development moved from the Atari ST to a Super NES CD-ROM version, then to the Atari Jaguar; the cancelled Super NES version was rediscovered in 2016.",
+      "It was a PlayStation launch title in North America and Europe."
+    ],
+    "devStory": "Michel Ancel created the character as a teenager and led the design. Ubi Soft released the game for the PlayStation in North America on 7 September 1995, followed by Jaguar, Saturn and MS-DOS versions. It had sold 900,000 copies by 1997 and reportedly more than 3 million in all.",
+    "sources": [
+      {
+        "title": "Rayman (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Rayman_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "oddworld-abes-oddysee",
+    "title": "Oddworld: Abe's Oddysee",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Oddworld Inhabitants",
+    "publisher": "GT Interactive",
+    "genre": "Platform / Puzzle",
+    "platform": "PlayStation",
+    "image": "images/games/oddworld-abes-oddysee.png",
+    "description": "Oddworld: Abe's Oddysee (1997) is a cinematic platformer in which Abe, a slave at a meat-packing plant, escapes and frees his fellow Mudokons using speech and possession instead of guns.",
+    "longDescription": "Abe, a Mudokon slave at RuptureFarms, discovers that his species is about to become the factory's next meat product. He escapes and gains the power of the Shrykull to free his people, and rescuing at least 50 of the 99 Mudokons earns the good ending. Abe carries no firearms: he tiptoes, runs and crouches, throws meat, rocks and grenades, possesses Sligs to take control of them, and directs other Mudokons with GameSpeak commands. The game saves only at checkpoints.",
+    "trivia": [
+      "In Japan it was retitled Abe a GoGo, and the Mudokons' hands were changed from four fingers to three.",
+      "A Sega Saturn version was announced but never released.",
+      "Just Add Water remade it in 2014 as Oddworld: New 'n' Tasty!"
+    ],
+    "devStory": "Lorne Lanning directed the game at Oddworld Inhabitants, which he co-founded with Sherry McKenna, who shaped the story and GameSpeak. GT Interactive released it for the PlayStation on 18 September 1997. It had sold 3.5 million copies by 2012.",
+    "sources": [
+      {
+        "title": "Oddworld: Abe's Oddysee",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Oddworld:_Abe%27s_Oddysee"
+      }
+    ]
+  },
+  {
+    "id": "tenchu-stealth-assassins",
+    "title": "Tenchu: Stealth Assassins",
+    "year": 1998,
+    "decade": "1990s",
+    "developer": "Acquire",
+    "publisher": "Sony Music Entertainment Japan / Activision",
+    "genre": "Stealth / Action",
+    "platform": "PlayStation",
+    "image": "images/games/tenchu-stealth-assassins.png",
+    "description": "Tenchu: Stealth Assassins (1998) is Acquire's ninja game set in Sengoku-era Japan, which helped define the stealth genre alongside Metal Gear Solid and Thief.",
+    "longDescription": "The ninja Rikimaru and the kunoichi Ayame serve Lord Gohda, and the player picks one of them for eleven open-ended missions. The aim is to stay unseen, slipping past guards or killing them quietly, with the Ki meter showing how alert nearby enemies are and how close they stand. The grappling hook is the only item kept between missions, and each mission is ranked from \"Thug\" to \"Grand Master\".",
+    "trivia": [
+      "The Western release added two levels and alternate mission layouts, and was later released in Japan as Tenchu: Shinobi Gaisen.",
+      "It was Acquire's first project."
+    ],
+    "devStory": "Takuma Endo directed it and wrote the scenario. Sony Music Entertainment Japan released it on 26 February 1998, and Activision published it in North America in September. It sold more than 1.4 million copies worldwide by 2003, and Tenchu 2 followed in 2000.",
+    "sources": [
+      {
+        "title": "Tenchu: Stealth Assassins",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tenchu:_Stealth_Assassins"
+      }
+    ]
+  },
+  {
+    "id": "syphon-filter",
+    "title": "Syphon Filter",
+    "year": 1999,
+    "decade": "1990s",
+    "developer": "Eidetic",
+    "publisher": "989 Studios",
+    "genre": "Action",
+    "platform": "PlayStation",
+    "image": "images/games/syphon-filter.png",
+    "description": "Syphon Filter (1999) is Eidetic's third-person stealth-action shooter, in which agents Gabe Logan and Lian Xing hunt a terrorist and his bioweapon.",
+    "longDescription": "Agents Gabriel Logan and Lian Xing pursue the terrorist Erich Rhoemer and his group, Black Baton, who hold a bioweapon called Syphon Filter, and discover that their own agency director, Thomas Markinson, is Rhoemer's partner. The game mixes third-person shooting with stealth missions and some puzzles. Its display includes a radar, armour status and a \"danger meter\", and IGN counted at least thirty weapons and pieces of equipment.",
+    "trivia": [
+      "It scored 90 on Metacritic and sold more than 900,000 copies.",
+      "It was followed by Syphon Filter 2 (2000), Syphon Filter 3 (2001) and three more games on the PS2 and PSP."
+    ],
+    "devStory": "Richard Ham designed it at Eidetic, with John Garvin on art and writing and Chuck Doud composing. 989 Studios released it in North America on 16 February 1999.",
+    "sources": [
+      {
+        "title": "Syphon Filter (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Syphon_Filter_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "dino-crisis",
+    "title": "Dino Crisis",
+    "year": 1999,
+    "decade": "1990s",
+    "developer": "Capcom",
+    "publisher": "Capcom",
+    "genre": "Survival Horror",
+    "platform": "PlayStation",
+    "image": "images/games/dino-crisis.png",
+    "description": "Dino Crisis (1999) is Shinji Mikami's \"panic horror\" game, in which agent Regina fights dinosaurs on Ibis Island in real-time 3D environments rather than Resident Evil's pre-rendered backgrounds.",
+    "longDescription": "Agent Regina and her team investigate Ibis Island, where Dr. Edward Kirk's secret project has pulled dinosaurs into the present through a rift in spacetime. Unlike Resident Evil, the game draws its environments in real-time 3D. Capcom marketed it as \"panic horror\", with faster, more intelligent dinosaurs as enemies. Locked doors open with D.D.K. codes, colour-coded emergency boxes hold supplies, Hemostats and Med Paks treat wounds, and \"DANGER\" moments call for quick button presses.",
+    "trivia": [
+      "Critics often called it \"Resident Evil with dinosaurs\".",
+      "It sold more than 300,000 copies in its first week in Japan."
+    ],
+    "devStory": "Shinji Mikami directed and produced it at Capcom Production Studio 4. It was released in Japan on 1 July 1999 and North America in September, and the PlayStation version sold about 2.4 million copies. Dino Crisis 2 followed in 2000.",
+    "sources": [
+      {
+        "title": "Dino Crisis (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dino_Crisis_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "jumping-flash",
+    "title": "Jumping Flash!",
+    "year": 1995,
+    "decade": "1990s",
+    "developer": "Exact / Ultra",
+    "publisher": "Sony Computer Entertainment",
+    "genre": "Platform",
+    "platform": "PlayStation",
+    "image": "images/games/jumping-flash.png",
+    "description": "Jumping Flash! (1995) is a first-person PlayStation platformer starring Robbit, a mechanical rabbit that can jump three times in mid-air. Guinness World Records lists it as the first platform game in true 3D.",
+    "longDescription": "The astrophysicist Baron Aloha hides the twelve jet pods that power the worlds of Crater Planet, and Robbit, a mechanical rabbit sent by Universal City Hall, must recover them. Robbit can jump up to three times in mid-air, and on the second and third jumps the camera tilts down so the player can judge the landing. Each world has three levels and a boss, for 18 main levels, and each level has a ten-minute limit.",
+    "trivia": [
+      "It was developed as a technology demonstration for the PlayStation.",
+      "Some critics found it short and easy, but Next Generation ranked it 86th in its 1996 top 100 games."
+    ],
+    "devStory": "Koji Tada directed the game at Exact and Ultra, and Sony released it in Japan on 28 April 1995. Jumping Flash! 2 followed in 1996 and Robbit Mon Dieu in 1999.",
+    "sources": [
+      {
+        "title": "Jumping Flash!",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Jumping_Flash!"
+      }
+    ]
+  },
+  {
+    "id": "klonoa-door-to-phantomile",
+    "title": "Klonoa: Door to Phantomile",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Namco",
+    "publisher": "Namco",
+    "genre": "Platform",
+    "platform": "PlayStation",
+    "image": "images/games/klonoa-door-to-phantomile.png",
+    "description": "Klonoa: Door to Phantomile (1997) is Namco's 2.5D platformer, in which Klonoa grabs enemies with a magic ring and throws them or uses them to jump higher, through the dream world of Phantomile.",
+    "longDescription": "Ghadius sets out to turn the dream world of Phantomile into a world of nightmares and kidnaps the singer Lephise. Klonoa can run, jump and hover briefly, and with a ring inhabited by his companion Huepow he grabs enemies, then throws them or uses them as a springboard for a higher jump. The levels scroll from side to side through 3D scenery. The ending reveals that Huepow is a prince of the moon kingdom Cress, and Lephise's Song of Rebirth sends Klonoa home.",
+    "trivia": [
+      "Klonoa won Best Character at the 1997 Japan Game Awards.",
+      "GameSpot called it \"one of the best side-scrollers in years\"."
+    ],
+    "devStory": "Hideo Yoshizawa directed the game, with Tsuyoshi Kobayashi as lead designer and Yoshihiko Arai designing the characters. Namco released it in Japan on 11 December 1997. Klonoa 2 followed on the PS2 in 2001, and Paon remade the original for the Wii in 2008.",
+    "sources": [
+      {
+        "title": "Klonoa: Door to Phantomile",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Klonoa:_Door_to_Phantomile"
+      }
+    ]
+  },
+  {
+    "id": "harvest-moon-snes",
+    "title": "Harvest Moon",
+    "year": 1996,
+    "decade": "1990s",
+    "developer": "Amccus",
+    "publisher": "Pack-In-Video / Natsume",
+    "genre": "Simulation",
+    "platform": "SNES",
+    "image": "images/games/harvest-moon-snes.png",
+    "description": "Harvest Moon (1996) is Yasuhiro Wada's Super Famicom farming game, in which the player restores a run-down inherited farm. It is considered one of the first farm life sims.",
+    "longDescription": "The player inherits a run-down farm from their grandfather and sets about restoring it. Each day brings chores: clearing land, planting and watering crops, selling the harvest, and caring for livestock, including milking cows. Between the work the player can attend festivals, befriend the villagers and forage. Electronic Gaming Monthly called it \"an epic adventure in agriculture\" that is \"as fun as it is original\".",
+    "trivia": [
+      "The localised versions changed references to alcohol to \"juice\".",
+      "Later games in the series are released under the name Story of Seasons, because of a rights split over localisation."
+    ],
+    "devStory": "Yasuhiro Wada directed and produced the game, developed by Amccus and published by Pack-In-Video in Japan on 9 August 1996. Natsume brought it to North America in 1997, and Nintendo released it in Europe in 1998.",
+    "sources": [
+      {
+        "title": "Harvest Moon (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Harvest_Moon_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "tales-of-phantasia",
+    "title": "Tales of Phantasia",
+    "year": 1995,
+    "decade": "1990s",
+    "developer": "Wolf Team",
+    "publisher": "Namco",
+    "genre": "Action RPG",
+    "platform": "SNES",
+    "image": "images/games/tales-of-phantasia.png",
+    "description": "Tales of Phantasia (1995) is the first game in the Tales series, a Super Famicom RPG with real-time battles and a sung opening theme on a 48-megabit cartridge.",
+    "longDescription": "Cress Albane sets out for revenge after his hometown is destroyed, and the trail leads to the antagonist Dhaos. Cress travels through time to recruit allies from the past. Battles use the real-time Linear Motion Battle System on a 2D plane, with the player controlling Cress directly while the other party members follow passive or active settings.",
+    "trivia": [
+      "It needed a 48-megabit cartridge to hold its voice clips and vocal opening theme.",
+      "The story grew from Yoshiharu Gotanda's unpublished novel Tale Phantasia.",
+      "Trouble during development led many staff to leave Wolf Team and form tri-Ace."
+    ],
+    "devStory": "Eiji Kikuchi directed it at Wolf Team, with Yoshiharu Gotanda writing and programming, Kōsuke Fujishima designing the characters and Motoi Sakuraba and Shinji Tamura among the composers. Namco released it in Japan on 15 December 1995. The 1998 PlayStation version sold around 769,000 copies in Japan, and a Game Boy Advance version reached the West in 2006.",
+    "sources": [
+      {
+        "title": "Tales of Phantasia",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tales_of_Phantasia"
+      }
+    ]
+  },
+  {
+    "id": "revelations-persona",
+    "title": "Revelations: Persona",
+    "year": 1996,
+    "decade": "1990s",
+    "developer": "Atlus",
+    "publisher": "Atlus",
+    "genre": "RPG",
+    "platform": "PlayStation",
+    "image": "images/games/revelations-persona.png",
+    "description": "Revelations: Persona (1996) is Atlus's first Persona game, in which high-school students in the town of Mikage-cho gain the power to summon Personas after playing a fortune-telling game.",
+    "longDescription": "In 1996 a group of high-school students in Mikage-cho play a fortune-telling game and are drawn into supernatural events. Philemon grants them the power of Persona to fight demons and the SEBEC conspiracy. Battles take place on a grid, the party can talk to demons to provoke emotional reactions, and Igor fuses new Personas from spell cards in the Velvet Room. A second route, the Snow Queen quest, follows a separate story about a cursed mask.",
+    "trivia": [
+      "The North American version changed names, hairstyles and ethnicities and cut the Snow Queen route; the 2009 PSP version restored it.",
+      "The Velvet Room was inspired by the Black Lodge in Twin Peaks."
+    ],
+    "devStory": "Kouji Okada directed and produced the game, with Kazuma Kaneko designing the characters, Tadashi Satomi writing and Shoji Meguro composing. Atlus released it in Japan on 20 September 1996 and North America that December, and it sold 391,556 copies in Japan in its first year. Persona 2: Innocent Sin followed in 1999.",
+    "sources": [
+      {
+        "title": "Revelations: Persona",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Revelations:_Persona"
+      }
+    ]
+  },
+  {
+    "id": "puzzle-bobble",
+    "title": "Puzzle Bobble",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "Taito",
+    "publisher": "Taito",
+    "genre": "Puzzle",
+    "platform": "Arcade",
+    "image": "images/games/puzzle-bobble.png",
+    "description": "Puzzle Bobble (1994), known internationally as Bust-a-Move, is Taito's Bubble Bobble spin-off, in which the player fires coloured bubbles to make groups of three before the ceiling comes down.",
+    "longDescription": "The player aims a launcher at the bottom of the screen and fires bubbles at the cluster above. Groups of three or more of the same colour burst, along with any bubbles hanging from them. The ceiling drops at intervals, and the arcade version has 30 levels. It uses the characters and themes of Bubble Bobble.",
+    "trivia": [
+      "Its working title was Bubble Buster.",
+      "The Neo Geo version was Japan's second-highest-grossing arcade software of 1995, behind Virtua Fighter 2.",
+      "It inspired many clones, including Snood, Frozen Bubble and Bubble Shooter."
+    ],
+    "devStory": "Kazuhiro Kinoshita and Seiichi Nakakuki designed it, and Taito released it in Japanese arcades in June 1994, with a Neo Geo MVS version that December. Conversions followed for the Super NES, Neo Geo CD and 3DO in 1995.",
+    "sources": [
+      {
+        "title": "Puzzle Bobble",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Puzzle_Bobble"
+      }
+    ]
+  },
+  {
+    "id": "the-lost-vikings",
+    "title": "The Lost Vikings",
+    "year": 1993,
+    "decade": "1990s",
+    "developer": "Silicon & Synapse",
+    "publisher": "Interplay Productions",
+    "genre": "Platform / Puzzle",
+    "platform": "SNES",
+    "image": "images/games/the-lost-vikings.png",
+    "description": "The Lost Vikings (1993) is the puzzle-platformer from Silicon & Synapse, later Blizzard, in which the player switches between three Vikings with different abilities to escape an alien zoo.",
+    "longDescription": "Tomator, emperor of the alien Croutonians, kidnaps three Vikings for an intergalactic zoo. They escape but are scattered across time. The player switches between them: Erik the Swift runs, jumps and smashes some walls with his helmet, Baleog the Fierce fights with sword and bow, and Olaf the Stout blocks with his shield, glides on it and serves as a platform. Each Viking has three hit points, and losing one makes the level impossible to finish. The game has 37 levels, or 42 on the Mega Drive.",
+    "trivia": [
+      "It started out inspired by Lemmings, and the planned hundreds of tiny Vikings shrank to five and then three.",
+      "The Vikings later became playable heroes in Heroes of the Storm."
+    ],
+    "devStory": "Silicon & Synapse developed the game and Interplay released it for the Super NES in April 1993, followed by Amiga and MS-DOS versions the same year. The Lost Vikings 2 followed in 1997.",
+    "sources": [
+      {
+        "title": "The Lost Vikings",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_Lost_Vikings"
+      }
+    ]
+  },
+  {
+    "id": "rock-n-roll-racing",
+    "title": "Rock n' Roll Racing",
+    "year": 1993,
+    "decade": "1990s",
+    "developer": "Silicon & Synapse",
+    "publisher": "Interplay Productions",
+    "genre": "Racing",
+    "platform": "SNES",
+    "image": "images/games/rock-n-roll-racing.png",
+    "description": "Rock n' Roll Racing (1993) is Silicon & Synapse's isometric combat racer, set to licensed rock and heavy metal songs and called by announcer \"Loudmouth Larry\".",
+    "longDescription": "Four racers drive four laps of isometric tracks scattered with mines, power-ups, oil, snow and lava, and up to two people can play. Destroying rival cars earns bonuses, and between races the money goes on upgrades, each of which can be raised up to seven times. The soundtrack uses licensed rock and heavy metal songs, and Larry \"Supermouth\" Huffman provides the commentary.",
+    "trivia": [
+      "ZZ Top were the first choice for the music, but their fee was too high.",
+      "It began as RPMII, a sequel to RPM Racing.",
+      "Electronic Gaming Monthly named it the Best Driving Game of 1993."
+    ],
+    "devStory": "Silicon & Synapse, later renamed Blizzard Entertainment, developed the game with extra work from Software Creations. Interplay released it for the Super NES on 4 June 1993, followed by a Mega Drive version in 1994.",
+    "sources": [
+      {
+        "title": "Rock n' Roll Racing",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Rock_n%27_Roll_Racing"
+      }
+    ]
+  },
+  {
+    "id": "bosconian",
+    "title": "Bosconian",
+    "year": 1981,
+    "decade": "1980s",
+    "developer": "Namco",
+    "publisher": "Namco / Midway",
+    "genre": "Shooter",
+    "platform": "Arcade",
+    "image": "images/games/bosconian.png",
+    "description": "Bosconian (1981) is Namco's multidirectional space shooter, in which the Starfighter fires forwards and backwards at once to destroy enemy bases, guided by radar and voice alerts.",
+    "longDescription": "The Starfighter flies in eight directions with the screen centred on it, firing forwards and backwards at the same time. The goal is to destroy the green Bosco bases, each with six cannons around a core, while avoiding asteroids, mines and enemy ships. A radar display and spoken alerts help the player find the bases.",
+    "trivia": [
+      "It inspired Sinistar (1983) and Time Pilot (1982).",
+      "It won the 1983 Arcade Award for Best Science Fiction/Fantasy Coin-Op Game."
+    ],
+    "devStory": "Seiichi Sato and Shigeru Yokoyama designed it, Kazuo Kurosu programmed it and Nobuyuki Ohnogi composed the music. Sato had been asked to create swappable ROM boards, which became Galaga, Dig Dug and Bosconian. Namco released it in Japan on 20 November 1981, and it was the seventh highest-grossing arcade game in Japan that year.",
+    "sources": [
+      {
+        "title": "Bosconian",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bosconian"
+      }
+    ]
+  },
+  {
+    "id": "marathon-1994",
+    "title": "Marathon",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "Bungie",
+    "publisher": "Bungie",
+    "genre": "First-Person Shooter",
+    "platform": "Macintosh",
+    "image": "images/games/marathon-1994.png",
+    "description": "Marathon (1994) is Bungie's Macintosh first-person shooter set aboard a colony ship under alien attack, guided by three shipboard AIs. It was one of the earliest shooters with mouse-driven free look.",
+    "longDescription": "In 2794 the colony ship UESC Marathon, bound for Tau Ceti, is attacked by aliens, and the player, a security officer, fights back under the guidance of the ship's AIs Leela, Durandal and Tycho, until Durandal goes \"rampant\" and turns against the crew. The player can aim up and down with the mouse, recharge stations stand in for power-up pickups, and pattern buffers serve as save points. Up to eight players can fight over a local network.",
+    "trivia": [
+      "MacUser named it the best action game of 1995, ahead of Doom II.",
+      "Time included it in its 2012 list of the 100 best video games.",
+      "Bungie released the source code of Marathon 2 in 1999, which became the Aleph One engine."
+    ],
+    "devStory": "Jason Jones programmed the game and designed it with Greg Kirkpatrick, Reginald Dujour and Alex Seropian. Bungie published it for the Macintosh on 21 December 1994, and it had sold more than 150,000 copies by October 1995. Marathon 2: Durandal followed in 1995 and Marathon Infinity in 1996.",
+    "sources": [
+      {
+        "title": "Marathon (1994 video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Marathon_(1994_video_game)"
+      }
+    ]
+  },
+  {
+    "id": "magic-carpet",
+    "title": "Magic Carpet",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "Bullfrog Productions",
+    "publisher": "Electronic Arts",
+    "genre": "Action",
+    "platform": "PC/DOS",
+    "image": "images/games/magic-carpet.png",
+    "description": "Magic Carpet (1994) is Bullfrog's 3D action game, in which a wizard on a flying carpet collects mana and builds a castle to restore balance to each world.",
+    "longDescription": "The player is a wizard on a flying carpet, gathering mana, building a castle and returning each world to \"equilibrium\". The carpet moves through three dimensions like a helicopter and climbs automatically over obstacles rather than crashing. Two spells can be ready at once, one in each hand, and stored mana lets the castle grow and stronger spells be cast. The box promised 50 worlds, but the game has 45, because five level numbers were skipped.",
+    "trivia": [
+      "It supported anaglyph 3D, autostereogram effects and the VFX1 headset.",
+      "The Hidden Worlds expansion added 25 winter-themed levels in 1995."
+    ],
+    "devStory": "Bullfrog developed it with Sean Cooper among the programmers and Russell Shaw composing. EA released it for MS-DOS in 1994, followed by Magic Carpet 2: The Netherworlds in 1995 and PlayStation and Saturn versions in 1996. Computer Gaming World gave it five stars out of five.",
+    "sources": [
+      {
+        "title": "Magic Carpet (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Magic_Carpet_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "heretic",
+    "title": "Heretic",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "Raven Software",
+    "publisher": "id Software",
+    "genre": "First-Person Shooter",
+    "platform": "PC/DOS",
+    "image": "images/games/heretic.png",
+    "description": "Heretic (1994) is Raven Software's dark-fantasy shooter on a modified Doom engine, one of the first first-person games with an inventory and the ability to look up and down.",
+    "longDescription": "The elf Corvus hunts D'Sparil, one of the three Serpent Riders who corrupted the seven kings of Parthoris, through the City of the Damned and Hell's Maw to D'Sparil's dome. Raven added an inventory of items, looking up and down and flying to the Doom engine. Health potions can be carried for later, the Tome of Power gives every weapon a stronger mode, and the Morph Ovum turns enemies into chickens.",
+    "trivia": [
+      "John Carmack reportedly told the team to \"do it like Doom, and add the fantasy flavor\".",
+      "Computer Gaming World ranked being turned into a chicken third among the best ways to die in computer games.",
+      "Raven released the source code in 1999."
+    ],
+    "devStory": "John Romero proposed a medieval game in the style of Doom, and Raven built it on a modified version of id's engine. The shareware version came out on 29 December 1994, and the retail Shadow of the Serpent Riders added two episodes in 1996. It sold more than 500,000 copies, and Hexen: Beyond Heretic followed.",
+    "sources": [
+      {
+        "title": "Heretic (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Heretic_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "intelligent-qube",
+    "title": "I.Q.: Intelligent Qube",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "G-Artists",
+    "publisher": "Sony Computer Entertainment",
+    "genre": "Puzzle",
+    "platform": "PlayStation",
+    "image": "images/games/intelligent-qube.png",
+    "description": "I.Q.: Intelligent Qube (1997) is a PlayStation puzzle game, known as Kurushi in Europe, in which the player clears rows of giant rolling cubes and is graded with an IQ score.",
+    "longDescription": "The player runs about on a platform as rows of cubes roll towards them, marking a square and triggering it as a cube rolls over to capture it. Grey cubes should be captured, green advantage cubes clear a 3×3 area around them when triggered, and black forbidden cubes must be allowed to fall off the edge. Capturing a forbidden cube costs a row of the platform. At the end the score is turned into an IQ rating between 0 and 999.",
+    "trivia": [
+      "Its designer, Masahiko Sato, was a professor at the Tokyo University of the Arts.",
+      "It won an Excellence Award for Interactive Art at the 1997 Japan Media Arts Festival."
+    ],
+    "devStory": "Kenji Sawaguchi directed the game at G-Artists, with Masahiko Sato as designer and Takayuki Hattori composing. Sony released it in Japan on 31 January 1997, and it sold nearly 750,000 copies there by the end of the year. I.Q. Final followed on the PlayStation.",
+    "sources": [
+      {
+        "title": "Intelligent Qube",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Intelligent_Qube"
+      }
+    ]
+  },
+  {
+    "id": "ogre-battle",
+    "title": "Ogre Battle: The March of the Black Queen",
+    "year": 1993,
+    "decade": "1990s",
+    "developer": "Quest",
+    "publisher": "Quest / Enix",
+    "genre": "Strategy RPG",
+    "platform": "SNES",
+    "image": "images/games/ogre-battle.png",
+    "description": "Ogre Battle (1993) is Yasumi Matsuno's real-time tactical RPG, in which a Liberation Army sends squads across a map to free towns from the Zeteginean Empire. Its 13 endings depend on the army's reputation.",
+    "longDescription": "The player leads the Liberation Army against Empress Endora's Zeteginean Empire, which is influenced by the dark magic of the sage Rashidi. Squads of up to five fighters are sent across the map to liberate towns and temples, and the battles play out automatically according to the chosen tactics, with tarot cards played during combat. Each character has an alignment, and the revolution's reputation decides which of the 13 endings the player reaches. There are 25 main stages and four hidden ones.",
+    "trivia": [
+      "The title comes from two songs by Queen, a band Matsuno liked.",
+      "The Japanese print run was doubled from 200,000 to 400,000 copies and still sold out soon after release."
+    ],
+    "devStory": "Yasumi Matsuno directed and designed the game at Quest, pitching it as a real-time tactical rival to Dragon Quest and Final Fantasy. Masaharu Iwata, Hitoshi Sakimoto and Hayato Matsuo composed the music. It was released in Japan on 12 March 1993, and Enix America brought it to North America in May 1995 in a print run of about 25,000.",
+    "sources": [
+      {
+        "title": "Ogre Battle: The March of the Black Queen",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ogre_Battle:_The_March_of_the_Black_Queen"
+      }
+    ]
+  },
+  {
+    "id": "grandia",
+    "title": "Grandia",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Game Arts",
+    "publisher": "Entertainment Software Publishing",
+    "genre": "RPG",
+    "platform": "Sega Saturn",
+    "image": "images/games/grandia.png",
+    "description": "Grandia (1997) is Game Arts' Saturn RPG, in which young adventurer Justin searches for the lost civilisation of Angelou, with a battle system built around a turn-order bar.",
+    "longDescription": "Justin, a young adventurer, sets out with his friends Sue and Feena to find the lost civilisation of Angelou, and runs up against General Baal and the Garlyle Forces, who are reviving the corrupting entity Gaia. The game puts 2D sprites on 3D maps with a camera the player can rotate. In battle a rotating IP bar sets the order of turns: attacking from behind earns a pre-emptive strike, and hitting an enemy while it prepares an attack cancels it. Weapon and magic skills improve with use, and the story ends with an epilogue set ten years later.",
+    "trivia": [
+      "The game contains 20,000 frames of animation.",
+      "It was first planned for the Mega-CD before moving to the Saturn."
+    ],
+    "devStory": "Takeshi Miyaji designed the game and Noriyuki Iwadare composed the music. It was released for the Saturn in Japan on 18 December 1997, selling 344,554 copies there. Sony brought the PlayStation version to North America in 1999, and Grandia II followed.",
+    "sources": [
+      {
+        "title": "Grandia (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Grandia_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "bushido-blade",
+    "title": "Bushido Blade",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Lightweight",
+    "publisher": "Square / Sony Computer Entertainment",
+    "genre": "Fighting",
+    "platform": "PlayStation",
+    "image": "images/games/bushido-blade.png",
+    "description": "Bushido Blade (1997) is Lightweight's sword-fighting game with no health bar or time limit, in which most hits are fatal.",
+    "longDescription": "Fights are one-on-one with swords and other weapons, with no health bar and no time limit, and most hits are fatal. The Body Damage System means a lesser wound can slow, disarm or cripple an opponent instead. There are eight weapons, six characters and three stances: high, neutral and low. In story mode dishonourable tactics can end the playthrough early, and Slash mode pits the player against 100 enemies in a row.",
+    "trivia": [
+      "Its director wanted to capture the tension of a fight that could end with a single blow.",
+      "Some critics found the one-hit kills polarising."
+    ],
+    "devStory": "Lightweight developed it, Square published it in Japan on 14 March 1997, and Sony released it in North America in October. It sold 387,937 copies in Japan in 1997, and Bushido Blade 2 followed a year later.",
+    "sources": [
+      {
+        "title": "Bushido Blade (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bushido_Blade_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "space-channel-5",
+    "title": "Space Channel 5",
+    "year": 1999,
+    "decade": "1990s",
+    "developer": "Sega AM9",
+    "publisher": "Sega",
+    "genre": "Rhythm",
+    "platform": "Dreamcast",
+    "image": "images/games/space-channel-5.png",
+    "description": "Space Channel 5 (1999) is Tetsuya Mizuguchi's Dreamcast rhythm game, in which reporter Ulala out-dances an alien invasion in a 1960s-styled future, with a cameo from Michael Jackson.",
+    "longDescription": "The reporter Ulala covers an invasion by the alien Morolians in a science-fiction future styled after the 1960s. The player copies the moves of her opponents in time to the music, using six inputs. The invasion turns out to have been staged by Chief Blank to boost ratings. Michael Jackson appears as \"Space Michael\".",
+    "trivia": [
+      "The main theme is \"Mexican Flyer\", written by Ken Woodman in 1966.",
+      "Deee-Lite's singer Kierin Kirby sued Sega in 2003 over Ulala's resemblance to her; she lost and was ordered to pay Sega's legal fees."
+    ],
+    "devStory": "Tetsuya Mizuguchi produced it at Sega AM9, later United Game Artists, with Takashi Yuda directing and Naofumi Hataya and Kenichi Tokoi composing. Sega released it in Japan on 16 December 1999. Critics praised the music and art direction but found it short, and Space Channel 5: Part 2 followed in 2002.",
+    "sources": [
+      {
+        "title": "Space Channel 5",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Space_Channel_5"
+      }
+    ]
+  },
+  {
+    "id": "chuchu-rocket",
+    "title": "ChuChu Rocket!",
+    "year": 1999,
+    "decade": "1990s",
+    "developer": "Sonic Team",
+    "publisher": "Sega",
+    "genre": "Puzzle / Action",
+    "platform": "Dreamcast",
+    "image": "images/games/chuchu-rocket.png",
+    "description": "ChuChu Rocket! (1999) is Sonic Team's four-player puzzle game, in which players lay arrows to steer mice into their rockets and away from cats — the first Dreamcast game with online multiplayer.",
+    "longDescription": "Players place arrows on the floor to steer ChuChus, mice, into their own rocket while keeping KapuKapus, cats, away from it. Modes include single-player puzzles, a puzzle editor, a 30-second challenge and competitive games for up to four players. Critics praised the multiplayer and the cute style, though network lag drew complaints.",
+    "trivia": [
+      "Yuji Naka wanted to test the Dreamcast by moving about 100 sprites at once.",
+      "In Europe it was mailed free to Dreamarena subscribers.",
+      "Lessons from its online play helped Sonic Team build Phantasy Star Online."
+    ],
+    "devStory": "Yuji Naka directed and produced the game at Sonic Team, and Sega released it in Japan on 11 November 1999 and North America in March 2000. A Game Boy Advance version in 2001 included 2,500 of the 17,000 puzzles players had made.",
+    "sources": [
+      {
+        "title": "ChuChu Rocket!",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/ChuChu_Rocket!"
+      }
+    ]
+  },
+  {
+    "id": "seaman-dreamcast",
+    "title": "Seaman",
+    "year": 1999,
+    "decade": "1990s",
+    "developer": "Vivarium",
+    "publisher": "Sega",
+    "genre": "Simulation",
+    "platform": "Dreamcast",
+    "image": "images/games/seaman-dreamcast.png",
+    "description": "Seaman (1999) is Yoot Saito's Dreamcast virtual pet, a creature with a human face that the player talks to through a microphone. Leonard Nimoy narrates the English version.",
+    "longDescription": "The player raises a Seaman through five life stages — Mushroomer, Gillman, Podfish, Tadman and Frogman — talking to it through the Dreamcast microphone. It must be checked on at least once every real-time day or it may die. Leonard Nimoy narrates the English version, while in Japan Saito voiced the creature himself.",
+    "trivia": [
+      "Saito modelled the Seaman's face on his own.",
+      "Testers' long sentences confused the creature, so Saito gave it the reply \"You talk too long, I don't understand.\"",
+      "It was the third best-selling Dreamcast game in Japan."
+    ],
+    "devStory": "Yoot Saito designed the game at Vivarium, and it was released in Japan on 29 July 1999, with Sega publishing it in North America in 2000. It sold 399,342 copies in Japan and won an Excellence Award at the 1999 Japan Media Arts Festival.",
+    "sources": [
+      {
+        "title": "Seaman (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Seaman_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "vib-ribbon",
+    "title": "Vib-Ribbon",
+    "year": 1999,
+    "decade": "1990s",
+    "developer": "NanaOn-Sha",
+    "publisher": "Sony Computer Entertainment",
+    "genre": "Rhythm",
+    "platform": "PlayStation",
+    "image": "images/games/vib-ribbon.png",
+    "description": "Vib-Ribbon (1999) is Masaya Matsuura's minimalist rhythm game, drawn in white vector lines, which builds its levels from any music CD the player puts in.",
+    "longDescription": "Vibri, a rabbit, walks along a line of obstacles timed to the beat: blocks, loops, waves and pits, each matched to a button. Missing them degrades her into a frog and then an insect, and the game ends if she is hit too often in insect form. Because the whole game loads into the console's memory, players can swap in their own audio CDs, and the game generates levels from the tracks, harder for more intense music. The soundtrack is by the J-pop band Laugh and Peace.",
+    "trivia": [
+      "It began as an advertisement for the Mercedes-Benz A-Class, until the car failed the moose test and Mercedes dropped the idea.",
+      "The Museum of Modern Art acquired it in 2012.",
+      "It never came out in North America on the PlayStation; it arrived there via PlayStation Network in 2014."
+    ],
+    "devStory": "Masaya Matsuura led the game at NanaOn-Sha, and Sony released it in Japan on 9 December 1999, where it sold 100,000 copies in its first week. Two Japan-only follow-ups, Mojib-Ribbon and Vib-Ripple, came out on the PlayStation 2.",
+    "sources": [
+      {
+        "title": "Vib-Ribbon",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Vib-Ribbon"
+      }
+    ]
+  },
+  {
+    "id": "shin-megami-tensei",
+    "title": "Shin Megami Tensei",
+    "year": 1992,
+    "decade": "1990s",
+    "developer": "Atlus",
+    "publisher": "Atlus",
+    "genre": "RPG",
+    "platform": "SNES",
+    "image": "images/games/shin-megami-tensei.png",
+    "description": "Shin Megami Tensei (1992) is Atlus's Super Famicom RPG of a demon-overrun Tokyo, in which the player recruits demons by talking to them and fuses them into new ones, and the player's choices push them towards Law or Chaos.",
+    "longDescription": "In a near-future Tokyo of \"199X\" a portal to the demon world opens and the United States orders a nuclear strike on the city; the story continues in the ruined Tokyo thirty years later. Exploration is in first person and battles are turn-based. Demons can be recruited through conversation and fused, two or three at a time, at the Cathedrals of Shadows. The player's choices move them along two axes, Light–Dark and Law–Chaos, which change how demons and factions respond.",
+    "trivia": [
+      "It was not localised at the time, partly because of its religious content; the first official English release came on iOS in 2014.",
+      "Toby Fox cited it as an inspiration for Undertale, especially its dialogue system."
+    ],
+    "devStory": "Atlus released it for the Super Famicom in Japan on 30 October 1992, directed by Yōsuke Niino with art by Kazuma Kaneko and music by Tsukasa Masuko. It was the third Megami Tensei game, a series that began with adaptations of Aya Nishitani's Digital Devil Story novels, and the first under the Shin name. Shin Megami Tensei II followed in 1994.",
+    "sources": [
+      {
+        "title": "Shin Megami Tensei (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Shin_Megami_Tensei_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "star-ocean-1996",
+    "title": "Star Ocean",
+    "year": 1996,
+    "decade": "1990s",
+    "developer": "tri-Ace",
+    "publisher": "Enix",
+    "genre": "Action RPG",
+    "platform": "SNES",
+    "image": "images/games/star-ocean-1996.png",
+    "description": "Star Ocean (1996) is tri-Ace's Super Famicom RPG with real-time battles and voice clips packed onto the cartridge with the S-DD1 compression chip. It stayed in Japan until a 2008 remake.",
+    "longDescription": "Roddick, Millie and Dorne look for a cure for a disease that turns people to stone, and learn it comes from Asmodeus, a demon king who died 300 years earlier. With Ronyx and Ilia of the Earth Federation starship Calnus, they travel back in time to find him. Battles run in real time, with the player controlling one character and the AI the others. \"Private Actions\" build relationships between characters that shape the endings, eight of ten possible recruits can join, and item creation can make gear better than anything in the shops.",
+    "trivia": [
+      "Its voice clips during battle were rare on the Super Famicom.",
+      "Enix America had stopped publishing by the end of 1995, so the game never officially left Japan; fans made an English patch."
+    ],
+    "devStory": "Joe Asanuma directed the game at tri-Ace, with Motoi Sakuraba composing, and Enix released it in Japan on 19 July 1996. The cartridge used the S-DD1 compression chip to hold about 48 megabits of data. It sold about 235,000 copies, and the PSP remake First Departure brought it to the West in 2008.",
+    "sources": [
+      {
+        "title": "Star Ocean (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Star_Ocean_(video_game)"
+      }
+    ]
   }
 ]
