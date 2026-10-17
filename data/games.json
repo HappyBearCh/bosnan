@@ -11466,5 +11466,1528 @@
         "url": "https://en.wikipedia.org/wiki/Shinobi_(1987_video_game)"
       }
     ]
+  },
+  {
+    "id": "combat-2600",
+    "title": "Combat",
+    "year": 1977,
+    "decade": "1970s",
+    "developer": "Atari, Inc.",
+    "publisher": "Atari, Inc.",
+    "genre": "Tank Shooter",
+    "platform": "Atari 2600",
+    "image": "images/games/combat-2600.png",
+    "description": "Combat (1977) was the two-player duel packed in with most Atari 2600 consoles for five years: tanks, biplanes and jets trading shots in rounds just over two minutes long.",
+    "longDescription": "Two players face each other on one screen, each steering a vehicle with a joystick and firing at the other. The cartridge offers three kinds of battle. Tank games are played from above, with variations that add obstacles, shots that bounce off walls and tanks that turn invisible. Biplane fights are seen from the side, and jet battles return to an overhead view. A round lasts two minutes and sixteen seconds, and whoever scores more hits wins. The whole game fits in two kilobytes of ROM, and it grew out of Atari's 1974 arcade game Tank.",
+    "trivia": [
+      "Combat was bundled with most Atari 2600 consoles from 1977 to 1982. Sears' Tele-Games version of the console came with Air-Sea Battle instead, and sold Combat under the name Tank Plus.",
+      "A sequel, Combat Two, was announced in 1982 but never released. A prototype surfaced in 1999 and was later included on the Atari Flashback 2 and Atari 50 collections."
+    ],
+    "devStory": "Combat was programmed by Ron Milner, Steve Mayer, Joe Decuir and Larry Wagner, and Mayer was already working on it by late 1975, when Atari bought his consulting firm Cyan Engineering. It shipped as a launch title for the Atari Video Computer System in 1977.",
+    "sources": [
+      {
+        "title": "Combat (1977 video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Combat_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "yars-revenge-2600",
+    "title": "Yars' Revenge",
+    "year": 1982,
+    "decade": "1980s",
+    "developer": "Howard Scott Warshaw",
+    "publisher": "Atari, Inc.",
+    "genre": "Shooter",
+    "platform": "Atari 2600",
+    "image": "images/games/yars-revenge-2600.png",
+    "description": "Yars' Revenge (1982) is Howard Scott Warshaw's Atari 2600 shooter, in which an insect-like Yar chews through a shield to expose the Qotile and blast it with the Zorlon Cannon.",
+    "longDescription": "The player flies Yar, a fly-like creature, against the Qotile, which hides behind an energy shield on the right of the screen. Yar eats away at the shield, then summons the Zorlon Cannon and fires it across the screen at the exposed Qotile. A shimmering Neutral Zone down the middle hides Yar from the Qotile's homing destroyer missile, but nothing can be fired from inside it. The Qotile can also turn into a Swirl and launch itself at the player. Yar starts with four lives, and the Swirl attacks more often as the score climbs.",
+    "trivia": [
+      "Yars' Revenge came with a comic book, Yars' Revenge: The Qotile Ultimatum, and credited Warshaw as programmer, making him the first Atari programmer publicly credited on a release.",
+      "Warshaw hid Yars aliens as a secret in his next two games, Raiders of the Lost Ark and E.T. the Extra-Terrestrial."
+    ],
+    "devStory": "Warshaw was assigned a 2600 port of the arcade game Star Castle. He told his supervisor it could not be done properly on the hardware and proposed a new game that rearranged its ideas instead. First developed as Time Freeze, it took nine months and was released in May 1982 as Warshaw's first game for Atari.",
+    "sources": [
+      {
+        "title": "Yars' Revenge",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Yars%27_Revenge"
+      }
+    ]
+  },
+  {
+    "id": "enduro-2600",
+    "title": "Enduro",
+    "year": 1983,
+    "decade": "1980s",
+    "developer": "Activision",
+    "publisher": "Activision",
+    "genre": "Racing",
+    "platform": "Atari 2600",
+    "image": "images/games/enduro-2600.png",
+    "description": "Enduro (1983) is Activision's Atari 2600 endurance race, in which each in-game day brings snow, fog and nightfall and a quota of cars that must be passed to keep going.",
+    "longDescription": "The player drives in the National Enduro, a race that runs day after day. To stay in it, the driver must pass 200 cars on the first day and 300 on each day after that. Conditions change as the hours pass: icy patches make the car hard to control, fog cuts visibility, and at night only the taillights of the cars ahead can be seen. The curving road and distant mountains were given priority within the console's tight graphical limits.",
+    "trivia": [
+      "Players who lasted five days or more saw an on-screen trophy; mailing a photo of it to Activision earned an 'Activision Roadbuster' patch.",
+      "Enduro won Best Sports Videogame at the 5th Arkie Awards, and Retro Gamer later called it arguably the 2600's best racer."
+    ],
+    "devStory": "Larry Miller wrote Enduro in assembly language on an Apple computer in about three months of 100-hour weeks, fitting it into a four-kilobyte ROM. Released in May 1983, it was the top-selling game of the month by June.",
+    "sources": [
+      {
+        "title": "Enduro (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Enduro_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "hero-2600",
+    "title": "H.E.R.O.",
+    "year": 1984,
+    "decade": "1980s",
+    "developer": "Activision",
+    "publisher": "Activision",
+    "genre": "Platform",
+    "platform": "Atari 2600",
+    "image": "images/games/hero-2600.png",
+    "description": "H.E.R.O. (1984) is Activision's mine-rescue game: Roderick Hero hovers down flooded, magma-lined shafts with a backpack rotor, a helmet laser and six sticks of dynamite.",
+    "longDescription": "The name stands for Helicopter Emergency Rescue Operation. Volcanic activity has trapped miners deep inside Mount Leone, and Roderick Hero descends to reach them. His hoverpack lets him fly and hover, a microlaser in his helmet deals with spiders, snakes and other creatures, and dynamite clears the walls that block the way. Glowing magma walls are deadly, lanterns plunge the screen into darkness when touched, and a power gauge drains from the moment he starts moving. Leftover power and dynamite turn into points at the end of each level.",
+    "trivia": [
+      "Reviewing the Commodore 64 version for Zzap!64, Julian Rignall wrote that it 'looks awful, sounds terrible but plays absolutely beautifully'.",
+      "Retro Gamer ranked it second among the 25 best Atari 2600 games in 2008."
+    ],
+    "devStory": "H.E.R.O. was designed by John Van Ryzin under the working title Heli and released for the Atari 2600 on 30 March 1984 on an 8-kilobyte cartridge. Versions for the ColecoVision, Commodore 64, Atari 5200, MSX, ZX Spectrum and other systems followed.",
+    "sources": [
+      {
+        "title": "H.E.R.O. (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/H.E.R.O._(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "solaris-2600",
+    "title": "Solaris",
+    "year": 1986,
+    "decade": "1980s",
+    "developer": "Atari Corporation",
+    "publisher": "Atari Corporation",
+    "genre": "Space Combat",
+    "platform": "Atari 2600",
+    "image": "images/games/solaris-2600.png",
+    "description": "Solaris (1986) is Doug Neubauer's late Atari 2600 space epic: a 16-quadrant galaxy of Zylon fleets, minefields and wormholes, searched for the lost planet Solaris.",
+    "longDescription": "The player pilots a starship across a galaxy of 16 quadrants and 48 sectors, charted on a Galactic Scanner. Sectors held by the Zylons must be cleared of enemy ships, while others contain star clusters, mine fields and wormholes. On planets the player can fight aliens, rescue humans and refuel at docking stations, and when Zylons attack a Federation planet in the current quadrant there are 40 seconds to defend it. The game needed 16K of bank-switched ROM, a large cartridge for the console.",
+    "trivia": [
+      "Fans have called it the true successor to Neubauer's Star Raiders, but Neubauer said it is not a sequel.",
+      "In June 1989, three years after release, Electronic Gaming Monthly reported it as the best-selling 2600 or 7800 game in the US that month."
+    ],
+    "devStory": "Neubauer, who had made Star Raiders in 1980, pitched the game to Atari in 1984, and the company suggested tying it to the film The Last Starfighter. Development stalled after Jack Tramiel bought Atari, and it was revived and released in November 1986.",
+    "sources": [
+      {
+        "title": "Solaris (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Solaris_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "paradroid-c64",
+    "title": "Paradroid",
+    "year": 1985,
+    "decade": "1980s",
+    "developer": "Graftgold",
+    "publisher": "Hewson Consultants",
+    "genre": "Shooter",
+    "platform": "Commodore 64",
+    "image": "images/games/paradroid-c64.png",
+    "description": "Paradroid (1985) is Andrew Braybrook's Commodore 64 classic, in which a weak little droid clears a fleet of rogue robots by shooting them or taking them over through a circuit-board duel.",
+    "longDescription": "The player controls the Influence Device, droid number 001, aboard a space fleet whose robots have turned hostile. Every droid carries a three-digit number that roughly marks its strength, across 24 types. Rather than simply shooting them, the player can attempt a takeover: a short subgame played on a circuit diagram of logic gates, where whoever powers more of the circuit at the end wins. A captured droid's abilities are the player's, but the higher its number the sooner it burns out, dropping the player back into 001. Each ship has 20 decks and more than 400 screens joined by lifts and doors.",
+    "trivia": [
+      "Braybrook kept a development diary that Zzap!64 published, and the magazine gave the finished game 97% and a Gold Medal.",
+      "Braybrook said the droid-swapping idea came from the arcade game Front Line."
+    ],
+    "devStory": "Braybrook began Paradroid straight after Gribbly's Day Out, reusing some of its code. A faster Competition Edition followed in 1986 and Heavy Metal Paradroid in 1987, then Paradroid 90 for the Amiga and Atari ST in 1990.",
+    "sources": [
+      {
+        "title": "Paradroid",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Paradroid"
+      }
+    ]
+  },
+  {
+    "id": "uridium-c64",
+    "title": "Uridium",
+    "year": 1986,
+    "decade": "1980s",
+    "developer": "Graftgold",
+    "publisher": "Hewson Consultants",
+    "genre": "Horizontal Shooter",
+    "platform": "Commodore 64",
+    "image": "images/games/uridium-c64.png",
+    "description": "Uridium (1986) is Andrew Braybrook's Commodore 64 shooter: a Manta fighter skims fifteen giant Dreadnoughts, strafing their defences before landing to destroy each one.",
+    "longDescription": "Each of the fifteen levels is a single huge Dreadnought, named after a metal and ending with the fictional element Uridium. The player's Manta fighter flies low over the hull, which scrolls in both directions, and must flip sideways to slip through narrow gaps in later ships. Waves of enemy fighters attack while flashing ports release homing mines that cannot be shot. Once enough of the ship's defences are gone, a 'Land Now!' signal tells the player to touch down on the landing strip.",
+    "trivia": [
+      "The C64 cannot scroll a separate background layer, so the stars are drawn as characters whose pixels shift against the scroll, making them appear to stand still.",
+      "It won Best Arcade-style Game of the Year at the 1986 Golden Joystick Awards and reached number one in the British all-formats chart."
+    ],
+    "devStory": "Uridium was released on 28 February 1986 for the Commodore 64 and ported to the ZX Spectrum, Amstrad CPC, Atari ST and other systems. An NES conversion came out in 1990 under the unrelated title The Last Starfighter, and Braybrook later made Uridium 2 for the Amiga.",
+    "sources": [
+      {
+        "title": "Uridium",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Uridium"
+      }
+    ]
+  },
+  {
+    "id": "the-last-ninja-c64",
+    "title": "The Last Ninja",
+    "year": 1987,
+    "decade": "1980s",
+    "developer": "System 3",
+    "publisher": "System 3 / Activision",
+    "genre": "Action-Adventure",
+    "platform": "Commodore 64",
+    "image": "images/games/the-last-ninja-c64.png",
+    "description": "The Last Ninja (1987) is System 3's isometric action-adventure, in which Armakuni crosses the island of Lin-Fen to recover the Koga Scrolls from the shogun Kunitoki.",
+    "longDescription": "The shogun Kunitoki wants the secrets of the Koga Scrolls, and Armakuni, the last of the ninja, sets out across the island of Lin-Fen to his palace. The game is seen from an isometric viewpoint with eight-way movement and mixes exploration, item puzzles and combat. Fights involve aiming blows at an opponent's head, body or legs, using a ninjato, nunchaku, staff, shuriken and smoke bombs found along the way. The Commodore 64 music was composed by Ben Daglish and Anthony Lees.",
+    "trivia": [
+      "It was the best-selling Commodore 64 game of its time, with over 750,000 copies sold in Europe; designer Mark Cale has put total sales at about 4 million.",
+      "It was runner-up for Game of the Year at the 1988 Golden Joystick Awards and was followed by Last Ninja 2 and Last Ninja 3."
+    ],
+    "devStory": "Designed by Mark Cale and Tim Best, the game was first worked on for almost a year by a Hungarian team at Novotrade, which went uncredited after its funding was returned. John Twiddy rewrote the engine for the C64 version. Amiga and Atari ST versions followed in 1990 as Last Ninja Remix.",
+    "sources": [
+      {
+        "title": "The Last Ninja",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_Last_Ninja"
+      }
+    ]
+  },
+  {
+    "id": "wizball-c64",
+    "title": "Wizball",
+    "year": 1987,
+    "decade": "1980s",
+    "developer": "Sensible Software",
+    "publisher": "Ocean Software",
+    "genre": "Horizontal Shooter",
+    "platform": "Commodore 64",
+    "image": "images/games/wizball-c64.png",
+    "description": "Wizball (1987) is Sensible Software's colour-restoring shooter: a bouncing wizard and his cat collect red, green and blue paint to bring grey Wizworld back to life.",
+    "longDescription": "The evil Zark has drained the colour from Wizworld, and the wizard Wiz, travelling as a bouncing green ball, sets out with his cat Nifta to restore it. Each of the eight levels starts in three shades of grey. Wiz cannot collect paint himself; that job falls to Catellite, the cat, who gathers falling droplets of red, green and blue that are mixed to recolour the scenery. Pearls dropped by enemies buy upgrades and can summon Catellite. Only the first three levels are open at the start, and finishing them unlocks the rest. Two players can play together.",
+    "trivia": [
+      "Zzap!64 gave it 96%, later rated it 98% as the best C64 shoot 'em up, and in December 1988 named it the best game it had ever reviewed.",
+      "Martin Galway composed the music for the Commodore 64 version."
+    ],
+    "devStory": "Jon Hare and Chris Yates, who founded Sensible Software, began it as a Nemesis-inspired shooter; the bouncing ball and its controls came first and the wizard story was added later. It was released for the C64 in May 1987, with Spectrum, Amstrad, Amiga and Atari ST versions following. A sequel, Wizkid, appeared in 1992.",
+    "sources": [
+      {
+        "title": "Wizball",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Wizball"
+      }
+    ]
+  },
+  {
+    "id": "alex-kidd-in-miracle-world-sms",
+    "title": "Alex Kidd in Miracle World",
+    "year": 1986,
+    "decade": "1980s",
+    "developer": "Sega",
+    "publisher": "Sega",
+    "genre": "Platform",
+    "platform": "Sega Master System",
+    "image": "images/games/alex-kidd-in-miracle-world-sms.png",
+    "description": "Alex Kidd in Miracle World (1986) is the Master System's signature platformer, in which Alex punches through 17 stages and plays rock-paper-scissors against Janken the Great's henchmen.",
+    "longDescription": "Janken the Great has overthrown King Thunder of Radaxian and kidnapped Prince Egle and Princess Lora. Alex punches enemies and breakable rocks, collects money and spends it in shops on items and vehicles such as a motorbike and a helicopter. Many stages end with a game of rock-paper-scissors against one of Janken's three henchmen, and losing costs a life just as an enemy's touch does. Across 17 stages Alex learns that he is King Thunder's lost son, defeats Janken and recovers the crown.",
+    "trivia": [
+      "The game was built into many Master System and Master System II consoles. The built-in version swaps the original's rice-ball map icon for a hamburger and inverts the buttons.",
+      "Entering a button code on the Game Over screen continues the game, at a cost of 400 Baums."
+    ],
+    "devStory": "Designed by Kotaro Hayashida, with art by Rieko Kodama, the game began in 1984 as a licensed Dragon Ball tie-in. When the licence expired, Sega president Hayao Nakayama had it restarted from scratch. It was released in Japan on 1 November 1986, and a remake, Alex Kidd in Miracle World DX, followed in 2021.",
+    "sources": [
+      {
+        "title": "Alex Kidd in Miracle World",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Alex_Kidd_in_Miracle_World"
+      }
+    ]
+  },
+  {
+    "id": "psycho-fox-sms",
+    "title": "Psycho Fox",
+    "year": 1989,
+    "decade": "1980s",
+    "developer": "Vic Tokai",
+    "publisher": "Sega",
+    "genre": "Platform",
+    "platform": "Sega Master System",
+    "image": "images/games/psycho-fox-sms.png",
+    "description": "Psycho Fox (1989) is Vic Tokai's Master System platformer, in which a fox uses a Shinto stick to become a monkey, hippo or tiger on the way to overthrowing the evil deity Madfox Daimyōjin.",
+    "longDescription": "Madfox Daimyōjin has taken over the shrine of the fox deity Inari and corrupted the land, and a young fox is chosen to defeat him. Each level runs left to right through crowds of enemies. A Shinto stick transforms the hero into three other animals: the hippo is slow and jumps low but smashes special blocks, the monkey jumps highest and the tiger runs fastest. The bird ally Bird Fly can be thrown like a boomerang, and if the player is hit while carrying it, the bird flies off instead of a life being lost.",
+    "trivia": [
+      "In Brazil, Tec Toy released it as Sapo Xulé: Os Invasores do Brejo, with the fox replaced by a cartoon frog.",
+      "Vic Tokai made Kid Kool as an NES counterpart, and Decap Attack on the Mega Drive is regarded as its spiritual successor."
+    ],
+    "devStory": "Directed by Toshihisa Hasegawa and programmed by Shoji Suzuki, Psycho Fox was released in Europe in December 1989 and in North America in May 1990. Sega Power and S: The Sega Magazine both scored it 93%.",
+    "sources": [
+      {
+        "title": "Psycho Fox",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Psycho_Fox"
+      }
+    ]
+  },
+  {
+    "id": "wolfenstein-3d",
+    "title": "Wolfenstein 3D",
+    "year": 1992,
+    "decade": "1990s",
+    "developer": "id Software",
+    "publisher": "Apogee Software",
+    "genre": "First-Person Shooter",
+    "platform": "PC/DOS",
+    "image": "images/games/wolfenstein-3d.png",
+    "description": "Wolfenstein 3D (1992) is id Software's fast first-person shooter, in which Allied spy B.J. Blazkowicz fights his way out of a Nazi castle — the game that set the template for the genre.",
+    "longDescription": "B.J. Blazkowicz, an American spy, escapes from Castle Wolfenstein and battles through Nazi strongholds level by level. Every level is a flat maze of equal-height walls drawn in real time with ray casting, while guards, dogs and objects are flat sprites drawn from several angles. It made fast action the standard for 3D shooters, and is often called the grandfather of the genre. The original release was divided into six episodes of ten levels, three of them sold as The Nocturnal Missions.",
+    "trivia": [
+      "Germany banned the game in 1994 over its Nazi symbols; the ban was lifted in 2018 and the game removed from the index in 2019.",
+      "For the Super NES version, Nintendo required the Nazi imagery and German voice clips to be cut, the blood removed and the attack dogs replaced with giant rats."
+    ],
+    "devStory": "John Romero proposed remaking Muse Software's 1981 Castle Wolfenstein as an action game, and id bought the Wolfenstein trademark for $5,000. John Carmack built the engine, Tom Hall directed and Adrian Carmack drew the sprites. Apogee released it as shareware on 5 May 1992, and FormGen published the retail episode Spear of Destiny that September.",
+    "sources": [
+      {
+        "title": "Wolfenstein 3D",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Wolfenstein_3D"
+      }
+    ]
+  },
+  {
+    "id": "the-lords-of-midnight",
+    "title": "The Lords of Midnight",
+    "year": 1984,
+    "decade": "1980s",
+    "developer": "Mike Singleton",
+    "publisher": "Beyond Software",
+    "genre": "Strategy",
+    "platform": "ZX Spectrum",
+    "image": "images/games/the-lords-of-midnight.png",
+    "description": "The Lords of Midnight (1984) is Mike Singleton's ZX Spectrum epic: an adventure and a wargame at once, fought across a frozen land seen in first-person panoramas.",
+    "longDescription": "Doomdark the Witchking has locked the Land of Midnight in endless winter. The player begins with four characters — Luxor the Moonprince, Rorthron the Wise, Corleth the Fey and Morkin — and can recruit up to twenty-eight more lords and their armies. The game can be won in two ways: Morkin can carry out a lone quest to destroy the Ice Crown, or the armies of the Free can march north and capture his citadel, Ushgarak. Doomdark wins by killing Morkin and either killing Luxor or taking the capital, Xajorkith. Every location is drawn as a first-person view that can be turned to any of the eight points of the compass, built from pre-scaled images in a technique known as landscaping.",
+    "trivia": [
+      "The game can be played as a pure adventure, as a wargame, or as the 'Epic', which asks the player to pursue both victories at once.",
+      "Crash gave it 10 out of 10 in its adventure column, its readers voted it adventure game of the year, and it won Best Strategy Game at the Golden Joystick Awards."
+    ],
+    "devStory": "Singleton's game was published for the ZX Spectrum by Beyond Software in 1984, with Amstrad CPC and Commodore 64 versions following. A sequel, Doomdark's Revenge, came out the same year; a third part, The Eye of the Moon, was never released. Chris Wild's remake brought the game to modern platforms from 2012.",
+    "sources": [
+      {
+        "title": "The Lords of Midnight",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_Lords_of_Midnight"
+      }
+    ]
+  },
+  {
+    "id": "ant-attack",
+    "title": "Ant Attack",
+    "year": 1983,
+    "decade": "1980s",
+    "developer": "Sandy White",
+    "publisher": "Quicksilva",
+    "genre": "Isometric Action",
+    "platform": "ZX Spectrum",
+    "image": "images/games/ant-attack.png",
+    "description": "Ant Attack (1983) is Sandy White's ZX Spectrum rescue game, set in a walled isometric city of giant ants — and one of the first games to let the player choose to be a boy or a girl.",
+    "longDescription": "The player chooses to play as a boy or a girl and enters the walled city of Antescher to rescue the other, who has been captured. Giant ants roam the streets and bite, and the player's grenades can kill them but also hurt people. Once the hostage is reached, the pair must escape the city together, and each new rescue places the next captive somewhere harder to reach. The city is drawn in a 'Softsolid 3D' isometric view that, unlike Zaxxon or Q*bert, lets the player climb up and down the scenery as well as move across it.",
+    "trivia": [
+      "The city's name, Antescher, is a nod to the artist M. C. Escher.",
+      "In 2009 Edge wrote that the game 'marked the very beginnings of the survival horror genre'."
+    ],
+    "devStory": "Sandy White wrote Ant Attack and Quicksilva published it for the ZX Spectrum in 1983, with a Commodore 64 version in 1984. It finished second to Ah Diddums for Best Original Game at the 1983 Golden Joystick Awards.",
+    "sources": [
+      {
+        "title": "Ant Attack",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ant_Attack"
+      }
+    ]
+  },
+  {
+    "id": "skool-daze",
+    "title": "Skool Daze",
+    "year": 1984,
+    "decade": "1980s",
+    "developer": "Microsphere",
+    "publisher": "Microsphere",
+    "genre": "Action-Adventure",
+    "platform": "ZX Spectrum",
+    "image": "images/games/skool-daze.png",
+    "description": "Skool Daze (1984) is Microsphere's ZX Spectrum school simulation, in which Eric must steal his report card from the staff-room safe without collecting 10,000 lines.",
+    "longDescription": "Eric is a pupil at a British school who needs to get his report card out of the safe in the staff room. Teachers such as the headmaster Mr Wacker and Mr Creak the history master hand out lines when they catch him misbehaving — and sometimes when they don't, such as being knocked to the floor. Reaching 10,000 lines gets Eric expelled. Before the game starts, the player can rename every character.",
+    "trivia": [
+      "It sold about 50,000 copies on release despite very little marketing, and Crash scored it 93%.",
+      "It is regarded as an early example of the sandbox game and appears in 1001 Video Games You Must Play Before You Die."
+    ],
+    "devStory": "Skool Daze was a family production: David Reidy designed it on paper, his wife Helen typed in the code, and family friend Keith Warrington, then a graphic design student, drew the characters. It was released for the ZX Spectrum in 1984 and the Commodore 64 in 1985, and followed by Back to Skool.",
+    "sources": [
+      {
+        "title": "Skool Daze",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Skool_Daze"
+      }
+    ]
+  },
+  {
+    "id": "chuckie-egg",
+    "title": "Chuckie Egg",
+    "year": 1983,
+    "decade": "1980s",
+    "developer": "Nigel Alderton",
+    "publisher": "A&F Software",
+    "genre": "Platform",
+    "platform": "ZX Spectrum / Multiple",
+    "image": "images/games/chuckie-egg.png",
+    "description": "Chuckie Egg (1983) is the British home-computer platformer in which Hen-House Harry collects twelve eggs per level while dodging hens and, eventually, a giant freed duck.",
+    "longDescription": "Hen-House Harry must collect the twelve eggs on each level before the timer runs out, climbing ladders and jumping between platforms. Piles of seed score points and briefly stop the clock, but patrolling hens eat them, and touching a hen or falling through a gap costs one of Harry's five lives. A giant duck sits caged at the top of the screen through the first eight levels; on later passes it is freed and chases Harry, while the hens grow in number and speed. There are forty levels in all.",
+    "trivia": [
+      "Nigel Alderton was 16 or 17 when he wrote it.",
+      "After level 40 the game carries on with level 33's layout, labelled level 41."
+    ],
+    "devStory": "A&F Software released Chuckie Egg in 1983 for the ZX Spectrum, BBC Micro and Dragon 32, and it was later converted to the Commodore 64, Amstrad CPC, MSX, Atari 8-bit computers, Amiga, Atari ST and PC. The BBC version topped the BBC chart in 1984, and Chuckie Egg 2 followed in 1985.",
+    "sources": [
+      {
+        "title": "Chuckie Egg",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Chuckie_Egg"
+      }
+    ]
+  },
+  {
+    "id": "penguin-adventure",
+    "title": "Penguin Adventure",
+    "year": 1986,
+    "decade": "1980s",
+    "developer": "Konami",
+    "publisher": "Konami",
+    "genre": "Racing / Platform",
+    "platform": "MSX",
+    "image": "images/games/penguin-adventure.png",
+    "description": "Penguin Adventure (1986) is Konami's MSX sequel to Antarctic Adventure, sending the penguin Penta on a race for a golden apple to save a dying princess.",
+    "longDescription": "Penguette, the Penguin Princess, is ill, and only a golden apple can cure her, so Penta sets off to fetch it. It builds on Antarctic Adventure's racing with many more stages — forest, ice, water and caves, with bonus levels in outer space — along with bosses, minigames and a shop where fishermen trade items, including a gun, for the fish Penta collects. The game has more than one ending: in the bad ending the princess dies, and the good ending is hidden behind a secret.",
+    "trivia": [
+      "Hideo Kojima contributed planning ideas for about a month, including the shop's slot machine and some boss tactics, but is not credited; his directorial debut was Metal Gear the following year.",
+      "The good ending is reached by pausing the game a particular number of times."
+    ],
+    "devStory": "Directed by Ryouhei Shogaki and Hiroyuki Fukui, Penguin Adventure was released for the MSX in Japan on 28 October 1986 and in Europe in 1987. It was later re-released on the Wii and Wii U Virtual Console in Japan.",
+    "sources": [
+      {
+        "title": "Penguin Adventure",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Penguin_Adventure"
+      }
+    ]
+  },
+  {
+    "id": "the-maze-of-galious",
+    "title": "The Maze of Galious",
+    "year": 1987,
+    "decade": "1980s",
+    "developer": "Konami",
+    "publisher": "Konami",
+    "genre": "Action-Adventure",
+    "platform": "MSX",
+    "image": "images/games/the-maze-of-galious.png",
+    "description": "The Maze of Galious (1987) is Konami's MSX exploration game, in which Popolon and Aphrodite search Castle Greek and ten hidden worlds to rescue their unborn child from the priest Galious.",
+    "longDescription": "The second Knightmare game turns the series from a shooter into an open exploration game. Popolon and Princess Aphrodite must free their unborn child, Pampas, from the priest Galious. Castle Greek serves as an overworld with entrances to ten worlds hidden inside it, and new areas open as the player finds items. The player switches between the two heroes: Popolon can push stones, open heavy doors and vary his jump, while Aphrodite fires more shots and survives longer underwater. Each world ends with a Great Demon who can only be summoned by finding its name on a gravestone and typing it at the boss's door.",
+    "trivia": [
+      "Plugging Game Master, Knightmare or Q*bert into the MSX's second cartridge slot unlocks extra content.",
+      "It is cited as an influence on La-Mulana, and its exploration design fed into Castlevania II: Simon's Quest."
+    ],
+    "devStory": "A team of seven led by designer Ryouhei Shogaki made the game in four to six months; an eleventh world was cut for lack of memory. It was released for the MSX on 18 April 1987, and a completely reworked Famicom version followed in Japan that August.",
+    "sources": [
+      {
+        "title": "The Maze of Galious",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_Maze_of_Galious"
+      }
+    ]
+  },
+  {
+    "id": "mystery-house",
+    "title": "Mystery House",
+    "year": 1980,
+    "decade": "1980s",
+    "developer": "Roberta Williams & Ken Williams",
+    "publisher": "On-Line Systems",
+    "genre": "Adventure",
+    "platform": "Apple II",
+    "image": "images/games/mystery-house.png",
+    "description": "Mystery House (1980) is Roberta and Ken Williams' Apple II murder mystery — the first graphical adventure game and the first release of the company that became Sierra On-Line.",
+    "longDescription": "The player is shut inside an abandoned Victorian mansion with seven other people. While searching the house for a hidden cache of jewels, the player finds the other guests being killed one by one, and must identify the murderer before becoming the next victim. Commands are typed in, as in the text adventures of the time, but each location is shown as a simple line drawing.",
+    "trivia": [
+      "Roberta Williams drew on Agatha Christie's And Then There Were None and the board game Clue.",
+      "Sierra released the game into the public domain in 1987 to mark the company's seventh anniversary."
+    ],
+    "devStory": "After playing Colossal Cave Adventure, Roberta Williams designed, wrote and illustrated Mystery House and Ken Williams programmed it. Their company, On-Line Systems, released it on 5 May 1980. It first sold more than 10,000 copies by mail order and reached 80,000 including a 1982 re-release.",
+    "sources": [
+      {
+        "title": "Mystery House",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mystery_House"
+      }
+    ]
+  },
+  {
+    "id": "choplifter",
+    "title": "Choplifter",
+    "year": 1982,
+    "decade": "1980s",
+    "developer": "Dan Gorlin",
+    "publisher": "Broderbund",
+    "genre": "Horizontal Shooter",
+    "platform": "Apple II",
+    "image": "images/games/choplifter.png",
+    "description": "Choplifter (1982) is Dan Gorlin's Apple II rescue game, in which a helicopter pilot carries 64 hostages out of enemy territory sixteen at a time.",
+    "longDescription": "The player flies a rescue helicopter into hostile territory, where 64 hostages are held in four buildings of sixteen each. The helicopter carries sixteen passengers at a time, so a full rescue takes several trips under fire from tanks. The helicopter can turn to face left, right or toward the screen, the last used mainly to shoot tanks. Care is needed on the ground: landing on hostages, or blocking their path, kills them.",
+    "trivia": [
+      "Sega released an arcade version in 1985, which Game Machine listed as the most successful table arcade unit of October 1985.",
+      "It won a Certificate of Merit for Best Computer Audiovisual Effects at the 4th Arkie Awards."
+    ],
+    "devStory": "Broderbund published Choplifter for the Apple II on 21 May 1982, and it sold 9,000 copies within weeks. Versions for the Atari 8-bit computers, Commodore 64, VIC-20, Atari 5200, ColecoVision and MSX followed.",
+    "sources": [
+      {
+        "title": "Choplifter",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Choplifter"
+      }
+    ]
+  },
+  {
+    "id": "karateka",
+    "title": "Karateka",
+    "year": 1984,
+    "decade": "1980s",
+    "developer": "Jordan Mechner",
+    "publisher": "Broderbund",
+    "genre": "Fighting",
+    "platform": "Apple II",
+    "image": "images/games/karateka.png",
+    "description": "Karateka (1984) is Jordan Mechner's rotoscoped Apple II martial-arts game, in which a lone fighter climbs to Akuma's fortress to rescue Princess Mariko.",
+    "longDescription": "An unnamed hero climbs a mountain to the fortress of the warlord Akuma, who holds Princess Mariko prisoner, fighting guards one at a time along the way. The fighters move with unusually lifelike animation, and the game cuts away to scenes inside the fortress, showing Mariko and Akuma before the player arrives. The finale contains a famous trap: approaching Mariko in a fighting stance gets the hero killed by a single kick, while approaching her peacefully completes the rescue.",
+    "trivia": [
+      "Mechner created the animation by drawing over film of his karate teacher, a technique called rotoscoping.",
+      "Putting the Apple II disk in upside down made the game play upside down — a deliberate Easter egg."
+    ],
+    "devStory": "Mechner made Karateka while studying at Yale and submitted it late in his sophomore year. Broderbund released it for the Apple II in December 1984, and it sold more than 500,000 copies by 2000. Mechner's next game was Prince of Persia.",
+    "sources": [
+      {
+        "title": "Karateka (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Karateka_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "star-raiders",
+    "title": "Star Raiders",
+    "year": 1980,
+    "decade": "1980s",
+    "developer": "Atari, Inc.",
+    "publisher": "Atari, Inc.",
+    "genre": "Space Combat",
+    "platform": "Atari 8-bit",
+    "image": "images/games/star-raiders.png",
+    "description": "Star Raiders (1980) is Doug Neubauer's first-person space combat game for the Atari 400 and 800, which made the computers' name and set conventions later used by Elite and Wing Commander.",
+    "longDescription": "The player captains a starship in a war against the Zylon Empire. Combat takes place in a first-person 3D cockpit view, while a 2D galactic chart is used to plot hyperspace jumps across the sectors. Energy drives the engines, shields and photon torpedoes and is restored by docking with a friendly starbase. Six ship systems can be damaged in battle, shown on a status readout as PESCLR: photons, engines, shields, computer, long-range scan and radio. Four skill levels run from Novice to Commander.",
+    "trivia": [
+      "Neubauer took the idea of a galactic chart from the 1971 text game Star Trek, which he said he did not enjoy playing; the Zylons' name came from Battlestar Galactica's Cylons.",
+      "In 2007 it was named to a ten-game video game canon submitted to the Library of Congress."
+    ],
+    "devStory": "Neubauer, an Atari engineer, wrote Star Raiders in his spare time over eight to ten months starting in early 1979, and it was released in March 1980. Ports followed for the Atari 2600, 5200 and ST. His later 2600 game Solaris is often seen as its successor, though he said it is not a sequel.",
+    "sources": [
+      {
+        "title": "Star Raiders",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Star_Raiders"
+      }
+    ]
+  },
+  {
+    "id": "miner-2049er",
+    "title": "Miner 2049er",
+    "year": 1982,
+    "decade": "1980s",
+    "developer": "Big Five Software",
+    "publisher": "Big Five Software",
+    "genre": "Platform",
+    "platform": "Atari 8-bit",
+    "image": "images/games/miner-2049er.png",
+    "description": "Miner 2049er (1982) is Bill Hogue's Atari 8-bit platformer, in which Mountie Bounty Bob claims every floor of a uranium mine against the clock — ported to 22 systems.",
+    "longDescription": "Bounty Bob, a Mountie, has chased a criminal into a series of uranium mines. On each level he must walk over every section of every floor to claim it before time runs out, while avoiding the creatures in the mines. Later levels add transporters, slides, and a cannon fired by collecting TNT. Bob has five lives. The Atari computer version has ten levels, an unusually large game that needed a 16 KB cartridge, twice the standard size.",
+    "trivia": [
+      "Video magazine named it Electronic Game of the Year at the 5th Arkie Awards in 1984.",
+      "Retro Gamer counts 22 platforms that received a version, from the Atari 2600 and ColecoVision to the IBM PC and Game Boy."
+    ],
+    "devStory": "Bill Hogue designed and programmed the game at Big Five Software in Van Nuys, California, and it was released in December 1982. The sequel, Bounty Bob Strikes Back!, followed in 1985.",
+    "sources": [
+      {
+        "title": "Miner 2049er",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Miner_2049er"
+      }
+    ]
+  },
+  {
+    "id": "summer-games",
+    "title": "Summer Games",
+    "year": 1984,
+    "decade": "1980s",
+    "developer": "Epyx",
+    "publisher": "Epyx",
+    "genre": "Sports",
+    "platform": "Commodore 64 / Multiple",
+    "image": "images/games/summer-games.png",
+    "description": "Summer Games (1984) is Epyx's unofficial Olympics for up to eight players on the Commodore 64, the first in a long line of multi-event sports games.",
+    "longDescription": "Up to eight players compete in a series of Olympic-style events, among them the pole vault, platform diving, sprinting, gymnastics, freestyle swimming and skeet shooting; the exact line-up varies between versions. Medals score five points for gold, three for silver and one for bronze toward an overall winner. Without an official licence, the competition is presented simply as the 'Epyx Games'.",
+    "trivia": [
+      "It sold more than 250,000 copies by November 1989.",
+      "Epyx followed it with Summer Games II, Winter Games, World Games and California Games, and the C64 version can link with Summer Games II."
+    ],
+    "devStory": "Epyx released Summer Games for the Commodore 64 in 1984, the year of the Los Angeles Olympics. It was converted to the Apple II, Atari computers, Atari 2600 and 7800, ZX Spectrum, Master System, Amiga and Atari ST, published in the UK first by Quicksilva and later by U.S. Gold.",
+    "sources": [
+      {
+        "title": "Summer Games (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Summer_Games_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "ghostbusters-c64",
+    "title": "Ghostbusters",
+    "year": 1984,
+    "decade": "1980s",
+    "developer": "David Crane",
+    "publisher": "Activision",
+    "genre": "Action / Strategy",
+    "platform": "Commodore 64 / Multiple",
+    "image": "images/games/ghostbusters-c64.png",
+    "description": "Ghostbusters (1984) is David Crane's Commodore 64 film tie-in, a business game in which the player runs a ghost-catching franchise while the city's psychokinetic energy rises toward disaster.",
+    "longDescription": "The player starts a Ghostbusters franchise with a sum of money, buying a car and equipment, then drives around a city map responding to hauntings. At each haunted building two Ghostbusters lay a trap and steer a Slimer into it; a miss slimes one of the team. Ghosts drifting toward Zuul's temple push the city's PK energy higher, and sometimes merge into the Stay Puft Marshmallow Man, who crushes a block of the city. The game ends when PK energy reaches 9999, and it is only won if the player has earned more than was spent on equipment.",
+    "trivia": [
+      "Finishing the game gives an account number that starts a new game with the money already earned.",
+      "Crane added digitised speech from the film and a bouncing-ball sing-along to Ray Parker Jr.'s theme song."
+    ],
+    "devStory": "Activision reportedly gave the team six weeks to make the game while the film was in cinemas, so Crane adapted a project he was already working on, a game called Car Wars that already had a resource-management side. It was released on the Commodore 64 on 26 October 1984 and sold over two million copies by 1989; it spent three months at the top of the UK chart in 1985 and remained Activision's best-selling Commodore game.",
+    "sources": [
+      {
+        "title": "Ghostbusters (1984 video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ghostbusters_(1984_video_game)"
+      }
+    ]
+  },
+  {
+    "id": "wonder-boy-in-monster-land-sms",
+    "title": "Wonder Boy in Monster Land",
+    "year": 1988,
+    "decade": "1980s",
+    "developer": "Westone / Sega",
+    "publisher": "Sega",
+    "genre": "Action RPG",
+    "platform": "Sega Master System",
+    "image": "images/games/wonder-boy-in-monster-land-sms.png",
+    "description": "Wonder Boy in Monster Land (1988) is the Master System version of Westone's arcade sequel, which turned Wonder Boy into a platformer with gold, shops and upgradable equipment.",
+    "longDescription": "The MEKA Dragon has turned peaceful Wonder Land into Monster Land, and Bock Lee Temjin, the 'Wonder Boy', sets out to defeat it. The game has twelve levels of side-scrolling action, but defeated enemies drop gold that buys swords, armour, shields, boots and magic in shops along the way, giving it the feel of a role-playing game. Hidden doors and invisible shops reward exploration. An hourglass keeps time, and when it runs out it begins to drain Wonder Boy's hearts.",
+    "trivia": [
+      "On the PC Engine the game was turned into Bikkuriman World, and on the Famicom into Jaleco's Saiyūki World, each with different characters.",
+      "Computer and Video Games scored the Master System version 9/10."
+    ],
+    "devStory": "Westone, originally named Escape, created the arcade game, which Sega released in Japan in July 1987; Sega made the Master System conversion, released in Japan on 31 January 1988 and in North America that August. It was followed by Wonder Boy III: The Dragon's Trap in 1989.",
+    "sources": [
+      {
+        "title": "Wonder Boy in Monster Land",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Wonder_Boy_in_Monster_Land"
+      }
+    ]
+  },
+  {
+    "id": "donkey-kong-colecovision",
+    "title": "Donkey Kong",
+    "year": 1982,
+    "decade": "1980s",
+    "developer": "Coleco",
+    "publisher": "Coleco",
+    "genre": "Platform",
+    "platform": "ColecoVision",
+    "image": "images/games/donkey-kong-colecovision.png",
+    "description": "The ColecoVision's Donkey Kong (1982) was the first home version of Nintendo's arcade hit, packed in with every console and praised as the most faithful arcade conversion of its day.",
+    "longDescription": "As in the arcade original, a carpenter — the character who would become Mario — climbs girders and ladders, jumping barrels thrown by Donkey Kong, to rescue a woman held at the top of the screen. Coleco built its new console's launch around the game: every ColecoVision came with the cartridge,, and the console was positioned as offering a closer arcade experience than the Atari 2600 or Intellivision. A 1983 Creative Computing review called it 'the most faithful adaptation of the original video game I have seen'.",
+    "trivia": [
+      "Coleco's Eric Bromley negotiated the licence with Nintendo's Hiroshi Yamauchi, who reportedly asked for $200,000 up front that day plus $2 for every unit sold.",
+      "After Universal's president threatened to sue over the home version, Coleco agreed to pay Universal royalties of 3% of the game's net sale price."
+    ],
+    "devStory": "The ColecoVision went on sale in August 1982 with Donkey Kong as its pack-in, and Coleco sold more than 500,000 consoles by Christmas, helped by the game. The bundled version eventually sold 2 million units. Coleco also released versions for the Atari 2600 and Intellivision.",
+    "sources": [
+      {
+        "title": "Donkey Kong (1981 video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Donkey_Kong_(1981_video_game)"
+      },
+      {
+        "title": "ColecoVision",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/ColecoVision"
+      }
+    ]
+  },
+  {
+    "id": "smurf-rescue-in-gargamels-castle",
+    "title": "Smurf: Rescue in Gargamel's Castle",
+    "year": 1982,
+    "decade": "1980s",
+    "developer": "Coleco",
+    "publisher": "Coleco",
+    "genre": "Platform",
+    "platform": "ColecoVision",
+    "image": "images/games/smurf-rescue-in-gargamels-castle.png",
+    "description": "Smurf: Rescue in Gargamel's Castle (1982) is Coleco's ColecoVision platformer, in which a Smurf walks and jumps from the village to Gargamel's castle to free Smurfette.",
+    "longDescription": "Gargamel has kidnapped Smurfette, and the player guides a Smurf from the Smurf village through a forest and a cave to the wizard's castle. Each side-scrolling screen holds obstacles to jump — fences, stalagmites and ledges — and a mistimed jump means instant death. An energy bar slowly runs down throughout, and higher difficulty settings add crows, bats and spiders. The background music includes 'Simple Gifts' and the opening of Beethoven's Sixth Symphony.",
+    "trivia": [
+      "Moving back and forth between two particular forest screens awards hundreds of thousands of points — one of several Easter eggs in the ColecoVision version.",
+      "It won Best Video Game Audiovisual Effects at the 4th Arkie Awards, and Video magazine judged its audiovisuals the best in the ColecoVision line."
+    ],
+    "devStory": "Based on the Smurfs television series, the game was released for the ColecoVision in September 1982, a month after the console's launch, with an Atari 2600 version following in April 1983.",
+    "sources": [
+      {
+        "title": "Smurf: Rescue in Gargamel's Castle",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Smurf:_Rescue_in_Gargamel%27s_Castle"
+      }
+    ]
+  },
+  {
+    "id": "highly-responsive-to-prayers",
+    "title": "Highly Responsive to Prayers",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "ZUN",
+    "publisher": "Amusement Makers",
+    "genre": "Action",
+    "platform": "PC-9801",
+    "image": "images/games/highly-responsive-to-prayers.png",
+    "description": "Highly Responsive to Prayers (1997) is the first Touhou Project game: ZUN's PC-98 Arkanoid-style game that introduced the shrine maiden Reimu Hakurei and sold about 30 copies.",
+    "longDescription": "After her shrine is destroyed, Reimu Hakurei, the shrine maiden of Hakurei Shrine, passes through a gateway into another world to find those responsible. Unlike the vertical shooters that followed, the game plays like Arkanoid: Reimu bounces a Yin-Yang Orb around the screen by kicking it, swinging her gohei and throwing ofuda, aiming to flip every card on the stage. If time runs out, bullets rain down from above. There are 20 stages, with a boss every fifth stage, and after stage 5 the player chooses between the Makai and Hell routes, each with its own stages, bosses and ending.",
+    "trivia": [
+      "It introduced two Touhou fixtures: the bomb and the four difficulty levels, Easy, Normal, Hard and Lunatic.",
+      "According to ZUN, it sold about 30 copies."
+    ],
+    "devStory": "Jun'ya 'ZUN' Ōta made the game while studying mathematics at Tokyo Denki University, publishing it through his student club, Amusement Makers. He began in 1995, first showed it in November 1996 and released it at Comiket 52 on 15 August 1997. It is one of five Touhou games on the PC-98 before the series moved to Windows in 2002.",
+    "sources": [
+      {
+        "title": "Highly Responsive to Prayers",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Highly_Responsive_to_Prayers"
+      }
+    ]
+  },
+  {
+    "id": "princess-maker-2",
+    "title": "Princess Maker 2",
+    "year": 1993,
+    "decade": "1990s",
+    "developer": "Gainax",
+    "publisher": "Gainax",
+    "genre": "Simulation",
+    "platform": "PC-9801",
+    "image": "images/games/princess-maker-2.png",
+    "description": "Princess Maker 2 (1993) is Gainax's PC-98 raising simulation, in which the player schedules a daughter's lessons, jobs and adventures from age 10 to 18 — with 74 possible endings.",
+    "longDescription": "The player raises a girl from the age of ten to eighteen, planning her life one month at a time in three periods. Each period goes to training, part-time work, adventure or free time, and every choice shapes her abilities and personality. When she turns eighteen she chooses a career, and the game ends on one of 74 possible outcomes. Designer Takami Akai described it as 'a long-term game where you make a commitment and create your own world'.",
+    "trivia": [
+      "An English MS-DOS version was finished and sent out for review, but cancelled in 1996 when the company making it, IntraCorp, went bankrupt. It later leaked online.",
+      "It sold 30,000 copies by September 1993, and Gainax received 10,000 fan letters."
+    ],
+    "devStory": "The second Princess Maker game was designed by Takami Akai and Masato Kato and released for the PC-9801 on 15 June 1993. Ports followed for MS-DOS, FM Towns, PC Engine, Saturn, 3DO and Windows, and the 2004 remaster Refine reached English-speaking players on Steam in 2016.",
+    "sources": [
+      {
+        "title": "Princess Maker 2",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Princess_Maker_2"
+      }
+    ]
+  },
+  {
+    "id": "panzer-dragoon-saga",
+    "title": "Panzer Dragoon Saga",
+    "year": 1998,
+    "decade": "1990s",
+    "developer": "Team Andromeda",
+    "publisher": "Sega",
+    "genre": "RPG",
+    "platform": "Sega Saturn",
+    "image": "images/games/panzer-dragoon-saga.png",
+    "description": "Panzer Dragoon Saga (1998) is Team Andromeda's four-disc Saturn role-playing game, in which the mercenary Edge rides a shape-shifting dragon — critically adored, barely printed and never re-released.",
+    "longDescription": "The series' rail-shooting is replaced by a role-playing game. Edge, a mercenary and the only playable character, explores on foot and flies his dragon across open areas. Battles are random encounters fought in real time, built around three action gauges that charge continuously. The dragon can be reshaped at any time, trading attack, defence, agility and spiritual power against each other. The game can be finished in under 20 hours, short for an RPG of its time.",
+    "trivia": [
+      "Sega initially made 20,000 North American copies, which sold out in two days; Europe got about 1,000. English copies now sell for hundreds of dollars.",
+      "Director Yukio Futatsugi has said Sega lost the source code, which is one reason the game has never been re-released."
+    ],
+    "devStory": "Directed by Yukio Futatsugi, Saga was built by about 40 people — twice the team of Panzer Dragoon II Zwei — who programmed everything from scratch without graphics libraries. Two staff members died during its troubled development. It was released in Japan on 29 January 1998 and in North America on 5 May, and its 92% GameRankings average is the highest of any Saturn game.",
+    "sources": [
+      {
+        "title": "Panzer Dragoon Saga",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Panzer_Dragoon_Saga"
+      }
+    ]
+  },
+  {
+    "id": "radiant-silvergun",
+    "title": "Radiant Silvergun",
+    "year": 1998,
+    "decade": "1990s",
+    "developer": "Treasure",
+    "publisher": "ESP",
+    "genre": "Vertical Shooter",
+    "platform": "Sega Saturn",
+    "image": "images/games/radiant-silvergun.png",
+    "description": "Radiant Silvergun (1998) is Treasure's vertical shooter with seven weapons that level up permanently through colour-chained kills — the Japan-only Saturn game that became a byword for rare and expensive.",
+    "longDescription": "The ship starts with three weapons — a forward laser, homing shots and a spread gun — each on its own button. Pressing two at once fires three more attacks: a rear laser, a homing plasma beam and short-range missiles. All three together swing a sword that absorbs certain enemy bullets and charges a screen-clearing attack. Enemies come in red, blue and yellow, and destroying the same colour in a row builds chains that score heavily and level up whichever weapon made the kill, with upgrades kept for the rest of the game. The story, set in 2520 after an ancient robot triggers a catastrophe, is told through animated scenes and loops back on itself.",
+    "trivia": [
+      "Hidden dogs throughout the game give bonus points and unlock options when shot.",
+      "Its spiritual successor, Ikaruga (2001), was originally subtitled Radiant Silvergun 2."
+    ],
+    "devStory": "Hiroshi Iuchi directed a team of about ten at Treasure, a studio known for console action games, with music by Hitoshi Sakimoto. It appeared in Japanese arcades on 28 May 1998 and on the Saturn that July, selling around 50,000 copies; it did not get a Western release until the Xbox 360 version in 2011.",
+    "sources": [
+      {
+        "title": "Radiant Silvergun",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Radiant_Silvergun"
+      }
+    ]
+  },
+  {
+    "id": "burning-rangers",
+    "title": "Burning Rangers",
+    "year": 1998,
+    "decade": "1990s",
+    "developer": "Sonic Team",
+    "publisher": "Sega",
+    "genre": "Action",
+    "platform": "Sega Saturn",
+    "image": "images/games/burning-rangers.png",
+    "description": "Burning Rangers (1998) is Sonic Team's Saturn firefighting game, in which jetpack-equipped rescuers put out fires and save civilians, guided only by a voice on the radio.",
+    "longDescription": "In a future where fire is the only remaining threat to human life, the Burning Rangers fight blazes and rescue trapped civilians across four missions. Energy crystals, which work like the rings in Sonic the Hedgehog, protect the player from a hit and are spent to teleport civilians to safety — five crystals per rescue. There is no map: instead, a navigator gives spoken directions through the building. The player can jet-pack, swim and dive, each stage ends with a boss and a grade from S to D, and finishing the game unlocks a mode that randomises the routes through the levels.",
+    "trivia": [
+      "Producer Yuji Naka wanted to make a game about rescuing people rather than killing them.",
+      "It uses the same engine as NiGHTS into Dreams."
+    ],
+    "devStory": "Directed by Naoto Ohshima and produced by Yuji Naka, the game was made by a team of 31 over about a year and a half, starting after Christmas NiGHTS in late 1996. It was released in Japan in early 1998, in North America on 28 May and in Europe on 19 June.",
+    "sources": [
+      {
+        "title": "Burning Rangers",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Burning_Rangers"
+      }
+    ]
+  },
+  {
+    "id": "power-stone",
+    "title": "Power Stone",
+    "year": 1999,
+    "decade": "1990s",
+    "developer": "Capcom",
+    "publisher": "Capcom",
+    "genre": "Fighting",
+    "platform": "Dreamcast",
+    "image": "images/games/power-stone.png",
+    "description": "Power Stone (1999) is Capcom's 3D arena fighter for the Dreamcast, where tables, chairs and bombs are weapons and collecting three Power Stones transforms a fighter.",
+    "longDescription": "Two fighters battle in fully 3D arenas they can move around freely, picking up and throwing the furniture and objects lying around them. Gems called Power Stones appear during the fight; a fighter who gathers three transforms into a more powerful form for a short time. The original game has ten playable characters.",
+    "trivia": [
+      "Character art was by Akira Yasuda, the artist known as Akiman, and Hideki Ishikawa.",
+      "A manga and an anime series followed in 1999, and the sequel Power Stone 2 in 2000."
+    ],
+    "devStory": "Directed by Tatsuya Nakae and Hideaki Itsuno, Power Stone ran on Sega's NAOMI arcade board and was released in Japanese arcades and on the Dreamcast in February 1999, reaching North America that September. Edge called the Dreamcast version 'a jewel in Dreamcast's crown'.",
+    "sources": [
+      {
+        "title": "Power Stone (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Power_Stone_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "starglider",
+    "title": "Starglider",
+    "year": 1986,
+    "decade": "1980s",
+    "developer": "Argonaut Software",
+    "publisher": "Rainbird",
+    "genre": "Space Combat",
+    "platform": "Atari ST",
+    "image": "images/games/starglider.png",
+    "description": "Starglider (1986) is Jez San's wireframe 3D flight game for the Atari ST and Amiga, fighting Egron invaders on the planet Novenia — the series that led Argonaut to build the Super FX chip.",
+    "longDescription": "The planet Novenia has been occupied by the mechanised Egrons, whose battleships slipped past its defences disguised as Stargliders, a species of migratory bird. The player flies a prototype fighter over the landscape in first-person wireframe 3D, starting with only lasers; TV-guided missiles need energy, which is collected by skimming low over high-tension power lines. The story is told in a novella by James Follett packed with the game, and most versions feature sampled speech.",
+    "trivia": [
+      "The Amiga version's title music by Dave Lowe used digitised samples as instruments, before tracker music became common.",
+      "Argonaut's work on Starglider led to its partnership with Nintendo on the Super FX chip that powered Star Fox."
+    ],
+    "devStory": "Starglider was developed by Jez San's Argonaut Software and published by Rainbird in 1986, starting on the Atari ST, with versions for many 8-bit and 16-bit computers following. Crash named it Game of the Year for 1986, it sold close to 200,000 copies, and the filled-polygon Starglider 2 followed in 1988.",
+    "sources": [
+      {
+        "title": "Starglider",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Starglider"
+      }
+    ]
+  },
+  {
+    "id": "golvellius-sms",
+    "title": "Golvellius: Valley of Doom",
+    "year": 1988,
+    "decade": "1980s",
+    "developer": "Compile",
+    "publisher": "Sega",
+    "genre": "Action-Adventure",
+    "platform": "Sega Master System",
+    "image": "images/games/golvellius-sms.png",
+    "description": "Golvellius: Valley of Doom (1988) is Compile's Master System action-adventure, in which Kelesis fights through eight guarded regions of a valley to rescue Princess Rena.",
+    "longDescription": "Princess Rena has gone into the Valley of Doom to find a rare herb to cure her father, the king, and the swordsman Kelesis goes in after her. Most of the game is top-down sword combat across eight regions, each guarded by a boss that must be defeated before moving on. Secret chambers hidden around the valley open to give advice, better equipment and items, and underground caverns switch between side-scrolling and top-down views on the way to each boss. The final area opens only once every boss has fallen.",
+    "trivia": [
+      "Golvellius himself turns out to be a good creature possessed by a demon, who joins Kelesis after his defeat; the sequel the ending implies was never made.",
+      "Computer and Video Games scored the Master System version 87% in 1989."
+    ],
+    "devStory": "Compile first released Golvellius on the MSX in Japan in April 1987. Sega licensed it in 1988 and published an enhanced version, with new graphics and different layouts, for the Master System in Japan that August and in North America in December.",
+    "sources": [
+      {
+        "title": "Golvellius",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Golvellius"
+      }
+    ]
+  },
+  {
+    "id": "doki-doki-panic",
+    "title": "Yume Kōjō: Doki Doki Panic",
+    "year": 1987,
+    "decade": "1980s",
+    "developer": "Nintendo R&D4",
+    "publisher": "Nintendo",
+    "genre": "Platform",
+    "platform": "Famicom Disk System",
+    "image": "images/games/doki-doki-panic.png",
+    "description": "Yume Kōjō: Doki Doki Panic (1987) is Nintendo's Famicom Disk System platformer made for a Fuji Television event — the game that was reworked into the Western Super Mario Bros. 2.",
+    "longDescription": "Doki Doki Panic was a promotional game built around the mascots of Fuji Television's Yume Kōjō '87 event: Imajin, Lina, Mama and Papa, who enter a storybook world with an Arabian theme. Instead of stomping on enemies, which does not defeat them, the characters pull vegetables out of the ground and pick up and throw enemies and objects. Each of the four plays differently in speed, strength and jumping, and the game has to be finished with every one of them. The music is by Koji Kondo.",
+    "trivia": [
+      "Its design began as a two-player, vertically scrolling prototype by Kensuke Tanabe, which was shelved when Shigeru Miyamoto asked for horizontal scrolling.",
+      "Nintendo of America judged the Japanese Super Mario Bros. 2 too hard and too similar to the first game, so Doki Doki Panic was converted instead: Mario, Luigi, Toad and the Princess replaced the four mascots, a run button was added, and the game no longer had to be completed with every character."
+    ],
+    "devStory": "Directed by Kensuke Tanabe and produced by Shigeru Miyamoto at Nintendo R&D4, the game was released for the Famicom Disk System in Japan on 10 July 1987. As Super Mario Bros. 2 it reached North America on 9 October 1988, and Japan eventually received that version too, as Super Mario USA, in 1992.",
+    "sources": [
+      {
+        "title": "Yume Kōjō: Doki Doki Panic",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Yume_K%C5%8Dj%C5%8D:_Doki_Doki_Panic"
+      }
+    ]
+  },
+  {
+    "id": "famicom-detective-club",
+    "title": "Famicom Detective Club: The Missing Heir",
+    "year": 1988,
+    "decade": "1980s",
+    "developer": "Nintendo R&D1",
+    "publisher": "Nintendo",
+    "genre": "Adventure",
+    "platform": "Famicom Disk System",
+    "image": "images/games/famicom-detective-club.png",
+    "description": "Famicom Detective Club: The Missing Heir (1988) is Nintendo's two-part Famicom Disk System mystery, designed by Yoshio Sakamoto, which stayed in Japan for 33 years.",
+    "longDescription": "The player is a young man found near a cliff with no memory, who becomes an assistant detective investigating the death of Kiku Ayashiro. The case leads to the Ayashiro estate in the village of Myoujin, where a local saying that the dead come back to life is tied to a series of killings. The game is a menu-driven adventure: the player chooses commands such as Ask, Examine, Take, Show and Go, sometimes pointing a cursor at the scene, and answers questions by spelling out words letter by letter.",
+    "trivia": [
+      "It was released in two parts on separate disks, in April and June 1988.",
+      "Its sequel, The Girl Who Stands Behind (1989), is a prequel set three years earlier."
+    ],
+    "devStory": "Directed by Satoru Okada and produced by Gunpei Yokoi, the game was designed by Yoshio Sakamoto, who co-wrote it. It was released only in Japan, and the original never left the country; both games were remade for the Nintendo Switch in 2021, which became their first release outside Japan.",
+    "sources": [
+      {
+        "title": "Famicom Detective Club",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Famicom_Detective_Club"
+      }
+    ]
+  },
+  {
+    "id": "blue-lightning",
+    "title": "Blue Lightning",
+    "year": 1989,
+    "decade": "1980s",
+    "developer": "Epyx",
+    "publisher": "Atari Corporation",
+    "genre": "Rail Shooter",
+    "platform": "Atari Lynx",
+    "image": "images/games/blue-lightning.png",
+    "description": "Blue Lightning (1989) is Epyx's After Burner-style jet combat game and one of the Atari Lynx's North American launch titles, built to show off the handheld's sprite scaling and rotation.",
+    "longDescription": "The player flies the Blue Lightning, a prototype fighter, seen from behind as in Sega's After Burner, across nine missions of increasing difficulty. Missiles are limited, with a machine gun to fall back on, and the six planes in reserve serve as lives. The game leans heavily on the Lynx's hardware sprite scaling and rotation to create its pseudo-3D effect.",
+    "trivia": [
+      "Electronic Gaming Monthly named it the Lynx's Handheld Game of the Year for 1990.",
+      "Attention to Detail remade it for the Atari Jaguar CD, where it was a pack-in game in 1995."
+    ],
+    "devStory": "Artist Arthur Koch and programmer Stephen Landrum conceived it for the Handy, as the Lynx was first called, and RJ Mical and Stephen Jungels designed it. It was shown alongside the system at the Summer 1989 CES and released with the Lynx in North America that year.",
+    "sources": [
+      {
+        "title": "Blue Lightning (1989 video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Blue_Lightning_(1989_video_game)"
+      }
+    ]
+  },
+  {
+    "id": "gates-of-zendocon",
+    "title": "Gates of Zendocon",
+    "year": 1989,
+    "decade": "1980s",
+    "developer": "Epyx",
+    "publisher": "Atari Corporation",
+    "genre": "Horizontal Shooter",
+    "platform": "Atari Lynx",
+    "image": "images/games/gates-of-zendocon.png",
+    "description": "Gates of Zendocon (1989) is Epyx's Atari Lynx launch shooter: 51 'universes' joined by teleport gates, in search of the evil spider Zendocon.",
+    "longDescription": "The player flies an unnamed fighter through 51 levels, called universes, linked non-linearly by teleportation gates, on the way to the evil spider Zendocon. Aliens that Zendocon has enslaved can join the player's ship and help protect it. Damage shows on the ship itself: the laser tip and then the engine are shot away before a final hit destroys it.",
+    "trivia": [
+      "A hidden level awards points for shooting the faces of the game's creators.",
+      "Designer Peter Engelbrite began work before working Lynx hardware existed, writing an emulator on an Apple II first."
+    ],
+    "devStory": "Engelbrite designed and programmed the game, also doing some of its art. It was one of the Lynx's North American launch titles in 1989. A Jaguar version was considered in 1993 but never produced.",
+    "sources": [
+      {
+        "title": "Gates of Zendocon",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Gates_of_Zendocon"
+      }
+    ]
+  },
+  {
+    "id": "gex-3do",
+    "title": "Gex",
+    "year": 1995,
+    "decade": "1990s",
+    "developer": "Crystal Dynamics",
+    "publisher": "Crystal Dynamics",
+    "genre": "Platform",
+    "platform": "3DO",
+    "image": "images/games/gex-3do.png",
+    "description": "Gex (1995) is Crystal Dynamics' 3DO platformer starring a wisecracking, television-obsessed gecko trapped in the Media Dimension, which sold about 750,000 copies on the 3DO.",
+    "longDescription": "Gex, a gecko who has watched far too much television, is pulled into the Media Dimension by Rez, who wants him as his network's mascot. The 24 levels are spread across five worlds themed on TV channels, each ending in a boss, with hidden remotes opening extra levels. Gex whips enemies with his tail, bounces on it, and uses the suction pads on his feet to climb walls and ceilings. Comedian Dana Gould voiced Gex and wrote his many one-liners.",
+    "trivia": [
+      "GamePro named it Best 3DO Game at the 1994 Consumer Electronics Show, before release.",
+      "Next Generation reported about 750,000 copies of the 3DO version sold worldwide."
+    ],
+    "devStory": "Development took about 21 months, missing an original June 1994 deadline. The game reached the 3DO in North America on 7 April 1995, followed by PlayStation and Saturn versions that December and a Windows version in 1996. The 3D sequels Enter the Gecko (1998) and Deep Cover Gecko (1999) followed.",
+    "sources": [
+      {
+        "title": "Gex (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Gex_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "cybermorph",
+    "title": "Cybermorph",
+    "year": 1993,
+    "decade": "1990s",
+    "developer": "Attention to Detail",
+    "publisher": "Atari Corporation",
+    "genre": "Shooter",
+    "platform": "Atari Jaguar",
+    "image": "images/games/cybermorph.png",
+    "description": "Cybermorph (1993) was the Atari Jaguar's North American pack-in game: a polygonal flight shooter in which a morphing fighter recovers pods across 40 planets, guided by the AI voice Skylar.",
+    "longDescription": "The player pilots the TransmoGriffon, a shape-changing attack craft, against the Pernitia empire, recovering pods across five sectors of eight planets each, some 50 levels in all. Skylar, an artificial intelligence built into the ship, comments on the action in sampled speech. The game draws its landscapes with Gouraud-shaded polygons, roughly 400 to 600 at a time, at 10 to 18 frames per second.",
+    "trivia": [
+      "Its engine began as a landscape demo that Attention to Detail wrote in 11 days for the never-released Konix Multisystem, based on David Braben's Zarch.",
+      "The 1994 reissue shrank the cartridge from 2 MB to 1 MB, dropping the intro animation, the music and some of Skylar's lines."
+    ],
+    "devStory": "Atari's own testers designed the levels while Attention to Detail built the terrain and enemies, finishing the game while the Jaguar hardware itself was still being finalised. It shipped with the console in North America on 23 November 1993. Critics were divided, and the Jaguar CD sequel Battlemorph followed in 1995.",
+    "sources": [
+      {
+        "title": "Cybermorph",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cybermorph"
+      }
+    ]
+  },
+  {
+    "id": "star-castle",
+    "title": "Star Castle",
+    "year": 1980,
+    "decade": "1980s",
+    "developer": "Tim Skelly / Cinematronics",
+    "publisher": "Cinematronics",
+    "genre": "Shooter",
+    "platform": "Arcade",
+    "image": "images/games/star-castle.png",
+    "description": "Star Castle (1980) is Cinematronics' vector shooter, in which a ship chips away at three rotating shield rings to destroy the cannon at their centre — the game Yars' Revenge was built from.",
+    "longDescription": "An enemy cannon sits at the centre of three rotating rings of shields, each of twelve sections that take two hits apiece. The player's ship must shoot a gap through the rings to hit the cannon, while three homing mines chase it around the screen, speeding up as the game goes on. Destroying the outer ring prompts the cannon to rebuild it, and destroying the cannon earns an extra ship. The game was drawn in black-and-white vector graphics, with a coloured plastic overlay turning the rings yellow, orange and red and the rest of the screen blue.",
+    "trivia": [
+      "Atari's Howard Scott Warshaw, asked to port it to the 2600, reworked its ideas into Yars' Revenge instead.",
+      "It was Cinematronics' most successful game, selling more than 10,000 units."
+    ],
+    "devStory": "Designed by Tim Skelly and programmed by Scott Boden, Star Castle was released in October 1980 and later converted to the Vectrex in 1983. Flux magazine called it 'one of the all-time great vector graphics classics'.",
+    "sources": [
+      {
+        "title": "Star Castle",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Star_Castle"
+      },
+      {
+        "title": "Cinematronics",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cinematronics"
+      }
+    ]
+  },
+  {
+    "id": "jetpac",
+    "title": "Jetpac",
+    "year": 1983,
+    "decade": "1980s",
+    "developer": "Ultimate Play the Game",
+    "publisher": "Ultimate Play the Game",
+    "genre": "Shooter",
+    "platform": "ZX Spectrum",
+    "image": "images/games/jetpac.png",
+    "description": "Jetpac (1983) is Ultimate Play the Game's first home computer game: Jetman assembles and fuels a rocket while fighting off aliens, on a 16K ZX Spectrum. It sold over 300,000 copies.",
+    "longDescription": "Jetman, an astronaut with a jetpack, has to put his rocket back together from parts scattered across the screen, then collect fuel for it, all while waves of aliens attack. Once the rocket is fuelled he can board it and fly to the next planet. Falling treasures can be caught for bonus points. Every four levels the rocket is reset and must be assembled again, and the player gains an extra life.",
+    "trivia": [
+      "It won Game of the Year at the 1983 Golden Joystick Awards.",
+      "Jetpac reappeared as an unlockable minigame inside Donkey Kong 64 (1999), and in Rare Replay (2015)."
+    ],
+    "devStory": "Chris Stamper programmed the game and his brother Tim drew the graphics. Released for the 16K ZX Spectrum in May 1983, with VIC-20 and BBC Micro versions, it was followed by Lunar Jetman the same year and, on the NES, Solar Jetman (1990).",
+    "sources": [
+      {
+        "title": "Jetpac",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Jetpac"
+      },
+      {
+        "title": "Ultimate Play the Game",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ultimate_Play_the_Game"
+      }
+    ]
+  },
+  {
+    "id": "gods-amiga",
+    "title": "Gods",
+    "year": 1991,
+    "decade": "1990s",
+    "developer": "Bitmap Brothers",
+    "publisher": "Renegade Software",
+    "genre": "Platform",
+    "platform": "Amiga / Atari ST",
+    "image": "images/games/gods-amiga.png",
+    "description": "Gods (1991) is the Bitmap Brothers' platform game, in which Hercules fights through four guardians to win back the citadel of the gods — with a score by John Foxx as Nation 12.",
+    "longDescription": "Hercules sets out to reclaim the citadel of the gods from four guardians, each waiting as a boss at the end of a level. The game asks for precisely timed jumps and careful puzzle-solving with levers and objects, and the hero can carry only four items at a time. Treasure collected along the way is spent with a trader between levels on weapons and other items.",
+    "trivia": [
+      "John Foxx, recording as Nation 12, performed the music, and Simon Bisley painted the box art.",
+      "Computer Gaming World named it one of the top four action games of 1992."
+    ],
+    "devStory": "The Bitmap Brothers released Gods for the Amiga and Atari ST in 1991, published by Renegade in Europe. Conversions followed for the Mega Drive, Super NES, Acorn Archimedes and PC-98, and Gods Remastered appeared in 2018.",
+    "sources": [
+      {
+        "title": "Gods (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Gods_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "speedball-2",
+    "title": "Speedball 2: Brutal Deluxe",
+    "year": 1990,
+    "decade": "1990s",
+    "developer": "Bitmap Brothers",
+    "publisher": "Image Works",
+    "genre": "Sports",
+    "platform": "Amiga / Atari ST",
+    "image": "images/games/speedball-2.png",
+    "description": "Speedball 2: Brutal Deluxe (1990) is the Bitmap Brothers' violent future sport, a blend of handball and ice hockey in which the underdog team Brutal Deluxe fights its way up the league.",
+    "longDescription": "Set in 2105, the game follows Brutal Deluxe, a new team entering a violent sport that mixes handball and ice hockey. Nine players a side compete in matches of 180 seconds. A goal is worth 10 points, raised to 15 or 20 by lighting the multiplier ramps on the walls, and floor and wall targets give bonuses — but so does injuring an opponent, who is replaced from a bench of three substitutes. The game offers knockout, cup, league, practice and two-player modes.",
+    "trivia": [
+      "Its soundtrack, by Simon Rogers with Richard Joseph, won Best Soundtrack at the 1991 Golden Joystick Awards.",
+      "Amiga Power ranked it the third-best game of all time, and it has sold more than two million copies."
+    ],
+    "devStory": "Designed by Eric Matthews, programmed by Robert Trevellyan and drawn by Daniel Malone, Speedball 2 was released in 1990 for the Amiga and Atari ST as the sequel to 1988's Speedball. It was converted to the Mega Drive, Master System, Game Boy and Atari Jaguar, among others, and remade several times.",
+    "sources": [
+      {
+        "title": "Speedball 2: Brutal Deluxe",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Speedball_2:_Brutal_Deluxe"
+      }
+    ]
+  },
+  {
+    "id": "dragon-quest",
+    "title": "Dragon Quest",
+    "year": 1986,
+    "decade": "1980s",
+    "developer": "Chunsoft",
+    "publisher": "Enix",
+    "genre": "RPG",
+    "platform": "NES / Famicom",
+    "image": "images/games/dragon-quest.png",
+    "description": "Dragon Quest (1986) is Yuji Horii's Famicom role-playing game, drawn by Akira Toriyama and scored by Koichi Sugiyama, often credited with setting the template for Japanese console RPGs. North America got it in 1989 as Dragon Warrior.",
+    "longDescription": "A lone hero sets out across the land of Alefgard to rescue Princess Gwaelin from the Dragonlord, who has stolen the Ball of Light and plunged the land into darkness. Only after the princess is saved does the game reveal its true objective. The world is open to explore, and its monsters grow tougher the further the hero travels from the castle. Battles are turn-based and seen in first person, with four commands: fight, run, spell and item. Nintendo's North American version replaced the Japanese password system with battery-backed saves.",
+    "trivia": [
+      "The North American title changed to Dragon Warrior to avoid a trademark conflict with the tabletop game DragonQuest.",
+      "Nintendo Power gave the game away with subscriptions in 1990, bringing in nearly 500,000 new subscribers.",
+      "It won several 1986 Famitsu awards, including Game of the Year."
+    ],
+    "devStory": "Chunsoft developed the game for Enix, with Yuji Horii as designer and writer, Koichi Nakamura directing, Akira Toriyama on art and Koichi Sugiyama on music. It was released for the Famicom in Japan on 27 May 1986 and sold about 1.5 million copies there, and more than 2 million worldwide. It was later remade for the Super Famicom, the Game Boy Color and, in 2025, in HD-2D.",
+    "sources": [
+      {
+        "title": "Dragon Quest (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dragon_Quest_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "mother-famicom",
+    "title": "Mother",
+    "year": 1989,
+    "decade": "1980s",
+    "developer": "Ape / Nintendo",
+    "publisher": "Nintendo",
+    "genre": "RPG",
+    "platform": "NES / Famicom",
+    "image": "images/games/mother-famicom.png",
+    "description": "Mother (1989) is Shigesato Itoi's Famicom role-playing game set in a late-20th-century America, with baseball bats and psychic powers in place of swords and magic. Its finished English version was shelved, and it finally appeared in the West in 2015 as EarthBound Beginnings.",
+    "longDescription": "Ninten, a boy living in late-20th-century America, uses his great-grandfather's research into psychic powers to deal with a wave of paranormal events. Lloyd, Ana and Teddy join his party, and the antagonist is the alien Giegue. Its random encounters and first-person battles follow Dragon Quest, which the game also parodies, but the heroes fight with baseball bats, toy guns and PSI powers. Critics praised its parody of Dragon Quest but found the difficulty and balance harsh.",
+    "trivia": [
+      "Itoi took the title partly from John Lennon's song \"Mother\".",
+      "An English localization, Earth Bound, was finished in 1990 but shelved; a prototype cartridge surfaced in 1998 and circulated as EarthBound Zero.",
+      "Its 1994 sequel, Mother 2, reached the US in 1995 as EarthBound."
+    ],
+    "devStory": "Shigesato Itoi pitched the idea to Shigeru Miyamoto, who produced the game. It was developed by Ape and Nintendo Tokyo R&D Products, with music by Keiichi Suzuki and Hirokazu Tanaka, and released on 27 July 1989. It sold about 400,000 copies in Japan, the sixth best-selling game of 1989 there.",
+    "sources": [
+      {
+        "title": "EarthBound Beginnings",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mother_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "lemmings-amiga",
+    "title": "Lemmings",
+    "year": 1991,
+    "decade": "1990s",
+    "developer": "DMA Design",
+    "publisher": "Psygnosis",
+    "genre": "Puzzle",
+    "platform": "Amiga",
+    "image": "images/games/lemmings-amiga.png",
+    "description": "Lemmings (1991) is DMA Design's puzzle game in which green-haired creatures walk straight into danger unless the player assigns them jobs; it sold an estimated 15 million copies.",
+    "longDescription": "Lemmings stream from an entrance and walk straight ahead regardless of danger. The player has to get enough of them to the exit within a time limit by handing out eight skills in limited numbers: climber, floater, bomber, blocker, builder, basher, miner and digger. The original game's 120 levels are split into four difficulty ratings, Fun, Tricky, Taxing and Mayhem, and there are 20 two-player levels that use the Amiga's ability to run two mice at once.",
+    "trivia": [
+      "The game started when Mike Dailly animated tiny 8×8 pixel figures in Deluxe Paint and Russell Kay said, \"There's a game in that!\"",
+      "In 2004 Graham Cormode proved that deciding whether a Lemmings level can be solved is NP-hard.",
+      "Blizzard's Bob Fitch said it helped inspire Warcraft: Orcs & Humans."
+    ],
+    "devStory": "Designed by David Jones and programmed by Jones, Russell Kay and Mike Dailly, Lemmings was published by Psygnosis on 14 February 1991 and sold more than 55,000 copies on its first day. It was ported to around two dozen platforms, and Dailly estimated 15 million copies sold by 2006.",
+    "sources": [
+      {
+        "title": "Lemmings (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Lemmings_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "defender-of-the-crown",
+    "title": "Defender of the Crown",
+    "year": 1986,
+    "decade": "1980s",
+    "developer": "Cinemaware",
+    "publisher": "Cinemaware",
+    "genre": "Strategy",
+    "platform": "Amiga",
+    "image": "images/games/defender-of-the-crown.png",
+    "description": "Defender of the Crown (1986) is Cinemaware's Amiga strategy game set in 12th-century England, where Saxon lords fight Normans for territory through sieges, jousts and raids, with art by James D. Sachs.",
+    "longDescription": "England in 1149 is without a king, and rival factions fight over its territory. The player picks one of four Saxon lords — Wilfred of Ivanhoe, Cedric of Rotherwood, Geoffrey Longsword or Wolfric the Wild — and wages a war of attrition against the Normans by building armies, besieging castles, jousting in tournaments, rescuing damsels and calling on Robin Hood for help.",
+    "trivia": [
+      "Computer Gaming World gave it an award for Artistic Achievement in a Computer Game in 1987.",
+      "In 1989 it became the second game to ship on CD-ROM, after The Manhole.",
+      "Some planned features were cut partly because of Cinemaware's financial strain."
+    ],
+    "devStory": "Kellyn Beeck designed the game, James D. Sachs drew its graphics and Jim Cuomo wrote the music. It came out for the Amiga on 1 November 1986, followed in 1987 by versions for MS-DOS, the Atari ST, Macintosh and Commodore 64. By 2001 it had sold more than a million copies.",
+    "sources": [
+      {
+        "title": "Defender of the Crown",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Defender_of_the_Crown"
+      }
+    ]
+  },
+  {
+    "id": "marble-madness",
+    "title": "Marble Madness",
+    "year": 1984,
+    "decade": "1980s",
+    "developer": "Atari Games",
+    "publisher": "Atari Games",
+    "genre": "Platform / Puzzle",
+    "platform": "Arcade",
+    "image": "images/games/marble-madness.png",
+    "description": "Marble Madness (1984) is Mark Cerny's isometric arcade game, played with a trackball, in which a marble is steered down six courses against the clock — Atari's first game programmed in C.",
+    "longDescription": "The player rolls a marble through six isometric courses, from \"Practice\" to the fifth course, \"Silly\", before time runs out. Time left over carries into the next race, and two players can race each other at once. Mark Cerny drew on miniature golf, racing games and the art of M. C. Escher, and the courses were stored as heightmaps and rendered with ray tracing.",
+    "trivia": [
+      "It was among the first games with true stereo sound.",
+      "Around 4,000 cabinets were sold, and it briefly became the highest-earning arcade game.",
+      "A sequel, Marble Man: Marble Madness II, was planned for 1991 with seventeen courses but cancelled after poor location tests."
+    ],
+    "devStory": "Mark Cerny designed the game and programmed it with Bob Flanagan on the Atari System 1 board, with music by Brad Fuller and Hal Canon. It was released in December 1984 and later converted to the Amiga, Commodore 64, NES (by Rare), Mega Drive and many other systems.",
+    "sources": [
+      {
+        "title": "Marble Madness",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Marble_Madness"
+      }
+    ]
+  },
+  {
+    "id": "elevator-action",
+    "title": "Elevator Action",
+    "year": 1983,
+    "decade": "1980s",
+    "developer": "Taito",
+    "publisher": "Taito",
+    "genre": "Platform / Shooter",
+    "platform": "Arcade",
+    "image": "images/games/elevator-action.png",
+    "description": "Elevator Action (1983) is Taito's spy game, in which Agent 17 works down a 30-storey building by elevator, collecting secret documents from behind red doors before escaping by car.",
+    "longDescription": "Agent 17, \"Otto\", enters a 30-storey building from the roof and must reach the ground floor. Secret documents behind red doors are worth 500 points each, and once all of them are taken he escapes in a waiting car. Enemy agents can be shot, jump-kicked, hit with falling light fixtures or crushed with elevators. Taking too long sets off an alarm that makes enemies more aggressive and elevators slower, and trying to leave with documents still uncollected sends Otto back up to them.",
+    "trivia": [
+      "It was Taito's first game sold as a conversion kit in North America.",
+      "It was one of the five highest-grossing arcade games of 1984 in American street locations."
+    ],
+    "devStory": "Toshio Kono designed the game, with music by Yoshio Imamura. Taito released it in Japan in June 1983 and North America in July. Conversions followed for the Famicom (1985), MSX, SG-1000, ZX Spectrum, Amstrad CPC and Commodore 64, and Elevator Action Returns reached arcades in 1994.",
+    "sources": [
+      {
+        "title": "Elevator Action",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Elevator_Action"
+      }
+    ]
+  },
+  {
+    "id": "rainbow-islands",
+    "title": "Rainbow Islands",
+    "year": 1987,
+    "decade": "1980s",
+    "developer": "Taito",
+    "publisher": "Taito",
+    "genre": "Platform",
+    "platform": "Arcade",
+    "image": "images/games/rainbow-islands.png",
+    "description": "Rainbow Islands (1987) is Taito's sequel to Bubble Bobble, in which Bubby and Bobby climb ten islands using rainbows as weapons and platforms while the sea rises below them.",
+    "longDescription": "Bubby and Bobby set out to save the Rainbow Islands from the Dark Shadow. Each of the ten islands has its own theme and four rounds, and the heroes must climb to the top before the rising water catches them. Rainbows serve as weapons, platforms and a way to collect items, and jumping on one drops it onto the enemies below. Collecting seven small diamonds of different colours in a round earns a big diamond, and taking them in the right order opens a secret room.",
+    "trivia": [
+      "The NES version replaced the main theme because it resembled \"Over the Rainbow\".",
+      "Amiga Power ranked it the best game of all time in its 1991 and 1992 top 100 lists."
+    ],
+    "devStory": "Fukio Mitsuji designed it, with music by Hisayoshi Ogura. Taito released it in Japanese arcades in October 1987. Graftgold converted it to the Commodore 64, ZX Spectrum, Amstrad CPC, Amiga and Atari ST for Ocean in 1989 and 1990, and the Spectrum version topped the UK charts in 1990.",
+    "sources": [
+      {
+        "title": "Rainbow Islands",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Rainbow_Islands"
+      }
+    ]
+  },
+  {
+    "id": "the-sentinel",
+    "title": "The Sentinel",
+    "year": 1986,
+    "decade": "1980s",
+    "developer": "Geoff Crammond",
+    "publisher": "Firebird",
+    "genre": "Puzzle",
+    "platform": "BBC Micro / Multiple",
+    "image": "images/games/the-sentinel.png",
+    "description": "The Sentinel (1986) is Geoff Crammond's 3D puzzle game for the BBC Micro, in which a Synthoid that cannot walk climbs a landscape by absorbing and creating objects, keeping out of the Sentinel's gaze.",
+    "longDescription": "The player is a telepathic Synthoid that cannot move. To climb from the lowest ground to the Sentinel's platform it absorbs objects for energy, creates trees, boulders and new Synthoid shells, and transfers its consciousness into a shell higher up. If the Sentinel's gaze falls on the player's square, it drains energy. Every unit the Sentinel absorbs reappears as a tree somewhere on the landscape, so the total energy stays constant. Absorbing the Sentinel ends the level, and the more energy is left, the more levels are skipped.",
+    "trivia": [
+      "It won Best Original Game of the Year at the Golden Joystick Awards.",
+      "The game has no ending: after the last level it loops back to level 1.",
+      "A fake sequel, Monolith, was previewed as an April Fool's joke in 1995; the real sequel, Sentinel Returns, came out in 1998."
+    ],
+    "devStory": "Geoff Crammond wrote the game for the BBC Micro, and Firebird published it in 1986. Crammond also did the Commodore 64 and Amstrad CPC versions, while Mike Follin converted it to the ZX Spectrum and Steve Bak to the Atari ST and Amiga. In the US it was released as The Sentry.",
+    "sources": [
+      {
+        "title": "The Sentinel (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_Sentinel_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "exile-bbc",
+    "title": "Exile",
+    "year": 1988,
+    "decade": "1980s",
+    "developer": "Peter Irvin & Jeremy Smith",
+    "publisher": "Superior Software",
+    "genre": "Action-Adventure",
+    "platform": "BBC Micro / Multiple",
+    "image": "images/games/exile-bbc.png",
+    "description": "Exile (1988) is a BBC Micro action-adventure with a physics simulation of gravity, inertia, water and wind, in which a jet-packed explorer roams the caves of planet Phoebus — often cited as one of the earliest Metroidvania games.",
+    "longDescription": "Mike Finn of the Columbus Force is sent to the planet Phoebus on a rescue mission, and the renegade genetic engineer Triax steals a Destinator from his ship. Finn explores a huge underground world with a jet pack and weapons, collecting energy cells, and a teleport system pulls him back to a safe point when he is close to death. The game simulates gravity, inertia, mass, explosions, water, wind and fire, and its creatures react to noise, have line-of-sight vision and remember where they last saw the player. Some choices can make the game impossible to finish.",
+    "trivia": [
+      "To save memory, the BBC version used a reduced 128×128 screen and generated its world procedurally from a fixed seed.",
+      "Amiga Power named the Amiga version the best game of 1991."
+    ],
+    "devStory": "Peter Irvin, author of Starship Command, and Jeremy Smith, author of Thrust, wrote Exile for the BBC Micro and Acorn Electron, published by Superior Software in 1988. Audiogenic published versions for the Commodore 64, Amiga and Atari ST in 1991.",
+    "sources": [
+      {
+        "title": "Exile (1988 video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Exile_(1988_video_game)"
+      }
+    ]
+  },
+  {
+    "id": "rogue-1980",
+    "title": "Rogue",
+    "year": 1980,
+    "decade": "1980s",
+    "developer": "Michael Toy & Glenn Wichman",
+    "publisher": "Epyx",
+    "genre": "Dungeon Crawler",
+    "platform": "Unix / Multiple",
+    "image": "images/games/rogue-1980.png",
+    "description": "Rogue (1980) is the Unix dungeon crawler of procedurally generated levels, ASCII graphics and permanent death that gave the roguelike genre its name.",
+    "longDescription": "The player, shown as an @ sign, descends through dungeon levels drawn in ASCII characters in search of the Amulet of Yendor at the bottom. Each level is built from a 3×3 grid of rooms and generated afresh each game, and the 26 kinds of monster are each represented by a letter. Items are unidentified until used or identified, play is turn-based, and death is permanent: the save file is erased when it is loaded, so players cannot reload after a mistake.",
+    "trivia": [
+      "Yendor is \"Rodney\" spelled backwards.",
+      "In 1983 a bot called Rog-O-Matic achieved a higher median score than 15 top Carnegie Mellon players.",
+      "Dennis Ritchie reportedly called it \"the biggest waste of CPU cycles in history\"."
+    ],
+    "devStory": "Michael Toy and Glenn Wichman wrote Rogue as students at UC Santa Cruz, and Ken Arnold later contributed. It spread with BSD Unix from 1980. Toy, Wichman and Jon Lane formed A.I. Design to sell an IBM PC version, and Epyx published versions for the Macintosh, Amiga and Atari ST, but the commercial releases were a flop. Early followers such as Hack (1982) and Moria (1983) grew into the roguelike genre.",
+    "sources": [
+      {
+        "title": "Rogue (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Rogue_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "montezumas-revenge",
+    "title": "Montezuma's Revenge",
+    "year": 1984,
+    "decade": "1980s",
+    "developer": "Robert Jaeger",
+    "publisher": "Parker Brothers",
+    "genre": "Platform",
+    "platform": "Atari 8-bit / Multiple",
+    "image": "images/games/montezumas-revenge.png",
+    "description": "Montezuma's Revenge (1984) is Robert Jaeger's platform game in which Panama Joe searches a 99-room Aztec pyramid for treasure. Decades later it became a famous hard case for AI research.",
+    "longDescription": "Panama Joe explores the underground pyramid of Montezuma II, 99 rooms across nine floors, to reach the Treasure Chamber. He collects jewels and keys, uses torches and swords, and has to get past enemies, lasers, conveyor belts and fire pits. The lowest floors are dark unless he has found a torch. The game has nine difficulty levels, and only from level 3 is the whole pyramid open.",
+    "trivia": [
+      "General game-playing AI algorithms failed at it in 2013; OpenAI made progress in 2018, and Uber's Go-Explore later handled it.",
+      "It had sold more than 600,000 copies by 1997."
+    ],
+    "devStory": "Robert Jaeger was 16 when he built the prototype on an Atari 800 and showed it at the 1983 Consumer Electronics Show. Parker Brothers squeezed it from 48 KB into a 16 KB cartridge, replacing an unfinished boss sequence with a final treasure room. It was released in 1984 for the Atari 2600, Atari 8-bit, ColecoVision, Commodore 64 and other systems.",
+    "sources": [
+      {
+        "title": "Montezuma's Revenge (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Montezuma%27s_Revenge_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "pool-of-radiance",
+    "title": "Pool of Radiance",
+    "year": 1988,
+    "decade": "1980s",
+    "developer": "Strategic Simulations, Inc.",
+    "publisher": "Strategic Simulations, Inc.",
+    "genre": "RPG",
+    "platform": "Commodore 64 / Multiple",
+    "image": "images/games/pool-of-radiance.png",
+    "description": "Pool of Radiance (1988) is SSI's first game based on the Advanced Dungeons & Dragons rules, set in the city of Phlan in the Forgotten Realms — the start of the Gold Box series.",
+    "longDescription": "The player builds a party of up to six characters from six races and four classes and adventures in the city of Phlan, on the northern shore of the Moonsea. Exploration is in first person, while combat switches to a top-down isometric view. The rules follow TSR's Advanced Dungeons & Dragons: spells must be memorised each day, and characters gain experience to rise in level. Characters could be carried over into the later Gold Box games.",
+    "trivia": [
+      "It won the 1988 Origins Award for Best Fantasy or Science Fiction Computer Game.",
+      "The DOS and Mac versions used a code wheel both as copy protection and for in-game puzzles."
+    ],
+    "devStory": "SSI developed the game under director Chuck Kroegel and designer George MacDonald, and released it for the Commodore 64 and MS-DOS in June 1988. It sold 264,536 copies for computers in North America. The sequels Curse of the Azure Bonds (1989), Secret of the Silver Blades (1990) and Pools of Darkness (1991) followed.",
+    "sources": [
+      {
+        "title": "Pool of Radiance",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Pool_of_Radiance"
+      }
+    ]
+  },
+  {
+    "id": "day-of-the-tentacle",
+    "title": "Day of the Tentacle",
+    "year": 1993,
+    "decade": "1990s",
+    "developer": "LucasArts",
+    "publisher": "LucasArts",
+    "genre": "Point-and-Click Adventure",
+    "platform": "PC/DOS",
+    "image": "images/games/day-of-the-tentacle.png",
+    "description": "Day of the Tentacle (1993) is LucasArts' time-travel adventure and sequel to Maniac Mansion, in which three friends in three different eras work together to stop Purple Tentacle from taking over the world.",
+    "longDescription": "Purple Tentacle, a mutant created by Dr. Fred Edison, sets out to take over the world, and Bernard, Hoagie and Laverne try to stop him with a faulty time machine that scatters them across three eras. The player switches between the three heroes and passes items between time periods through the \"Chron-o-Johns\", so that a change in the past solves a puzzle in the present or future. The complete original Maniac Mansion can be played on a computer inside the game.",
+    "trivia": [
+      "It was the first LucasArts adventure released with voice acting, around 4,500 lines of dialogue.",
+      "Adventure Gamers ranked it the best adventure game of all time in 2004.",
+      "Its art took inspiration from Chuck Jones's Looney Tunes cartoons."
+    ],
+    "devStory": "Tim Schafer and Dave Grossman directed and wrote the game, their first time leading a project, with early help from Ron Gilbert and Gary Winnick. Built on the SCUMM engine, it was released on 25 June 1993 on floppy disk and CD-ROM. Double Fine released a remastered version in 2016.",
+    "sources": [
+      {
+        "title": "Day of the Tentacle",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Day_of_the_Tentacle"
+      }
+    ]
+  },
+  {
+    "id": "alone-in-the-dark-1992",
+    "title": "Alone in the Dark",
+    "year": 1992,
+    "decade": "1990s",
+    "developer": "Infogrames",
+    "publisher": "Infogrames",
+    "genre": "Survival Horror",
+    "platform": "PC/DOS",
+    "image": "images/games/alone-in-the-dark-1992.png",
+    "description": "Alone in the Dark (1992) is Infogrames' Lovecraft-inspired haunted-house game, often called the first 3D survival horror game, whose polygon characters and fixed cameras Resident Evil later adopted.",
+    "longDescription": "The player chooses Edward Carnby or Emily Hartwood and explores Derceto, a haunted 1920s Louisiana mansion, in a story drawn from H. P. Lovecraft's Cthulhu Mythos. Three-dimensional characters of around 250 polygons each move over hand-drawn backgrounds, seen from fixed camera angles chosen to build tension. Inventory is limited by weight, and parts of the mansion can be tackled in different orders.",
+    "trivia": [
+      "Shinji Mikami adopted its fixed-camera approach for Resident Evil (1996).",
+      "Working titles included In the Dark, Screams in the Dark and The Evil Fear."
+    ],
+    "devStory": "Frédérick Raynal directed the game at Infogrames, with Bruno Bonnell producing, Hubert Chardot writing and Philippe Vachey composing. It was released for MS-DOS in Europe in 1992 and in the US in 1993, and it had sold 2.5 million copies by January 2000.",
+    "sources": [
+      {
+        "title": "Alone in the Dark (1992 video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Alone_in_the_Dark_(1992_video_game)"
+      }
+    ]
   }
 ]

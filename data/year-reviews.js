@@ -639,4 +639,291 @@ module.exports = [
       },
     ],
   },
+  {
+    id: 'year-1978',
+    year: 1978,
+    headline: 'Space Invaders Lands and the Golden Age Begins',
+    summary: 'Taito\'s Space Invaders was the top-grossing video game in the world in 1978, and its success is generally taken as the start of the golden age of arcade games. The same year Namco, Konami and Nintendo released their first arcade games, Atari popularised the trackball, and Magnavox launched the Odyssey² in the home.',
+    topGames: [
+      'Space Invaders (Arcade)',
+      'Football (Arcade)',
+      'Super Breakout (Arcade)',
+      'Gee Bee (Arcade)',
+      'Computer Othello (Arcade)',
+    ],
+    topEvents: [
+      {
+        title: 'Space Invaders (June)',
+        desc: 'Taito released Tomohiro Nishikado\'s Space Invaders in Japan in June, and Midway gave it a wide North American release in October. It became the first video game to top Game Machine\'s annual chart of all arcade machines in Japan.',
+      },
+      {
+        title: 'Three Future Giants Enter the Arcade',
+        desc: 'Namco released its first arcade video game, Gee Bee, in October; Konami released Block Yard; and Nintendo released Computer Othello.',
+      },
+      {
+        title: 'Atari Popularises the Trackball',
+        desc: 'Atari\'s arcade Football brought the trackball controller to a wide audience. The company also released Super Breakout, Fire Truck, Canyon Bomber and Avalanche.',
+      },
+      {
+        title: 'Magnavox Odyssey² (December)',
+        desc: 'Magnavox launched the Odyssey² in December, joining a crowded field of home systems that also included the Bally Professional Arcade and the APF-M1000.',
+      },
+    ],
+    quote: '',
+    sections: [
+      {
+        title: 'One Game Changes the Arcade',
+        html: '<p>In Japan alone, Space Invaders sold about 100,000 cabinets and grossed an estimated $670 million in 1978. Its success abroad followed within months: Midway\'s North American release came in October, and the game went on to be the top-grossing video game in the world for 1978 and again for 1979. It is the conventional starting point for the golden age of arcade video games.</p><p>In the United States the arcade business was already worth about $1 billion that year, against $200 million for home video games. The year\'s top earner in American arcades, according to Play Meter and RePlay, was still Cinematronics\' vector game Space Wars — Space Invaders\' effect there would show in 1979.</p>',
+      },
+      {
+        title: 'New Names',
+        html: '<p>1978 is notable for how many future industry leaders made their first moves. Namco, Konami and Nintendo released their first arcade video games, and companies founded that year included SNK, Koei, Muse Software and Automated Simulations, which would later become Epyx. On the home front the Atari VCS sold about 300,000 units, still a modest start for the console that would dominate the next four years.</p>',
+      },
+    ],
+    sources: [
+      { title: '1978 in video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1978_in_video_games' },
+      { title: 'Space Invaders', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Space_Invaders' },
+    ],
+  },
+  {
+    id: 'year-1979',
+    year: 1979,
+    headline: 'Asteroids, Galaxian and the First Third-Party Publisher',
+    summary: 'In 1979 the arcade boom gathered pace: Atari released Asteroids and Lunar Lander, Namco brought full colour to the fixed shooter with Galaxian, and Space Invaders was again the world\'s top-grossing game. At home, the Atari VCS reached a million sales, Atari launched the 400 and 800 computers, and Activision was founded.',
+    topGames: [
+      'Asteroids (Arcade)',
+      'Galaxian (Arcade)',
+      'Lunar Lander (Arcade)',
+      'Head On (Arcade)',
+      'Star Raiders (Atari 8-bit)',
+      'Akalabeth (Apple II)',
+    ],
+    topEvents: [
+      {
+        title: 'Asteroids (November)',
+        desc: 'Atari\'s vector-graphics Asteroids followed its Lunar Lander from August and went on to become Atari\'s second best-selling game of all time.',
+      },
+      {
+        title: 'Galaxian in Full Colour',
+        desc: 'Namco released Galaxian in November, a fixed shooter in the line of Space Invaders but displayed in full colour, with aliens that broke formation to dive at the player.',
+      },
+      {
+        title: 'Activision Is Founded',
+        desc: 'Former Atari programmers David Crane, Larry Kaplan, Alan Miller and Bob Whitehead founded Activision with Jim Levy on 1 October — the first independent, third-party console game developer. Capcom, Infocom and Strategic Simulations were also founded in 1979.',
+      },
+      {
+        title: 'Microvision and the Atari 400/800',
+        desc: 'Milton Bradley released Microvision, the first handheld console with interchangeable cartridges, and Atari launched its 400 and 800 home computers. Mattel test-marketed the Intellivision in Fresno, California.',
+      },
+    ],
+    quote: '',
+    sections: [
+      {
+        title: 'The Arcade Market Booms',
+        html: '<p>American arcades took about $1.5 billion in 1979, up from $1 billion the year before, and Space Invaders was again the highest-grossing game in the world, with more than 355,000 cabinets sold worldwide. Its rivals that year showed how quickly the medium was moving. Sega\'s Head On was an early dot-collecting driving game, Atari turned a decade-old minicomputer idea into the arcade Lunar Lander, and Asteroids arrived in November to become one of Atari\'s biggest hits.</p>',
+      },
+      {
+        title: 'The Home Gets Serious',
+        html: '<p>The Atari VCS sold about a million units in 1979, and the home market reached $330 million in the United States. Atari\'s 400 and 800 computers launched in November, and Star Raiders became a reason to buy one. Role-playing games were also taking shape on home computers: Automated Simulations released Temple of Apshai, and Richard Garriott\'s Akalabeth on the Apple II laid the groundwork for Ultima. The founding of Activision mattered most in the long run — it proved that console games could be made and sold by companies other than the console\'s manufacturer.</p>',
+      },
+    ],
+    sources: [
+      { title: '1979 in video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1979_in_video_games' },
+      { title: 'Activision', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Activision' },
+    ],
+  },
+  {
+    id: 'year-1981',
+    year: 1981,
+    headline: 'Donkey Kong, Defender and the Peak of the Arcade Boom',
+    summary: 'American arcades took an estimated $4.8 billion in 1981, the high point of the golden age. Nintendo\'s Donkey Kong introduced Mario and set the template for platform games, Williams released Defender, Namco followed Galaxian with Galaga, and on home computers Ultima, Wizardry and Castle Wolfenstein appeared.',
+    topGames: [
+      'Donkey Kong (Arcade)',
+      'Defender (Arcade)',
+      'Frogger (Arcade)',
+      'Galaga (Arcade)',
+      'Tempest (Arcade)',
+      'Scramble (Arcade)',
+      'Ultima I (Apple II)',
+      'Wizardry (Apple II)',
+    ],
+    topEvents: [
+      {
+        title: 'Donkey Kong (July)',
+        desc: 'Nintendo released Donkey Kong on 9 July. It introduced both Donkey Kong and the character who became Mario, and established the platform game.',
+      },
+      {
+        title: 'Electronic Games Magazine',
+        desc: 'Arnie Katz and Bill Kunkel founded Electronic Games, regarded as the first video game magazine and the start of video game journalism. In Britain, Computer and Video Games launched in November.',
+      },
+      {
+        title: 'The IBM PC (August)',
+        desc: 'IBM launched its Personal Computer on 12 August at US$1,565. The VIC-20, ZX81 and BBC Micro also reached the market in 1981.',
+      },
+      {
+        title: 'Pac-Man\'s Peak',
+        desc: 'Pac-Man was the year\'s highest-grossing arcade game, earning an estimated $1.2 billion.',
+      },
+    ],
+    quote: '',
+    sections: [
+      {
+        title: 'The Arcade at Full Height',
+        html: '<p>1981 was the busiest year of the arcade golden age. Williams opened it with Defender in February and followed it with Stargate in October; Konami released Scramble, an early scrolling shooter with distinct stages, and then Frogger; Namco released Galaga in September as the sequel to Galaxian; and Atari released the vector shooter Tempest. The most influential of them all was Nintendo\'s Donkey Kong, whose jumping carpenter would become Mario.</p>',
+      },
+      {
+        title: 'Role-Playing and Stealth on the Apple II',
+        html: '<p>Home computers were becoming a platform in their own right. On the Apple II, Ultima I arrived in June and Wizardry: Proving Grounds of the Mad Overlord in September — the two series that would define computer role-playing through the decade. Muse Software\'s Castle Wolfenstein, an early stealth game, would be reimagined eleven years later as Wolfenstein 3D. In the United States, home video game sales passed $1 billion, with Atari the clear market leader.</p>',
+      },
+    ],
+    sources: [
+      { title: '1981 in video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1981_in_video_games' },
+    ],
+  },
+  {
+    id: 'year-1984',
+    year: 1984,
+    headline: 'After the Crash: Tetris, Elite and the Home Computer Year',
+    summary: 'With the American console market still collapsing — US home video game sales fell to about $800 million — 1984 belonged to home computers and to Japan. Alexey Pajitnov developed Tetris, Elite and Knight Lore redefined what 8-bit computers could do, the Famicom became the world\'s best-selling home system, and Warner sold Atari\'s home business.',
+    topGames: [
+      'Tetris (Elektronika 60)',
+      'Elite (BBC Micro)',
+      'Knight Lore (ZX Spectrum)',
+      'Boulder Dash (Atari 8-bit)',
+      'Impossible Mission (Commodore 64)',
+      'Karateka (Apple II)',
+      'Punch-Out!! (Arcade)',
+      'Marble Madness (Arcade)',
+    ],
+    topEvents: [
+      {
+        title: 'Tetris',
+        desc: 'Alexey Pajitnov developed Tetris at the Dorodnitsyn Computing Centre of the Soviet Academy of Sciences, on an Elektronika 60, a Soviet clone of the PDP-11. It circulated in the USSR from 1985 and reached the rest of the world later in the decade.',
+      },
+      {
+        title: 'Elite (September)',
+        desc: 'Acornsoft published Elite on 20 September, a wireframe 3D space-trading game with an open-ended universe that the player was free to explore.',
+      },
+      {
+        title: 'Atari Is Sold',
+        desc: 'Warner Communications sold Atari\'s home console and computer business to Jack Tramiel\'s Tramel Technology, which became Atari Corporation; the arcade division stayed with Warner as Atari Games.',
+      },
+      {
+        title: 'The Famicom Pulls Ahead',
+        desc: 'The Famicom was the world\'s best-selling home system in 1984, with about 2.94 million units, ahead of the Commodore 64 at 2.5 million.',
+      },
+    ],
+    quote: '',
+    sections: [
+      {
+        title: 'Computers Fill the Gap',
+        html: '<p>As the American console business shrank, the most important games of 1984 appeared on home computers. Ultimate Play the Game\'s Knight Lore introduced its isometric Filmation engine on the ZX Spectrum in December; Boulder Dash inspired enough imitators to found the rocks-and-diamonds genre; Epyx released Impossible Mission on the Commodore 64; Broderbund released Jordan Mechner\'s Karateka; and Sierra released King\'s Quest for the IBM PCjr. In Britain, Jet Set Willy was the top-selling home computer game of the year.</p>',
+      },
+      {
+        title: 'The Industry Reorganises',
+        html: '<p>1984 was a year of consolidation. Atari was split in two, Mattel sold its video game business, including the Intellivision, to the group that became INTV Corporation, and Hasbro bought Milton Bradley. In Japan, Sega merged with CSK to form Sega Enterprises. The arcade was quieter but still inventive: Nintendo released Punch-Out!!, Data East released Karate Champ, which laid groundwork for one-on-one fighting games, and Atari Games ended the year with Marble Madness.</p>',
+      },
+    ],
+    sources: [
+      { title: '1984 in video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1984_in_video_games' },
+      { title: 'Tetris', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Tetris' },
+    ],
+  },
+  {
+    id: 'year-1987',
+    year: 1987,
+    headline: 'Final Fantasy, Metal Gear, Mega Man — and the PC Engine',
+    summary: 'Few years introduced as many long-running series as 1987: Final Fantasy, Metal Gear, Mega Man, Street Fighter and Contra all debuted. NEC\'s PC Engine opened the fourth console generation in Japan, the NES was the world\'s best-selling system, and Sega\'s Out Run was the year\'s top-grossing arcade game.',
+    topGames: [
+      'Final Fantasy (Famicom)',
+      'Metal Gear (MSX2)',
+      'Mega Man (NES)',
+      'Street Fighter (Arcade)',
+      'Contra (Arcade)',
+      'Double Dragon (Arcade)',
+      'R-Type (Arcade)',
+      'Phantasy Star (Master System)',
+      'Maniac Mansion (Commodore 64)',
+    ],
+    topEvents: [
+      {
+        title: 'PC Engine (30 October)',
+        desc: 'NEC released the PC Engine in Japan on 30 October, beginning the fourth generation of consoles.',
+      },
+      {
+        title: 'Final Fantasy (18 December)',
+        desc: 'Square released Hironobu Sakaguchi\'s Final Fantasy for the Famicom in Japan; it would not reach the United States for three years.',
+      },
+      {
+        title: 'Zelda Comes West',
+        desc: 'The Legend of Zelda reached America and Europe on 22 August and sold over a million copies in the US that year, while its sequel, Zelda II, had already appeared in Japan in January.',
+      },
+      {
+        title: 'Out Run Rules the Arcade',
+        desc: 'Sega\'s Out Run was the highest-grossing arcade game worldwide, and its home versions made it the best-selling game of the year in the UK.',
+      },
+    ],
+    quote: '',
+    sections: [
+      {
+        title: 'A Year of First Instalments',
+        html: '<p>Many of the medium\'s longest-running series began in 1987. Konami released Metal Gear on the MSX2 in July and Contra in the arcades in February; Capcom released the first Street Fighter in August and Mega Man in December; Square released Final Fantasy the following day; and Sega released Phantasy Star for the Master System, a role-playing game led by a woman. Technōs Japan\'s Double Dragon and Irem\'s R-Type set the standard for the beat \'em up and the scrolling shooter, and Konami followed Castlevania with Simon\'s Quest.</p><p>In Japan the year\'s biggest home game was Enix\'s Dragon Quest II, which went on to sell 2.4 million copies.</p>',
+      },
+      {
+        title: 'Computers and the New Console Generation',
+        html: '<p>On computers, Lucasfilm Games released Maniac Mansion, the first game built on its SCUMM engine, and Sierra released Leisure Suit Larry. IBM launched the PS/2 line, bringing VGA graphics and 3.5-inch floppy drives to the PC, and Commodore released the Amiga 500. In October NEC\'s PC Engine arrived in Japan, beginning the generation in which Nintendo\'s dominance would finally be contested. Meanwhile, SSI acquired the licence for Dungeons &amp; Dragons, which led to its Gold Box role-playing games.</p>',
+      },
+    ],
+    sources: [
+      { title: '1987 in video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1987_in_video_games' },
+    ],
+  },
+  {
+    id: 'year-1988',
+    year: 1988,
+    headline: 'Mega Drive, Mario 3 and Nintendo Power',
+    summary: 'In 1988 Sega launched the Mega Drive in Japan, Nintendo released Super Mario Bros. 3 there six days earlier, and Dragon Quest III sold 3.8 million copies. The NES was the world\'s best-selling system by far, Nintendo Power began publication in the US, and Namco pointed the arcade toward 3D polygons.',
+    topGames: [
+      'Super Mario Bros. 3 (Famicom)',
+      'Dragon Quest III (Famicom)',
+      'Mega Man 2 (NES)',
+      'Ninja Gaiden (NES)',
+      'Pool of Radiance (PC)',
+      'Operation Wolf (Arcade)',
+      'NARC (Arcade)',
+      'Winning Run (Arcade)',
+    ],
+    topEvents: [
+      {
+        title: 'Mega Drive (29 October)',
+        desc: 'Sega released the Mega Drive in Japan on 29 October, its 16-bit console that would be sold in North America as the Genesis.',
+      },
+      {
+        title: 'Super Mario Bros. 3 (23 October)',
+        desc: 'Nintendo released Super Mario Bros. 3 for the Famicom in Japan; it would not reach North America until 1990.',
+      },
+      {
+        title: 'Nintendo Power (July)',
+        desc: 'Nintendo published the first issue of Nintendo Power, replacing its Nintendo Fun Club News newsletter, which ended with issue 7 in June.',
+      },
+      {
+        title: 'Namco Goes Polygonal',
+        desc: 'Namco released its System 21 arcade board for 3D polygon graphics and, in December, Winning Run, its first 3D polygon game.',
+      },
+    ],
+    quote: '',
+    sections: [
+      {
+        title: 'Nintendo at Its Height',
+        html: '<p>The NES and Famicom sold more than 8.5 million units worldwide in 1988, and Nintendo\'s third-party partners released some of the system\'s defining games. Enix\'s Dragon Quest III came out in February and sold 3.8 million copies in Japan; Tecmo released Ninja Gaiden in December; and Capcom released Mega Man 2 in Japan on Christmas Eve. In the United States the best-selling game was the Super Mario Bros./Duck Hunt cartridge bundled in the NES Action Set, the best-selling toy of the year.</p>',
+      },
+      {
+        title: 'The 16-Bit Challenge',
+        html: '<p>Sega\'s Mega Drive arrived in Japan in October, six days after Super Mario Bros. 3, and would become Nintendo\'s most serious competitor. In the arcades, After Burner was the top earner in Japan, Double Dragon in the United States and Operation Wolf in the United Kingdom. On computers, SSI published Pool of Radiance, the first of its Gold Box Dungeons &amp; Dragons games.</p>',
+      },
+    ],
+    sources: [
+      { title: '1988 in video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1988_in_video_games' },
+    ],
+  },
 ];

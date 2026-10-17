@@ -4621,7 +4621,7 @@ ${nav('composers')}
   <a href="/composers" class="back-link">&#8592; All Composers</a>
   <div class="platform-detail-header">
     <h1>${escapeHtml(c.name)}</h1>
-    <p class="platform-detail-era">${escapeHtml(c.country)} &middot; Born ${escapeHtml(String(c.born))} &middot; ${escapeHtml(c.role)}</p>
+    <p class="platform-detail-era">${escapeHtml(c.country)}${c.born ? ` &middot; Born ${escapeHtml(String(c.born))}` : ''} &middot; ${escapeHtml(c.role)}</p>
     <p class="platform-detail-desc">${escapeHtml(c.description)}</p>
     <p class="platform-detail-desc">${escapeHtml(c.longDescription)}</p>
     ${trackList ? `<div class="dev-notable"><strong>Notable Soundtracks:</strong><ul class="trivia-list">${trackList}</ul></div>` : ''}
@@ -4909,6 +4909,7 @@ ${nav('years')}
   ${reviewHtml}
   <h2 style="margin-bottom:1rem">Games from ${year}</h2>
   <div class="games-grid" id="gamesGrid">${cardHtml}</div>
+  ${review ? sourcesBlock(review, true) : ''}
 </div>
 ${toggleScript()}
 </body>
