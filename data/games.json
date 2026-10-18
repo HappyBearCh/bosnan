@@ -14338,5 +14338,1377 @@
         "url": "https://en.wikipedia.org/wiki/Star_Ocean_(video_game)"
       }
     ]
+  },
+  {
+    "id": "phoenix-1980",
+    "title": "Phoenix",
+    "year": 1980,
+    "decade": "1980s",
+    "developer": "Unknown",
+    "publisher": "Taito / Centuri",
+    "genre": "Fixed Shooter",
+    "platform": "Arcade",
+    "image": "images/games/phoenix-1980.png",
+    "description": "Phoenix (1980) is an arcade shooter of birds, hatching eggs and a mothership, and one of the first shooters to end with a boss battle.",
+    "longDescription": "The player's ship slides left and right, dodging missiles and charging enemies, and can raise a force field that blocks attacks for a few seconds before it recharges. The first two stages bring formations of small phoenixes, the next two bring eggs that hatch into large ones, and the fifth is a fortress: the player has to shoot through its hull and a rotating shield band to hit the pilot inside. Then the cycle starts again, harder.",
+    "trivia": [
+      "Its original developer is unknown because the credits were overwritten; Retro Gamer suggested Tehkan.",
+      "The arcade version plays \"Romance de Amor\" at the start and \"Für Elise\" when a level is cleared.",
+      "Atari sued Imagic over Demon Attack, which it considered too close to Phoenix, and settled in 1983."
+    ],
+    "devStory": "Taito released Phoenix in Japan in December 1980 and Centuri in the US in January 1981, and it was Centuri's best-selling title by 1982. General Computer Corporation's Atari 2600 version, which had to cut over a third of the code to fit 8 KB, came out in 1983 and reportedly sold more than 600,000 copies.",
+    "sources": [
+      {
+        "title": "Phoenix (1980 video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Phoenix_(1980_video_game)"
+      }
+    ]
+  },
+  {
+    "id": "jumpman",
+    "title": "Jumpman",
+    "year": 1983,
+    "decade": "1980s",
+    "developer": "Randy Glover / Epyx",
+    "publisher": "Epyx",
+    "genre": "Platform",
+    "platform": "Atari 8-bit / Multiple",
+    "image": "images/games/jumpman.png",
+    "description": "Jumpman (1983) is Randy Glover's platform game for Epyx, in which Jumpman climbs ladders and ropes to defuse bombs planted around a base on Jupiter.",
+    "longDescription": "Bombs have been planted across three buildings of a base on Jupiter, and Jumpman has to defuse them all, jumping and climbing ladders and ropes while avoiding falls and \"smart\" darts.",
+    "trivia": [
+      "Compute! wrote that it \"easily conquers that skepticism and establishes itself as a software classic\".",
+      "Jumpman Junior, a 12-level cartridge version, was made for players without a disk drive."
+    ],
+    "devStory": "Randy Glover designed the game, and Epyx, then still called Automated Simulations, released it on 26 February 1983 for the Atari 8-bit, followed by Commodore 64, Apple II and IBM PC versions. It sold about 40,000 copies on the Atari and C64 through 1987.",
+    "sources": [
+      {
+        "title": "Jumpman (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Jumpman_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "spelunker",
+    "title": "Spelunker",
+    "year": 1983,
+    "decade": "1980s",
+    "developer": "MicroGraphicImage",
+    "publisher": "Broderbund",
+    "genre": "Platform",
+    "platform": "Atari 8-bit / Multiple",
+    "image": "images/games/spelunker.png",
+    "description": "Spelunker (1983) is Tim Martin's cave-exploring platform game, whose famously fragile hero gave Japanese baseball a word for injury-prone players.",
+    "longDescription": "The explorer sets off from the cave entrance to reach the treasure at the bottom, collecting dynamite, flares and keys on the way. His air supply runs down and must be refilled at points in the cave, bats drop deadly guano, and a ghost can carry him off to the shadow world unless he blasts it with air, which leaves him unable to move for a few seconds. Each cave has six levels, and the game repeats the layout across six caves of rising difficulty.",
+    "trivia": [
+      "In Japan, \"Speranker\" is used for baseball players who are often injured, after the game's fragile hero.",
+      "The arcade version was the fourth most successful table arcade unit in Game Machine's February 1986 chart."
+    ],
+    "devStory": "Tim Martin of MicroGraphicImage developed it for the Atari 8-bit computers in 1983, and Broderbund re-released the Commodore 64 version in 1984. Arcade and Famicom versions followed in Japan in 1985, and the NES version reached North America in 1987.",
+    "sources": [
+      {
+        "title": "Spelunker (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Spelunker_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "renegade-1986",
+    "title": "Renegade",
+    "year": 1986,
+    "decade": "1980s",
+    "developer": "Technos Japan",
+    "publisher": "Taito",
+    "genre": "Beat 'em up",
+    "platform": "Arcade",
+    "image": "images/games/renegade-1986.png",
+    "description": "Renegade (1986) is Yoshihisa Kishimoto's street-fighting game, called the first fully developed beat 'em up, which led directly to Double Dragon.",
+    "longDescription": "A belt-scrolling brawler played with an eight-way joystick and three buttons, in which the player fights through street gangs. In the Western version he takes on four gangs to rescue his kidnapped girlfriend. For the West the game was restyled after the 1979 film The Warriors, and the Japanese delinquents and yakuza became generic street gangs.",
+    "trivia": [
+      "In Japan it is Nekketsu Kōha Kunio-kun.",
+      "Kishimoto drew partly on his own high-school fights and on Bruce Lee's Enter the Dragon.",
+      "Ocean's home computer version topped the UK all-formats chart in September 1987."
+    ],
+    "devStory": "Yoshihisa Kishimoto designed the game at Technos Japan, and it reached Japanese arcades in May 1986, with Taito publishing it in the West. The Famicom version, released in April 1987, sold around 400,000 copies, and the game became the basis for Double Dragon (1987).",
+    "sources": [
+      {
+        "title": "Renegade (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Renegade_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "stunts-1990",
+    "title": "Stunts",
+    "year": 1990,
+    "decade": "1990s",
+    "developer": "Distinctive Software",
+    "publisher": "Broderbund",
+    "genre": "Racing",
+    "platform": "PC/DOS",
+    "image": "images/games/stunts-1990.png",
+    "description": "Stunts (1990), also known as 4D Sports Driving, is a 3D racing game of loops, jumps and corkscrews, with a track editor and replays that kept a fan community racing for decades.",
+    "longDescription": "Players race a lap of a stunt track — loops, jumps, slalom roads and corkscrews — either against the clock or against one of six opponents, choosing from 11 cars with automatic or manual gears. A track editor lets players build new courses or change existing ones, and races can be saved and replayed from four camera views.",
+    "trivia": [
+      "In Europe it was sold as 4D Sports Driving because Broderbund held the Stunts name.",
+      "Programmer Chris Taylor played the opponent Skid Vicious.",
+      "PC Gamer US ranked it the 22nd best computer game ever in 1994."
+    ],
+    "devStory": "Distinctive Software made the game, drawing on the arcade game Hard Drivin', and Broderbund released it for MS-DOS in October 1990. Fans kept sharing replays for years, and a yearly World Stunts Meeting was held in the mid-2000s.",
+    "sources": [
+      {
+        "title": "Stunts (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Stunts_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "powermonger",
+    "title": "Powermonger",
+    "year": 1990,
+    "decade": "1990s",
+    "developer": "Bullfrog Productions",
+    "publisher": "Electronic Arts",
+    "genre": "Strategy",
+    "platform": "Amiga / Atari ST",
+    "image": "images/games/powermonger.png",
+    "description": "Powermonger (1990) is Bullfrog's real-time strategy game on a 3D landscape, in which a captain conquers towns, feeds an army and sends orders that travel slowly to distant commanders.",
+    "longDescription": "The player wins by conquering most or all of the towns on a map and killing rival captains. Food is the most important resource, and orders to subordinate captains arrive after a delay that grows with their distance from the player's own captain. The map's terrain is three-dimensional, with people and objects drawn as sprites, and cutting down too many trees can change the weather.",
+    "trivia": [
+      "It won Computer Gaming World's Strategy Game of the Year for 1991.",
+      "Advertisements quoted Peter Molyneux calling it \"Better than Populous\"."
+    ],
+    "devStory": "Peter Molyneux, Glenn Corpes and Kevin Donkin designed the game on an engine derived from Populous, and EA released it for the Amiga and Atari ST in October 1990. A World War I Edition expansion followed in 1991.",
+    "sources": [
+      {
+        "title": "Powermonger",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Powermonger"
+      }
+    ]
+  },
+  {
+    "id": "front-mission",
+    "title": "Front Mission",
+    "year": 1995,
+    "decade": "1990s",
+    "developer": "G-Craft",
+    "publisher": "Square",
+    "genre": "Strategy RPG",
+    "platform": "SNES",
+    "image": "images/games/front-mission.png",
+    "description": "Front Mission (1995) is the first game in Square's mech tactics series, set on Huffman Island in 2090, where wanzers take damage part by part.",
+    "longDescription": "On Huffman Island in 2090 the OCU and the USN fight over the territory in the Huffman Conflicts. The player commands mechs called wanzers, each built from four parts: a body, two arms and legs. Losing the body takes a wanzer out of the fight, while damage to arms or legs only weakens it. Weapons are divided into melee, short-range, long-range and support fire.",
+    "trivia": [
+      "It was the first game Square had another developer make for it.",
+      "The original proposal was called \"100 Mission\".",
+      "It stayed in Japan until a Nintendo DS version reached North America in 2007."
+    ],
+    "devStory": "Toshiro Tsuchida directed and wrote the game, Yoshitaka Amano provided artwork, and Yoko Shimomura and Noriko Matsueda composed the music. G-Craft developed it and Square released it in Japan on 24 February 1995. It sold more than 500,000 copies there.",
+    "sources": [
+      {
+        "title": "Front Mission (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Front_Mission_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "beyond-oasis",
+    "title": "Beyond Oasis",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "Ancient",
+    "publisher": "Sega",
+    "genre": "Action-Adventure",
+    "platform": "Genesis",
+    "image": "images/games/beyond-oasis.png",
+    "description": "Beyond Oasis (1994), The Story of Thor in Japan and Europe, is Ancient's Mega Drive action-adventure, in which Prince Ali uses a gold armlet to summon four elemental spirits.",
+    "longDescription": "Prince Ali finds a buried gold armlet that once summoned four spirits — Dytto of water, Efreet of fire, Shade of shadow and Bow of plants — and must stop the bearer of the evil silver armlet, who is using it to cause destruction again. Much like The Legend of Zelda, the game has Ali collect health and mana items, weapons such as swords, crossbows and bombs, many of which break after limited use, and the spirits themselves, found in shrines.",
+    "trivia": [
+      "GameFan named it Action RPG of the Year in 1995.",
+      "A sequel, The Legend of Oasis, followed on the Saturn in 1996."
+    ],
+    "devStory": "Yuzo Koshiro produced and scored the game at Ancient, with art by Ayano Koshiro. Sega released it in Japan on 9 December 1994 and in North America and Europe in March 1995.",
+    "sources": [
+      {
+        "title": "Beyond Oasis",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Beyond_Oasis"
+      }
+    ]
+  },
+  {
+    "id": "dynamite-headdy",
+    "title": "Dynamite Headdy",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "Treasure",
+    "publisher": "Sega",
+    "genre": "Platform",
+    "platform": "Genesis",
+    "image": "images/games/dynamite-headdy.png",
+    "description": "Dynamite Headdy (1994) is Treasure's Mega Drive platform game starring a puppet who fights by throwing his own head, which can be swapped for 17 different powered-up heads.",
+    "longDescription": "Headdy, a puppet, tries to stop the evil puppet king Dark Demon from turning the world's puppets into his minions. He attacks by throwing his detachable head, which can also grab hooks to pull him up to higher platforms. Seventeen power-up heads change his attacks and abilities, and falling into a pit does not kill him outright: he bounces back out and loses some health.",
+    "trivia": [
+      "Sega of America asked for a harder North American version, about twice as difficult, and much of the dialogue was removed.",
+      "A Master System version, based on the Game Gear port, was released only in Brazil."
+    ],
+    "devStory": "Development began in August 1993, after Gunstar Heroes, with Koichi Kimura leading. Sega released it in Japan on 5 August 1994 and North America that September. Critics praised its creativity, visuals and technical achievement.",
+    "sources": [
+      {
+        "title": "Dynamite Headdy",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dynamite_Headdy"
+      }
+    ]
+  },
+  {
+    "id": "soul-edge",
+    "title": "Soul Edge",
+    "year": 1995,
+    "decade": "1990s",
+    "developer": "Project Soul",
+    "publisher": "Namco",
+    "genre": "Fighting",
+    "platform": "Arcade",
+    "image": "images/games/soul-edge.png",
+    "description": "Soul Edge (1995), released abroad as Soul Blade, is Namco's weapon-based 3D fighting game and the first in the Soulcalibur series.",
+    "longDescription": "In 1583 nine warriors hunt for Soul Edge, a cursed sword that feeds on the soul of whoever wields it. Every fighter carries a weapon, and a Weapon Gauge drains with each blocked blow; empty it, and the fighter is left to fight unarmed. Guard Impact lets players knock attacks back, and a ring out is possible only when an opponent is knocked out of the arena. The PlayStation version added the story mode Edge Master and five unlockable characters.",
+    "trivia": [
+      "It was the first game made with motion capture using passive optical markers.",
+      "The PlayStation version's opening won a SIGGRAPH '97 award for best game video of 1996."
+    ],
+    "devStory": "Project Soul developed the game on Namco's System 11 board, the hardware behind Tekken, and it reached Japanese arcades on 13 September 1995. The PlayStation version followed in December 1996 and was a UK bestseller. Soulcalibur followed in 1998.",
+    "sources": [
+      {
+        "title": "Soul Edge",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Soul_Edge"
+      }
+    ]
+  },
+  {
+    "id": "toki",
+    "title": "Toki",
+    "year": 1989,
+    "decade": "1980s",
+    "developer": "TAD Corporation",
+    "publisher": "TAD Corporation / Fabtek",
+    "genre": "Run and Gun",
+    "platform": "Arcade",
+    "image": "images/games/toki.png",
+    "description": "Toki (1989) is TAD Corporation's arcade platform shooter, in which a tribesman turned into an ape spits energy balls to rescue Princess Miho from the witch doctor Vookimedlo.",
+    "longDescription": "The witch doctor Vookimedlo turns the tribesman Toki into an ape and kidnaps Princess Miho. Toki crosses the island spitting energy balls at its creatures, against a timer on every stage and a boss at the end of each. Power-ups strengthen his spit, rabbit feet give bursts of agility, clocks add time, and a helmet protects him from attacks from above.",
+    "trivia": [
+      "In Japan it is JuJu Densetsu.",
+      "Ocean's home computer versions won Best Coin-Op Conversion at the 1991 Golden Joystick Awards.",
+      "Microids released a remake in 2018."
+    ],
+    "devStory": "TAD Corporation released the game in Japanese arcades on 8 December 1989, with Fabtek publishing it in North America in 1990. Ocean converted it to the Amiga, Atari ST and Commodore 64 in 1991, and Sega made a reworked Genesis version, Toki: Going Ape Spit.",
+    "sources": [
+      {
+        "title": "Toki (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Toki_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "snow-bros",
+    "title": "Snow Bros.",
+    "year": 1990,
+    "decade": "1990s",
+    "developer": "Toaplan",
+    "publisher": "Toaplan",
+    "genre": "Platform",
+    "platform": "Arcade",
+    "image": "images/games/snow-bros.png",
+    "description": "Snow Bros. (1990) is Toaplan's arcade platform game, in which the snowman twins Nick and Tom bury enemies in snow and roll them into giant snowballs.",
+    "longDescription": "Nick and Tom, snowman twins in blue and red overalls, fight through 50 stages to rescue the princesses Puripuri and Puchipuchi, with a boss on every tenth stage. They throw snow to bury enemies, then roll or kick the snowballs to take out others. Coloured potions boost speed, snow power, throwing distance or let the player fly, and a pumpkin head appears if players take too long.",
+    "trivia": [
+      "It has been described as reminiscent of Bubble Bobble and Tumblepop.",
+      "The Mega Drive version added 20 levels."
+    ],
+    "devStory": "Toaplan released it in Japanese arcades in April 1990, with Romstar distributing it in North America. Versions followed for the Game Boy, NES and Mega Drive, and Snow Bros. 2 (1994) was Toaplan's last arcade project.",
+    "sources": [
+      {
+        "title": "Snow Bros.",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Snow_Bros."
+      }
+    ]
+  },
+  {
+    "id": "mega-man-legends",
+    "title": "Mega Man Legends",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Capcom",
+    "publisher": "Capcom",
+    "genre": "Action-Adventure",
+    "platform": "PlayStation",
+    "image": "images/games/mega-man-legends.png",
+    "description": "Mega Man Legends (1997) is Capcom's 3D action-adventure reinvention of Mega Man, in which Mega Man Volnutt explores ruins on a flooded Earth.",
+    "longDescription": "On a flooded Earth, Diggers explore ancient ruins for refractors that produce energy. Mega Man Volnutt crash-lands on Kattelox Island, where the Bonne family of pirates are after a legendary treasure. Unlike the platforming of the original series, the game is set in 3D worlds, with ledge climbing and lock-on targeting. Refractor shards are sold for Zenny, the Buster's power depends on the parts equipped, and Roll can build new parts and special weapons.",
+    "trivia": [
+      "It was shown at E3 1997 as Mega Man Neo.",
+      "Keiji Inafune said it did not sell well, arriving years before sandbox games became popular.",
+      "On the Nintendo 64 it was retitled Mega Man 64."
+    ],
+    "devStory": "Producer Keiji Inafune wanted a Mega Man unlike the earlier games, mixing action, role-playing and adventure. Capcom released it in Japan on 18 December 1997 and North America in September 1998. A planned Mega Man Legends 3 was cancelled.",
+    "sources": [
+      {
+        "title": "Mega Man Legends (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mega_Man_Legends_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "alundra",
+    "title": "Alundra",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Matrix Software",
+    "publisher": "Sony Computer Entertainment / Working Designs",
+    "genre": "Action-Adventure",
+    "platform": "PlayStation",
+    "image": "images/games/alundra.png",
+    "description": "Alundra (1997) is Matrix Software's puzzle-heavy action-adventure, a spiritual sequel to Landstalker, in which a dream-walking elf enters the nightmares killing a village's people.",
+    "longDescription": "The elf Alundra, a silent hero who can enter people's dreams, is shipwrecked near the village of Inoa, whose people are being killed by nightmares. The source is the demon Melzas, disguised as a god. The game is played from above, with heavy puzzle-solving, real-time combat and platforming, and each dream level has a twist drawn from the dreamer's personality.",
+    "trivia": [
+      "Its world contains more than 7,000 screens.",
+      "It was runner-up to Final Fantasy VII for RPG of the Year at Electronic Gaming Monthly and GamePro.",
+      "Working Designs sold over 100,000 copies in North America within a month."
+    ],
+    "devStory": "Yasuhiro Ohori directed the game at Matrix Software, with music by Kōhei Tanaka. It began as an action RPG before the PlayStation launched and took three years to finish. Sony released it in Japan on 11 April 1997, and Working Designs brought it to North America in January 1998.",
+    "sources": [
+      {
+        "title": "Alundra",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Alundra"
+      }
+    ]
+  },
+  {
+    "id": "lady-bug",
+    "title": "Lady Bug",
+    "year": 1981,
+    "decade": "1980s",
+    "developer": "Universal",
+    "publisher": "Universal",
+    "genre": "Maze",
+    "platform": "Arcade",
+    "image": "images/games/lady-bug.png",
+    "description": "Lady Bug (1981) is Universal's maze game in the style of Pac-Man, with twenty turnstile gates that the player swings to reshape the maze and shut out pursuing insects.",
+    "longDescription": "Like Pac-Man, Lady Bug has the player clear a maze — of flowers, hearts and letters — while avoiding enemies, here insects. The twist is the twenty green turnstile gates, which swing as the player passes through them and change the layout of the maze. A timer runs around the maze border, releasing up to four insects, and from level 9 every level brings four different kinds of enemy.",
+    "trivia": [
+      "Its ColecoVision version, a launch title for the console in 1982, was far more successful than the arcade original.",
+      "The ColecoVision version won its category at the 5th Arkie Awards."
+    ],
+    "devStory": "Kazutoshi Ueda designed the game, and Universal released it in Japan in October 1981 and worldwide in December. Coleco's version added a \"Vegetable Harvest\" bonus level for completing the word SPECIAL, and an Intellivision version followed in 1983.",
+    "sources": [
+      {
+        "title": "Lady Bug (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Lady_Bug_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "pooyan",
+    "title": "Pooyan",
+    "year": 1982,
+    "decade": "1980s",
+    "developer": "Konami",
+    "publisher": "Konami",
+    "genre": "Fixed Shooter",
+    "platform": "Arcade",
+    "image": "images/games/pooyan.png",
+    "description": "Pooyan (1982) is Konami's arcade shooter, designed by Tokuro Fujiwara, in which a mother pig in a lift shoots down the balloons of the wolves that kidnapped her piglets.",
+    "longDescription": "Mama, a pig whose babies have been kidnapped by wolves, rides a lift up and down. One button fires arrows and throws meat. In the first round she shoots the balloons the wolves float down on; in the second the wolves try to push a boulder over the cliff edge. Mama loses a life if a rock hits her, a wolf eats her on the ladders or the boulder crushes her.",
+    "trivia": [
+      "Metal Gear Solid: Peace Walker includes \"Pooyan Missions\".",
+      "A world record of 1,609,250 points was set on 16 December 1983."
+    ],
+    "devStory": "Tokuro Fujiwara designed the game, and Konami released it in Japan in October 1982, with Stern Electronics distributing it in North America. Datasoft converted it to the Atari 8-bit and Commodore 64 in 1983, and versions for the Atari 2600, MSX and Famicom followed.",
+    "sources": [
+      {
+        "title": "Pooyan",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Pooyan"
+      }
+    ]
+  },
+  {
+    "id": "circus-charlie",
+    "title": "Circus Charlie",
+    "year": 1984,
+    "decade": "1980s",
+    "developer": "Konami",
+    "publisher": "Konami / Centuri",
+    "genre": "Action",
+    "platform": "Arcade",
+    "image": "images/games/circus-charlie.png",
+    "description": "Circus Charlie (1984) is Konami's arcade game in which Charlie the clown performs six circus acts, from jumping a lion through flaming hoops to swinging between trapezes.",
+    "longDescription": "Charlie the clown works through six circus acts. He rides a lion through flaming rings, walks a tightrope while jumping monkeys, bounces between trampolines past knife throwers and fire breathers, hops from ball to ball, rides a horse over trampolines and walls, and swings from trapeze to trapeze. After the sixth act the show starts again at a faster pace.",
+    "trivia": [
+      "Its music is based on \"American Patrol\" and \"The Blue Danube\".",
+      "The Famicom and MSX versions drop the trampoline act.",
+      "Konami's Mikie hides a reference that makes Circus Charlie appear."
+    ],
+    "devStory": "Konami released it in arcades in 1984, with Centuri distributing it in North America in March and the Japanese release following in April. An MSX version came out the same year, and a Famicom version in 1986.",
+    "sources": [
+      {
+        "title": "Circus Charlie",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Circus_Charlie"
+      }
+    ]
+  },
+  {
+    "id": "major-havoc",
+    "title": "Major Havoc",
+    "year": 1984,
+    "decade": "1980s",
+    "developer": "Atari, Inc.",
+    "publisher": "Atari, Inc.",
+    "genre": "Action",
+    "platform": "Arcade",
+    "image": "images/games/major-havoc.png",
+    "description": "Major Havoc (1984) is Owen Rubin's vector arcade game for Atari, which runs a space shooter, a platform maze and a lunar-landing sequence back to back.",
+    "longDescription": "Each round plays three segments in a row: a fixed shooter, a platform section and a lunar-lander sequence. A game of Breakout powers the warp system and can earn extra lives. Dedicated cabinets used a roller controller, while conversion kits for older vector games used the controls they came with, such as Tempest's spinner.",
+    "trivia": [
+      "Some games name the enemy Vaxxian homeworld \"Maynard\", after the Massachusetts town where Digital Equipment Corporation, maker of the VAX, was based.",
+      "It inspired the MSX game Theseus and served as the basis for Silpheed."
+    ],
+    "devStory": "Owen Rubin designed and programmed the game, with Mark Cerny designing and tuning some levels after joining about a year in. Atari released it in January 1984, followed by a conversion kit for machines such as Tempest in March. It was not a major commercial success in the West.",
+    "sources": [
+      {
+        "title": "Major Havoc",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Major_Havoc"
+      }
+    ]
+  },
+  {
+    "id": "cadash",
+    "title": "Cadash",
+    "year": 1990,
+    "decade": "1990s",
+    "developer": "Taito",
+    "publisher": "Taito",
+    "genre": "Action RPG",
+    "platform": "Arcade",
+    "image": "images/games/cadash.png",
+    "description": "Cadash (1990) is Taito's arcade action-RPG platformer, in which up to four players — fighter, mage, priestess and ninja — on linked cabinets level up while rescuing a kidnapped princess.",
+    "longDescription": "The Balrog kidnaps Princess Salassa and carries her to Castle Cadash, where he plans a ritual to make himself invincible, and King Dilsarl promises his kingdom to whoever saves her. The game combines side-scrolling platforming with role-playing statistics, experience levels, gold and magic. Players choose a fighter, mage, priestess or ninja, and four players can join in by linking arcade cabinets. The five stages end in Castle Cadash itself.",
+    "trivia": [
+      "Game Machine named it the most successful table arcade unit in its 1 May 1990 issue.",
+      "The Genesis version keeps only the fighter and the mage."
+    ],
+    "devStory": "Hiroshi Tsujino directed and designed the game, and Taito released it in Japan in March 1990. Working Designs translated the TurboGrafx-16 version, which removed the arcade time limit, and a Genesis version followed in 1992.",
+    "sources": [
+      {
+        "title": "Cadash",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cadash"
+      }
+    ]
+  },
+  {
+    "id": "the-ninja-warriors",
+    "title": "The Ninja Warriors",
+    "year": 1988,
+    "decade": "1980s",
+    "developer": "Taito",
+    "publisher": "Taito",
+    "genre": "Beat 'em up",
+    "platform": "Arcade",
+    "image": "images/games/the-ninja-warriors.png",
+    "description": "The Ninja Warriors (1988) is Taito's side-scrolling beat 'em up played across three screens side by side, in which two androids fight to overthrow a dictator.",
+    "longDescription": "In a dystopian 1993, President Banglar has declared martial law, and anarchist scientists led by Mulk build two androids, the red Kunoichi and the blue Ninja, to end his rule. The game scrolls across six levels on a cabinet of three joined screens, giving the effect of a single very wide picture. One button slashes with a kunai at close range, the other throws a limited supply of shuriken.",
+    "trivia": [
+      "It was the eighth highest-grossing dedicated arcade game in Japan in 1988.",
+      "Natsume's 1994 Super NES game followed it, and new games in the series reached the Switch in 2019."
+    ],
+    "devStory": "Taito released the game in arcades in early 1988, with Romstar distributing it in North America. It was converted to the Amiga, Atari ST, ZX Spectrum, Commodore 64 and Amstrad CPC, with Japan-only versions for the PC Engine and Mega-CD.",
+    "sources": [
+      {
+        "title": "The Ninja Warriors (1987 video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_Ninja_Warriors_(1987_video_game)"
+      }
+    ]
+  },
+  {
+    "id": "g-police",
+    "title": "G-Police",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Psygnosis",
+    "publisher": "Psygnosis",
+    "genre": "Action / Simulation",
+    "platform": "PlayStation",
+    "image": "images/games/g-police.png",
+    "description": "G-Police (1997) is Psygnosis's combat flight game set in the domed cities of Jupiter's moon Callisto, where a pilot joins the police to investigate his sister's death.",
+    "longDescription": "In 2097, on the colonised moon Callisto, Slater joins the G-Police to investigate the apparent suicide of his sister Elaine, which he believes was murder. The story grows from gang warfare into a conflict between the corporations Krakov and Nanosoft. The player flies a VTOL gunship — \"a helicopter without the rotors\" — through 35 missions, mostly inside urban domes, often scanning vehicles to tell criminals from civilians.",
+    "trivia": [
+      "Peter Chung, creator of Æon Flux, animated its television advertisement.",
+      "The clothing company Diesel designed the police uniforms and appears in the game as an evil corporation.",
+      "GamePro called its short draw distance \"one of the worst cases of draw-in since 32-bit gaming began\"."
+    ],
+    "devStory": "A Psygnosis studio in Stroud developed the game, and it was released for the PlayStation in October 1997 and Windows in November. G-Police: Weapons of Justice followed in 1999.",
+    "sources": [
+      {
+        "title": "G-Police",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/G-Police"
+      }
+    ]
+  },
+  {
+    "id": "colony-wars",
+    "title": "Colony Wars",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Psygnosis",
+    "publisher": "Psygnosis",
+    "genre": "Space Combat",
+    "platform": "PlayStation",
+    "image": "images/games/colony-wars.png",
+    "description": "Colony Wars (1997) is Psygnosis's PlayStation space combat game, in which a pilot of the rebel League of Free Worlds fights the Earth Navy through a branching campaign with several endings.",
+    "longDescription": "The rebel League of Free Worlds, led by the Father, fights the Earth Navy of the Tzar's empire for control of the Sol system's network of warpholes. The player flies one of seven League starfighters through missions grouped into acts of three, and the campaign branches according to how well each mission goes, leading to multiple endings.",
+    "trivia": [
+      "The developers originally planned to let players choose between the League and the Earth Empire.",
+      "The mission tree was designed to hide mission failure.",
+      "Edge dismissed it as \"little more than a 3D interpretation of Asteroids\", while IGN gave it 9.3."
+    ],
+    "devStory": "Mike Ellis designed the game and co-wrote it with Damon Fairclough, with music by Tim Wright. Psygnosis released it in November 1997, and it sold more than 150,000 copies in the US. Colony Wars: Vengeance followed in 1998 and Red Sun in 2000.",
+    "sources": [
+      {
+        "title": "Colony Wars",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Colony_Wars"
+      }
+    ]
+  },
+  {
+    "id": "um-jammer-lammy",
+    "title": "Um Jammer Lammy",
+    "year": 1999,
+    "decade": "1990s",
+    "developer": "NanaOn-Sha",
+    "publisher": "Sony Computer Entertainment",
+    "genre": "Rhythm",
+    "platform": "PlayStation",
+    "image": "images/games/um-jammer-lammy.png",
+    "description": "Um Jammer Lammy (1999) is NanaOn-Sha's follow-up to PaRappa the Rapper, in which a shy guitarist plays her way through a day of mishaps to reach her band's first concert.",
+    "longDescription": "Lammy, a shy left-handed guitarist who leads the band MilkCan, must reach her band's first concert on time despite a run of mishaps. She feels confident only with a guitar in her hands, real or imagined. As in PaRappa, the player trades call-and-response lines with a teacher, either following the prompts or freestyling, and ranks range from Awful up to Fever. Co-op and versus modes unlock after clearing levels, and PaRappa gets his own solo mode once Lammy's story is done.",
+    "trivia": [
+      "An arcade version with a guitar controller, Um Jammer Lammy NOW!, was released in Japan.",
+      "GameRevolution called its story \"the most obtuse, disjointed, drug-induced mess of a story that has ever been conceived, period.\""
+    ],
+    "devStory": "Masaya Matsuura designed the game and composed its music, with art by Rodney Alan Greenblat. Sony released it in Japan on 18 March 1999 and North America in August. It won the Interactive Achievement Award for Outstanding Achievement in Original Music Composition.",
+    "sources": [
+      {
+        "title": "Um Jammer Lammy",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Um_Jammer_Lammy"
+      }
+    ]
+  },
+  {
+    "id": "brave-fencer-musashi",
+    "title": "Brave Fencer Musashi",
+    "year": 1998,
+    "decade": "1990s",
+    "developer": "Square",
+    "publisher": "Square",
+    "genre": "Action RPG",
+    "platform": "PlayStation",
+    "image": "images/games/brave-fencer-musashi.png",
+    "description": "Brave Fencer Musashi (1998) is Square's 3D action RPG, in which a young swordsman summoned to another world must stay rested — or fall asleep on his feet — while defending the Allucaneet Kingdom.",
+    "longDescription": "Musashi, a young swordsman, is summoned to a parallel world to defend the Allucaneet Kingdom from the Thirstquencher Empire, and searches for the Five Scrolls that strengthen his sword Lumina. Combat is in real time in 3D, and the game runs on a day-night cycle: Musashi tires over time and must rest, or he may fall asleep. His second sword, Fusion, performs combos and absorbs Bincho energy.",
+    "trivia": [
+      "In North America it came with a demo of Final Fantasy VIII.",
+      "Several reviewers compared it to The Legend of Zelda."
+    ],
+    "devStory": "Yoichi Yoshimoto directed the game, Tetsuya Nomura designed the characters and Tsuyoshi Sekito composed the music. Square released it in Japan on 16 July 1998, where it sold about 648,803 copies that year, and in North America that November. Musashi: Samurai Legend followed on the PS2 in 2005.",
+    "sources": [
+      {
+        "title": "Brave Fencer Musashi",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Brave_Fencer_Musashi"
+      }
+    ]
+  },
+  {
+    "id": "breath-of-fire-iii",
+    "title": "Breath of Fire III",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Capcom",
+    "publisher": "Capcom",
+    "genre": "RPG",
+    "platform": "PlayStation",
+    "image": "images/games/breath-of-fire-iii.png",
+    "description": "Breath of Fire III (1997) is Capcom's PlayStation RPG and the first in the series with 3D environments, in which Ryu, the last of the dragon Brood, learns why his people were wiped out.",
+    "longDescription": "Ryu, the last of the Brood, searches for the truth about his people and comes up against Myria, the goddess who ordered the dragons' destruction. His companions include Nina, Rei, Teepo, Momo, Garr and Peco. Characters are 2D sprites in 3D environments, and battles are turn-based with a party of three. Ryu turns into dragons by combining chrysms, characters learn skills by becoming apprentices to Masters, and a Fairy Village can be built up to unlock items and mini-games.",
+    "trivia": [
+      "It was the first Breath of Fire game with voice acting.",
+      "It sold at least 656,297 copies on the PlayStation."
+    ],
+    "devStory": "Makoto Ikehara directed the game, and Capcom released it in Japan on 11 September 1997 and North America in May 1998. A PSP version followed in 2005.",
+    "sources": [
+      {
+        "title": "Breath of Fire III",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Breath_of_Fire_III"
+      }
+    ]
+  },
+  {
+    "id": "blackthorne",
+    "title": "Blackthorne",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "Blizzard Entertainment",
+    "publisher": "Interplay Productions",
+    "genre": "Platform / Shooter",
+    "platform": "SNES",
+    "image": "images/games/blackthorne.png",
+    "description": "Blackthorne (1994) is Blizzard's cinematic platformer in the style of Another World and Flashback, in which Kyle returns to his home planet with a shotgun to overthrow the tyrant Sarlac.",
+    "longDescription": "Kyle Vlaros was sent to Earth as a child. Twenty years later he returns to the planet Tuul to defeat the dark ruler Sarlac, avenge his father and reclaim the throne of Androth. He runs, climbs and hunts for keys through maze-like levels, fighting with an upgradable pump-action shotgun. He can fire backwards without turning round and press himself against the wall to let bullets pass. The game has 17 levels across four areas.",
+    "trivia": [
+      "Early sprites were rotoscoped, using more than 1,000 frames.",
+      "Kyle is named after Kyle Reese in The Terminator.",
+      "Electronic Gaming Monthly made the Super NES version its Game of the Month."
+    ],
+    "devStory": "Blizzard made the game, inspired by Another World and Flashback, and Interplay released it for the Super NES in September 1994 and MS-DOS that December. A 32X version, with a fifth area, followed in 1995.",
+    "sources": [
+      {
+        "title": "Blackthorne",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Blackthorne"
+      }
+    ]
+  },
+  {
+    "id": "dead-or-alive-1996",
+    "title": "Dead or Alive",
+    "year": 1996,
+    "decade": "1990s",
+    "developer": "Tecmo",
+    "publisher": "Tecmo",
+    "genre": "Fighting",
+    "platform": "Arcade",
+    "image": "images/games/dead-or-alive-1996.png",
+    "description": "Dead or Alive (1996) is Tecmo's 3D fighting game on Sega's Model 2 hardware, built around a hold button that catches attacking limbs, which helped the company back to profit.",
+    "longDescription": "The game puts speed and counters first: in place of the usual guard, a hold button lets fighters catch an attacking limb, and the edges of the arena are danger zones laced with explosives. The fugitive ninja Kasumi enters the tournament to avenge her brother Hayate, crippled by their uncle Raidou, and the cast includes Ryu Hayabusa, Tina Armstrong and Zack. Critics praised the hold system and the graphics.",
+    "trivia": [
+      "Tecmo was near bankruptcy and wanted a hit to rival Virtua Fighter.",
+      "The Saturn version topped the Japanese charts."
+    ],
+    "devStory": "Tomonobu Itagaki directed it at Tecmo's in-house team, later Team Ninja, and it reached arcades on 26 November 1996, running on Sega Model 2 hardware. Its success helped Tecmo return to profit in 1996. Saturn and PlayStation versions followed in 1997 and 1998, and Dead or Alive 2 in 1999.",
+    "sources": [
+      {
+        "title": "Dead or Alive (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Dead_or_Alive_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "smash-tv",
+    "title": "Smash TV",
+    "year": 1990,
+    "decade": "1990s",
+    "developer": "Eugene Jarvis & Mark Turmell",
+    "publisher": "Williams Electronics",
+    "genre": "Shooter",
+    "platform": "Arcade",
+    "image": "images/games/smash-tv.png",
+    "description": "Smash TV (1990) is Eugene Jarvis's twin-stick arcade shooter set on a violent 1999 game show, where contestants gun down waves of enemies for cash and prizes.",
+    "longDescription": "In a dystopian 1999, contestants on a television game show shoot their way through arenas full of enemies, collecting cash and prizes and fighting bosses, until they face the sadistic host himself. Like Jarvis's Robotron: 2084, it is played with two joysticks, one to move and one to shoot, and two players can play together. Collecting keys opens the bonus Pleasure Dome, which was added after players complained that the first release lacked it.",
+    "trivia": [
+      "Its influences include RoboCop and The Running Man.",
+      "It won the AMOA's most innovative game award in 1990.",
+      "Total Carnage (1992), named after one of the host's catchphrases, shares much of its play but is not a sequel."
+    ],
+    "devStory": "Eugene Jarvis designed the game and Mark Turmell programmed it at Williams, which released it in April 1990. Console versions were titled Super Smash TV, and Ocean made the home computer versions, one of which scored 97% in CRASH.",
+    "sources": [
+      {
+        "title": "Smash TV",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Smash_TV"
+      }
+    ]
+  },
+  {
+    "id": "rampart",
+    "title": "Rampart",
+    "year": 1990,
+    "decade": "1990s",
+    "developer": "Atari Games",
+    "publisher": "Atari Games",
+    "genre": "Strategy",
+    "platform": "Arcade",
+    "image": "images/games/rampart.png",
+    "description": "Rampart (1990) is Atari Games' arcade castle game, in which players rebuild their walls with Tetris-like pieces between cannon battles — a precursor of tower defense.",
+    "longDescription": "Play alternates between building and combat. In the building phase, players fit Tetris-like shapes into the gaps in their castle walls; in combat, they fire cannons at ships in the single-player game or at each other's walls in multiplayer. A player who fails to enclose at least one castle by the end of the building phase loses. The single-player game has six fixed levels, and it is played with a trackball.",
+    "trivia": [
+      "Computer and Video Games gave the arcade version 93%.",
+      "Konami's Famicom version added seven training levels and three difficulty settings."
+    ],
+    "devStory": "John Salwitz and Dave Ralston created the game, with music by Don Diekneite and Brad Fuller. Atari Games gave it a limited release in October 1990 and a wide one in February 1991, and it was converted to the NES, Super NES, Mega Drive, Master System, Lynx and many other systems.",
+    "sources": [
+      {
+        "title": "Rampart (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Rampart_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "thrust-bbc",
+    "title": "Thrust",
+    "year": 1986,
+    "decade": "1980s",
+    "developer": "Jeremy Smith",
+    "publisher": "Superior Software",
+    "genre": "Shooter",
+    "platform": "BBC Micro / Multiple",
+    "image": "images/games/thrust-bbc.png",
+    "description": "Thrust (1986) is Jeremy Smith's gravity game for the BBC Micro, in which a ship tows a heavy pod out of a planet's caves on a swinging tractor beam.",
+    "longDescription": "The ship rotates and thrusts, and has to lift a pod out of the caves with its tractor beam and carry it into space. Gravity and inertia act on both ship and pod, so the pair can swing and spin out of control, and touching the cave walls is fatal. Turrets fire at the ship, fuel runs down, and the shield uses fuel and blocks firing. Shooting the planet's reactor enough times sends it critical, giving ten seconds to escape. After six levels the cycle repeats with reversed gravity, then invisible walls, then both.",
+    "trivia": [
+      "Its play was heavily inspired by Atari's Gravitar.",
+      "Firebird's budget Commodore 64 version, at £1.99, topped the Gallup all-formats chart.",
+      "Hidden messages on the BBC Micro version include \"Support Hotol\" and \"Physics is fun\"."
+    ],
+    "devStory": "Jeremy Smith wrote the game for the BBC Micro, published by Superior Software, and later co-created Exile. It was converted to the Commodore 64, Spectrum, Amstrad CPC, Atari ST and other machines, and Thrust II followed in 1988.",
+    "sources": [
+      {
+        "title": "Thrust (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Thrust_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "repton",
+    "title": "Repton",
+    "year": 1985,
+    "decade": "1980s",
+    "developer": "Tim Tyler",
+    "publisher": "Superior Software",
+    "genre": "Puzzle",
+    "platform": "BBC Micro / Multiple",
+    "image": "images/games/repton.png",
+    "description": "Repton (1985) is Tim Tyler's BBC Micro puzzle game of diamonds and falling rocks, a calmer, more puzzle-minded cousin of Boulder Dash.",
+    "longDescription": "Repton digs through an underground maze collecting every diamond before time runs out, including some locked in safes that open when he picks up a key. Falling rocks and monsters hatched from eggs are the dangers. There are 12 levels, and passwords let players skip ahead. Compared with Boulder Dash it is calmer and more ordered, with more emphasis on solving puzzles than on arcade improvisation.",
+    "trivia": [
+      "Tyler was inspired by a review of Boulder Dash but had never played it.",
+      "Its theme tune is \"Black and White Rag\" by George Botsford."
+    ],
+    "devStory": "Tim Tyler wrote the game for the BBC Micro and Acorn Electron, and Superior Software released it in the summer of 1985. Repton 2 followed that November and Repton 3, with a map editor, in 1986. The series sold about 125,000 copies by 1990.",
+    "sources": [
+      {
+        "title": "Repton (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Repton_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "mercenary",
+    "title": "Mercenary",
+    "year": 1985,
+    "decade": "1980s",
+    "developer": "Novagen Software",
+    "publisher": "Novagen Software",
+    "genre": "Action-Adventure",
+    "platform": "Atari 8-bit / Multiple",
+    "image": "images/games/mercenary.png",
+    "description": "Mercenary (1985) is Paul Woakes's open-ended 3D vector adventure, in which a stranded pilot plays two warring factions against each other to earn a way off the planet Targ.",
+    "longDescription": "The player crash-lands on the planet Targ, which is in the middle of a civil war between the Palyars and the Mechanoids. Working for either side — or both — earns money towards a way home, and there are several different ways to escape. Tasks can be tackled in any order, and the player is guided by Benson, a \"9th generation PC\", whose messages scroll across the screen.",
+    "trivia": [
+      "Zzap!64 gave it 97% and a Gold Medal.",
+      "It was also released as Mercenary: Escape from Targ."
+    ],
+    "devStory": "Paul Woakes and Bruce Jordan designed the game, and Novagen released it in 1985 for the Atari 8-bit and Commodore 64, with versions for the Spectrum, Amstrad CPC, Atari ST and Amiga. An expansion, The Second City, followed in 1986, and the sequel Damocles in 1990.",
+    "sources": [
+      {
+        "title": "Mercenary (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mercenary_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "driller",
+    "title": "Driller",
+    "year": 1987,
+    "decade": "1980s",
+    "developer": "Major Developments",
+    "publisher": "Incentive Software",
+    "genre": "Puzzle",
+    "platform": "ZX Spectrum / Multiple",
+    "image": "images/games/driller.png",
+    "description": "Driller (1987) is Incentive Software's first-person 3D puzzle game, the first built on the Freescape engine, in which a probe must place eighteen drilling rigs to stop a moon from exploding.",
+    "longDescription": "The moon Mitral is filling with gas and will explode, destroying the colony on Evath, unless eighteen drilling rigs are placed to release it. The player guides the probe \"Last Hope\" through eighteen regions in first person, working out where the rigs should go from clues in the landscape and by trial and error, and disabling or avoiding security systems. The probe cannot fly, so driving off a platform strands it on the surface.",
+    "trivia": [
+      "In the US it was called Space Station Oblivion.",
+      "Orson Scott Card called its story a \"thinly veiled excuse\" for the 3D graphics, but still praised the game."
+    ],
+    "devStory": "Chris and Ian Andrew of Major Developments designed the game, and Incentive released it in 1987, with versions for the ZX Spectrum, Commodore 64, Amstrad CPC, Amiga, Atari ST and MS-DOS. CRASH gave it 97%. The Freescape engine, offering filled-polygon 3D and free looking, went on to power Dark Side, Total Eclipse and Castle Master.",
+    "sources": [
+      {
+        "title": "Driller (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Driller_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "carrier-command",
+    "title": "Carrier Command",
+    "year": 1988,
+    "decade": "1980s",
+    "developer": "Realtime Games",
+    "publisher": "Rainbird",
+    "genre": "Strategy / Action",
+    "platform": "Amiga / Atari ST",
+    "image": "images/games/carrier-command.png",
+    "description": "Carrier Command (1988) is Realtime Games' filled-polygon strategy game, in which a robotic aircraft carrier and its aircraft and amphibious tanks race an enemy carrier to claim 64 islands.",
+    "longDescription": "Two robotic carriers are sent to colonise an archipelago of sixty-four islands, and terrorists seize the more advanced one. From the ACC Epsilon the player commands up to four Manta aircraft and four Walrus amphibious vehicles at a time, claiming neutral islands by dropping command units and capturing enemy ones with virus pods. Vehicles that stray too far from the carrier lose contact and are destroyed, and the game is lost if the carrier's superstructure is wrecked.",
+    "trivia": [
+      "The Games Machine ranked it the number one game of 1988 and gave the Atari ST version 98%.",
+      "The team wrote it in 68000 assembly because C was too slow for 3D on 8 MHz machines; Ian Oliver recalled they \"slept under our desks\".",
+      "Bohemia Interactive remade it in 2012 as Carrier Command: Gaea Mission."
+    ],
+    "devStory": "Ian Oliver and Graeme Baird developed the game at Realtime Games in Leeds, and Rainbird released it for the Atari ST and Amiga in 1988, with other versions through 1989. Battle Command followed, and Hostile Waters (2001) was inspired by it.",
+    "sources": [
+      {
+        "title": "Carrier Command",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Carrier_Command"
+      }
+    ]
+  },
+  {
+    "id": "laser-squad",
+    "title": "Laser Squad",
+    "year": 1988,
+    "decade": "1980s",
+    "developer": "Target Games",
+    "publisher": "Blade Software",
+    "genre": "Strategy",
+    "platform": "ZX Spectrum / Multiple",
+    "image": "images/games/laser-squad.png",
+    "description": "Laser Squad (1988) is Julian Gollop's turn-based tactics game for the ZX Spectrum, with action points, line of sight and hidden enemies — the direct ancestor of X-COM.",
+    "longDescription": "Players spend limited credits on weapons and armour, deploy their squad and take turns moving, shooting and picking up objects with action points. Different shot types trade accuracy against cost, line of sight decides who can see whom, and in one-player games enemy movements stay hidden. Units can panic if their morale breaks. Each mission has a turn limit, and a player wins by reaching 100 victory points across scenarios such as \"The Assassins\" and \"Moonbase Assault\".",
+    "trivia": [
+      "A demo of Laser Squad 2 became the starting point for UFO: Enemy Unknown, published by MicroProse.",
+      "Computer and Video Games gave it 97%."
+    ],
+    "devStory": "Julian Gollop led the game at Target Games, later Mythos Games, and Blade Software released it for the ZX Spectrum in 1988, followed by versions for the Commodore 64, Amstrad CPC, Amiga, Atari ST and MS-DOS. Laser Squad Nemesis revived the name in 2002.",
+    "sources": [
+      {
+        "title": "Laser Squad",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Laser_Squad"
+      }
+    ]
+  },
+  {
+    "id": "zarch",
+    "title": "Zarch",
+    "year": 1987,
+    "decade": "1980s",
+    "developer": "David Braben",
+    "publisher": "Superior Software",
+    "genre": "Shooter",
+    "platform": "Acorn Archimedes",
+    "image": "images/games/zarch.png",
+    "description": "Zarch (1987) is David Braben's solid-3D shooter for the Acorn Archimedes, in which a mouse-controlled lander stops alien Seeders spreading a virus across the landscape.",
+    "longDescription": "The player flies a lander controlled by the mouse: a downward thruster lifts it, and tilting it moves it across the landscape. Enemy Seeders spread a virus over the ground, and the lander has to shoot them down before it takes over, refuelling at the launchpad and using limited smart missiles and bombs.",
+    "trivia": [
+      "It began as Lander, a demo bundled with Archimedes computers.",
+      "ACE gave it 979, its highest score at the time, under the headline \"SOLID 3D - the future of games?\"",
+      "Amiga Power ranked its port, Virus, fifth on its 1991 list of the best games of all time."
+    ],
+    "devStory": "David Braben wrote the game as a launch title for the Archimedes, and Superior Software released it in 1987. Firebird published versions for the Amiga, Atari ST, MS-DOS and ZX Spectrum as Virus in 1988, and Frontier Developments made Virus 2000 in 1998.",
+    "sources": [
+      {
+        "title": "Zarch",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Zarch"
+      }
+    ]
+  },
+  {
+    "id": "midwinter",
+    "title": "Midwinter",
+    "year": 1989,
+    "decade": "1980s",
+    "developer": "Maelstrom Games / Mike Singleton",
+    "publisher": "Rainbird",
+    "genre": "Action RPG",
+    "platform": "Atari ST",
+    "image": "images/games/midwinter.png",
+    "description": "Midwinter (1989) is Mike Singleton's frozen-world strategy RPG, in which the player recruits 32 islanders, each with their own history, to resist an invading general across a vast 3D island.",
+    "longDescription": "In 2099 a meteorite strike has plunged the world into an ice age. On the island of Midwinter, 160,000 square miles of polygon landscape, John Stark, commander of the Free Villages Peace Force, must recruit allies and stop General Masters by destroying his headquarters at Shining Hollow. The game's 32 recruits each have personal histories that decide who else they can win over, and each gets two hours of game time before the clock moves on. They travel by ski, snowmobile, cable car and hang glider.",
+    "trivia": [
+      "Recruits can be injured but not killed.",
+      "Eurogamer called it \"a priceless transitional specimen in the fossil record of gaming\"."
+    ],
+    "devStory": "Mike Singleton designed the game at Maelstrom Games, and MicroProse released it on its Rainbird label for the Atari ST and MS-DOS, followed by the Amiga. Zzap gave the Amiga version 97%, and Midwinter II: Flames of Freedom followed in 1991.",
+    "sources": [
+      {
+        "title": "Midwinter (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Midwinter_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "legend-of-the-mystical-ninja",
+    "title": "The Legend of the Mystical Ninja",
+    "year": 1991,
+    "decade": "1990s",
+    "developer": "Konami",
+    "publisher": "Konami",
+    "genre": "Action-Adventure",
+    "platform": "SNES",
+    "image": "images/games/legend-of-the-mystical-ninja.png",
+    "description": "The Legend of the Mystical Ninja (1991) is Konami's Super Famicom adventure, the first Ganbare Goemon game released in the West, mixing town exploration, side-scrolling action and minigames.",
+    "longDescription": "Goemon and Ebisumaru — Kid Ying and Dr. Yang in the West — work through stages that each begin with a town, full of shops, minigames and places to learn new abilities, and end with a side-scrolling section and a boss. Two players can play together, and can ride piggyback with one moving and the other attacking. One of the minigames recreates the first level of Gradius.",
+    "trivia": [
+      "Electronic Gaming Monthly said it \"didn't catch on too much in the U.S.\" but was popular in Japan, where it sold 521,205 copies.",
+      "IGN ranked it 32nd among the top 100 SNES games."
+    ],
+    "devStory": "Konami released the game in Japan on 19 July 1991 as Ganbare Goemon: Yuki-hime Kyūshutsu Emaki, in North America in February 1992 and in Europe in 1994.",
+    "sources": [
+      {
+        "title": "The Legend of the Mystical Ninja",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_Legend_of_the_Mystical_Ninja"
+      }
+    ]
+  },
+  {
+    "id": "super-cobra",
+    "title": "Super Cobra",
+    "year": 1981,
+    "decade": "1980s",
+    "developer": "Konami",
+    "publisher": "Konami / Stern",
+    "genre": "Shooter",
+    "platform": "Arcade",
+    "image": "images/games/super-cobra.png",
+    "description": "Super Cobra (1981) is Konami's follow-up to Scramble, a scrolling shooter in which a fuel-hungry helicopter fights through caverns to a base and carries off its loot.",
+    "longDescription": "The player flies a helicopter through caverns, using a laser and bombs against defences, tanks and UFOs. Fuel drains steadily and is topped up by destroying fuel tanks. After ten levels the helicopter reaches a base, which it must get through safely to carry off the loot.",
+    "trivia": [
+      "It runs on the same arcade hardware as Scramble.",
+      "Stern built 12,337 cabinets in the US by October 1981, its third best-selling arcade game after Berzerk and Scramble."
+    ],
+    "devStory": "Konami released Super Cobra in August 1981, with Stern distributing it in North America. Parker Brothers converted it to the Atari 2600, Atari 5200, ColecoVision, Intellivision and other systems, and the 2600 version won a Certificate of Merit at the 1983 Arkie Awards.",
+    "sources": [
+      {
+        "title": "Super Cobra",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Super_Cobra"
+      }
+    ]
+  },
+  {
+    "id": "tutankham",
+    "title": "Tutankham",
+    "year": 1982,
+    "decade": "1980s",
+    "developer": "Konami",
+    "publisher": "Konami / Stern",
+    "genre": "Maze",
+    "platform": "Arcade",
+    "image": "images/games/tutankham.png",
+    "description": "Tutankham (1982) is Konami's scrolling maze shooter set in the tomb of Tutankhamun, where the explorer's laser fires only left and right.",
+    "longDescription": "An explorer works through the scrolling tomb of Tutankhamun collecting keys and treasures. The laser fires only left and right, and each level or life brings one screen-clearing flash bomb. Only one key can be carried at a time, so players have to backtrack, and the laser stops working when the timer runs out. The tomb is guarded by asps, vultures, parrots, bats, dragons and curses.",
+    "trivia": [
+      "It appeared in a January 1983 LIFE photograph of six video game record holders.",
+      "Gauntlet and Time Bandit drew on its maze-shooter design."
+    ],
+    "devStory": "H. Tanigaki designed the game, and Konami released it in 1982, with Stern distributing it in North America. It topped the Play Meter charts in October 1982, and Parker Brothers brought it to the Atari 2600, ColecoVision and Intellivision in 1983.",
+    "sources": [
+      {
+        "title": "Tutankham",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tutankham"
+      }
+    ]
+  },
+  {
+    "id": "moon-cresta",
+    "title": "Moon Cresta",
+    "year": 1980,
+    "decade": "1980s",
+    "developer": "Jorudan",
+    "publisher": "Nichibutsu",
+    "genre": "Fixed Shooter",
+    "platform": "Arcade",
+    "image": "images/games/moon-cresta.png",
+    "description": "Moon Cresta (1980) is a fixed shooter in which the player docks the three stages of a rocket together in mid-game, gaining firepower but becoming a bigger target.",
+    "longDescription": "The player starts with a single-laser ship. Docking with the second and third stages of the rocket adds more lasers, up to five in all, but makes the combined ship a larger target, and a misaligned docking destroys the stage. The game ends when all three stages are lost.",
+    "trivia": [
+      "Centuri released it in North America as Eagle, adding an eagle-shaped enemy.",
+      "It was the fourth highest-earning arcade game of 1980 in Japan."
+    ],
+    "devStory": "Jorudan developed the game, with Shigeki Fujiwara as designer, and Nichibutsu released it in Japan on 15 February 1980, with Gremlin/Sega distributing it in North America. Incentive Software published several home versions, and the series continued with Terra Cresta (1985).",
+    "sources": [
+      {
+        "title": "Moon Cresta",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Moon_Cresta"
+      }
+    ]
+  },
+  {
+    "id": "atic-atac",
+    "title": "Atic Atac",
+    "year": 1983,
+    "decade": "1980s",
+    "developer": "Ultimate Play the Game",
+    "publisher": "Ultimate Play the Game",
+    "genre": "Action-Adventure",
+    "platform": "ZX Spectrum",
+    "image": "images/games/atic-atac.png",
+    "description": "Atic Atac (1983) is Ultimate Play the Game's castle maze for the ZX Spectrum, in which a wizard, knight or serf hunts for the three pieces of the Golden Key of ACG.",
+    "longDescription": "The player is trapped in a castle of several floors and must find the three pieces of the Golden Key of ACG to escape. There are three characters to choose from — Wizard, Knight or Serf — each with a different weapon, a different grip on the floor and a secret passage only they can use. Health drains as the player moves and is restored by eating food, while poisonous fungi drain it on contact.",
+    "trivia": [
+      "Computer and Video Games called it \"the best yet from Ultimate\".",
+      "It was a major inspiration for the TV show Knightmare.",
+      "It was included in Rare Replay in 2015."
+    ],
+    "devStory": "Tim Stamper wrote the game and Chris Stamper designed the graphics, and Ultimate released it for the ZX Spectrum in 1983. It entered the charts at number 5 in November 1983 and reached number 1. A BBC Micro version followed in 1985.",
+    "sources": [
+      {
+        "title": "Atic Atac",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Atic_Atac"
+      }
+    ]
+  },
+  {
+    "id": "hyper-sports",
+    "title": "Hyper Sports",
+    "year": 1984,
+    "decade": "1980s",
+    "developer": "Konami",
+    "publisher": "Konami / Centuri",
+    "genre": "Sports",
+    "platform": "Arcade",
+    "image": "images/games/hyper-sports.png",
+    "description": "Hyper Sports (1984) is Konami's sequel to Track & Field, with seven new events from swimming and skeet shooting to weightlifting and pole vault.",
+    "longDescription": "Like Track & Field, the game uses two run buttons and an action button for each player, with each event needing its own timing. The seven events are swimming, skeet shooting, long horse, archery, triple jump, weightlifting and pole vault.",
+    "trivia": [
+      "In Japan it was Hyper Olympic '84, officially licensed for the 1984 Summer Olympics.",
+      "It became the number-one arcade game in the UK.",
+      "The home versions topped the UK all-formats chart in July and August 1985."
+    ],
+    "devStory": "Konami released the game in Japan on 12 May 1984, with Centuri publishing it in North America. Home versions followed for the ZX Spectrum, Commodore 64, Amstrad CPC, BBC Micro and MSX, several of them without the pole vault.",
+    "sources": [
+      {
+        "title": "Hyper Sports",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Hyper_Sports"
+      }
+    ]
+  },
+  {
+    "id": "zero-wing",
+    "title": "Zero Wing",
+    "year": 1989,
+    "decade": "1980s",
+    "developer": "Toaplan",
+    "publisher": "Namco",
+    "genre": "Horizontal Shooter",
+    "platform": "Arcade",
+    "image": "images/games/zero-wing.png",
+    "description": "Zero Wing (1989) is Toaplan's side-scrolling shooter, whose badly translated Mega Drive intro gave the internet \"All your base are belong to us\".",
+    "longDescription": "In 2101, Trent seeks revenge on the space pirates CATS, who have broken a peace treaty, flying the ZIG fighter through eight levels, each ending in a boss. The Seizer Beam grabs enemies to use as shields or to fling at others, and three weapons — Red Cannon, Blue Laser and Green Homing — can be switched and upgraded.",
+    "trivia": [
+      "The Mega Drive version's English translation was done in-house; its intro was rediscovered in 1999 and became the \"All your base are belong to us\" meme.",
+      "The project began as a training exercise for new Toaplan staff and reused the Hellfire engine.",
+      "It was Toaplan's last side-scrolling shooter."
+    ],
+    "devStory": "Toshiaki Ōta led development, and Namco published the arcade game in Japan in October 1989. Sega released the Mega Drive version in 1991, which Computer and Video Games scored 93%.",
+    "sources": [
+      {
+        "title": "Zero Wing",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Zero_Wing"
+      }
+    ]
+  },
+  {
+    "id": "batsugun",
+    "title": "Batsugun",
+    "year": 1993,
+    "decade": "1990s",
+    "developer": "Toaplan",
+    "publisher": "Toaplan",
+    "genre": "Vertical Shooter",
+    "platform": "Arcade",
+    "image": "images/games/batsugun.png",
+    "description": "Batsugun (1993) is Toaplan's vertical shooter, regarded by many as the first \"manic\" or bullet hell shooter, in which ships level up their guns with experience.",
+    "longDescription": "Players choose one of three ships — Sky Mirage, Dragon's Whisper or Judgement Flasher — and fly five levels. Alongside the usual \"P\" power-ups and \"B\" bombs, the main gun gains experience separately from the score and levels up twice; once it is maxed out, further experience adds bombs instead. Extra lives come every million points, with gold medals and hidden bonus spots for higher scores.",
+    "trivia": [
+      "A Special Version, with a smaller hitbox, a shield and extra loops, was shown at the 1994 AOU Show but never officially released.",
+      "Toaplan closed in March 1994, before a planned sequel came out.",
+      "It influenced Cho Ren Sha 68K and Eschatos."
+    ],
+    "devStory": "Junya Inoue and Takeshi Kawamoto designed the game, and Toaplan released it on 7 December 1993. It won two Gamest awards. Banpresto published a Saturn version in Japan in 1996 that included both the original and the Special Version.",
+    "sources": [
+      {
+        "title": "Batsugun",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Batsugun"
+      }
+    ]
+  },
+  {
+    "id": "tiger-heli",
+    "title": "Tiger-Heli",
+    "year": 1985,
+    "decade": "1980s",
+    "developer": "Toaplan",
+    "publisher": "Taito",
+    "genre": "Vertical Shooter",
+    "platform": "Arcade",
+    "image": "images/games/tiger-heli.png",
+    "description": "Tiger-Heli (1985) is Toaplan's first shoot 'em up, a vertical helicopter shooter whose screen-clearing bomb became a staple of the genre.",
+    "longDescription": "The player flies a Tiger attack helicopter whose missiles hit both air and ground targets, while bombs destroy enemies and their bullets within range. Shooting certain bunkers releases extra bombs or small helper helicopters: red ones fire to the sides, grey ones forwards. After four stages the game loops back to the second stage at a higher difficulty.",
+    "trivia": [
+      "Game Machine listed it as the most popular arcade game in its 1 October 1985 issue.",
+      "The NES version reportedly sold more than a million copies in North America."
+    ],
+    "devStory": "Masahiro Yuge, Tatsuya Uemura and Yuichirō Nozawa programmed the game, with music by Yuge and Uemura. Taito released it in October 1985, and Micronics converted it to the NES, which Acclaim published in North America in 1987. Twin Cobra followed in 1987.",
+    "sources": [
+      {
+        "title": "Tiger-Heli",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tiger-Heli"
+      }
+    ]
+  },
+  {
+    "id": "bump-n-jump",
+    "title": "Bump 'n' Jump",
+    "year": 1982,
+    "decade": "1980s",
+    "developer": "Data East",
+    "publisher": "Data East / Bally Midway",
+    "genre": "Racing",
+    "platform": "Arcade",
+    "image": "images/games/bump-n-jump.png",
+    "description": "Bump 'n' Jump (1982) is Data East's vehicular combat game, in which the player's car bumps rivals off the road and leaps over water and obstacles.",
+    "longDescription": "The player drives to the end of each course, knocking enemy cars into the sides of the road or jumping on top of them, and leaping over obstacles such as water. Trucks can only be jumped on and sometimes drop debris. A jump needs at least 100 mph, and the seasons change from level to level. Finishing a level without wrecking any vehicles earns a 50,000-point bonus.",
+    "trivia": [
+      "In Japan it is Burnin' Rubber.",
+      "Next Generation ranked it 65th in its 1996 top 100 games."
+    ],
+    "devStory": "Data East released the game in Japan in November 1982, with Bally Midway distributing it in North America in 1983. Versions followed for the Intellivision, Atari 2600 and ColecoVision, and for the Famicom as Buggy Popper, which reached the NES under its original name in 1988.",
+    "sources": [
+      {
+        "title": "Bump 'n' Jump",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bump_%27n%27_Jump"
+      }
+    ]
+  },
+  {
+    "id": "front-line",
+    "title": "Front Line",
+    "year": 1982,
+    "decade": "1980s",
+    "developer": "Taito",
+    "publisher": "Taito",
+    "genre": "Run and Gun",
+    "platform": "Arcade",
+    "image": "images/games/front-line.png",
+    "description": "Front Line (1982) is Taito's overhead war game, one of the first run-and-guns, in which a lone soldier fights through infantry and tanks to lob a grenade into the enemy fort.",
+    "longDescription": "A lone soldier advances on foot against enemy infantry, then takes over tanks to fight enemy armour, and must finish by throwing a grenade over the brick barricade of the enemy fort. A rotary dial aims and fires his gun, and a button throws grenades and gets in and out of tanks. The light tank is nimble but fragile, while the heavy tank's cannon can take one hit from a light tank. Each time the fort falls, the stage repeats with faster and deadlier troops.",
+    "trivia": [
+      "It was runner-up for Coin-Op Game of the Year at the 1983 Arcade Awards, behind Pole Position.",
+      "It was the basis for SNK's TNK III, which in turn fed into Ikari Warriors."
+    ],
+    "devStory": "Tetsuya Sasaki designed the game, and Taito released it on 10 November 1982. It was the seventh highest-grossing arcade game of 1982 in Japan, and it preceded Capcom's Commando (1985) as an overhead run-and-gun.",
+    "sources": [
+      {
+        "title": "Front Line (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Front_Line_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "xybots",
+    "title": "Xybots",
+    "year": 1987,
+    "decade": "1980s",
+    "developer": "Atari Games",
+    "publisher": "Atari Games",
+    "genre": "Shooter",
+    "platform": "Arcade",
+    "image": "images/games/xybots.png",
+    "description": "Xybots (1987) is Ed Logg's split-screen 3D maze shooter for Atari Games, which began life as a sequel to Gauntlet.",
+    "longDescription": "Major Rock Hardy and Captain Ace Gunn fight their way through a 3D maze of robots called Xybots, alone or together. The lower half of the screen shows the action and the upper half each player's status and a map of the level. Coins dropped by defeated Xybots buy energy, armour, speed, firepower and maps in shops between levels, and some levels end with a large boss Xybot.",
+    "trivia": [
+      "It was first conceived as Gauntlet III: Catacombs, until Atari's marketing department wanted a different name.",
+      "Its joystick rotated the player, which the article cites as one reason for its limited sales.",
+      "GamesTM called it \"ahead of its time\"."
+    ],
+    "devStory": "Ed Logg designed and programmed the game with Bob Flanagan, and Atari Games released it in November 1987. Logg recalled in 2005 that it was not a financial success. Home versions followed in 1989 and a Lynx version in 1991.",
+    "sources": [
+      {
+        "title": "Xybots",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Xybots"
+      }
+    ]
+  },
+  {
+    "id": "pit-fighter",
+    "title": "Pit-Fighter",
+    "year": 1990,
+    "decade": "1990s",
+    "developer": "Atari Games",
+    "publisher": "Atari Games",
+    "genre": "Fighting",
+    "platform": "Arcade",
+    "image": "images/games/pit-fighter.png",
+    "description": "Pit-Fighter (1990) is Atari Games' street-fighting game built from digitised footage of live actors, in which up to three players brawl through 15 matches in front of a rowdy crowd.",
+    "longDescription": "Three fighters — Buzz, Ty and Kato — take on opponents such as Southside Jim, Heavy Metal and Mad Miles across 15 matches, with up to three players at once. Every third fight is a Grudge Match, and the last is the Championship against the Masked Warrior. The crowd joins in, attacking fighters, dropping weapons and shoving players back into the fight, and a power pill briefly boosts strength. Pressing all three buttons triggers a super move.",
+    "trivia": [
+      "Its fighters were digitised from live actors filmed against a bluescreen, making it the second fighting game with digitised sprites.",
+      "It topped the RePlay chart for upright cabinets in October 1990."
+    ],
+    "devStory": "Gary Stark and Mark Stephen Pierce designed the game, and Atari Games released it in August 1990, selling 5,500 arcade units in the US. Tengen published home versions from 1991, and a planned Pit Fighter II was never released.",
+    "sources": [
+      {
+        "title": "Pit-Fighter",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Pit-Fighter"
+      }
+    ]
+  },
+  {
+    "id": "kula-world",
+    "title": "Kula World",
+    "year": 1998,
+    "decade": "1990s",
+    "developer": "Game Design Sweden",
+    "publisher": "Sony Computer Entertainment",
+    "genre": "Puzzle / Platform",
+    "platform": "PlayStation",
+    "image": "images/games/kula-world.png",
+    "description": "Kula World (1998), released as Roll Away in North America, is a PlayStation puzzle-platformer in which a beach ball rolls over floating structures where gravity follows it round every edge.",
+    "longDescription": "The player rolls a beach ball across floating structures, collecting keys to unlock the exit along with coins and jewels. Gravity turns with the ball as it rolls over edges, so walls become floors. One fruit hidden in each stage unlocks bonus levels in which every cube must be activated. Falling off, hitting spikes or running out of time costs points, and the game ends if the score drops below zero.",
+    "trivia": [
+      "It was Game Design Sweden's only video game.",
+      "Playable demos came on the Demo One disc packed with European PlayStations in 1998.",
+      "Academic studies later used it to examine gamification in corporate training."
+    ],
+    "devStory": "Game Design Sweden developed it, and Sony released it in Europe on 10 July 1998, with Psygnosis publishing it in North America as Roll Away. IGN gave it 8.9 out of 10.",
+    "sources": [
+      {
+        "title": "Kula World",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Kula_World"
+      }
+    ]
+  },
+  {
+    "id": "uniracers",
+    "title": "Uniracers",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "DMA Design",
+    "publisher": "Nintendo",
+    "genre": "Racing",
+    "platform": "SNES",
+    "image": "images/games/uniracers.png",
+    "description": "Uniracers (1994) is DMA Design's Super NES racing game for riderless unicycles, in which stunts mid-race give a burst of speed.",
+    "longDescription": "Players race riderless unicycles around 2D tracks. Stunts speed the unicycle up on race tracks and score points on stunt tracks, while wiping out loses all the speed built up. There are nine tours of five tracks, ending in a race against the Anti-Uni, whose collisions reverse the controls and turn the track invisible. Two players can race split-screen, and a league mode takes up to eight.",
+    "trivia": [
+      "Mike Dailly says Pixar sued over the unicycle's resemblance to Red's Dream, limiting it to an initial run of 300,000; no record of such a lawsuit has been found.",
+      "The developers practised riding real unicycles in their offices.",
+      "In Europe it was called Unirally."
+    ],
+    "devStory": "DMA Design developed the game under the working title \"1x1\", and Nintendo released it in North America on 5 December 1994. Nintendo Power ranked it the eighth best Super NES game of 1994.",
+    "sources": [
+      {
+        "title": "Uniracers",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Uniracers"
+      }
+    ]
+  },
+  {
+    "id": "cool-spot",
+    "title": "Cool Spot",
+    "year": 1993,
+    "decade": "1990s",
+    "developer": "Virgin Games",
+    "publisher": "Virgin Games",
+    "genre": "Platform",
+    "platform": "Genesis",
+    "image": "images/games/cool-spot.png",
+    "description": "Cool Spot (1993) is Virgin Games' platformer starring Spot, the 7 Up mascot, who rescues his caged friends by collecting spots. It sold a million copies.",
+    "longDescription": "Spot jumps, throws soda bubbles at enemies and climbs by jumping against surfaces. In each level he has to collect a set number of spots to free a caged Spot, and each level has a time limit. His health is shown by a Spot face that sags as he takes damage. Flagpoles act as checkpoints, and hidden letters spelling 7 Up's slogan \"UNCOLA\" earn continues.",
+    "trivia": [
+      "It came out at a time when other brand mascots, such as Chester Cheetah and the Noid, were also getting their own games.",
+      "The sequel, Spot Goes to Hollywood, followed in 1995."
+    ],
+    "devStory": "David Bishop and Bill Anderson designed the game, David Perry programmed it and Tommy Tallarico composed the music. Virgin released it for the Genesis in April 1993, followed by Super NES, Master System, Amiga and Game Boy versions.",
+    "sources": [
+      {
+        "title": "Cool Spot",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cool_Spot"
+      }
+    ]
+  },
+  {
+    "id": "tobal-no-1",
+    "title": "Tobal No. 1",
+    "year": 1996,
+    "decade": "1990s",
+    "developer": "DreamFactory",
+    "publisher": "Square",
+    "genre": "Fighting",
+    "platform": "PlayStation",
+    "image": "images/games/tobal-no-1.png",
+    "description": "Tobal No. 1 (1996) is DreamFactory's 60-frames-per-second fighting game for Square, with characters by Akira Toriyama and a dungeon-crawling Quest Mode — and a demo of Final Fantasy VII in every box.",
+    "longDescription": "The game runs at up to 60 frames per second, and Akira Toriyama designed all of its characters. Alongside the fighting modes, its Quest Mode mixes fighting with 3D dungeon exploration, though progress there cannot be saved. Clearing the 30-floor Udan's Dungeon unlocks the secret fighter Toriyama Robo.",
+    "trivia": [
+      "Every copy included a playable demo of Final Fantasy VII and previews of Final Fantasy Tactics, Bushido Blade and SaGa Frontier.",
+      "It sold 752,000 copies in Japan in 1996, the ninth best-selling home game there that year."
+    ],
+    "devStory": "Seiichi Ishii helped design its mechanics at DreamFactory, and Square released it in Japan on 2 August 1996, with Sony distributing it abroad. Tobal 2 followed in 1997 but stayed in Japan.",
+    "sources": [
+      {
+        "title": "Tobal No. 1",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tobal_No._1"
+      }
+    ]
   }
 ]
