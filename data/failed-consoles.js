@@ -335,11 +335,11 @@ module.exports = [
     era: '1980s',
     unitsSold: '~1 million',
     description: 'The powerful but ill-fated successor to the Atari 2600, crippled by notoriously unreliable non-centering joysticks, a lack of backward compatibility, and the 1983 industry crash.',
-    longDescription: 'Released in November 1982 to answer the ColecoVision and Intellivision, the Atari 5200 "SuperSystem" was genuinely capable hardware derived from Atari’s 8-bit computers. Yet Atari sabotaged it with self-inflicted wounds. Its analog joysticks did not self-center — the stick stayed wherever you left it instead of springing back to neutral — making precise play maddening and the controllers prone to failure. The console was not backward compatible with the enormous 2600 library at launch; an adapter came later but did not work with early 5200 units. And it arrived just months before the video game crash of 1983, which gutted the entire North American console market. Atari discontinued it in 1984 after roughly a million units, a fraction of the 2600’s success.',
+    longDescription: 'Released in November 1982 to answer the ColecoVision and Intellivision, the Atari 5200 "SuperSystem" was genuinely capable hardware derived from Atari’s 8-bit computers. Yet Atari sabotaged it with self-inflicted wounds. Its analog joysticks did not self-centre — the stick stayed wherever you left it instead of springing back to neutral — making precise play maddening and the controllers prone to failure. The console was not backward compatible with the enormous 2600 library at launch; an adapter came later but did not work with early 5200 units. And it arrived just months before the video game crash of 1983, which gutted the entire North American console market. Atari discontinued it in 1984 after roughly a million units, a fraction of the 2600’s success.',
     goodGames: ['Pac-Man', 'Centipede', 'Star Raiders', 'Galaxian', 'Space Dungeon', 'Robotron: 2084'],
     keyFacts: [
       'Released November 1982 with hardware derived from Atari’s 8-bit computers',
-      'Its analog joysticks did not self-center and were failure-prone',
+      'Its analog joysticks did not self-centre and were failure-prone',
       'Not backward compatible with the 2600 at launch; the later adapter failed on early units',
       'Discontinued in 1984 after the 1983 crash; sold roughly 1 million units',
     ],

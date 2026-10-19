@@ -8,19 +8,19 @@ module.exports = [
     year: 1991,
     era: '1990s',
     description: 'Street Fighter II\'s journey from Capcom\'s CPS-1 arcade hardware to home consoles became a defining moment in the console wars, with each platform\'s version acting as a benchmark for what the hardware could deliver.',
-    longDescription: 'When Capcom released Street Fighter II: The World Warrior to arcades in 1991, it became the most profitable arcade cabinet of its era and created enormous pressure on console manufacturers to deliver a credible home version. The SNES port, handled by Capcom themselves, was widely praised for preserving the six-button layout and most of the gameplay, though the hardware compression of the audio was audible to attentive players. The Genesis version arrived a year later and sparked intense debate: it ran faster and had a sharper color palette in some respects, but originally shipped with a three-button controller, and Capcom had to code workarounds before a six-button pad became standard. The ongoing competition between these two ports directly drove Sega\'s development of the six-button Genesis controller in 1993.',
+    longDescription: 'When Capcom released Street Fighter II: The World Warrior to arcades in 1991, it became the most profitable arcade cabinet of its era and created enormous pressure on console manufacturers to deliver a credible home version. The SNES port, handled by Capcom themselves, was widely praised for preserving the six-button layout and most of the gameplay, though the hardware compression of the audio was audible to attentive players. The Genesis version arrived a year later and sparked intense debate: it ran faster and had a sharper colour palette in some respects, but originally shipped with a three-button controller, and Capcom had to code workarounds before a six-button pad became standard. The ongoing competition between these two ports directly drove Sega\'s development of the six-button Genesis controller in 1993.',
     versions: [
       {
         platform: 'SNES',
         year: 1992,
         quality: 'Excellent',
-        notes: 'The SNES port by Capcom was technically impressive, reproducing all twelve characters and most of the CPS-1 arcade\'s gameplay faithfully. Audio quality was noticeably compressed compared to the arcade, and the smaller color palette slightly muted some backgrounds, but it was the gold standard for home conversions at the time.',
+        notes: 'The SNES port by Capcom was technically impressive, reproducing all twelve characters and most of the CPS-1 arcade\'s gameplay faithfully. Audio quality was noticeably compressed compared to the arcade, and the smaller colour palette slightly muted some backgrounds, but it was the gold standard for home conversions at the time.',
       },
       {
         platform: 'Sega Genesis',
         year: 1993,
         quality: 'Good',
-        notes: 'Street Fighter II: Special Champion Edition on Genesis was faster than the SNES version and added new color modes, but the original three-button Genesis controller was poorly suited to the game\'s six-button moveset. Capcom bundled the six-button pad with later editions, resolving the main complaint.',
+        notes: 'Street Fighter II: Special Champion Edition on Genesis was faster than the SNES version and added new colour modes, but the original three-button Genesis controller was poorly suited to the game\'s six-button moveset. Capcom bundled the six-button pad with later editions, resolving the main complaint.',
       },
       {
         platform: 'PC (DOS)',
@@ -146,7 +146,7 @@ module.exports = [
         platform: 'Master System',
         year: 1991,
         quality: 'Good',
-        notes: 'The Master System version was closely related to the Game Gear version with minor differences in display resolution and color palette, reflecting the shared hardware architecture between the two systems. It was released in Europe and Brazil where the Master System retained a significant user base well into the 1990s.',
+        notes: 'The Master System version was closely related to the Game Gear version with minor differences in display resolution and colour palette, reflecting the shared hardware architecture between the two systems. It was released in Europe and Brazil where the Master System retained a significant user base well into the 1990s.',
       },
       {
         platform: 'Master System (Brazil)',

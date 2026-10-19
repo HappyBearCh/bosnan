@@ -31,7 +31,7 @@ module.exports = [
       },
       {
         title: 'Legacy and Influence',
-        html: '<p>Virtually every 2D platformer released in the decade following Super Mario Bros. bears the structural fingerprints of World 1-1. Developers internalized its rhythm — flat opener, escalating challenge, safe bonus detour, climactic goal — and applied it across dozens of genres and platforms.</p><p>Academic game design courses routinely use World 1-1 as a primary text. It has been dissected in countless video essays and appears regularly in game design books and talks.</p>'
+        html: '<p>Virtually every 2D platformer released in the decade following Super Mario Bros. bears the structural fingerprints of World 1-1. Developers internalised its rhythm — flat opener, escalating challenge, safe bonus detour, climactic goal — and applied it across dozens of genres and platforms.</p><p>Academic game design courses routinely use World 1-1 as a primary text. It has been dissected in countless video essays and appears regularly in game design books and talks.</p>'
       }
     ]
   },
@@ -61,11 +61,11 @@ module.exports = [
     sections: [
       {
         title: 'The Two-Act Design Philosophy',
-        html: '<p>Chemical Plant Zone exemplifies Sonic 2\'s mature two-act zone structure. Act 1 is a velocity showcase — the team clearly wanted players to feel fast, and the layout is generous with loops and open corridors that let skilled players barely touch the ground for long stretches.</p><p>Act 2 recontextualizes the same environment with the Mega Mack mechanic. Suddenly the wide speed corridors become vertical escape routes, and the platforming precision that Act 1 made optional becomes mandatory. The flood forces players upward through sections they may have previously blazed past, revealing a secondary layer of level design hidden beneath the speed.</p><p>This two-act tension — freedom followed by pressure in the same visual space — is a structural template that other platform games have borrowed extensively in the decades since.</p>'
+        html: '<p>Chemical Plant Zone exemplifies Sonic 2\'s mature two-act zone structure. Act 1 is a velocity showcase — the team clearly wanted players to feel fast, and the layout is generous with loops and open corridors that let skilled players barely touch the ground for long stretches.</p><p>Act 2 recontextualises the same environment with the Mega Mack mechanic. Suddenly the wide speed corridors become vertical escape routes, and the platforming precision that Act 1 made optional becomes mandatory. The flood forces players upward through sections they may have previously blazed past, revealing a secondary layer of level design hidden beneath the speed.</p><p>This two-act tension — freedom followed by pressure in the same visual space — is a structural template that other platform games have borrowed extensively in the decades since.</p>'
       },
       {
         title: 'Nakamura\'s Score and Sensory Coherence',
-        html: '<p>Masato Nakamura, bassist for Japanese pop group Dreams Come True, composed Chemical Plant Zone\'s music during his brief collaboration with Sega for Sonic 1 and 2. The track is characterized by a driving synth bass line and rapid arpeggiated leads that communicate mechanical urgency without feeling oppressive.</p><p>The coherence between the zone\'s audio and visual design — music tempo, colour palette, and movement speed all pulling in the same direction — is a large part of why it is so well remembered. Players moving at optimal speed through the level find themselves naturally in rhythm with the soundtrack.</p>'
+        html: '<p>Masato Nakamura, bassist for Japanese pop group Dreams Come True, composed Chemical Plant Zone\'s music during his brief collaboration with Sega for Sonic 1 and 2. The track is characterised by a driving synth bass line and rapid arpeggiated leads that communicate mechanical urgency without feeling oppressive.</p><p>The coherence between the zone\'s audio and visual design — music tempo, colour palette, and movement speed all pulling in the same direction — is a large part of why it is so well remembered. Players moving at optimal speed through the level find themselves naturally in rhythm with the soundtrack.</p>'
       }
     ]
   },
@@ -99,7 +99,7 @@ module.exports = [
       },
       {
         title: 'Influence on the FPS Genre',
-        html: '<p>E1M1 was so widely played and studied that its design conventions became default assumptions for an entire generation of FPS developers. The looping, interconnected geometry, the escalating enemy density, the hidden secret rooms — all were replicated, refined, and eventually reacted against in games from Quake through Half-Life and beyond.</p><p>The level\'s modding accessibility also made it one of the most analyzed and recreated maps in gaming history. Thousands of WAD files (Doom\'s level format) were built by players who learned level design by reverse-engineering E1M1\'s geometry. Many professional game designers cite Doom modding as their entry point into the industry.</p>'
+        html: '<p>E1M1 was so widely played and studied that its design conventions became default assumptions for an entire generation of FPS developers. The looping, interconnected geometry, the escalating enemy density, the hidden secret rooms — all were replicated, refined, and eventually reacted against in games from Quake through Half-Life and beyond.</p><p>The level\'s modding accessibility also made it one of the most analysed and recreated maps in gaming history. Thousands of WAD files (Doom\'s level format) were built by players who learned level design by reverse-engineering E1M1\'s geometry. Many professional game designers cite Doom modding as their entry point into the industry.</p>'
       }
     ]
   },
@@ -111,7 +111,7 @@ module.exports = [
     year: 1986,
     era: '1980s',
     levelName: 'Brinstar',
-    description: 'Brinstar is Metroid\'s starting zone and one of gaming\'s earliest examples of atmosphere used as a primary design tool, establishing isolation and alien hostility through sound, color, and layout rather than narrative.',
+    description: 'Brinstar is Metroid\'s starting zone and one of gaming\'s earliest examples of atmosphere used as a primary design tool, establishing isolation and alien hostility through sound, colour, and layout rather than narrative.',
     longDescription: 'Brinstar serves as the connective tissue of planet Zebes, linking Metroid\'s major zones and housing many of the game\'s earliest power-ups. Its design is notable for the sense of organic, living hostility it creates through simple NES hardware: green piping suggests biological growth, enemies respawn relentlessly to reinforce the sense of a planet that cannot be tamed, and Hirokazu Tanaka\'s haunting score creates a sense of profound loneliness. The level\'s non-linear branching structure predates the "Metroidvania" genre name but defines its essence — multiple paths are visible but inaccessible, creating an urgent map of future possibilities that rewards returning players with new routes as they acquire abilities. Brinstar taught players that exploration and environmental reading were as important as combat skill.',
     designPrinciples: [
       'Atmospheric audio-visual design communicates danger without enemy placement alone',
@@ -197,7 +197,7 @@ module.exports = [
     sections: [
       {
         title: 'Teaching Without Teaching',
-        html: '<p>A Link to the Past\'s Hyrule Castle achieves something remarkable: it functions as a complete tutorial for a complex game without ever feeling like one. Every mechanic introduced — block pushing, key collection, guard avoidance, chest opening, boss combat — is framed as a story event rather than a skill check.</p><p>When Link lifts his first chest to find a lantern, the game doesn\'t explain that dark areas require light; it simply puts a dark area immediately ahead. When guards patrol corridors, the game doesn\'t explain stealth; it puts Link in a context where noise feels dangerous. The Castle\'s power is that every mechanical lesson is emotionally motivated — you\'re not learning to push blocks, you\'re rescuing a princess.</p><p>This integration of tutorial and narrative would become the model for Ocarina of Time\'s Kokiri Forest, Twilight Princess\'s Ordon Village, and dozens of other adventure game openings that recognized the emotional power of teaching through story.</p>'
+        html: '<p>A Link to the Past\'s Hyrule Castle achieves something remarkable: it functions as a complete tutorial for a complex game without ever feeling like one. Every mechanic introduced — block pushing, key collection, guard avoidance, chest opening, boss combat — is framed as a story event rather than a skill check.</p><p>When Link lifts his first chest to find a lantern, the game doesn\'t explain that dark areas require light; it simply puts a dark area immediately ahead. When guards patrol corridors, the game doesn\'t explain stealth; it puts Link in a context where noise feels dangerous. The Castle\'s power is that every mechanical lesson is emotionally motivated — you\'re not learning to push blocks, you\'re rescuing a princess.</p><p>This integration of tutorial and narrative would become the model for Ocarina of Time\'s Kokiri Forest, Twilight Princess\'s Ordon Village, and dozens of other adventure game openings that recognised the emotional power of teaching through story.</p>'
       },
       {
         title: 'Architectural Storytelling',
@@ -214,11 +214,11 @@ module.exports = [
     era: '1990s',
     levelName: 'Coral Capers',
     description: 'Donkey Kong Country\'s underwater Coral Capers stage stopped players in 1994 not just for its pre-rendered graphics but for David Wise\'s Aquatic Ambiance — a piece of music so advanced for its platform that it genuinely sounded like it shouldn\'t be possible on a SNES cartridge.',
-    longDescription: 'Coral Capers is a masterclass in using audio-visual coherence to create a sense of place. Rare\'s pre-rendered 3D graphics were a genuine technical shock in 1994, but it is David Wise\'s Aquatic Ambiance that elevates the level from impressive to iconic. Wise built soft, slowly evolving synthesizer pads and a gentle bass line into a score that sounded dramatically more sophisticated than anything players had heard from a SNES. The level\'s gameplay, centered on swimming mechanics and coral reef navigation with an animal buddy companion, is pleasantly unconventional for a platformer but secondary to the zone\'s sensory impact. The combination of blue-tinted pre-rendered graphics and Wise\'s shimmering score created a sense of peaceful underwater immersion that players in 1994 described as unlike anything they\'d previously experienced in a game.',
+    longDescription: 'Coral Capers is a masterclass in using audio-visual coherence to create a sense of place. Rare\'s pre-rendered 3D graphics were a genuine technical shock in 1994, but it is David Wise\'s Aquatic Ambiance that elevates the level from impressive to iconic. Wise built soft, slowly evolving synthesiser pads and a gentle bass line into a score that sounded dramatically more sophisticated than anything players had heard from a SNES. The level\'s gameplay, centred on swimming mechanics and coral reef navigation with an animal buddy companion, is pleasantly unconventional for a platformer but secondary to the zone\'s sensory impact. The combination of blue-tinted pre-rendered graphics and Wise\'s shimmering score created a sense of peaceful underwater immersion that players in 1994 described as unlike anything they\'d previously experienced in a game.',
     designPrinciples: [
       'Audio-visual coherence as primary design tool for establishing sense of place',
       'Music used to create emotional tone rather than signal urgency or danger',
-      'Animal buddy system introduces swimming mechanic through companion behavior modeling',
+      'Animal buddy system introduces swimming mechanic through companion behaviour modelling',
       'Pre-rendered aesthetic used deliberately to create visual contrast with other stages',
       'Difficulty calibrated low to allow players to absorb the sensory experience'
     ],
@@ -231,11 +231,11 @@ module.exports = [
     sections: [
       {
         title: 'David Wise and the SNES Sound Chip',
-        html: '<p>Every SNES instrument is a short compressed sample, and all of a game\'s samples and music data had to fit in 64 kilobytes of audio RAM. David Wise worked within that limit to build Aquatic Ambiance from lush, slowly evolving synthesizer pads, a gentle bass line and the sound chip\'s hardware echo.</p><p>The result was a sense of depth and space that players genuinely struggled to believe was coming from a SNES. Alongside the game\'s pre-rendered graphics, it helped make Donkey Kong Country feel like a machine being pushed beyond what anyone thought it could do.</p>'
+        html: '<p>Every SNES instrument is a short compressed sample, and all of a game\'s samples and music data had to fit in 64 kilobytes of audio RAM. David Wise worked within that limit to build Aquatic Ambiance from lush, slowly evolving synthesiser pads, a gentle bass line and the sound chip\'s hardware echo.</p><p>The result was a sense of depth and space that players genuinely struggled to believe was coming from a SNES. Alongside the game\'s pre-rendered graphics, it helped make Donkey Kong Country feel like a machine being pushed beyond what anyone thought it could do.</p>'
       },
       {
         title: 'The Art of Peaceful Design',
-        html: '<p>Most SNES platformers calibrated their water levels as hazardous zones — slower movement, oxygen management, and amplified enemy danger. Coral Capers takes the opposite approach. The zone is beautiful, the music is meditative, and the difficulty is among the game\'s most forgiving. This is a deliberate creative decision that prioritizes emotional experience over mechanical challenge.</p><p>The zone functions as a palette cleanser within Donkey Kong Country\'s broader structure — a moment of genuine wonder amid the more challenging grassland and mine stages. Its placement in the game\'s early progression means most players encounter it before fatigue sets in, ensuring the audio-visual impact lands with maximum effect. Rare understood that not every level needs to be difficult to be memorable.</p>'
+        html: '<p>Most SNES platformers calibrated their water levels as hazardous zones — slower movement, oxygen management, and amplified enemy danger. Coral Capers takes the opposite approach. The zone is beautiful, the music is meditative, and the difficulty is among the game\'s most forgiving. This is a deliberate creative decision that prioritises emotional experience over mechanical challenge.</p><p>The zone functions as a palette cleanser within Donkey Kong Country\'s broader structure — a moment of genuine wonder amid the more challenging grassland and mine stages. Its placement in the game\'s early progression means most players encounter it before fatigue sets in, ensuring the audio-visual impact lands with maximum effect. Rare understood that not every level needs to be difficult to be memorable.</p>'
       }
     ]
   },
@@ -253,19 +253,19 @@ module.exports = [
       'Stage design used to communicate character identity and cultural context',
       'Animated background elements create sense of inhabited, living world',
       'Music composition matched to stage aesthetic for total character immersion',
-      'Crowd behavior designed to respond to fight intensity within hardware limits',
+      'Crowd behaviour designed to respond to fight intensity within hardware limits',
       'Architectural landmarks used as cultural signifiers rather than generic backdrops'
     ],
     keyFacts: [
       'Yoko Shimomura composed Ken\'s theme before leaving Capcom for Square, where she would compose Kingdom Hearts',
       'The stage\'s crowd members were individually animated, a significant technical achievement for 1991 arcade hardware',
       'The stage is set at an American harbour, with a yacht and onlookers in the background',
-      'The dockside setting was chosen to contrast with Ryu\'s Japanese dojo and emphasize Ken\'s American identity'
+      'The dockside setting was chosen to contrast with Ryu\'s Japanese dojo and emphasise Ken\'s American identity'
     ],
     sections: [
       {
         title: 'Stage as Character Design',
-        html: '<p>Street Fighter II\'s design team made a decision that seems obvious in retrospect but was genuinely innovative in 1991: every fighter\'s stage would function as a secondary character portrait. The player should be able to look at a stage and understand something meaningful about the person they\'re fighting before a single punch is thrown.</p><p>Ken\'s waterfront delivers this immediately. The expensive-looking setting, the casual crowd of blue-collar admirers, the American coastal geography — all communicate that Ken is wealthy, popular, and at home in a particular kind of American confidence. The stage\'s brightness and warm palette contrast with the darker, more constrained stages of fighters like Sagat and Balrog, reflecting personality through visual design.</p><p>This approach to stage-as-characterization became standard in the fighting game genre. Mortal Kombat, Tekken, and every subsequent Street Fighter title adopted the principle that a fighter\'s arena should be an extension of their identity rather than a generic backdrop.</p>'
+        html: '<p>Street Fighter II\'s design team made a decision that seems obvious in retrospect but was genuinely innovative in 1991: every fighter\'s stage would function as a secondary character portrait. The player should be able to look at a stage and understand something meaningful about the person they\'re fighting before a single punch is thrown.</p><p>Ken\'s waterfront delivers this immediately. The expensive-looking setting, the casual crowd of blue-collar admirers, the American coastal geography — all communicate that Ken is wealthy, popular, and at home in a particular kind of American confidence. The stage\'s brightness and warm palette contrast with the darker, more constrained stages of fighters like Sagat and Balrog, reflecting personality through visual design.</p><p>This approach to stage-as-characterisation became standard in the fighting game genre. Mortal Kombat, Tekken, and every subsequent Street Fighter title adopted the principle that a fighter\'s arena should be an extension of their identity rather than a generic backdrop.</p>'
       },
       {
         title: 'Shimomura\'s Influential Score',
@@ -299,7 +299,7 @@ module.exports = [
     sections: [
       {
         title: 'The Tutorial That Hides Itself',
-        html: '<p>Midgar is one of the most ambitious tutorial sequences ever designed for an RPG. It introduces a genuinely complex battle system — ATB gauge, materia slotting, limit breaks, elemental weaknesses, multiple party members — across a series of missions that never feel like skill tests because they are framed as acts of rebellion with genuine stakes.</p><p>The Mako Reactor missions provide increasing combat complexity in controlled environments where failure is survivable and resources are available, but the framing is political action, not training exercise. Players learning to swap materia do so because the next mission requires it, not because a tutorial window told them to. By the time Cloud and Barrett argue over AVALANCHE\'s ethics in a dingy bar, players have internalized the battle system without realizing they were being taught.</p><p>This approach to embedded tutorial design — using narrative momentum to carry players through mechanical introduction — influenced Mass Effect\'s Eden Prime, The Last of Us\'s Joel and Sarah prologue, and dozens of subsequent AAA game openings.</p>'
+        html: '<p>Midgar is one of the most ambitious tutorial sequences ever designed for an RPG. It introduces a genuinely complex battle system — ATB gauge, materia slotting, limit breaks, elemental weaknesses, multiple party members — across a series of missions that never feel like skill tests because they are framed as acts of rebellion with genuine stakes.</p><p>The Mako Reactor missions provide increasing combat complexity in controlled environments where failure is survivable and resources are available, but the framing is political action, not training exercise. Players learning to swap materia do so because the next mission requires it, not because a tutorial window told them to. By the time Cloud and Barrett argue over AVALANCHE\'s ethics in a dingy bar, players have internalised the battle system without realising they were being taught.</p><p>This approach to embedded tutorial design — using narrative momentum to carry players through mechanical introduction — influenced Mass Effect\'s Eden Prime, The Last of Us\'s Joel and Sarah prologue, and dozens of subsequent AAA game openings.</p>'
       },
       {
         title: 'The City as Argument',
@@ -316,7 +316,7 @@ module.exports = [
     era: '1990s',
     levelName: 'The End of Time',
     description: 'Chrono Trigger\'s End of Time is one of gaming\'s most elegant hub designs — a single streetlight at the literal end of history that functions as travel nexus, character development space, and the game\'s most potent piece of environmental storytelling.',
-    longDescription: 'The End of Time is where Gaspar, the Guru of Time, waits in solitary exile amid absolute nothingness, serving as the game\'s travel hub and exposition source. The location is accessed whenever more than three party members attempt time travel simultaneously, making its discovery an emergent mechanical consequence rather than a scripted event. Yasunori Mitsuda\'s music for the location — a spare, melancholy piece using solo synthesized instruments against silence — is one of the SNES era\'s finest atmospheric compositions. The design communicates profound loneliness and temporal displacement in a way that language alone could not: Gaspar sits at a streetlamp because there is nothing else, because there is no time here, because someone has to wait at the end of everything.',
+    longDescription: 'The End of Time is where Gaspar, the Guru of Time, waits in solitary exile amid absolute nothingness, serving as the game\'s travel hub and exposition source. The location is accessed whenever more than three party members attempt time travel simultaneously, making its discovery an emergent mechanical consequence rather than a scripted event. Yasunori Mitsuda\'s music for the location — a spare, melancholy piece using solo synthesised instruments against silence — is one of the SNES era\'s finest atmospheric compositions. The design communicates profound loneliness and temporal displacement in a way that language alone could not: Gaspar sits at a streetlamp because there is nothing else, because there is no time here, because someone has to wait at the end of everything.',
     designPrinciples: [
       'Hub discovery driven by emergent mechanical consequence rather than scripted event',
       'Minimalist environment design used to create maximum emotional resonance',
@@ -356,7 +356,7 @@ module.exports = [
       'Enemy positioning designed to reward weapon selection over pure reaction',
       'Stage difficulty calibrated as accessible entry point in an open-choice structure',
       'Boss weapon utility demonstrated within the boss\'s own stage post-acquisition',
-      'Music energy synchronized to the level\'s pace and enemy density'
+      'Music energy synchronised to the level\'s pace and enemy density'
     ],
     keyFacts: [
       'The Metal Blade is widely considered Mega Man 2\'s most powerful weapon — Metal Man himself is vulnerable to it',
@@ -383,11 +383,11 @@ module.exports = [
     year: 1992,
     era: '1990s',
     levelName: 'The Undercaves / Big Blue',
-    description: 'Ecco the Dolphin\'s opening ocean levels create an experience unlike anything else in the 16-bit library — a sensation of genuine aquatic freedom and profound environmental alienness that the game immediately, mercilessly weaponizes against the player.',
+    description: 'Ecco the Dolphin\'s opening ocean levels create an experience unlike anything else in the 16-bit library — a sensation of genuine aquatic freedom and profound environmental alienness that the game immediately, mercilessly weaponises against the player.',
     longDescription: 'Ecco the Dolphin opens with a deceptive serenity. The player controls a dolphin in a sunlit cove, performing jumps and communicating with other sea creatures, with no immediate threat visible. Then a waterspout appears and rips every other living creature from the ocean in seconds — and the player is utterly alone. The subsequent level, which sends Ecco into the open ocean to find survivors, is one of gaming\'s most effective tonal pivots: the same fluid movement physics and beautiful Genesis water effects that created the opening\'s wonder now create isolation and anxiety. The game\'s ambient electronic music creates a soundscape that is genuinely unsettling in a way unusual for a game marketed to young players.',
     designPrinciples: [
       'Tonal pivot uses established safe-space mechanics to amplify subsequent threat',
-      'Freedom of movement weaponized — open ocean creates disorientation rather than liberation',
+      'Freedom of movement weaponised — open ocean creates disorientation rather than liberation',
       'Ambient audio design creates an unnerving atmosphere',
       'Oxygen mechanic introduces existential pressure without enemy combat',
       'Environmental storytelling communicates catastrophe through absence rather than explicit event'
@@ -405,7 +405,7 @@ module.exports = [
       },
       {
         title: 'Nilsen\'s Alien Soundscape',
-        html: '<p>The music of Ecco the Dolphin — composed by Andy Armer for the Genesis and re-scored by Spencer Nilsen for the Sega CD — occupies a unique place in game music history. Where most early-1990s game music worked in melodic structures borrowed from film or popular music, Ecco\'s was genuinely ambient — layered synthesizer textures combined with processed natural recordings that function as atmosphere rather than accompaniment.</p><p>The music communicates that Ecco\'s ocean is simultaneously familiar and profoundly strange, which is exactly the emotional register the game is trying to occupy throughout its strange, ambitious journey.</p>'
+        html: '<p>The music of Ecco the Dolphin — composed by Andy Armer for the Genesis and re-scored by Spencer Nilsen for the Sega CD — occupies a unique place in game music history. Where most early-1990s game music worked in melodic structures borrowed from film or popular music, Ecco\'s was genuinely ambient — layered synthesiser textures combined with processed natural recordings that function as atmosphere rather than accompaniment.</p><p>The music communicates that Ecco\'s ocean is simultaneously familiar and profoundly strange, which is exactly the emotional register the game is trying to occupy throughout its strange, ambitious journey.</p>'
       }
     ]
   },
@@ -652,18 +652,18 @@ module.exports = [
     year: 1991,
     era: '1990s',
     levelName: 'Turbo Tunnel (Stage 3)',
-    description: 'The third stage of Battletoads turns into a high-speed hoverbike gauntlet of memorized walls that spikes the difficulty so sharply it became the definitive example of the impossible NES level.',
-    longDescription: 'Battletoads, released by Rare in 1991, was a beat-\'em-up with a reputation for punishing difficulty, and its third stage, the Turbo Tunnel, is where that reputation was cemented. The level begins conventionally enough as a brawl, but partway through the player mounts a Speeder Bike and the game transforms into a side-scrolling high-speed obstacle course. From that point the Turbo Tunnel is about one thing: reacting to, and ultimately memorising, a relentless sequence of walls and barriers that the bike hurtles toward at ever-increasing speed.\n\nThe design escalates deliberately. The first stretch introduces the basic barriers in a readable, alternating zigzag pattern; the second adds ramps that leap chasms and floating obstacles; the third accelerates the whole thing and introduces Rat Rockets that drop fresh walls directly into the player\'s path. As the speed climbs, the window to react shrinks until pure reflex is no longer enough and success depends on knowing what is coming before it appears on screen. A single collision means instant death, and the level offers little margin for the trial-and-error learning it effectively demands.\n\nThe difficulty was recognised as extreme even at the time. The Winner\'s Guide to Nintendo, a strategy guide published alongside the game in 1991, called the Turbo Tunnel "one of the toughest challenges of any NES game," and in the decades since, Battletoads as a whole has repeatedly appeared on lists of the hardest games ever made — GameTrailers once placed it at number one. For a great many players, the Turbo Tunnel was simply where their Battletoads cartridge stopped: the wall, literal and figurative, that they never got past.\n\nThat shared experience of failure is exactly why the level endures. The Turbo Tunnel became cultural shorthand for the brutal, memorization-driven difficulty of the NES era — the stage everyone remembers dying on, the benchmark against which other "hard levels" are measured, and a recurring reference in retro-gaming conversation. It is one of the rare individual levels famous not for how it welcomed players in but for how completely, and how memorably, it shut them out.',
+    description: 'The third stage of Battletoads turns into a high-speed hoverbike gauntlet of memorised walls that spikes the difficulty so sharply it became the definitive example of the impossible NES level.',
+    longDescription: 'Battletoads, released by Rare in 1991, was a beat-\'em-up with a reputation for punishing difficulty, and its third stage, the Turbo Tunnel, is where that reputation was cemented. The level begins conventionally enough as a brawl, but partway through the player mounts a Speeder Bike and the game transforms into a side-scrolling high-speed obstacle course. From that point the Turbo Tunnel is about one thing: reacting to, and ultimately memorising, a relentless sequence of walls and barriers that the bike hurtles toward at ever-increasing speed.\n\nThe design escalates deliberately. The first stretch introduces the basic barriers in a readable, alternating zigzag pattern; the second adds ramps that leap chasms and floating obstacles; the third accelerates the whole thing and introduces Rat Rockets that drop fresh walls directly into the player\'s path. As the speed climbs, the window to react shrinks until pure reflex is no longer enough and success depends on knowing what is coming before it appears on screen. A single collision means instant death, and the level offers little margin for the trial-and-error learning it effectively demands.\n\nThe difficulty was recognised as extreme even at the time. The Winner\'s Guide to Nintendo, a strategy guide published alongside the game in 1991, called the Turbo Tunnel "one of the toughest challenges of any NES game," and in the decades since, Battletoads as a whole has repeatedly appeared on lists of the hardest games ever made — GameTrailers once placed it at number one. For a great many players, the Turbo Tunnel was simply where their Battletoads cartridge stopped: the wall, literal and figurative, that they never got past.\n\nThat shared experience of failure is exactly why the level endures. The Turbo Tunnel became cultural shorthand for the brutal, memorisation-driven difficulty of the NES era — the stage everyone remembers dying on, the benchmark against which other "hard levels" are measured, and a recurring reference in retro-gaming conversation. It is one of the rare individual levels famous not for how it welcomed players in but for how completely, and how memorably, it shut them out.',
     designPrinciples: [
       'A mid-stage genre shift from brawler to high-speed obstacle course',
-      'Escalating speed shrinks reaction windows until memorization is required',
+      'Escalating speed shrinks reaction windows until memorisation is required',
       'Instant death on any collision with minimal margin for error',
       'Staged introduction of barrier types before combining and accelerating them',
       'Difficulty as spectacle — the level is designed to be a famous wall',
     ],
     keyFacts: [
       'Stage 3 of Rare\'s Battletoads (1991); shifts into a Speeder Bike obstacle gauntlet',
-      'Escalating speed and instant-death barriers force memorization over reaction',
+      'Escalating speed and instant-death barriers force memorisation over reaction',
       'A 1991 strategy guide called it "one of the toughest challenges of any NES game"',
       'Became the definitive cultural example of the impossibly hard NES level',
     ],
@@ -674,7 +674,7 @@ module.exports = [
       },
       {
         title: 'Legacy and Influence',
-        html: '<p>The Turbo Tunnel is famous the way few individual levels are: as a collective memory of defeat. It is the stage a generation of NES players cite when they talk about games that were simply too hard, the benchmark invoked whenever a modern game wants to claim brutal difficulty, and a fixture of retro-gaming lore. Its influence is less about design imitation than about cultural meaning — it fixed the idea of the memorization-gauntlet "wall" so firmly that "the Turbo Tunnel" functions as a unit of difficulty. Battletoads has many hard moments, but this is the one that made it a legend, precisely because so few players ever got past it.</p>'
+        html: '<p>The Turbo Tunnel is famous the way few individual levels are: as a collective memory of defeat. It is the stage a generation of NES players cite when they talk about games that were simply too hard, the benchmark invoked whenever a modern game wants to claim brutal difficulty, and a fixture of retro-gaming lore. Its influence is less about design imitation than about cultural meaning — it fixed the idea of the memorisation-gauntlet "wall" so firmly that "the Turbo Tunnel" functions as a unit of difficulty. Battletoads has many hard moments, but this is the one that made it a legend, precisely because so few players ever got past it.</p>'
       },
     ],
   },

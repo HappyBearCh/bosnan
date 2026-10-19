@@ -273,6 +273,12 @@ function gameKey(g) {
 const games = dedupe(
   JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'games.json'), 'utf8')),
   gameKey, GAME_ALIASES);
+// Duplicates whose titles differ, so gameKey can't pair them. The retired entry
+// was removed from games.json; its URL still 301s to the one that was kept.
+for (const [retired, kept] of [
+  ['shinobi-gg', 'the-gg-shinobi'],
+  ['abes-oddysee', 'oddworld-abes-oddysee'],
+]) GAME_ALIASES.set(retired, kept);
 const GENRES = dedupe(require('./data/genres'));
 // Essays are deduped on title, not id: an essay title is its identity, and the
 // two "The Demo Scene" entries landed under different slugs.
@@ -1714,7 +1720,7 @@ const HUB_TITLES = new Map(Object.entries({
   'controversies': 'Retro Gaming Controversies — Mortal Kombat to the ESRB',
   'cover-stories': 'Magazine Cover Stories That Shaped Retro Gaming',
   'critics': 'Retro Game Critics and Journalists Who Shaped Gaming',
-  'decades': 'Retro Games by Decade — the 1960s, 70s, 80s and 90s',
+  'decades': 'Retro Games by Decade — the 1950s to the 1990s',
   'designers': 'Legendary Game Designers — Miyamoto, Yokoi and More',
   'developers': 'Retro Game Developers — Nintendo, Sega, Atari and More',
   'difficulty': 'Nintendo Hard — Retro Game Difficulty and Hard Modes',

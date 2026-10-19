@@ -114,7 +114,7 @@ module.exports = [
     year: 1994,
     era: '1990s',
     description: 'Super Metroid refined Metroid\'s exploration template into a masterwork of environmental storytelling, atmospheric sound design, and movement mechanics that the series revisits to this day.',
-    longDescription: 'Metroid and Metroid II established the genre\'s foundations: ability-gated non-linear exploration on an alien planet. Super Metroid polished every element to a degree neither predecessor approached. Its map system, wall-jumping and speed-running physics, enemy behaviors, and legendary ending sequence set benchmarks that persist across the genre. The game teaches through environment rather than text — one of the earliest examples of games as a medium for implicit communication.',
+    longDescription: 'Metroid and Metroid II established the genre\'s foundations: ability-gated non-linear exploration on an alien planet. Super Metroid polished every element to a degree neither predecessor approached. Its map system, wall-jumping and speed-running physics, enemy behaviours, and legendary ending sequence set benchmarks that persist across the genre. The game teaches through environment rather than text — one of the earliest examples of games as a medium for implicit communication.',
     changedWhat: [
       'Full map screen showing explored and unexplored areas with room data',
       'Wall-jump and space jump mechanics creating fluid three-dimensional movement',

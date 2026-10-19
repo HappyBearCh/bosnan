@@ -240,7 +240,7 @@ module.exports = [
       'Bobby Prince built the sound from real recorded gunfire, processed to fit Doom\'s 8-bit 11 kHz audio engine',
       'By 1995 Doom was estimated to be installed on more PCs than Windows 95 — Prince\'s weapon sounds were among the most-heard audio in PC gaming',
       'The approach of using real weapon recordings rather than synthesis established an industry standard that FPS games have maintained through the present day',
-      'Prince\'s other Doom sounds — including the monster vocalizations sourced from real animals — applied the same real-recording philosophy throughout the game\'s audio design',
+      'Prince\'s other Doom sounds — including the monster vocalisations sourced from real animals — applied the same real-recording philosophy throughout the game\'s audio design',
     ],
     sections: [
       {
