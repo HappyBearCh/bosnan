@@ -108,8 +108,8 @@
   "date": "2026-10-02"
  },
  "alexey-pajitnov": {
-  "hash": "ed44cce99e74d45f",
-  "date": "2026-10-02"
+  "hash": "f95a51548fcc12cd",
+  "date": "2026-10-18"
  },
  "amiga-format": {
   "hash": "efcd012781f485ad",
@@ -148,8 +148,8 @@
   "date": "2026-10-01"
  },
  "andrew-braybrook": {
-  "hash": "75c269b6b37db6c5",
-  "date": "2026-10-17"
+  "hash": "a1d380ed0372d7ea",
+  "date": "2026-10-18"
  },
  "andross-star-fox-64": {
   "hash": "52b9a20ace43a1ab",
@@ -972,8 +972,8 @@
   "date": "2026-10-02"
  },
  "dani-bunten-berry": {
-  "hash": "5b89e03a6e2ff463",
-  "date": "2026-10-17"
+  "hash": "dfddd42cae3eb8d2",
+  "date": "2026-10-18"
  },
  "data-east": {
   "hash": "8edbfad4bb9c1f07",
@@ -988,8 +988,8 @@
   "date": "2026-10-02"
  },
  "david-crane": {
-  "hash": "8c572feecf85e499",
-  "date": "2026-10-17"
+  "hash": "6bdfc793ac3c5791",
+  "date": "2026-10-18"
  },
  "david-hayter": {
   "hash": "48b0c0973d818a9e",
@@ -1548,8 +1548,8 @@
   "date": "2026-10-01"
  },
  "eugene-jarvis": {
-  "hash": "7ee515540f63542d",
-  "date": "2026-10-17"
+  "hash": "387c24eec1747722",
+  "date": "2026-10-18"
  },
  "everquest-train-exploit": {
   "hash": "5d086823248500e1",
@@ -1824,8 +1824,8 @@
   "date": "2026-10-01"
  },
  "fumito-ueda": {
-  "hash": "7248be0e50663fee",
-  "date": "2026-10-02"
+  "hash": "b34b32b9f43d50fb",
+  "date": "2026-10-18"
  },
  "gabe-newell": {
   "hash": "294a6e537190c923",
@@ -1959,6 +1959,14 @@
   "hash": "2aa5f02f45e31ddb",
   "date": "2026-10-06"
  },
+ "games:1943-battle-of-midway": {
+  "hash": "73763c987ee98a6d",
+  "date": "2026-10-18"
+ },
+ "games:a-boy-and-his-blob": {
+  "hash": "e903de560a624d34",
+  "date": "2026-10-18"
+ },
  "games:abes-oddysee": {
   "hash": "4571fae21ae6f1ea",
   "date": "2026-10-06"
@@ -1983,6 +1991,10 @@
   "hash": "9eb98616d75bcc5f",
   "date": "2026-10-06"
  },
+ "games:akalabeth": {
+  "hash": "8f2ceb1c04e4e80d",
+  "date": "2026-10-18"
+ },
  "games:aladdin-genesis": {
   "hash": "5e2597c8e2288722",
   "date": "2026-09-30"
@@ -2003,9 +2015,17 @@
   "hash": "d21d5141ac48a563",
   "date": "2026-10-06"
  },
+ "games:alien-syndrome": {
+  "hash": "cc819a23d4f3e5e6",
+  "date": "2026-10-18"
+ },
  "games:alien-vs-predator-jaguar": {
   "hash": "69a06d21c13781a0",
   "date": "2026-09-30"
+ },
+ "games:alleyway": {
+  "hash": "ed7d7eb3e50cc839",
+  "date": "2026-10-19"
  },
  "games:alone-in-the-dark-1992": {
   "hash": "8f103a791db14abf",
@@ -2051,6 +2071,10 @@
   "hash": "11513c1aa3a8719a",
   "date": "2026-10-06"
  },
+ "games:asterix-arcade": {
+  "hash": "4a606b324842d666",
+  "date": "2026-10-18"
+ },
  "games:asteroids": {
   "hash": "5ae91b5bc322d7b0",
   "date": "2026-10-06"
@@ -2059,13 +2083,29 @@
   "hash": "17d279fef18d6753",
   "date": "2026-10-06"
  },
+ "games:athena-1986": {
+  "hash": "4877b281d4e869a9",
+  "date": "2026-10-18"
+ },
  "games:atic-atac": {
   "hash": "d9c5dceaf43293b0",
   "date": "2026-10-18"
  },
+ "games:attack-of-the-mutant-camels": {
+  "hash": "da52c4d988abd7e0",
+  "date": "2026-10-18"
+ },
+ "games:axelay": {
+  "hash": "48317efce97d2dc9",
+  "date": "2026-10-19"
+ },
  "games:bad-dudes": {
   "hash": "d8d6a7f832d6757c",
   "date": "2026-10-06"
+ },
+ "games:bahamut-lagoon": {
+  "hash": "e1f599b057d2638d",
+  "date": "2026-10-19"
  },
  "games:baldurs-gate": {
   "hash": "0716869f38703b27",
@@ -2075,9 +2115,25 @@
   "hash": "4c9658096ba81938",
   "date": "2026-10-06"
  },
+ "games:balloon-fight": {
+  "hash": "2448780e20ebd53e",
+  "date": "2026-10-18"
+ },
+ "games:balloon-kid": {
+  "hash": "1c0631bc161e519c",
+  "date": "2026-10-19"
+ },
  "games:banjo-kazooie": {
   "hash": "c74557c19551216a",
   "date": "2026-10-06"
+ },
+ "games:baraduke": {
+  "hash": "0b206dac5bba2dcb",
+  "date": "2026-10-18"
+ },
+ "games:barbarian-1987": {
+  "hash": "7d2f2232acb1cd6d",
+  "date": "2026-10-18"
  },
  "games:batman-1989": {
   "hash": "b11fcac0e8b9b4ab",
@@ -2111,8 +2167,16 @@
   "hash": "3ad6a8ba8ff3a70b",
   "date": "2026-10-06"
  },
+ "games:black-tiger": {
+  "hash": "56ce257a2550c42d",
+  "date": "2026-10-18"
+ },
  "games:blackthorne": {
   "hash": "3d60b8c404fee967",
+  "date": "2026-10-18"
+ },
+ "games:blast-corps": {
+  "hash": "c67798d1b69327ef",
   "date": "2026-10-18"
  },
  "games:blaster-master": {
@@ -2138,6 +2202,10 @@
  "games:bomb-jack": {
   "hash": "c0bc68caaf33c40d",
   "date": "2026-10-06"
+ },
+ "games:bonanza-bros": {
+  "hash": "e18a84a54272feb1",
+  "date": "2026-10-18"
  },
  "games:bonks-adventure": {
   "hash": "bd0a8c575a87dab1",
@@ -2187,8 +2255,16 @@
   "hash": "dc3188f769ff1371",
   "date": "2026-10-17"
  },
+ "games:bust-a-groove": {
+  "hash": "9b957d2951aa110d",
+  "date": "2026-10-18"
+ },
  "games:cadash": {
   "hash": "edf2fdcda8eb5220",
+  "date": "2026-10-18"
+ },
+ "games:cadillacs-and-dinosaurs": {
+  "hash": "d5b37a13768bf9f5",
   "date": "2026-10-18"
  },
  "games:california-games-lynx": {
@@ -2198,6 +2274,14 @@
  "games:cannon-fodder": {
   "hash": "ef821dfa1fd733cd",
   "date": "2026-10-06"
+ },
+ "games:captain-commando": {
+  "hash": "81df6cf3e21b3e6a",
+  "date": "2026-10-18"
+ },
+ "games:carmageddon": {
+  "hash": "5355e4522e31d2f0",
+  "date": "2026-10-18"
  },
  "games:carmen-sandiego": {
   "hash": "44c0006ed6950a46",
@@ -2223,9 +2307,17 @@
   "hash": "4353f9a812526b9c",
   "date": "2026-10-06"
  },
+ "games:castlevania-iii": {
+  "hash": "27497e915f7cd36b",
+  "date": "2026-10-18"
+ },
  "games:castlevania-sotn": {
   "hash": "f14987170545c420",
   "date": "2026-10-06"
+ },
+ "games:castlevania-the-adventure": {
+  "hash": "9fdf504f24d3ee2d",
+  "date": "2026-10-19"
  },
  "games:centipede": {
   "hash": "a8641fc47f26e436",
@@ -2234,6 +2326,10 @@
  "games:chaos-engine": {
   "hash": "d62c00d210d4bfad",
   "date": "2026-10-06"
+ },
+ "games:chase-hq": {
+  "hash": "b0d434c5e6046529",
+  "date": "2026-10-18"
  },
  "games:chip-challenge-lynx": {
   "hash": "31ad07a08f65bf63",
@@ -2311,6 +2407,10 @@
   "hash": "7551e70d8bdd7fc9",
   "date": "2026-10-06"
  },
+ "games:commander-keen": {
+  "hash": "cede983d5eba3e92",
+  "date": "2026-10-18"
+ },
  "games:commando": {
   "hash": "4b6bd753cb05ff4e",
   "date": "2026-10-06"
@@ -2318,6 +2418,10 @@
  "games:computer-space": {
   "hash": "61afdbc1fd2cdd9a",
   "date": "2026-10-06"
+ },
+ "games:congo-bongo": {
+  "hash": "84c7c5db1b047d39",
+  "date": "2026-10-18"
  },
  "games:contra": {
   "hash": "e1e180a4ea048a63",
@@ -2347,13 +2451,25 @@
   "hash": "7f6c3dfe71ccf461",
   "date": "2026-10-06"
  },
+ "games:croc-legend-of-the-gobbos": {
+  "hash": "0b570164f4e5ef88",
+  "date": "2026-10-18"
+ },
  "games:crystal-castles": {
   "hash": "e8b0f288ab282042",
   "date": "2026-10-06"
  },
+ "games:crystalis": {
+  "hash": "8085ace726a6ce2a",
+  "date": "2026-10-18"
+ },
  "games:cybermorph": {
   "hash": "424f47ed1d5f4f58",
   "date": "2026-10-17"
+ },
+ "games:d-1995": {
+  "hash": "47ae40fcb06fde6e",
+  "date": "2026-10-18"
  },
  "games:dance-dance-revolution": {
   "hash": "f829a4e1357cd6a5",
@@ -2391,6 +2507,10 @@
   "hash": "5ce6c32338975441",
   "date": "2026-10-17"
  },
+ "games:defenders-of-oasis": {
+  "hash": "04c3b5787b242d9e",
+  "date": "2026-10-19"
+ },
  "games:demons-crest": {
   "hash": "a10b0ea9b1ce1b2f",
   "date": "2026-10-06"
@@ -2422,6 +2542,10 @@
  "games:dino-crisis": {
   "hash": "7c55e8f94d31217e",
   "date": "2026-10-17"
+ },
+ "games:dizzy-1987": {
+  "hash": "e02dd0cef993e264",
+  "date": "2026-10-18"
  },
  "games:doki-doki-panic": {
   "hash": "cf9f9b6b114054b7",
@@ -2455,6 +2579,10 @@
   "hash": "de84d7412fac9b94",
   "date": "2026-10-06"
  },
+ "games:donkey-kong-land": {
+  "hash": "5c5e664d954af507",
+  "date": "2026-10-19"
+ },
  "games:doom-1993": {
   "hash": "1dc4d977e1041343",
   "date": "2026-10-06"
@@ -2463,13 +2591,25 @@
   "hash": "6a43839ee97e45ca",
   "date": "2026-09-30"
  },
+ "games:doomdarks-revenge": {
+  "hash": "93b66fd620bdada6",
+  "date": "2026-10-18"
+ },
  "games:double-dragon": {
   "hash": "4fb741e15821141c",
   "date": "2026-10-06"
  },
+ "games:dr-mario": {
+  "hash": "f1ad14f6949375ff",
+  "date": "2026-10-18"
+ },
  "games:dracula-x-turbografx": {
   "hash": "81971a8c31f7978c",
   "date": "2026-10-06"
+ },
+ "games:dragon-buster": {
+  "hash": "66ea816bed14de52",
+  "date": "2026-10-18"
  },
  "games:dragon-crystal": {
   "hash": "a50386cb1d9d51bc",
@@ -2479,6 +2619,10 @@
   "hash": "268d7443e1346019",
   "date": "2026-10-17"
  },
+ "games:dragon-quest-iii": {
+  "hash": "b58b9ce2f093845c",
+  "date": "2026-10-18"
+ },
  "games:dragon-spirit": {
   "hash": "bbb45530d4c6eae8",
   "date": "2026-10-06"
@@ -2487,9 +2631,17 @@
   "hash": "7dcc851d3546d7a6",
   "date": "2026-10-06"
  },
+ "games:dragon-warrior-monsters": {
+  "hash": "b8ab91863140e685",
+  "date": "2026-10-19"
+ },
  "games:dragons-lair": {
   "hash": "700d7101ea4f95b9",
   "date": "2026-10-06"
+ },
+ "games:dragster-2600": {
+  "hash": "ef08c010c0e3ab31",
+  "date": "2026-10-18"
  },
  "games:driller": {
   "hash": "c7e7fada85a35bbc",
@@ -2543,6 +2695,10 @@
   "hash": "eec21f3f4e869998",
   "date": "2026-10-06"
  },
+ "games:einhander": {
+  "hash": "ad9f4963fdd97cee",
+  "date": "2026-10-18"
+ },
  "games:elevator-action": {
   "hash": "a18e52369b3d3f69",
   "date": "2026-10-17"
@@ -2555,9 +2711,25 @@
   "hash": "bc3093c839422334",
   "date": "2026-10-17"
  },
+ "games:enduro-racer": {
+  "hash": "d6edc65a81e55707",
+  "date": "2026-10-18"
+ },
+ "games:enemy-zero": {
+  "hash": "6d4e86d2c065e5b8",
+  "date": "2026-10-18"
+ },
+ "games:et-the-extra-terrestrial-2600": {
+  "hash": "475a95e29ca7a5e0",
+  "date": "2026-10-18"
+ },
  "games:excitebike": {
   "hash": "66c20a6504a82de7",
   "date": "2026-10-06"
+ },
+ "games:exed-exes": {
+  "hash": "c5ddb1654047338e",
+  "date": "2026-10-18"
  },
  "games:exile-bbc": {
   "hash": "9f758ba8fe743f18",
@@ -2566,6 +2738,10 @@
  "games:eye-of-the-beholder": {
   "hash": "0c618e0a935c0333",
   "date": "2026-10-17"
+ },
+ "games:f-15-strike-eagle": {
+  "hash": "b30957f874dfdbb9",
+  "date": "2026-10-18"
  },
  "games:f-zero": {
   "hash": "1eabc6e99c7ee4fb",
@@ -2591,9 +2767,21 @@
   "hash": "2164487cae675762",
   "date": "2026-10-06"
  },
+ "games:faxanadu": {
+  "hash": "6316e8f8b4fdd49c",
+  "date": "2026-10-18"
+ },
+ "games:fighting-vipers": {
+  "hash": "b222bb9f5b192713",
+  "date": "2026-10-18"
+ },
  "games:final-fantasy": {
   "hash": "fe2268b941436d36",
   "date": "2026-10-06"
+ },
+ "games:final-fantasy-adventure": {
+  "hash": "bcfb6981783bd3f1",
+  "date": "2026-10-19"
  },
  "games:final-fantasy-iv": {
   "hash": "aff38ff62857daed",
@@ -2619,6 +2807,10 @@
   "hash": "ae979e4fc7820a73",
   "date": "2026-10-06"
  },
+ "games:fire-and-ice-1992": {
+  "hash": "be1e1b98acf68c3d",
+  "date": "2026-10-18"
+ },
  "games:fire-truck": {
   "hash": "5dba6c999ad33c12",
   "date": "2026-10-06"
@@ -2627,9 +2819,21 @@
   "hash": "fd2a98339e3ced5a",
   "date": "2026-10-06"
  },
+ "games:flicky": {
+  "hash": "6f9803de1e6bf3b7",
+  "date": "2026-10-18"
+ },
  "games:flight-simulator": {
   "hash": "8a3c02c1ce09cd11",
   "date": "2026-10-06"
+ },
+ "games:forgotten-worlds": {
+  "hash": "db3050bec5e7df3c",
+  "date": "2026-10-18"
+ },
+ "games:freeway-2600": {
+  "hash": "d0f09c9781e0bc82",
+  "date": "2026-10-18"
  },
  "games:frogger": {
   "hash": "22e3d6cf73b2e517",
@@ -2642,6 +2846,10 @@
  "games:front-mission": {
   "hash": "e5a5badb4e34ea52",
   "date": "2026-10-17"
+ },
+ "games:frontier-elite-ii": {
+  "hash": "2a53878db486a41b",
+  "date": "2026-10-18"
  },
  "games:full-throttle": {
   "hash": "3435fdca3c17f2d4",
@@ -2667,6 +2875,10 @@
   "hash": "42107bdb01edfd68",
   "date": "2026-10-06"
  },
+ "games:gaplus": {
+  "hash": "6c894ea2553f4e87",
+  "date": "2026-10-18"
+ },
  "games:gargoyles-quest": {
   "hash": "63dd8987d1ad9d61",
   "date": "2026-10-06"
@@ -2691,6 +2903,10 @@
   "hash": "7a845667b637e673",
   "date": "2026-10-06"
  },
+ "games:gee-bee": {
+  "hash": "472c2f7f95637958",
+  "date": "2026-10-18"
+ },
  "games:gex-3do": {
   "hash": "921f0b3961034efc",
   "date": "2026-10-17"
@@ -2711,6 +2927,10 @@
   "hash": "a73332292e81df6c",
   "date": "2026-10-06"
  },
+ "games:gimmick": {
+  "hash": "8608cb7fdbe1705d",
+  "date": "2026-10-18"
+ },
  "games:gods-amiga": {
   "hash": "49de4ea42ff77b44",
   "date": "2026-10-17"
@@ -2730,6 +2950,10 @@
  "games:golvellius-sms": {
   "hash": "ea5aba58d58e19ce",
   "date": "2026-10-17"
+ },
+ "games:goof-troop": {
+  "hash": "ade722a8f231f604",
+  "date": "2026-10-19"
  },
  "games:gorf": {
   "hash": "3ba3b5a85861f9c0",
@@ -2767,6 +2991,14 @@
   "hash": "82f7384c77428ab4",
   "date": "2026-10-06"
  },
+ "games:gribblys-day-out": {
+  "hash": "81ef3034481b76b8",
+  "date": "2026-10-18"
+ },
+ "games:gridrunner": {
+  "hash": "affdc5b357455ca1",
+  "date": "2026-10-18"
+ },
  "games:grim-fandango": {
   "hash": "2318e12d8c146ffa",
   "date": "2026-10-17"
@@ -2778,6 +3010,10 @@
  "games:gun-fight": {
   "hash": "e56811967e5372b6",
   "date": "2026-10-06"
+ },
+ "games:gun-smoke": {
+  "hash": "7b552bfbb2e3a7dd",
+  "date": "2026-10-18"
  },
  "games:gunstar-heroes": {
   "hash": "25dc3ba5ce671dda",
@@ -2803,9 +3039,21 @@
   "hash": "940f151866dfac34",
   "date": "2026-10-17"
  },
+ "games:haunted-castle": {
+  "hash": "7582e8dd3da94b4f",
+  "date": "2026-10-18"
+ },
  "games:head-over-heels": {
   "hash": "c2ee5fa8047e3bc4",
   "date": "2026-10-06"
+ },
+ "games:heart-of-africa": {
+  "hash": "6530381fa3239db5",
+  "date": "2026-10-18"
+ },
+ "games:heavy-barrel": {
+  "hash": "592cee1dacd1e1f1",
+  "date": "2026-10-18"
  },
  "games:heretic": {
   "hash": "2d6e2578532cdea5",
@@ -2815,9 +3063,17 @@
   "hash": "73e231da4b4d8e1a",
   "date": "2026-10-17"
  },
+ "games:heroes-of-might-and-magic": {
+  "hash": "84c0ad6c44065d0c",
+  "date": "2026-10-18"
+ },
  "games:herzog-zwei": {
   "hash": "ec339b2e1d54b417",
   "date": "2026-10-17"
+ },
+ "games:hexen": {
+  "hash": "3f909702ac396faf",
+  "date": "2026-10-18"
  },
  "games:highly-responsive-to-prayers": {
   "hash": "687fae056da2e721",
@@ -2827,12 +3083,20 @@
   "hash": "4bbf8e9ee2e81be0",
   "date": "2026-10-06"
  },
+ "games:homeworld": {
+  "hash": "6f92019190156308",
+  "date": "2026-10-18"
+ },
  "games:house-of-the-dead": {
   "hash": "43417c401c0915e2",
   "date": "2026-10-06"
  },
  "games:hyper-sports": {
   "hash": "d869c8ee94b1c3cf",
+  "date": "2026-10-18"
+ },
+ "games:ice-climber": {
+  "hash": "e4c33e17f3e4b781",
   "date": "2026-10-18"
  },
  "games:ikari-warriors": {
@@ -2851,9 +3115,21 @@
   "hash": "ed5751c1e38f890f",
   "date": "2026-10-06"
  },
+ "games:in-the-hunt": {
+  "hash": "f0dee1b9ae99447f",
+  "date": "2026-10-18"
+ },
+ "games:indiana-jones-fate-of-atlantis": {
+  "hash": "4aba5489e2760191",
+  "date": "2026-10-18"
+ },
  "games:intelligent-qube": {
   "hash": "6dcb847287d8f397",
   "date": "2026-10-17"
+ },
+ "games:international-karate-plus": {
+  "hash": "de4920df22f846ae",
+  "date": "2026-10-18"
  },
  "games:jackal": {
   "hash": "888f06c680b3b8f4",
@@ -2870,6 +3146,10 @@
  "games:jetpac": {
   "hash": "906ba859a84112de",
   "date": "2026-10-17"
+ },
+ "games:joe-and-mac": {
+  "hash": "9d338e3eb8e91da3",
+  "date": "2026-10-18"
  },
  "games:joust": {
   "hash": "f921684e4e767ff2",
@@ -2895,9 +3175,21 @@
   "hash": "86fb71844f98fd9f",
   "date": "2026-10-17"
  },
+ "games:kick-off": {
+  "hash": "60475275dee64895",
+  "date": "2026-10-18"
+ },
+ "games:kid-chameleon": {
+  "hash": "7d4d1f3a3353cf51",
+  "date": "2026-10-18"
+ },
  "games:kid-icarus": {
   "hash": "35ed93c231d8a75c",
   "date": "2026-10-06"
+ },
+ "games:kiki-kaikai": {
+  "hash": "6decafa4e8aeb9f3",
+  "date": "2026-10-18"
  },
  "games:killer-instinct-snes": {
   "hash": "09fda0d93e847004",
@@ -2931,6 +3223,10 @@
   "hash": "e8bbe557fb1f71aa",
   "date": "2026-10-06"
  },
+ "games:kirbys-dream-course": {
+  "hash": "4771455df4759d53",
+  "date": "2026-10-19"
+ },
  "games:kirbys-dream-land-2": {
   "hash": "c0157b704f87f855",
   "date": "2026-10-06"
@@ -2954,6 +3250,14 @@
  "games:knightmare-msx": {
   "hash": "076bf85a53030c0a",
   "date": "2026-10-06"
+ },
+ "games:knights-of-the-round": {
+  "hash": "8b90a538e07b08a2",
+  "date": "2026-10-18"
+ },
+ "games:konamis-ping-pong": {
+  "hash": "6831e35f29ddad97",
+  "date": "2026-10-18"
  },
  "games:kula-world": {
   "hash": "a90985312566c312",
@@ -2979,6 +3283,10 @@
   "hash": "2fab079cd3080680",
   "date": "2026-10-06"
  },
+ "games:legacy-of-kain-soul-reaver": {
+  "hash": "cfc3455c54791fb7",
+  "date": "2026-10-18"
+ },
  "games:legend-of-the-mystical-ninja": {
   "hash": "8aa9fc16940820ff",
   "date": "2026-10-18"
@@ -2990,6 +3298,10 @@
  "games:legendary-axe": {
   "hash": "80448410fb405d9b",
   "date": "2026-10-06"
+ },
+ "games:legendary-wings": {
+  "hash": "6927e199fe67c581",
+  "date": "2026-10-18"
  },
  "games:leisure-suit-larry": {
   "hash": "959600246451309c",
@@ -3003,6 +3315,14 @@
   "hash": "24634c2c798b674b",
   "date": "2026-10-06"
  },
+ "games:lethal-enforcers": {
+  "hash": "78ad871e41f50f26",
+  "date": "2026-10-18"
+ },
+ "games:libble-rabble": {
+  "hash": "f23ff85dba6af8ce",
+  "date": "2026-10-18"
+ },
  "games:life-force": {
   "hash": "588e6488769e6b41",
   "date": "2026-10-06"
@@ -3015,13 +3335,25 @@
   "hash": "79e93a090d2fb9aa",
   "date": "2026-10-17"
  },
+ "games:little-nemo-the-dream-master": {
+  "hash": "c60cb9ca783af188",
+  "date": "2026-10-18"
+ },
  "games:little-samson-nes": {
   "hash": "b2f9da69c0c4bb45",
   "date": "2026-10-06"
  },
+ "games:live-a-live": {
+  "hash": "fd3a87b151756edc",
+  "date": "2026-10-19"
+ },
  "games:lode-runner": {
   "hash": "93d84db6e7248c1b",
   "date": "2026-10-06"
+ },
+ "games:loom": {
+  "hash": "1afac0ae054332cb",
+  "date": "2026-10-18"
  },
  "games:lufia-ii-rise-of-the-sinistrals": {
   "hash": "b6500f4b4c3142bc",
@@ -3071,6 +3403,22 @@
   "hash": "ed254a275d33bffc",
   "date": "2026-10-06"
  },
+ "games:mario-paint": {
+  "hash": "076499b3d5f1324f",
+  "date": "2026-10-19"
+ },
+ "games:marios-picross": {
+  "hash": "1dfe894944338a94",
+  "date": "2026-10-19"
+ },
+ "games:master-of-orion": {
+  "hash": "9a1797bd88b195ea",
+  "date": "2026-10-18"
+ },
+ "games:medal-of-honor-1999": {
+  "hash": "e5cb457c1464df55",
+  "date": "2026-10-18"
+ },
  "games:medievil": {
   "hash": "73e19583b1f04e72",
   "date": "2026-10-06"
@@ -3087,6 +3435,10 @@
   "hash": "601d4924a81ea478",
   "date": "2026-10-06"
  },
+ "games:mega-man-7": {
+  "hash": "167224f58c441309",
+  "date": "2026-10-19"
+ },
  "games:mega-man-legends": {
   "hash": "73274e6df288fc15",
   "date": "2026-10-17"
@@ -3094,6 +3446,10 @@
  "games:mega-man-x": {
   "hash": "ee74217f3c1d869e",
   "date": "2026-10-06"
+ },
+ "games:mega-man-x2": {
+  "hash": "3488013e929f4f41",
+  "date": "2026-10-19"
  },
  "games:mercenary": {
   "hash": "9eeedac3400ed737",
@@ -3103,9 +3459,17 @@
   "hash": "bb3c2fcb841fb153",
   "date": "2026-10-06"
  },
+ "games:metal-black": {
+  "hash": "b3a38a5fe15dc837",
+  "date": "2026-10-18"
+ },
  "games:metal-gear": {
   "hash": "aadc6f1a82fbf99a",
   "date": "2026-10-06"
+ },
+ "games:metal-gear-2-solid-snake": {
+  "hash": "c000f1c50a7bdc0b",
+  "date": "2026-10-18"
  },
  "games:metal-gear-solid": {
   "hash": "35889256856700a9",
@@ -3123,6 +3487,10 @@
   "hash": "4f680b09d1a0a7de",
   "date": "2026-10-06"
  },
+ "games:metro-cross": {
+  "hash": "d4ac694a99145dc9",
+  "date": "2026-10-18"
+ },
  "games:metroid": {
   "hash": "838f8d0dbdc6e8eb",
   "date": "2026-10-06"
@@ -3135,8 +3503,16 @@
   "hash": "4ac3fc2cce838bec",
   "date": "2026-10-06"
  },
+ "games:midnight-resistance": {
+  "hash": "1b9e2f9a20e9558c",
+  "date": "2026-10-18"
+ },
  "games:midwinter": {
   "hash": "f65636ee544d2366",
+  "date": "2026-10-18"
+ },
+ "games:mikie": {
+  "hash": "1811abd5d74cdbad",
   "date": "2026-10-18"
  },
  "games:military-madness": {
@@ -3151,6 +3527,10 @@
   "hash": "49c788bf551b6b58",
   "date": "2026-10-17"
  },
+ "games:mischief-makers": {
+  "hash": "a99e0cf83947dc80",
+  "date": "2026-10-18"
+ },
  "games:missile-command": {
   "hash": "51e4e582e4670d63",
   "date": "2026-10-06"
@@ -3162,6 +3542,10 @@
  "games:monaco-gp": {
   "hash": "e4c138d1b7c0ef52",
   "date": "2026-10-06"
+ },
+ "games:monkey-island-2": {
+  "hash": "fec9793a936c8bbb",
+  "date": "2026-10-18"
  },
  "games:monkey-island-amiga": {
   "hash": "76cf12a0d96d3872",
@@ -3215,9 +3599,17 @@
   "hash": "4890d36b32d08d41",
   "date": "2026-10-17"
  },
+ "games:narc-1988": {
+  "hash": "fd30e70d0a2a567b",
+  "date": "2026-10-18"
+ },
  "games:nba-jam": {
   "hash": "3bc721fa95a6ac02",
   "date": "2026-10-06"
+ },
+ "games:nebulus": {
+  "hash": "28256ac16549b890",
+  "date": "2026-10-18"
  },
  "games:need-for-speed-3do": {
   "hash": "0ca0f56b1711e551",
@@ -3246,6 +3638,10 @@
  "games:ogre-battle": {
   "hash": "fcf23c3d62f88d9f",
   "date": "2026-10-17"
+ },
+ "games:omega-boost": {
+  "hash": "d1ec8f99204d710f",
+  "date": "2026-10-18"
  },
  "games:operation-wolf": {
   "hash": "cf845275c1cd7f5c",
@@ -3283,6 +3679,10 @@
   "hash": "ad1bacbb114fc95c",
   "date": "2026-10-17"
  },
+ "games:panzer-dragoon-zwei": {
+  "hash": "a98c031282032f19",
+  "date": "2026-10-18"
+ },
  "games:paperboy": {
   "hash": "7d0238203a0299a4",
   "date": "2026-10-06"
@@ -3303,6 +3703,10 @@
   "hash": "3e872822df7981ac",
   "date": "2026-10-06"
  },
+ "games:parodius": {
+  "hash": "858e20ebbe4d9e0d",
+  "date": "2026-10-18"
+ },
  "games:pengo": {
   "hash": "1dd9f423dff7cf7e",
   "date": "2026-10-06"
@@ -3311,9 +3715,17 @@
   "hash": "fcc9c4ba82a97fb0",
   "date": "2026-10-17"
  },
+ "games:phantasmagoria": {
+  "hash": "9f510fd0117df509",
+  "date": "2026-10-18"
+ },
  "games:phantasy-star": {
   "hash": "3555901ffd5847eb",
   "date": "2026-10-06"
+ },
+ "games:phantasy-star-ii": {
+  "hash": "621481b0e0e979e6",
+  "date": "2026-10-18"
  },
  "games:phantasy-star-iv": {
   "hash": "c51dd894fc7e0b19",
@@ -3347,9 +3759,17 @@
   "hash": "d3071972c1150dfc",
   "date": "2026-10-06"
  },
+ "games:plok": {
+  "hash": "5e5b0b27884aaeba",
+  "date": "2026-10-19"
+ },
  "games:pokemon-gold-and-silver": {
   "hash": "e54c1ff06832d987",
   "date": "2026-10-06"
+ },
+ "games:pokemon-pinball": {
+  "hash": "1e3938967787f19c",
+  "date": "2026-10-19"
  },
  "games:pokemon-red-blue": {
   "hash": "3ab625649a1a599f",
@@ -3366,6 +3786,10 @@
  "games:police-quest": {
   "hash": "1296d00dd12ba7bf",
   "date": "2026-10-06"
+ },
+ "games:policenauts": {
+  "hash": "df3b2a64d6ffb45a",
+  "date": "2026-10-18"
  },
  "games:pong": {
   "hash": "aa317d585787f01e",
@@ -3387,6 +3811,10 @@
   "hash": "f9c3e1c30e17fa8b",
   "date": "2026-10-06"
  },
+ "games:power-drift": {
+  "hash": "9b41444190a895dd",
+  "date": "2026-10-18"
+ },
  "games:power-stone": {
   "hash": "dbb4f98a120b439a",
   "date": "2026-10-17"
@@ -3399,6 +3827,10 @@
   "hash": "c4d3353d72f7bd00",
   "date": "2026-10-06"
  },
+ "games:prince-of-persia-2": {
+  "hash": "0409c7e8c1df945f",
+  "date": "2026-10-18"
+ },
  "games:princess-maker-2": {
   "hash": "00fb591f25591a52",
   "date": "2026-10-17"
@@ -3410,6 +3842,10 @@
  "games:psycho-fox-sms": {
   "hash": "1bb8623cd9509afa",
   "date": "2026-10-17"
+ },
+ "games:psycho-soldier": {
+  "hash": "30e5c5fbe643cbd3",
+  "date": "2026-10-18"
  },
  "games:pulstar": {
   "hash": "884fea161a1f7309",
@@ -3455,6 +3891,14 @@
   "hash": "d813ebff348bd74c",
   "date": "2026-10-17"
  },
+ "games:raiders-of-the-lost-ark-2600": {
+  "hash": "83a92b4d99caa79b",
+  "date": "2026-10-18"
+ },
+ "games:railroad-tycoon": {
+  "hash": "794a4ee72160bcca",
+  "date": "2026-10-18"
+ },
  "games:rainbow-islands": {
   "hash": "6eb41ffb730dbaca",
   "date": "2026-10-17"
@@ -3479,6 +3923,10 @@
   "hash": "137d68c872bd4b84",
   "date": "2026-10-17"
  },
+ "games:rc-pro-am": {
+  "hash": "14326dffe5974a1e",
+  "date": "2026-10-18"
+ },
  "games:red-alarm-virtual-boy": {
   "hash": "670ea985596600ee",
   "date": "2026-10-06"
@@ -3498,6 +3946,10 @@
  "games:resident-evil": {
   "hash": "dad1f75e8dbecc86",
   "date": "2026-10-06"
+ },
+ "games:resident-evil-2": {
+  "hash": "98143157b396527f",
+  "date": "2026-10-18"
  },
  "games:revelations-persona": {
   "hash": "1736df8416dcc1d1",
@@ -3543,6 +3995,10 @@
   "hash": "c910a95e83d07e8b",
   "date": "2026-10-06"
  },
+ "games:rocn-rope": {
+  "hash": "d2df6660c01d561b",
+  "date": "2026-10-18"
+ },
  "games:rogue-1980": {
   "hash": "835343c6dd853e08",
   "date": "2026-10-17"
@@ -3562,6 +4018,10 @@
  "games:rygar-lynx": {
   "hash": "1fb96f511b14b0af",
   "date": "2026-09-30"
+ },
+ "games:saboteur": {
+  "hash": "ab8aafb0a9bd999b",
+  "date": "2026-10-18"
  },
  "games:sabre-wulf": {
   "hash": "c1676beae2c6ca1e",
@@ -3591,6 +4051,10 @@
   "hash": "2d9b4dfe5a85ed44",
   "date": "2026-10-17"
  },
+ "games:secret-of-evermore": {
+  "hash": "322a3b46ba4f8944",
+  "date": "2026-10-19"
+ },
  "games:secret-of-mana": {
   "hash": "d3ba3faf3f1ee4ad",
   "date": "2026-10-06"
@@ -3607,6 +4071,10 @@
   "hash": "872f1d0008505fb1",
   "date": "2026-10-06"
  },
+ "games:shadow-dancer": {
+  "hash": "7d1ae3a8ce18811a",
+  "date": "2026-10-18"
+ },
  "games:shadow-of-the-beast": {
   "hash": "73185f727a773c65",
   "date": "2026-10-06"
@@ -3614,6 +4082,14 @@
  "games:shadow-of-the-beast-amiga": {
   "hash": "2677e6ca25a90f28",
   "date": "2026-10-06"
+ },
+ "games:shadowgate": {
+  "hash": "cecfdbe2834815de",
+  "date": "2026-10-18"
+ },
+ "games:shao-lins-road": {
+  "hash": "1b256fa27b1b8b01",
+  "date": "2026-10-18"
  },
  "games:shenmue": {
   "hash": "dbd6c57f1c3c51fb",
@@ -3651,6 +4127,10 @@
   "hash": "b0e2d66ebfe7e86a",
   "date": "2026-09-30"
  },
+ "games:side-arms": {
+  "hash": "eebcffd18db11def",
+  "date": "2026-10-18"
+ },
  "games:silent-hill": {
   "hash": "42745a7ef3c868d3",
   "date": "2026-10-06"
@@ -3658,6 +4138,10 @@
  "games:simcity": {
   "hash": "a37c87f2f6d89ca4",
   "date": "2026-10-06"
+ },
+ "games:simcity-2000": {
+  "hash": "3ee423259cee38c8",
+  "date": "2026-10-18"
  },
  "games:sinistar": {
   "hash": "0e994d655172e603",
@@ -3674,6 +4158,18 @@
  "games:smurf-rescue-in-gargamels-castle": {
   "hash": "bcdaf20b587b566c",
   "date": "2026-10-17"
+ },
+ "games:snake-rattle-n-roll": {
+  "hash": "2d6614fa4214b93b",
+  "date": "2026-10-18"
+ },
+ "games:snatcher": {
+  "hash": "3e69f2496379945f",
+  "date": "2026-10-18"
+ },
+ "games:snk-vs-capcom-match-of-the-millennium": {
+  "hash": "9b8987852d2d82a9",
+  "date": "2026-10-19"
  },
  "games:snow-bros": {
   "hash": "cbff6e777ce68e35",
@@ -3695,6 +4191,14 @@
   "hash": "1c25acb9a62fde60",
   "date": "2026-10-06"
  },
+ "games:sonic-cd": {
+  "hash": "f86c26ada7a72f3f",
+  "date": "2026-10-18"
+ },
+ "games:sonic-chaos": {
+  "hash": "c44ceb3478aa59e5",
+  "date": "2026-10-19"
+ },
  "games:sonic-the-hedgehog": {
   "hash": "23d07eb2b81f774e",
   "date": "2026-10-06"
@@ -3710,6 +4214,10 @@
  "games:sonic-the-hedgehog-gg": {
   "hash": "b73211cfb3c5e719",
   "date": "2026-10-06"
+ },
+ "games:sonson": {
+  "hash": "ee8cb9a0a98eecbe",
+  "date": "2026-10-18"
  },
  "games:soul-blazer": {
   "hash": "ca1d2b4a236a3fea",
@@ -3747,6 +4255,10 @@
   "hash": "b51e40a2f2de68a0",
   "date": "2026-10-06"
  },
+ "games:space-station-silicon-valley": {
+  "hash": "83d37b5ffff13bcc",
+  "date": "2026-10-18"
+ },
  "games:space-wars": {
   "hash": "2ede2cbc7bf21a82",
   "date": "2026-10-06"
@@ -3755,6 +4267,14 @@
   "hash": "483d1da434d2ffeb",
   "date": "2026-10-06"
  },
+ "games:sparkster-genesis": {
+  "hash": "7161622c3602da51",
+  "date": "2026-10-18"
+ },
+ "games:speed-race": {
+  "hash": "6233e7eb794396bf",
+  "date": "2026-10-18"
+ },
  "games:speedball": {
   "hash": "1557139794059ae2",
   "date": "2026-10-06"
@@ -3762,6 +4282,10 @@
  "games:speedball-2": {
   "hash": "a0e86f74cd2c6a60",
   "date": "2026-10-17"
+ },
+ "games:spellbound-1985": {
+  "hash": "cbbb1d8f7231fd70",
+  "date": "2026-10-18"
  },
  "games:spelunker": {
   "hash": "fcfa940263450b6b",
@@ -3790,6 +4314,10 @@
  "games:star-castle": {
   "hash": "6ed679d395da8b35",
   "date": "2026-10-17"
+ },
+ "games:star-control-ii": {
+  "hash": "a8da22662a73297d",
+  "date": "2026-10-18"
  },
  "games:star-fox": {
   "hash": "f5c7a40833717875",
@@ -3843,6 +4371,10 @@
   "hash": "ac2b6a0721157629",
   "date": "2026-10-17"
  },
+ "games:startropics": {
+  "hash": "8b0713d618579f3c",
+  "date": "2026-10-18"
+ },
  "games:street-fighter": {
   "hash": "4574a885a6a940d2",
   "date": "2026-10-06"
@@ -3862,6 +4394,10 @@
  "games:strider": {
   "hash": "863cc7261b7c5493",
   "date": "2026-09-30"
+ },
+ "games:stunt-car-racer": {
+  "hash": "3caeb0ea7d8bf64e",
+  "date": "2026-10-18"
  },
  "games:stunt-race-fx": {
   "hash": "1b24ddc97d053549",
@@ -3902,6 +4438,10 @@
  "games:super-ghouls-n-ghosts": {
   "hash": "edb16e9ee98029f4",
   "date": "2026-10-06"
+ },
+ "games:super-hang-on": {
+  "hash": "5fb06b63c4a70089",
+  "date": "2026-10-18"
  },
  "games:super-mario-64": {
   "hash": "991d9267f1d629c0",
@@ -3947,9 +4487,17 @@
   "hash": "f5711a13c4fc52c7",
   "date": "2026-10-06"
  },
+ "games:super-smash-bros": {
+  "hash": "e23a52c43925aa43",
+  "date": "2026-10-18"
+ },
  "games:super-star-wars-snes": {
   "hash": "67a869d516d9b1f9",
   "date": "2026-10-06"
+ },
+ "games:sweet-home-famicom": {
+  "hash": "415cb5eb1a4b57ac",
+  "date": "2026-10-18"
  },
  "games:syndicate-1993": {
   "hash": "3f21997c46b55928",
@@ -3986,6 +4534,10 @@
  "games:tapper": {
   "hash": "2688d5489a1bcca4",
   "date": "2026-10-06"
+ },
+ "games:tecmo-bowl": {
+  "hash": "9b3190a755c40aec",
+  "date": "2026-10-18"
  },
  "games:tekken-3": {
   "hash": "2efd2e21c824f700",
@@ -4027,6 +4579,10 @@
   "hash": "1111f1f59bb35e3b",
   "date": "2026-10-06"
  },
+ "games:tetris-attack": {
+  "hash": "ecbfdfa2049a6265",
+  "date": "2026-10-19"
+ },
  "games:tetris-gameboy": {
   "hash": "7ee9b5bda1a8ce99",
   "date": "2026-09-30"
@@ -4039,9 +4595,33 @@
   "hash": "0fb479bc625623e2",
   "date": "2026-10-17"
  },
+ "games:the-colonels-bequest": {
+  "hash": "478f3a371992fd45",
+  "date": "2026-10-18"
+ },
+ "games:the-final-fantasy-legend": {
+  "hash": "c0990ebfc7dc3064",
+  "date": "2026-10-19"
+ },
+ "games:the-gg-shinobi": {
+  "hash": "c00158ffbe7d18b4",
+  "date": "2026-10-19"
+ },
+ "games:the-hobbit-1982": {
+  "hash": "edfda1e0c8be27cc",
+  "date": "2026-10-18"
+ },
+ "games:the-last-express": {
+  "hash": "e4231a9c89c1fd1a",
+  "date": "2026-10-18"
+ },
  "games:the-last-ninja-c64": {
   "hash": "e927f65d5c50ebb6",
   "date": "2026-10-17"
+ },
+ "games:the-legend-of-valkyrie": {
+  "hash": "14e5ef29626d9d5e",
+  "date": "2026-10-18"
  },
  "games:the-lords-of-midnight": {
   "hash": "4b4e6b5d05881585",
@@ -4051,17 +4631,49 @@
   "hash": "8dc360f0664fd734",
   "date": "2026-10-17"
  },
+ "games:the-magical-quest-starring-mickey-mouse": {
+  "hash": "1d14c44cc2fe9a86",
+  "date": "2026-10-19"
+ },
  "games:the-maze-of-galious": {
   "hash": "12ea350df8ff7a27",
   "date": "2026-10-17"
+ },
+ "games:the-newzealand-story": {
+  "hash": "42cc826cf61f7e81",
+  "date": "2026-10-18"
  },
  "games:the-ninja-warriors": {
   "hash": "3d9799a92d6247ed",
   "date": "2026-10-18"
  },
+ "games:the-portopia-serial-murder-case": {
+  "hash": "369aef9466f99e1e",
+  "date": "2026-10-18"
+ },
+ "games:the-revenge-of-shinobi": {
+  "hash": "155ce1f239186b68",
+  "date": "2026-10-18"
+ },
  "games:the-sentinel": {
   "hash": "bc3d3aaf4f999ac1",
   "date": "2026-10-17"
+ },
+ "games:the-settlers": {
+  "hash": "983801a7c6ccc926",
+  "date": "2026-10-18"
+ },
+ "games:the-simpsons-arcade": {
+  "hash": "f019b749555059b9",
+  "date": "2026-10-18"
+ },
+ "games:the-tower-of-druaga": {
+  "hash": "693f358815bc00a2",
+  "date": "2026-10-18"
+ },
+ "games:the-way-of-the-exploding-fist": {
+  "hash": "3776eee16a018959",
+  "date": "2026-10-18"
  },
  "games:theme-hospital": {
   "hash": "6679ef337d1b9828",
@@ -4082,6 +4694,14 @@
  "games:thunder-blade": {
   "hash": "8337b6f874979e4c",
   "date": "2026-10-06"
+ },
+ "games:thunder-cross": {
+  "hash": "1a7a03e7918c0401",
+  "date": "2026-10-18"
+ },
+ "games:thunder-force-iv": {
+  "hash": "17c96ae47b7dc4bd",
+  "date": "2026-10-18"
  },
  "games:tiger-heli": {
   "hash": "db6c3fe38b56e9f5",
@@ -4119,9 +4739,17 @@
   "hash": "f58a87507437392f",
   "date": "2026-10-17"
  },
+ "games:tokimeki-memorial": {
+  "hash": "b2a6780d84121abc",
+  "date": "2026-10-18"
+ },
  "games:tomb-raider": {
   "hash": "29f28c82549044db",
   "date": "2026-10-06"
+ },
+ "games:tomba": {
+  "hash": "2f726721b4075778",
+  "date": "2026-10-18"
  },
  "games:tony-hawks-pro-skater": {
   "hash": "c8fc01601187bc94",
@@ -4131,9 +4759,21 @@
   "hash": "6cc37f108d1c05cd",
   "date": "2026-10-06"
  },
+ "games:total-annihilation": {
+  "hash": "2497674f5f158910",
+  "date": "2026-10-18"
+ },
  "games:track-and-field": {
   "hash": "791438ec996738f2",
   "date": "2026-10-06"
+ },
+ "games:transport-tycoon": {
+  "hash": "327a284eee44c6db",
+  "date": "2026-10-18"
+ },
+ "games:trojan-1986": {
+  "hash": "3314b90aa891d214",
+  "date": "2026-10-18"
  },
  "games:tron": {
   "hash": "c48d057038b87ca2",
@@ -4163,6 +4803,14 @@
   "hash": "ac59d8957146d7b3",
   "date": "2026-10-06"
  },
+ "games:twinbee": {
+  "hash": "ec2728b1810f47c1",
+  "date": "2026-10-18"
+ },
+ "games:twisted-metal": {
+  "hash": "ac6f5350ec78f603",
+  "date": "2026-10-18"
+ },
  "games:ultima-i": {
   "hash": "81fe33601680c433",
   "date": "2026-10-06"
@@ -4171,16 +4819,36 @@
   "hash": "13167d34201ee5bd",
   "date": "2026-10-06"
  },
+ "games:ultima-online": {
+  "hash": "2f3686dd59658e4e",
+  "date": "2026-10-18"
+ },
  "games:ultima-underworld": {
   "hash": "4540fc6b36bbc3da",
   "date": "2026-10-17"
+ },
+ "games:ultima-vi": {
+  "hash": "e70bab322e3ec7ce",
+  "date": "2026-10-18"
  },
  "games:um-jammer-lammy": {
   "hash": "191d08b791f1a600",
   "date": "2026-10-18"
  },
+ "games:un-squadron": {
+  "hash": "8afb15c43eccf46b",
+  "date": "2026-10-18"
+ },
+ "games:undercover-cops": {
+  "hash": "58df104977bbc9b9",
+  "date": "2026-10-18"
+ },
  "games:uniracers": {
   "hash": "c2be4e568e6c33b0",
+  "date": "2026-10-18"
+ },
+ "games:unreal": {
+  "hash": "aa7e153958997343",
   "date": "2026-10-18"
  },
  "games:uridium-c64": {
@@ -4195,9 +4863,21 @@
   "hash": "062b7af32e10cffc",
   "date": "2026-10-06"
  },
+ "games:vendetta-1991": {
+  "hash": "55d3bda4a9de762b",
+  "date": "2026-10-18"
+ },
  "games:vib-ribbon": {
   "hash": "f5d0e11adcd7aab9",
   "date": "2026-10-17"
+ },
+ "games:vigilante-1988": {
+  "hash": "741790bd67a12b33",
+  "date": "2026-10-18"
+ },
+ "games:vigilante-8": {
+  "hash": "654c64c51d1a092b",
+  "date": "2026-10-18"
  },
  "games:virtua-cop": {
   "hash": "62f71fd180f240f0",
@@ -4215,9 +4895,25 @@
   "hash": "881451a840ff07c9",
   "date": "2026-10-06"
  },
+ "games:virtua-striker": {
+  "hash": "0f2e52aafdb9381a",
+  "date": "2026-10-18"
+ },
  "games:virtual-boy-wario-land": {
   "hash": "3141d987946ebbe2",
   "date": "2026-10-06"
+ },
+ "games:virtual-on": {
+  "hash": "2d0cd08652e1d73d",
+  "date": "2026-10-18"
+ },
+ "games:vulgus": {
+  "hash": "786c433cf0ed55cd",
+  "date": "2026-10-18"
+ },
+ "games:war-in-middle-earth": {
+  "hash": "aabcc21bf3c0e219",
+  "date": "2026-10-18"
  },
  "games:warcraft-ii": {
   "hash": "753b735efa83b0ba",
@@ -4226,6 +4922,10 @@
  "games:wario-land": {
   "hash": "87f250fb7c90aa87",
   "date": "2026-10-06"
+ },
+ "games:wario-land-ii": {
+  "hash": "168a97b9f67ee670",
+  "date": "2026-10-19"
  },
  "games:warlords": {
   "hash": "4ed4b04650730999",
@@ -4239,9 +4939,17 @@
   "hash": "775f0d837dbb87f9",
   "date": "2026-10-06"
  },
+ "games:welltris": {
+  "hash": "41d4796858cf4088",
+  "date": "2026-10-18"
+ },
  "games:wild-arms": {
   "hash": "dac55a745db6aee4",
   "date": "2026-10-06"
+ },
+ "games:wild-guns": {
+  "hash": "cf587a166687d4de",
+  "date": "2026-10-19"
  },
  "games:wing-commander": {
   "hash": "f11b2ff436d546db",
@@ -4283,6 +4991,10 @@
   "hash": "30506ca226b01d72",
   "date": "2026-10-06"
  },
+ "games:wrecking-crew": {
+  "hash": "da3e2edfc0998c71",
+  "date": "2026-10-18"
+ },
  "games:wrestlefest": {
   "hash": "1c89be97cd87cb6a",
   "date": "2026-09-30"
@@ -4291,9 +5003,17 @@
   "hash": "33ef39c6a710a907",
   "date": "2026-10-06"
  },
+ "games:x-men-arcade": {
+  "hash": "b73d1cdad2905533",
+  "date": "2026-10-18"
+ },
  "games:xenogears": {
   "hash": "3043bb00b72755db",
   "date": "2026-10-06"
+ },
+ "games:xenon-2-megablast": {
+  "hash": "8a8cfb4a7b01b24d",
+  "date": "2026-10-18"
  },
  "games:xevious": {
   "hash": "72fc620a14b1a406",
@@ -4319,6 +5039,10 @@
   "hash": "41bbcb70ec13ef2d",
   "date": "2026-10-06"
  },
+ "games:zak-mckracken": {
+  "hash": "9a8705512b831e42",
+  "date": "2026-10-18"
+ },
  "games:zarch": {
   "hash": "da017d12678c531f",
   "date": "2026-10-18"
@@ -4342,6 +5066,10 @@
  "games:zero-wing": {
   "hash": "5bb9068f2a5d1a6e",
   "date": "2026-10-18"
+ },
+ "games:zombies-ate-my-neighbors": {
+  "hash": "bbacc1eae37f55e3",
+  "date": "2026-10-19"
  },
  "games:zork": {
   "hash": "9ffe67ee29967971",
@@ -4580,8 +5308,8 @@
   "date": "2026-10-01"
  },
  "gunpei-yokoi": {
-  "hash": "b61f387c1763c1d7",
-  "date": "2026-10-02"
+  "hash": "644409e3d9d75706",
+  "date": "2026-10-19"
  },
  "guybrush-threepwood": {
   "hash": "8239799320d2a641",
@@ -4660,12 +5388,12 @@
   "date": "2026-10-02"
  },
  "hideki-kamiya": {
-  "hash": "c4770ada6dc7e22c",
-  "date": "2026-10-02"
+  "hash": "583fea592eae79cb",
+  "date": "2026-10-18"
  },
  "hideo-kojima": {
-  "hash": "e088c820bbc0a643",
-  "date": "2026-10-02"
+  "hash": "affcfcfa3a3f2b37",
+  "date": "2026-10-18"
  },
  "hirokazu-tanaka": {
   "hash": "508cc84ab20c53ac",
@@ -4676,8 +5404,8 @@
   "date": "2026-10-02"
  },
  "hironobu-sakaguchi": {
-  "hash": "28902703f05931ec",
-  "date": "2026-10-02"
+  "hash": "59e668da262ec5b8",
+  "date": "2026-10-18"
  },
  "hiroshi-iuchi": {
   "hash": "48d259d2c9c694c1",
@@ -4752,8 +5480,8 @@
   "date": "2026-10-02"
  },
  "howard-scott-warshaw": {
-  "hash": "c66a404e684ca5ee",
-  "date": "2026-10-17"
+  "hash": "82ba6caabd95de73",
+  "date": "2026-10-18"
  },
  "hub-world-design": {
   "hash": "059cf6035aff8dde",
@@ -4912,8 +5640,8 @@
   "date": "2026-10-02"
  },
  "jeff-minter": {
-  "hash": "4e2c1852c6b33498",
-  "date": "2026-10-02"
+  "hash": "e7bb09288e21bb6d",
+  "date": "2026-10-18"
  },
  "jen-taylor": {
   "hash": "62116e52f6c70468",
@@ -4940,24 +5668,24 @@
   "date": "2026-10-02"
  },
  "john-carmack": {
-  "hash": "117ad20fa56d1ae8",
-  "date": "2026-10-02"
+  "hash": "9aeeea6d4f6fe482",
+  "date": "2026-10-18"
  },
  "john-ricciardi": {
   "hash": "eaebb487405f5ad1",
   "date": "2026-10-02"
  },
  "john-romero": {
-  "hash": "a9ec8a7e95caa1fb",
-  "date": "2026-10-02"
+  "hash": "e9b7df736ac4b11b",
+  "date": "2026-10-18"
  },
  "jon-st-john": {
   "hash": "53863c2edce8f38e",
   "date": "2026-10-01"
  },
  "jordan-mechner": {
-  "hash": "40b7a631db42782a",
-  "date": "2026-10-17"
+  "hash": "ddbb5199e7c77f37",
+  "date": "2026-10-18"
  },
  "jrpg-goes-west": {
   "hash": "5f7ec84ef9d5b0af",
@@ -4996,16 +5724,16 @@
   "date": "2026-10-02"
  },
  "kazunori-yamauchi": {
-  "hash": "95b9805ccb33af72",
-  "date": "2026-10-02"
+  "hash": "cc5e01c0974132fc",
+  "date": "2026-10-18"
  },
  "kefka-final-fantasy-vi": {
   "hash": "dd38dd6b45a575b4",
   "date": "2026-10-01"
  },
  "keiji-inafune": {
-  "hash": "e060dc31dd9449a8",
-  "date": "2026-10-02"
+  "hash": "255d74bde000bf64",
+  "date": "2026-10-19"
  },
  "keith-stuart": {
   "hash": "f5516c3be3a5ea02",
@@ -5016,8 +5744,8 @@
   "date": "2026-10-01"
  },
  "ken-kutaragi": {
-  "hash": "3e10ed168e76975b",
-  "date": "2026-10-02"
+  "hash": "08d3ca6693fc0e1d",
+  "date": "2026-10-18"
  },
  "ken-sugimori": {
   "hash": "7423f5b5d11c87a2",
@@ -5028,8 +5756,8 @@
   "date": "2026-10-02"
  },
  "kenji-eno": {
-  "hash": "b4705ebe9ea38d3a",
-  "date": "2026-10-03"
+  "hash": "7af07245d780a980",
+  "date": "2026-10-18"
  },
  "kenji-yamamoto": {
   "hash": "295731c0ccdfad13",
@@ -5080,8 +5808,8 @@
   "date": "2026-10-02"
  },
  "koji-igarashi": {
-  "hash": "af580c382ddb26fe",
-  "date": "2026-10-02"
+  "hash": "0644b2efb777f04b",
+  "date": "2026-10-18"
  },
  "koji-kondo": {
   "hash": "2d1f828937dc0fa5",
@@ -5352,8 +6080,8 @@
   "date": "2026-10-02"
  },
  "masahiro-sakurai": {
-  "hash": "3d8d903fb9f4b34d",
-  "date": "2026-10-02"
+  "hash": "1cd9a80b76d2c8e7",
+  "date": "2026-10-18"
  },
  "masashi-hamauzu": {
   "hash": "736904435d4a7d36",
@@ -5584,8 +6312,8 @@
   "date": "2026-10-05"
  },
  "mike-singleton": {
-  "hash": "62de7c827eb8bfb4",
-  "date": "2026-10-17"
+  "hash": "b0d335e4e04bb542",
+  "date": "2026-10-18"
  },
  "mike-tyson-punch-out": {
   "hash": "2c6e5026415a423d",
@@ -6272,8 +7000,8 @@
   "date": "2026-10-02"
  },
  "peter-molyneux": {
-  "hash": "3e2b8a436b6fd467",
-  "date": "2026-10-02"
+  "hash": "229b2ae200f3fa4b",
+  "date": "2026-10-18"
  },
  "phalanx-snes-us": {
   "hash": "0febced19faf3c55",
@@ -6740,8 +7468,8 @@
   "date": "2026-10-01"
  },
  "richard-garriott": {
-  "hash": "1a8e3a1018dce090",
-  "date": "2026-10-02"
+  "hash": "557169473b195c96",
+  "date": "2026-10-18"
  },
  "ricoh-5a22": {
   "hash": "44a36ff4b0c79cb3",
@@ -6788,8 +7516,8 @@
   "date": "2026-10-02"
  },
  "roberta-williams": {
-  "hash": "54011064666752ae",
-  "date": "2026-10-17"
+  "hash": "2af1113d68c3bab9",
+  "date": "2026-10-18"
  },
  "robotron-2084-upright": {
   "hash": "e86a2355892747ed",
@@ -6824,8 +7552,8 @@
   "date": "2026-10-02"
  },
  "ron-gilbert": {
-  "hash": "67b5f35e63a97c7a",
-  "date": "2026-10-17"
+  "hash": "e8576f1eac4a6436",
+  "date": "2026-10-18"
  },
  "rondo-of-blood-import": {
   "hash": "e99c6921f5839912",
@@ -6880,8 +7608,8 @@
   "date": "2026-10-02"
  },
  "satoshi-tajiri": {
-  "hash": "7226491b6acb39d6",
-  "date": "2026-10-02"
+  "hash": "625ba6294c1d20dd",
+  "date": "2026-10-18"
  },
  "saturn-difficult-architecture": {
   "hash": "0a70ca7c264abba7",
@@ -7104,8 +7832,8 @@
   "date": "2026-10-01"
  },
  "shigeru-miyamoto": {
-  "hash": "8f14198ba386bf43",
-  "date": "2026-10-02"
+  "hash": "49cdcd7141ae9598",
+  "date": "2026-10-18"
  },
  "shigeru-miyamoto-artist": {
   "hash": "f1f4b804094e506f",
@@ -7120,8 +7848,8 @@
   "date": "2026-10-01"
  },
  "shinji-mikami": {
-  "hash": "e6feb48c880a07cb",
-  "date": "2026-10-02"
+  "hash": "2e813bd243e7abff",
+  "date": "2026-10-19"
  },
  "shmup": {
   "hash": "f6a07c01f73f5835",
@@ -7144,8 +7872,8 @@
   "date": "2026-10-02"
  },
  "sid-meier": {
-  "hash": "52773f7e9c9ed9b2",
-  "date": "2026-10-02"
+  "hash": "90a6cfdf297ddd7c",
+  "date": "2026-10-18"
  },
  "sierra": {
   "hash": "01cb39a37b3fa122",
@@ -8012,8 +8740,8 @@
   "date": "2026-10-01"
  },
  "tetsuya-mizuguchi": {
-  "hash": "24272e75a65ee0b3",
-  "date": "2026-10-03"
+  "hash": "848638efb14fe9e5",
+  "date": "2026-10-18"
  },
  "texture-warping": {
   "hash": "262d30148ef7ece7",
@@ -8128,8 +8856,8 @@
   "date": "2026-10-01"
  },
  "tokuro-fujiwara": {
-  "hash": "c898f577777e8f20",
-  "date": "2026-10-02"
+  "hash": "873c8b106141ce65",
+  "date": "2026-10-19"
  },
  "tom-kalinske": {
   "hash": "d7d69eb42a0ad6d5",
@@ -8160,16 +8888,16 @@
   "date": "2026-10-02"
  },
  "tomohiro-nishikado": {
-  "hash": "20a176ecf452d721",
-  "date": "2026-10-02"
+  "hash": "8e365568e6ed767b",
+  "date": "2026-10-18"
  },
  "tony-jay": {
   "hash": "962b2c7a3053787c",
   "date": "2026-10-01"
  },
  "toru-iwatani": {
-  "hash": "7e8d5afbee61f278",
-  "date": "2026-10-17"
+  "hash": "0f492c036a9f8f41",
+  "date": "2026-10-18"
  },
  "tracker-music": {
   "hash": "1b49be1f7fe4db16",
@@ -8400,8 +9128,8 @@
   "date": "2026-10-01"
  },
  "will-wright": {
-  "hash": "6091bc32f0cc4109",
-  "date": "2026-10-02"
+  "hash": "f5edf11104cd5fe1",
+  "date": "2026-10-18"
  },
  "williams-defender-hardware": {
   "hash": "d4fc732a733bc2cc",
@@ -8612,12 +9340,12 @@
   "date": "2026-10-17"
  },
  "yoshiki-okamoto": {
-  "hash": "e367776a21344a69",
-  "date": "2026-10-03"
+  "hash": "7e604d81f3c2167e",
+  "date": "2026-10-18"
  },
  "yoshio-sakamoto": {
-  "hash": "e0f826395dc6f5a5",
-  "date": "2026-10-02"
+  "hash": "3e5fd477ecd2cc85",
+  "date": "2026-10-19"
  },
  "yoshitaka-amano": {
   "hash": "4ee3871bc9cbed89",
@@ -8628,16 +9356,16 @@
   "date": "2026-10-02"
  },
  "yu-suzuki": {
-  "hash": "596966eed8aa8c40",
-  "date": "2026-10-02"
+  "hash": "2119d1f85459315f",
+  "date": "2026-10-18"
  },
  "yuji-horii": {
-  "hash": "7dbcb956df0fa8a0",
-  "date": "2026-10-02"
+  "hash": "1cb63833a0ad35a5",
+  "date": "2026-10-18"
  },
  "yuji-naka": {
-  "hash": "4c88f12846683727",
-  "date": "2026-10-02"
+  "hash": "81bbef5a78145456",
+  "date": "2026-10-18"
  },
  "yuzo-koshiro": {
   "hash": "ea38df3ae15faf4f",
