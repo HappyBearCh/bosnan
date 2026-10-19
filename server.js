@@ -1113,11 +1113,11 @@ for (const g of games) {
 const YEARS = [...yearsIndex.keys()].sort((a, b) => a - b);
 
 const designerGamesIndex = new Map();
+// Explicit ids, like composers. Matching on the employer name credited every
+// Capcom game to Okamoto, Fujiwara, Inafune, Mikami and Kamiya alike.
 for (const d of DESIGNERS) {
-  designerGamesIndex.set(d.id, games.filter(g =>
-    g.developer.toLowerCase().includes(d.keyword.toLowerCase()) ||
-    g.publisher.toLowerCase().includes(d.keyword.toLowerCase())
-  ));
+  const ids = new Set(d.notableGameIds || []);
+  designerGamesIndex.set(d.id, games.filter(g => ids.has(g.id)));
 }
 
 const composerGamesIndex = new Map();

@@ -9,10 +9,10 @@ module.exports = [
     role: 'Game Designer / Producer',
     employer: 'Nintendo',
     era: '1977 – present',
-    keyword: 'Nintendo',
     description: 'Shigeru Miyamoto created Donkey Kong, Super Mario Bros., and The Legend of Zelda, establishing the foundational vocabulary of action-platformer and adventure game design.',
     longDescription: 'Shigeru Miyamoto studied industrial design at Kanazawa College of Art before joining Nintendo in 1977 as the company\'s first staff artist. His early years were spent illustrating arcade cabinet artwork until president Hiroshi Yamauchi assigned him to redesign a struggling arcade title called Radar Scope for the American market in 1981. Working without formal programming knowledge but with a clear sense of character and spectacle, Miyamoto created Donkey Kong — one of the first games to tell a narrative through gameplay, introducing a character with personality, a damsel in distress, and a villain with motivation. The game became one of the most successful coin-ops of its era and established Miyamoto as Nintendo\'s principal creative talent.\n\nMiyamoto\'s design philosophy centres on the idea of a magic toy box: a game world must feel tangibly real, with objects and physics that invite experimentation. He pioneered the practice of designing a game\'s core mechanic before its theme, most famously with Super Mario Bros. (1985), in which the scrolling momentum and jump arc were locked down months before the mushrooms, pipes, and castles were added. He also insisted on accessible controls — every NES game he oversaw could be understood within minutes by a newcomer — a principle that informed Nintendo\'s hardware strategy for decades. His simultaneous development of Super Mario Bros. (a 1985 Famicom cartridge) and The Legend of Zelda (a 1986 Famicom Disk System launch title) demonstrated that the same designer could master linear spectacle and open-world exploration with equal authority.\n\nHis major works span four decades and multiple hardware generations: Donkey Kong (1981), Mario Bros. (1983), Super Mario Bros. (1985), The Legend of Zelda (1986), Super Mario Bros. 3 (1988), F-Zero (1990), Super Mario World (1990), Star Fox (1993), Super Mario 64 (1996), The Legend of Zelda: Ocarina of Time (1998), Pikmin (2001), and Wii Sports (2006). Each represents a deliberate expansion of what games could express, from the kinetic joy of platforming to 3D spatial navigation to motion-controlled social play. Super Mario 64 in particular redefined what it meant to move through a three-dimensional game world, establishing conventions of camera control and analogue movement still in use today.\n\nMiyamoto\'s legacy is the broadest in the medium\'s history. He did not merely create beloved franchises — he authored the conventions by which dozens of genres are still judged. His insistence on "horizontal" accessibility, meaning games that reward casual and expert players simultaneously, shaped Nintendo\'s identity as a company and influenced every platform holder that followed. By 2024, the franchises he founded had collectively shipped over a billion units. He was named a Person of Cultural Merit by the Japanese government in 2019, the first video game designer to receive the honour, and remains an executive at Nintendo, where he continues to influence product development.',
     notableGames: ['Donkey Kong (1981)', 'Super Mario Bros. (1985)', 'The Legend of Zelda (1986)', 'Super Mario 64 (1996)', 'Pikmin (2001)'],
+    notableGameIds: ['donkey-kong', 'donkey-kong-jr', 'mario-bros', 'excitebike', 'super-mario-bros', 'ice-climber', 'legend-of-zelda', 'zelda-ii', 'doki-doki-panic', 'super-mario-bros-3', 'mother-famicom', 'super-mario-world', 'pilotwings', 'zelda-link-to-past', 'super-mario-kart', 'donkey-kong-gb', 'super-mario-64', 'wave-race-64', 'super-mario-rpg', 'zelda-ocarina', 'super-smash-bros'],
     keyFacts: [
       'Joined Nintendo in 1977 as the company\'s first staff artist',
       'Created Donkey Kong in 1981 as a redesign of an unsold arcade cabinet',
@@ -29,10 +29,10 @@ module.exports = [
     role: 'Game Designer / Hardware Engineer',
     employer: 'Nintendo',
     era: '1965 – 1996',
-    keyword: 'Nintendo',
     description: 'Gunpei Yokoi invented the Game Boy and the Game & Watch handheld series, and produced Metroid, establishing Nintendo\'s philosophy of "lateral thinking with withered technology."',
     longDescription: 'Gunpei Yokoi joined Nintendo in 1965 as a maintenance engineer for the company\'s hanafuda playing-card machines, years before Nintendo entered the video game business. His career took its decisive turn in 1966 when Nintendo president Hiroshi Yamauchi noticed a mechanical toy Yokoi had built from an extendable arm to amuse himself on the assembly line. Yamauchi ordered it into production as the Ultra Hand, which became a major commercial success and established Yokoi as Nintendo\'s hardware inventor. Over the following decade he developed dozens of toy and electronic products, including the Love Tester and the Beam Gun light-gun toys, before leading Nintendo\'s entry into portable electronic games with the Game & Watch line beginning in 1980. The clamshell design of the Game & Watch Multi-Screen models directly influenced the layout of Nintendo\'s later handheld hardware.\n\nYokoi\'s central design philosophy, which he called "lateral thinking with withered technology," held that mature, inexpensive technology used creatively produced better consumer products than cutting-edge hardware used conventionally. This principle guided every major project he oversaw. The Game Boy (1989), which he designed and shepherded to market, used a low-power monochrome LCD screen at a time when competitors like the Sega Game Gear were offering colour displays. The Game Boy\'s inferior screen was outweighed by its battery life of around 30 hours on four AAs and its $89 price point, and it outsold all colour rivals combined. The same thinking governed the NES controller\'s d-pad, which Yokoi derived from a Game & Watch directional control and which became the universal standard for digital game input.\n\nYokoi produced or oversaw many of Nintendo\'s most significant early titles: Metroid (1986), developed by Nintendo R&D1 under his supervision, introduced a non-linear exploration structure and an atmospheric sci-fi aesthetic entirely unlike anything in Nintendo\'s Mario- and Zelda-dominated catalogue. He also produced the Kid Icarus series and served as executive producer on the original Game Boy launch titles. As a hardware engineer he held dozens of patents and trained a generation of Nintendo designers who would go on to lead the company\'s handheld division.\n\nYokoi left Nintendo in 1996 following the commercial failure of the Virtual Boy, a stereoscopic 3D headset he had championed that proved too expensive and physically uncomfortable for the mass market. He founded Koto Laboratory and was developing a new handheld, the WonderSwan, with Bandai when he died in a road accident in 1997. His legacy is the portable gaming industry itself: without the Game & Watch and Game Boy, neither the DS, PSP, nor smartphone gaming market would have developed as they did. His philosophy of humble, durable, affordable hardware remains the template for Nintendo\'s hardware strategy to this day.',
     notableGames: ['Game & Watch (1980)', 'Metroid (1986)', 'Kid Icarus (1986)', 'Game Boy (1989 — hardware)'],
+    notableGameIds: ['mario-bros', 'balloon-fight', 'wrecking-crew', 'metroid', 'kid-icarus', 'famicom-detective-club', 'super-mario-land', 'alleyway', 'dr-mario', 'balloon-kid', 'metroid-ii', 'mario-paint', 'super-metroid', 'wario-land', 'tetris-attack'],
     keyFacts: [
       'Joined Nintendo in 1965 as a maintenance engineer for hanafuda card machines',
       'Created the Ultra Hand toy in 1966 — his first major commercial product',
@@ -50,10 +50,10 @@ module.exports = [
     role: 'Game Designer / Arcade Engineer',
     employer: 'Sega AM2',
     era: '1983 – present',
-    keyword: 'Sega',
     description: 'Yu Suzuki directed Hang-On, Space Harrier, Out Run, Virtua Fighter, and Shenmue, pioneering arcade hardware design and open-world narrative gaming across four decades.',
     longDescription: 'Yu Suzuki joined Sega in 1983 after studying electrical engineering and immediately began work on arcade hardware rather than game content. His first project, Hang-On (1985), was simultaneously a game and a custom motorcycle cabinet — a full-scale sit-astride replica of a racing bike with force-feedback handlebars, powered by a proprietary 16-bit board he co-designed called the Sega Super Scaler. The Super Scaler technique used sprite scaling at different rates to create a convincing illusion of three-dimensional speed on flat 2D hardware, and Suzuki pushed it to its visual limit in Space Harrier (1985) and Out Run (1986) — both of which featured hydraulic motion-platform cabinets that were as much fairground rides as games. Out Run in particular became a cultural landmark: its branching route structure, licensed Ferrari Testarossa, and Hiroshi Kawaguchi\'s radio-selectable soundtrack established a template for aspirational driving games that persists to this day.\n\nSuzuki\'s design philosophy was built around sensation and presence — he wanted players to feel physically transported into his games, which explained his obsessive investment in cabinet hardware. When 3D polygon technology became viable in the early 1990s, he directed Virtua Racing (1992) and Virtua Fighter (1993), the latter being the first 3D polygon fighting game. Virtua Fighter introduced a three-button (punch, kick, guard) control scheme of remarkable tactical depth for an arcade game. The Model 1 and Model 2 custom arcade boards Suzuki\'s team developed for these games were years ahead of any contemporary home console hardware and were subsequently licensed to other Sega divisions and third parties.\n\nShenmue (1999) for the Sega Dreamcast represented the fullest expression of Suzuki\'s ambitions: an open-world game set in a photorealistic recreation of Yokosuka, Japan, in 1986, featuring a cast of over 500 named characters each with individual daily schedules, the first Quick Time Event system, a fully playable miniature Sega arcade, and a narrative spanning what was planned to be eleven chapters. The project reportedly cost $47–70 million — making it the most expensive video game ever made at the time — and sold modestly relative to its budget. Shenmue II followed in 2001, and despite the Dreamcast\'s discontinuation, both games accumulated devoted followings who funded a Kickstarter campaign that raised $7 million in 2015 to produce Shenmue III (2019).\n\nSuzuki\'s legacy spans hardware design, arcade cabinet engineering, genre creation, and open-world game design. The Super Scaler arcade boards he designed remained the technical standard for sprite-scaling racers for nearly a decade. Virtua Fighter defined fighting game mechanics that influenced Tekken, Dead or Alive, and every subsequent 3D fighter. Shenmue\'s design philosophy — systemic open worlds with detailed NPC simulation and embedded mini-games — can be traced through everything from Grand Theft Auto III to Red Dead Redemption 2. Suzuki remains active in game development through his studio Ys Net and continues to develop the Shenmue series.',
     notableGames: ['Hang-On (1985)', 'Space Harrier (1985)', 'Out Run (1986)', 'Virtua Fighter (1993)', 'Shenmue (1999)'],
+    notableGameIds: ['space-harrier', 'hang-on', 'outrun', 'enduro-racer', 'after-burner', 'super-hang-on', 'power-drift', 'virtua-fighter', 'daytona-usa', 'virtua-cop', 'virtua-fighter-2', 'shenmue'],
     keyFacts: [
       'Joined Sega in 1983 as a hardware engineer before becoming a game director',
       'Designed the Sega Super Scaler arcade board powering Hang-On and Out Run',
@@ -70,10 +70,10 @@ module.exports = [
     role: 'Game Designer / Producer',
     employer: 'Square',
     era: '1983 – present',
-    keyword: 'Square',
     description: 'Hironobu Sakaguchi created the Final Fantasy series, guiding its first decade and more of mainline entries and defining the Japanese role-playing game as a cinematic narrative medium.',
     longDescription: 'Hironobu Sakaguchi joined Square Co. in 1983 as a part-time employee while studying at Yokohama National University, intending to leave the games industry after completing his education. He stayed, rising to director of planning and development, and by 1987 was leading a small team to develop what he considered a final attempt to make Square profitable before resigning. He named the project Final Fantasy partly as a personal farewell. The game — a four-character party RPG for the Famicom drawing on Dungeons & Dragons mechanics and the narrative sweep of tabletop play — sold 400,000 copies in Japan and saved the company. Sakaguchi remained, and what had been intended as a one-off became the most successful JRPG franchise in history.\n\nSakaguchi\'s design philosophy positioned story as the primary driver of player engagement in a way that Western RPGs of the period, focused on mechanical systems and dungeon generation, did not. He insisted that each Final Fantasy game be a standalone world with new characters, new settings, and a complete narrative arc — a decision that made every entry accessible to newcomers and prevented the franchise from ossifying around a single continuity. He oversaw the transition of the series from simple sprite-based Famicom RPGs to the layered storytelling of Final Fantasy IV (1991), the political opera of Final Fantasy VI (1994), and the pre-rendered CG cinematics of Final Fantasy VII (1997). For each game he worked closely with composer Nobuo Uematsu, character designer Yoshitaka Amano, and scenario writers to produce what were effectively interactive films years before that term became a marketing category.\n\nBeyond Final Fantasy, Sakaguchi produced Chrono Trigger (1995) — co-developed with Dragon Quest creator Yuji Horii and Dragon Ball artist Akira Toriyama — which remains among the most acclaimed RPGs ever made. He directed the CG film Final Fantasy: The Spirits Within (2001), the first photorealistic CG feature film, which was a critical and commercial failure that contributed to Square\'s near-bankruptcy. Following the merger of Square and Enix in 2003, Sakaguchi departed to found Mistwalker, an independent studio, where he developed Blue Dragon (2006) and Lost Odyssey (2007) for Xbox 360, and later Terra Battle (2014) for mobile platforms.\n\nSakaguchi\'s influence on the JRPG genre is total. The emotional narrative ambitions of Final Fantasy IV through IX, developed under his direct supervision, established the expectation that a role-playing game should deliver a cinematic story with memorable characters, dramatic deaths, and thematic resonance — expectations that shaped not only Square\'s subsequent output but the entire genre across two decades of Japanese and eventually Western development. The series sold over 180 million copies worldwide by 2023, spanning fifteen mainline entries and dozens of spin-offs, and remains Square Enix\'s most significant intellectual property.',
     notableGames: ['Final Fantasy (1987)', 'Final Fantasy IV (1991)', 'Final Fantasy VI (1994)', 'Chrono Trigger (1995)', 'Final Fantasy VII (1997)'],
+    notableGameIds: ['final-fantasy', 'final-fantasy-iv', 'final-fantasy-v', 'final-fantasy-vi', 'chrono-trigger', 'final-fantasy-vii'],
     keyFacts: [
       'Created Final Fantasy in 1987 as what he expected to be his last game before leaving the industry',
       'Served as producer or director on Final Fantasy I through X',
@@ -90,10 +90,10 @@ module.exports = [
     role: 'Programmer / Game Designer',
     employer: 'Sega / Sonic Team',
     era: '1984 – present',
-    keyword: 'Sega',
     description: 'Yuji Naka programmed the original Sonic the Hedgehog engine and co-founded Sonic Team, directing Nights into Dreams and building Sega\'s most enduring mascot franchise.',
     longDescription: 'Yuji Naka joined Sega in 1984 at the age of eighteen with no formal programming education, having taught himself assembly language at home. His first credit was the SG-1000 game Girl\'s Garden (1984), but he rose to prominence as the lead programmer of Phantasy Star (1987) on the Master System — one of the first console RPGs with a continuous overworld, first-person dungeons, and a science-fantasy setting presented in full colour. The Phantasy Star engine demonstrated his ability to extract performance from Sega\'s 8-bit hardware well beyond what contemporaries considered possible, establishing his reputation internally as the company\'s most technically gifted programmer.\n\nIn 1990 Naka teamed with character designer Naoto Ohshima and planner Hirokazu Yasuhara on a project to create a mascot character for Sega capable of rivalling Nintendo\'s Mario. Working under extreme time pressure, Naka developed a physics engine built around momentum conservation: Sonic\'s speed was not a cosmetic feature but a mechanical consequence of how gravity, slopes, and circular loops interacted with the character\'s velocity. Players who understood the physics could maintain full speed across entire levels; those who did not experienced a punishing stop-start game. This duality — the game as both spectacle and skill test — was central to Sonic the Hedgehog\'s (1991) commercial success on the Sega Genesis and briefly made the Genesis the best-selling console in North America.\n\nNaka led Sonic Team, the group named after the game, and made Nights into Dreams (1996) for the Saturn — a game that used the Saturn\'s analogue pad to control flight through dream environments with a scoring system based on aesthetic line-tracing rather than obstacle avoidance. Nights was critically acclaimed but sold modestly, and the Saturn\'s underperformance limited its reach. He followed with Sonic Adventure (1998), the franchise\'s first 3D entry, which launched with the Dreamcast and demonstrated that Sega\'s new console could deliver large-scale 3D environments competitive with Nintendo 64. Naka continued leading Sonic Team through Sonic Adventure 2 (2001) and the GameCube/PS2 era before leaving Sega in 2006 to found Prope.\n\nNaka\'s legacy is primarily the physics-based platformer design language introduced by Sonic, in which speed, momentum, and spatial geometry are the primary play elements rather than precision jumping. That design DNA informed subsequent 2D and 3D platformers across multiple studios and remains identifiable in the Sonic series today. His work on Phantasy Star also made him one of the architects of the console RPG, a contribution that tends to be overlooked given the later dominance of the Sonic franchise. In 2022 he was arrested, and later convicted, for insider trading in the shares of companies working on a Square Enix game he was involved with, casting a shadow over his later career.',
     notableGames: ['Phantasy Star (1987)', 'Sonic the Hedgehog (1991)', 'Sonic the Hedgehog 2 (1992)', 'Nights into Dreams (1996)', 'Sonic Adventure (1998)'],
+    notableGameIds: ['phantasy-star', 'phantasy-star-ii', 'sonic-the-hedgehog', 'sonic-the-hedgehog-2', 'sonic-and-knuckles', 'nights-into-dreams', 'sonic-adventure', 'burning-rangers', 'chuchu-rocket'],
     keyFacts: [
       'Self-taught programmer who joined Sega at 18 in 1984',
       'Lead programmer of Phantasy Star (1987) — one of the first console RPGs with a 3D dungeon',
@@ -110,10 +110,10 @@ module.exports = [
     role: 'Game Designer / Writer',
     employer: 'Origin Systems',
     era: '1979 – present',
-    keyword: 'Origin',
     description: 'Richard Garriott created the Ultima series and the concept of virtual ethics in games, building the role-playing game as a moral philosophy simulator under the persona of Lord British.',
     longDescription: 'Richard Garriott began programming games in 1977 at age fifteen on a teletype terminal at his Houston high school, teaching himself BASIC to write Dungeons & Dragons-style dungeon crawlers. His first commercially sold game, Akalabeth: World of Doom (1980), was a first-person dungeon RPG he sold in Ziploc bags at a local computer store; a distribution deal with California Pacific Computer Company resulted in 30,000 copies sold and enough revenue to fund his next project. Ultima (1981), published by California Pacific Computer Company for the Apple II, introduced a world map connecting towns and dungeons, multiple playable races and classes, and a science-fantasy narrative scope that exceeded anything previously attempted in a microcomputer RPG. Garriott established Origin Systems in 1983 with his brother Robert to publish subsequent Ultima titles independently.\n\nGarriott\'s most significant creative decision came with Ultima IV: Quest of the Avatar (1985), which abandoned the traditional RPG goal of defeating an antagonist in favour of a moral self-improvement quest. The player\'s objective was to embody eight virtues — Honesty, Compassion, Valour, Justice, Sacrifice, Honour, Spirituality, and Humility — through in-game choices, transforming the RPG from a power fantasy into an ethical simulator. This was the first time a major game had used its mechanics to make an argument about how players should behave, and it influenced virtually every narrative RPG that followed. The Avatar concept and the eight virtues remained central to the Ultima series through Ultima IX: Ascension (1999).\n\nOrigin Systems under Garriott\'s direction developed Ultima Online (1997), the first commercially successful massively multiplayer online RPG. The game\'s persistent world, player housing, and player-driven economy established design patterns that World of Warcraft and every subsequent MMORPG inherited. Garriott maintained his in-game persona as Lord British — a near-immortal sovereign who appeared at major server events — and the game\'s social and economic systems were sophisticated enough to become subjects of academic study. Electronic Arts acquired Origin Systems in 1992 and shut it down in 2004; Garriott departed EA in 2000 after Ultima IX\'s troubled launch.\n\nGarriott\'s influence on role-playing game design is matched only by Gary Gygax and the Dungeons & Dragons creators who inspired him. The virtue system of Ultima IV introduced moral consequence as a game mechanic decades before it became standard in Western RPGs. Ultima Online proved that hundreds of thousands of players could coexist in a persistent virtual world and share an economy, a revelation that reshaped the entire games industry\'s understanding of what online gaming could be. Garriott became the sixth private citizen to travel to space aboard the International Space Station in 2008. He later founded Portalarium and developed Shroud of the Avatar (2018), a spiritual successor to Ultima that struggled to find its audience in the crowded MMORPG market.',
     notableGames: ['Akalabeth (1980)', 'Ultima (1981)', 'Ultima IV: Quest of the Avatar (1985)', 'Ultima VI: The False Prophet (1990)', 'Ultima Online (1997)'],
+    notableGameIds: ['akalabeth', 'ultima-i', 'ultima-iv', 'ultima-vi', 'ultima-online'],
     keyFacts: [
       'Sold Akalabeth (1980) in Ziploc bags at a local computer store at age 18',
       'Founded Origin Systems with his brother Robert in 1983',
@@ -130,10 +130,10 @@ module.exports = [
     role: 'Game Designer / Programmer',
     employer: 'MicroProse / Firaxis',
     era: '1982 – present',
-    keyword: 'MicroProse',
     description: 'Sid Meier created Civilization, Pirates!, and Railroad Tycoon, defining the strategy simulation genre and introducing the concept of "just one more turn" compulsive play design.',
     longDescription: 'Sid Meier co-founded MicroProse with Bill Stealey in 1982 after meeting at a coin-op arcade where both were playing a flight simulator. Stealey challenged Meier, a computer programmer working for General Instrument, to write a better flight game; the result was Hellcat Ace, published by MicroProse the same year. Throughout the early and mid-1980s Meier developed a series of increasingly sophisticated military simulations — F-15 Strike Eagle (1984), Silent Service (1985), Gunship (1986) — that made MicroProse the leading publisher of simulation software on the IBM PC and Commodore 64. These games were notable for their accessibility: rather than modelling every variable of real-world aviation or naval combat, Meier stripped systems down to the decisions most interesting to a player, a method he later called making games about "interesting decisions."\n\nPirates! (1987) marked a pivotal departure from pure simulation. An open-ended game about Caribbean buccaneering in the age of sail, it combined action, strategy, trading, diplomacy, and narrative quests in a single world — what would today be called a sandbox game. The player could pursue any combination of activities across a persistent world, and the game tracked time through an aging mechanic that would eventually retire the protagonist. Railroad Tycoon (1990) applied the same design thinking to economic strategy, building a railway empire across 19th-century America or Europe with stock market manipulation and competitor sabotage layered on top of route planning. Both games demonstrated that Meier\'s real gift was not simulation accuracy but the ability to identify which variables in a complex system produced the most satisfying player choices.\n\nCivilization (1991), designed by Meier and Bruce Shelley, compressed the entire arc of human history into a turn-based strategy game playable in an afternoon or across multiple sessions. Players guided a civilisation from 4000 BCE to the space age, researching technologies, building cities, managing populations, and engaging in diplomacy or warfare with AI civilisations. The game\'s design innovations — the technology tree, the "just one more turn" pacing that made each session feel like it could end at any moment but rarely did, and the victory conditions spanning military conquest, cultural dominance, and scientific achievement — became the genre template for every subsequent 4X strategy game. Civilization has been updated through seven mainline entries and numerous spin-offs, remaining commercially significant thirty years after the original.\n\nMeier left MicroProse in 1996 after disagreements with new management and co-founded Firaxis Games with Brian Reynolds and Jeff Briggs. After Civilization II (1996) was completed at MicroProse, Firaxis went on to make Civilization III (2001), Civilization IV (2005), and Civilization V (2010) under his oversight, each building on the original\'s foundations with refined mechanics. His memoir, "Sid Meier\'s Memoir!: A Life in Computer Games" (2020), articulated his design principles in accessible form. Meier\'s definition of a game as "a series of interesting decisions" remains the most quoted single sentence in game design theory, and the 4X strategy genre he defined — eXplore, eXpand, eXploit, eXterminate — remains one of PC gaming\'s most durable categories.',
     notableGames: ['F-15 Strike Eagle (1984)', 'Pirates! (1987)', 'Railroad Tycoon (1990)', 'Civilization (1991)', 'Civilization IV (2005)'],
+    notableGameIds: ['f-15-strike-eagle', 'pirates', 'railroad-tycoon', 'civilization', 'civilization-amiga'],
     keyFacts: [
       'Co-founded MicroProse with Bill Stealey in 1982 after a bet at an arcade',
       'Pirates! (1987) was one of the first true open-world sandbox games',
@@ -150,10 +150,10 @@ module.exports = [
     role: 'Programmer / Engine Architect',
     employer: 'id Software',
     era: '1990 – present',
-    keyword: 'id Software',
     description: 'John Carmack wrote the rendering engines behind Wolfenstein 3D, Doom, and Quake, inventing the technical foundations of the first-person shooter and advancing real-time 3D graphics by a decade.',
     longDescription: 'John Carmack grew up in Kansas City and was writing assembly language code by his early teens, displaying a mathematical aptitude that would define his career. After a brief and miserable stint at the University of Missouri-Kansas City, he took a programming job at Softdisk, a Shreveport-based disk magazine publisher, where he met John Romero, Tom Hall, and Adrian Carmack (no relation). The four left Softdisk in 1991 — taking the company\'s computers on a weekend, an incident that Softdisk nearly litigated — to form id Software. Carmack\'s first major achievement was Commander Keen (1990), written while still at Softdisk: a side-scrolling platformer for IBM PCs that used adaptive tile refresh to achieve smooth console-style scrolling on PC hardware thought incapable of it. The technique, invented over a single weekend, demonstrated that Carmack\'s approach to graphics problems was to treat any supposed hardware limitation as an engineering challenge rather than a constraint.\n\nCarmack\'s engine work on Wolfenstein 3D (1992) created the template for the first-person shooter: a pseudo-3D raycasting engine that projected a 2D grid map into the illusion of three-dimensional corridors at playable frame rates on consumer PCs. The engine was technically simpler than true 3D but sufficiently convincing that players experienced genuine spatial immersion. Doom (1993) replaced the raycaster with a true BSP (Binary Space Partition) rendering engine that supported variable floor heights, non-orthogonal walls, and dynamic lighting — a generational leap in visual complexity achieved on the same consumer hardware. Doom also pioneered online multiplayer over LAN and modem, and its shareware distribution model — the first episode free, the full game mail-order — established a commercial template that antedated modern free-to-play by two decades.\n\nQuake (1996) completed Carmack\'s transition to fully polygonal 3D worlds with real-time lighting, moving away from the sprite-based enemies of Doom toward polygon models that could be viewed from any angle. The Quake engine supported client-server networked multiplayer natively, enabling the organised tournament and "clan" culture that became the foundation of competitive online gaming. Carmack released the source code of Wolfenstein 3D, Doom, and Quake as each successive engine became outdated, spawning thousands of independent mods and total conversions that trained an entire generation of game developers. His subsequent work on Quake II (1997), Quake III Arena (1999), and Doom 3 (2004) continued pushing rendering technology, with Quake III\'s Q3A engine becoming one of the most widely licensed bases for third-party games of the early 2000s.\n\nCarmack left id Software in 2013 to become CTO of Oculus VR, where he worked on the technical foundations of the Oculus Rift and Quest headsets before departing in 2022. His influence on the games industry is primarily technical: the BSP algorithm, the portal rendering technique, the radiosity lighting approaches, and the client-server networking architecture he pioneered in the early 1990s underpinned game engine development for the next twenty years. His practice of releasing source code made id Software\'s engines the educational foundation for a generation of engine programmers, many of whom went on to found studios producing the most commercially significant games of the 2000s and 2010s.',
     notableGames: ['Commander Keen (1990)', 'Wolfenstein 3D (1992)', 'Doom (1993)', 'Quake (1996)', 'Quake III Arena (1999)'],
+    notableGameIds: ['commander-keen', 'wolfenstein-3d', 'doom-1993', 'doom-jaguar', 'quake'],
     keyFacts: [
       'Invented smooth PC side-scrolling for Commander Keen in a single weekend while at Softdisk',
       'Co-founded id Software in 1991 after leaving Softdisk',
@@ -170,10 +170,10 @@ module.exports = [
     role: 'Game Designer / Level Designer',
     employer: 'id Software / Ion Storm',
     era: '1987 – present',
-    keyword: 'id Software',
     description: 'John Romero designed the levels and defined the feel of Wolfenstein 3D, Doom, and Quake, establishing the aesthetics and spatial language of the first-person shooter.',
     longDescription: 'John Romero began writing games in BASIC on an Apple II at age twelve and had his first game published in the computer magazine inCider in 1984. He worked as a programmer and designer at Softdisk before co-founding id Software in 1991 with John Carmack, Tom Hall, and Adrian Carmack. At id, Carmack and Romero developed a complementary working dynamic: Carmack built the engines and Romero designed the levels, built the tools, and defined the moment-to-moment feel of play. For Wolfenstein 3D (1992), Romero co-designed the game\'s sixty levels with Tom Hall and established the spatial conventions of the first-person shooter — locked doors, keycards, secret passages triggered by pushing walls, ambushes from side corridors — that remain the genre\'s basic grammar to this day. He also contributed the game\'s characteristic frenetic pacing, insisting that everything from enemy placement to corridor width serve the sensation of aggressive forward movement.\n\nRomero\'s design work on Doom (1993) is his most significant contribution to game history. The nine levels of Doom\'s shareware episode, most of them Romero\'s, were designed to exploit every capability of Carmack\'s new BSP engine: variable room heights, outdoor areas with sky ceilings, crushing traps, toxic floors, and monster closets that snapped open behind the player. Romero was particularly attentive to pacing — the rhythm of tension and release across a level, the way a large open arena contrasted with a tight zigzag corridor, the dramatic use of darkness before an ambush. These design principles, articulated by Romero in interviews and later in game design curricula, became the foundational texts of FPS level design. Fans quickly built level editors such as DEU (Doom Editor Utility), spawning a mod community that ran to hundreds of thousands of user-created levels.\n\nRomero left id Software in 1996 following internal tensions documented extensively in David Kushner\'s "Masters of Doom" — primarily disagreements over creative direction of Quake and management of the company\'s rapid growth. He co-founded Ion Storm in Dallas with Tom Hall, with a mandate for creative freedom and a reported $13 million budget for his debut project, Daikatana (2000). The game was in development for three and a half years, dramatically over budget, and released to hostile critical reception. The marketing campaign — "John Romero\'s About to Make You His Bitch" — became one of the most cited examples of hubris in game industry history. Ion Storm Dallas was shut down in 2001.\n\nRomero\'s legacy is the FPS level design vocabulary, which is a more lasting contribution than the Daikatana episode suggests. His work on Doom and Quake is extensively studied in game design programmes, and his subsequent return to Doom modding — he released "Sigil" (2019), an unofficial fifth episode for the original Doom, to considerable acclaim — demonstrated that his design sensibilities remained sharp. He co-founded Romero Games with his partner Brenda Romero in 2015, releasing Empire of Sin (2020), a Chicago gangster strategy game. His ongoing public engagement with game design education, through lectures and the free release of his early code archives, has contributed significantly to the historical documentation of the 1990s PC game industry.',
     notableGames: ['Wolfenstein 3D (1992)', 'Doom (1993)', 'Quake (1996)', 'Daikatana (2000)', 'Sigil (2019 — Doom episode)'],
+    notableGameIds: ['commander-keen', 'wolfenstein-3d', 'doom-1993', 'quake'],
     keyFacts: [
       'Had his first game published in inCider magazine in 1984, while still a teenager',
       'Co-designed Wolfenstein 3D\'s levels with Tom Hall and established FPS spatial conventions',
@@ -190,10 +190,10 @@ module.exports = [
     role: 'Game Designer / Director / Writer',
     employer: 'Konami / Kojima Productions',
     era: '1986 – present',
-    keyword: 'Konami',
     description: 'Hideo Kojima created Metal Gear and developed the stealth game genre, combining cinematic storytelling with postmodern game design across a career spanning four decades.',
     longDescription: 'Hideo Kojima joined Konami in 1986, having set aside an ambition to make films, and turned to game development as the medium most open to a young creator without connections. His first project at Konami was as assistant director on Penguin Adventure (1986) for the MSX home computer, but he was soon assigned to develop a war game for the MSX2. Dissatisfied with the action-shooting design brief, Kojima redesigned the project as a game about infiltration and avoidance rather than combat: Metal Gear (1987) tasked the player with avoiding enemy sight lines, hiding in plain sight, and acquiring equipment through stealth rather than firepower. The concept was partly dictated by the MSX2\'s hardware — it could not handle large numbers of enemies on screen simultaneously — but Kojima recognised that the constraint produced a more original and tense gameplay experience than a conventional shooter would have.\n\nKojima\'s design philosophy is explicitly cinematic: he conceives his games as films that players inhabit, using extended cutscene sequences, directorial camera work, and film-school reference points to create experiences that blur the boundary between passive viewing and active play. His scripts are written at feature-film length and beyond; Metal Gear Solid (1998) for the PlayStation contained hours of voiced dialogue, a cast of characters with psychological complexity unusual in games, and a narrative twist — the player character Solid Snake is fighting a genetic copy of himself — that commented on player identity and immersion in a way no prior game had attempted. The game also featured famous fourth-wall breaks: enemies who read the player\'s memory card data, a boss who could only be defeated by switching the controller to the second port, and codec calls where characters discussed game mechanics as if they were real world phenomena.\n\nKojima\'s catalogue beyond Metal Gear includes Snatcher (1988), a cyberpunk graphic adventure deeply influenced by Blade Runner and Terminator; Policenauts (1994), a point-and-click thriller about an astronaut returning to a space colony; and Zone of the Enders (2001), a mecha action game notable primarily for including a Metal Gear Solid 2 demo that drove hardware sales. Metal Gear Solid 2: Sons of Liberty (2001) was a deliberate subversion of player expectations — the advertised protagonist Snake was replaced mid-game by a new character, Raiden, in a metatextual statement about media manipulation and player passivity that divided audiences and is now studied in game studies curricula. Metal Gear Solid 3: Snake Eater (2004) returned to linear action-espionage with a Cold War narrative, and Metal Gear Solid V: The Phantom Pain (2015) brought the series into an open-world format.\n\nKojima\'s acrimonious departure from Konami in 2015, widely reported but never fully explained by either party, led to the founding of Kojima Productions as an independent studio. Death Stranding (2019), his first independent release, was a walking-and-delivery game set in a post-apocalyptic America connected by social mechanics that let players leave objects and structures for other players to discover — a meditation on connection and isolation that divided critics but won numerous awards. Kojima\'s influence on game narrative design is pervasive: the cutscene-heavy, auteur-driven, philosophically ambitious AAA game is a category he largely created, and arguments about the appropriate ratio of cutscene to gameplay in prestige games are still conducted with reference to his work.',
     notableGames: ['Metal Gear (1987)', 'Snatcher (1988)', 'Metal Gear Solid (1998)', 'Metal Gear Solid 3: Snake Eater (2004)', 'Death Stranding (2019)'],
+    notableGameIds: ['metal-gear', 'snatcher', 'metal-gear-2-solid-snake', 'policenauts', 'metal-gear-solid'],
     keyFacts: [
       'Joined Konami in 1986, having set aside film-making ambitions',
       'Pioneered the stealth game genre with Metal Gear (1987) on the MSX2',
@@ -210,10 +210,10 @@ module.exports = [
     role: 'Game Designer / Producer',
     employer: 'Bullfrog Productions / Lionhead Studios',
     era: '1987 – present',
-    keyword: 'Bullfrog',
     description: 'Peter Molyneux created Populous, Theme Park, and Black & White, pioneering the god game and life simulation genres and introducing moral choice as a core game system.',
     longDescription: 'Peter Molyneux entered the games industry by accident: he had founded a database software company called Taurus Impex in the mid-1980s and wrote to Commodore requesting business software development tools. Commodore mistakenly sent him free hardware and software worth thousands of pounds, assuming he was a game developer. Rather than return the equipment, Molyneux began making games, co-founding Bullfrog Productions in Guildford in 1987 with Les Edgar. His first significant project was Populous (1989), a game in which the player acted as a divine being — a god — manipulating landscape to help or hinder civilisations of followers. Bullfrog published it through Electronic Arts, and Populous sold over four million copies, becoming the best-selling computer game to that point in the United Kingdom. It created the "god game" as a genre category and demonstrated that a strategy game could dispense with units, resource nodes, and build queues in favour of indirect systemic influence.\n\nMolyneux\'s design style is characterised by ambitious systemic complexity combined with a gift for communicating that complexity through simple, tactile interactions. Theme Park (1994), developed at Bullfrog, simulated the economics, visitor psychology, and physical layout of an amusement park with enough depth to inspire serious academic study of simulation game design, while remaining accessible to players who had never played a business simulation before. Dungeon Keeper (1997), his final Bullfrog release before joining Lionhead, inverted the conventional RPG by casting the player as the dungeon lord whose lair the heroes were attacking — a perspective reversal that was both comedically effective and mechanically inventive. EA acquired Bullfrog in 1995, and Molyneux grew increasingly frustrated with the publisher\'s commercial priorities before leaving to found Lionhead Studios in 1997.\n\nFable (2004) for the Xbox, Lionhead\'s flagship title, was the most fully realised version of Molyneux\'s central design obsession: a game in which every choice had a visible consequence, building toward a character whose physical appearance and world reputation reflected the sum of their moral decisions. The moral alignment system — pure good and pure evil as poles between which the player could navigate through thousands of small choices — influenced virtually every subsequent Western RPG. Black & White (2001), Lionhead\'s debut, had explored similar territory in a god-game framework: the player\'s divine avatar was a giant creature whose behaviour was trained through reward and punishment, with a physical form that morphed to reflect the player\'s moral record. Both games were critically noted for Molyneux\'s tendency to promise features during development that the shipped games did not fully deliver — a pattern that became so consistent it generated a genre of press coverage tracking his statements.\n\nMolyneux\'s legacy is the moral consequence system as a genre mechanic. Before Populous and Fable, strategy and role-playing games were predominantly goal-oriented systems in which ethical choices, where they existed at all, were cosmetic. After Bullfrog and Lionhead, the expectation that a player\'s choices should meaningfully shape their world and character became standard across Western game development, traceable through Dragon Age, The Witcher, Mass Effect, and every major RPG franchise of the 2000s and 2010s. He left Lionhead in 2012 to found 22cans, where he developed the mobile experiment Curiosity and the partially completed Godus (2013) — both projects that continued his pattern of promising transformative player agency while delivering incomplete implementations.',
     notableGames: ['Populous (1989)', 'Theme Park (1994)', 'Dungeon Keeper (1997)', 'Black & White (2001)', 'Fable (2004)'],
+    notableGameIds: ['populous-amiga', 'powermonger', 'syndicate-1993', 'theme-park-amiga', 'dungeon-keeper'],
     keyFacts: [
       'Founded Bullfrog Productions in 1987 after Commodore mistakenly sent him free development hardware',
       'Populous (1989) sold over four million copies and created the god game genre',
@@ -230,10 +230,10 @@ module.exports = [
     role: 'Game Designer',
     employer: 'Game Freak / Nintendo',
     era: '1989 – present',
-    keyword: 'Nintendo',
     description: 'Satoshi Tajiri created Pokémon, transforming a childhood insect-collecting hobby into the highest-grossing media franchise in history across games, animation, and merchandise.',
     longDescription: 'Satoshi Tajiri grew up in Machida, Tokyo, spending his childhood collecting insects in the fields and rice paddies surrounding his home — fields that were progressively replaced by urban development throughout his adolescence. His second obsession was arcade games, which he played compulsively and documented in a self-published magazine, Game Freak, that he began producing with his friend Ken Sugimori in 1981. The fanzine covered arcade strategy and attracted enough subscribers that Tajiri and Sugimori incorporated Game Freak as a game development company in 1989. Their early output — Quinty (1989), published by Namco in Japan and as Mendel Palace in North America — was commercially modest, but Game Freak soon began working with Nintendo, and Tajiri pitched his portable creature-collection concept to the company, with Shigeru Miyamoto among its producers.\n\nThe concept for Pokémon originated from watching children use the Game Boy link cable, an accessory rarely exploited by existing software, and imagining the cable as a conduit through which insects could travel between devices. Tajiri spent six years, from 1990 to 1996, developing what became Pocket Monsters Red and Green — a period during which Game Freak nearly went bankrupt three times and most of the staff went without salary for extended periods. Tajiri designed the game around a core tension between completionism and social interaction: no single game cartridge contained all 151 Pokémon, and certain species could only be acquired by trading with another player via link cable, making peer-to-peer exchange a mandatory game mechanic rather than an optional feature. The design was simultaneously a commercial structure — two cartridges sold rather than one — and a social engineering system that turned the schoolyard into a trading floor.\n\nPokémon Red and Blue released in Japan in 1996 and in North America in 1998, accompanied by an animated television series and a trading card game that expanded the franchise beyond software. The combined media machine drove a cultural phenomenon — "Pokémania" — unprecedented in consumer electronics history, with the trading card game producing counterfeiting operations large enough to attract law enforcement attention. Pokémon Gold and Silver (1999) expanded the world to 251 species and introduced a real-time internal clock that made the game world responsive to the actual time of day, a design feature as technically modest as it was emotionally effective. By 2024, the Pokémon franchise had generated over $150 billion in revenue across games, merchandise, animation, and cards — the highest-grossing media franchise in history.\n\nTajiri has rarely given interviews and has maintained a deliberately low public profile throughout Pokémon\'s commercial ascendancy, leaving Nintendo and The Pokémon Company to manage the franchise\'s expansion while he continues to direct game development at Game Freak. His creative legacy is the creature-collection RPG as a genre, which spawned hundreds of spiritual successors — Digimon, Dragon Quest Monsters, Yo-kai Watch, Temtem, and eventually Palworld — none of which have approached the cultural reach of the original. More broadly, Tajiri demonstrated that a console\'s peripheral hardware, rather than being an afterthought, could be the axis around which an entire game design philosophy rotated, and that the highest-grossing entertainment franchise in history could grow from the memory of a child chasing insects through a field.',
     notableGames: ['Quinty / Mendel Palace (1989)', 'Pokémon Red and Green (1996)', 'Pokémon Gold and Silver (1999)', 'Pokémon Ruby and Sapphire (2002)'],
+    notableGameIds: ['pokemon-red-blue', 'pokemon-gold-and-silver'],
     keyFacts: [
       'Ran a self-published arcade gaming fanzine called Game Freak from 1981 with Ken Sugimori',
       'Incorporated Game Freak as a developer in 1989; first title was Quinty, published by Namco',
@@ -250,10 +250,10 @@ module.exports = [
     role: 'Game Designer / Producer',
     employer: 'Capcom',
     era: '1987 – present',
-    keyword: 'Capcom',
     description: 'Keiji Inafune designed Mega Man\'s visual identity and produced the franchise across its NES and SNES peak years, creating one of gaming\'s most enduring mascot characters and defining the precision action-platformer genre\'s aesthetic.',
     longDescription: 'Keiji Inafune joined Capcom in 1987 as an artist and character designer, assigned almost immediately to a new action game project that would become Mega Man. The character design — a round-headed blue robot in a suit with a cannon arm — was developed collaboratively, but Inafune drew the finalised version that appeared in the game and on its promotional material. Mega Man (1987) sold modestly on first release in the United States, partly due to cover artwork that bore no relation to Inafune\'s design, but accumulated a devoted following through rental and word of mouth that justified a sequel.\n\nMega Man 2 (1988), for which Inafune again worked as a character designer, refined the original\'s formula into what is generally considered the series\' peak: eight Robot Masters with memorably distinct designs, a password system that saved progress, and a difficulty curve that rewarded pattern memorisation without demanding it. The game sold 1.51 million copies in Japan and the United States combined — the best-selling entry in the original series. Inafune went on to work on Mega Man 3 through 8, increasingly in a producing role, and oversaw the Mega Man X spin-off series on SNES, which he conceived as a darker, faster, more narratively ambitious version of the franchise for players who had grown up with the originals.\n\nBeyond Mega Man, Inafune rose to become one of Capcom\'s most significant producers, overseeing the development of Dead Rising (2006), the Lost Planet series, and Onimusha 3 (2004). His production credits in the 2000s made him one of the most prominent figures in Japanese game development internationally. He left Capcom in 2010 after publicly stating that the Japanese games industry had become creatively stagnant — a statement that generated significant controversy domestically.\n\nAfter Capcom, Inafune founded Comcept and produced Mighty No. 9 (2016), a spiritual successor to Mega Man funded through Kickstarter, raising $3.8 million. The game\'s development was troubled, its release delayed repeatedly, and the final product received mixed reviews — demonstrating both the enduring emotional capital of his Mega Man legacy and the difficulty of translating that goodwill into a successful independent production.',
     notableGames: ['Mega Man (1987)', 'Mega Man 2 (1988)', 'Mega Man X (1993)', 'Dead Rising (2006)', 'Mighty No. 9 (2016)'],
+    notableGameIds: ['mega-man', 'mega-man-2', 'mega-man-x', 'mega-man-x2', 'mega-man-legends'],
     keyFacts: [
       'Drew the finalised Mega Man character design as a new Capcom hire in 1987',
       'Mega Man 2 (1988) sold 1.51 million copies and is considered the series\' creative peak',
@@ -269,10 +269,10 @@ module.exports = [
     role: 'Game Designer / Programmer',
     employer: 'Soviet Academy of Sciences / The Tetris Company',
     era: '1984 – present',
-    keyword: 'Tetris',
     description: 'Alexey Pajitnov created Tetris at a Soviet research institute in 1984, producing what became the best-selling puzzle game in history and one of the few games to achieve genuine cultural universality across age, nationality, and gaming experience.',
     longDescription: 'Alexey Pajitnov was working as a computer scientist at the Dorodnitsyn Computing Centre of the Soviet Academy of Sciences in Moscow in 1984 when he began programming puzzle games to test the capabilities of the Elektronika 60, a Soviet clone of the DEC PDP-11 minicomputer. His inspiration was pentominoes — geometric shapes made from five squares, used in a puzzle game by mathematician Solomon Golomb — which he simplified to tetrominoes (four squares each) to reduce computational complexity. The game he built around falling tetrominoes, named Tetris from the Greek "tetra" (four) and the tennis he enjoyed, consumed the entire Moscow computing community within days of completion. Copies spread by floppy disk across Soviet research institutes and then, through a circuitous route involving Robert Stein\'s London-based Andromeda Software, reached Western publishers.\n\nThe intellectual property history of Tetris is among the most complicated in game industry history. Because Pajitnov created the game as a Soviet state employee, the rights were held by the Soviet government and licensed through ELORG (Elektronorgtechnica), a state export organisation. Multiple Western companies — including Mirrorsoft, Spectrum Holobyte, Atari, Nintendo, and Sega — simultaneously believed they held licences that did not exist or had been granted in conflict with other contracts. Henk Rogers of Bullet-Proof Software, working with Nintendo, negotiated directly with ELORG in 1989 and secured the Game Boy rights; the decision to bundle Tetris with the Game Boy attracted demographics — specifically adults — who would not have purchased the handheld for a Mario game. Pajitnov received no royalties from his government-owned creation throughout this period.\n\nIn 1991, following the dissolution of the Soviet Union, Pajitnov emigrated to the United States and eventually joined Microsoft in 1996. The Tetris Company, co-founded by Pajitnov and Henk Rogers in 1996, finally placed royalty rights in his hands for the first time — twelve years after he had created one of the most played games in history.\n\nTetris\'s design is studied in cognitive psychology, mathematics, and game design: it is used as a standard task in working memory research; the "Tetris effect" (the persistence of falling-shape imagery in the minds of intensive players) has generated academic literature; and its design elegance — four-square shapes, ten-column well, simple rotation system — is the example most frequently cited in game design courses as proof that mechanical simplicity and strategic depth are not in conflict. The Game Boy version alone sold over 35 million copies; total franchise sales across all platforms exceed 500 million units.',
     notableGames: ['Tetris (1984 — Elektronika 60)', 'Tetris (1989 — Game Boy)', 'Welltris (1989)', 'Hexic (2003)'],
+    notableGameIds: ['tetris', 'tetris-gameboy', 'welltris'],
     keyFacts: [
       'Created Tetris in 1984 on a Soviet Elektronika 60 minicomputer as a research institute employee',
       'Received no royalties for twelve years as Soviet state ownership blocked all compensation',
@@ -288,10 +288,10 @@ module.exports = [
     role: 'Game Designer',
     employer: 'Maxis / Electronic Arts',
     era: '1984 – present',
-    keyword: 'Maxis',
     description: 'Will Wright created SimCity and The Sims, pioneering open-ended simulation games without win conditions and establishing the life simulation as a genre. The Sims became the best-selling PC game franchise in history.',
     longDescription: 'Will Wright began programming games on a Commodore 64 as a self-taught programmer and founded Maxis in 1987 with Jeff Braun after developing the prototype for what would become SimCity. The concept emerged from a map editor Wright had built for his helicopter action game Raid on Bungeling Bay (1984) — he found the city-building tool more engaging than the game itself and began developing it into a standalone simulation. No publisher would fund the project: SimCity had no win condition, no final boss, no score in any conventional sense. Publishers could not categorise or market it. Maxis self-published the game in 1989, and SimCity sold over a million copies within its first two years, demonstrating that the absence of explicit victory conditions was not a commercial liability but a creative possibility.\n\nWright\'s design philosophy centres on what he calls "possibility space" — a game system complex enough that players generate their own narratives and challenges within it, rather than following a predetermined structure. SimCity let players build urban environments under the constraints of traffic, pollution, crime, and taxation; the game provided feedback through citizen happiness and urban expansion but never told the player what to build or how to succeed beyond the player\'s own definition. This systemic approach influenced an entire category of games subsequently labelled "sandbox."\n\nThe Sims (2000) applied the same philosophy at the scale of individual human lives. Players managed the basic needs, relationships, and aspirations of simulated people, with no objective beyond the quality of life the player chose to create. The Sims was a hard sell internally — Maxis\'s own board had been sceptical of what it saw as a \'dollhouse\' game — and it was completed after EA acquired Maxis in 1997. The Sims sold 1.7 million copies in its first year, became the best-selling PC game of 2000, and accumulated expansion packs at a rate that made it the best-selling PC game franchise in history.\n\nWright continued at Maxis/EA through Spore (2008), an ambitious game that attempted to simulate the entire arc of evolution from single-cell organism to galactic civilisation in a single playthrough. Spore received mixed reviews upon release — its evolutionary simulation was shallower than anticipated, and the creature-creation tools did not compensate for limited gameplay depth in later stages. Wright left EA in 2009, founding Stupid Fun Club, a transmedia entertainment studio operating at the boundary of games, television, and social media.',
     notableGames: ['Raid on Bungeling Bay (1984)', 'SimCity (1989)', 'SimCity 2000 (1993)', 'The Sims (2000)', 'Spore (2008)'],
+    notableGameIds: ['raid-on-bungeling-bay', 'simcity', 'simcity-2000'],
     keyFacts: [
       'SimCity prototype grew from a map editor Wright built for Raid on Bungeling Bay (1984)',
       'No publisher would fund SimCity — Maxis self-published it in 1989 after rejections',
@@ -307,10 +307,10 @@ module.exports = [
     role: 'Hardware Engineer / Executive',
     employer: 'Sony',
     era: '1975 – 2007',
-    keyword: 'PlayStation',
     description: 'Ken Kutaragi designed the PlayStation and PlayStation 2, creating the world\'s most successful game console platform, transforming Sony into a games company, and making the PlayStation brand the dominant force in consumer gaming for two console generations.',
     longDescription: 'Ken Kutaragi joined Sony in 1975 as a hardware engineer and spent his early career in Sony\'s digital research division. His entry into game development occurred in the late 1980s through an unofficial project: Kutaragi had seen his daughter playing a Famicom and noted the limitations of its sound hardware relative to Sony\'s professional audio equipment. He approached Nintendo in secret — without Sony management approval — and proposed designing a sound chip for the Super Famicom. The result was the SPC700 audio processor in the SNES. Sony management learned of the project only after the chip was delivered; the project\'s success and the relationship it established with Nintendo gave Sony\'s leadership reason to tolerate his unconventional methods.\n\nThe PlayStation\'s origin traces to a CD-ROM add-on for the Super Famicom that Sony and Nintendo developed jointly in 1988–1992, with Kutaragi leading Sony\'s technical contribution. The famous 1991 Consumer Electronics Show incident — Nintendo announced a rival CD partnership with Philips the morning after Sony had announced its own Super Famicom CD player — terminated the collaboration publicly and dramatically. Sony, left with a completed CD-ROM game system and no partner, faced a choice: abandon the hardware or develop it into a standalone console. Kutaragi, convinced that games represented the future of consumer entertainment, advocated strongly for the latter. Sony\'s management agreed.\n\nThe PlayStation (1994 in Japan, 1995 internationally) launched at $299 in the United States, underpricing the Sega Saturn by $100 at a time when the Saturn\'s hardware architecture made multiplatform development significantly harder. The PlayStation\'s developer-friendly SDK, its aggressive pricing, and its CD-ROM architecture drove market share into a dominant position: the console sold over 100 million units. Third-party support — especially the migration of Square\'s Final Fantasy franchise from Nintendo with Final Fantasy VII (1997) — was critical to this success.\n\nKutaragi oversaw the PlayStation 2 (2000), which incorporated a DVD player that allowed Sony to win the DVD format war while maintaining its gaming market position. The PlayStation 2 sold over 155 million units — the best-selling console in history. He was promoted to Sony Computer Entertainment President in 1999 and to Sony Group Executive Deputy President in 2003. He retired from Sony in 2007, before the PlayStation 3\'s eventual commercial recovery from its difficult $599 launch price.',
     notableGames: ['PlayStation (1994 — hardware)', 'PlayStation 2 (2000 — hardware)', 'PlayStation 3 (2006 — hardware)'],
+    notableGameIds: [],
     keyFacts: [
       'Designed the SPC700 audio chip for the SNES without initial Sony management approval',
       'Led PlayStation development after the Sony-Nintendo CD-ROM partnership collapsed at CES 1991',
@@ -326,7 +326,6 @@ module.exports = [
     role: 'Game Designer, Writer, Scenario Director',
     employer: 'Armor Project (formerly freelance, Enix)',
     era: '8-bit onward',
-    keyword: 'Dragon Quest',
     description: 'The freelance magazine writer who won a programming contest, invented the Japanese console RPG with Dragon Quest, and became the first game creator ever awarded Japan\'s Order of the Rising Sun.',
     longDescription: 'Yuji Horii did not train as a programmer or an artist. Born on Awaji Island in 1954, he graduated from Waseda University\'s Department of Literature and worked as a freelance writer for newspapers, comics, and magazines — including the Famicom Shinken games column that ran in Weekly Shōnen Jump from 1985 to 1988, which gave him an unusually direct line to the audience he would later capture.\n\nHis route into development was a competition. Horii entered an Enix-sponsored game programming contest and placed with Love Match Tennis, and the experience convinced him to become a designer. He then created The Portopia Serial Murder Case entirely by himself — a detective adventure that, remarkably, inspired a young Hideo Kojima to enter the industry, and which became the first of a trilogy of Yuji Horii Mysteries alongside The Hokkaido Serial Murder Case (1984) and Karuizawa Yūkai Annai (1985).\n\nThen came Dragon Quest, and with it the blueprint for the Japanese console RPG. Horii took the sprawling, forbidding Western computer RPGs he admired — Wizardry and Ultima above all — and stripped them into something a child with a Famicom controller could understand: a single hero, a clear quest, a legible world, and an inviting tone, wrapped in Akira Toriyama\'s character art and promoted relentlessly in Shōnen Jump. The result was not merely a hit but a national institution, and virtually every JRPG since, Final Fantasy included, is built on foundations Horii laid.\n\nHe has never worked as a conventional employee of a publisher. Horii runs his own company, Armor Project, which holds an exclusive production contract with Square Enix originally struck with Enix before the merger, and which co-owns the Dragon Quest franchise. He received a lifetime achievement award at the 2022 Game Developers Conference, and in 2025 became the first video game creator ever to receive the Order of the Rising Sun from the Japanese government — formal state recognition of a writer who taught an entire nation to play role-playing games.',
     notableGames: [
@@ -336,6 +335,7 @@ module.exports = [
       'Chrono Trigger (1995)',
       'Dragon Quest V (1992)',
     ],
+    notableGameIds: ['the-portopia-serial-murder-case', 'dragon-quest', 'dragon-quest-iii', 'chrono-trigger'],
     keyFacts: [
       'A freelance writer who entered games by placing in an Enix programming contest',
       'The Portopia Serial Murder Case (1983) inspired Hideo Kojima to enter the industry',
@@ -352,7 +352,6 @@ module.exports = [
     role: 'Game Director, Designer',
     employer: 'Sora Ltd. (formerly HAL Laboratory)',
     era: '8-bit handheld onward',
-    keyword: 'Super Smash Bros.',
     description: 'Joined HAL Laboratory at nineteen, created Kirby by twenty-two, invented Super Smash Bros. from a prototype that had nothing to do with Nintendo — then quit rather than make sequels forever.',
     longDescription: 'Masahiro Sakurai started at HAL Laboratory in 1989, aged just nineteen. Three years later he had directed his first game, Kirby\'s Dream Land (1992), and created one of Nintendo\'s most enduring characters — designing the game around a philosophy of total accessibility, so that a player with no experience of action games could pick it up and enjoy it, floating over any obstacle that defeated them. He followed it with Kirby\'s Adventure (1993), which introduced the Copy Ability that became the series\' defining mechanic, and Kirby Super Star (1996).\n\nHis second landmark began as something else entirely. In 1998 Sakurai built a prototype fighting game called Dragon King: The Fighting Game — a four-player brawler with no Nintendo characters in it at all. Only later were Mario, Link, Pikachu and the rest dropped into the design, and the resulting Super Smash Bros., released in Japan in January 1999, became an unexpected hit and one of the best-selling games on the Nintendo 64. The crucial insight, visible in that origin, is that Smash was a genuinely novel fighting game first and a crossover second — which is precisely why it works.\n\nSakurai directed Super Smash Bros. Melee and then, on 5 August 2003, resigned from HAL Laboratory. His stated reason is unusually pointed for a Japanese industry figure: he wanted more freedom, and he was unhappy with the relentless sequelisation of the business. "It was tough for me," he said shortly afterwards, "to see that every time I made a new game, people automatically assumed that a sequel was coming." He objected to the assumption that sequels simply happen, when in fact many people have to give everything they have to make one.\n\nHe founded his own company, Sora Ltd., in 2005, and has continued to direct Smash — Brawl, the Wii U and 3DS entries, and Ultimate — alongside Meteos and Kid Icarus: Uprising, while retaining an independence rare among creators so closely identified with Nintendo. From 2022 to 2024 he ran an unusually generous educational YouTube channel breaking down game design principles for anyone who wanted to learn.',
     notableGames: [
@@ -362,6 +361,7 @@ module.exports = [
       'Super Smash Bros. (1999)',
       'Super Smash Bros. Melee (2001)',
     ],
+    notableGameIds: ['kirby-dream-land', 'kirby-s-adventure', 'kirby-super-star', 'super-smash-bros'],
     keyFacts: [
       'Joined HAL Laboratory at nineteen and created Kirby by twenty-two',
       'Super Smash Bros. began as Dragon King: The Fighting Game, with no Nintendo characters',
@@ -377,7 +377,6 @@ module.exports = [
     role: 'Game Designer, Programmer, Engineer',
     employer: 'Taito',
     era: 'Golden Age',
-    keyword: 'Space Invaders',
     description: 'Designed Space Invaders alone — the art, the sound, the code, and the arcade hardware itself, which he built from scratch because no machine existed that could run the game he wanted to make.',
     longDescription: 'Tomohiro Nishikado created the game that began the golden age of the arcade, and he did essentially all of it himself. Beginning work in 1977 at Taito, he designed Space Invaders, programmed it, drew its artwork, produced its sounds, and — because no suitable hardware existed — engineered the arcade machine it ran on, assembling a microcomputer from scratch. The whole undertaking took him roughly a year and a half, working alone and hand-making many of his own development tools.\n\nThe game\'s origin was competitive. Nishikado was responding to Atari\'s Breakout (1976), which had become enormously popular in Japan, and he set out to make something better — retaining the essential structure of clearing a screen of targets while transforming it into something with menace and narrative. Where Breakout\'s bricks sat still, his invaders advanced.\n\nWhat emerged had qualities that Nishikado did not entirely plan. The famous accelerating march — the four descending notes that quicken as the alien ranks thin — was partly an artefact of his hardware: the machine could only move so many objects efficiently, so as the player destroyed invaders the survivors sped up, and because Nishikado had tied a sound to each movement, the music sped up with them. A processing limitation became gaming\'s first piece of dynamic, gameplay-responsive audio.\n\nTaito released Space Invaders in Japan in July 1978 and, through Midway, overseas later that year. Initial sales were unremarkable, but by the end of 1978 over 100,000 machines had been sold, and the game triggered a phenomenon that reshaped the industry on both sides of the Pacific. Nishikado\'s achievement is singular in the medium: one person, working alone, who designed a game, built the computer to run it, and in the process invented the shoot-\'em-up and launched the arcade era.',
     notableGames: [
@@ -387,6 +386,7 @@ module.exports = [
       'Interceptor (1975)',
       'Space Invaders Part II (1979)',
     ],
+    notableGameIds: ['speed-race', 'gun-fight', 'space-invaders'],
     keyFacts: [
       'Designed, programmed, drew, and scored Space Invaders single-handedly over about 18 months',
       'Engineered the arcade hardware himself, building a microcomputer from scratch to run it',
@@ -402,7 +402,6 @@ module.exports = [
     role: 'Game Designer, Programmer',
     employer: 'Llamasoft',
     era: '1982 – present',
-    keyword: 'Llamasoft',
     description: 'Britain\'s most singular game designer: forty years of psychedelic shooters full of llamas, camels and sheep, from Gridrunner on the VIC-20 to Tempest 2000 on the Atari Jaguar.',
     longDescription: 'Jeff Minter, born in Reading, England, on 22 April 1962 and known to nearly everyone as "Yak", co-founded Llamasoft in 1982 and has spent the decades since making games that could not have come from anyone else. His early work on the Commodore VIC-20 and Commodore 64 set the pattern. Gridrunner (1982) was a fast, abstract grid shooter; Attack of the Mutant Camels (1983) replaced the enemy walkers of a familiar arcade formula with enormous camels; Batalyx (1985) bundled several games into one strange whole. His style combines psychedelic visuals, recurring ruminants — llamas, sheep and camels above all — and quirky sampled sound, and it has remained recognisable across every platform he has worked on. In parallel he pursued what he called light synthesis: Psychedelia (1984) was an interactive light show rather than a game, and it grew into the Virtual Light Machine, a music visualiser whose later form, Neon, became the media visualiser of the Xbox 360. In 1989 he worked on the ill-fated Konix Multisystem console. His best-known game is Tempest 2000 (1994) for the Atari Jaguar, a reworking of Atari\'s 1981 vector shooter with a pounding techno soundtrack and a density of effects that made it the machine\'s signature title. Llamatron: 2112 (1991), a Robotron homage on the Amiga and Atari ST, is another fan favourite. In 2024 Llamasoft: The Jeff Minter Story collected 42 of his games, an interactive history of a career that spans the entire life of the home computer.',
     notableGames: [
@@ -413,6 +412,7 @@ module.exports = [
       'Llamatron: 2112 (1991)',
       'Tempest 2000 (1994)',
     ],
+    notableGameIds: ['gridrunner', 'attack-of-the-mutant-camels', 'tempest-2000'],
     keyFacts: [
       'Born 22 April 1962 in Reading, England; co-founded Llamasoft in 1982',
       'His signature style mixes psychedelic visuals, llamas, camels and sheep, and quirky sampled audio',
@@ -432,7 +432,6 @@ module.exports = [
     role: 'Game Director, Producer',
     employer: 'Capcom',
     era: '1990 – present',
-    keyword: 'Capcom',
     description: 'He joined Capcom after a friend spotted a job-fair flyer, made his name on a Disney platformer, and then directed Resident Evil — the game that gave survival horror its name and its rules.',
     longDescription: 'Shinji Mikami was born on 11 August 1965 in Iwakuni, Yamaguchi, and studied merchandise at Doshisha University. He joined Capcom in 1990 almost by accident: a friend had found a flyer for what looked like a job fair combined with a buffet. His first titles were modest — a Game Boy quiz game and a run of Disney-licensed projects — but the Super NES Aladdin became a breakthrough, selling more than 1.75 million copies worldwide. In 1993 he began directing the game that would define him. Resident Evil, released in 1996, drew on Sweet Home, an earlier Capcom horror game, and on films such as The Texas Chain Saw Massacre and The Evil Dead. It put the player in a mansion with fixed camera angles, scarce ammunition, limited inventory and enemies that took real effort to kill, and it made fear a function of resource management rather than just of monsters. It was the game that popularised the term "survival horror" and established its conventions for a decade. Mikami went on to produce the sequels, directed Dino Crisis in 1999 and the Resident Evil remake in 2002, and ran Capcom Production Studio 4. His Resident Evil 4 (2005) then dismantled many of the conventions he had created, moving the camera over the shoulder and reshaping third-person action games in the process. After Capcom he worked at Clover Studio and PlatinumGames and founded Tango Gameworks, directing God Hand, Vanquish and The Evil Within.',
     notableGames: [
@@ -444,6 +443,7 @@ module.exports = [
       'Vanquish (2010)',
       'The Evil Within (2014)',
     ],
+    notableGameIds: ['aladdin-genesis', 'aladdin-snes', 'goof-troop', 'resident-evil', 'resident-evil-2', 'dino-crisis'],
     keyFacts: [
       'Born 11 August 1965 in Iwakuni, Yamaguchi; joined Capcom in 1990',
       'His Super NES Aladdin sold more than 1.75 million copies worldwide',
@@ -463,7 +463,6 @@ module.exports = [
     role: 'Game Director',
     employer: 'Capcom, PlatinumGames, Clovers',
     era: '1994 – present',
-    keyword: 'Capcom',
     description: 'He directed Resident Evil 2, turned an abandoned Resident Evil 4 prototype into Devil May Cry, and later co-founded PlatinumGames, where he made Bayonetta.',
     longDescription: 'Hideki Kamiya was born on 19 December 1970 in Matsumoto, Nagano. He joined Capcom in 1994 as a designer and worked as a planner on the original Resident Evil before being given the director\'s chair for Resident Evil 2 (1998), which he led to become one of the best-selling games on the PlayStation.\n\nHis next project began as an early prototype of Resident Evil 4. As it developed, its stylish, acrobatic combat moved so far from survival horror that it became a new series: Devil May Cry (2001), the game that established the fast, combo-driven "character action" genre. Kamiya then directed Viewtiful Joe (2003), a side-scrolling action game built around slow-motion and speed effects, and Ōkami (2006), a game styled after Japanese ink painting, both developed by Capcom\'s Clover Studio.\n\nCapcom closed Clover Studio in late 2006. On 1 August 2006 Kamiya co-founded PlatinumGames with Shinji Mikami and Atsushi Inaba, and there he directed Bayonetta (2009) and The Wonderful 101 (2013), later serving as the studio\'s vice president from 2017. He left PlatinumGames in October 2023 and founded a new studio, Clovers; at The Game Awards 2024 a sequel to Ōkami was announced as its first project.',
     notableGames: [
@@ -474,6 +473,7 @@ module.exports = [
       'Ōkami (2006) — director',
       'Bayonetta (2009) — director',
     ],
+    notableGameIds: ['resident-evil', 'resident-evil-2'],
     keyFacts: [
       'Born 19 December 1970 in Matsumoto, Nagano; joined Capcom in 1994',
       'Directed Resident Evil 2 (1998)',
@@ -493,7 +493,6 @@ module.exports = [
     role: 'Game Designer, Director, Producer',
     employer: 'Nintendo',
     era: '1982 – present',
-    keyword: 'Nintendo',
     description: 'The Nintendo designer behind Metroid\'s characters, the Famicom Detective Club mysteries and the direction of Super Metroid — and later of WarioWare, Rhythm Heaven and Tomodachi Life.',
     longDescription: 'Yoshio Sakamoto was born on 23 July 1959 in Nara Prefecture and joined Nintendo in 1982 after graduating from art college. His first work was pixel art, for the Game & Watch version of Donkey Kong and for the arcade Donkey Kong Jr. He then joined the team working under Gunpei Yokoi in Nintendo\'s Research and Development 1 department.\n\nThere he helped create two of the Famicom\'s most distinctive games. On Metroid (1986) he created the characters, credited under the alias "Shikamoto", and he was a game designer on Kid Icarus. He was also the lead scenario writer and creator of the Famicom Detective Club adventure games, whose first two entries were among the most influential Japanese mystery adventures of the 1980s.\n\nSakamoto directed Super Metroid (1994), whose atmosphere and wordless storytelling made it a template for exploration games, and later Metroid Fusion, Metroid: Zero Mission and Metroid: Other M. In parallel he moved into very different work as a producer and director, overseeing the WarioWare, Rhythm Heaven and Tomodachi Life series. He has described his aim as coming up with something very different from what Shigeru Miyamoto would make. Since 2015 he has been a senior officer in Nintendo\'s Entertainment Planning & Development division.',
     notableGames: [
@@ -504,6 +503,7 @@ module.exports = [
       'Metroid Fusion (2002) — director',
       'WarioWare, Rhythm Heaven and Tomodachi Life — producer',
     ],
+    notableGameIds: ['balloon-fight', 'wrecking-crew', 'metroid', 'kid-icarus', 'famicom-detective-club', 'balloon-kid', 'super-metroid'],
     keyFacts: [
       'Born 23 July 1959 in Nara Prefecture; joined Nintendo in 1982',
       'Created Metroid\'s characters under the alias "Shikamoto"',
@@ -523,7 +523,6 @@ module.exports = [
     role: 'Producer, Director, Programmer',
     employer: 'Konami, ArtPlay',
     era: '1990 – present',
-    keyword: 'Konami',
     description: '"IGA" co-directed Castlevania: Symphony of the Night, produced the series\' exploration-led sequels for a decade, then crowdfunded his own successor, Bloodstained, with a record $5.5 million.',
     longDescription: 'Koji Igarashi was born on 17 March 1968 in Aizuwakamatsu, Fukushima, and joined Konami as a programmer in 1990. His early work included programming the PC Engine version of Detana!! TwinBee and serving as a scenario writer and programmer on the dating simulation Tokimeki Memorial (1994).\n\nHis defining project was Castlevania: Symphony of the Night (1997), on which he was assistant director, programmer and scenario writer. The game reshaped Castlevania around a large, interconnected castle, RPG-style levelling and equipment, and exploration in the manner of Super Metroid — the combination later described by the term "Metroidvania". From 2001 to 2011 Igarashi was the lead producer on a run of Castlevania games that refined that formula, many of them on Nintendo\'s handhelds.\n\nIgarashi left Konami in March 2014 and became a founding member of the studio ArtPlay that September. In 2015 he launched a Kickstarter campaign for Bloodstained: Ritual of the Night, a spiritual successor to his Castlevania work; it raised $5.5 million, at the time the most successful video game campaign on the platform. The game was released in June 2019.',
     notableGames: [
@@ -533,6 +532,7 @@ module.exports = [
       'Castlevania: Dawn of Sorrow (2005) — producer',
       'Bloodstained: Ritual of the Night (2019) — producer',
     ],
+    notableGameIds: ['tokimeki-memorial', 'castlevania-sotn'],
     keyFacts: [
       'Born 17 March 1968 in Aizuwakamatsu, Fukushima; joined Konami in 1990',
       'Assistant director, programmer and scenario writer on Castlevania: Symphony of the Night',
@@ -552,7 +552,6 @@ module.exports = [
     role: 'Game Director, Producer',
     employer: 'Konami, Capcom, Whoopee Camp',
     era: '1982 – present',
-    keyword: 'Capcom',
     description: 'The Capcom director behind Commando, Ghosts \'n Goblins and Bionic Commando, producer of Mega Man, and the man whose horror RPG Sweet Home became the basis for Resident Evil.',
     longDescription: 'Tokuro Fujiwara was born on 7 April 1961 and studied at Osaka Designers\' College. He began his career at Konami in 1982 as a game designer and graphic artist, working on the arcade games Pooyan and Roc\'n Rope, and in 1983 he moved to Capcom alongside Yoshiki Okamoto.\n\nAt Capcom he directed several of the company\'s defining arcade games of the mid-1980s: the vertically scrolling shooter Commando (1985), the punishing platformer Ghosts \'n Goblins (1985), and Bionic Commando (1987), whose grappling-arm hero could not jump. He became the main producer of the Mega Man series and worked on Strider (1989).\n\nIn 1989 he directed Sweet Home, a Famicom horror RPG based on a Japanese film, set in a haunted mansion with limited inventory, item management and permanent character deaths. Years later Fujiwara conceived Resident Evil as a remake of Sweet Home and served as the game\'s general producer, linking his 8-bit experiment directly to the survival horror genre. He left Capcom in 1996 to found his own studio, Whoopee Camp, which made Tomba! (1997) and Tomba! 2 (1999) before closing in 2000. He has since worked as a consultant, and the Whoopee Camp name appeared again on Ghosts \'n Goblins Resurrection in 2021.',
     notableGames: [
@@ -564,6 +563,7 @@ module.exports = [
       'Resident Evil (1996) — general producer',
       'Tomba! (1997)',
     ],
+    notableGameIds: ['pooyan', 'rocn-rope', 'ghosts-n-goblins', 'vulgus', 'commando', 'bionic-commando', 'ghouls-n-ghosts', 'ghosts-n-goblins-nes', 'ducktales', 'sweet-home-famicom', 'super-ghouls-n-ghosts', 'breath-of-fire', 'mega-man-x2', 'mega-man-7', 'resident-evil', 'tomba'],
     keyFacts: [
       'Born 7 April 1961; started at Konami on Pooyan and Roc\'n Rope',
       'Joined Capcom in 1983 with Yoshiki Okamoto',
@@ -583,7 +583,6 @@ module.exports = [
     role: 'Game Producer, Director',
     employer: 'Sony / Polyphony Digital',
     era: '1994 – present',
-    keyword: 'Polyphony',
     description: 'He followed a cartoon kart racer with Gran Turismo, the PlayStation\'s defining "real driving simulator", and became a figure in the car industry and a Nürburgring endurance racer.',
     longDescription: 'Kazunori Yamauchi was born in Kashiwa, Chiba, on 5 August 1967. His first game was Motor Toon Grand Prix, a cartoon-styled racing game for the PlayStation in the spirit of Mario Kart, which was followed by a sequel. His ambition, though, was to make a realistic driving simulator, and that ambition became Gran Turismo.\n\nReleased on the PlayStation in 1997, Gran Turismo combined hundreds of licensed real-world cars with detailed handling, tuning and a licence-test career structure, and it became one of the console\'s best-known games. Yamauchi became president of Polyphony Digital, the studio that grew from the team, and has led the Gran Turismo series across every PlayStation generation since. His only non-racing game is the space shooter Omega Boost (1999).\n\nGran Turismo\'s success made Yamauchi an unusually prominent figure in the car industry itself; Polyphony Digital even worked with Nissan on the display technology of the R35 GT-R. He also races: he competed in the 25 Hours of Thunderhill in 2009 and in several 24 Hours of Nürburgring events between 2010 and 2016.',
     notableGames: [
@@ -592,6 +591,7 @@ module.exports = [
       'Omega Boost (1999)',
       'Gran Turismo series',
     ],
+    notableGameIds: ['gran-turismo', 'omega-boost'],
     keyFacts: [
       'Born 5 August 1967 in Kashiwa, Chiba',
       'His first game was the cartoon racer Motor Toon Grand Prix',
@@ -611,7 +611,6 @@ module.exports = [
     role: 'Game Director, Designer',
     employer: 'Sony Computer Entertainment, genDESIGN',
     era: '1995 – present',
-    keyword: 'Sony',
     description: 'A trained artist who directed Ico and Shadow of the Colossus using what he called "design by subtraction" — removing everything that was not essential until a few characters in an empty world remained.',
     longDescription: 'Fumito Ueda was born in Tatsuno, Hyōgo, on 19 April 1970. He graduated from Osaka University of Arts in 1993 and first worked as a visual artist before entering games in 1995 at Warp, where he was an animator on Kenji Eno\'s Enemy Zero for the Sega Saturn. He found the work arduous, and Eno later said that although Ueda\'s digital art skills were lacking at the time, his talent for concepts and design was clear.\n\nUeda joined Sony Computer Entertainment Japan in 1997 and directed Ico (2001), the story of a horned boy leading a mysterious girl by the hand through a vast, empty castle. He described his method as "design by subtraction": stripping away interface, dialogue and conventional game elements until only the essential experience remained, with sparse landscapes, bright overexposed light and near-silent characters. Shadow of the Colossus (2005) applied the same approach to a game consisting almost entirely of sixteen giant boss encounters across an empty land.\n\nHis third game, The Last Guardian, endured a long development and was completed after he had left Sony, releasing in 2016. Ueda founded the studio genDESIGN in 2014 with former members of his team.',
     notableGames: [
@@ -620,6 +619,7 @@ module.exports = [
       'Shadow of the Colossus (2005)',
       'The Last Guardian (2016)',
     ],
+    notableGameIds: ['enemy-zero'],
     keyFacts: [
       'Born 19 April 1970 in Tatsuno, Hyōgo; graduated from Osaka University of Arts in 1993',
       'Began in games as an animator on Enemy Zero at Warp',
@@ -639,7 +639,6 @@ module.exports = [
     role: 'Game Director, Composer',
     employer: 'Warp, From Yellow to Orange',
     era: '1994 – 2013',
-    keyword: 'Warp',
     description: 'The founder of Warp, who made the horror games D and Enemy Zero, an audio-only game playable without sight, and one of the most theatrical stunts in console history.',
     longDescription: 'Kenji Eno was born in Arakawa, Tokyo, on 5 May 1970. In 1994 he founded the developer Warp with a small team of programmers and designers, and he quickly became one of the most distinctive figures of the CD-ROM era: a director who also composed music and treated each game as an experiment.\n\nWarp\'s first major success was D (1995), a full-motion-video horror adventure for the 3DO and Saturn. Its follow-up, Enemy Zero, was originally meant for the PlayStation. At a 1996 press event, Eno instead showed a video in which the PlayStation logo morphed into the Sega Saturn logo, announcing that Enemy Zero would be a Saturn exclusive — a public switch of platforms that is still remembered as one of the boldest moves of the console wars. Enemy Zero was released for the Saturn in 1996.\n\nEno\'s most unusual project was Real Sound: Kaze no Regret (1997), an adventure told entirely through audio, which could be played by people with no sight. Warp disbanded shortly after releasing D2 in 2000. Eno founded a new company, From Yellow to Orange, in 2001, and later made the Wii game You, Me, and the Cubes (2009). He died in Tokyo on 20 February 2013, aged 42, of heart failure brought on by hypertension.',
     notableGames: [
@@ -649,6 +648,7 @@ module.exports = [
       'D2 (2000)',
       'You, Me, and the Cubes (2009)',
     ],
+    notableGameIds: ['d-1995', 'enemy-zero'],
     keyFacts: [
       'Born 5 May 1970 in Arakawa, Tokyo; founded Warp in 1994',
       'Made the horror games D (1995) and Enemy Zero (1996)',
@@ -668,7 +668,6 @@ module.exports = [
     role: 'Producer, Game Designer',
     employer: 'Sega, Q Entertainment, Enhance',
     era: '1990 – present',
-    keyword: 'Sega',
     description: 'He produced Sega Rally Championship, then spent his career turning music into game design — Space Channel 5, Rez, Lumines and Tetris Effect.',
     longDescription: 'Tetsuya Mizuguchi was born in Otaru, Hokkaido, on 22 May 1965 and joined Sega in 1990, where he started out designing arcade cabinets and an interactive ride called Megalopolis. He then produced Sega Rally Championship (1995), an arcade racer whose handling on mixed surfaces proved influential on later racing games.\n\nHis direction changed after a visit to a music festival in Zürich, where he watched how people moved in response to music and connected it to synesthesia — the blending of the senses. That idea shaped Space Channel 5 (1999), a rhythm game built around a dancing television reporter, and Rez (2001), a rail shooter in which every shot and hit adds to the music and the visuals pulse with it. Rez is now regarded as one of the defining experiments in audiovisual game design.\n\nMizuguchi left Sega in October 2003 during a corporate restructuring and co-founded Q Entertainment, where he made the music-puzzle game Lumines (2004) for the PlayStation Portable. He later founded Enhance, which in 2018 released Tetris Effect, a version of Tetris built around music and light that he had wanted to make for many years.',
     notableGames: [
@@ -678,6 +677,7 @@ module.exports = [
       'Lumines (2004)',
       'Tetris Effect (2018)',
     ],
+    notableGameIds: ['sega-rally', 'space-channel-5'],
     keyFacts: [
       'Born 22 May 1965 in Otaru, Hokkaido; joined Sega in 1990',
       'Produced Sega Rally Championship (1995)',
@@ -697,7 +697,6 @@ module.exports = [
     role: 'Game Designer, Producer',
     employer: 'Konami, Capcom, Game Republic',
     era: '1981 – present',
-    keyword: 'Capcom',
     description: 'He designed Time Pilot and Gyruss at Konami, directed 1942 at Capcom, and produced Final Fight and Street Fighter II — then, decades later, created the mobile hit Monster Strike.',
     longDescription: 'Yoshiki Okamoto was born in Ainan, Ehime, on 10 June 1961. He began his career at Konami in 1981, where he was the game designer and a graphic artist on the arcade shooters Time Pilot (1982) and Gyruss (1983), both of which became arcade classics.\n\nIn 1983 he moved to Capcom, joining alongside Tokuro Fujiwara. He directed the vertical shooter 1942 (1984), and as Capcom grew into one of the most important arcade companies of the era he became a producer. He produced Final Fight (1989), which set the standard for the scrolling brawler, and Street Fighter II (1991), the game that created the modern fighting-game boom and is estimated to have grossed more than $10 billion. In 1996 he became Capcom\'s head of development.\n\nOkamoto left Capcom in 2003 and founded Game Republic, which operated until 2011. His later career produced one more enormous success: Monster Strike (2013), a mobile game he created for the Japanese company Mixi, which had grossed more than $7.2 billion by 2018.',
     notableGames: [
@@ -708,6 +707,7 @@ module.exports = [
       'Street Fighter II (1991) — producer',
       'Monster Strike (2013)',
     ],
+    notableGameIds: ['time-pilot', 'gyruss', '1942', 'sonson', 'exed-exes', 'gun-smoke', '1943-battle-of-midway', 'black-tiger', 'final-fight', 'street-fighter-ii', 'captain-commando', 'darkstalkers'],
     keyFacts: [
       'Born 10 June 1961 in Ainan, Ehime; started at Konami in 1981',
       'Designed Time Pilot and Gyruss',
@@ -727,7 +727,6 @@ module.exports = [
     role: 'Game Designer',
     employer: 'Namco',
     era: '1977 – 2007',
-    keyword: 'Toru Iwatani',
     description: 'The Namco designer who created Pac-Man — a game deliberately aimed at women, and the arcade machine with the most units ever installed.',
     longDescription: 'Toru Iwatani was born in Meguro, Tokyo, on 25 January 1955, and taught himself computing without formal training in programming or graphic design. He joined Namco in 1977 at the age of 22 hoping to make pinball machines; when patent issues ruled that out, he made the video game Gee Bee (1978) instead, followed by Bomb Bee and Cutie Q (1979). His next design changed the industry. Pac-Man (1980) was deliberately aimed at women, with cute, colourful characters and easy gameplay. Built by a team of nine and test-marketed on 22 May 1980, it was only a moderate success in Japan, where Namco\'s Galaxian outperformed it, but in North America it sold more than 100,000 arcade units. Iwatani received no bonus for it, though he has said the story that he left Namco in anger is untrue. He was promoted instead, designed Libble Rabble (1983), which he calls his favourite of his games, and produced titles including Rally-X, Galaga, Pole Position, Ridge Racer and Time Crisis. In 2007 he left Namco to lecture full-time at Tokyo Polytechnic University, after developing Pac-Man Championship Edition, which he said would be his last game.',
     notableGames: [
@@ -736,6 +735,7 @@ module.exports = [
       'Libble Rabble (1983)',
       'Pac-Man Championship Edition (2007)',
     ],
+    notableGameIds: ['gee-bee', 'pac-man', 'libble-rabble'],
     keyFacts: [
       'Born 25 January 1955 in Tokyo; self-taught in computing',
       'Joined Namco in 1977 wanting to make pinball machines, and made Gee Bee instead',
@@ -755,7 +755,6 @@ module.exports = [
     role: 'Game Designer, Programmer',
     employer: 'Williams Electronics / Vid Kidz / Raw Thrills',
     era: '1977 – present',
-    keyword: 'Eugene Jarvis',
     description: 'The designer of Defender and Robotron: 2084 — two of the defining arcade games of the early 1980s — who is still making arcade machines at Raw Thrills.',
     longDescription: 'Eugene Jarvis was born in Palo Alto, California, on 27 January 1955 and studied electrical engineering and computer science at UC Berkeley, where he first played Spacewar!. After three days writing a COBOL compiler at Hewlett-Packard, he joined Atari to program its early microprocessor pinball tables, and when Atari\'s pinball division folded he moved to Chicago to do the same for Williams Electronics. His first video game, Defender (1980), made with Williams pinball designer Steve Ritchie, was a major hit. In February 1981 Jarvis and Larry DeMar founded Vid Kidz, which made the enhanced sequel Stargate (1981) and Robotron: 2084 (1982) for Williams. Robotron took about six months to build. Jarvis left Vid Kidz in 1984, earned an MBA from Stanford in 1986, and went on to design NARC (1989) and help create Smash TV (1990), then helped develop the texture-mapping hardware behind the Cruis\'n racing series. He went on to lead the arcade studio Raw Thrills, whose games include The Fast and the Furious (2004). He received the AIAS Pioneer Award in 2013.',
     notableGames: [
@@ -766,6 +765,7 @@ module.exports = [
       'Smash TV (1990)',
       'Cruis\'n USA (1994)',
     ],
+    notableGameIds: ['defender', 'stargate', 'robotron-2084', 'narc-1988', 'smash-tv'],
     keyFacts: [
       'Programmed pinball machines at Atari and Williams before turning to video games',
       'Defender (1980) was his first video game',
@@ -785,7 +785,6 @@ module.exports = [
     role: 'Game Designer, Programmer',
     employer: 'Lucasfilm Games / Humongous Entertainment',
     era: '1983 – present',
-    keyword: 'Ron Gilbert',
     description: 'Co-creator of Maniac Mansion, inventor of the SCUMM adventure engine and the director of The Secret of Monkey Island — and author of the 1989 essay "Why Adventure Games Suck".',
     longDescription: 'Ron Gilbert was born on 1 January 1964 and grew up in La Grande, Oregon. As a student in 1983 he co-wrote Graphics BASIC with Tom McFarlane and sold it to HESware, which hired him; when HESware went out of business he joined Lucasfilm Games. There he and artist Gary Winnick created Maniac Mansion (1987), for which Gilbert built SCUMM, the scripting system that ran almost every LucasArts adventure that followed. He then wrote and directed The Secret of Monkey Island (1990) and directed Monkey Island 2: LeChuck\'s Revenge (1991). In December 1989 he published the essay "Why Adventure Games Suck - And What We Can Do About It" in the Journal of Computer Game Design. In 1992 he left to co-found Humongous Entertainment with Shelley Day, making children\'s adventure series such as Putt-Putt, Freddi Fish and Pajama Sam, and in 1995 he founded its sister company Cavedog, which released Total Annihilation. Decades later he returned to the form he helped define: Thimbleweed Park (2017), made again with Gary Winnick, and Return to Monkey Island (2022).',
     notableGames: [
@@ -796,6 +795,7 @@ module.exports = [
       'Thimbleweed Park (2017)',
       'Return to Monkey Island (2022)',
     ],
+    notableGameIds: ['maniac-mansion', 'monkey-island-amiga', 'monkey-island-2', 'total-annihilation'],
     keyFacts: [
       'Created the SCUMM engine while making Maniac Mansion with Gary Winnick',
       'Wrote "Why Adventure Games Suck" in December 1989',
@@ -815,7 +815,6 @@ module.exports = [
     role: 'Game Designer, Writer',
     employer: 'Sierra On-Line',
     era: '1980 – 1999',
-    keyword: 'Roberta Williams',
     description: 'Co-founder of Sierra On-Line and designer of Mystery House, the first graphical adventure, and the King\'s Quest series that defined the genre on the PC.',
     longDescription: 'Roberta Williams was born Roberta Lynn Heuer in Los Angeles on 16 February 1953 and married Ken Williams in 1972. In 1980 she designed, wrote and illustrated Mystery House, which Ken programmed for the Apple II; it is credited as the first graphical adventure game and was the first release of On-Line Systems, the company the couple founded, later renamed Sierra On-Line after it moved to Coarsegold, California. When IBM wanted a showcase game for its PCjr, the result was King\'s Quest (1984), which became a bestseller and grew into the series Williams designed for the next fourteen years, with King\'s Quest VI (1992) co-designed with Jane Jensen. She also made the children\'s game Mixed-Up Mother Goose (1987), the murder mystery Laura Bow: The Colonel\'s Bequest (1989) and the full-motion-video horror game Phantasmagoria (1995), which sold more than a million copies. Sierra was sold to CUC International in 1996, and Williams left the company in 1999 after King\'s Quest: Mask of Eternity. She returned in 2023 with Colossal Cave, a 3D remake, made with Ken, of the text adventure that had inspired her first game.',
     notableGames: [
@@ -826,6 +825,7 @@ module.exports = [
       'Laura Bow: The Colonel\'s Bequest (1989)',
       'Phantasmagoria (1995)',
     ],
+    notableGameIds: ['mystery-house', 'kings-quest', 'the-colonels-bequest', 'phantasmagoria'],
     keyFacts: [
       'Designed Mystery House (1980), credited as the first graphical adventure game',
       'Co-founded On-Line Systems, later Sierra On-Line, with Ken Williams',
@@ -845,7 +845,6 @@ module.exports = [
     role: 'Game Designer, Programmer',
     employer: 'Activision',
     era: '1977 – present',
-    keyword: 'David Crane',
     description: 'The Atari programmer who co-founded Activision and designed Pitfall!, one of the defining games of the Atari 2600, before making Ghostbusters and A Boy and His Blob.',
     longDescription: 'David Crane was born in 1954 in Nappanee, Indiana, earned an electrical engineering degree from the DeVry Institute of Technology in Phoenix and worked on integrated circuits at National Semiconductor before joining Atari in 1977, where he programmed Atari VCS games including Outlaw and Canyon Bomber. Games by Crane and a handful of colleagues made up $60 million of Atari\'s $100 million in 1978 cartridge sales. In 1979 Crane and Alan Miller left with other Atari colleagues to co-found Activision, the first independent publisher of games for the console. His Activision games included Dragster and Fishing Derby (1980), Freeway (1981) and Grand Prix, and above all Pitfall! (1982), the jungle adventure that became one of the company\'s biggest sellers. Pitfall II: Lost Caverns and The Activision Decathlon followed, and Ghostbusters (1984), finished in about six weeks, was ported to more systems than any other Activision game. Crane left Activision in 1987 and joined Garry Kitchen\'s Absolute Entertainment, where he made A Boy and His Blob (1989), and later co-founded Skyworks Technologies with Kitchen. In 2010 he was the first recipient of the AIAS Pioneer Award.',
     notableGames: [
@@ -856,6 +855,7 @@ module.exports = [
       'Ghostbusters (1984)',
       'A Boy and His Blob (1989)',
     ],
+    notableGameIds: ['dragster-2600', 'freeway-2600', 'pitfall', 'pitfall-ii', 'ghostbusters-c64', 'a-boy-and-his-blob'],
     keyFacts: [
       'Joined Atari in 1977 and co-founded Activision in 1979',
       'The Video Game Update named him Designer of the Year for Pitfall! in its 1982 awards',
@@ -875,7 +875,6 @@ module.exports = [
     role: 'Game Designer, Writer',
     employer: 'Broderbund / Smoking Car Productions',
     era: '1984 – present',
-    keyword: 'Jordan Mechner',
     description: 'The creator of Karateka and Prince of Persia, whose rotoscoped animation brought a film-like fluidity to home computer games, and who later wrote films and graphic novels.',
     longDescription: 'Jordan Mechner was born in New York City on 4 June 1964. While a student at Yale he designed and programmed Karateka (1984) for the Apple II, animating its fighters by tracing film of his karate instructor, and it reached number one on the Billboard software chart. Prince of Persia (1989) took more than three years and used the same rotoscoping technique to give its acrobatic hero unusually lifelike movement. Sales started slowly but grew as it was converted to around thirty platforms. Mechner designed and directed Prince of Persia 2: The Shadow and the Flame (1993), then founded Smoking Car Productions to make the CD-ROM adventure The Last Express (1997), which did not recoup its budget but earned a cult following. He returned to the series as designer and writer of Ubisoft\'s Prince of Persia: The Sands of Time (2003) and wrote early drafts of the 2010 film adaptation. He has since worked largely as an author, including the graphic novels Templar and Replay, a family memoir. He received the GDC Pioneer Award in 2017.',
     notableGames: [
@@ -885,6 +884,7 @@ module.exports = [
       'The Last Express (1997)',
       'Prince of Persia: The Sands of Time (2003)',
     ],
+    notableGameIds: ['karateka', 'prince-of-persia', 'prince-of-persia-2', 'the-last-express'],
     keyFacts: [
       'Made Karateka (1984) while a student at Yale',
       'Used rotoscoping to animate both Karateka and Prince of Persia',
@@ -904,7 +904,6 @@ module.exports = [
     role: 'Game Designer',
     employer: 'Ozark Softscape',
     era: '1978 – 1998',
-    keyword: 'Bunten',
     description: 'The designer of M.U.L.E. and The Seven Cities of Gold, who built nearly all of her games around players sharing a screen or a modem — a multiplayer pioneer decades early.',
     longDescription: 'Danielle Bunten Berry was born in St. Louis, Missouri, on 19 February 1949 and grew up in Little Rock, Arkansas. After an industrial engineering degree she built urban models for the National Science Foundation, and in 1978 she released her first game, Wheeler Dealers, a real-time auction game for the Apple II that sold about 50 copies. With her brother Bill Bunten, Jim Rushing and Alan Watson she founded Ozark Softscape in Little Rock, which made M.U.L.E. (1983), her first game for Electronic Arts. It sold only about 30,000 copies but gained a lasting cult following, and The Seven Cities of Gold (1984) sold more than 150,000. Ten of the twelve games she worked on were built around multiplayer play, including Modem Wars (1988) and, for MicroProse, Command HQ (1990) and Global Conquest (1992). She transitioned in 1992 and later co-founded the online games company Mpath. She died of lung cancer on 3 July 1998, two months after receiving a lifetime achievement award from the Computer Game Developers Association, and was inducted posthumously into the AIAS Hall of Fame in 2007.',
     notableGames: [
@@ -915,6 +914,7 @@ module.exports = [
       'Modem Wars (1988)',
       'Command HQ (1990)',
     ],
+    notableGameIds: ['mule', 'seven-cities-of-gold', 'heart-of-africa'],
     keyFacts: [
       'Co-founded Ozark Softscape in Little Rock, Arkansas',
       'Ten of the twelve games she worked on centred on multiplayer play',
@@ -934,7 +934,6 @@ module.exports = [
     role: 'Game Designer, Programmer',
     employer: 'Atari, Inc.',
     era: '1981 – 1984',
-    keyword: 'Warshaw',
     description: 'The Atari programmer behind Yars\' Revenge, Raiders of the Lost Ark and E.T. — the last made in five weeks and later blamed for the 1983 crash — who became a psychotherapist.',
     longDescription: 'Howard Scott Warshaw was born in Colorado on 30 July 1957 and graduated from Tulane University in mathematics and economics. After working as a systems engineer at Hewlett-Packard he joined Atari in 1981. His first game, Yars\' Revenge (1982), began as an assignment to port the arcade game Star Castle; Warshaw reworked it into an original game, and it became one of the best-regarded games on the Atari 2600 and the first to credit its programmer publicly. Raiders of the Lost Ark (1982) was a critical and commercial success. His third game, E.T. the Extra-Terrestrial (1982), had to go from concept to finished cartridge in five weeks to reach shops for Christmas; it was poorly received, Atari lost heavily on it, and it became a symbol of the video game crash. Warshaw left Atari before finishing Saboteur. He later made documentaries, including Once Upon Atari, and in 2012 became a licensed psychotherapist in California. In 2013 the Museum of Modern Art added Yars\' Revenge to its video game collection.',
     notableGames: [
@@ -942,6 +941,7 @@ module.exports = [
       'Raiders of the Lost Ark (1982)',
       'E.T. the Extra-Terrestrial (1982)',
     ],
+    notableGameIds: ['yars-revenge-2600', 'raiders-of-the-lost-ark-2600', 'et-the-extra-terrestrial-2600'],
     keyFacts: [
       'Joined Atari in 1981 after working at Hewlett-Packard',
       'Yars\' Revenge was the first Atari game to credit its programmer publicly',
@@ -961,7 +961,6 @@ module.exports = [
     role: 'Game Designer, Programmer',
     employer: 'Graftgold',
     era: '1983 – 1990s',
-    keyword: 'Graftgold',
     description: 'Graftgold\'s star Commodore 64 programmer, whose Paradroid and Uridium set the technical standard on the machine — and whose development diaries in Zzap!64 showed readers how games were made.',
     longDescription: 'Andrew Braybrook was born in 1960 and began his career in 1979 writing accounting software in COBOL for GEC Marconi, programming BASIC games for the ZX80, ZX81 and Dragon 32 in his spare time. He played bass in a rock band with Steve Turner, who wrote ZX Spectrum games and founded the company that became Graftgold, and in September 1983 Turner asked him to join. On the Commodore 64 Braybrook produced a run of acclaimed games: Gribbly\'s Day Out and Paradroid (both 1985), Uridium (1986), Alleykat, Morpheus and Intensity. Zzap!64 commissioned him to keep a diary while making Paradroid, and later Morpheus, giving readers a rare look inside game development. He was voted Best Programmer of the Year at the 1986 Golden Joystick Awards. Graftgold moved to 16-bit machines with his Amiga and Atari ST conversions of Taito\'s Rainbow Islands (1989), Paradroid 90 (1990), Fire and Ice (1992) and Uridium 2 (1993). He later worked for many years as a software developer outside games.',
     notableGames: [
@@ -972,6 +971,7 @@ module.exports = [
       'Rainbow Islands (1989 — Amiga/ST conversion)',
       'Fire and Ice (1992)',
     ],
+    notableGameIds: ['paradroid-c64', 'gribblys-day-out', 'uridium-c64', 'fire-and-ice-1992'],
     keyFacts: [
       'Joined Steve Turner\'s company, later Graftgold, in September 1983',
       'His Paradroid and Morpheus development diaries ran in Zzap!64',
@@ -990,7 +990,6 @@ module.exports = [
     role: 'Game Designer, Programmer',
     employer: 'Maelstrom Games',
     era: '1979 – 2012',
-    keyword: 'Mike Singleton',
     description: 'The former English teacher who wrote The Lords of Midnight and Midwinter — ambitious strategy-adventures that made vast, explorable worlds out of 8-bit and 16-bit home computers.',
     longDescription: 'Mike Singleton was born on 21 February 1951 and taught English in Ellesmere Port, Cheshire, while writing games in his spare time, beginning with a horse-racing game for a betting shop on the Commodore PET. His GamesPack1 for the ZX81, a set of games each fitting into one kilobyte, sold about 90,000 copies, and in 1982 he left teaching to design games full-time. The Lords of Midnight (1984) was his breakthrough: a blend of adventure and wargame across a frozen land shown in first-person panoramas, followed by Doomdark\'s Revenge (1985). Singleton founded Maelstrom Games, which made War in Middle Earth (1988), and his Midwinter (1989) and Flames of Freedom (1990) brought the same ambition to the 16-bit computers. He later worked on console games for LucasArts and Midway, among them Indiana Jones and the Emperor\'s Tomb (2003) and Gauntlet: Seven Sorrows (2005). He died of cancer on 10 October 2012, while working on a new version of The Lords of Midnight.',
     notableGames: [
@@ -1001,6 +1000,7 @@ module.exports = [
       'Midwinter (1989)',
       'Flames of Freedom (1990)',
     ],
+    notableGameIds: ['the-lords-of-midnight', 'doomdarks-revenge', 'war-in-middle-earth', 'midwinter'],
     keyFacts: [
       'Taught English in Ellesmere Port before going full-time in 1982',
       'GamesPack1 for the ZX81 sold about 90,000 copies',
