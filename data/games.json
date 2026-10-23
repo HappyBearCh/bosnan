@@ -66,15 +66,16 @@
     "platform": "DEC PDP-1",
     "image": "images/games/spacewar.jpg",
     "description": "Spacewar! (1962) is the MIT game in which two players fly the needle and the wedge around a star's gravity well, firing torpedoes — one of the most influential early computer games.",
-    "longDescription": "Two ships duel around a central star whose gravity pulls them in, and a hyperspace button sends a ship to a random spot as a last resort. Steve Russell, Martin Graetz and Wayne Wiitanen conceived it, with Russell as the main programmer. Dan Edwards wrote the gravity well, Graetz added hyperspace, and Peter Samson's \"Expensive Planetarium\" drew the background from real star charts.",
+    "longDescription": "Two players each fly a monochrome ship, \"the needle\" or \"the wedge\", around a central star and try to shoot each other. Each ship has limited torpedoes and limited fuel, used up whenever the thrusters fire, and torpedoes launch one at a time with a pause between them; the star's gravity pulls on the ships but not on the torpedoes. Ships keep drifting when not accelerating, and turning a ship does not change its direction of travel. Flying close to the star can slingshot a ship, but a misjudged path sends it into the star, and a collision with a torpedo, the star or the other ship destroys it. Ships leaving one edge of the screen reappear on the opposite one, and hyperspace makes a ship vanish for a few seconds and reappear somewhere at random, in some versions with a growing chance of destroying it. The controls rotate the ship either way, fire thrust and torpedoes, and jump to hyperspace; there was no computer opponent.",
     "playUrl": "https://archive.org/details/pdp1_spacewar",
     "trivia": [
       "Only 53 PDP-1s were ever sold, and the game spread to many of those few dozen installations.",
       "Stewart Brand wrote about it in Rolling Stone in December 1972, in \"Spacewar: Fantastic Life and Symbolic Death Among the Computer Bums\".",
       "In 2007 it was named among the ten most important video games in history, the start of a game canon for the Library of Congress.",
-      "Nolan Bushnell and Ted Dabney based the first coin-operated video game, Computer Space, on it."
+      "Nolan Bushnell and Ted Dabney based the first coin-operated video game, Computer Space, on it.",
+      "MIT's lab banned play except at lunch and after working hours."
     ],
-    "devStory": "It was written for the DEC PDP-1 at MIT by a group connected with the Tech Model Railroad Club. Features were added by different members over time, and the code was shared freely between installations.",
+    "devStory": "Steve Russell, Martin Graetz and Wayne Wiitanen, who called themselves the \"Hingham Institute\", conceived it in summer 1961, and Russell wrote it in PDP-1 assembly language once MIT's PDP-1 got its display at the end of that year, with help from Bob Saunders and Steve Piner; the basic game took about 200 hours. Peter Samson's \"Expensive Planetarium\" star chart was added in March 1962, Dan Edwards added the star's gravity, and Graetz added hyperspace. The original controls were four front-panel switches per player, which wore out quickly, so Saunders built detachable controllers. It was shown at MIT's Science Open House in April 1962 and spread as MIT people moved to Stanford, DEC and elsewhere.",
     "sources": [
       {
         "title": "Spacewar!",
@@ -259,13 +260,15 @@
     "platform": "PDP-11 Arcade Cabinet",
     "image": "images/games/galaxy-game.jpg",
     "description": "Galaxy Game (1971) is Bill Pitts and Hugh Tuck's coin-operated Spacewar! machine at Stanford, believed to be the second video game to charge money to play, after Computer Space.",
-    "longDescription": "Galaxy Game was built in 1971 by Bill Pitts and Hugh Tuck, who took the 1962 computer game Spacewar! — one of the earliest games to spread between computer installations — and expanded it into a coin-operated machine driven by a PDP-11 minicomputer.\n\nTwo players each fly a ship, \"the needle\" or \"the wedge\", and fight a dogfight while the gravity of a central star pulls them both in. Unlike the mass-produced Computer Space of the same year, Galaxy Game was a hand-built installation, and it remains a key exhibit in the earliest history of arcade games.",
+    "longDescription": "Galaxy Game was built in 1971 by Bill Pitts and Hugh Tuck, who took the 1962 computer game Spacewar! and expanded it into a coin-operated machine driven by a PDP-11 minicomputer. Two players each fly a ship, \"the needle\" or \"the wedge\", in a dogfight around a star whose gravity pulls on the ships but not their torpedoes. Ships have limited torpedoes and fuel, keep drifting without thrust and wrap around the screen edges, and hyperspace sends a ship to a random spot, with a rising chance of destroying it each time. Options added faster ships and torpedoes, no star or reversed gravity, and no wraparound. A game cost ten cents, or three for a quarter, and the winner of a match got a free game. Unlike the mass-produced Computer Space of the same year, it was a hand-built installation.",
     "trivia": [
       "The PDP-11 at its heart cost about $14,000, and the first prototype about $20,000 in all.",
       "The second version ran up to four games on four monitors, and crowds gathered ten deep to watch.",
-      "It moved to the Computer History Museum in 2000 and later returned there as a playable exhibit."
+      "It moved to the Computer History Museum in 2000 and later returned there as a playable exhibit.",
+      "Jonathan Rosenberg, later a Google senior vice president, was hired at 13 to keep the machine clean.",
+      "Pitts later said it had paid back its original investment by the time it was removed in 1979."
     ],
-    "devStory": "Pitts, a Stanford student, and Tuck, a Cal Poly student, installed the first prototype in Stanford's Tresidder student union in November 1971. A second version replaced it in June 1972 and stayed until May 1979. It was never manufactured commercially.",
+    "devStory": "Pitts, a Stanford student who had played Spacewar on Stanford's PDP-6 since 1966, built the hardware and wrote the program, basing the code on the Stanford AI lab's PDP-10 version; Tuck, a mechanical engineer from Cal Poly and his frequent opponent, designed the cabinet. The project was renamed from Spacewar to Galaxy Game because of anti-war sentiment. The first prototype took about three and a half months and linked the PDP-11, in the attic, to a walnut console by a 100-foot cable, with a Hewlett-Packard display and military-surplus joysticks. It opened in Stanford's Tresidder student union in November 1971; a second version, which could run up to four games, replaced it in June 1972 and stayed until May 1979.",
     "sources": [
       {
         "title": "Galaxy Game",
@@ -763,14 +766,16 @@
     "platform": "Arcade",
     "image": "images/games/space-invaders.jpg",
     "description": "Space Invaders (1978) is Tomohiro Nishikado's Taito shooter, in which a laser cannon picks off rows of descending aliens — a worldwide hit that made video games a mass medium.",
-    "longDescription": "Five rows of eleven aliens march back and forth, edging lower, while the player shoots up from behind crumbling shields. The fewer aliens remain, the faster they move — a side effect of the hardware drawing fewer sprites, which Nishikado kept as a feature — and a four-note bass line speeds up with them. Its 1980 Atari 2600 version was the first official home version of an arcade game and quadrupled the console's sales.",
+    "longDescription": "The player's laser base moves along the bottom of the screen, firing up at five rows of eleven invaders that march from side to side and drop a step each time they reach an edge. Invaders fire back, and a hit costs a life, but if they reach the bottom the game ends whatever lives remain. Bunkers shield the base and wear away under invader fire, and shooting from beneath one eats away its underside. A mystery ship crosses the top of the screen now and then, worth bonus points. The fewer invaders remain, the faster they move — a side effect of the hardware drawing fewer sprites, which Nishikado kept as a feature — and the four-note march speeds up with them. Each cleared wave is followed by a new one starting lower down, without end. The picture was reflected from a hidden monitor through a half-silvered mirror, with coloured cellophane strips tinting early black-and-white cabinets.",
     "playUrl": "https://archive.org/details/arcade_invaders",
     "trivia": [
       "Nishikado felt that shooting human characters was immoral, which pushed him towards aliens.",
       "Many publications credit it with the first saved high score, but Sea Wolf (1976) did it first.",
-      "It was reported to have grossed $2 billion by 1982, the highest-grossing entertainment product of its time."
+      "It was reported to have grossed $2 billion by 1982, the highest-grossing entertainment product of its time.",
+      "A bug left invader fire harmless at close range, a trick players called \"Nagoya shooting\".",
+      "The Atari 2600 version, released in 1980, sold over a million copies in its first year."
     ],
-    "devStory": "Nishikado spent about a year designing the game and the custom hardware and tools it needed. His influences included Breakout, Star Wars and The War of the Worlds.",
+    "devStory": "Tomohiro Nishikado spent about a year designing the game alone, along with the custom hardware and tools it needed, around an Intel 8080 and a bitmapped framebuffer, with Michiyuki Kamei on audio. His influences included Breakout, Gun Fight, electro-mechanical target games, The War of the Worlds, Space Battleship Yamato and Star Wars, and its working title was Space Monsters. Taito released it in Japan in July 1978, and Midway in North America that November. Over 100,000 machines were installed in Japan by the end of 1978, and about 750,000 worldwide by the end of 1979.",
     "sources": [
       {
         "title": "Space Invaders",
@@ -1050,14 +1055,16 @@
     "platform": "Arcade",
     "image": "images/games/rally-x.jpg",
     "description": "Namco's 1980 maze game behind the wheel: steer a race car around a scrolling maze, collecting flags while red cars give chase and a smoke screen buys a few seconds of escape.",
-    "longDescription": "Namco released Rally-X in Japanese arcades on 3 October 1980. Midway Manufacturing distributed it in North America from February 1981, and Karateco brought it to Europe the same year.\n\nThe player drives a blue Formula One-style car through a maze that scrolls in every direction, hunting for yellow flags. Boulders block some routes, red enemy cars chase the player and end the run on contact, and fuel steadily drains. The car can release a smoke screen that stuns pursuers, but each puff costs fuel — a simple trade-off that gives the game its tension. Rally-X was one of the first games with a scrolling playfield and a radar map of the whole maze.",
+    "longDescription": "The player drives a blue Formula One car through a maze that scrolls in every direction, hunting for its ten yellow flags, which are worth more when collected in succession. One, marked \"S\", is a Special Flag that doubles the value of every flag collected after it. Boulders block some paths, and red enemy cars chase the player and end the run on contact, growing more numerous and aggressive as play goes on. A smoke screen stuns the pursuers but costs fuel, and the fuel meter doubles as the timer: once it is empty the car crawls, cannot lay smoke and is soon caught. A radar beside the playfield shows the player's position, the flags and the red cars. The third round and every fourth after it is a bonus \"Challenging Stage\", collecting flags against the clock while the red cars sit idle.",
     "playUrl": "https://archive.org/details/rallyx_mame",
     "trivia": [
       "It is credited as one of the first games with continuous background music.",
       "A much-repeated story says Rally-X outshone Pac-Man at the 1980 AMOA show; Play Meter reported that both got only mild attention.",
-      "A Special Flag doubles the value of every flag collected after it."
+      "A Special Flag doubles the value of every flag collected after it.",
+      "Its sequel, New Rally-X (1981), added a Lucky Flag that awards points for remaining fuel.",
+      "The Special Flag reappears in later games, including Xevious and Super Smash Bros. Ultimate."
     ],
-    "devStory": "Hirohito Ito designed it, with Kazuo Kurosu programming and Kouichi Tashiro developing the hardware. Namco released it in Japan in October 1980 and Midway in North America in February 1981. Pac-Man went on to overshadow it.",
+    "devStory": "Hirohito Ito designed it at Namco, with Kazuo Kurosu, later the designer of Bosconian, programming, Kouichi Tashiro developing the hardware, Hiroshi Ono drawing the pixel art and Pac-Man composer Toshio Kai writing the music. It ran on a Pac-Man board modified for multidirectional scrolling and was intended as a successor to Sega's Head On. First shown in January 1980, it was released in Japan on 3 October 1980, and Midway Manufacturing distributed it in North America from February 1981. It was Japan's sixth-highest-grossing arcade game of 1980, but Midway had sold only about 2,500 machines by July 1981, and Pac-Man went on to overshadow it.",
     "sources": [
       {
         "title": "Rally-X",
@@ -1276,14 +1283,16 @@
     "platform": "Arcade",
     "image": "images/games/galaga.jpg",
     "description": "Namco's 1981 sequel to Galaxian, in which diving alien formations can capture your ship with a tractor beam — and rescuing it gives you a double-barrelled fighter.",
-    "longDescription": "Galaga was developed and published by Namco for arcades in 1981, with Midway Manufacturing distributing it in North America. It followed Namco's Galaxian (1979) as the second game in the series.\n\nThe player flies a starship along the bottom of the screen and must clear each stage of the Galaga forces, which swoop down in formations while firing. Its signature twist is the tractor beam: some enemies can capture the player's ship. Shooting the captor with another ship frees it and joins the two together as a \"dual fighter\" with double the firepower — a risk-and-reward mechanic that kept Galaga in arcades for decades.",
+    "longDescription": "The player's ship, Gyaraga, moves along the bottom of the screen and must clear each stage of the Galaga aliens, which fly into formation from the top and sides and then dive while firing. Four Boss Galaga at the top of the formation take two shots, and can use a tractor beam to capture the player's ship, costing a life. If a life remains, shooting the captor as it dives frees the ship and joins it to the new one as a dual fighter, with twice the firepower but a larger target; shooting the captor while it sits in formation turns the captured ship into an enemy. Some aliens morph into new types, and later stages bring more shots and faster dives. Stage 3 and every fourth stage after it is a Challenging Stage, where aliens fly a set pattern without firing.",
     "playUrl": "https://archive.org/details/arcade_galaga88",
     "trivia": [
       "Its Challenging Stages were added after a bug that sent enemies flying off the screen gave the team the idea.",
       "The tractor beam was inspired by a film in which a ship was captured by a circling laser.",
-      "Clearing stage 255 announces stage zero and a kill screen."
+      "Clearing stage 255 announces stage zero and a kill screen.",
+      "The NES version was released in North America in 1988 as Galaga: Demons of Death.",
+      "An extinct shark, Galagadon nordquistae, was named after it in 2019 because its teeth resemble the aliens."
     ],
-    "devStory": "Shigeru Yokoyama led its development at Namco as a follow-up to Galaxian. It was Japan's sixth-highest-grossing arcade game of 1981 and third of 1982, and it was still in the US top ten earners in 1983.",
+    "devStory": "Shigeru Yokoyama led its development at Namco as a follow-up to Galaxian, with Toru Ogawa as lead programmer, Hiroshi Ono on graphics and Nobuyuki Ohnogi on music. Meant for the Galaxian board, it moved to a new Namco Galaga board, and because sprite limits stopped the dual fighter from firing, Yokoyama made the ship and bullet sprites 16 by 16 pixels. Early location tests did poorly because players could go too far on one coin, so executives asked for more difficulty. Namco released it in Japan in September 1981 and Midway in North America that November. It was Japan's sixth-highest-grossing arcade game of 1981 and third of 1982, and it was still in the US top ten earners in 1983.",
     "sources": [
       {
         "title": "Galaga",
@@ -1476,15 +1485,16 @@
     "platform": "Arcade",
     "image": "images/games/donkey-kong.jpg",
     "description": "Donkey Kong (1981) is Shigeru Miyamoto's first game for Nintendo, in which a carpenter called Jumpman — later Mario — climbs girders to rescue Pauline from a giant ape.",
-    "longDescription": "Jumpman climbs a construction site while Donkey Kong hurls barrels and other hazards down at him. The four stages — sloping girders, a conveyor-belt structure, elevators and rivets — each call for a different approach. Converted from about 2,000 unsold Radar Scope cabinets, it was the top-grossing US arcade game of 1982 and pulled Nintendo out of financial trouble.",
+    "longDescription": "Jumpman — later Mario — climbs a construction site to rescue Pauline while Donkey Kong hurls barrels and other hazards down at him. He jumps to dodge obstacles and cross gaps, climbs ladders, and can smash obstacles after picking up a hammer. Points come from dodging or destroying obstacles, collecting items and finishing stages quickly. The player starts with three lives, losing one on touching an obstacle or falling. The four stages — sloping girders, a conveyor-belt structure, elevators and rivets — each call for a different approach. Miyamoto put the emphasis on jumping and designed it as a multi-stage game told like a comic strip, which was uncommon for arcade games then; it is called one of the earliest platform games. Converted from about 2,000 unsold Radar Scope cabinets, it was the top-grossing US arcade game of 1982 and pulled Nintendo out of financial trouble.",
     "playUrl": "https://archive.org/details/msdos_Donkey_Kong_1983",
     "trivia": [
       "The heroine was first called \"Lady\" before being renamed Pauline.",
       "Universal sued, saying it infringed King Kong; Nintendo won, and its lawyer John Kirby is honoured in the name of the character Kirby.",
       "The documentary The King of Kong (2007) followed Steve Wiebe and Billy Mitchell's high-score rivalry.",
-      "The Game & Watch version sold 8 million units and Coleco's cartridges 6 million."
+      "The Game & Watch version sold 8 million units and Coleco's cartridges 6 million.",
+      "It began as a Popeye game, until a licensing deal with King Features fell through."
     ],
-    "devStory": "Nintendo was left with about 2,000 unsold Radar Scope machines in America, and Miyamoto, a first-time designer, created Donkey Kong so they could be converted. Mario began here as an unnamed carpenter called Jumpman.",
+    "devStory": "After Radar Scope failed in 1980, Minoru Arakawa asked Nintendo president Hiroshi Yamauchi for a game that could reuse the unsold cabinets, and Miyamoto, a first-time designer, created Donkey Kong under Gunpei Yokoi's supervision. The original idea used Popeye characters, but a licensing deal with King Features fell through, so Bluto became a gorilla, Popeye became Mario and Olive Oyl became Pauline. Miyamoto cited Beauty and the Beast and the 1933 King Kong as influences, and the name was meant to suggest a stubborn gorilla. Four programmers from Ikegami Tsushinki spent three months turning his design into a finished game, and Yukio Kaneoka composed the music. It was released in July 1981, though the team had been told it would fail.",
     "sources": [
       {
         "title": "Donkey Kong",
@@ -1533,14 +1543,16 @@
     "platform": "Apple II",
     "image": "images/games/ultima-i.jpg",
     "description": "Ultima I (1981) is Richard Garriott's Apple II role-playing game, the first commercial Ultima, mixing dungeon crawling with a trip into space.",
-    "longDescription": "Ultima I: The First Age of Darkness sends the player across the lands of Sosaria to defeat the wizard Mondain, exploring an overhead world map, towns and first-person dungeons — and, unusually, flying into space to fight in a starfighter. Richard Garriott, writing as 'Lord British', had sold his earlier game in hand-labelled bags from the Texas computer store where he worked; Ultima I was published by California Pacific and began one of the most influential RPG series of all.",
+    "longDescription": "Ultima I: The First Age of Darkness is set in Sosaria, whose four continents are each ruled by two of eight lords. The overworld is seen from above and the dungeons in first person. Each continent has two castles offering quests: one kind sends the player to a place on the map for a stat boost, the other to kill a particular monster in a dungeon for an item needed in the endgame. Characters are Human, Elf, Dwarf or Bobbit, and fighter, cleric, wizard or thief, with points spread across statistics such as Strength and Charisma; food runs down every two steps outside towns, and each level takes 1,000 experience points. Spells are bought in shops and used once. A first-person space section asks for 20 enemy ships to be destroyed, and a time machine, powered by four lords' gems, carries the player back to kill the wizard Mondain before he creates his Gem of Immortality.",
     "downloadUrl": "https://www.myabandonware.com/game/ultima-i-the-first-age-of-darkness-3hk",
     "trivia": [
       "The game includes a first-person space section where the player shoots down enemy ships.",
       "Ken W. Arnold co-developed it, and it introduced the characters Iolo and Shamino.",
-      "It sold about 20,000 copies by mid-1982 and about 50,000 in all; Origin re-coded it in assembly language in 1986."
+      "It sold about 20,000 copies by mid-1982 and about 50,000 in all; Origin re-coded it in assembly language in 1986.",
+      "Its working title was Ultimatum.",
+      "It has been described as the first open-world computer game."
     ],
-    "devStory": "Richard Garriott, who had sold Akalabeth as an afterthought to a hobby project, made Ultima as his first fully commercial game. California Pacific Computer Company published it for the Apple II in June 1981.",
+    "devStory": "Richard Garriott began it after the unexpected success of Akalabeth, reusing much of that game's code for the dungeons and adding towns, quests, a plot and Star Wars touches such as spaceships and lightsabers. He made it in his freshman year at the University of Texas with his friend Ken W. Arnold, who wrote the assembly code for its tile graphics, in under a year and in Applesoft BASIC. The working title, Ultimatum, was shortened because a board game company already used it. California Pacific Computer Company released it for the Apple II in June 1981, and Origin re-coded it in assembly language in 1986.",
     "sources": [
       {
         "title": "Ultima I: The First Age of Darkness",
@@ -1844,15 +1856,16 @@
     "platform": "Arcade",
     "image": "images/games/pengo.jpg",
     "description": "Pengo (1982) is Sega's puzzle-action maze game: a penguin pushes and slides ice blocks to crush the Sno-Bees that hunt him.",
-    "longDescription": "Pengo takes place in a maze made of ice blocks. The penguin can push a block to send it sliding across the board, crushing any Sno-Bee in its path, or break blocks apart, and lining up the three diamond blocks earns a big bonus and briefly stuns the enemies. The need to think about block positions made it a puzzle game as much as an action one. Developed by Coreland for Sega, its cheerful theme stood out and it was a hit in Japan.",
+    "longDescription": "Pengo, a penguin controlled with a four-way joystick and one button, pushes ice blocks to slide them across a maze, or crushes a block when something is behind it. The goal is to destroy every Sno-Bee by crushing it with a sliding block, by crushing the blocks that hold unhatched eggs, or by stunning it against a wall, which happens when Pengo pushes the wall it is touching, and then walking over it. Sno-Bees can crush blocks too, and new ones hatch to replace those destroyed. Each round has three diamond blocks that cannot be crushed; lining them up scores 10,000 points, or 5,000 if any touches a wall, and briefly stuns every Sno-Bee. After two minutes the remaining Sno-Bees turn into faster Blobs that head for a corner and escape, and finishing a round in under 60 seconds earns a time bonus. The 16 rounds are punctuated by intermission animations.",
     "playUrl": "https://archive.org/details/arcade_pengo",
     "trivia": [
-      "Pengo's sliding block mechanic created a puzzle element within an action game — players had to think about block positioning rather than just shooting.",
-      "The game featured three magic blocks that, when aligned, produced a powerful bonus and froze all enemies temporarily.",
-      "Pengo's cheerful penguin protagonist and Antarctic setting were highly unusual in the militaristic/alien-invasion landscape of 1982 arcades.",
-      "A musical jingle played between rounds — an early example of non-gameplay music used for atmosphere and pacing."
+      "The first arcade version uses \"Popcorn\" as its theme music.",
+      "Lining up the three diamond blocks scores up to 10,000 points.",
+      "Zero magazine reported that Hudson Soft's Bomberman series borrowed gameplay from it.",
+      "It was Japan's fourth-highest-grossing arcade game of 1982.",
+      "A widescreen remake for up to eight players was location-tested in Japan from 2010."
     ],
-    "devStory": "Pengo was developed by Coreland and published by Sega in 1982. Players controlled a penguin who could push ice blocks to crush enemies or slide them across the screen as projectiles. The game featured a memorable marching theme and was one of the first games with a jingle that played between rounds. It was a major hit in Japan.",
+    "devStory": "Coreland developed it for Sega, with Nobuo Kodera, Tsutomu Iwane and Akira Nakakuma among its designers. It was released in Japan in September 1982, in North America that October and in Europe in December. The first arcade version used \"Popcorn\" as its theme, while a second version had original music. It was Japan's fourth-highest-grossing arcade game of 1982 and a commercial success for Sega in the US, with an estimated 2,000 cabinets sold. Atari 5200, Atari 8-bit and Atari 2600 versions followed in 1983 and 1984, and a Game Gear version in 1990.",
     "sources": [
       {
         "title": "Pengo (video game)",
@@ -1899,15 +1912,16 @@
     "platform": "Arcade",
     "image": "images/games/mr-do.png",
     "description": "Mr. Do! (1982) is Universal's digging game: a clown tunnels through a garden, collects cherries and defeats monsters with a bouncing power ball.",
-    "longDescription": "Mr. Do! digs his own tunnels through the playfield, collecting cherries, dropping apples on pursuing monsters and throwing a power ball that bounces along the tunnels until it hits something — so every throw means thinking about its path. Collecting the letters E-X-T-R-A from special monsters awards an extra life. Its bright fairground look stood out among the space and military games of 1982, and it spawned several sequels.",
+    "longDescription": "Mr. Do, a circus clown (a snowman in the original Japanese version), digs tunnels through the playfield, collecting cherries in groups of eight, with a bonus for clearing a group without pausing. Monsters called creeps chase him, and he fights back with a bouncing power ball, which must come back before it can be thrown again and takes longer to re-form each time, or by dropping apples on them; an apple that falls too far breaks, and a falling apple can crush Mr. Do too. Every 5,000 points, the highlighted letter of EXTRA enters as an Alphamonster, and collecting all five letters ends the level with a cut scene set to the Astro Boy theme and an extra life. Dropping an apple can reveal a diamond, which completes the level and awards a credit. A level also ends when all cherries are gone or all creeps destroyed.",
     "playUrl": "https://archive.org/details/arcade_mrdo",
     "trivia": [
-      "The powerball in Mr. Do! bounced independently of the player's position — throwing it required thinking several moves ahead.",
-      "Extra men were awarded for spelling EXTRA by collecting letters from enemies, an unusual mechanic mixing spelling with action.",
-      "Universal's \"Alpha Monster\" — a large creature that appeared if play was too slow — forced players to take risks rather than play defensively.",
-      "The game's hand-drawn, fairground aesthetic was immediately distinctive in arcades dominated by space and military themes."
+      "In the original Japanese version, Mr. Do is a snowman.",
+      "The power ball was inspired by a Super Ball stuck on a roof near Universal's Japanese office.",
+      "It is considered the first arcade game released as a conversion kit.",
+      "Its sequels are Mr. Do's Castle (1983), Mr. Do's Wild Ride (1984) and Do! Run Run (1984).",
+      "Spelling EXTRA plays a cut scene set to the Astro Boy theme."
     ],
-    "devStory": "Mr. Do! was developed by Universal in 1982. The clown protagonist could either dig tunnels through the playfield to drop cherries on enemies, or throw a bouncing powerball at them. The ball would continue bouncing until it hit something, requiring spatial thinking about its path. Mr. Do! was one of the most inventive action games of its era and spawned several sequels.",
+    "devStory": "Kazutoshi Ueda created it at Universal, inspired by Namco's Dig Dug, released earlier in 1982; the power ball came from a Super Ball stuck on a roof near Universal's Japanese office. It came out in Japan in October 1982, distributed by Taito, and in North America in February 1983. About 30,000 arcade units sold in the US, and it was the best-selling conversion kit until 1984, topping RePlay's conversion kit chart for five months of 1983. Ueda later worked at Tecmo and co-founded Atlus.",
     "sources": [
       {
         "title": "Mr. Do!",
@@ -2259,14 +2273,15 @@
     "platform": "Arcade",
     "image": "images/games/crystal-castles.png",
     "description": "Crystal Castles (1983) is Atari's trackball maze game: guide Bentley Bear through 3D-looking castles, collecting gems before the enemies do.",
-    "longDescription": "Crystal Castles draws each maze as an isometric castle of ramps, stairs and hidden passages, and Bentley Bear must collect every gem while avoiding the gem-eating creatures, trees, skeletons, a bee swarm and the witch Berthilda. Magic hats make Bentley briefly invincible. The trackball gives his movement a smooth, analogue feel. Unusually for its time, the game has a proper ending after the final castle, where most arcade games simply looped.",
+    "longDescription": "Bentley Bear, steered with a trackball, collects gems scattered through castles drawn in a three-dimensional projection, with ramps, stairs and hidden passages; collecting the last gem on a board earns a bonus, and honeypots appear for extra points. Bentley can jump to avoid obstacles. Some enemies eat gems, trees chase him by the quickest path and can be stunned by jumping over them, and a Gem Eater can be defeated by running into it while a gem is rising through its body. Each level has four waves, the fourth featuring Berthilda the Witch, who can only be beaten after Bentley picks up the magic hat in the maze; otherwise the hat makes him briefly invincible. Warps lead to higher levels. Unusually for its time, the game has a proper ending: a congratulatory message, a ranking by lives remaining and a bonus for speed of play.",
     "trivia": [
-      "Crystal Castles had a genuine ending — completing all nine castles triggered a cutscene and showed \"THE END,\" unusual for 1983 arcade games.",
-      "The trackball gave Bentley Bear's movement a smooth, analogue quality that joystick controls couldn't replicate.",
-      "The Gem Eater — a large mouth that appeared and consumed gems — forced players to work efficiently rather than linger.",
-      "Magic hats made Bentley briefly invincible, letting him turn the tables on the enemies chasing him."
+      "Bentley Bear was originally called Bear Braveheart.",
+      "Its warps predate those in Super Mario Bros. (1985).",
+      "It is among the earliest arcade games with a distinct ending.",
+      "It won a Certificate of Merit at the 1985 Arkie Awards.",
+      "Lanzinger later left Atari over a dispute about residuals for home conversions."
     ],
-    "devStory": "Crystal Castles was developed by Atari in 1983. Bentley Bear collected gems while avoiding witches, trees, skeletons, and a giant bee. The trackball controller gave fast, fluid movement. The game was notable for having an actual ending after its final level. Most arcade games of the era looped indefinitely.",
+    "devStory": "Franz Lanzinger programmed it and wrote all of its code, his first game at Atari, with Barbara Singh creating most of the moving objects and Dave Ralston helping design some of the more complicated mazes; the game first had 12 mazes. Lanzinger chose the trackball because he liked Centipede and Millipede, and kept it despite management encouraging a joystick, and he spent $2,000 playing arcade games as research. The hero was first named Bear Braveheart, until marketing changed it and an engineering competition picked Bentley. Atari released it on 8 July 1983, and an Atari 2600 version followed in March 1984.",
     "sources": [
       {
         "title": "Crystal Castles (video game)",
@@ -2371,15 +2386,16 @@
     "platform": "Arcade",
     "image": "images/games/tapper.jpg",
     "description": "Tapper (1983) is Bally Midway's bar-tending game: slide drinks down four bars to thirsty customers and catch the empties before they smash.",
-    "longDescription": "The bartender in Tapper works four bars at once, filling mugs and sliding them to customers who advance until they are served. Empty mugs come sliding back and must be caught, and tips left on the counter can be collected for bonus points at the cost of leaving the taps. Designed by Marvin Glass and Associates, the original carried Budweiser branding for bars; a Root Beer Tapper version followed for arcades that objected to the beer theme.",
+    "longDescription": "The bartender serves four bars, each with a keg at one end and a door at the other. The joystick moves between bars, wrapping from top to bottom, or along one, and pulling the tap handle fills a mug that slides down the bar when released. Customers advance towards the kegs; catching a full mug pushes them back, and those near the door leave, while the rest drink and slide the empty back. A life is lost if a mug falls off either end of a bar or a customer reaches the keg and pulls the bartender out. Tips left on the counter earn points and bring on dancers who distract some customers. The four settings are a western saloon, a sports bar, a punk rock bar and an outer-space bar, and after each comes a bonus round of six cans, where picking the one that has not been shaken earns points.",
     "playUrl": "https://archive.org/details/arcade_tapper",
     "trivia": [
-      "Tapper was originally sponsored by Budweiser and served in bars and pubs — one of the first games with a corporate brand partnership.",
+      "Early machines used real Budweiser beer tap handles as controllers.",
       "A non-alcoholic \"Root Beer Tapper\" version was produced for venues that objected to beer imagery.",
-      "Catching the empty mugs before they fell off the end of the bar required tracking multiple lanes simultaneously.",
-      "Tips left on the counter gave bonus points but required moving away from beer-serving duty to collect them."
+      "The Japanese version swapped the Budweiser references for Suntory beer.",
+      "Most home versions carried a Mountain Dew logo, and the ZX Spectrum and Amstrad CPC versions a Pepsi one.",
+      "Its bartender appears in Wreck-It Ralph, voiced by Maurice LaMarche."
     ],
-    "devStory": "Tapper was designed by Marvin Glass and Associates and released by Midway in 1983. Players served beer to increasingly impatient bar customers, catching empty mugs before they fell and tips left on the counter. The game was originally sponsored by Budweiser and shown in bars — later sanitised to \"Root Beer Tapper\" for locations that objected to alcohol content. The bar itself scrolled between rounds to reveal new, themed settings.",
+    "devStory": "Marvin Glass and Associates developed it, with Steve Meyer and Elaine Ditton programming, Scott Morrison on art and Rick Hicaro composing on a Synclavier II, using tunes such as \"Oh! Susanna\" and the Budweiser theme. Anheuser-Busch sponsored the original, with a Budweiser theme and cabinets meant for bars, complete with a brass footrest and drink holders; early machines used real Budweiser tap handles as controllers. Bally Midway released it in North America in February 1984, and Root Beer Tapper followed for arcades, since the original was seen as advertising alcohol to minors.",
     "sources": [
       {
         "title": "Tapper (video game)",
@@ -2509,15 +2525,16 @@
     "platform": "Arcade",
     "image": "images/games/1942.png",
     "description": "1942 (1984) is Capcom's vertically scrolling WWII shooter: fly a P-38 across the Pacific and loop out of danger with a limited barrel roll.",
-    "longDescription": "1942 sends a P-38 Lightning through 32 stages over the Pacific, shooting down waves of enemy aircraft and collecting power-ups carried by formations of red planes. A limited number of loop manoeuvres per stage let the plane roll away from danger. Designed by Yoshiki Okamoto, it was Capcom's first big arcade hit and began the 194X series, followed by 1943: The Battle of Midway.",
+    "longDescription": "The player flies a Lockheed P-38 Lightning, the \"Super Ace\", up a vertically scrolling Pacific battlefield, shooting down Kawasaki Ki-61s, Mitsubishi Zeros and Kawasaki Ki-48s, with a Nakajima G10N as the boss plane. A single hit or collision costs a life. A roll button loops the plane out of danger for a moment, and power-ups include an escort of two smaller fighters flying alongside. Besides the normal score, the game keeps a separate percentage high score for the share of enemy fighters shot down. Its World War II theme, loosely based on the Battle of Midway, was chosen to make it broadly accessible.",
     "playUrl": "https://archive.org/details/arcade_1942",
     "trivia": [
-      "1942 was Yoshiki Okamoto's first game for Capcom, after he had made Time Pilot and Gyruss at Konami.",
-      "The barrel roll mechanic — a brief dodge with temporary invincibility — became standard in shoot-em-ups and appeared in Star Fox 64.",
-      "Players controlled an American P-38 Lightning shooting down Japanese Zero fighters, an unusual perspective for a Japanese-made game.",
-      "The game launched a series: 1943, 1943 Kai, 1941, and 19XX followed through the 1990s."
+      "It was Capcom's first game designed with Western markets in mind.",
+      "The NES version sold over one million copies worldwide.",
+      "The 194X series had sold 1.4 million units by December 2019.",
+      "The Commodore 64 music is based on Ron Goodwin's 633 Squadron theme.",
+      "The series continued with 1943: The Battle of Midway, 1941: Counter Attack, 19XX and 1944: The Loop Master."
     ],
-    "devStory": "1942 was designed by Yoshiki Okamoto at Capcom in 1984. It was a vertical-scrolling shoot-em-up set in the Pacific Theatre of World War II — players flew a Lockheed P-38 Lightning on a mission to reach Tokyo. The game introduced the \"roll\" barrel roll manoeuvre — pressing a button triggered a short invincibility roll that dodged incoming fire. It was Capcom's first major arcade hit and launched a long-running series.",
+    "devStory": "Yoshiki Okamoto designed and directed it at Capcom, with Tamio Nakazato programming and Ayako Mori composing. It was Capcom's first game made with Western markets in mind, which is why the player flies an American P-38. Capcom released it in Japan in December 1984, where it was the fourth most popular arcade game that month, and in Europe and North America in 1985. It became Capcom's breakaway hit, outdoing Vulgus, SonSon and Pirate Ship Higemaru, and the first Capcom title to spawn a successful series. Micronics developed the NES version, which sold over a million copies.",
     "sources": [
       {
         "title": "1942 (video game)",
@@ -2621,15 +2638,16 @@
     "platform": "Arcade",
     "image": "images/games/paperboy.png",
     "description": "Paperboy (1984) is Atari's bicycle delivery game: steer with real handlebars, throw papers to subscribers and dodge the hazards of a hostile suburb.",
-    "longDescription": "Paperboy rides a bike down a diagonal suburban street, throwing newspapers into subscribers' mailboxes while dodging cars, dogs, break-dancers and lawnmowers. Missed deliveries cost subscribers, while non-subscribers' houses are fair game for broken windows. Each day ends with a bonus obstacle course. The cabinet's handlebar controller made it one of the most physical arcade games of its era, designed by John Salwitz, Dave Ralston and colleagues at Atari Games.",
+    "longDescription": "The player rides a bicycle down a suburban street, shown from an oblique angle, delivering The Daily Sun. The arcade controls are bike handlebars: push forward to speed up, pull back to brake and turn to steer, with buttons on either side to throw papers. Of the street's 20 houses, 10 start as subscribers, painted in bright colours, and papers must land on their porch or in their mailbox; breaking windows and knocking over tombstones at non-subscribers' houses earns bonus points. Papers are limited, with bundles on the road to restock, and obstacles include cars, skateboarders and rolling tyres. A crash costs a life. Subscribers who miss a paper or have their house damaged cancel, while a perfect day doubles the bonus and wins back a subscriber. After each route comes a training course of targets and ramps, and the week runs from Monday to Sunday, when the heavier papers travel more slowly. Easy Street, Middle Road and Hard Way set the difficulty, the harder streets doubling and tripling the points.",
     "playUrl": "https://archive.org/details/arcade_paperboy",
     "trivia": [
-      "Paperboy featured a genuine bicycle handlebar as its controller — one of the most elaborate physical controllers in arcade history.",
-      "Non-subscriber houses could be attacked and vandalised — windows broken, flowerpots smashed — without penalty.",
-      "Subscribers who missed their paper cancelled their subscription, reducing the points available in future runs.",
-      "The training course at the end of each route was an obstacle course that offered bonus points and was often more enjoyable than the main delivery."
+      "Its handlebar controller is a modified Star Wars yoke.",
+      "A papergirl character was cut for lack of memory.",
+      "Lyle Rains came up with the \"breakage bonus\".",
+      "It was the top-grossing US arcade conversion kit of December 1985.",
+      "The ZX Spectrum version topped the UK sales chart in September 1986."
     ],
-    "devStory": "Paperboy was designed by John Salwitz, Dave Ralston, Wilfredo Aguilar, and Carl Bedard at Atari Games in 1984. Players rode a bicycle delivering newspapers to subscribers while avoiding hazards and vandalising non-subscribers' property. The handlebar controller was a genuine innovation — a physical bicycle handlebar that players steered and pedalled. The game's suburban American setting and dark humour (the non-subscriber deaths were comedic) made it memorable.",
+    "devStory": "Dave Ralston came up with it in February 1983 during an Atari brainstorm, sketching it on a cocktail napkin, and John Salwitz programmed it, with Will Noble on graphics and animation and Russell Dawe as project manager. Early designs had giant snails, ducks in business suits and the Grim Reaper, but focus groups disliked them, so the cast became real people and animals. Milt Loper designed the handlebar controller from a modified Star Wars yoke, and it ran on Atari System 2 with a DEC T-11 processor and code written in BLISS. Atari Games released it in Europe in February 1985 and North America that April.",
     "sources": [
       {
         "title": "Paperboy (video game)",
@@ -3326,15 +3344,16 @@
     "platform": "Arcade",
     "image": "images/games/rampage.png",
     "description": "Rampage (1986) is Bally Midway's three-player monster game: George, Lizzie and Ralph climb and smash city skyscrapers while the army fights back.",
-    "longDescription": "Three giant monsters — George the ape, Lizzie the lizard and Ralph the wolf, all humans transformed by experiments — tour North American cities tearing down buildings, eating the fleeing residents and swatting helicopters and tanks. Up to three players take part at once and can punch each other as readily as the army. Designed by Brian Colin and Jeff Nauman, its gleeful destruction made it an instant hit, and it was eventually adapted into a 2018 film.",
+    "longDescription": "Up to three players control George, Lizzie and Ralph, people turned into monsters: George, a scientist, became a gorilla after taking experimental vitamins, Lizzie a reptile after swimming in a lake polluted with radioactive waste, and Ralph a werewolf after eating a hot dog with an unknown additive. To move on, they must raze every building in a city, climbing and punching skyscrapers, eating people and wrecking helicopters, tanks, taxis, police cars, boats and trolleys, while bullets, shells, dynamite, lightning, falls and each other's punches wear them down. Eating fruit, roast chicken or soldiers restores health, and windows hide food, money, bombs and appliances; a photographer's flash makes a monster fall unless he is eaten first. A monster with too much damage shrinks back to a human, who can be eaten by another player. The game covers 128 days across North American cities, from Peoria to Plano, Illinois, repeating five times.",
     "playUrl": "https://archive.org/details/arcade_rampage",
     "trivia": [
-      "Rampage's monsters were legally distinct from King Kong and Godzilla, but their designs were clearly influenced by those characters.",
-      "Players could eat soldiers, people, and even each other — friendly fire between monsters was not only allowed but encouraged.",
-      "George, Lizzie, and Ralph were originally humans transformed by scientific experiments — a nod to the monster movie genre.",
-      "A feature film adaptation was released in 2018, starring Dwayne Johnson — 32 years after the original game."
+      "Colin said Lizzie was based on the Ymir from 20 Million Miles to Earth, not Godzilla.",
+      "The opening scene casts Colin as George, his wife Rae as Lizzie and Nauman as Ralph.",
+      "The NES version leaves out Ralph; the Lynx version adds a giant rat called Larry.",
+      "Colin promoted it with a mock memo telling each town in the game it was \"slated for destruction\".",
+      "A 2018 film starring Dwayne Johnson features George, Lizzie and Ralph as mutated animals."
     ],
-    "devStory": "Rampage was designed by Brian Colin and Jeff Nauman at Bally Midway in 1986. Three giant monsters — George (gorilla), Lizzie (lizard), and Ralph (werewolf) — destroyed cities while being shot at by the military. The three-player simultaneous format let friends each control a monster and compete to eat the most food and destroy the most buildings. The game's anarchic destruction fantasy was immediately popular.",
+    "devStory": "Artist Brian Colin and programmer Jeff Nauman led it at Bally Midway, with Sharon Perry on art and Michael Bartlow composing. Colin wanted \"no wrong way to play\", without a set objective or dying, and skyscrapers were chosen because the hardware could only move rectangular background shapes. Management was unconvinced until new managers arrived. Inspirations included King Kong and 20 Million Miles to Earth, and Colin said Lizzie was based on that film's Ymir rather than Godzilla. In the opening scene Colin appears as George, his wife Rae as Lizzie and Nauman as Ralph. It came out in August 1986, and the first run of 4,500 machines reportedly sold out immediately.",
     "sources": [
       {
         "title": "Rampage (video game)",
@@ -3465,14 +3484,15 @@
     "platform": "Arcade",
     "image": "images/games/solomons-key.jpg",
     "description": "Solomon's Key (1986) is Tecmo's puzzle platformer: the wizard Dana creates and destroys blocks to reach each room's key and door.",
-    "longDescription": "Each of Solomon's Key's rooms is a puzzle. Dana can conjure a stone block beside him or break one away, and must use that single power to build routes to the key and then the exit door, while enemies roam and a timer counts down. Hidden bonuses, fairies and secret rooms reward exploration. Tecmo's design makes it far more puzzle than platformer, and its later rooms demand precise sequences.",
+    "longDescription": "The sorcerer Dana must cross the 50 rooms of \"Constellation Space\", reaching the key and then the door in each before a timer runs out, on a quest to retrieve Solomon's Key and restore light to a world overrun by accidentally released demons. He can run, jump, create or destroy orange blocks next to him, break blocks by hitting them twice with his head, and cast fireballs at demons, which spawn without limit and kill on contact. Items upgrade his firepower, give extra lives, award points or unlock hidden rooms, and some only appear when blocks are made and broken in a certain way. The ending changes depending on which secret levels the player finds and completes.",
     "trivia": [
-      "Creating and destroying blocks was the core mechanic — the same button alternated between modes based on context.",
-      "Hidden fairies in certain levels granted access to a bonus stage called \"The Room of Solomon\" with powerful items.",
-      "Every level had a hidden \"Dana\" figurine — collecting all of them across multiple playthroughs was a near-impossible completionist challenge.",
-      "The game was extremely difficult for a puzzle game — later levels required nearly perfect execution in a specific order."
+      "Kazutoshi Ueda, creator of Mr. Do!, suggested making it more of a puzzle game.",
+      "The NES version has 64 levels: 48 main levels grouped by the zodiac, 15 secret levels and a final room.",
+      "It sold 300,000 copies in Japan.",
+      "Its NES prequel, Solomon's Key 2, was released in North America as Fire 'n Ice.",
+      "The PC Engine version was released as Zipang, tied to the film of the same name."
     ],
-    "devStory": "Solomon's Key was developed by Tecmo in 1986. Players controlled Dana, a wizard who could create and destroy blocks to navigate puzzles, reach a key, and find a door. Each of the 50 levels was a contained block-manipulation puzzle requiring specific sequences of actions. Hidden rooms containing fairies and secret items rewarded thorough exploration. The game was more puzzle than platformer.",
+    "devStory": "Michitaka Tsuruta designed it at Tecmo, drawing on Lode Runner but adding the ability to create tiles as well as destroy them. His first design was more action-focused, and Kazutoshi Ueda suggested adding puzzle elements. Greek mythology and the film Jason and the Argonauts shaped its look, and sales manager Harano named it after learning that its star symbol was Solomon's seal and that a book called the Key of Solomon existed. Tecmo released it in Japanese arcades in July 1986, with an NES version the same month, and in North America in February 1987. It sold 300,000 copies in Japan.",
     "sources": [
       {
         "title": "Solomon's Key",
@@ -3913,15 +3933,16 @@
     "platform": "Arcade",
     "image": "images/games/road-blasters.jpg",
     "description": "Road Blasters (1987) is Atari's armed driving game: blast enemy cars along 50 rallies, collecting fuel globes and special weapons to keep going.",
-    "longDescription": "Road Blasters puts a weapon-equipped car on a road stretching to the horizon, shooting enemy vehicles and mines while fuel runs down. Collecting fuel globes keeps the run alive, and power-ups dropped from above add attachments such as the UZ Cannon and Nitro Injector. Fifty rallies of increasing difficulty gave players a long campaign by arcade standards. It was one of Atari Games' last big driving hits.",
+    "longDescription": "The player drives an armed sports car through 50 rally races, firing a cannon at enemy vehicles and roadside gun turrets while dodging mines, boulders, floating \"spiker\" balls and oil slicks, which spin the car for a moment. A scoring multiplier rises with each hit, up to ten, and drops with each miss. A helicopter now and then drops power-ups with limited uses. The car has a main fuel tank and a smaller reserve: red globes, dropped by enemies destroyed from a distance, and green globes at set points top up the main tank, which also resets at the halfway point, and points scored add to the reserve at the end of each rally. Losing a car costs a little fuel and any power-up, and the game ends only when both tanks run dry. Completing rally 50 awards 1,000,000 points and ends the game.",
     "playUrl": "https://archive.org/details/arcade_roadblst",
     "trivia": [
-      "Road Blasters offered 50 levels — an unusually large amount for an arcade game, designed to give location operators weeks of sustained play.",
-      "Fuel management was central — missiles and bombs from enemy aircraft reduced fuel, while refuelling cars provided it back.",
-      "The weapon attachment system — collecting UZ Cannons and Nitro Injectors that attached to the car — gave the game a customisation element.",
-      "The game's forced perspective road was a technical achievement using Atari's hardware to maintain frame rate across 50 distinct environments."
+      "Finishing all 50 rallies earned players a T-shirt in a 1987 promotion.",
+      "Continues are unlimited until rally 50, which allows one attempt.",
+      "Matchbox made a die-cast toy tie-in with two factions, Turbo Force and The Motor Lords.",
+      "It features in Disney's Wreck-It Ralph, tied to the backstory of the villain Turbo.",
+      "IGN gave the Lynx version 9 out of 10."
     ],
-    "devStory": "Road Blasters was developed by Atari Games in 1987. Players drove an armed car through 50 levels of increasingly difficult traffic and enemies, collecting fuel to continue. The game used a combination of sprite-scaled graphics and a fixed horizon to create a convincing sense of speed. It was one of the last major games developed at Atari before the company's decline.",
+    "devStory": "Robert Weatherby designed and programmed it at Atari Games, with art by Mark Stephen Pierce and Kris Moser and music by Brad Fuller, on the Atari System 1 hardware. It reached North American arcades in March 1987, and players who finished rally 50 could send in their name and a secret code for a T-shirt until 31 August 1987. U.S. Gold published home computer versions in 1988, Tengen the NES and Mega Drive versions, and Atari Corporation a Lynx version in 1990.",
     "sources": [
       {
         "title": "RoadBlasters",
@@ -4245,15 +4266,16 @@
     "platform": "Arcade",
     "image": "images/games/toobin.png",
     "description": "Toobin' (1988) is Atari's river-tubing game: paddle an inner tube down rivers, dodging obstacles and throwing cans at enemies along the banks.",
-    "longDescription": "Biff and Jet float down rivers in inner tubes, including the Colorado, the Nile and the Styx, steering through gates for points and around branches, rocks and whirlpools. Cans thrown at alligators, fishermen and other pests clear the way, and currents push the tubes around. Players control each arm separately to paddle and turn. Its relaxed summer premise stood out in arcades full of combat and racing.",
+    "longDescription": "One or two players ride inner tubes as Bif, in red, or Jet, in yellow, down a vertically scrolling course through five rivers: the Colorado, the Nile, the Styx, the Canals of Mars and the Jurassic. After the last river the cycle starts again. Whirlpools, dinosaur tails and bullets threaten the tubers, along with alligators, hunters and cavemen, and players throw cans at enemies, which can also stun some riverside obstacles. Passing through gates and collecting treasure chests scores points, and the screen shows the score, lives and current river. Its relaxed tubing premise stood out in arcades full of combat and racing.",
     "playUrl": "https://archive.org/details/arcade_toobin",
     "trivia": [
-      "Toobin' was one of the few arcade games with a genuinely relaxing premise — summer tubing rather than combat or racing.",
-      "The can-throwing weapons (Pepsi cans in the original, generic in some releases) could be used to hit floating enemies or boost speed.",
-      "Current and eddies in the river affected tube movement — physics simulation in a 1988 arcade game.",
-      "The two-player competitive format let friends race down the same river, throwing cans at each other as readily as at enemies."
+      "Its rivers include the Styx, the Canals of Mars and the Jurassic.",
+      "Designer Milt Loper also built Paperboy's handlebar controller.",
+      "The players are named Bif and Jet.",
+      "It is one of 23 arcade games in Lego Dimensions' Midway Arcade Level Pack.",
+      "It is on the Arcade1Up Midway Legacy Edition cabinet."
     ],
-    "devStory": "Toobin' was developed by Atari Games in 1988. Players navigated rubber inner tubes down river courses, throwing cans at enemies and collecting items. The gentle, summery aesthetic was a counterpoint to the military and fantasy games dominating arcades. The controls used separate buttons to paddle each arm forward or backward, steering the tube. It was one of Atari Games' last genuinely successful arcade productions.",
+    "devStory": "Milt Loper designed it at Atari Games, with Dennis Harper programming, Will Noble, Mark West and Deborah Short drawing the art and Brad Fuller composing. It reached North American arcades in June 1988, and a Tengen NES version followed in December 1989, along with versions for the Amiga, Commodore 64, Atari ST, Amstrad CPC, ZX Spectrum, MS-DOS and Game Boy Color. The arcade game later appeared in Midway Arcade Treasures, Midway Arcade Origins and Lego Dimensions.",
     "sources": [
       {
         "title": "Toobin'",
@@ -4971,14 +4993,16 @@
     "platform": "Arcade",
     "image": "images/games/gauntlet-ii.png",
     "description": "Gauntlet II (1986) is Atari's four-player dungeon sequel, adding 'It', acid puddles, reflective shots and shifting walls to the original.",
-    "longDescription": "Gauntlet II keeps the original's Warrior, Valkyrie, Wizard and Elf, its monster generators and its constantly draining health, and adds new tricks: the 'It' monster, which makes the player it tags the target of every enemy, acid puddles, a dragon, walls that move or can be walked through, and power-ups such as reflective shots and invisibility. Any player can choose any hero, so four Wizards are possible. Designed by Ed Logg, it was as big a hit as the first game.",
+    "longDescription": "Gauntlet II keeps the original's Warrior, Valkyrie, Wizard and Elf, but any number of players can pick the same hero, so each is told apart by colour, with red and blue in every version and yellow and green in the four-player one, and new voice samples announce them by colour and class. Its new levels can be rotated in 90-degree steps. The new \"It\" monster makes the player it touches the target of every enemy until they tag another player or reach the exit. Other additions include acid puddles that deal heavy damage, a large dragon that takes several hits, a pick-up that makes shots ricochet off walls, and invisible walls, magic walls that turn into monsters or items, stun tiles and fake exits. Secret rooms, reached by meeting a level's special challenge such as finding the real exit first, hold food and potions that boost shot power, speed, magic, armour and fighting.",
     "playUrl": "https://archive.org/details/arcade_gaunt2",
     "trivia": [
-      "The \"It\" demon transferred a debilitating status effect to any player it touched — players avoided each other as frantically as they avoided enemies.",
-      "Gauntlet II introduced flying enemies that the original's pathfinding couldn't handle — they bypassed walls entirely.",
-      "The Supershot was a charged projectile that could clear entire rooms — holding the fire button for a few seconds was a skill in itself."
+      "Players could find secret rooms in a contest with a $5,000 US savings bond as the prize.",
+      "Some of its levels and ideas came from a player contest.",
+      "Its NES version supports four players through the Four Score or Satellite adapters.",
+      "Electronic Gaming Monthly ranked it the third best arcade game of all time in 1997.",
+      "Several players can choose the same class, told apart by colour."
     ],
-    "devStory": "Gauntlet II was designed by Ed Logg at Atari Games in 1986. It expanded on the original with new enemy types including ghosts that could only be damaged briefly, IT enemies that transferred their status on touch, and the Supershot — a charge-up weapon. The game retained the four-player simultaneous format and the health-draining over time mechanic that made the original a revenue powerhouse.",
+    "devStory": "Ed Logg designed it and programmed it with Bob Flanagan at Atari Games, with art by Sam Comstock, Susan McBride, Alan Murphy and Will Noble and music by Hal Canon, Brad Fuller and Earl Vickers. Atari ran a contest for level designs and ideas until 31 March 1986 and used some of the winning entries. It was released in North America in August 1986, as a cabinet or conversion kit in two- and four-player versions, and a second contest invited players to find its secret rooms for a $5,000 savings bond. Gremlin Graphics made most of the home computer versions, and the NES version was one of the earliest NES games for four players.",
     "sources": [
       {
         "title": "Gauntlet II",
@@ -5053,14 +5077,15 @@
     "platform": "Arcade",
     "image": "images/games/image-fight.png",
     "description": "Image Fight (1988) is Irem's demanding vertical shooter: a combat simulation where poor performance sends the pilot through penalty stages.",
-    "longDescription": "Image Fight frames its vertical-scrolling missions as a training simulation. Players collect pods that attach to the ship and fire in different directions, and can switch the ship's speed. Five simulation stages test accuracy, and failing to destroy enough enemies sends the pilot to a punishing penalty stage before the real battle. From the studio behind R-Type, it is aimed at players who want a severe challenge.",
+    "longDescription": "The player flies the OF-1 Fightership up a vertically scrolling course, built after the Moon has exploded into four large fragments and invaders from the \"Boondoggle Galaxy\" have destroyed Earth's space bases. The game opens with five combat simulation stages, each passed or failed: an average kill rate of 90% or better across them leads straight to real combat, and anything less adds one extra simulation stage first. Real combat then runs through three stages. Up to three pods float beside and behind the ship: red pods turn with the ship's movement and can be aimed, while blue pods always face forward and hit harder head-on, and a Pod Shot launches the side pods forward before they circle back. The ship has four speeds, its thruster flame hurting enemies during a change, and butterfly-shaped Forces attached to its nose upgrade the gun to a laser and absorb one hit.",
     "trivia": [
-      "Failing to achieve a minimum score in regular stages triggered mandatory penalty stages — a shame mechanic built into the game design.",
-      "Image Fight's difficulty was extreme even by Irem's standards — the studio that made R-Type made this game for players who wanted more punishment.",
-      "The game was set in a military near-future, with a training simulation framing that explained the penalty stage mechanic in-fiction.",
-      "Pod attachments mirrored R-Type's Force concept — Irem was developing a house style for shooter mechanics."
+      "Hiroshi Iuchi called it the main inspiration for Radiant Silvergun's design.",
+      "Tomonobu Itagaki listed it among his five favourite games.",
+      "Its ship appears in R-Type Final as the first of the OF series.",
+      "The NES version was the only one released in North America.",
+      "Doing poorly in the simulation stages adds an extra stage before real combat."
     ],
-    "devStory": "Image Fight was developed by Irem in 1988. The vertical-scrolling shooter was notable for its extreme difficulty and an unusual penalty system — playing poorly in the main stages forced players through \"penalty stages\" designed to be even harder. The game was designed for players who found other shooters too easy.",
+    "devStory": "Irem developed and published it, releasing it in Japanese arcades in October 1988, where Game Machine listed it as the most successful table arcade unit of December 1988. An NES version followed in 1990, the only version released in North America, along with PC Engine, X68000 and FM Towns versions in Japan, and a PC Engine sequel, Image Fight II: Operation Deepstriker, came in 1992. Hamster added the arcade version to its Arcade Archives series in 2019.",
     "sources": [
       {
         "title": "Image Fight",
@@ -5191,14 +5216,16 @@
     "genre": "Rail Shooter",
     "platform": "Arcade",
     "image": "images/games/galaxy-force-ii.jpg",
-    "description": "Galaxy Force II (1988) is Sega's 3D space shooter, flying through planets and fortresses on Super Scaler hardware, some cabinets rotating the player.",
-    "longDescription": "Galaxy Force II flies a starfighter into the screen across planet surfaces and into enemy fortresses, locking on to multiple targets and firing homing missiles while managing a draining energy supply. Sega's sprite-scaling hardware pushed large numbers of scaled objects to create a convincing sense of 3D speed. It was offered in a motion cabinet that could turn the seated player, one of the most elaborate machines of its time — and correspondingly rare in arcades.",
+    "description": "Galaxy Force II (1988) is Sega's updated version of its 3D space shooter Galaxy Force, flying the starship TRY-Z through planets and fortresses on Sega's Y Board hardware.",
+    "longDescription": "The player flies the starship TRY-Z into the screen across planet surfaces and into enemy fortresses, firing a standard laser and a limited supply of heat-seeking missiles that track targets automatically, with more missiles found in parts of each level. A shield gauge drains on collisions with obstacles and shots, and an energy meter drains as each level goes on, and also from firing and taking hits; the game ends when it runs out. Galaxy Force II is an update of Galaxy Force, sold as a conversion kit about two months after it: it adds two new levels, corrects difficulty balance problems and lets the player fire all four missiles at once instead of one at a time. The Super Deluxe cabinet twists 335 degrees left and right and tilts 15 degrees forwards and backwards.",
     "trivia": [
-      "The Galaxy Force II cabinet could rotate completely — full 360-degree motion in sync with the on-screen action.",
-      "The scaling hardware processed more sprites per frame than almost any other 1988 arcade game.",
-      "The game's cost and mechanical complexity made it rare in arcades — a paradox where the most impressive games were seen by the fewest players."
+      "The Super Deluxe cabinet twists 335 degrees left and right.",
+      "It was sold as a conversion kit for the original Galaxy Force, not as a sequel.",
+      "Sinclair User gave the arcade version 10/10 and named it Shoot 'Em Up of the Year for 1988.",
+      "It earned well at some American arcades through 1990, but few arcades had it.",
+      "The Master System version was redone in a style closer to Space Harrier."
     ],
-    "devStory": "Galaxy Force II was developed by Sega in 1988. The third-person rail shooter used Sega's most advanced scaling hardware to render a vast three-dimensional tunnel at high speed. The motion-simulator cabinet version rotated 360 degrees. It was one of the most technically impressive arcade games of 1988, though its difficulty and the cabinet's mechanical complexity limited its commercial reach.",
+    "devStory": "A Sega group that later became AM1 developed Galaxy Force alongside Yu Suzuki's Power Drift, as part of Sega's Super Scaler line, to show off the Y Board's rotating backgrounds and large numbers of sprites; Katsuhiro Hayashi and Koichi Namiki, who had worked on Thunder Blade, composed the music. The original came out in Japan in April 1988, and the Deluxe and Super Deluxe cabinets cost up to £17,000 or $30,000. Almost every home version is based on Galaxy Force II, except the Master System one; CRI developed the FM Towns and Mega Drive versions, and M2 made a 3D version for the Nintendo 3DS in 2013.",
     "sources": [
       {
         "title": "Galaxy Force",
@@ -5212,20 +5239,21 @@
     "title": "Thunder Blade",
     "year": 1987,
     "decade": "1980s",
-    "developer": "Sega",
+    "developer": "Sega R&D1",
     "publisher": "Sega",
     "genre": "Shooter",
     "platform": "Arcade",
     "image": "images/games/thunder-blade.png",
     "description": "Thunder Blade (1987) is Sega's helicopter gunship shooter, alternating between overhead stages and behind-the-craft 3D flight.",
-    "longDescription": "Thunder Blade pilots an attack helicopter against tanks, gunships and fortresses. Each stage begins viewed from above and then switches to a third-person view behind the helicopter as it weaves between skyscrapers and canyons. It used Sega's sprite-scaling hardware for its 3D sections, and a deluxe cabinet moved the seat with the flight stick. It was part of Sega's run of high-end arcade spectacles in the late 1980s.",
+    "longDescription": "The player flies a helicopter gunship armed with a chain gun and missiles against tanks, helicopters, other vehicles and structures. Each level is played either from above or from a third-person view behind the helicopter. The player has two lives, which act as continues, and a cleared level can be returned to later without replaying the ones before it. The stand-up cabinet uses force feedback, vibrating the joystick, while the sit-down cabinet, shaped like a helicopter, replaces that with a cockpit seat that moves in tandem with the stick, a motion-simulator design like Space Harrier and After Burner. Its plot and setting were inspired by the 1983 film Blue Thunder.",
     "trivia": [
-      "Thunder Blade switched between overhead and third-person perspectives within the same game — a technical achievement in 1987.",
-      "The hydraulic joystick — rather than a full motion cabinet — was Sega's cost-reduced approach to simulated flight.",
-      "Both aircraft and ground enemies required different attack approaches, forcing players to switch mental models between phases.",
-      "Sega's Super Scaler hardware family — used across Space Harrier, Out Run, After Burner, and Thunder Blade — was the most capable sprite-scaling system of the era."
+      "A digitised frame from the film Blue Thunder became its title screen.",
+      "The sit-down cabinet's seat moves with the joystick.",
+      "Super Thunder Blade followed as a Mega Drive exclusive.",
+      "The ZX Spectrum version won a Crash Smash award.",
+      "A 3D Classics remake came to the Nintendo 3DS in 2014."
     ],
-    "devStory": "Thunder Blade was developed by Sega in 1987. The helicopter combat game alternated between overhead and third-person behind-the-craft perspectives, using Sega's Super Scaler hardware for smooth sprite scaling. The hydraulic cabinet tilted the joystick platform rather than the entire seat. Thunder Blade was part of Sega's late-1980s push to dominate the high-end arcade market.",
+    "devStory": "Sega R&D1 developed it on the Sega X Board, with music by Koichi Namiki, and a digitised frame from Blue Thunder became its title screen. Sega released it in Japan on 18 December 1987, in Europe in January 1988 and in North America that February. Game Machine ranked it Japan's fourth most successful upright arcade unit of January 1988, and it was the ninth-highest-grossing dedicated arcade game in Japan that year. U.S. Gold published the home computer versions, and the Master System version won a Golden Joystick Award as console game of the year.",
     "sources": [
       {
         "title": "Thunder Blade",
@@ -11707,12 +11735,15 @@
     "platform": "Atari 2600",
     "image": "images/games/combat-2600.png",
     "description": "Combat (1977) was the two-player duel packed in with most Atari 2600 consoles for five years: tanks, biplanes and jets trading shots in rounds just over two minutes long.",
-    "longDescription": "Two players face each other on one screen, each steering a vehicle with a joystick and firing at the other. The cartridge offers three kinds of battle. Tank games are played from above, with variations that add obstacles, shots that bounce off walls and tanks that turn invisible. Biplane fights are seen from the side, and jet battles return to an overhead view. A round lasts two minutes and sixteen seconds, and whoever scores more hits wins. The whole game fits in two kilobytes of ROM, and it grew out of Atari's 1974 arcade game Tank.",
+    "longDescription": "Two players face each other on one screen, each steering a vehicle with a four-direction joystick and firing missiles with its button. The cartridge offers three kinds of battle. Tank games are played from above, with variations that add obstacles, missiles that bounce off walls in \"Tank-Pong\", and invisible tanks that show only when they fire or are hit. Biplane fights are seen from the side and jet battles from above; the aircraft fly forward continuously, with no obstacles, and optional clouds can hide them. The console's difficulty switches change missile range and, in the plane games, flying speed. A round lasts two minutes and sixteen seconds, each hit scores a point, and whoever scores more wins. The whole game fits in two kilobytes of ROM, and it grew out of Atari's 1974 arcade game Tank.",
     "trivia": [
       "Combat was bundled with most Atari 2600 consoles from 1977 to 1982. Sears' Tele-Games version of the console came with Air-Sea Battle instead, and sold Combat under the name Tank Plus.",
-      "A sequel, Combat Two, was announced in 1982 but never released. A prototype surfaced in 1999 and was later included on the Atari Flashback 2 and Atari 50 collections."
+      "A sequel, Combat Two, was announced in 1982 but never released. A prototype surfaced in 1999 and was later included on the Atari Flashback 2 and Atari 50 collections.",
+      "Combat Two was planned with water, forests, bridges and a level editor.",
+      "Flux ranked it 48th in its 1995 list of the top 100 video games.",
+      "Limited physical copies were sold at the 2001 Classic Gaming Expo."
     ],
-    "devStory": "Combat was programmed by Ron Milner, Steve Mayer, Joe Decuir and Larry Wagner, and Mayer was already working on it by late 1975, when Atari bought his consulting firm Cyan Engineering. It shipped as a launch title for the Atari Video Computer System in 1977.",
+    "devStory": "Steve Mayer was already working on it by late 1975, as a tank game on early prototype 2600 hardware engineered by Mayer and Ron Milner of Cyan Engineering, which Atari bought that year. Joe Decuir coded it in assembly language, testing it on hardware still in development, and Larry Wagner finished it, refining the tank modes and adding the two aircraft modes. It shipped as a launch title for the Atari Video Computer System in 1977, with cover art by Cliff Spohn.",
     "sources": [
       {
         "title": "Combat (1977 video game)",
