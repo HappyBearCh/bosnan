@@ -1823,6 +1823,52 @@ function shortenSubtitle(raw, max = 65) {
   return out.length > subject.length ? escapeHtml(out) : escapeHtml(subject);
 }
 
+// Entry pages are titled `${name} – ${navLabel} – Bosnan`, and for a short
+// name that leaves half of the ~60 characters Google renders unused, with a
+// bare section label ("Sega – Developers – Bosnan") that matches nothing
+// anyone searches for. The descriptor names what the page actually is, and is
+// applied only when the result still fits, so long names keep the original.
+const ENTRY_TITLE_DESCRIPTORS = new Map(Object.entries({
+  developers: 'Game Developer History & Classic Games',
+  publishers: 'Video Game Publisher History',
+  studios: 'Game Studio History & Origins',
+  designers: 'Game Designer Profile & Games',
+  producers: 'Video Game Industry Profile',
+  composers: 'Video Game Composer & Soundtracks',
+  'voice-actors': 'Video Game Voice Roles',
+  'pixel-artists': 'Pixel Artist Profile & Games',
+  critics: 'Video Game Critic & Journalist',
+  characters: 'Video Game Character History',
+  franchises: 'Game Series History',
+  magazines: 'Video Game Magazine History',
+  comics: 'Video Game Comic History',
+  hardware: 'Retro Gaming Hardware History',
+  'arcade-boards': 'Arcade Board History & Games',
+  peripherals: 'Retro Console Peripheral History',
+  'sound-chips': 'Sound Chip History & Games',
+  'game-engines': 'Game Engine History & Games',
+  'failed-consoles': 'Why the Console Failed',
+  sequels: 'Retro Sequel Retrospective',
+  cancelled: 'Cancelled Video Game History',
+  glitches: 'Video Game Glitch Explained',
+  'cheat-codes': 'Cheat Code History & How It Works',
+  'retro-revival': 'Retro-Style Game Retrospective',
+  ports: 'Port Comparison Across Platforms',
+  imports: 'Import Game Guide',
+  bossfights: 'Boss Fight Breakdown',
+  essays: 'Retro Gaming History Essay',
+  'lost-games': 'Lost Video Game History',
+  'rom-hacks': 'ROM Hack Profile',
+}));
+
+function describeEntryTitle(raw, segments, max = 60) {
+  if (segments.length !== 2 || !ENTRY_TITLE_DESCRIPTORS.has(segments[0])) return null;
+  const m = unescapeHtml(raw).replace(/\s+/g, ' ').trim().match(/^(.+?) – [^–]+ – Bosnan$/);
+  if (!m) return null;
+  const out = `${m[1]} – ${ENTRY_TITLE_DESCRIPTORS.get(segments[0])} – Bosnan`;
+  return out.length <= max ? escapeHtml(out) : null;
+}
+
 function trimTitle(raw, max = 60) {
   const text = unescapeHtml(raw).replace(/\s+/g, ' ').trim();
   if (text.length <= max) return null;
@@ -1857,6 +1903,9 @@ app.use((req, res, next) => {
         const t = HUB_TITLES.get(hubSlug).replace('{n}', () => hubEntryCount(hubSlug, body));
         body = body.replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(t)}</title>`);
       }
+      const described = body.match(/<title>([^<]*)<\/title>/);
+      const describedTitle = described && describeEntryTitle(described[1], pathSegments);
+      if (describedTitle) body = body.replace(described[0], `<title>${describedTitle}</title>`);
       const titleMatch = body.match(/<title>([^<]*)<\/title>/);
       if (titleMatch) {
         const trimmed = trimTitle(titleMatch[1]);
@@ -3925,6 +3974,13 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 </html>`;
 }
 
+// Game text is stored with blank lines between paragraphs; one <p> per
+// paragraph keeps them from running together into a single block.
+function paragraphs(text) {
+  return String(text || '').split(/\n\s*\n/).map(t => t.trim()).filter(Boolean)
+    .map(t => `<p>${escapeHtml(t)}</p>`).join('\n        ');
+}
+
 function gameDetailPage(game, base) {
   const url = `${base}/games/${game.id}`;
   const shareImg = gameShareImage(game);
@@ -4029,19 +4085,19 @@ ${nav('games')}
       <p class="game-detail-year">${escapeHtml(String(game.year))} &middot; ${escapeHtml(game.genre)} &middot; ${escapeHtml(game.platform)}</p>
       ${bookmarkBtn(game.id, game.title, 'game')}
       <div class="game-detail-desc">
-        <h2>Overview</h2>
+        <h2>About ${escapeHtml(game.title)}</h2>
         <p>${escapeHtml(game.description)}</p>
       </div>
       <div class="game-detail-desc">
-        <h2>Deep Dive</h2>
-        <p>${escapeHtml(game.longDescription)}</p>
+        <h2>${escapeHtml(game.title)} in Depth</h2>
+        ${paragraphs(game.longDescription)}
       </div>
       ${game.devStory ? `<div class="game-detail-desc">
-        <h2>Developer Story</h2>
-        <p>${escapeHtml(game.devStory)}</p>
+        <h2>Making ${escapeHtml(game.title)}</h2>
+        ${paragraphs(game.devStory)}
       </div>` : ''}
       ${game.trivia && game.trivia.length ? `<div class="game-detail-desc game-trivia">
-        <h2>Did You Know?</h2>
+        <h2>${escapeHtml(game.title)} Trivia</h2>
         <ul class="trivia-list">
           ${game.trivia.map(t => `<li>${escapeHtml(t)}</li>`).join('\n          ')}
         </ul>
