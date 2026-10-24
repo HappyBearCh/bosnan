@@ -22482,5 +22482,985 @@
         "url": "https://en.wikipedia.org/wiki/Meridian_59"
       }
     ]
+  },
+  {
+    "id": "street-fighter-alpha-2",
+    "title": "Street Fighter Alpha 2",
+    "year": 1996,
+    "decade": "1990s",
+    "developer": "Capcom",
+    "publisher": "Capcom",
+    "genre": "Fighting",
+    "platform": "Arcade",
+    "image": "images/games/street-fighter-alpha-2.png",
+    "description": "Street Fighter Alpha 2 (1996), Street Fighter Zero 2 in Japan, is Capcom's arcade sequel that added Custom Combos, secret rival battles and Sakura, and was Japan's highest-grossing arcade game of 1996.",
+    "longDescription": "Alpha 2 keeps the first game's three-level Super Combo gauge, Alpha Counters, air blocking and fall breaking, but replaces Chain Combos with the Custom Combo. With at least one level of gauge, pressing two punches and a kick, or one punch and two kicks, starts a timed window in which the player can string any basic and special moves together until a timer gauge runs out. Only Guy and Gen can still chain, and to a lesser extent. Every character now has two Alpha Counters, one on punch and one on kick.\n\nThe single-player mode runs eight matches with a fixed final opponent for each character. Each character also has a secret rival who, if certain requirements are met, interrupts a match for a scripted exchange and a fight. With Akuma now a regular, a stronger Shin Akuma takes his place as the hidden challenger, appearing before the final opponent. All thirteen characters from Alpha return, with M. Bison, Akuma and Dan selectable from the start, joined by Dhalsim and Zangief, Gen from the original Street Fighter, Rolento from Final Fight and the newcomer Sakura, a schoolgirl who took up street fighting after seeing Ryu fight. A \"classic\" Chun-Li wears her Street Fighter II outfit.",
+    "trivia": [
+      "Capcom USA chose three extra characters for the Western arcade release: Evil Ryu and \"EX\" versions of Dhalsim and Zangief using their Street Fighter II moves.",
+      "Shinji Mikami said normal hits were made to do more damage so the new characters would stay balanced.",
+      "Nintendo published the SNES version outside Japan; it used the S-DD1 chip to decompress graphics but still had loading times.",
+      "Capcom sold unsold SNES cartridges at a loss outside the US to clear its warehouses.",
+      "Gamest readers voted Dan and Sakura first and third in their top characters of 1996."
+    ],
+    "devStory": "Capcom unveiled the game at the AOU show in Tokyo in February 1996. Game Machine named it Japan's most successful arcade game of April 1996, ahead of Virtua Fighter 2, and it became the highest-grossing arcade game of the year in Japan; Gamest readers voted it Best Game of 1996. An update, Street Fighter Zero 2 Alpha, added EX versions of more Street Fighter II characters, a survival mode and a two-on-one Dramatic Battle, and reached home consoles as Street Fighter Alpha 2 Gold in the Street Fighter Collection.\n\nThe 1996 PlayStation and Saturn ports were praised for their faithfulness and for dropping the first game's easily exploited chain combos. EGM made the Saturn version, which kept more animation and the Western extra characters, a Game of the Month and later ranked it 36th among the best console games; it sold over 400,000 copies in Japan. Critics found the SNES version slow and choppy, though IGN later ranked it 96th among SNES games for how far it pushed the hardware. Street Fighter Alpha 3 followed in 1998.",
+    "sources": [
+      {
+        "title": "Street Fighter Alpha 2",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Street_Fighter_Alpha_2"
+      }
+    ]
+  },
+  {
+    "id": "street-fighter-alpha-3",
+    "title": "Street Fighter Alpha 3",
+    "year": 1998,
+    "decade": "1990s",
+    "developer": "Capcom",
+    "publisher": "Capcom",
+    "genre": "Fighting",
+    "platform": "Arcade",
+    "image": "images/games/street-fighter-alpha-3.png",
+    "description": "Street Fighter Alpha 3 (1998), Street Fighter Zero 3 in Japan, is the final Alpha game, a CP System II fighter with selectable \"isms\", a guard-crush gauge and a roster that kept growing across its many home versions.",
+    "longDescription": "In place of the earlier Manual and Auto modes, players choose one of three \"isms\". A-ism (Z-ism in Japan) plays like the earlier Alpha games, with a three-level Super Combo gauge and several Super Combos. X-ism, named after Super Street Fighter II X, gives a single gauge level and one powerful Super Combo, the most attack and the least defence, but no air blocking or Alpha Counters. V-ism has no Super Combos but allows Alpha 2-style Custom Combos, started by pressing punch and kick of the same strength. Every character's moves vary by ism. A new Guard Power Gauge drains as the player blocks; when it empties, the guard breaks and the bar shrinks. Throws now use two punch or kick buttons, and a Super Combo's level depends on which strength of button is pressed.\n\nAll eighteen Alpha 2 characters return, joined by Cammy, E. Honda, Blanka, Balrog and Vega, and by newcomers R. Mika, a wrestler who idolises Zangief, Sakura's rival Karin from the manga Sakura Ganbaru!, Cody from Final Fight, now an escaped convict, and the Shadaloo \"Dolls\" Juli and Juni.",
+    "trivia": [
+      "The PlayStation version swapped hit sprites for polygons to save memory for animation and added a World Tour mode for building up a character.",
+      "In the Japanese PlayStation version a PocketStation could be used to train a character.",
+      "The Saturn version, released only in Japan, used Sega's 4 MB RAM cartridge to come close to arcade-perfect.",
+      "The Game Boy Advance version had so little room for voices that characters shared pitch-shifted samples, such as a higher Ken voice for Sakura.",
+      "The PlayStation version sold a million copies."
+    ],
+    "devStory": "Capcom released Alpha 3 in arcades in 1998 on the same CP System II hardware as the earlier Alpha games, and Game Machine listed it as Japan's second most successful arcade game of September 1998. The PlayStation port the same year added Dee Jay, Fei Long, T. Hawk, Guile, Evil Ryu and Shin Akuma. Next Generation called it possibly \"the most playable and innovative fighting game since the original Street Fighter II\", and the Official UK PlayStation Magazine said it would outlast Tekken 3, faulting only its graphics.\n\nThe Dreamcast's Saikyo Dojo version added online score display and downloadable weekly opponents, and in 2001 Street Fighter Zero 3 Upper brought the home characters back to arcades on Sega's NAOMI board. Later handheld versions added Yun, Maki, Eagle and Ingrid, for 39 characters on the PSP. Game Informer ranked it the 18th best fighting game of all time in 2019.",
+    "sources": [
+      {
+        "title": "Street Fighter Alpha 3",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Street_Fighter_Alpha_3"
+      }
+    ]
+  },
+  {
+    "id": "x-men-children-of-the-atom",
+    "title": "X-Men: Children of the Atom",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "Capcom",
+    "publisher": "Capcom",
+    "genre": "Fighting",
+    "platform": "Arcade",
+    "image": "images/games/x-men-children-of-the-atom.png",
+    "description": "X-Men: Children of the Atom (1994) is Capcom's first fighting game with Marvel characters, a fast CP System II fighter with air combos and crumbling multi-level stages that laid the groundwork for Marvel vs. Capcom.",
+    "longDescription": "The game follows the conventions of Street Fighter II and Darkstalkers, with ten selectable characters, six X-Men and four of their enemies, fighting best-of-three one-on-one matches. An X-Power gauge builds as the player attacks and powers X-Abilities and the more costly Hyper X moves, and breaking a throw or counter-throwing also uses some of it. New to Capcom's fighters were super jumps, long combos that can continue in the air, rolling away from or toward an opponent after falling, aiming projectiles such as Cyclops's optic blasts, and chasing a thrown opponent for follow-up attacks. Players can choose manual or automatic blocking, though automatic blocking disables some features. Some stages have floors that crumble, dropping the fighters to a lower level.\n\nLoosely based on the comics' \"Fatal Attractions\" story, the plot has Magneto planning an electromagnetic pulse to plunge humanity into a dark age, with the X-Men's foes on his side. The single-player mode pits the player against six opponents and then the bosses Juggernaut and Magneto, and Akuma can appear as a secret opponent. The voice actors from the 1990s X-Men cartoon reprised their roles.",
+    "trivia": [
+      "Capcom's contract with Marvel required a Street Fighter character, so Akuma was added as a secret opponent.",
+      "The arcade game used 32 MB for character data alone, while the Saturn, PlayStation and 3DO had 2 MB of RAM, so a third of the animation was cut for the Saturn.",
+      "Playing as Juggernaut in the Japanese Saturn version was left in by mistake, Capcom said.",
+      "Probe Entertainment struggled with the PlayStation version, which slipped from 1996 to 1998.",
+      "RePlay reported it as North America's most popular arcade game of March 1995."
+    ],
+    "devStory": "Capcom released the game in Japan in December 1994 and in North America on 5 January 1995, building on its work on Super Street Fighter II Turbo and Darkstalkers. Next Generation praised its characters, mechanics, animation and voices while calling it \"no better or worse than several others\". The Saturn version, released in Japan in November 1995 and by Acclaim in the West in 1996, was hailed as near arcade-perfect; Sega Saturn Magazine called it \"the first time comic book superheroes have been successfully translated to game format\". By contrast, the MS-DOS version was mixed and the 1998 PlayStation version was panned for slowdown and missing frames, arriving after its own successors. Its fast pace, air combos and multi-level stages became the basis for X-Men vs. Street Fighter in 1996 and the Marvel vs. Capcom series that followed.",
+    "sources": [
+      {
+        "title": "X-Men: Children of the Atom (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/X-Men:_Children_of_the_Atom_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "vampire-savior",
+    "title": "Vampire Savior: The Lord of Vampire",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Capcom",
+    "publisher": "Capcom",
+    "genre": "Fighting",
+    "platform": "Arcade",
+    "image": "images/games/vampire-savior.png",
+    "description": "Vampire Savior: The Lord of Vampire (1997) is the third Darkstalkers game, released at home as Darkstalkers 3, a Capcom fighter that replaced rounds with a single bout and two life bars.",
+    "longDescription": "Instead of rounds, each fight is a single bout. Every fighter has two life bars with markers, like Rare's Killer Instinct; when one bar empties, the fighters reset their positions as if a new round had started, but the winner keeps whatever health they had left. Part of the damage taken shows in white and can be recovered if the player avoids being hit again. The Dark Force System spends meter to give each character a unique special ability for a limited time.\n\nThe roster carries over from Night Warriors, minus Donovan, Huitzil and Pyron, and adds four newcomers: Jedah, Lilith, Q-Bee and B. B. Hood. Dark Talbain, an evil double of Jon Talbain, is his final opponent and a hidden playable character; Oboro Bishamon is a hidden boss; and Shadow lets the player take over the fighter just defeated for the next match. The story centres on Jedah Dohma, a noble of the demon world of Makai who has returned from the dead and creates a pocket dimension, Majigen, drawing in worthy souls to feed his new world.",
+    "trivia": [
+      "It was going to be called Darkstalkers: Jedah's Damnation outside Japan; the US arcade title became Vampire Savior: World of Darkness.",
+      "Two Japan-only updates, Vampire Hunter 2 and Vampire Savior 2, came out simultaneously in September 1997 with different rosters.",
+      "The Japan-only Saturn version needed Capcom's 4 MB RAM cartridge and reproduced the arcade animation more faithfully than earlier home versions.",
+      "The PlayStation's Darkstalkers 3 compiled all three arcade versions and all 18 characters.",
+      "GameSpot's Jeff Gerstmann called it \"easily the best fighter Capcom has put out in years\"."
+    ],
+    "devStory": "Capcom released Vampire Savior in Japanese arcades in 1997, and Game Machine listed it as the country's second most successful arcade game in its 15 June 1997 issue. Next Generation found it fun but \"nothing special\" next to Night Warriors, while GamePro said that despite being more of Capcom's 2D formula it \"holds up beautifully\"; both praised its animation and special moves. In 1998 it came to the Saturn in Japan and to the PlayStation as Vampire Savior: EX Edition, released in the West as Darkstalkers 3, which IGN called one of the best 2D fighters on the console. It was later remastered in Darkstalkers Resurrection and included in the 2022 Capcom Fighting Collection, and Eurogamer likened it to Street Fighter III: 3rd Strike as a second sequel in which Capcom \"tends to go the full distance\".",
+    "sources": [
+      {
+        "title": "Vampire Savior",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Vampire_Savior"
+      }
+    ]
+  },
+  {
+    "id": "rival-schools-united-by-fate",
+    "title": "Rival Schools: United by Fate",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Capcom",
+    "publisher": "Capcom",
+    "genre": "Fighting",
+    "platform": "Arcade",
+    "image": "images/games/rival-schools-united-by-fate.png",
+    "description": "Rival Schools: United by Fate (1997) is Capcom's comic 3D tag-team fighter about feuding students in a Japanese city, made for 60 frames per second on Sony ZN-2 hardware and later expanded on two PlayStation discs.",
+    "longDescription": "It plays like a polygonal Marvel vs. Capcom with Star Gladiator's four-button layout of two punches and two kicks. Each player picks a team of two, but the fights are one-on-one: the partner joins only for a Team Up attack, offensive or defensive, triggered by pressing punch and kick of the same strength when there is enough \"vigor\". The vigor meter stores up to nine levels; Team Ups cost two and solo super moves one. After each round, win or lose, the player can switch to the partner for the next. Every character has universal low and high launchers into air combos. Tardy Counters let a blocking player strike straight back with any hard normal, special or super move at no cost, and an Attack Cancel, timing a hit against an incoming one, cancels both and earns a level of vigor.\n\nIn Aoharu City, schools are suffering attacks and kidnappings, and students set out to find the culprit, which turns out to be the elite Justice High and its principal Raizo Imawano, with his nephew Hyo as the true mastermind. Choosing two characters from the same school gives a story mode with set fights and 2D cut-scenes; mixed teams play a standard arcade ladder. Sakura from Street Fighter is part of the cast.",
+    "trivia": [
+      "Its working title was Justice Fist, about fighters from every country deciding who was strongest.",
+      "Director Hideaki Itsuno chose a school setting because he believed everyone had experience of school.",
+      "The two-character teams came from a programmer showing Itsuno three playable characters on one screen.",
+      "Sakura was included as \"insurance\" against poor sales.",
+      "The PlayStation's Evolution Disc had a dating-sim character creation mode that was dropped from the Western release as too long to translate."
+    ],
+    "devStory": "Itsuno wanted a polygon fighting game that ran at 60 frames per second; Capcom's earlier Star Gladiator ran at 30. His first design drew a muted response, so he reworked it around a school, at first imagining 40 characters fighting to be class representatives. Capcom artist Bengus drew all the character art. An unfinished version was Capcom's most popular game at the September 1997 JAMMA show, drawing bigger crowds than Street Fighter III: 2nd Impact, and Game Machine listed it as Japan's most successful arcade game in its 1 February 1998 issue.\n\nThe 1998 PlayStation version came on two discs, adding animated intros and endings, a voiced story mode and two characters, the PE teacher Hayato and gang leader Daigo, plus an Evolution Disc of minigames. Next Generation called the arcade game \"good, clean button mashing\" and the PlayStation version \"one of the more enjoyable fighting games available\". A Japan-only Nekketsu Seisyun Nikki 2 followed, then Project Justice in 2000; the band Rival Schools and its album United by Fate are named after the game.",
+    "sources": [
+      {
+        "title": "Rival Schools: United by Fate",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Rival_Schools:_United_by_Fate"
+      }
+    ]
+  },
+  {
+    "id": "tekken-2",
+    "title": "Tekken 2",
+    "year": 1995,
+    "decade": "1990s",
+    "developer": "Namco",
+    "publisher": "Namco",
+    "genre": "Fighting",
+    "platform": "Arcade",
+    "image": "images/games/tekken-2.png",
+    "description": "Tekken 2 (1995) is Namco's 3D fighting sequel with 25 fighters, a boxing kangaroo among them, whose PlayStation version introduced the series' Survival, Team Battle and Practice modes and sold 5.7 million copies.",
+    "longDescription": "The fighting system keeps Tekken's four buttons, one for each limb, 2D backgrounds and a playing field with no edges. New are attack reversals for some characters, back throws, chain throws and a sidestep for Kazuya and Heihachi, while Yoshimitsu gets a spinning sidestep that costs him health. Tackles do damage when made from a long run. Beating arcade mode with one of the ten starting characters unlocks that character's sub-boss.\n\nThere are 25 playable fighters, 17 returning and eight new. Characters who were clones in the first game became distinct, though they still share many moves, and Devil Kazuya, a palette swap in the first game's home version, is now a separate final boss. The newcomers include Jun Kazama, an animal-rights activist sent to arrest Kazuya; the Hong Kong police officer Lei Wulong; the taekwondo fighter Baek Doo San; the amnesiac kickboxer Bruce Irvin; and two genetically altered boxers, the kangaroo Roger and the dinosaur Alex. The story picks up two years after the first tournament: Kazuya, consumed by the Devil within him, runs the Mishima Zaibatsu, and Heihachi, who survived being thrown off a cliff, enters Kazuya's new tournament for revenge. The PlayStation version added CGI endings for every character.",
+    "trivia": [
+      "Roger the kangaroo began as a team member's spare-time project, which colleagues pushed to put in the game.",
+      "Roger, Alex and the devil were added partly to break with the realism of Virtua Fighter.",
+      "Each character has roughly 800 polygons and took three days to a week to model.",
+      "The PlayStation has roughly half the memory used by the arcade game's data, so much of the conversion went into rewriting code to fit.",
+      "Footballer David James blamed his passion for the game for a decline in his performance."
+    ],
+    "devStory": "Development took about seven months before the arcade release in August 1995, with an updated Ver. B in October. It became Japan's most successful arcade game in Game Machine's 15 September 1995 issue and the country's highest-grossing arcade game of 1996, and sold about 40,000 arcade units worldwide. Yoshie Takayanagi and Yoshie Arakawa composed most of the music.\n\nThe 1996 PlayStation version sold over 1.2 million copies in Japan that year, making it the year's best-selling game there, and nearly a million in North America within four months; it reached 5.7 million worldwide. It holds a 93% GameRankings average. EGM's Crispin Boyer called it \"the best 3-D fighting game you can find for any system\", and critics singled out its practice mode as a feature that would become standard. Tekken 3 followed in 1997.",
+    "sources": [
+      {
+        "title": "Tekken 2",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tekken_2"
+      }
+    ]
+  },
+  {
+    "id": "samurai-shodown-ii",
+    "title": "Samurai Shodown II",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "SNK",
+    "publisher": "SNK",
+    "genre": "Fighting",
+    "platform": "Neo Geo",
+    "image": "images/games/samurai-shodown-ii.png",
+    "description": "Samurai Shodown II (1994) is SNK's Neo Geo weapons fighter, rebuilt from the ground up after the first game's success, with weapon-breaking POW supers, rolls and hops, and an early form of the parry.",
+    "longDescription": "SNK rebuilt the sequel from scratch, bringing back almost all of the first game's cast, adding new fighters and making the controls more responsive. The POW meter now powers super special moves that do heavy damage and break the opponent's weapon, leaving them to fight unarmed until a replacement is thrown in. Fighters can roll forward and backward, duck high attacks and hop over low strikes. A last-second command lets a player deflect an incoming blow and leave the attacker briefly open, an offensive block later used in Namco's WeaponLord and popularised by Capcom's Street Fighter III. Cameos from other SNK characters, a hidden boss and many Easter eggs reward exploration.\n\nA year after Amakusa's defeat, the vengeful spirit Mizuki Rashojin has possessed a shrine priestess to bring chaos in the name of the dark god Ambrosia. Tam Tam and Amakusa sit out; the new warriors are Haohmaru's merciless rival Genjuro Kibagami, Tam Tam's cat-like sister Cham Cham, the Prussian knight Neinhalt Sieger with his gun-filled gauntlet, the tiny old monk Nicotine Caffeine, the referee Kuroko as a hidden boss using moves from other SNK fighters, and Mizuki herself, the series' first female final boss, aided by the demon dog Maju.",
+    "trivia": [
+      "Tam Tam was turned into Cham Cham's pet chimpanzee, Paku Paku, as divine punishment for losing his village's sacred stones.",
+      "The Neo Geo AES version hides the blood, but SNK handed out a code to restore it through magazines and its customer service line.",
+      "Its awkward English intro was not fixed because Neo Geo home sales were too small to justify paying for translation corrections.",
+      "It was the 12th most popular arcade game in North America in October 1994 while still in location tests.",
+      "Game Informer ranked it the ninth best fighting game of all time in 2019."
+    ],
+    "devStory": "SNK released the game for Neo Geo arcades and home systems in 1994. Game Machine listed it as Japan's most successful table arcade unit in its 1 December 1994 issue, and it was the country's eighth highest-grossing arcade game of 1995. The AES and CD home versions sold 335,505 copies in Japan. For years it reached no other Western platform except the PC; Xbox Live Arcade and Virtual Console versions followed in 2008.\n\nEGM's four reviewers gave the home version 9/10 each and their Game of the Month. GamePro praised \"the best graphics ever seen in a hand-drawn animated fighting game\" while noting unbalanced combos, and suggested SNK was close to overtaking Capcom as the leading maker of fighting games. Retro Gamer called it \"a fantastic two-fingered salute to Capcom\", easily the best in the series for sheer fun and accessibility, though lacking the depth of later games.",
+    "sources": [
+      {
+        "title": "Samurai Shodown II",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Samurai_Shodown_II"
+      }
+    ]
+  },
+  {
+    "id": "gradius-iii",
+    "title": "Gradius III",
+    "year": 1989,
+    "decade": "1980s",
+    "developer": "Konami",
+    "publisher": "Konami",
+    "genre": "Horizontal Shooter",
+    "platform": "Arcade",
+    "image": "images/games/gradius-iii.png",
+    "description": "Gradius III (1989) is Konami's third Gradius, a Japan-only arcade shooter with an Edit Mode for custom weapon sets, best known in the West as a reworked SNES launch game.",
+    "longDescription": "The player flies the Vic Viper against the Bacterion Empire across ten levels with the weapons, layouts and enemies familiar from the series. Stage 4 is a kind of bonus level seen from behind the ship, in which the player must avoid hitting walls while collecting floating power-ups, with no enemies at all. Two hidden levels are based on the early sections of Gradius and Salamander. Besides new preset weapon schemes, the new Edit Mode lets players build their own combination of missile, double, laser, shield and special power-ups, though some weapons are only available in the presets and others only in custom setups.\n\nLike earlier Japanese versions in the series, it has no continues. The Japanese version includes a beginner mode covering the first three levels at an easier difficulty, after which the game invites the player to try the normal \"technical\" mode, which loops endlessly. The Asian release outside Japan lacks the beginner mode and the introduction but is easier overall.",
+    "trivia": [
+      "It was released only in Japan, on 11 December 1989; the arcade version did not reach the West until the Gradius III & IV compilation on the PlayStation 2.",
+      "The SNES version is the only one that allows continues.",
+      "On the SNES, tapping A sixteen times within a second on the options screen unlocks a harder \"Arcade\" difficulty.",
+      "The PS2 version added an optional \"wait level\" to recreate the arcade slowdown that the faster hardware no longer produced.",
+      "Its music was composed and performed by Konami's Kukeiha Club with Miki Higashino."
+    ],
+    "devStory": "Konami released the game in Japanese arcades in December 1989, and Game Machine listed it as the third most successful table arcade unit in its 15 January 1990 issue. The Super Famicom port came in December 1990 and the SNES version in North America in 1991, one of the system's launch games there. It kept the arcade slowdown and added an easier option and extra weapons, but dropped the pseudo-3D and crystal stages, moved and redesigned the cell stage as the finale and added a new high-speed stage with a boss called Beacon. GamePro called it \"one of the most durable side-scrolling shooters\", while Entertainment Weekly thought it too similar to earlier Gradius games to be worth $50. IGN later ranked it 45th among SNES games, and it was re-released on the Wii Virtual Console in 2007 and in Gradius Collection on the PSP.",
+    "sources": [
+      {
+        "title": "Gradius III",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Gradius_III"
+      }
+    ]
+  },
+  {
+    "id": "pac-mania",
+    "title": "Pac-Mania",
+    "year": 1987,
+    "decade": "1980s",
+    "developer": "Namco",
+    "publisher": "Namco / Atari Games",
+    "genre": "Maze",
+    "platform": "Arcade",
+    "image": "images/games/pac-mania.png",
+    "description": "Pac-Mania (1987) is Namco's scrolling, oblique-view Pac-Man directed by series creator Tōru Iwatani, which let Pac-Man jump over ghosts and was the last new Pac-Man arcade game for nearly a decade.",
+    "longDescription": "Seen from an oblique angle, the game plays much like the original: Pac-Man eats every pellet in a maze while avoiding the ghosts Blinky, Pinky, Inky, Clyde and a fifth, Sue, and Power Pellets turn them blue so he can eat them and send them home. The mazes now scroll both horizontally and vertically, and some wrap around at the sides. The big addition is a jump that carries Pac-Man over ghosts. Later rounds bring two new ghosts who can jump too: Funky, whom Pac-Man can only just clear, and Spunky, who cannot be jumped at all. Take too long over a stage and Pac-Man's jump steadily weakens until it is gone.\n\nBonus items appear after a set number of pellets, among them Red Power Pellets, which double the value of blue ghosts until Pac-Man loses a life, and Green Power Pellets, which make him faster for a while. There are four mazes, Block Town, Pac-Man's Park, Sandbox Land and Jungly Steps, cycled in order; the player can start in any of the first three, with a score bonus for starting in Pac-Man's Park or Sandbox Land and clearing its first round. Depending on the settings, the game ends after 11 rounds, 25 rounds or never.",
+    "trivia": [
+      "It was the ninth Pac-Man game and the last made for arcades until Pac-Man Arrangement in 1996.",
+      "Atari sold 1,412 cabinets in North America in 1987, worth about $2.82 million.",
+      "It was runner-up for Best Coin-Op Conversion at the 1987 Golden Joystick Awards, behind Operation Wolf.",
+      "Westwood Studios made the NES version for Tengen.",
+      "Music from Pac-Man's Park and Block Town was later remixed for Super Smash Bros. for Nintendo 3DS and Wii U."
+    ],
+    "devStory": "Namco developed the game under Pac-Man creator Tōru Iwatani and released it in 1987, with Atari Games handling North America; Game Machine listed it as Japan's fifth most successful table arcade unit of December 1987. Critics praised its originality and play. In 1988 Teque Software's Peter Harrap and Shaun Hollingworth converted it for the Amiga, Atari ST, Commodore 64, Amstrad CPC, MSX and ZX Spectrum for Grandslam, followed by X68000 and MSX2 versions in 1989, an Acorn Archimedes port and Tengen's NES and Genesis versions in 1990 and 1991. Entertainment Weekly gave the Genesis version a B−, and Poland's Top Secret gave the NES version full marks for its music, graphics, comic cut scenes and jumping. The arcade game has since appeared in Namco Museum collections, Pac-Man Museum+ and Hamster's Arcade Archives.",
+    "sources": [
+      {
+        "title": "Pac-Mania",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Pac-Mania"
+      }
+    ]
+  },
+  {
+    "id": "galaga-88",
+    "title": "Galaga '88",
+    "year": 1987,
+    "decade": "1980s",
+    "developer": "Namco",
+    "publisher": "Namco / Atari Games",
+    "genre": "Fixed Shooter",
+    "platform": "Arcade",
+    "image": "images/games/galaga-88.png",
+    "description": "Galaga '88 (1987) is Namco's fourth Galaxian game, a detailed update of Galaga with triple fighters, warps between dimensions and a soundtrack the enemies dance to.",
+    "longDescription": "As the Blast Fighter, the player shoots waves of Galaga aliens that fly into formation from the top and sides of the screen and then dive-bomb; touching an alien or its shots costs a life. Each formation is topped by four Boss Galaga, which take two hits and can capture the player's ship with a tractor beam. Shooting a Boss carrying a captured ship as it dives frees it to join the player's ship as a dual fighter, with more firepower and a bigger target. A dual fighter can be captured and rescued in turn to make a triple fighter, with wide, fast shots, which can also be gained from pink capsules.\n\nThe game is split into five worlds of up to four stages each, ending in a bonus stage. Defeating large enemies and destroying obstacles in a world yields up to two blue warp capsules, and finishing the bonus stage with both sends the player into a new dimension with different, harder enemies and formations. Two vertically scrolling stages each feature two enemy formations and a boss, and there are four endings depending on the dimension the player finishes in. Compared with earlier games, it has detailed backgrounds, larger enemies and more detailed ships.",
+    "trivia": [
+      "Composer Hiroyuki Kawada wrote the music for the \"Galactic Dancin'\" bonus stages first, and programmers choreographed the enemies to it.",
+      "Kawada drew on orchestral music, tango, salsa and big band jazz for those stages.",
+      "On the TurboGrafx-16 in North America it was renamed Galaga '90.",
+      "The X68000 version adds a mode that replaces the aliens with characters from other Namco games, later called Galaga '88 Arrangement.",
+      "Atari sold only 986 units and boards in North America by the end of 1988."
+    ],
+    "devStory": "Namco showed a prototype at the JAMMA show in October 1987 alongside Pac-Mania, Bravoman and Assault, released it in Japan that December, and let Atari Games publish it in North America and Europe in 1988. Running on Namco's System 1 board, it let Kawada combine FM synthesis, Namco's wavetable sounds and PCM effects, and he wanted the music to convey entertainment rather than stoicism. It was Japan's sixth highest-grossing arcade conversion kit of 1988, its success there credited to its simplicity and additions, but it did poorly in North America.\n\nComputer + Video Games liked its cute visuals and new ideas, Your Sinclair called it \"one of the most enjoyable machines on offer this month\", and ACE dismissed it as \"nothing more than a prettified version of the original\" while praising its looks and music. Allgame called the TurboGrafx-16 port the best shooter on the system, and Eurogamer described the Virtual Console release as a \"pitch perfect dose of frenetic arcade blasting\". Galaxian³: Project Dragoon followed in 1990.",
+    "sources": [
+      {
+        "title": "Galaga '88",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Galaga_%2788"
+      }
+    ]
+  },
+  {
+    "id": "area-51",
+    "title": "Area 51",
+    "year": 1995,
+    "decade": "1990s",
+    "developer": "Mesa Logic",
+    "publisher": "Atari Games (Time Warner Interactive)",
+    "genre": "Light Gun Shooter",
+    "platform": "Arcade",
+    "image": "images/games/area-51.png",
+    "description": "Area 51 (1995) is Mesa Logic's light-gun shooter for Atari Games, a last-ditch bid to save the struggling company that critics found dated but players made a 20,000-cabinet hit.",
+    "longDescription": "As a member of the STAAR team, alongside Lieutenant Stephanie Grant and Sergeant Major Marcus Bradley, the player fights through a warehouse, tunnels and other parts of the Area 51 facility to trigger its nuclear self-destruct, gunning down genetically altered zombie soldiers and the alien Kronn without hitting teammates. Shooting nothing but three STAAR members switches the game to Kronn Hunter mode, in which the player becomes a Kronn hunter sent to eliminate the rebels.\n\nThe player starts with a semi-automatic pistol and can shoot upgrade targets for a machine gun, a pump shotgun and finally an automatic shotgun; the shotguns give a wider margin for error and the automatics fire while the trigger is held, but any hit drops the player back to the pistol. Up to nine grenades, hidden in crates and bonus rooms, clear most enemies on screen, and flammable boxes and barrels can be shot to blow up nearby foes. Shooting certain objects in the right order opens shooting exercises, weapon stashes and bonus items, and other back doors warp ahead to later levels.",
+    "trivia": [
+      "Designer Robert Weatherby got the idea from a Popular Science article, \"Searching for the Secrets of Groom Lake\".",
+      "It runs on the COJAG, a modified Atari Jaguar, with a hard drive, yet was never released for the Jaguar itself.",
+      "Atari's Silicon Graphics workstations were turned into an overnight render farm when other teams went home.",
+      "The STAAR members were motion-captured, while the enemies were made with stop-motion animation by Sneaky Pete Kleinow.",
+      "It topped RePlay's \"Player's Choice\" chart in December 1995."
+    ],
+    "devStory": "In 1994 Atari Games had gone years without a profitable game and lost many developers to Electronic Arts. It asked Ed Logg for a light-gun game, but he too left for EA with his game, Bounty Hunter, unfinished. Atari handed the project to Robert Weatherby's Mesa Logic, which found Bounty Hunter underwhelming and pitched its own concept instead. Lead programmer Charlie Grisafi dropped plans to stream video from CD, which could only produce a letterboxed picture, in favour of a hard drive and his own compression software.\n\nTime Warner Interactive released it under the Atari Games label in 1995. Next Generation said it \"provides shooters with what they want\" but compared it with older games rather than the current crop, and critics often judged it inferior to Virtua Cop 2. Players disagreed: it sold over 20,000 cabinets and was cited as the first step in Atari Games' recovery from near collapse. Midway released PlayStation, Saturn and Windows versions in 1996, and Atari followed it with Maximum Force and Area 51: Site 4.",
+    "sources": [
+      {
+        "title": "Area 51 (1995 video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Area_51_(1995_video_game)"
+      }
+    ]
+  },
+  {
+    "id": "point-blank",
+    "title": "Point Blank",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "Namco",
+    "publisher": "Namco",
+    "genre": "Light Gun Shooter",
+    "platform": "Arcade",
+    "image": "images/games/point-blank.png",
+    "description": "Point Blank (1994), Gun Bullet in Japan, is Namco's non-violent light-gun party game of quick shooting challenges, hosted by Dr. Dan and Dr. Don, that EGM ranked among the best arcade games of all time.",
+    "longDescription": "Two players with light guns take on short, non-violent shooting contests that test speed, judgement or pinpoint accuracy: hitting bullseyes in their own colour, gunning down cardboard criminals while sparing cardboard civilians, avoiding bombs, and protecting the hosts Dr. Dan and Dr. Don. The difficulty chosen, from Practice and Beginner to Advanced and Very Hard, sets how many stages must be cleared and how tough they are. Missions come in groups of four that can be tackled in any order. Players usually have three lives for the whole game, losing one for missing a stage's quota or shooting a forbidden target, and most stages give unlimited bullets.\n\nThe stages fall into six types. Accuracy rewards hitting the highest-scoring areas; Intelligence means counting to sixteen by shooting numbers; Memory is a card-matching game; Simulation has players shoot robbers but not civilians, or ninjas but not geishas in the Japanese theme; Visual Acuity asks for the target matching a picture; and Speed is a race to shoot targets of the player's colour. At the end the game ranks the player on points, lives left and continues used and suggests what to try next, from a harder difficulty to more practice.",
+    "trivia": [
+      "Japan knows the series as Gun Bullet.",
+      "In the arcade both guns must be calibrated before the on-screen crosshairs will move.",
+      "The 1997 PlayStation version added an arrange mode, many new modes and an RPG-style quest mode, and supports the GunCon.",
+      "Official U.S. PlayStation Magazine called Dr. Dan and Dr. Don \"an underrated dynamic duo\".",
+      "EGM's Dan Hsu and John Ricciardi both called the PlayStation version the best light-gun game they had ever played."
+    ],
+    "devStory": "Namco released Point Blank in arcades in 1994; like its first light-gun game, Steel Gunner, it penalises shooting bombs and cardboard civilians. It was Japan's seventh highest-grossing dedicated arcade game of 1995 and, according to EGM, a \"cult favorite\" in American arcades. The PlayStation version arrived in 1997 and was the third best-selling game in Japan in the week ending 10 August. Critics praised its variety: it tied with Resident Evil 2 for EGM's Game of the Month, GameSpot said it was \"so enjoyable and difficult to put down you won't be bothered by the audiovisual shortcomings\", and Next Generation found its quest mode forced but its two-player contests a highlight. EGM listed it as the seventh best arcade game of all time in 1997. Point Blank 2 followed in 1999 and then Point Blank 3, and a Nintendo DS collection used the stylus instead of a gun.",
+    "sources": [
+      {
+        "title": "Point Blank (video game series)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Point_Blank_(video_game_series)"
+      }
+    ]
+  },
+  {
+    "id": "crash-team-racing",
+    "title": "Crash Team Racing",
+    "year": 1999,
+    "decade": "1990s",
+    "developer": "Naughty Dog",
+    "publisher": "Sony Computer Entertainment",
+    "genre": "Racing",
+    "platform": "PlayStation",
+    "image": "images/games/crash-team-racing.png",
+    "description": "Crash Team Racing (1999) is Naughty Dog's last Crash Bandicoot game, a PlayStation kart racer whose power-slide boosts led critics to rank it alongside, or above, Mario Kart.",
+    "longDescription": "Characters come in three types: large ones with slow acceleration and high top speed, balanced medium ones, and small ones with quick acceleration and sharp handling. The key technique is the power slide: holding a shoulder button to hop and steering before landing starts a slide, and pressing the opposite shoulder button when the Turbo Boost Meter turns red, as the exhaust turns black, gives a boost. Three boosts can be chained in one slide, the third the strongest, but waiting too long backfires and sliding too long spins the kart out. Hang time over jumps also earns boosts, and accelerating just before the start gives a head start. Question-mark crates hold weapons and boosts, and collecting ten Wumpa Fruit makes the kart faster and strengthens power-ups.\n\nIn Adventure mode the alien Nitros Oxide threatens to turn Earth into a concrete parking lot unless its best driver beats him. Winning trophies across a world's tracks opens a boss race for a key to the next, and side events award more: Relic Races against the clock with time-freezing crates, CTR Challenges to collect the letters C, T and R while winning, and Gem Cups. Arcade, Versus and Time Trial modes and a customisable four-player Battle mode round it out.",
+    "trivia": [
+      "It began as an original game with block-headed characters before Naughty Dog agreed to make it a Crash game.",
+      "The team rebuilt Diddy Kong Racing's Crescent Island course in a prototype to test whether a track that size was possible on the PlayStation.",
+      "To avoid drawing up to 64 tyres in four-player split screen, programmer Greg Omi rendered them as camera-facing 2D sprites.",
+      "Nitros Oxide was first planned as a mad scientist trying to speed up the world, an idea referenced in a Disney Adventures comic.",
+      "Polar and Pura were originally going to share one kart as a single character."
+    ],
+    "devStory": "Naughty Dog pitched the game to Sony, which made a publishing deal with Crash owner Universal Interactive; the engine was built while Crash Bandicoot: Warped was in production. A team of 16 to 18 made it in eight months on a $2.4 million budget, with characters designed by Charles Zembillas and Joe Pearson, art direction by Bob Rafei and music by Josh Mancell of Mutato Muzika. The turbo system was meant to make it more involving than older kart games, and memory limits kept Oxide from being playable.\n\nIt was released in North America on 19 October 1999 and in Europe that December, promoted with a Crash-themed NASCAR car and a Pizza Hut demo disc. Critics called it the best kart racer on the PlayStation, and several, including EGM's reviewers, said it outshone Mario Kart for its controls, graphics and tracks, while noting how much it borrowed from Nintendo. It sold 1.9 million copies in the US and over 300,000 in Japan. Crash Nitro Kart followed in 2003, and Beenox remade it as Crash Team Racing Nitro-Fueled in 2019.",
+    "sources": [
+      {
+        "title": "Crash Team Racing",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Crash_Team_Racing"
+      }
+    ]
+  },
+  {
+    "id": "gran-turismo-2",
+    "title": "Gran Turismo 2",
+    "year": 1999,
+    "decade": "1990s",
+    "developer": "Polyphony Digital",
+    "publisher": "Sony Computer Entertainment",
+    "genre": "Racing",
+    "platform": "PlayStation",
+    "image": "images/games/gran-turismo-2.png",
+    "description": "Gran Turismo 2 (1999) is Polyphony Digital's first game as a studio, a PlayStation racing simulation with nearly 650 cars and 27 tracks that shipped 9.37 million copies despite a rushed, buggy release.",
+    "longDescription": "The player races against computer-controlled drivers in two modes. Arcade Mode allows any available car and can enable damage. Simulation Mode, called Gran Turismo Mode in PAL and Japanese versions, is a career in which the player earns driving licences, buys cars and wins trophies to unlock new and returning courses. Nearly 650 cars and 27 tracks are included, among them rally stages.\n\nThe physics, handling and graphics are very close to the first Gran Turismo. The most noticeable change in driving is the brakes, which are much less likely to lock up and cause oversteer. The main differences are the greatly expanded number of cars, tracks and events in Simulation Mode. Players can now enter individual races without taking on a whole tournament, and there is no longer a separate qualifying session before each race.",
+    "trivia": [
+      "Players found glitches soon after launch, and Sony of America offered replacement discs.",
+      "In the 30-lap Trial Mountain endurance race, a 680 bhp Vector M12 LM could appear despite a 295 hp limit, making it nearly unwinnable.",
+      "Full completion is impossible: the game expects 223 events but only 219 are available.",
+      "Its soundtrack includes The Cardigans' 1998 song \"My Favourite Game\".",
+      "It sold 815,430 copies in Japan in its first week."
+    ],
+    "devStory": "After the unexpected success of Gran Turismo, Polys Entertainment was spun off as Polyphony Digital, and lead developer Kazunori Yamauchi set out to make the sequel \"an even better product\". Sony's American executives expected it to \"fly off the shelves faster than the original\". In the UK it sold 130,000 copies in its first weekend, overtaking Ocarina of Time as the fastest-selling title, and about 250,000 in its first week, and it was a best seller for two months there and in Japan. In the US it passed a million within six weeks.\n\nIt received universal acclaim. Next Generation's Dan Egger wrote that \"the rushed production of this game botched what could have been a near perfect sequel\" but that it was \"still the best racer ever made\". Famitsu gave it 34 out of 40, and it was a finalist for console game of the year at the Interactive Achievement Awards. By April 2008 it had shipped 9.37 million copies: 3.96 million in North America, 3.68 million in Europe and 1.73 million in Asia.",
+    "sources": [
+      {
+        "title": "Gran Turismo 2",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Gran_Turismo_2"
+      }
+    ]
+  },
+  {
+    "id": "wipeout-2097",
+    "title": "Wipeout 2097",
+    "year": 1996,
+    "decade": "1990s",
+    "developer": "Psygnosis",
+    "publisher": "Psygnosis",
+    "genre": "Racing",
+    "platform": "PlayStation",
+    "image": "images/games/wipeout-2097.png",
+    "description": "Wipeout 2097 (1996), Wipeout XL in North America and Japan, is Psygnosis's anti-gravity racing sequel with destructible craft, gentler wall collisions and a soundtrack from The Prodigy, The Chemical Brothers and Underworld.",
+    "longDescription": "Set more than four decades after the first game, it introduces the faster and more dangerous F5000 anti-gravity league. Players race hover craft that handle unlike cars, using air brakes to corner at high speed. Each craft now has a shield energy quota, and when weapons and impacts drain it to zero the craft is destroyed, though a pit stop can recharge it at the cost of a few seconds. New weapons include the Quake Disruptor, which sends a wave along the track that throws rivals into the air.\n\nThe classes Vector, Venom and Rapier rise in speed and track complexity. Gold medals on every track in the first three unlock a full season, which in turn reveals hidden options and new tracks, and Challenge mode advances only by winning, and finishing worse than third costs one of three lives. Four teams fly differently: FEISAR's balanced, well-shielded craft suits beginners; AG Systems is quicker than FEISAR but corners worse; Auricom is faster than both; and Qirex the fastest with the poorest steering. The PlayStation version supported analogue control through the NeGcon, while the Saturn port used Sega's 3D Control Pad.",
+    "trivia": [
+      "It began as a tracks add-on for the first Wipeout, and the name 2097 was chosen so it would not seem a full sequel.",
+      "The North American title was going to be Wipeout XS, until someone pointed out that XS could mean \"extra small\".",
+      "Ghost vehicles appeared only in the European version because Atari held a US patent on them from Hard Drivin'.",
+      "Fluke wrote \"Atom Bomb\" for the game, with a music video set in the Wipeout universe.",
+      "The game disc also worked as an audio CD of the soundtrack."
+    ],
+    "devStory": "Psygnosis in Liverpool developed the game in seven months, with promotional art by Sheffield's The Designers Republic. Producer Andy Satterthwaite had asked to make a sequel and was given a tracks add-on instead, with a team of three coders, six artists and Nick Burcombe; work on the tracks began in January 1996, and he realised he could do more. Lead artist Nicky Westcott built on the original craft designs, and the team made the learning curve easier while keeping the top end hard. The biggest change was letting ships scrape along walls instead of stopping dead, which took longer than expected; months went into balancing the AI so that every ship could win. Westcott called it \"a period of great energy and immense exhaustion at the same time\".\n\nShown at E3 in May 1996, it sold around a million copies, and Saturn and Windows ports followed in 1997. GamePro gave it perfect scores, IGN said \"It's games like this that make you proud to be a PlayStation owner\", and EGM named it 1996's best music. It averaged 94.75% on GameRankings, third among PlayStation games there.",
+    "sources": [
+      {
+        "title": "Wipeout 2097",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Wipeout_2097"
+      }
+    ]
+  },
+  {
+    "id": "r4-ridge-racer-type-4",
+    "title": "R4: Ridge Racer Type 4",
+    "year": 1998,
+    "decade": "1990s",
+    "developer": "Namco",
+    "publisher": "Namco",
+    "genre": "Racing",
+    "platform": "PlayStation",
+    "image": "images/games/r4-ridge-racer-type-4.png",
+    "description": "R4: Ridge Racer Type 4 (1998) is Namco's fourth home Ridge Racer, a stylish PlayStation arcade racer with team stories, 321 cars and a mellower club soundtrack, often called the best in the series.",
+    "longDescription": "Racing centres on powersliding, in two styles depending on the manufacturer: Drift cars break into a smooth slide with a tap of the brake while turning, and Grip cars need the player to alternate brake and throttle. In the Grand Prix, Real Racing Roots '99, the player joins one of four teams of differing difficulty, R.C. Micro Mouse Mappy of France, Pac Racing Club of Japan, Racing Team Solvalou of Italy or the Dig Racing Team of the US, and picks one of four manufacturers, Age Solo, Lizard, Assoluto or Terrazi, which sets the car style and slide type. Each team has its own story, with a manager who talks to the player through the season.\n\nEach race requires a qualifying position, rising through the season, and placing higher earns better new cars or upgrades. Racing every combination of team, manufacturer and finishing position yields 320 vehicles, and collecting them all unlocks a 321st modelled on Pac-Man. There is also Time Attack, the home series' first two-player split screen, an undocumented four-player link-cable mode, a decal editor and Extra Trials against powerful prototypes.",
+    "trivia": [
+      "All 33 developers had also worked on the original Ridge Racer.",
+      "The art director looked to Ace Combat 2 for the sky effects.",
+      "The opening film starring Reiko Nagase took over six months to make, including planning.",
+      "Composer Hiroshi Okubo found singer Kimara Lovelace at a club event in Nishi-Azabu; Kohta Takahashi called him \"the gatekeeper to club sound hell\".",
+      "A bonus disc held a 60 fps version of the original Ridge Racer, and special editions came with the Jogcon controller."
+    ],
+    "devStory": "Development began in May 1997. It was the first PlayStation Ridge Racer to use Gouraud shading, and the staff said much \"waste\" was cut to allow it and high polygon counts; like Gran Turismo, the team used Sony's Performance Analyser development kit. Okubo led a soundtrack that moved from the rave sound of earlier games to funk, breakbeat, acid jazz, UK garage and neo soul, which he called \"more mature, more fashionable\", meant to suit the game's human drama.\n\nNamco released it in Japan on 3 December 1998, with other regions following in 1999. Reviews were generally favourable; Famitsu gave it 35 out of 40, and some critics found its drifting too light compared with earlier games. It was Japan's 18th best-selling game of 1998 after less than a month on sale, and sold 759,527 copies there and 297,564 in the US. Time Extension ranked it the best Ridge Racer in 2023. Ridge Racer V followed in 2000.",
+    "sources": [
+      {
+        "title": "R4: Ridge Racer Type 4",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/R4:_Ridge_Racer_Type_4"
+      }
+    ]
+  },
+  {
+    "id": "suikoden-ii",
+    "title": "Suikoden II",
+    "year": 1998,
+    "decade": "1990s",
+    "developer": "Konami",
+    "publisher": "Konami",
+    "genre": "RPG",
+    "platform": "PlayStation",
+    "image": "images/games/suikoden-ii.png",
+    "description": "Suikoden II (1998) is Konami's PlayStation role-playing game of 108 Stars of Destiny and two friends split by the halves of one rune, a sprite-based sequel that sold poorly in the West and became a cult classic.",
+    "longDescription": "The silent protagonist and his best friend, Jowy Atreides, survive a false-flag massacre of their Highland youth brigade staged by the brutal Prince Luca Blight to justify invading the City-States of Jowston. Each of them receives half of the Rune of the Beginning, one of the 27 True Runes, which drives its two bearers to fight until one falls, much to the grief of the hero's adoptive sister Nanami. Over 100 characters can be recruited, often through a short side quest, and more than 40 fight; save data from the first Suikoden brings returning characters in stronger, and its hero can be recruited.\n\nCombat comes in three forms. Ordinary turn-based battles field up to six characters, who can perform \"unite attacks\" that reflect their relationships. Duels are rock-paper-scissors contests of attack, wild attack and defend, with the opponent's dialogue as a hint. Army battles now play out on a grid like Romance of the Three Kingdoms or Fire Emblem: recruited characters lead or support units that add attack, defence and abilities, and a character killed there is gone for good. Experience depends on the level gap between party and enemies, so low-level characters catch up quickly. New features include three rune slots, a party inventory, a dash button and minigames, one reminiscent of Iron Chef.",
+    "trivia": [
+      "Luca Blight hates Jowston after watching Jowstonian soldiers rape his mother in an earlier war.",
+      "Recruiting all 108 Stars of Destiny unlocks the best ending, in which Nanami turns out to have faked her death.",
+      "Writer Yoshitaka Murayama decided from fan letters that the first game's story was its selling point, and made story the sequel's focus.",
+      "Murayama has said he would have preferred to make a shoot 'em up, such as Taito's Metal Black.",
+      "Its limited Western print run was never reprinted, because the initial response was so lacklustre."
+    ],
+    "devStory": "The series began when Konami assigned newcomers Murayama and Junko Kawano, with ten others, to its first PlayStation games; offered a baseball game, a racing game or an RPG, they revived an RPG project, aiming for a franchise to rival Dragon Quest and Final Fantasy. After the first Suikoden succeeded, Murayama wrote most of the sequel's story himself. Konami released it in Japan on 17 December 1998, in North America on 29 September 1999 and in Europe in July 2000.\n\nIt sold well in Japan, but in the West its 2D sprites looked dated at a time when 3D graphics were emphasised, and it met lacklustre sales and a modest reception, though Metacritic still records favourable reviews and Next Generation called it \"one of the best RPGs to hit PlayStation this year\". Since the 2010s critics have often named it the best Suikoden and one of the greatest RPGs. It was paired with the first game on the PSP in 2006 and remastered as Suikoden I & II HD Remaster in 2025.",
+    "sources": [
+      {
+        "title": "Suikoden II",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Suikoden_II"
+      }
+    ]
+  },
+  {
+    "id": "saga-frontier",
+    "title": "SaGa Frontier",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Square",
+    "publisher": "Square",
+    "genre": "RPG",
+    "platform": "PlayStation",
+    "image": "images/games/saga-frontier.png",
+    "description": "SaGa Frontier (1997) is Square's first PlayStation SaGa, a non-linear science-fantasy RPG with seven protagonists across the worlds of the Regions, a million-seller in Japan that divided Western critics.",
+    "longDescription": "Its Free Scenario System lets the player pick one of seven protagonists, all living in the same setting, the Regions, a group of worlds each with its own culture, level of technology and magic. From the start most characters can travel almost anywhere on regular inter-regional ships, explore pre-rendered field screens, talk to people to gather information, recruit allies and start quests. Each has a main quest plus optional ones, and a story changes depending on choices, events and who is in the party. The cast includes Asellus, a girl turned half-Mystic by a blood transfusion from the Mystic Lord Orlouge; the mage Blue, destined to fight his twin Rouge; Emilia, a former model framed for her fiancé's murder by the \"Joker\"; the bard Lute; Red, who becomes the superhero Alkaiser; Riki, a fox-like Lummox trying to save his world; and T260, an ancient Mec that has lost its memory.\n\nBattles are turn-based, with 2D sprites against rotating 3D backgrounds. Most skills are learned in the middle of fights, spells are bought in shops, and party members can link combination attacks. Races include Humans, Mystics, Monsters and Mecs. Completing scenarios gives bonuses to the next, and finishing all seven opens the \"2nd Division\" room, where the player can fight every final boss and talk to the developers.",
+    "trivia": [
+      "It was called Romancing SaGa 4 early in development, until the move from Super Famicom to PlayStation.",
+      "A ninth scenario, about a family of channellers squabbling over an inheritance, was dropped as too comedic.",
+      "The scenario of IRPO officer Fuse, cut from the original, was added in the 2021 remaster.",
+      "Blue's scenario was always meant to end in the middle of his final boss battle.",
+      "A hidden track in the pregap of the soundtrack's third disc was originally meant to be Riki's theme."
+    ],
+    "devStory": "Square Production Team 2 began work in December 1995, with Akitoshi Kawazu directing and producing, Koichi Ishii as planning chief, Kenji Ito composing and Tomomi Kobayashi illustrating. The team avoided 3D graphics because it did not yet know the hardware's capabilities, and Kawazu said time and disc space forced cuts, including parts of Asellus's story. It was the first game released abroad under the SaGa name rather than Final Fantasy.\n\nIt sold over 1.05 million copies in Japan in 1997, the year's fifth best seller there, and Famitsu's editors later voted it the 18th best PlayStation game. Western reviews were mixed, averaging 71% on GameRankings: critics admired the non-linearity in concept but said it made scenarios short and left players wandering without direction. IGN called it \"the only bruised apple in Square's current collection of role-playing games\", while GamePro gave perfect marks for graphics and fun. A remaster with the Fuse scenario was released in 2021.",
+    "sources": [
+      {
+        "title": "SaGa Frontier",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/SaGa_Frontier"
+      }
+    ]
+  },
+  {
+    "id": "blood-omen-legacy-of-kain",
+    "title": "Blood Omen: Legacy of Kain",
+    "year": 1996,
+    "decade": "1990s",
+    "developer": "Silicon Knights",
+    "publisher": "Crystal Dynamics",
+    "genre": "Action-Adventure",
+    "platform": "PlayStation",
+    "image": "images/games/blood-omen-legacy-of-kain.png",
+    "description": "Blood Omen: Legacy of Kain (1996) is Silicon Knights' top-down vampire action-adventure for Crystal Dynamics, in which the murdered nobleman Kain feeds on Nosgoth's living while hunting the corrupt Circle of Nine.",
+    "longDescription": "Seen from above, Kain crosses the land of Nosgoth and its dungeons, fighting with swords, a mace, axes and the two-handed Soul Reaver, solving puzzles and avoiding hazards. His blood meter drains over time and faster when he is hurt, so he must wound humans and animals and drink their red blood. Blue blood from ghostly foes restores the magic he spends on spells and shapeshifting, while undead black blood harms him and the green blood of demons and mutants poisons him. Spells come as tarot cards, from light to mind control and lightning, and he can become a bat to fly between checkpoints, a wolf, a cloud of mist that passes through gates or a human. Blood fountains, vials and rune pyramids raise his abilities, 100 secrets are hidden, and a day and night cycle makes him stronger at night and opens some doors under a full moon.\n\nKain is ambushed and killed, and the necromancer Mortanius raises him as a vampire. To avenge himself and find a cure, he must kill the nine sorcerer-guardians of the Pillars of Nosgoth, driven mad after one of them, Ariel, was murdered. Along the way he meets the elder vampire Vorador and fights the Legions of the Nemesis, and learns that he is himself the last guardian, so that the \"cure\" is his own death. The player chooses whether he sacrifices himself or dooms the world.",
+    "trivia": [
+      "Kain was partly modelled on William Munny from the film Unforgiven.",
+      "The Soul Reaver sword was originally conceived for Silicon Knights' Too Human.",
+      "Writer Ken McCulloch called names like Mortanius \"Names from Hell\" because of the trouble getting them past marketing.",
+      "Cover art for the novel The Pillars of the Earth inspired the Pillars of Nosgoth.",
+      "Silicon Knights added an opening credit making clear that it created the game's concept, story and content, which it called \"a first in the industry\"."
+    ],
+    "devStory": "It began as The Pillars of Nosgoth, proposed around 1993 by Silicon Knights president Denis Dyack and art director Ken McCulloch. Crystal Dynamics producer Lyle Hall saw it as \"a Zelda-style take on a vampire action RPG\" and helped persuade his company to choose the PlayStation over the 3DO and Saturn, with Amy Hennig as design manager. Dyack wanted \"a game which adults would want to play\", drawing on vampire myth, Shakespeare, Unforgiven, the Necroscope novels and The Wheel of Time. Development took three and a half years, Silicon Knights doubled its staff, and Crystal Dynamics sent employees to Canada for over six months. Simon Templeman voiced Kain, with Tony Jay as Mortanius.\n\nReleased in November 1996, it averaged 83% on GameRankings; critics praised its story, voice acting and scope but criticised long loading times and dark graphics, and EGM named it Role-Playing Game of the Year. A 2011 court filing showed at least 320,082 sales. A dispute over the rights left Crystal Dynamics with the series, and it made Legacy of Kain: Soul Reaver without Silicon Knights.",
+    "sources": [
+      {
+        "title": "Blood Omen: Legacy of Kain",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Blood_Omen:_Legacy_of_Kain"
+      }
+    ]
+  },
+  {
+    "id": "resident-evil-3-nemesis",
+    "title": "Resident Evil 3: Nemesis",
+    "year": 1999,
+    "decade": "1990s",
+    "developer": "Capcom",
+    "publisher": "Capcom",
+    "genre": "Survival Horror",
+    "platform": "PlayStation",
+    "image": "images/games/resident-evil-3-nemesis.png",
+    "description": "Resident Evil 3: Nemesis (1999) is Capcom's PlayStation survival horror game in which Jill Valentine escapes a zombie-overrun Raccoon City while hunted by Nemesis, a spin-off promoted to numbered sequel.",
+    "longDescription": "Jill explores the streets of Raccoon City, rather than the mostly indoor settings of earlier games, collecting weapons from pistols to a rocket launcher and managing a limited inventory with storage boxes. Herbs and first aid sprays restore health, gunpowders can be mixed into ammunition, and puzzles test logic. New to the series are a dodge and a quick 180-degree turn, explosive barrels that can be shot to damage nearby enemies, and up to nine enemies on screen at once. At certain perilous moments, the player must choose between two actions, and these choices change how the story unfolds and which ending is reached.\n\nThe Nemesis, a bio-weapon programmed to kill the surviving S.T.A.R.S. members, appears repeatedly as a boss. It is far stronger than Jill, fires a rocket launcher, dodges gunfire and follows her from area to area; in some encounters the player can choose to fight or flee, and even when beaten it keeps coming back. The story starts 24 hours before Resident Evil 2 and runs past it, as Jill teams up with members of Umbrella's U.B.C.S. unit, among them Carlos Oliveira and the treacherous Nikolai, before the government launches a missile at the city. Finishing the game unlocks The Mercenaries, a timed run across the city.",
+    "trivia": [
+      "Nemesis was inspired by the liquid-metal T-1000 from Terminator 2.",
+      "Shinji Mikami said the idea was \"to make you feel like you're being stalked\".",
+      "It was first known as Biohazard 1.9 or 1.5, because it is set between the first two games.",
+      "Capcom chose Jill as \"the only suitable character remaining\" because Chris and Claire Redfield were taken for Code: Veronica.",
+      "The first 500,000 copies included a demo disc of Dino Crisis."
+    ],
+    "devStory": "After Resident Evil 2, Hideki Kamiya was directing the planned next game, set on a cruise ship, until Capcom dropped it as unlikely to finish before the PlayStation 2's launch. Not wanting fans to wait years for a PlayStation Resident Evil, Capcom promoted a side project by an inexperienced team under director Kazuhiro Aoyama to be the third main game; it then made Jill the lead and decided Raccoon City would be destroyed. Writer Yasuhisa Kawamura, new to the series, played the original to learn its world. Mikami produced, and the team grew from 20 to 40 or 50 people, developing it alongside Code: Veronica. Yoshiki Okamoto said full 3D would have meant \"blocky, pixelated zombies\", so it kept pre-rendered backgrounds.\n\nIt was released in Japan on 22 September 1999 and North America on 11 November, and sold a million copies by early October and 3.5 million by 2012. Critics praised its detailed city and Nemesis as an intimidating villain but found it short and its story simple. Windows and Dreamcast ports followed in 2000 and a GameCube version in 2003, and a remake was released in 2020.",
+    "sources": [
+      {
+        "title": "Resident Evil 3: Nemesis",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Resident_Evil_3:_Nemesis"
+      }
+    ]
+  },
+  {
+    "id": "mega-man-8",
+    "title": "Mega Man 8",
+    "year": 1996,
+    "decade": "1990s",
+    "developer": "Capcom",
+    "publisher": "Capcom",
+    "genre": "Platform",
+    "platform": "PlayStation",
+    "image": "images/games/mega-man-8.png",
+    "description": "Mega Man 8 (1996) is the series' first 32-bit game, a PlayStation and Saturn platformer with anime cutscenes, the alien robot Duo and some of the most mocked English voice acting in games.",
+    "longDescription": "The formula is that of the earlier games: Mega Man runs, jumps, slides, swims and charges his Mega Buster through side-scrolling stages, and each Robot Master he beats gives him its weapon, with weaknesses that reward choosing the order. As in Mega Man 7, an introductory stage leads to four Robot Masters, Tengu Man, Frost Man, Grenade Man and Clown Man, and four more, Aqua Man, Sword Man, Search Man and Astro Man, open after an intermission stage. New are the ability to use several weapons on screen at once, such as jumping into a Tornado Hold and swinging the Flame Sword while rising on its current, and to fire the Mega Buster even with a special weapon equipped. Bolts found in the stages buy upgrades from Roll in Dr. Light's lab, limited by the bolts and slots available, and mid-stage bosses award Rush items such as the Rush Bike.\n\nTwo alien robots crash to Earth after a battle in space. Dr. Wily steals a purple orb of \"Evil Energy\" from the crash site, while Dr. Light repairs the other robot, Duo, who has travelled the universe destroying that energy. Bass returns as a rival, empowered by Evil Energy.",
+    "trivia": [
+      "Capcom received around 110,000 Robot Master ideas from fans in Japan; Tengu Man and Astro Man were designed in-house beforehand.",
+      "Duo was first designed as a creation of Mega Man 4's Dr. Cossack, which is why he still wears an ushanka.",
+      "Duo was first playable in the 1996 arcade game Mega Man 2: The Power Fighters.",
+      "Sony initially resisted a US PlayStation release of a 2D game, then approved it on condition it had content the Saturn lacked: a 12-page anniversary booklet.",
+      "The Saturn version adds two bosses from earlier games and a bonus art and sound mode."
+    ],
+    "devStory": "With Tokuro Fujiwara gone from Capcom, longtime series artist Keiji Inafune became producer and handed much of the work to director Hayato Kaji, an artist he considered his student, describing the approach as \"seeing Mega Man from a distance\". The team was often overwhelmed by releasing on two new systems and by anime cutscenes, made with the studio Xebec, which Inafune had wanted since the first game. Shusaku Uchiyama composed the score, his first lead project at Capcom.\n\nIt was released on the PlayStation in Japan on 17 December 1996 and on the Saturn in January 1997, reaching North America on both in March 1997. Retailers reported selling more than half their stock in three days, and the PlayStation version later sold at least 350,000 copies. Reviews were moderately positive: critics liked its looks but found little new and said it did not use 32-bit hardware fully, and EGM, IGN and others called its English dub among the worst in games. Mega Man & Bass reused its assets in 1998, and Mega Man 9 returned to 8-bit style in 2008.",
+    "sources": [
+      {
+        "title": "Mega Man 8",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mega_Man_8"
+      }
+    ]
+  },
+  {
+    "id": "mega-man-x4",
+    "title": "Mega Man X4",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Capcom",
+    "publisher": "Capcom",
+    "genre": "Platform",
+    "platform": "PlayStation",
+    "image": "images/games/mega-man-x4.png",
+    "description": "Mega Man X4 (1997) is the first 32-bit Mega Man X, a PlayStation and Saturn platformer that let players take X's buster or Zero's sword through the whole game in a war against the Repliforce.",
+    "longDescription": "The eight main stages can be cleared in any order, past spikes, falling debris and enemy robots, with hover bikes called Ride Chasers and Ride Armor mechs in some. Heart Tanks raise maximum health and two Sub Tanks store energy for later. For the first time Zero is fully playable alongside X, chosen at the start and fixed for the playthrough. Both run the same stages but play very differently. X fires his chargeable X-Buster from range, gains a limited-ammo weapon from each boss and finds hidden capsules with armour upgrades. Zero fights up close with his Z-Saber and learns ammo-free techniques such as the Hienkyaku air dash and Kuuenbu double jump, but cannot be upgraded.\n\nIn the 22nd century, a floating city, Sky Lagoon, is brought down by a Maverick, killing countless humans and Reploids. Suspicion falls on the Repliforce, a Reploid army under General and his second-in-command Colonel, and when Colonel refuses to disarm, it declares independence for Reploids. The story differs by character: X's rookie partner Double turns out to be a spy, Zero is forced to fight Colonel's sister Iris, whom he loves, and Sigma is revealed to have staged the whole conflict.",
+    "trivia": [
+      "To get Zero approved as playable, the developers gave him special moves based on Street Fighter.",
+      "Twice as many sprite animations were needed, so the team compressed character data and split stages into two sections.",
+      "Artist Haruki Suetsugu noticed that the X3 armour parts, attached a certain way, looked like an aeroplane, leading to X's secret Ultimate Armor.",
+      "Sony of America at first refused to let Capcom release it, reportedly over its policy against 2D games.",
+      "Zero shouting \"What am I fighting for?!\" over Iris's body is often cited as some of the worst voice acting in the franchise."
+    ],
+    "devStory": "The Mega Man X3 team had no sequel planned until Capcom wanted the series on new hardware. Inafune stepped back from artwork to produce and help write the story, in which the writers gave the Repliforce \"moral leeway\" instead of making them plainly evil, and left out human characters entirely. Xebec produced the animated cutscenes, and Toshihiko Horiyama composed the score. Planned as a Saturn exclusive for June 1997, it was delayed and made multi-platform.\n\nBoth versions were released in Japan on 1 August 1997, and in North America after Capcom persuaded Sony to allow the PlayStation version; Europe got only the PlayStation version that October. Critics praised the choice between X and Zero, the controls and the bosses, though some felt the 2D formula was worn out, with Next Generation suggesting players buy X3 used instead. EGM ranked it 78th in its 1997 list of the best games of all time. The PlayStation version sold 197,385 copies in Japan in 1997 and at least 350,000 in North America.",
+    "sources": [
+      {
+        "title": "Mega Man X4",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mega_Man_X4"
+      }
+    ]
+  },
+  {
+    "id": "lunar-the-silver-star",
+    "title": "Lunar: The Silver Star",
+    "year": 1992,
+    "decade": "1990s",
+    "developer": "Game Arts / Studio Alex",
+    "publisher": "Game Arts",
+    "genre": "RPG",
+    "platform": "Sega CD",
+    "image": "images/games/lunar-the-silver-star.png",
+    "description": "Lunar: The Silver Star (1992) is Game Arts' Mega-CD role-playing game, a \"different kind of RPG\" told with CD audio, animated scenes and voice acting, and the best-selling Mega-CD game in Japan.",
+    "longDescription": "In top-down 2D the player crosses towns, fields and harsh landscapes, completing story objectives and talking to people, with short animated interludes, full or quarter-screen, and CD-quality music carrying the story. Random encounters lead to turn-based battles in which characters act in order of speed. Characters must move close enough to strike unless they have a ranged attack, and they can also retreat into a corner, stand their ground or flee. The flying cat-like Nall, who does not fight, sizes up enemies before each battle. Progress is saved to the Sega CD's internal memory or a RAM cartridge.\n\nLunar is a small world orbiting the barren Blue Star, where humanity lived until war made it uninhabitable and the goddess Althena moved people to the Silver Star, setting four dragons to guard it. Fifteen-year-old Alex, from the mountain town of Burg, idolises the late Dragonmaster Dyne. An outing to a dragon's cave for a diamond leads the old white dragon Quark to urge him to pass the dragons' trials and become the next Dragonmaster. With his childhood friend Luna and companions such as Nash and Mia of the floating city of Vane, the bandit Kyle and the priestess-in-training Jessica, he confronts the sorcerer Ghaleon, who has become the Magic Emperor and kidnapped Luna. Locations were given a cool, \"northern\" feel, partly so that the characters could wear more clothes.",
+    "trivia": [
+      "Game Arts founded Studio Alex, named after the hero, to oversee most of the game's development.",
+      "Nearly a third of the planned project was cut for time.",
+      "Working Designs translated the nearly four-megabyte English script in eight weeks.",
+      "The scene where Alex plays his harp to awaken Luna was added at Working Designs head Victor Ireland's request.",
+      "Mel's epithet \"Hell\" Mel became \"Deadly\" Mel in English for censorship reasons."
+    ],
+    "devStory": "Game Arts, known mostly for side-scrollers and shooters, wanted an RPG centred on animation and storytelling. Novelist Kei Shigema wrote a story meant to break from \"hum-drum 'model'\" games that \"had stories, but had no story-telling\", and Toshiyuki Kubooka designed the characters and planned the animated scenes. Noriyuki Iwadare, Hiroshi Fujioka, Isao Mizoguchi and Yoshiaki Kubodera composed the music. Working Designs, a small California publisher, made it its biggest project, working closely with the Japanese team, adding jokes and pop culture references and producing embossed manuals and seven different disc designs; its English cast included a young Ashley Parker Angel as Alex.\n\nIt sold out its Japanese production run in its first year, an estimated 100,000 copies, and Sega credited it with pushing Mega-CD sales; worldwide only Sonic CD sold more on the system. GameFan named it the best RPG of 1993 and GamePro called it \"one of the best on any Sega system\", though some found its battles dull. Lunar: Eternal Blue followed in 1994, and remakes began with Lunar: Silver Star Story Complete in 1996.",
+    "sources": [
+      {
+        "title": "Lunar: The Silver Star",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Lunar:_The_Silver_Star"
+      }
+    ]
+  },
+  {
+    "id": "lunar-eternal-blue",
+    "title": "Lunar: Eternal Blue",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "Game Arts / Studio Alex",
+    "publisher": "Game Arts / Working Designs",
+    "genre": "RPG",
+    "platform": "Sega CD",
+    "image": "images/games/lunar-eternal-blue.png",
+    "description": "Lunar: Eternal Blue (1994) is Game Arts' Sega CD sequel set a thousand years after The Silver Star, a larger role-playing game with nearly fifty minutes of voiced animation and twice the dialogue.",
+    "longDescription": "Play follows the first game: top-down 2D exploration, quests and conversations, and story told through text and animated cutscenes. Random battles are fought with attacks and magic, with characters moving into range, but the battle system now allows characters to be positioned in advance and has improved AI. Besides experience, battles award magic points used to strengthen spells and unlock skills. In the North American version, saving costs magic experience, a change Working Designs made so that players would \"think about where and when to save\", and the game remembers each character's last command.\n\nA thousand years after The Silver Star, young explorer Hiro and his winged companion Ruby take a gem called the Dragon's Eye from a ruin and use it to enter the Blue Spire, where they meet Lucia, a girl from the Blue Star who must see the goddess Althena to stop the evil being Zophar. Hunted by Leo, captain of Althena's guard, who believes she is the prophesied Destroyer, they are joined by the gambler-priest Ronfar, the dancer Jean and Lemina, money-grubbing heiress to the magic guild, and discover that the Althena now ruling is false and that Ghaleon, the first game's villain, is her Dragonmaster.",
+    "trivia": [
+      "Writer Kei Shigema took the idea of an oppressive god from the image of Sun Wukong unable to escape the Buddha's palm in Journey to the West.",
+      "It took three years and over $2.5 million to make.",
+      "The team first planned to set it a few years after the first game with an older cast, but feared the new characters would lose focus.",
+      "Its Japanese price of ¥9,900 was nearly $100 in 1994.",
+      "GameFan's preview called the translation \"ingeniously written\", a quote used in ads, then its review criticised the jokes, which Victor Ireland called \"a complete about-face\"."
+    ],
+    "devStory": "Director Yoichi Miyagi returned to lead Game Arts and Studio Alex, with Kubooka directing the in-house animation and Noriyuki Iwadare composing the music, narrowing his range to give the score a unified feel. The game has over an hour and a half of recorded speech against the first game's fifteen minutes. Game Arts released it in Japan in December 1994, where it sold well and became the second best-selling Sega CD game there, though fewer copies than its predecessor. Working Designs released it in North America in September 1995, adding humour, fourth-wall breaks and balance fixes for battles found \"near impossible\".\n\nUS sales were low, which Ireland blamed on the arrival of 32-bit consoles and talk of the Sega CD's \"death\". Critics liked it: EGM praised its \"great story and witty characters\", named it the best Mega-CD game of 1995 and later ranked it 40th among console games, while Game Players and Next Generation felt something of the first game's charm had been lost. It was remade in 1998 as Lunar 2: Eternal Blue Complete for the Saturn and PlayStation.",
+    "sources": [
+      {
+        "title": "Lunar: Eternal Blue",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Lunar:_Eternal_Blue"
+      }
+    ]
+  },
+  {
+    "id": "phantasy-star-iii",
+    "title": "Phantasy Star III: Generations of Doom",
+    "year": 1990,
+    "decade": "1990s",
+    "developer": "Sega",
+    "publisher": "Sega",
+    "genre": "RPG",
+    "platform": "Genesis",
+    "image": "images/games/phantasy-star-iii.png",
+    "description": "Phantasy Star III: Generations of Doom (1990) is Sega's Genesis role-playing game whose story spans three generations, with marriage choices deciding the next hero and leading to four different endings.",
+    "longDescription": "The game keeps the series' turn-based formula, exploring 2D worlds, recruiting characters and fighting random encounters, but adds an auto-battle option and an icon-based menu, while \"technique\" magic plays a smaller role than before. Its distinguishing feature is that the story spans three generations. At key points the hero chooses which of two women he has met to marry, and the choice decides the next generation's lead: a child who may be Orakian or part Layan and Orakian, which changes their ability with techniques. Two paths in the second generation branch into four in the third, each with its own ending.\n\nA thousand years earlier, the swordsman Orakio and the sorceress Laya led rival factions; both vanished during a truce, each side blamed the other, and travel between their worlds was banned. The game begins with Prince Rhys of the Orakian kingdom of Landen on his wedding day to Maia, an amnesiac who washed ashore two months before, when a Layan dragon snatches her away. Maia turns out to be a Layan princess whose people thought they were rescuing her. Later it emerges that both peoples descend from survivors of the planet Palm, destroyed in Phantasy Star II, and that their worlds are sections of a vast colony ship.",
+    "trivia": [
+      "It was the first Phantasy Star made without series co-creator Yuji Naka, since most of the Phantasy Star II team had moved on to Sonic the Hedgehog.",
+      "Its team had never made a role-playing game before.",
+      "Composer Izuho Numata planned music that changed with who was in the party; memory limits meant it changes with how many are in it instead.",
+      "Its icon-based menus inspired those of Shining in the Darkness.",
+      "MegaTech's only complaint was that \"it costs a massive £50!\""
+    ],
+    "devStory": "Sega released the game in Japan in April 1990 and in North America in June 1991. Series veteran Rieko Kodama helped in early planning, and the new team chose branching paths to stand out in a crowded RPG market, but storage limits made the multiple endings hard to implement and forced cuts to the story. Designer Hirondo Saiki grew exhausted as the sole designer, though it was the first time designers and programmers worked as one team, and character designer Saru Miya recalled great hardship on what she called a \"home-spun\" project. Producer Kazunari Tsukamoto likened it to a collection of side stories compared with Phantasy Star II and IV.\n\nContemporary reviews were positive: Computer Gaming World called it \"a rewarding epic tale which should be told on every Genesis system\", and Dragon liked its marriage choices and endings while preferring Phantasy Star II. Later critics, averaging 68% on GameRankings, found its endings too similar and its style too different from the rest of the series, and it is now often seen as the series' black sheep.",
+    "sources": [
+      {
+        "title": "Phantasy Star III",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Phantasy_Star_III:_Generations_of_Doom"
+      }
+    ]
+  },
+  {
+    "id": "shining-in-the-darkness",
+    "title": "Shining in the Darkness",
+    "year": 1991,
+    "decade": "1990s",
+    "developer": "Climax Entertainment",
+    "publisher": "Sega",
+    "genre": "Dungeon Crawler",
+    "platform": "Genesis",
+    "image": "images/games/shining-in-the-darkness.png",
+    "description": "Shining in the Darkness (1991) is Climax Entertainment's first-person Genesis dungeon crawler, made on Sega's minimum budget, that started the Shining series and sold over 300,000 copies in its first months.",
+    "longDescription": "The hero and two friends, Pyra and Milo, explore 3D first-person dungeon mazes, fighting random monsters and set boss battles in turn-based combat much like Dragon Quest or, more specifically, Wizardry. Between descents the party visits town to talk to people, buy equipment and visit priests, who save the game and revive fallen characters, all through an icon-based menu system that the game used for battles, equipment and conversations. Three characters are trapped in the dungeon, and rescuing any or all of them is optional, with the story changing depending on who is brought back.\n\nIn the Kingdom of Thornwood, the king's daughter and the hero's father have vanished, and the evil sorcerer Dark Sol threatens the land. The hero is charged with finding the Arms of Light, rescuing the princess and his father and stopping Dark Sol. A later game, Shining Force Gaiden: Final Conflict, revealed Dark Sol to be the son of Shining Force's villains Darksol and Mishaela, placing this game after Shining Force II in the series' timeline.",
+    "trivia": [
+      "Producer Hiroyuki Takahashi said that apart from programming and graphics he did nearly all the work himself because the budget was so tight.",
+      "Takahashi said its core concept was \"realism\": the feeling of really moving through houses and dungeons.",
+      "Dragon described it as combining Phantasy Star III's icons and combat, the first Phantasy Star's first-person view and Phantasy Star II's close-up graphics.",
+      "Its success paved the way for Shining Force.",
+      "Spells, menus and the use of priests for saving carried through the series up to Shining Force III."
+    ],
+    "devStory": "Sega gave Climax Entertainment the bare minimum budget it offered outside developers. Takahashi said the aim was a continuation of the excitement of moving through dungeons in older games such as Wizardry, making the player feel they were really in a fantasy world. Sega published it for the Genesis in 1991. Sega Pro gave it 93%, calling it \"superior to all other RPGs of this style\" and praising its scaling sprites, sound and icon menus, while Computer Gaming World called it a \"hack-and-slash adventure\" that was not the full CRPG many hoped for but \"a decided step\" towards one. It sold over 300,000 copies by late 1991. Historians see it as a pioneer of Japanese console RPGs, especially in Europe, which waited more than six more years for a Final Fantasy. It was re-released on the Wii Virtual Console in 2007.",
+    "sources": [
+      {
+        "title": "Shining in the Darkness",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Shining_in_the_Darkness"
+      }
+    ]
+  },
+  {
+    "id": "streets-of-rage-3",
+    "title": "Streets of Rage 3",
+    "year": 1994,
+    "decade": "1990s",
+    "developer": "Sega",
+    "publisher": "Sega",
+    "genre": "Beat 'em up",
+    "platform": "Genesis",
+    "image": "images/games/streets-of-rage-3.png",
+    "description": "Streets of Rage 3 (1994) is the last of Sega's original Genesis beat 'em up trilogy, with running, dodge rolls, branching stages and an experimental, semi-random techno score by Yuzo Koshiro and Motohiro Kawashima.",
+    "longDescription": "Up to two players fight waves of enemies as Axel, Blaze, Skate or the new Dr. Zan, a robot who turns every weapon he picks up into a ball of energy; meeting certain conditions unlocks Shiva and Roo the kangaroo, and in Japan a third bonus character, Ash. Every character can now run and dodge-roll vertically. Blitz attacks can be upgraded through successive play, and a recharging meter allows a special attack without losing health when it is full. Some weapons have their own special moves, but all weapons now break after a set number of uses, and the unlockable characters cannot hold them at all. Pits return from the first game, and some stages branch, for instance depending on whether players clear a room before a character dies from poison gas. Enemies are smarter, picking up weapons, blocking, attacking together and even stealing health-restoring food. A Battle mode pits two players against each other.\n\nIn the Western story, the Syndicate's Mr. X has set up the RoboCy Corporation and hired the roboticist Dr. Dahm to replace Wood Oak City's officials with robot duplicates, with bombs planted around the city to distract the police. Dr. Zan alerts Blaze, who calls in Axel and Skate. There are four endings depending on difficulty and timing.",
+    "trivia": [
+      "The Japanese story is different: a new explosive called Raxine kills thousands and a general, Ivan Petrov, vanishes; the West made Petrov the police chief and dropped Raxine.",
+      "The Western release cut Ash, a gay stereotype, made female enemies' outfits less revealing and changed the heroes' colours.",
+      "The Western Normal setting is harder than the Japanese Hard, and the English version cannot be completed on Easy.",
+      "Koshiro created an \"Automated Composing System\" for the music, using heavily randomised sequences.",
+      "A section in which players ride motorcycles was cut but can be reached, unfinished, with a Game Genie code."
+    ],
+    "devStory": "Sega designed the sequel with a more complex plot, character dialogue, longer levels and faster play than the first two games, adding hidden characters and a few cut-scenes. Koshiro and Kawashima, both from Streets of Rage 2, drew on the Detroit hard techno popular in Tokyo clubs; Koshiro said his system generated sounds \"you ordinarily never could imagine on your own\". Critics were split on the music: Mean Machines called it \"terrible\", while Fact later called it the pair's \"crowning achievement\".\n\nReviewers praised the new moves, larger sprites and six-button pad support but felt it advanced the series little; Mega called it \"uninspiring and easy to finish\" before ranking it among the best Mega Drive games, and GameFan said the localisation \"neutered\" a fine game and urged readers to import the Japanese version. It was re-released in collections including Sonic's Ultimate Genesis Collection and the Genesis Mini 2, and Streets of Rage 4, which continues from its true ending, followed in 2020.",
+    "sources": [
+      {
+        "title": "Streets of Rage 3",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Streets_of_Rage_3"
+      }
+    ]
+  },
+  {
+    "id": "alien-soldier",
+    "title": "Alien Soldier",
+    "year": 1995,
+    "decade": "1990s",
+    "developer": "Treasure",
+    "publisher": "Sega",
+    "genre": "Run and Gun",
+    "platform": "Genesis",
+    "image": "images/games/alien-soldier.png",
+    "description": "Alien Soldier (1995) is Treasure's late Mega Drive run-and-gun of 25 short stages and 26 bosses, built \"for Mega Drivers custom\" and released in North America only on the Sega Channel.",
+    "longDescription": "Compared heavily with Treasure's Gunstar Heroes, it puts far more weight on boss fights and has no two-player mode; the stages are short and filled with weak enemies, serving as breathers between 26 difficult bosses. Epsilon-Eagle can run, double jump, hover and carry four of six weapons, chosen before the game begins, each with its own ammunition bar. A dash across the screen becomes a damaging \"Phoenix Force\" attack when he is at full health, and a well-timed counter turns enemy bullets into health. He can fire in a fixed stance, standing still for quick aiming, or while moving, at the cost of directional accuracy. There are two difficulty settings, \"supereasy\" and \"superhard\"; the hard setting's enemies are only slightly tougher, but it has no passwords or unlimited continues.\n\nThe premise is given once, in an opening text scroll. In 2015 on A-Earth, Epsilon-Eagle, leader of the terrorist group Scarlet, is gravely wounded in an assassination attempt and lost in the space-time continuum. His successor Xi-Tiger proves too brutal even for Scarlet. When Xi attacks a laboratory and kills a girl, Epsilon, living as a parasite in a boy's body, reveals himself and sets out after him.",
+    "trivia": [
+      "Director Hideyuki Suganami began as sole designer and programmer, when Mega Drive games usually had two of each.",
+      "The team planned 100 bosses; only about half of its ideas made it in.",
+      "The boss Seven Force first appeared in Gunstar Heroes.",
+      "Its title screen carries the slogan \"Visualshock! Speedshock! Soundshock!\"",
+      "By 2006 the scarce original cartridge sold for over 20,000 yen in Japanese used game shops."
+    ],
+    "devStory": "After Gunstar Heroes, Treasure split into four teams, making Dynamite Headdy, Light Crusader, a Yū Yū Hakusho fighter and Alien Soldier. Suganami led the two-year project and chose the Mega Drive despite 32-bit hardware being on sale, saying he may have been too captivated by making an \"action shooting\" game; Treasure aimed it explicitly at \"hardcore\" players, designing its difficulty and scoring for them. He cut most of a planned backstory to meet a 3 January 1995 deadline, and when he realised he could not finish alone, other staff joined and he worked through the New Year holidays.\n\nSega released it in Japan on 24 February 1995 and in Europe that May. Famitsu gave it 24 out of 40, but Mean Machines Sega called it \"a real gameplayer's game\" and a modern classic. Later reviewers praised its graphics, sound and intensity while warning of its steep learning curve; GameSpot said it made you feel like \"an army of one\". It was re-released on the PlayStation 2 in Japan in 2006, the Wii Virtual Console in 2007 and Steam in 2011.",
+    "sources": [
+      {
+        "title": "Alien Soldier",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Alien_Soldier"
+      }
+    ]
+  },
+  {
+    "id": "earthworm-jim-2",
+    "title": "Earthworm Jim 2",
+    "year": 1995,
+    "decade": "1990s",
+    "developer": "Shiny Entertainment",
+    "publisher": "Playmates Interactive Entertainment",
+    "genre": "Run and Gun",
+    "platform": "Genesis",
+    "image": "images/games/earthworm-jim-2.png",
+    "description": "Earthworm Jim 2 (1995) is Shiny Entertainment's sequel for the Genesis and SNES, which keeps the run-and-gun core but fills its levels with game shows, inflated heads and exploding sheep.",
+    "longDescription": "Jim again sets out to save Princess What's-Her-Name from Psy-Crow, but the levels vary far more than in the first game. Some, like the opening \"Anything but Tangerines\" and \"Level Ate\", play much like the original with more moves and guns, such as an auto-aiming gun and the \"Barn Blaster\", which wipes out every enemy on screen. A chip butty boosts Jim's suit power to 200%, and his friend Snott travels with him, letting him swing from slimy green surfaces or use Snott as a parachute.\n\nOthers break the mould. In \"Villi People\", Jim, disguised as a blind cave salamander, is guided through intestinal passages avoiding exploding sheep, before the level turns into a game show of nonsensical multiple-choice questions. \"Inflated Head\" has Jim floating upwards with a balloon for a head, dodging sharp objects and Evil the Cat. \"The Flyin' King\" is an isometric shooter in which Jim on his pocket rocket escorts a balloon-borne bomb to defeat Major Mucus. The finale is a race against Psy-Crow to the Princess, and in the end all three turn out to be cows in disguise.",
+    "trivia": [
+      "The Genesis and SNES versions came out almost simultaneously; the SNES version has different backgrounds and lets players switch weapons.",
+      "In Japan the Genesis version was available only through the Sega Channel.",
+      "The MS-DOS version, packaged as The Whole Can 'O Worms, added CD audio and more voices but lacked the \"Lorenzen's Soil\" level.",
+      "David Perry said in 1994 that Shiny was considering a Jaguar version, which never appeared.",
+      "GameSpot nominated the 2002 Game Boy Advance port for worst Game Boy Advance game of the year, calling it \"unplayable\"."
+    ],
+    "devStory": "Like the first game, Earthworm Jim 2 was developed for the Genesis and ported to the SNES, and released in late 1995 and early 1996 depending on region and system; Screaming Pink later made Saturn and PlayStation versions. Reviews were very positive, and IGN and GameZone later judged it better than the original. GamePro wrote that it \"manages to exceed the lofty standards of the first game\", praising its new levels, varied soundtrack and animation, while one of EGM's four reviewers complained that \"where the first had technique, this one just gets cheap\". Sega Saturn Magazine gave the Genesis version 94%, but called the Saturn version \"a great game – a year ago. On a different console.\" It was nominated for the Video Software Dealers Association's game of the year in 1995, losing to Donkey Kong Country 2. Later sequels, Earthworm Jim 3D and Menace 2 the Galaxy, were made by other developers and poorly received.",
+    "sources": [
+      {
+        "title": "Earthworm Jim 2",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Earthworm_Jim_2"
+      }
+    ]
+  },
+  {
+    "id": "yoshis-story",
+    "title": "Yoshi's Story",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Nintendo EAD",
+    "publisher": "Nintendo",
+    "genre": "Platform",
+    "platform": "Nintendo 64",
+    "image": "images/games/yoshis-story.png",
+    "description": "Yoshi's Story (1997) is Nintendo's \"2.5D\" Nintendo 64 follow-up to Yoshi's Island, set in a pop-up storybook of cardboard and cloth, praised for its looks and criticised for being too short and easy.",
+    "longDescription": "Rather than reaching a goal, the aim in each course is to fill the Fruit Frame by eating 30 pieces of fruit, found lying about, in bubbles or carried by enemies. Scoring rewards strategy: eating the same fruit in a row earns more, and more still for each Yoshi's favourite fruit or the course's Lucky Fruit, while melons score most and exactly 30 are hidden in each course. The courses are spread over six pages of a storybook, four per page in rising difficulty. After the first page only one course is open on each, and collecting Special Hearts, three per course, opens more on the next page. Yoshis can run, duck, jump, ground-pound, hover briefly and throw eggs, though eggs no longer bounce and swallowed enemies become eggs at once. White and Black Yoshis can be found and unlocked.\n\nBaby Bowser, jealous of the Yoshis' happiness, turns Yoshi Island into a pop-up book and steals the fruit-bearing Super Happy Tree. Six baby Yoshis hatch and set out to fight the gloom with cheer. The worlds are made of materials such as cardboard, fabric, plastic and wood, rendered in 3D but played in 2D.",
+    "trivia": [
+      "It began as Yoshi's Island 64 for the 64DD before moving to cartridge.",
+      "After Japanese reviews called it too easy, Nintendo of America demanded more challenge, and the Western version gained changes and a Story Mode save.",
+      "Composer Kazumi Totaka also voiced Yoshi; those recordings became Yoshi's voice in later games, starting with Super Smash Bros.",
+      "Totaka's 19-note signature melody plays on the Trial Mode course select screen after the music loops eight times.",
+      "Its US soundtrack CD was cut in the shape of Yoshi's head, causing problems in many CD players."
+    ],
+    "devStory": "The Yoshi's Island team developed it, directed by Hideki Konno and produced by Takashi Tezuka, with Shigeru Miyamoto supervising and contributing ideas. Shown at Space World in November 1996, it demonstrated that the Nintendo 64 could run 2D games; Miyamoto said the 2D format was needed for the art style, and Nintendo called it \"2.5D\". Its cartridge was expanded from 96 to 128 megabits. Totaka's interactive score slows when Yoshi is unhappy and turns to rock when he is Super Happy.\n\nIt was released in Japan on 21 December 1997, where it sold 618,789 copies in 1998, and in North America in March 1998 after a delay Nintendo said was \"based on us demanding A-plus quality\", launched with an event in Lizard Lick, North Carolina. US sales of 679,219 by the end of 1998 were hurt by a late release and supply problems. It averages 65 on Metacritic: critics loved its graphics and music, but EGM's Crispin Boyer asked why there were not enough levels, bosses and secrets \"to keep me busy longer than a weekend\".",
+    "sources": [
+      {
+        "title": "Yoshi's Story",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Yoshi%27s_Story"
+      }
+    ]
+  },
+  {
+    "id": "turok-2-seeds-of-evil",
+    "title": "Turok 2: Seeds of Evil",
+    "year": 1998,
+    "decade": "1990s",
+    "developer": "Iguana Entertainment",
+    "publisher": "Acclaim Entertainment",
+    "genre": "First-Person Shooter",
+    "platform": "Nintendo 64",
+    "image": "images/games/turok-2-seeds-of-evil.png",
+    "description": "Turok 2: Seeds of Evil (1998) is Iguana's Nintendo 64 first-person shooter sequel, a 32 MB cartridge of six huge levels, a skull-drilling Cerebral Bore and an optional high-resolution mode that sold 1.4 million copies in weeks.",
+    "longDescription": "As the new Turok, Joshua Fireseed, the player runs, jumps, climbs, swims and dives through six large levels linked by a hub, carrying an unlimited arsenal from bows to a flamethrower, a grenade launcher and the Cerebral Bore, which fires a homing projectile that latches onto an enemy's head, drills into the skull and explodes. Each level sets several objectives, such as destroying objects, rescuing hostages and killing enemies, before the exit portal leads to defending an energy totem, a boss fight or both. Keys found in levels open the hub's portals, so some levels can be tackled out of order, and an automap helps navigation. Losing all health costs a Life Force point and returns the player to a checkpoint; on the Nintendo 64 the game saves only at special portals.\n\nEach level also hides a Primagen Key, reached with talismans that grant powers such as long jumps or walking on lava, so levels must be revisited to open the way to the final boss. The alien Primagen, trapped in his crashed Lightship, has roused the creatures of the Lost Land to destroy the totems that bind him. A split-screen multiplayer mode for up to four includes Frag Tag, in which one player is turned into a defenceless monkey.",
+    "trivia": [
+      "The Cerebral Bore was inspired by the Tall Man's weapons in the 1979 film Phantasm; a proposed Leech gun was rejected.",
+      "Players can see five times as far as in the first game, with the remaining fog disguised as atmosphere.",
+      "Multiplayer was added, inspired by GoldenEye 007, once falling cartridge prices allowed more memory; the final 32 MB cartridge was the largest for a Nintendo 64 game at the time.",
+      "The enemies were not motion-captured because, project manager David Dienstbier said, they would look like a person in a lizard costume.",
+      "In Japan it was titled Violence Killer: Turok New Generation."
+    ],
+    "devStory": "Iguana Entertainment began the sequel before Dinosaur Hunter was released, with a team of about 18 that grew over its 21 months of development. An optimised version of the first game's engine allowed more complex geometry and real-time shadows, and early access to 64DD kits with the Expansion Pak led to a 640 × 480 high-resolution mode. Dienstbier said the team learned from Miyamoto to \"start things off simple and gradually add to it\", drawing on Mario and Zelda for the objectives and exploration. Over 10,000 hours of testing were reportedly done.\n\nBacked by a $9 million marketing budget, with 1.75 million pre-orders from retailers, it slipped from Acclaim's \"TurOctober\" plans and was released in North America on 10 December 1998. It sold 1.4 million copies by January 1999. GameSpot called it \"a landmark shooter and a must-buy\" and its shooting game of the year, praising its graphics, deep levels and smart enemies, though critics faulted its uneven frame rate and fog. A Windows port followed in 1999, and Nightdive remastered it in 2017.",
+    "sources": [
+      {
+        "title": "Turok 2: Seeds of Evil",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Turok_2:_Seeds_of_Evil"
+      }
+    ]
+  },
+  {
+    "id": "beetle-adventure-racing",
+    "title": "Beetle Adventure Racing!",
+    "year": 1999,
+    "decade": "1990s",
+    "developer": "Paradigm Entertainment / EA Canada",
+    "publisher": "Electronic Arts",
+    "genre": "Racing",
+    "platform": "Nintendo 64",
+    "image": "images/games/beetle-adventure-racing.png",
+    "description": "Beetle Adventure Racing! (1999) is Paradigm and EA Canada's Nintendo 64 racer in which every car is a Volkswagen New Beetle, praised for its long, shortcut-filled tracks and four-player Beetle Battle mode.",
+    "longDescription": "The main game is a championship of Novice, Advanced and Professional circuits, with a secret Bonus Circuit unlocked after the rest, and completing each circuit unlocks new cars and tracks. Finishing the Professional and Bonus circuits awards two special cars: the Alien Beetle, whose horn says \"We come in peace\" in an alien voice, and the Police Beetle, whose siren makes computer racers pull over. Tracks hide four kinds of crates. Point crates, worth 2, 5 or 10, lie mostly off the track on shortcuts and earn continues, and finding all 100 points opens a new Beetle Battle arena. Nitro crates give a burst of speed, and three hidden Cheat crates per stage, announced with a \"Groovy!\", unlock a cheat menu, whose background hides the developers' faces.\n\nUp to four can play. Two players can race on any unlocked track, and two to four can play Beetle Battle, a vehicular combat mode in which they collect six coloured ladybugs, try to destroy each other and race for the exit once the ladybugs are gathered. Single Race pits one player against computer cars on unlocked tracks. The play is similar to EA's own Need for Speed series.",
+    "trivia": [
+      "It began as Need for Speed 64, cancelled when EA signed a deal with Volkswagen for a New Beetle game.",
+      "In Australia it was released as HSV Adventure Racing, with Holden Special Vehicles models in place of the Beetles.",
+      "A PlayStation port was planned but cancelled for technical reasons.",
+      "Its breakbeat soundtrack was composed by Phil Western, Scott Blackwood and Brenden Tennant.",
+      "A planned sequel, Adventure Racing 2, dropped the Beetle licence for unlicensed cars before being cancelled."
+    ],
+    "devStory": "In the late 1990s EA Canada and Paradigm were working on a Nintendo 64 Need for Speed with exclusive tracks, cars and Rumble Pak support. The designers wanted something to set it apart, and when Electronic Arts signed a deal with Volkswagen around the New Beetle, released the year before, the project became Beetle Adventure Racing. It was released in 1999 and in Japan, published by Electronic Arts Square, that November.\n\nIt received universal acclaim. Next Generation saw it as a rival to Top Gear and Need for Speed, The Electric Playground called its scenery \"stunning\" and it the first \"truly addictive\" Nintendo 64 game of 1999, and IGN's Peer Schneider named it one of the best racers on the system while regretting its few tracks and cars and \"generic\" drum and bass. It sold over 320,000 copies in the US, small by EA standards; senior producer Hanno Lemke blamed \"terrible box art and a virtually non-existent marketing presence\" and the many rival racers on the console.",
+    "sources": [
+      {
+        "title": "Beetle Adventure Racing!",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Beetle_Adventure_Racing!"
+      }
+    ]
+  },
+  {
+    "id": "puyo-puyo",
+    "title": "Puyo Puyo",
+    "year": 1991,
+    "decade": "1990s",
+    "developer": "Compile",
+    "publisher": "Compile / Tokuma Shoten",
+    "genre": "Puzzle",
+    "platform": "MSX2 / Famicom Disk System",
+    "image": "images/games/puyo-puyo.png",
+    "description": "Puyo Puyo (1991) is Compile's falling-blob puzzle game starring the characters of Madō Monogatari, which Sega's arcade version turned into a competitive hit and the West first played as Dr. Robotnik's Mean Bean Machine and Kirby's Avalanche.",
+    "longDescription": "Players match coloured blobs called puyos to clear them, and chains of clears sends garbage into the opponent's grid, with the aim of filling it up. Compile's founder Masamitsu \"Moo\" Niitani produced the game, inspired by elements of Tetris and Dr. Mario, and it borrows its characters from Compile's 1990 role-playing game Madō Monogatari. The game has Single, Double and Endless modes. In Single mode, the player is Arle Nadja, a 16-year-old spellcaster who must beat 12 opponents, most of them just out for mischief, before facing the Dark Prince, who wants to take over the world. Double mode is a head-to-head contest between two players, and Endless mode is a chase for the highest score. A Mission mode sets 52 puzzles to clear with limited pieces.\n\nBecause sending so much garbage made matches short, Compile added \"offsetting\" from Puyo Puyo 2 onward, letting players cancel incoming garbage with chains of their own.",
+    "trivia": [
+      "The Famicom Disk System version came out the same day as the MSX2 original, as part of Tokuma Shoten's Famimaga Disk series.",
+      "Sega's 1992 arcade version added the one-player story and two-player competition that defined the series.",
+      "The English arcade version renamed characters and removed the Harpies' wings, calling them Dark Elves.",
+      "The Game Gear version contains an English version, Puzlow Kids, shown on Western consoles.",
+      "Amiga Power commissioned a clone, Super Foul Egg, for one of its cover disks."
+    ],
+    "devStory": "Compile released Puyo Puyo for the MSX2 in 1991, with Tokuma Shoten's Famicom Disk System version the same day. A year later Sega's arcade version greatly expanded it, and Game Machine listed it as Japan's fifth most successful table arcade unit of December 1992. Sega's Mega Drive version, released in Japan on 18 December 1992, was a best seller there for four months. Ports followed on the Game Gear, PC-9801, Famicom, Super Famicom as Super Puyo Puyo, Game Boy, PC Engine CD and FM Towns. In the West the Genesis version became Dr. Robotnik's Mean Bean Machine in 1993, with characters from the Adventures of Sonic the Hedgehog cartoon, and two years later the SNES version appeared as Kirby's Avalanche in North America and Kirby's Ghost Trap in Europe. The series later reached the West under the name Puyo Pop, and the arcade original was re-released on Switch as Sega Ages Puyo Puyo in 2019.",
+    "sources": [
+      {
+        "title": "Puyo Puyo (video game)",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Puyo_Puyo_(video_game)"
+      }
+    ]
+  },
+  {
+    "id": "mr-driller",
+    "title": "Mr. Driller",
+    "year": 1999,
+    "decade": "1990s",
+    "developer": "Namco",
+    "publisher": "Namco",
+    "genre": "Puzzle",
+    "platform": "Arcade",
+    "image": "images/games/mr-driller.png",
+    "description": "Mr. Driller (1999) is Namco's arcade puzzle game, conceived as Dig Dug 3, in which Susumu Hori drills down through coloured blocks while racing his own dwindling air supply.",
+    "longDescription": "The player controls Susumu Hori, the Mr. Driller of the title, drilling through formations of coloured blocks to reach the bottom of a well, in a game described as a cross between Puyo Puyo and Dig Dug. Blocks of the same colour stick together, and when four of a kind connect they vanish, which can set off chain reactions; falling blocks can crush him. His oxygen meter drains constantly and is topped up by collecting blue air capsules, while brown blocks marked with an \"x\" take five hits to break and cost oxygen. The player has to balance speed, safety and air on the way down. The story has creatures called Undergrounders flooding the Earth with giant blocks.\n\nSusumu was later connected to Namco's history: he is the son of Taizo Hori, the hero of Dig Dug, and the series' characters have become closely associated with the Namco brand in Japan.",
+    "trivia": [
+      "Its creator Yasuhito Nagaoka had directed R4: Ridge Racer Type 4.",
+      "Nagaoka drafted it in 1998 as Dig Dug 3; co-creator Hideo Yoshizawa, formerly of Tecmo, renamed it Mr. Driller.",
+      "It ran on Namco's System 12 arcade hardware.",
+      "It won the first Arcadia Grand Prize from Japan's Monthly Arcadia magazine.",
+      "The Dreamcast port was criticised for looking technically inferior to Namco's earlier Dreamcast release, Soulcalibur."
+    ],
+    "devStory": "Nagaoka designed the game to be more puzzle-based than the action-oriented Dig Dug and Dig Dug II, and Yoshizawa reworked his prototype before Namco released it in arcades in 1999 to critical and commercial success. Ports followed on the PlayStation, Dreamcast, Game Boy Color, WonderSwan Color, Windows and mobile phones, and Famitsu gave the Game Boy Color version its Silver Hall of Fame award. Western reaction was cooler; journalist Jeremy Parish suggested the backlash against the Dreamcast port contributed to the series' lukewarm reception outside Japan, though critics generally agreed its play was simple and addictive, and some found the home ports short of content. Yoshizawa and Nagaoka began Mr. Driller 2 in late 1999, and the dedicated team Project Driller made later sequels, including Mr. Driller G, which made Susumu the son of Dig Dug's Taizo Hori.",
+    "sources": [
+      {
+        "title": "Mr. Driller",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mr._Driller"
+      }
+    ]
+  },
+  {
+    "id": "ace-combat-2",
+    "title": "Ace Combat 2",
+    "year": 1997,
+    "decade": "1990s",
+    "developer": "Namco",
+    "publisher": "Namco",
+    "genre": "Simulation",
+    "platform": "PlayStation",
+    "image": "images/games/ace-combat-2.png",
+    "description": "Ace Combat 2 (1997) is Namco's arcade-style PlayStation combat flight game of 24 jets and 21 missions, made because its designer felt Air Combat was technically lacking, and a half-million seller in Japan.",
+    "longDescription": "Presented more like an arcade game than other flight simulators of the time, it has the player fly 21 missions in a choice of 24 fighter jets, with objectives such as intercepting enemy squadrons, sinking an aircraft carrier or defending a base. Missions pay money to spend on new aircraft for the player's hangar. From the fourth mission a wingman can be brought along for support. The campaign starts largely linear and later branches. A fuel meter acts as a time limit, ending the mission if it runs dry. New to the series are \"aces\", elite enemy pilots who can be shot down to earn medals and unlock their special aircraft.\n\nThere are two difficulty settings: Novice, and Expert, which allows realistic manoeuvres such as rolls and high-g turns. To keep things approachable, the planes do not use their real-world performance data, and a simplified physics model keeps a sense of realism while staying easy to handle. The game supports the PlayStation Analog Joystick, Namco's NeGcon and later the Dual Analog Controller.",
+    "trivia": [
+      "The team wrote a program to find how many polygons the PlayStation could draw without strain, letting it push the graphics further than most games.",
+      "Developers photographed planes at an American armed forces airshow for reference.",
+      "A mission in which the player derails a train in a mountain valley was cut for technical reasons.",
+      "Its funk rock soundtrack was heavily inspired by Top Gun.",
+      "No soundtrack was released at the time; one finally came with Ace Combat: Joint Assault's Deluxe Pack in 2010."
+    ],
+    "devStory": "Designer Masanori Kato, who had worked on Air Combat, saw that game as incomplete from a technical point of view and set out with a small team to use the PlayStation's hardware as fully as possible, giving the player a real sense of flight. They drew on aviation books, magazines and films, wanted far more variety than Air Combat's two mission types, and checked whether each new fighter would make missions more interesting. The team hoped for advice from a real pilot but could not get it. Kohta Takahashi and Nobuhide Isayama composed the music.\n\nNamco released it in Japan on 30 May 1997, in North America in August and in Europe in October. It sold over 500,000 copies in Japan by May 1998, earning a Gold Prize from Sony, and scored 83 on Metacritic. Computer and Video Games called it \"the most intense flight experience to ever grace a console\" and IGN \"one of the best flight simulators ever to come to the PlayStation\", while some critics missed multiplayer and found it monotonous or too hard. It was remade for the 3DS as Ace Combat: Assault Horizon Legacy in 2011.",
+    "sources": [
+      {
+        "title": "Ace Combat 2",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ace_Combat_2"
+      }
+    ]
   }
 ]
