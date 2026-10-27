@@ -793,7 +793,7 @@ function crumbsNav(trail) {
 // leave quotes and brackets balanced; only failing both do we fall back to the
 // word-boundary ellipsis.
 const DESC_ABBREV = /\b(?:Mr|Mrs|Ms|Dr|St|Jr|Sr|Inc|Ltd|Co|Corp|Bros|vs|Vol|No|Mt|Ft|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec|U\.S|U\.K|[A-Z])\.$/;
-const DESC_CLAUSE = /(?:; | \(|, which |, where |, whose |, while )/g;
+const DESC_CLAUSE = /(?:; | \(|, which |, where |, whose |, while |, (?=[a-z]+ing ))/g;
 const DESC_DANGLING = / (?:a|an|the|of|to|for|and|or|but|in|on|at|by|from|its|their|his|her|that|is|was|were|has|had|have|be|into|than)$/i;
 function descBalanced(s) {
   if ((s.match(/"/g) || []).length % 2) return false;
@@ -4068,12 +4068,39 @@ function paragraphs(text) {
     .map(t => `<p>${escapeHtml(t)}</p>`).join('\n        ');
 }
 
+// Game descriptions are often one long sentence with nowhere clean to cut, so
+// metaDesc() would end them on an ellipsis. When the description neither fits
+// nor trims to a whole sentence, build the snippet from the page's own
+// structured facts instead, plus the first trivia line that fits: every word of
+// it is on the page, it ends cleanly, and title + year keeps it unique.
+function gameMetaDesc(game, max = 160) {
+  const d = String(game.description || '').replace(/s+/g, ' ').trim();
+  if (d.length <= max) return escapeHtml(d);
+  const fitted = fitDescription(d, max);
+  if (fitted) return escapeHtml(fitted);
+  const who = game.developer && game.publisher && game.publisher !== game.developer
+    ? `by ${game.developer}, published by ${game.publisher}`
+    : game.developer ? `by ${game.developer}` : '';
+  const genre = game.genre ? (/(?:RPG|game|Adventure|Simulator|Simulation|Platformer|Shooter|up|Strategy)$/i.test(game.genre) ? game.genre : game.genre + ' game') : '';
+  const platform = String(game.platform || '').replace(/ \/ Multiple$/, '').replace(/^Arcade$/, 'arcades');
+  const what = [genre, platform ? `for ${platform}` : '', who].filter(Boolean).join(' ');
+  const core = `${game.title}${game.year ? ` (${game.year})` : ''}: ${what}${/[.!?]$/.test(what) ? "" : "."}`;
+  if (core.length > max) return metaDesc(d, max);
+  const facts = (game.trivia || []).map(t => String(t).trim()).filter(Boolean);
+  for (const t of facts) {
+    const line = /[.!?]["”']?$/.test(t) ? t : t + '.';
+    if (core.length + 1 + line.length <= max) return escapeHtml(`${core} ${line}`);
+  }
+  const tail = ' History, trivia and how it was made.';
+  return escapeHtml(core.length + tail.length <= max ? core + tail : core);
+}
+
 function gameDetailPage(game, base) {
   const url = `${base}/games/${game.id}`;
   const shareImg = gameShareImage(game);
   const imgUrl = shareImg ? `${base}/${shareImg}` : DEFAULT_OG_IMAGE;
   const pageImg = gameImagePath(game);
-  const desc = metaDesc((game.description || ''));
+  const desc = gameMetaDesc(game);
 
   const related = relatedGamesIndex.get(game.id) || [];
 
