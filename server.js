@@ -844,7 +844,9 @@ function listingDesc(games, phrase) {
     : titles[0];
   const lead = `${n} ${n === 1 ? 'game' : 'games'} ${phrase}`;
   return named
-    ? `${lead}, including ${named} — with platforms, developers and release history from ${site}.`
+    ? (`${lead}, including ${named} — with platforms, developers and release history.`.length <= 160
+      ? `${lead}, including ${named} — with platforms, developers and release history.`
+      : `${lead}, including ${named}.`)
     : `${lead}, with platforms, developers and release history from ${site}.`;
 }
 
@@ -1825,6 +1827,21 @@ const HUB_TITLES = new Map(Object.entries({
 
 // Hub descriptions that left a third of the snippet unused. Only the hubs
 // under ~90 characters are overridden; the rest already read well.
+// Hand-written search snippets for pages whose own description is one long
+// sentence that cannot be cut cleanly (people, hardware, essays…). Keyed by
+// path; each is <=160 characters and written only from the page's own text.
+// The page body keeps the full description — this replaces the snippet only.
+let metaDescriptions = null;
+function metaDescriptionFor(cleanPath) {
+  if (!metaDescriptions) {
+    try {
+      metaDescriptions = new Map(Object.entries(JSON.parse(
+        fs.readFileSync(path.join(__dirname, 'data', 'meta-descriptions.json'), 'utf8'))));
+    } catch (e) { metaDescriptions = new Map(); }
+  }
+  return metaDescriptions.get(cleanPath) || null;
+}
+
 const HUB_DESCRIPTIONS = new Map(Object.entries({
   'cancelled': 'Retro games announced, previewed and then killed before release — from Star Fox 2 to Sonic X-treme — and the reasons each one died.',
   'controllers': 'How the game controller evolved: the NES d-pad, the analogue stick, shoulder buttons, rumble and the input ideas that stuck.',
@@ -2005,6 +2022,13 @@ app.use((req, res, next) => {
       if (hubSlug && HUB_DESCRIPTIONS.has(hubSlug)) {
         body = body.replace(/<meta name="description" content="[^"]*"/,
           `<meta name="description" content="${escapeHtml(HUB_DESCRIPTIONS.get(hubSlug))}"`);
+      }
+      const handDesc = metaDescriptionFor(cleanPath);
+      if (handDesc) {
+        const d = escapeHtml(handDesc);
+        body = body.replace(/<meta name="description" content="[^"]*"/, `<meta name="description" content="${d}"`)
+          .replace(/<meta property="og:description" content="[^"]*"/, `<meta property="og:description" content="${d}"`)
+          .replace(/<meta name="twitter:description" content="[^"]*"/, `<meta name="twitter:description" content="${d}"`);
       }
       const descMatch = body.match(/<meta name="description" content="([^"]*)"/);
       if (descMatch && unescapeHtml(descMatch[1]).length > 160) {

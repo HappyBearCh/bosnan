@@ -127,6 +127,21 @@ try {
   warnings.push(String(e.stdout || 'data/lastmod.json is out of date').trim());
 }
 
+// Hand-written search snippets: each must fit the 160 characters Google shows
+// and must not repeat another page's snippet.
+try {
+  const metas = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'meta-descriptions.json'), 'utf8'));
+  const seen = new Map();
+  for (const [p, d] of Object.entries(metas)) {
+    if (typeof d !== 'string' || !d.trim()) errors.push(`meta-descriptions.json: ${p} is empty`);
+    else if (d.length > 160) errors.push(`meta-descriptions.json: ${p} is ${d.length} characters (max 160)`);
+    if (seen.has(d)) warnings.push(`meta-descriptions.json: ${p} repeats ${seen.get(d)}`);
+    seen.set(d, p);
+  }
+} catch (e) {
+  if (e.code !== 'ENOENT') errors.push(`meta-descriptions.json: ${e.message}`);
+}
+
 console.log(`Validated ${files.length} files, ${totalEntries} entries.`);
 if (warnings.length) {
   console.log(`\n${warnings.length} warning(s):`);
