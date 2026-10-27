@@ -65,7 +65,18 @@ const SITE_LASTMOD = (() => {
 // short name people actually search for.
 const ORG_ID = `${SITE_URL}/#organization`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
-const SITE_TAGLINE = 'An independent archive of video game history from 1952 to 1999: games, ' +
+// The archive's span is read from the data, so the tagline, homepage and
+// schema cannot go on claiming "to 1999" once later releases are added.
+const ARCHIVE_YEARS = (() => {
+  try {
+    const ys = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'games.json'), 'utf8'))
+      .map(g => +g.year).filter(y => y > 1900);
+    return { from: Math.min(...ys), to: Math.max(...ys) };
+  } catch (e) { return { from: 1952, to: 1999 }; }
+})();
+const ARCHIVE_SPAN = `${ARCHIVE_YEARS.from} to ${ARCHIVE_YEARS.to}`;
+const ARCHIVE_SPAN_DASH = `${ARCHIVE_YEARS.from}–${ARCHIVE_YEARS.to}`;
+const SITE_TAGLINE = `An independent archive of video game history from ${ARCHIVE_SPAN}: games, ` +
   'hardware, developers, music, magazines and long-form essays on the arcade, ' +
   'home-computer and console eras.';
 const ORG_SCHEMA = {
@@ -774,9 +785,44 @@ function crumbsNav(trail) {
 
 // Trim to a meta-description length on a word boundary, so snippets don't end
 // mid-word (or mid-HTML-entity, which would render as literal "&amp" garbage).
+// A description cut mid-phrase with an ellipsis ("…after Bowser steals the
+// Star…") reads as broken in the SERP and invites Google to write its own.
+// Prefer, in order: the longest run of whole sentences that fits, then the
+// longest prefix ending at a clause break (", ", " — ", " after ", " which "…)
+// closed with a full stop. Either must keep at least ~60% of the budget and
+// leave quotes and brackets balanced; only failing both do we fall back to the
+// word-boundary ellipsis.
+const DESC_ABBREV = /\b(?:Mr|Mrs|Ms|Dr|St|Jr|Sr|Inc|Ltd|Co|Corp|Bros|vs|Vol|No|Mt|Ft|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec|U\.S|U\.K|[A-Z])\.$/;
+const DESC_CLAUSE = /(?:; | \(|, which |, where |, whose |, while )/g;
+const DESC_DANGLING = / (?:a|an|the|of|to|for|and|or|but|in|on|at|by|from|its|their|his|her|that|is|was|were|has|had|have|be|into|than)$/i;
+function descBalanced(s) {
+  if ((s.match(/"/g) || []).length % 2) return false;
+  if ((s.match(/\(/g) || []).length !== (s.match(/\)/g) || []).length) return false;
+  return (s.match(/[“]/g) || []).length === (s.match(/[”]/g) || []).length;
+}
+function fitDescription(text, max) {
+  const floor = Math.floor(max * 0.6);
+  let best = '';
+  for (const m of text.matchAll(/[.!?](?:["”')\]]*)(?= [A-Z0-9"“(])/g)) {
+    const end = m.index + m[0].length;
+    if (end > max) break;
+    const cand = text.slice(0, end);
+    if (DESC_ABBREV.test(text.slice(0, m.index + 1))) continue;
+    if (cand.length >= floor && descBalanced(cand)) best = cand;
+  }
+  if (best) return best;
+  for (const m of text.matchAll(DESC_CLAUSE)) {
+    if (m.index + 1 > max) break;
+    const cand = text.slice(0, m.index).replace(/[\s,;:—–-]+$/, '');
+    if (cand.length >= floor && descBalanced(cand) && !DESC_DANGLING.test(cand)) best = cand + '.';
+  }
+  return best;
+}
 function metaDesc(s, max = 160) {
   const text = String(s == null ? '' : s).replace(/\s+/g, ' ').trim();
   if (text.length <= max) return escapeHtml(text);
+  const fitted = fitDescription(text, max);
+  if (fitted) return escapeHtml(fitted);
   const cut = text.slice(0, max - 1);
   const sp = cut.lastIndexOf(' ');
   return escapeHtml((sp > max * 0.6 ? cut.slice(0, sp) : cut).replace(/[\s,;:.\-]+$/, '')) + '&#8230;';
@@ -1809,18 +1855,38 @@ function hubEntryCount(slug, body) {
 // (`Castle of Illusion Starring Mickey…`) would collide into one duplicate
 // title. A long unique title beats a short ambiguous one.
 const TITLE_BOILERPLATE = /^(Bosnan|Bosnan Retro Archive|Bosnan Retro Games Archive)$/;
-function shortenSubtitle(raw, max = 65) {
+function shortenSubtitle(raw, max = 65, section = '') {
   const text = unescapeHtml(raw).replace(/\s+/g, ' ').trim();
   if (text.length <= max || !text.includes(' — ')) return null;
   const [subject, ...rest] = text.split(' — ');
-  if (subject.length >= 20) return escapeHtml(subject);
+  // Whenever the subtitle has to go, name the section in its place: the bare
+  // subject ("EarthBound", "Kirby") is ambiguous and can collide with
+  // another section's page.
+  const labelled = () => {
+    for (const label of [ENTRY_TITLE_DESCRIPTORS.get(section), sectionLabel(section)].filter(Boolean)) {
+      for (const t of [`${subject} – ${label} – Bosnan`, `${subject} – ${label}`]) if (t.length <= 60) return escapeHtml(t);
+    }
+    return escapeHtml(subject);
+  };
+  if (subject.length >= 20) return labelled();
   let out = subject + ' —';
+  let truncated = false;
   for (const word of rest.join(' — ').split(' ')) {
-    if ((out + ' ' + word).length > max) break;
+    if ((out + ' ' + word).length > max) { truncated = true; break; }
     out += ' ' + word;
   }
+  // A subtitle cut part-way ("…Forgot What Made") reads as broken, and the
+  // bare subject ("EarthBound", "Kirby") is ambiguous and can collide with
+  // another section's page — so name the section instead.
+  if (truncated) return labelled();
   out = out.replace(/[\s—,:;]+$/, '');
-  return out.length > subject.length ? escapeHtml(out) : escapeHtml(subject);
+  // Never end on an open bracket or a dangling function word: "…Weapon
+  // Against" and "…Box Art (NES / MSX2" read as truncation, which is worse
+  // than the shorter subject alone.
+  if ((out.match(/\(/g) || []).length > (out.match(/\)/g) || []).length) out = out.slice(0, out.lastIndexOf('(')).replace(/[\s—,:;]+$/, '');
+  while (/ (?:a|an|the|of|to|for|with|and|or|in|on|at|by|from|against|behind|every|its|their|his|her|that|than|into|over|is|was|when|how|why)$/i.test(out)) out = out.replace(/ \S+$/, '');
+  out = out.replace(/[\s—,:;]+$/, '');
+  return out.length > subject.length + 2 ? escapeHtml(out) : labelled();
 }
 
 // Entry pages are titled `${name} – ${navLabel} – Bosnan`, and for a short
@@ -1859,14 +1925,34 @@ const ENTRY_TITLE_DESCRIPTORS = new Map(Object.entries({
   essays: 'Retro Gaming History Essay',
   'lost-games': 'Lost Video Game History',
   'rom-hacks': 'ROM Hack Profile',
+  difficulty: 'Why This Retro Game Is So Hard',
+  manuals: 'Original Game Manual History',
+  controllers: 'Retro Controller History',
+  endings: 'Video Game Ending Explained',
+  'urban-legends': 'Video Game Urban Legend Explained',
+  'easter-eggs': 'Video Game Easter Egg Explained',
+  'famous-bugs': 'Famous Video Game Bug Explained',
 }));
 
 function describeEntryTitle(raw, segments, max = 60) {
-  if (segments.length !== 2 || !ENTRY_TITLE_DESCRIPTORS.has(segments[0])) return null;
-  const m = unescapeHtml(raw).replace(/\s+/g, ' ').trim().match(/^(.+?) – [^–]+ – Bosnan$/);
-  if (!m) return null;
-  const out = `${m[1]} – ${ENTRY_TITLE_DESCRIPTORS.get(segments[0])} – Bosnan`;
-  return out.length <= max ? escapeHtml(out) : null;
+  if (segments.length !== 2) return null;
+  const clean = unescapeHtml(raw).replace(/\s+/g, ' ').trim();
+  const desc = ENTRY_TITLE_DESCRIPTORS.get(segments[0]);
+  const suffixed = clean.match(/^(.+?) – [^–]+ – Bosnan$/);
+  if (suffixed) {
+    if (!desc) return null;
+    const out = `${suffixed[1]} – ${desc} – Bosnan`;
+    return out.length <= max ? escapeHtml(out) : null;
+  }
+  // A few templates title the page with the bare entry name and no suffix at
+  // all ("Dragon Warrior Manual", 21 characters): add the descriptor, or the
+  // section name when the descriptor will not fit, so the result says what
+  // kind of page it is.
+  if (/ [–—] /.test(clean) || clean.length >= 40) return null;
+  for (const label of [desc, sectionLabel(segments[0])].filter(Boolean)) {
+    for (const out of [`${clean} – ${label} – Bosnan`, `${clean} – ${label}`]) if (out.length <= max) return escapeHtml(out);
+  }
+  return null;
 }
 
 function trimTitle(raw, max = 60) {
@@ -1910,7 +1996,7 @@ app.use((req, res, next) => {
       if (titleMatch) {
         const trimmed = trimTitle(titleMatch[1]);
         const fitted = trimmed || titleMatch[1];
-        const shortened = shortenSubtitle(fitted);
+        const shortened = shortenSubtitle(fitted, 65, pathSegments.length === 2 ? pathSegments[0] : '');
         if (shortened || trimmed) body = body.replace(titleMatch[0], `<title>${shortened || trimmed}</title>`);
       }
       // Most templates build descriptions with `.substring(0, 160)` on raw
@@ -3617,7 +3703,7 @@ ${toggleScript()}
 // cannot back.
 function aboutPage() {
   const sections = NAV_GROUPS.reduce((n, g) => n + g.items.length, 0);
-  const desc = `Bosnan is an independent archive of video game history, 1952–1999 — `
+  const desc = `Bosnan is an independent archive of video game history, ${ARCHIVE_SPAN_DASH} — `
     + `${games.length} game entries, ${ESSAYS.length} essays and ${sections} sections `
     + `on hardware, developers and music.`;
   const schema = JSON.stringify({
@@ -3662,7 +3748,7 @@ function aboutPage() {
 ${nav('about')}
 <section class="platforms-hero">
     <h1>About Bosnan</h1>
-    <p>An independent archive of video game history, 1952–1999</p>
+    <p>An independent archive of video game history, ${ARCHIVE_SPAN_DASH}</p>
 </section>
 <div class="essay-wrapper">
   <p><strong>Bosnan</strong> is a free, independent, non-commercial reference archive for the
@@ -3685,8 +3771,9 @@ ${nav('about')}
 
   <h2>Scope</h2>
   <p>The cut-off is the end of 1999. A title qualifies if it was released, announced or credibly
-  documented before then; hardware, people and publications qualify if their significant work
-  falls in the same window. Later material appears only where it is directly about that era —
+  documented before then, or if it is a late release (up to ${ARCHIVE_YEARS.to}) for a console or
+  computer of that era, such as the Nintendo 64, PlayStation, Game Boy Color or Dreamcast;
+  hardware, people and publications qualify if their significant work falls in the same window. Later material appears only where it is directly about that era —
   a <a href="/retro-revival">revival</a>, a re-release, or a <a href="/rom-hacks">ROM hack</a>
   of a game the archive already covers.</p>
 
@@ -3747,8 +3834,8 @@ function homepagePage(gotd) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosnan – Retro Games Archive: ${games.length}+ Classic Games, 1952–1999</title>
-    <meta name="description" content="Bosnan – explore legendary retro games from 1952 to 1999. Browse ${games.length}+ games across Arcade, NES, C64, SNES, Genesis and PlayStation, plus essays and hardware.">
+    <title>Bosnan – Retro Games Archive: ${games.length}+ Classic Games, ${ARCHIVE_SPAN_DASH}</title>
+    <meta name="description" content="Bosnan – explore legendary retro games from ${ARCHIVE_SPAN}. Browse ${games.length}+ games across Arcade, NES, C64, SNES, Genesis and PlayStation, plus essays and hardware.">
     <script type="application/ld+json">${websiteSchema}</script>
     <script type="application/ld+json">${orgSchema}</script>
     ${cssHead()}
@@ -3758,7 +3845,7 @@ ${nav('home')}
 
 <section class="home-hero">
     <h1>Retro Games Archive</h1>
-    <p class="home-tagline">The history of video games, 1952&ndash;1999 — games, hardware, people, and culture</p>
+    <p class="home-tagline">The history of video games, ${ARCHIVE_YEARS.from}&ndash;${ARCHIVE_YEARS.to} — games, hardware, people, and culture</p>
     <form class="home-search" action="/search" method="GET" role="search">
         <input type="search" name="q" placeholder="Search ${games.length} games, essays, platforms, people&#8230;" aria-label="Search the archive">
         <button type="submit">Search</button>
@@ -3827,7 +3914,7 @@ ${nav('home')}
 <div class="enc-section home-about">
     <div class="enc-header">
         <h2>About the Archive</h2>
-        <p>Bosnan is an independent archive of video game history from 1952 to 1999. It covers ${games.length} games on ${PLATFORMS.length} platforms, together with the hardware, sound chips, designers, composers, studios, magazines, controversies and cancelled projects behind them, and ${ESSAYS.length} long-form essays. Entries are written from documented sources, many of which are cited on the page, and every entry links to the related games, people and machines elsewhere in the archive.</p>
+        <p>Bosnan is an independent archive of video game history from ${ARCHIVE_SPAN}. It covers ${games.length} games on ${PLATFORMS.length} platforms, together with the hardware, sound chips, designers, composers, studios, magazines, controversies and cancelled projects behind them, and ${ESSAYS.length} long-form essays. Entries are written from documented sources, many of which are cited on the page, and every entry links to the related games, people and machines elsewhere in the archive.</p>
         <p><a href="/about">How the archive is made</a> &middot; <a href="/browse">Browse every section</a> &middot; <a href="/timeline">Timeline</a> &middot; <a href="/glossary">Glossary of gaming terms</a></p>
     </div>
 </div>
@@ -3892,10 +3979,10 @@ function gamesListPage() {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All ${games.length} Retro Games, 1952–1999 – Bosnan Archive</title>
-    <meta name="description" content="Browse ${games.length} legendary retro games from 1952 to 1999. Search by title, genre, platform, or decade.">
+    <title>All ${games.length} Retro Games, ${ARCHIVE_SPAN_DASH} – Bosnan Archive</title>
+    <meta name="description" content="Browse ${games.length} legendary retro games from ${ARCHIVE_SPAN}. Search by title, genre, platform, or decade.">
     <meta property="og:title" content="Retro Games Archive – Bosnan">
-    <meta property="og:description" content="Browse ${games.length} legendary retro games from 1952 to 1999.">
+    <meta property="og:description" content="Browse ${games.length} legendary retro games from ${ARCHIVE_SPAN}.">
     <meta property="og:type" content="website">
     <script type="application/ld+json">${itemListSchema}</script>
     ${cssHead()}
@@ -3905,7 +3992,7 @@ ${nav('games')}
 
 <section class="games-hero">
     <h1>Retro Games Archive</h1>
-    <p>A collection of legendary games from 1952 to 1999</p>
+    <p>A collection of legendary games from ${ARCHIVE_SPAN}</p>
 </section>
 
 <div class="games-controls">
@@ -6184,7 +6271,7 @@ function boxArtListPage() {
 
 function boxArtDetailPage(entry) {
   const facts = (entry.keyFacts || []).map(f => `<li>${escapeHtml(f)}</li>`).join('');
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(entry.title)} Box Art (${escapeHtml([entry.platform, entry.region, entry.year].filter(Boolean).join(', '))}) – Bosnan</title><meta name="description" content="${metaDesc(entry.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${nav('box-art')}<div class="platform-detail-wrapper"><a href="/box-art" class="back-link">&#8592; All Box Art</a><div class="platform-detail-header"><h1>${escapeHtml(entry.title)}</h1><p class="platform-detail-era">${escapeHtml(entry.platform)} &middot; ${entry.year} &middot; ${escapeHtml(entry.region)}${entry.artist ? ' &middot; Art: ' + escapeHtml(entry.artist) : ''}</p><p class="platform-detail-desc">${escapeHtml(entry.description)}</p><p class="platform-detail-desc">${escapeHtml(entry.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>${escapeHtml(entry.title)}${/\b(?:box|cover)\b/i.test(entry.title) ? '' : ' Box Art'} (${escapeHtml([entry.platform, entry.region, entry.year].filter(Boolean).join(', '))}) – Bosnan</title><meta name="description" content="${metaDesc(entry.description)}"><style>h1,h2{font-family:inherit}</style>${cssHead()}</head><body>${nav('box-art')}<div class="platform-detail-wrapper"><a href="/box-art" class="back-link">&#8592; All Box Art</a><div class="platform-detail-header"><h1>${escapeHtml(entry.title)}</h1><p class="platform-detail-era">${escapeHtml(entry.platform)} &middot; ${entry.year} &middot; ${escapeHtml(entry.region)}${entry.artist ? ' &middot; Art: ' + escapeHtml(entry.artist) : ''}</p><p class="platform-detail-desc">${escapeHtml(entry.description)}</p><p class="platform-detail-desc">${escapeHtml(entry.longDescription)}</p>${facts ? `<div class="dev-notable"><strong>Key Facts:</strong><ul class="trivia-list">${facts}</ul></div>` : ''}</div></div>${toggleScript()}</body></html>`;
 }
 
 function portsListPage() {
