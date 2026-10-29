@@ -926,4 +926,151 @@ module.exports = [
       { title: '1988 in video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1988_in_video_games' },
     ],
   },
+  {
+    id: 'year-1971',
+    year: 1971,
+    headline: 'Computer Space, Galaxy Game and the First Commercial Video Games',
+    summary: '1971 is the first year of the commercial video game industry. Nutting Associates shipped Computer Space, the first coin-operated video game sold to distributors, and Bill Pitts and Hugh Tuck installed Galaxy Game in Stanford University\'s student union. Most games still ran on mainframes, where Star Trek and The Oregon Trail were written.',
+    topGames: ['Computer Space (Arcade)', 'Galaxy Game (Arcade)', 'Star Trek (Mainframe)', 'The Oregon Trail (Mainframe)'],
+    topEvents: [
+      { title: 'Computer Space (November–December)', desc: 'Nutting Associates shipped Nolan Bushnell and Ted Dabney\'s Computer Space to distributors as the first commercially available coin-operated video game, after testing a prototype at the Dutch Goose bar in Menlo Park in August.' },
+      { title: 'Galaxy Game at Stanford (November)', desc: 'Bill Pitts and Hugh Tuck placed the first Galaxy Game unit in Stanford University\'s Tresidder Union, charging 10 cents for a one-on-one game or 25 cents for three players. Only two units were ever built.' },
+      { title: 'Magnavox Tests a Home Console', desc: 'Magnavox licensed Ralph Baer and William Rusch\'s "Brown Box" patents from Sanders Associates in March and ran its first home-system test market in Grand Rapids, Michigan, in July — the product that became the Odyssey.' },
+      { title: 'The Oregon Trail (December)', desc: 'Student teacher Don Rawitsch showed OREGON to his class at Jordan Junior High in Minneapolis on 3 December; it had been written with Paul Dillenberger and Bill Heinemann.' },
+    ],
+    quote: '',
+    sections: [
+      { title: 'Two Machines in the Bay Area', html: '<p>The two coin-operated games of 1971 took opposite approaches. Galaxy Game ran on a full minicomputer and was installed by its makers at a single site, Stanford\'s student union; only two units were built. Computer Space used dedicated circuitry instead, so it could be manufactured in quantity. Bushnell joined Nutting Associates as chief engineer that spring, and he and Dabney formalised their partnership as the Syzygy Company, the name credited on the cabinet. Nutting showed the game at the Music Operators of America show in Chicago in October and took no distributor orders there, but estimates of its eventual production run from 1,300 to 1,500 cabinets.</p>' },
+      { title: 'Games on the Mainframe', html: '<p>Away from the arcade, most digital games of the year ran on university and corporate computers. Mike Mayfield wrote Star Trek in BASIC on an SDS Sigma 7 at UC Berkeley, and it was added to Hewlett-Packard\'s program library the following year. Don Daglow wrote Baseball and his own Star Trek on a PDP-10 at Pomona, and students at Carleton College built games for graphical terminals, including a pinball replica. The Oregon Trail, first played by Minneapolis schoolchildren in December, was still being tried out in classrooms; the commercial versions came years later.</p>' },
+    ],
+    sources: [
+      { title: '1971 in video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1971_in_video_games' },
+    ],
+  },
+  {
+    id: 'year-1972',
+    year: 1972,
+    headline: 'Pong, the Odyssey and the Founding of Atari',
+    summary: 'In 1972 Nolan Bushnell and Ted Dabney founded Atari, whose Pong became a local hit in northern California and launched the company. Magnavox released the Odyssey home console, and Stanford hosted the Intergalactic Spacewar Olympics, the first formal video game competition.',
+    topGames: ['Pong (Arcade)', 'Table Tennis (Magnavox Odyssey)', 'Empire (HP2000)', 'Moonwar (PLATO)'],
+    topEvents: [
+      { title: 'Atari Is Founded (27 June)', desc: 'Bushnell and Dabney founded Atari in Sunnyvale, California, absorbing the assets of their Syzygy partnership.' },
+      { title: 'Magnavox Odyssey (September)', desc: 'Magnavox released the Odyssey in 25 major US markets with 12 packed-in games and a separately sold light gun. In May, Bushnell had played its Table Tennis game at a Magnavox showing in Burlingame.' },
+      { title: 'Pong (November)', desc: 'After a prototype was tested at Andy Capp\'s Tavern in Sunnyvale, Atari sold Pong to coin-op distributors in northern California. About 8,000 cabinets were built in its lifetime.' },
+      { title: 'The First Video Game Tournament (19 October)', desc: 'The Intergalactic Spacewar Olympics were held at the Stanford AI Project and became the centrepiece of Stewart Brand\'s article in the 7 December issue of Rolling Stone.' },
+    ],
+    quote: '',
+    sections: [
+      { title: 'Arcade and Home Arrive Together', html: '<p>1972 put video games in both the bar and the living room. The Odyssey, built by Magnavox from Sanders Associates\' designs, reached shops in September, and Magnavox manufactured 140,000 consoles in its first year. Pong followed in November, and its success in northern California established Atari\'s business. The two were linked: Bushnell had played the Odyssey\'s Table Tennis that spring, and Magnavox would later sue over its patents. Video games were still a rarity elsewhere — at Chicago\'s Music Operators of America show in September, Computer Space and For-Play\'s Star Trek were the only two on the floor.</p>' },
+      { title: 'Networked Play on Campus', html: '<p>On university systems the year\'s games pointed further ahead. Peter Langston, a Reed College student, wrote Empire for the HP2000 minicomputer, and Louis Bloomfield\'s Moonwar became the most popular "big board" game on the PLATO IV network at the University of Illinois. In October the People\'s Computer Company newsletter began printing BASIC game listings for readers to type in themselves — a distribution method that would carry games into the home-computer era.</p>' },
+    ],
+    sources: [
+      { title: '1972 in video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1972_in_video_games' },
+    ],
+  },
+  {
+    id: 'year-1973',
+    year: 1973,
+    headline: 'The Pong Craze and the First Video Game Fad',
+    summary: 'In 1973 Atari launched Pong nationally, and a wave of Pong clones and variants produced the first video game fad in the United States, Japan and the United Kingdom. Sega and Taito released Japan\'s first coin-op video games, Atari tried new ideas with Space Race and Gotcha, and Konami and Hudson were founded.',
+    topGames: ['Pong (Arcade)', 'Paddle Battle (Arcade)', 'Space Race (Arcade)', 'Gotcha (Arcade)', 'Hunt the Wumpus (Mainframe)'],
+    topEvents: [
+      { title: 'Pong Goes National (March)', desc: 'Atari launched Pong to coin-op distributors across the US, after licensing it in January to Bally subsidiary Midway, which released it as Winner.' },
+      { title: 'Clones Flood the Market', desc: 'Ramtek\'s Volly and Allied Leisure\'s Paddle Battle were among the first Pong clones in March; Paddle Battle sold about 17,000 cabinets. At the November MOA show, almost all of the more than a dozen exhibitors showed Pong clones or variants.' },
+      { title: 'Japan\'s First Video Games (July)', desc: 'Sega released Pong-Tron and Taito released Elepong, the first two video games made for the Japanese coin-op market. Atari opened Atari Japan in August.' },
+      { title: 'New Companies', desc: 'Konami was incorporated in March, Hudson was established in Sapporo in May, Kee Games — majority-owned by Atari\'s principals but presented as a competitor — was founded in September, and Exidy followed in October.' },
+    ],
+    quote: '',
+    sections: [
+      { title: 'Variations on a Paddle', html: '<p>US arcade manufacturers built an estimated 50,000 to 70,000 video game cabinets in 1973, and most of them were some form of ball-and-paddle game. Allied Leisure\'s Tennis Tourney was the first four-player Pong variant, Kee Games\' Elimination! also took four players, and Nutting\'s Wimbledon was among the first games in colour. Atari itself looked for a way out of the genre: Space Race combined racing and obstacle avoidance, and Gotcha was a maze game, with a low-production Color Gotcha that may have been the first commercially released video game with colour graphics.</p>' },
+      { title: 'Games You Typed In', html: '<p>Computer games spread through print and networks. In July Digital Equipment Corporation published David Ahl\'s 101 BASIC Computer Games, which carried variants of Hamurabi, Star Trek and Lunar Lander; in May, Gregory Yob\'s Hunt the Wumpus was distributed on paper tape through the People\'s Computer Company newsletter. Jack Burness\'s Moonlander, completed in February for the DEC GT-40, had the first overworld map and the first video game Easter egg. On PLATO, John Daleske\'s Empire grew into Empire II with Silas Warner, an arena shooter for fifty players on eight teams.</p>' },
+    ],
+    sources: [
+      { title: '1973 in video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1973_in_video_games' },
+    ],
+  },
+  {
+    id: 'year-1974',
+    year: 1974,
+    headline: 'Tank, Gran Trak 10 and Arcades Beyond Pong',
+    summary: 'In 1974 arcade games began to move beyond Pong. Kee Games\' Tank was the best-selling arcade game of the year, Atari\'s Gran Trak 10 stored its graphics in ROM, and Taito\'s Basketball and Speed Race brought Japanese design to the market. Namco bought Atari Japan, and Magnavox sued Atari and others over the Odyssey patents.',
+    topGames: ['Tank (Arcade)', 'Gran Trak 10 (Arcade)', 'Speed Race (Arcade)', 'Basketball (Arcade)', 'Spasim (PLATO)', 'Maze War (Imlac PDS-1)'],
+    topEvents: [
+      { title: 'Tank (November)', desc: 'Kee Games\' Tank, a reinterpretation of Computer Space, sold about 16,000 cabinets and was the best-selling arcade game of 1974. It was later adapted as Combat for the Atari VCS.' },
+      { title: 'Gran Trak 10 (March)', desc: 'Atari\'s driving game used a ROM for its graphics and course data, and after early manufacturing problems it became a major success, with about 10,000 cabinets built.' },
+      { title: 'Japanese Arcade Design', desc: 'Tomohiro Nishikado\'s Basketball for Taito had the first human-shaped characters in a coin-op game, and as Midway\'s TV Basketball it was the first Japanese arcade game officially exported to the US. Taito\'s Speed Race helped make 100 yen the standard price of a play in Japan.' },
+      { title: 'The Odyssey Lawsuit (15 April)', desc: 'Magnavox and Sanders Associates sued Atari, Bally, Chicago Dynamic Industries, Allied Leisure and Empire Distributing over Ralph Baer and Bill Rusch\'s patents.' },
+    ],
+    quote: '',
+    sections: [
+      { title: 'A Maturing Arcade', html: '<p>US manufacturers sold about 40,000 arcade cabinets in 1974 for roughly $40.5 million, a quarter of them cocktail-table units. The games themselves were diversifying. Ramtek\'s Baseball depicted the sport more authentically than any coin-op before it and was the first video game to show several animated characters at once; Ramtek\'s Clean Sweep inspired Breakout; and Sega\'s Balloon Gun, released in Japan in August, was the first coin-op game with a light gun. In September The New York Times covered the Pong boom, and two trade magazines, Japan\'s Game Machine and America\'s Play Meter, published their first issues.</p>' },
+      { title: 'Business and the First 3D Games', html: '<p>The industry consolidated quickly. In July Nakamura Seisakusho — later Namco — bought Atari Japan for 296 million yen, becoming Atari\'s exclusive Japanese distributor, and in September Atari bought Kee Games, whose Joe Keenan became Atari\'s president. Sega Enterprises Inc. and IPM, the future Irem, were founded. On linked graphical terminals the first 3D games appeared: Maze War, built by three students at NASA Ames, and Jim Bowery\'s Spasim on PLATO IV, the first computer game with true 3D graphics. In January TSR had published Dungeons & Dragons, which would shape role-playing and adventure games.</p>' },
+    ],
+    sources: [
+      { title: '1974 in video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1974_in_video_games' },
+    ],
+  },
+  {
+    id: 'year-1975',
+    year: 1975,
+    headline: 'Gun Fight, Home Pong and the First Microprocessor Games',
+    summary: 'In 1975 the first commercial games built on microprocessors appeared. Midway\'s Gun Fight, based on Taito\'s Western Gun, was among the year\'s most successful arcade games, Atari\'s Indy 800 seated eight players, and Sears began selling Atari\'s home Pong. On the PLATO network The Dungeon was one of the first computer role-playing games.',
+    topGames: ['Gun Fight (Arcade)', 'Western Gun (Arcade)', 'Wheels (Arcade)', 'Indy 800 (Arcade)', 'Home Pong (Console)', 'The Dungeon (PLATO)'],
+    topEvents: [
+      { title: 'Gun Fight (November)', desc: 'Midway\'s version of Taito\'s Western Gun, developed by Dave Nutting Associates, was the pre-eminent microprocessor game of the year and the first twin-stick shooter, selling about 8,600 cabinets.' },
+      { title: 'Home Pong at Sears', desc: 'Toy buyers showed no interest in Atari\'s home Pong at the New York Toy Fair in February, but in March Sears agreed to sell it under its Tele-Games brand. It went on sale in October.' },
+      { title: 'Indy 800 (April)', desc: 'Atari\'s Indy 800, sold under the Kee Games label, was an eight-player racing cabinet with eight circuit boards and colour graphics, and was highly successful.' },
+      { title: 'The 6502 Debuts (September)', desc: 'MOS Technology\'s 6502 processor appeared at the first WESCON show, and Atari\'s Cyan Engineering chose it for the prototype that became the Video Computer System.' },
+    ],
+    quote: '',
+    sections: [
+      { title: 'Racing and Shooting', html: '<p>After the Pong boom, racing and competitive shooting games led the arcade. RePlay magazine\'s operator poll for 1975 put Kee Games\' Tank first, Midway\'s Wheels second and Gun Fight third. Taito\'s Western Gun, released in Japan in September, introduced human-on-human combat and destructible environments, and Midway\'s Gun Fight brought the idea to the US on microprocessor hardware that would be reused. Atari\'s Steeplechase took six players and was the first graphical game with a jumping character, and Exidy\'s Destruction Derby, released in December, was later modified into Death Race.</p>' },
+      { title: 'Consoles and Early RPGs', html: '<p>US home console sales reached an estimated 250,000 to 400,000 units. Magnavox replaced the original Odyssey with the Odyssey 100 and 200, built on Texas Instruments chips, and in Japan Epoch released TV Tennis Electrotennis, the first Japanese-developed home console. A market study for Fairchild on a cartridge system from Alpex led to the Video Entertainment System. On PLATO, students who had discovered Dungeons & Dragons built some of the first computer role-playing games: Rusty Rutherford\'s The Dungeon, also the first known game with a high score table, and Orthanc after it. Microsoft, Cinematronics, Sammy and the company that became Enix were all founded this year.</p>' },
+    ],
+    sources: [
+      { title: '1975 in video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1975_in_video_games' },
+    ],
+  },
+  {
+    id: 'year-1976',
+    year: 1976,
+    headline: 'Breakout, Adventure and the First Cartridge Console',
+    summary: '1976 was a mixed year: US home console sales surged while arcades stalled as pinball regained ground. Atari shipped Breakout, Midway had a hit with Sea Wolf, Coleco\'s Telstar sold more than a million units, and Fairchild released the first console with interchangeable ROM cartridges. Adventure began interactive fiction.',
+    topGames: ['Breakout (Arcade)', 'Sea Wolf (Arcade)', 'Sprint 2 (Arcade)', 'Night Driver (Arcade)', 'Death Race (Arcade)', 'Blockade (Arcade)', 'Colossal Cave Adventure (Mainframe)'],
+    topEvents: [
+      { title: 'Breakout (May)', desc: 'Atari\'s Breakout sold about 11,000 cabinets in the US. Namco released it in Japan, where block-breaking games sparked the first video game boom.' },
+      { title: 'Death Race Controversy (April)', desc: 'Exidy\'s Death Race prompted the first controversy over video game violence after an Associated Press reporter criticised its graphics.' },
+      { title: 'Telstar and the "Pong on a Chip"', desc: 'General Instrument\'s AY-3-8500 put six games on one chip. Coleco built its Telstar around it, received its full chip order, and sold more than a million units.' },
+      { title: 'Fairchild Video Entertainment System (November)', desc: 'Fairchild\'s console was the first with programmable cartridges and the first with a pause feature. In October, Warner Communications bought Atari for $28 million.' },
+    ],
+    quote: '',
+    sections: [
+      { title: 'Arcades Stall, Homes Buy In', html: '<p>US arcades took delivery of about 54,000 video game cabinets in 1976, and the coin-op business stalled as solid-state pinball, led by Bally\'s Wizard, regained popularity. Most top earners were carried over from 1975, but there were new hits: Breakout, Midway\'s Sea Wolf with its early electronic high-score feature, and Atari\'s Sprint 2, the first commercial game with hardware sprites. Atari\'s Night Driver and Gremlin\'s Blockade, the origin of the snake game, also appeared. At home, US console sales rose to an estimated 3.24 to 4 million units after the 1975 holiday season, as new makers adopted the AY-3-8500 and Coleco\'s Telstar outsold them all.</p>' },
+      { title: 'Adventure and the Hobbyists', html: '<p>The most significant game of the year ran on a mainframe. William Crowther wrote Adventure, inspired by caving and Dungeons & Dragons, and left it on BBN\'s ARPANET server, from which it spread across the US and to Europe — the origin of interactive fiction. On PLATO, dnd and Moria pushed role-playing further, Moria with first-person 3D and party formation. The first software for hobbyist microcomputers also appeared, much of it adapted from BASIC games such as Star Trek, and Peter Jennings completed Microchess for the KIM-1. In Japan, Sega\'s Heavyweight Champ, considered by some the first fighting game, premiered in October. Apple Computer was founded on 1 April.</p>' },
+    ],
+    sources: [
+      { title: '1976 in video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/1976_in_video_games' },
+    ],
+  },
+  {
+    id: 'year-2000',
+    year: 2000,
+    headline: 'The PlayStation 2 Launches as the Classic Era Closes',
+    summary: 'Sony launched the PlayStation 2 in Japan in March and in the West that autumn, while the PlayStation, N64 and Dreamcast had some of their best games: Perfect Dark, Majora\'s Mask, Final Fantasy IX and Tony Hawk\'s Pro Skater 2. Pokémon was the best-selling home video game franchise for a third year running.',
+    topGames: ['The Legend of Zelda: Majora\'s Mask (N64)', 'Perfect Dark (N64)', 'Tony Hawk\'s Pro Skater 2 (PlayStation)', 'Final Fantasy IX (PlayStation)', 'Deus Ex (PC)', 'The Sims (PC)', 'Crazy Taxi (Dreamcast)'],
+    topEvents: [
+      { title: 'PlayStation 2 (4 March)', desc: 'Sony released the PlayStation 2 in Japan on 4 March, in North America on 26 October and in Europe on 24 November. It went on to sell more than 160 million units. The smaller PS one revision of the original PlayStation followed in July.' },
+      { title: 'Studios Change Hands', desc: 'Microsoft bought Bungie in June, THQ bought Volition in August, Electronic Arts bought DreamWorks Interactive, and Nvidia bought 3dfx in December. Looking Glass Studios closed in May.' },
+      { title: 'New Series Begin', desc: 'Counter-Strike, Deus Ex, Hitman, Jet Set Radio, Paper Mario, Perfect Dark, The Sims, SSX, TimeSplitters and Total War all started in 2000.' },
+      { title: '100 Million Game Boys (April)', desc: 'Nintendo sold its 100 millionth Game Boy and Game Boy Color, and Pokémon Gold and Silver were the year\'s best-selling games worldwide.' },
+    ],
+    quote: '',
+    sections: [
+      { title: 'A Late Peak for the Fifth Generation', html: '<p>The consoles of the 1990s finished strongly. On the N64, Perfect Dark scored 97 on Metacritic and Majora\'s Mask 95; Tony Hawk\'s Pro Skater 2 was the year\'s highest-rated game at 98 on PlayStation. Final Fantasy IX won Game of the Year from Electronic Gaming Monthly, Chrono Cross from GameSpot, and Vagrant Story received a perfect 40 from Famitsu. Dragon Quest VII sold more than 3.9 million copies in Japan. The Dreamcast had Crazy Taxi and Resident Evil – Code: Veronica, but the PlayStation 2\'s arrival pointed to the next generation.</p>' },
+      { title: 'PC Games and a Changing Industry', html: '<p>The PC had one of its strongest years. Deus Ex won Game of the Year awards from BAFTA and GameSpy, Baldur\'s Gate II: Shadows of Amn scored 95 on Metacritic, Diablo II won an Interactive Achievement Award, and The Sims and Counter-Strike both started long-running series. The industry around those games was changing: the Computer Game Developers Association renamed itself the International Game Developers Association, Sega turned its internal R&amp;D divisions into separate developer companies, and PopCap Games was founded. Bosnan\'s archive mostly stops here, with a handful of late releases for era hardware.</p>' },
+    ],
+    sources: [
+      { title: '2000 in video games', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/2000_in_video_games' },
+    ],
+  },
 ];

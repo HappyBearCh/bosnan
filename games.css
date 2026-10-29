@@ -114,6 +114,13 @@
 }
 
 /* ================== GAMES GRID ================== */
+.decade-games-heading {
+    max-width: var(--content);
+    margin: 0 auto var(--sp-6);
+    padding: 0 20px;
+    font-size: var(--fs-xl);
+}
+
 .games-grid {
     max-width: var(--content);
     margin: 0 auto 80px;
@@ -824,6 +831,15 @@ body > .related-entries {
     line-height: 1.75;
     margin-bottom: 16px;
     max-width: 780px;
+}
+
+.platform-detail-desc p + p {
+    margin-top: var(--sp-4);
+}
+
+.cheat-history-heading {
+    font-size: var(--fs-xl);
+    margin: var(--sp-8) 0 var(--sp-3);
 }
 /* ================== GENRE ENCYCLOPEDIA — LIST PAGE ================== */
 .genres-hero {
