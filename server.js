@@ -4098,7 +4098,7 @@ function paragraphs(text) {
 // structured facts instead, plus the first trivia line that fits: every word of
 // it is on the page, it ends cleanly, and title + year keeps it unique.
 function gameMetaDesc(game, max = 160) {
-  const d = String(game.description || '').replace(/s+/g, ' ').trim();
+  const d = String(game.description || '').replace(/\s+/g, ' ').trim();
   if (d.length <= max) return escapeHtml(d);
   const fitted = fitDescription(d, max);
   if (fitted) return escapeHtml(fitted);
