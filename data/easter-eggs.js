@@ -47,6 +47,7 @@ module.exports = [
     id: 'mortal-kombat-blood-code',
     sources: [
       { title: 'Controversies surrounding Mortal Kombat', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Controversies_surrounding_Mortal_Kombat' },
+      { title: 'Mortal Kombat (1992 video game)', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Mortal_Kombat_(1992_video_game)' },
     ],
     title: 'Blood Code (ABACABB)',
     game: 'Mortal Kombat',
@@ -54,13 +55,13 @@ module.exports = [
     year: 1993,
     discoveredYear: 1993,
     description: 'Entering ABACABB on the Code of Honor screen re-enables all blood and fatalities that were censored from the Genesis port by default.',
-    longDescription: 'The Genesis version of Mortal Kombat shipped in 1993 with its blood removed and the most graphic fatalities altered by default. A hidden code restored the uncensored content for players who wanted it; its letters, ABACABB, are a nod to Abacab, an album by the band Genesis. The SNES version had no equivalent code and shipped permanently censored. The resulting public outcry over the difference between versions, amplified by the code\'s widespread circulation in gaming magazines and on school playgrounds, directly contributed to the formation of the Entertainment Software Rating Board (ESRB) in 1994.',
+    longDescription: 'The Genesis version of Mortal Kombat shipped in 1993 with its blood removed and its most graphic fatalities altered by default. A hidden code restored the uncensored content: its letters, ABACABB, are a nod to Abacab, the 1981 album by the band Genesis, which shared its name with the console in North America. The Super NES version had no such code; Nintendo\'s family-friendly policy replaced its blood with sweat, and only a Game Genie code turned it red again.\n\nThe four home versions launched together on 13 September 1993, promoted as "Mortal Monday". The Genesis version carried an MA-13 rating from Sega\'s Videogame Rating Council and became the best-selling console game of 1993 in the US, while the SNES version\'s sales suffered from its censorship. The handheld Game Gear version had its own unlock, 2, 1, 2, Down, Up, and the later Sega CD version needed no code at all.\n\nThe gore drew political attention. Hearings on video game violence led by Senators Joseph Lieberman and Herb Kohl, held from late 1992 into 1993, singled out the realistic figures in games like Mortal Kombat, and the industry was given a year to create a rating system or have one imposed. The result was the Entertainment Software Rating Board, founded in 1994.',
     howToFind: 'From the main menu, select "Code of Honor." Enter the sequence A, B, A, C, A, B, B. A chime will confirm the code is active. Blood and uncensored fatalities will now be enabled for the entire session.',
     keyFacts: [
-      'ABACABB nods to Abacab, an album by the band Genesis',
-      'The SNES version had no equivalent code — it remained permanently censored',
-      'The public controversy over the censorship difference helped create the ESRB ratings board in 1994',
-      'Became one of the most widely shared codes in gaming history through word of mouth',
+      'ABACABB nods to Abacab, the 1981 album by the band Genesis',
+      'The SNES version replaced blood with sweat; only a Game Genie code restored it',
+      'The Genesis version was the best-selling console game of 1993 in the US',
+      'Congressional hearings that singled out games like Mortal Kombat led to the ESRB in 1994',
     ],
   },
   {
@@ -193,7 +194,8 @@ module.exports = [
     id: 'donkey-kong-country-2-lost-world',
     sources: [
       { title: 'Lost World (Donkey Kong Country 2)', publisher: 'Super Mario Wiki', url: 'https://www.mariowiki.com/Lost_World_(Donkey_Kong_Country_2)' },
-      { title: "Kremling's Lost World", publisher: 'Donkey Kong Wiki', url: 'https://donkeykong.fandom.com/wiki/Kremling%27s_Lost_World' },
+      { title: 'Kremling\'s Lost World', publisher: 'Donkey Kong Wiki', url: 'https://donkeykong.fandom.com/wiki/Kremling%27s_Lost_World' },
+      { title: 'Donkey Kong Country 2: Diddy\'s Kong Quest', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Donkey_Kong_Country_2:_Diddy%27s_Kong_Quest' },
     ],
     title: 'The Lost World and Klubba\'s Toll',
     game: 'Donkey Kong Country 2: Diddy\'s Kong Quest',
@@ -201,12 +203,13 @@ module.exports = [
     year: 1995,
     discoveredYear: 1995,
     description: 'A hidden world buried beneath Crocodile Isle, gated behind a Kremling toll-keeper who demands 75 collectible Kremkoins earned only by clearing the game\'s hidden bonus rooms.',
-    longDescription: 'Rare packed Donkey Kong Country 2 with hidden content, but its deepest secret is the Lost World — a separate set of five stages that house Krocodile Kore, the power source of Crocodile Isle. Access is sold by Klubba, a hulking Kremling who mans a tollbooth (Klubba\'s Kiosk) in every world and charges 15 Kremkoins to open each Lost World stage, 75 in total. Kremkoins are earned by completing the hidden Bonus Rooms scattered throughout the game, so reaching the full Lost World demands near-total exploration. (The Banana Bird caves often associated with this idea actually belong to the sequel, Donkey Kong Country 3.)',
+    longDescription: 'Rare packed Donkey Kong Country 2 with hidden content, but its deepest secret is the Lost World — a separate set of five stages that house Krocodile Kore, the power source at the heart of Crocodile Isle. Access is sold by Klubba, a hulking Kremling who mans a tollbooth (Klubba\'s Kiosk) in every world and charges 15 Kremkoins to open each Lost World stage, 75 in total. Kremkoins are earned by completing the hidden bonus rooms scattered throughout the game, reached through concealed barrels, entrances and cannons, so reaching the whole Lost World demands near-total exploration. (The Banana Bird caves often associated with this idea belong to the sequel, Donkey Kong Country 3.)\n\nThe Lost World is also the key to the game\'s famous completion percentage. Reaching 102% requires finishing every level and boss, every bonus challenge and every Lost World level, collecting all the DK Coins, and visiting each of the four Kong family members.\n\nDonkey Kong Country 2: Diddy\'s Kong Quest was released for the Super NES in Japan on 21 November 1995 and in North America on 4 December. It sold 4.37 million copies in the US and Japan, making it the second-best-selling game of 1995 behind Yoshi\'s Island, and David Wise\'s soundtrack — especially "Stickerbush Symphony" — is among the most celebrated on the console. A 2004 Game Boy Advance version added a fuller plot introduction and multiplayer minigames.',
     howToFind: 'Complete the hidden Bonus Rooms in each level to collect Kremkoins, then visit Klubba\'s Kiosk (present in every world) and pay 15 Kremkoins to open each of the five Lost World stages — 75 in total.',
     keyFacts: [
       'The Lost World is a hidden world containing Krocodile Kore, the island\'s power source',
       'Klubba charges 15 Kremkoins per stage — 75 to open the entire Lost World',
-      'Kremkoins are earned only by clearing the game\'s hidden Bonus Rooms',
+      'Kremkoins are earned only by clearing the game\'s hidden bonus rooms',
+      'Reaching 102% completion requires the Lost World levels and all DK Coins',
     ],
   },
   {
