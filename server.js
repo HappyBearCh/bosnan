@@ -4603,6 +4603,8 @@ ${nav('genres')}
 
     ${articleSections}
 
+    ${sourcesBlock(genre)}
+
     <div class="genre-games-section" id="games-section">
       <h2 class="genre-games-heading">${count} Game${count !== 1 ? 's' : ''} in Archive</h2>
       <div class="games-grid" id="gamesGrid">${cardHtml}</div>

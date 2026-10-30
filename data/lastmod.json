@@ -40,8 +40,8 @@
   "date": "2026-10-02"
  },
  "action": {
-  "hash": "a62d3f5f2e05f011",
-  "date": "2026-10-24"
+  "hash": "ec53d06bd81cb85c",
+  "date": "2026-10-30"
  },
  "action-52": {
   "hash": "f94b1380d349e3dc",
@@ -60,8 +60,8 @@
   "date": "2026-10-01"
  },
  "adventure": {
-  "hash": "a63ee4418f140b2c",
-  "date": "2026-10-24"
+  "hash": "3ded4317e8222442",
+  "date": "2026-10-30"
  },
  "adventure-warren-robinett": {
   "hash": "c4878ae0218824d2",
@@ -224,8 +224,8 @@
   "date": "2026-10-02"
  },
  "atari-classic": {
-  "hash": "aa17e6c8e3ca48a5",
-  "date": "2026-10-02"
+  "hash": "3b6bfb05cfe4af4f",
+  "date": "2026-10-30"
  },
  "atari-cx40-joystick": {
   "hash": "984b13f0e63fb52d",
@@ -572,8 +572,8 @@
   "date": "2026-10-02"
  },
  "castlevania": {
-  "hash": "a86012fa3c7d6802",
-  "date": "2026-10-01"
+  "hash": "3f9c94e7cc6f01c8",
+  "date": "2026-10-30"
  },
  "castlevania-64": {
   "hash": "7f90a3f2869fa55c",
@@ -1256,8 +1256,8 @@
   "date": "2026-10-01"
  },
  "dragon-quest": {
-  "hash": "9c62f1c92242fd43",
-  "date": "2026-10-01"
+  "hash": "b0fe80656fa7eb2f",
+  "date": "2026-10-30"
  },
  "dragon-quest-dragon-warrior": {
   "hash": "72932102c21d9fca",
@@ -1640,8 +1640,8 @@
   "date": "2026-10-19"
  },
  "fighting": {
-  "hash": "c662160de55a7f3e",
-  "date": "2026-10-24"
+  "hash": "968dfb24ac906538",
+  "date": "2026-10-30"
  },
  "fighting-game-community": {
   "hash": "6b12a1a935d1c077",
@@ -1652,8 +1652,8 @@
   "date": "2026-10-01"
  },
  "final-fantasy": {
-  "hash": "1612c8604ddda217",
-  "date": "2026-10-01"
+  "hash": "d4894cb36cabe202",
+  "date": "2026-10-30"
  },
  "final-fantasy-i-any": {
   "hash": "18356aced1c62e38",
@@ -1776,8 +1776,8 @@
   "date": "2026-10-01"
  },
  "first-person-shooter": {
-  "hash": "c6013260a8c97fee",
-  "date": "2026-10-24"
+  "hash": "ef69d7ea9beb9231",
+  "date": "2026-10-30"
  },
  "fm-synthesis": {
   "hash": "45a0c838cb1f27b1",
@@ -8308,16 +8308,16 @@
   "date": "2026-10-01"
  },
  "kings-quest": {
-  "hash": "7458468d9c1aa8c0",
-  "date": "2026-10-01"
+  "hash": "fd86b782279c19bb",
+  "date": "2026-10-30"
  },
  "kinuyo-yamashita": {
   "hash": "a857a388f5c6daf9",
   "date": "2026-10-02"
  },
  "kirby": {
-  "hash": "68289bd8347f3aba",
-  "date": "2026-10-02"
+  "hash": "fc32682ac7528947",
+  "date": "2026-10-30"
  },
  "kirby-angry-western-box": {
   "hash": "18c6c7d01f7f053f",
@@ -8472,8 +8472,8 @@
   "date": "2026-10-02"
  },
  "light-gun-shooter": {
-  "hash": "69411a3317ba0af4",
-  "date": "2026-10-01"
+  "hash": "f0fe383c507e6423",
+  "date": "2026-10-30"
  },
  "lincoln-spector": {
   "hash": "c34bf7bd727e17d5",
@@ -8568,8 +8568,8 @@
   "date": "2026-10-02"
  },
  "mario": {
-  "hash": "4e0be44c14bd5406",
-  "date": "2026-10-02"
+  "hash": "f275bdf9c63594b2",
+  "date": "2026-10-30"
  },
  "mario-jump": {
   "hash": "c8e8fb347bd1aaee",
@@ -8648,8 +8648,8 @@
   "date": "2026-10-19"
  },
  "mega-man": {
-  "hash": "35a814f7af34adc1",
-  "date": "2026-10-19"
+  "hash": "dba75bff2e30b267",
+  "date": "2026-10-30"
  },
  "mega-man-2": {
   "hash": "7ed5aec55396758e",
@@ -8712,8 +8712,8 @@
   "date": "2026-10-02"
  },
  "metal-gear": {
-  "hash": "6f012af634887128",
-  "date": "2026-10-01"
+  "hash": "fa707d8b40398324",
+  "date": "2026-10-30"
  },
  "metal-gear-2-solid-snake": {
   "hash": "04ecb1eab08d8a80",
@@ -8764,8 +8764,8 @@
   "date": "2026-10-01"
  },
  "metroid": {
-  "hash": "75c99e3416dd7422",
-  "date": "2026-10-01"
+  "hash": "96041cf050317f9b",
+  "date": "2026-10-30"
  },
  "metroid-brinstar": {
   "hash": "cdec6542b7767649",
@@ -8880,8 +8880,8 @@
   "date": "2026-10-02"
  },
  "mmorpg": {
-  "hash": "23ada1d7bd885b01",
-  "date": "2026-10-01"
+  "hash": "49ac2eee35dab561",
+  "date": "2026-10-30"
  },
  "mobile-gaming-rise": {
   "hash": "cac64fd958977726",
@@ -9576,8 +9576,8 @@
   "date": "2026-10-01"
  },
  "platformer": {
-  "hash": "c668c837c241010c",
-  "date": "2026-10-24"
+  "hash": "dae6e898710f8306",
+  "date": "2026-10-30"
  },
  "platformer-history": {
   "hash": "69c4efbc8a89d0a8",
@@ -9824,8 +9824,8 @@
   "date": "2026-10-01"
  },
  "puzzle": {
-  "hash": "ad60b432512f2d8d",
-  "date": "2026-10-24"
+  "hash": "830a21a188eb8a90",
+  "date": "2026-10-30"
  },
  "q-bert": {
   "hash": "cb4083c48e188f5a",
@@ -9884,8 +9884,8 @@
   "date": "2026-10-01"
  },
  "racing": {
-  "hash": "274be1e27fd7b149",
-  "date": "2026-10-24"
+  "hash": "536723b21126ac2f",
+  "date": "2026-10-30"
  },
  "radiant-silvergun-import": {
   "hash": "eb54db65d16b4a87",
@@ -9924,8 +9924,8 @@
   "date": "2026-10-02"
  },
  "real-time-strategy": {
-  "hash": "981712268b52c6a6",
-  "date": "2026-10-01"
+  "hash": "497abf5ab96f5c67",
+  "date": "2026-10-30"
  },
  "red-annihilation-quake-1997": {
   "hash": "a467bb44eaa5e7b8",
@@ -9948,8 +9948,8 @@
   "date": "2026-10-01"
  },
  "resident-evil": {
-  "hash": "ad2490eb0c965da3",
-  "date": "2026-10-01"
+  "hash": "a24aea5eb9c91b08",
+  "date": "2026-10-30"
  },
  "resident-evil-1-5": {
   "hash": "b19c328d32deefdc",
@@ -9992,8 +9992,8 @@
   "date": "2026-10-01"
  },
  "rhythm": {
-  "hash": "0489b4a1f9848358",
-  "date": "2026-10-01"
+  "hash": "25f7b46a96465e71",
+  "date": "2026-10-30"
  },
  "richard-garriott": {
   "hash": "557169473b195c96",
@@ -10064,8 +10064,8 @@
   "date": "2026-10-02"
  },
  "roguelike": {
-  "hash": "304e6e1d326df127",
-  "date": "2026-10-24"
+  "hash": "b1cf8a0cc0a0a990",
+  "date": "2026-10-30"
  },
  "roguelike-randomness-design": {
   "hash": "301b8c524e7a5880",
@@ -10088,8 +10088,8 @@
   "date": "2026-10-01"
  },
  "rpg": {
-  "hash": "95eaafb69994cbdd",
-  "date": "2026-10-24"
+  "hash": "e19b778f3bdfe805",
+  "date": "2026-10-30"
  },
  "rpg-maker": {
   "hash": "bb0e0e5b0e83f05c",
@@ -10384,8 +10384,8 @@
   "date": "2026-10-02"
  },
  "shoot-em-up": {
-  "hash": "90a6198064afb8cb",
-  "date": "2026-10-24"
+  "hash": "c22a89aab94f855d",
+  "date": "2026-10-30"
  },
  "shoot-em-up-grammar": {
   "hash": "ec53d4d3d19f285f",
@@ -10452,8 +10452,8 @@
   "date": "2026-10-29"
  },
  "simulation": {
-  "hash": "1199022afd5d25c0",
-  "date": "2026-10-24"
+  "hash": "fafab516aee286eb",
+  "date": "2026-10-30"
  },
  "sin-and-punishment-import": {
   "hash": "ad734278c77f7624",
@@ -10552,8 +10552,8 @@
   "date": "2026-10-19"
  },
  "sonic": {
-  "hash": "60ca652413b14f42",
-  "date": "2026-10-02"
+  "hash": "d135751c038da420",
+  "date": "2026-10-30"
  },
  "sonic-1-debug-mode": {
   "hash": "777f553a96fab8cb",
@@ -10732,8 +10732,8 @@
   "date": "2026-10-01"
  },
  "sports": {
-  "hash": "05cd10fc05e0054b",
-  "date": "2026-10-01"
+  "hash": "c5f90ccf2af0f1d6",
+  "date": "2026-10-30"
  },
  "sprite": {
   "hash": "8e19c78e676fd1dc",
@@ -10844,8 +10844,8 @@
   "date": "2026-10-01"
  },
  "strategy": {
-  "hash": "288d75c5be618482",
-  "date": "2026-10-24"
+  "hash": "0e7ed4151e4e1d40",
+  "date": "2026-10-30"
  },
  "strategy-guide-industry": {
   "hash": "cd235555e92891bb",
@@ -11240,8 +11240,8 @@
   "date": "2026-10-01"
  },
  "tetris": {
-  "hash": "a49dd620c67c7931",
-  "date": "2026-10-01"
+  "hash": "503ee6ee83d03fd0",
+  "date": "2026-10-30"
  },
  "tetris-game-boy-ost": {
   "hash": "632251b7ebc39e1e",
@@ -11392,8 +11392,8 @@
   "date": "2026-10-02"
  },
  "tomb-raider": {
-  "hash": "b38031aa25ce479e",
-  "date": "2026-10-01"
+  "hash": "a91c8bb1d8f78ed6",
+  "date": "2026-10-30"
  },
  "tomb-raider-all-weapons-cheat": {
   "hash": "b3e656aa47e7f66c",
@@ -11476,8 +11476,8 @@
   "date": "2026-10-01"
  },
  "ultima": {
-  "hash": "18eb4e5714d28659",
-  "date": "2026-10-01"
+  "hash": "1b343deef749f726",
+  "date": "2026-10-30"
  },
  "ultima-escape-from-mt-drash": {
   "hash": "e90762832da069f7",
